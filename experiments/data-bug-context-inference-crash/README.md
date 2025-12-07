@@ -7,6 +7,6 @@
 
 ## Pipeline Context inference crash
 <p align="center">
-  <img src="images/pipeline.png" alt="Pipeline " width="400"/>
+  <img src="images/pipeline.png" alt="Pipeline " />
 </p>
 
