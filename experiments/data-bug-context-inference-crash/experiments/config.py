@@ -11,9 +11,7 @@ BUGZILLA_BASE = "https://bugzilla.mozilla.org/rest"
 PHABRICATOR_BASE = "https://phabricator.services.mozilla.com"
 
 
-DEEPSEEK_API_KEY = "sk-72478e7eec004bc6841a26c555a6bee8"
-# 'Your key here'  # os.environ.get("DEEPSEEK_API_KEY") or
-# "sk-72478e7eec004bc6841a26c555a6bee8"
+DEEPSEEK_API_KEY = 'Your key here'  # os.environ.get("DEEPSEEK_API_KEY") or
 
 DEFAULT_MODEL = "deepseek-chat"
 
