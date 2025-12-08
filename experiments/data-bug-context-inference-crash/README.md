@@ -40,9 +40,9 @@ It then:
 ## Original Crash Report
 
 <p align="center">
-  <img src="images/crash1.png" alt="Crash report 1" />
-  <img src="images/crash2.png" alt="Crash report 2" />
-  <img src="images/crash3.png" alt="Crash report 3" />
+  <img src="images/crash1.png" alt="Crash report 1" width="400"/>
+  <img src="images/crash2.png" alt="Crash report 2" width="400" />
+  <img src="images/crash3.png" alt="Crash report 3" width="400"/>
 </p>
 
 The starting point is a real Bugzilla crash report, which may be noisy, incomplete, or missing key details that would clearly motivate the final patch.
@@ -52,7 +52,7 @@ The starting point is a real Bugzilla crash report, which may be noisy, incomple
 ## Provided Patch
 
 <p align="center">
-  <img src="images/patch.png" alt="Patch" />
+  <img src="images/patch.png" alt="Patch" width="400"/>
 </p>
 
 We assume access to the **actual patch** that fixed the crash.  
