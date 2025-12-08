@@ -1,7 +1,6 @@
 #  Crash context inference
 
 [![python](https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org)
-[![Ollama](https://img.shields.io/badge/Ollama-fff?logo=ollama&logoColor=000)](#)
 [![Deepseek](https://custom-icon-badges.demolab.com/badge/Deepseek-4D6BFF?logo=deepseek&logoColor=fff)](#)
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 
@@ -117,9 +116,16 @@ Finally, we compare patch synthesis using:
 combined with the original (pre-patch) code extracted from the diff.
 
 <p align="center">
-  <img src="images/patch_condensed.png" alt="Patch from condensed report" />
-  <img src="images/unif_diff_full_context.png" alt="Unified diff – full context" />
+  <img src="images/patch_condensed.png" alt="Patch from condensed report" width="400" />
+  <br/>
+  <em> Patch generated from the condensed crash report</em>
+  <br/><br/>
+
+  <img src="images/unif_diff_full_context.png" alt="Unified diff – full context" width="400" />
+  <br/>
+  <em> Patch generated using the full crash report</em>
 </p>
+
 
 This allows us to study:
 
@@ -145,5 +151,6 @@ This allows us to study:
   - Simulating additional crash context.
   - Filtering crash reports.
   - Synthesizing candidate patches.
-- `experiments/*.py` run the pipeline
+- `scripts/*.py` run the pipeline
 ---
+
