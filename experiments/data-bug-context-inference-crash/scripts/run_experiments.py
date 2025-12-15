@@ -17,12 +17,13 @@ from experiments.pipelines import (
     run_patch_synthesis_mode,
 )
 
+from experiments.save_output import save_as_json
 
 def main() -> None:
     experiments = [
         (1998653, 271608, None),
-        # (1997854, 271086, None),
-        # (1965607, 248723, None),
+        (1997854, 271086, None),
+        (1965607, 248723, None),
         # ...
     ]
 
@@ -66,6 +67,9 @@ def main() -> None:
 
             print("\n--- [PATCH] Proposed patch ---")
             print(patch_result["patch_proposal"])
+
+            save_as_json(result, patch_result, bug_id=bug_id)
+            
 
         except Exception as e:
             print(f"Error during processing bug {bug_id} / D{revision_id}:", e)

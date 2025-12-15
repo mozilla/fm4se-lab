@@ -528,16 +528,6 @@ def make_patch_synthesis_task(
         - Prefer to keep the existing style and structure of the code.
         - Do NOT invent new files or large rewrites unless absolutely necessary.
 
-        Output format (in this exact order):
-
-        1) "Explanation of the fix:"
-           - 1–3 bullet points clearly explaining:
-             - what was going wrong, and
-             - how your changes prevent the crash,
-             explicitly referring to the crash details from the report.
-
-
-        2) "Candidate patch:"
            - A patch in unified diff style, based on the original code shown above.
         - Make sure to use correct diff syntax with @@ hunk headers.
         - Only include changes to the original code shown above.
@@ -547,7 +537,7 @@ def make_patch_synthesis_task(
         but do not write long essays outside the requested sections.
         """,
         expected_output=(
-            "A short explanation tied to the crash context, followed by a unified diff-style patch that "
+            "A unified diff-style patch that "
             "modifies only the original code shown in the context."
         ),
     )
