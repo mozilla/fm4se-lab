@@ -1,0 +1,14 @@
+README.md
+setup.py
+src/mozilla_bug_analyzer/__init__.py
+src/mozilla_bug_analyzer/analyzer.py
+src/mozilla_bug_analyzer/cli.py
+src/mozilla_bug_analyzer/clients.py
+src/mozilla_bug_analyzer.egg-info/PKG-INFO
+src/mozilla_bug_analyzer.egg-info/SOURCES.txt
+src/mozilla_bug_analyzer.egg-info/dependency_links.txt
+src/mozilla_bug_analyzer.egg-info/entry_points.txt
+src/mozilla_bug_analyzer.egg-info/requires.txt
+src/mozilla_bug_analyzer.egg-info/top_level.txt
+src/mozilla_bug_analyzer/utils/__init__.py
+src/mozilla_bug_analyzer/utils/logging.py
