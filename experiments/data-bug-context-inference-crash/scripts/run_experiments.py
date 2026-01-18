@@ -22,8 +22,8 @@ from experiments.save_output import save_as_json
 def main() -> None:
     experiments = [
         (1998653, 271608, None),
-        (1997854, 271086, None),
-        (1965607, 248723, None),
+        # (1997854, 271086, None),
+        # (1965607, 248723, None),
         # ...
     ]
 
