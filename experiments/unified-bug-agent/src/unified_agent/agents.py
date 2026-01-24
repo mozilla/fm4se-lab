@@ -1,22 +1,26 @@
 import json
-import google.generativeai as genai
 from typing import Dict, List
 from .utils.logging import get_logger
-from .config import DEFAULT_MODEL
+from .config import LLM_PROVIDER, MODEL_NAME
+from .llm import get_llm_backend
 
 logger = get_logger(__name__)
 
 class BaseAgent:
-    def __init__(self, api_key: str, model_name: str = DEFAULT_MODEL):
+    def __init__(self, api_key: str, model_name: str = MODEL_NAME):
         if not api_key:
-            raise ValueError("API key is required")
-        genai.configure(api_key=api_key)
-        self.model = genai.GenerativeModel(model_name)
+            # Fallback to check config if direct init fails, though usually orchestration passes it
+            # But the orchestrator passes a specific key based on its own config import. 
+            # We'll rely on the passed api_key or raise error. 
+             raise ValueError("API key is required")
+        
+        # Use factory to get the right backend
+        # Note: 'model_name' here might come from config.py's MODEL_NAME
+        self.llm = get_llm_backend(LLM_PROVIDER, api_key, model_name)
 
     def _generate_json(self, prompt: str) -> Dict:
         try:
-            response = self.model.generate_content(prompt)
-            response_text = response.text.strip()
+            response_text = self.llm.generate(prompt).strip()
             
             if response_text.startswith('```'):
                 lines = response_text.split('\n')
@@ -284,9 +288,9 @@ class FixGeneratorAgent(BaseAgent):
         Return ONLY the raw Unified Diff content. Do not add markdown formatting or explanations.
         """
         
+        
         try:
-            response = self.model.generate_content(prompt)
-            generated_fix = response.text.strip()
+            generated_fix = self.llm.generate(prompt).strip()
             generated_fix = generated_fix.replace("```diff", "").replace("```", "").strip()
             return generated_fix
         except Exception as e:

@@ -3,7 +3,13 @@ import json
 import os
 from typing import Dict, Optional, List
 
-from .config import GEMINI_API_KEY
+from .config import (
+    GEMINI_API_KEY, 
+    OPENAI_API_KEY, 
+    ANTHROPIC_API_KEY, 
+    DEEPSEEK_API_KEY, 
+    LLM_PROVIDER
+)
 from .utils.logging import get_logger
 from .clients import (
     BugzillaClient, 
@@ -43,14 +49,24 @@ class UnifiedBugAgent:
             self.phabricator
         )
         
+        # Select API Key based on provider
+        if LLM_PROVIDER == 'openai':
+            api_key = OPENAI_API_KEY
+        elif LLM_PROVIDER == 'claude':
+            api_key = ANTHROPIC_API_KEY
+        elif LLM_PROVIDER == 'deepseek':
+            api_key = DEEPSEEK_API_KEY
+        else:
+            api_key = GEMINI_API_KEY
+
         # Initialize Agents
-        self.analyst = BugAnalystAgent(api_key=GEMINI_API_KEY)
-        self.refiner = RefinementAgent(api_key=GEMINI_API_KEY)
-        self.missing_info_analyst = MissingInfoAgent(api_key=GEMINI_API_KEY)
-        self.simulator = SimulatorAgent(api_key=GEMINI_API_KEY)
-        self.filter = FilterAgent(api_key=GEMINI_API_KEY)
-        self.similar_bugs_analyst = SimilarBugsAgent(api_key=GEMINI_API_KEY)
-        self.fix_generator = FixGeneratorAgent(api_key=GEMINI_API_KEY)
+        self.analyst = BugAnalystAgent(api_key=api_key)
+        self.refiner = RefinementAgent(api_key=api_key)
+        self.missing_info_analyst = MissingInfoAgent(api_key=api_key)
+        self.simulator = SimulatorAgent(api_key=api_key)
+        self.filter = FilterAgent(api_key=api_key)
+        self.similar_bugs_analyst = SimilarBugsAgent(api_key=api_key)
+        self.fix_generator = FixGeneratorAgent(api_key=api_key)
 
     def _execute_data_request(self, request: Dict) -> Dict:
         """Execute a data request from the Refinement Agent."""
