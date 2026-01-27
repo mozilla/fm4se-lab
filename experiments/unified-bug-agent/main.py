@@ -2,6 +2,8 @@ import argparse
 import json
 import os
 import sys
+from dotenv import load_dotenv
+load_dotenv()
 
 # Add src to python path to allow imports
 sys.path.append(os.path.join(os.path.dirname(__file__), 'src'))

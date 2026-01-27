@@ -290,10 +290,26 @@ class UnifiedBugAgent:
         report['filtered_context'] = filtered_context
         
         # 8. Generate Fix
+
         logger.step("STEP 7: GENERATING FIX")
         # We pass the filtered context if available, else standard analysis
         fix_patch = self.fix_generator.generate_fix(bug_data, filtered_context if filtered_context else refined_analysis)
         report['generated_fix'] = fix_patch
+        
+        # --- Token Usage Calculation ---
+        agents = [
+            self.analyst, 
+            self.refiner, 
+            self.missing_info_analyst, 
+            self.simulator, 
+            self.filter, 
+            self.similar_bugs_analyst, 
+            self.fix_generator
+        ]
+        
+        total_tokens = sum(agent.llm.total_tokens for agent in agents)
+        report['token_usage'] = total_tokens
+        logger.info(f"TOTAL TOKEN USAGE: {total_tokens}")
         
         logger.header("WORKFLOW COMPLETE")
         return report
