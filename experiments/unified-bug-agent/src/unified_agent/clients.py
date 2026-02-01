@@ -149,20 +149,15 @@ class PhabricatorClient(BaseClient):
     def search_revisions_by_bug_id(self, bug_id: int) -> List[Dict]:
         """
         Search for revisions linked to a bug ID. 
-        Since there is no direct bug_id filter, we'll try to find them by text search 
-        or by checking if we still need to rely on the older scraping method as fallback 
-        if API is insufficient. 
-        
-        However, per plan, we want to replace scraping. 
-        A common pattern is searching for the string 'Bug <id>' or '<id>' in 'query'.
         """
         logger.info(f"Searching Phabricator for revisions related to Bug {bug_id}...")
         
-        # Try finding by query text first
         found_revs = []
         
         # We can use differential.revision.search
-        # Constraints: query
+        # Using 'query' constraint is one way, but sometimes 'bugs' constraint (if custom field exists) works better.
+        # However, standard Conduit often relies on text search.
+        
         params = {
             'constraints': {
                 'query': str(bug_id)
@@ -173,46 +168,37 @@ class PhabricatorClient(BaseClient):
         result = self._conduit_call('differential.revision.search', params)
         if result and 'data' in result:
             for item in result['data']:
-                # Double check if the bug ID is actually in the summary/title to be safe
                 fields = item.get('fields', {})
                 title = fields.get('title', '')
                 summary = fields.get('summary', '')
-                # A loose check
+                
+                # Check if bug ID is in title or summary
                 if str(bug_id) in title or str(bug_id) in summary:
                     found_revs.append(item)
                     
         return found_revs
 
     def get_revision_diff(self, revision_id: int) -> Optional[str]:
-        """Get the raw diff for a revision."""
-        # obtaining the diff ID from the revision is tricky via just search.
-        # usually we need differential.querydiffs or similar.
-        # But differential.getdiff needs a diff ID, not revision ID.
-        
-        # Let's try differential.query to get the 'activeDiff' PHID or ID?
-        # differential.revision.search returns 'fields' which doesn't always have the latest diff ID directly usable in getdiff.
-        
-        # Actually easier approach found in older scripts: 
-        # Construct the raw download URL which is public if we know the diff ID.
-        # But we want API.
-        
-        # Let's use 'differential.diff.search' with revisionPHIDs?
-        pass # To be implemented more thoroughly if complex, but let's try a simple approach for now.
-        
-        # Alternative: The existing agent was finding "D12345". 
-        # If we have the revision ID (D12345), we can use the 'download raw diff' endpoint 
-        # which is technically an endpoint but not "Conduit". 
-        # Since the goal is avoiding "scraping" (parsing HTML), hitting .diff endpoint is acceptable "API-like" usage.
-        
+        """Get the raw diff for a revision using Conduit API."""
         try:
-             # revision_id might be "D12345" or just 12345
-             rid = str(revision_id).replace("D", "")
-             # Public download link
-             url = f"{self.base_url}/D{rid}.diff"
-             # This is a file download, not JSON
-             response = requests.get(url) 
-             response.raise_for_status()
-             return response.text
+             # First, we need the diffID.
+             # We can search for the revision to get its latest diffID.
+             params = {'constraints': {'ids': [int(revision_id)]}}
+             result = self._conduit_call('differential.revision.search', params)
+             
+             diff_id = None
+             if result and 'data' in result and result['data']:
+                 diff_id = result['data'][0]['fields'].get('diffID')
+             
+             if not diff_id:
+                 logger.info(f"No diffID found for revision {revision_id}")
+                 return None
+                 
+             # Now fetch raw diff
+             # differential.getrawdiff needs diffID
+             raw_diff = self._conduit_call('differential.getrawdiff', {'diffID': diff_id})
+             return raw_diff
+
         except Exception as e:
             logger.info(f"Error fetching raw diff: {e}")
             return None
@@ -336,16 +322,37 @@ class SearchfoxClient(BaseClient):
     def search(self, query: str, repo: str = "mozilla-central") -> Optional[Dict]:
         url = f"{self.base_url}/{repo}/search"
         try:
-            response = requests.get(url, params={'q': query, 'limit': 20})
+            # Searchfox returns HTML. We need to parse it or use the 'format=json' if available (it's not usually public).
+            # Actually, let's try to scrape the result using regex or simple string manipulation 
+            # since adding BeautifulSoup might be heavy or not in requirements.
+            response = requests.get(url, params={'q': query})
             response.raise_for_status()
-            # Searchfox returns HTML for search, not JSON. 
-            # Unless we wrap it or use a specific internal API, we can't get JSON here.
-            # Returning None to avoid crash until a proper parsing or API is found.
-            if 'application/json' in response.headers.get('Content-Type', ''):
-                return response.json()
-            else:
-                logger.info("Searchfox search returned non-JSON content.")
-                return None
+            
+            content = response.text
+            
+            # Simple heuristic regex to find search results in the HTML
+            # Results look like: <a href="/mozilla-central/source/path/to/file#123">
+            # We want to extract path and maybe context.
+            
+            # This is very brittle, but public API is not available.
+            hits = []
+            # Regex to find links to source files in search results
+            # Typical result link: <a href="/mozilla-central/source/path/to/file.cpp#123">
+            # We look for hrefs starting with /{repo}/source/
+            pattern = re.compile(f'href="/{repo}/source/([^"]+)"')
+            matches = pattern.findall(content)
+            
+            # Deduplicate and format
+            seen = set()
+            for m in matches:
+                # m might include line number "foo.cpp#123"
+                if m not in seen:
+                    seen.add(m)
+                    hits.append({'path': m})
+            
+            # Mimic the structure expected by advanced_tools
+            return {'normal': hits}
+            
         except Exception as e:
             logger.info(f"Error searching Searchfox: {e}")
             return None
@@ -403,3 +410,31 @@ class GitHubClient(BaseClient):
         except Exception as e:
             logger.info(f"Error fetching GitHub file {path}: {e}")
             return None
+
+    def search_code(self, query: str, repo: str = "mozilla/gecko-dev") -> List[Dict]:
+        """
+        Search for code in the repository.
+        Returns a list of dicts with 'path' and 'context' (if available).
+        """
+        url = f"search/code"
+        params = {
+            'q': f"{query} repo:{repo}",
+            'per_page': 10
+        }
+        try:
+            # Note: GitHub Search API has strict rate limits.
+            response = self._get(url, params=params)
+            response.raise_for_status()
+            data = response.json()
+            
+            items = data.get('items', [])
+            results = []
+            for item in items:
+                results.append({
+                    'path': item.get('path'),
+                    'url': item.get('html_url')
+                })
+            return results
+        except Exception as e:
+            logger.info(f"Error searching GitHub: {e}")
+            return []

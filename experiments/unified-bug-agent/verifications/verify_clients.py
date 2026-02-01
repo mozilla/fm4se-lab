@@ -51,7 +51,10 @@ def verify():
     print("\n--- AdvancedTools (Patch Parsing) ---")
     # Mock clients for advanced tools
     from unified_agent.advanced_tools import AdvancedContextTools
-    at = AdvancedContextTools(cs, sf, None, bz, ph)
+    # We need to instantiate GitHubClient for fallback testing
+    from unified_agent.clients import GitHubClient
+    gh = GitHubClient()
+    at = AdvancedContextTools(cs, sf, None, bz, ph, gh)
     
     try:
         # Use signature that is known to have bugs with patches (e.g., from the bugzilla search above)
@@ -74,16 +77,24 @@ def verify():
     # 6. GitHub Fallback (New)
     print("\n--- GitHubClient ---")
     try:
-        from unified_agent.clients import GitHubClient
-        gh = GitHubClient()
-        
-        # Test directory listing which failed in Mercurial
+        # Test directory listing
         files = gh.get_tree("gfx")
         print(f"Directory listing for 'gfx': {len(files)} items found")
         if files:
             print(f" - Sample: {files[:3]}")
     except Exception as e:
         print(f"FAILED GitHubClient: {e}")
+
+    # 7. Searchfox Fallback via AdvancedTools
+    print("\n--- AdvancedTools (Searchfox Fallback) ---")
+    try:
+         # Search for a common token
+         res = at.searchfox_from_top_frames(["nsThread"])
+         print(f"Search results: {len(res)}")
+         for r in res:
+             print(f" - {r}")
+    except Exception as e:
+         print(f"FAILED Searchfox Fallback: {e}")
 
 if __name__ == "__main__":
     verify()

@@ -46,7 +46,8 @@ class UnifiedBugAgent:
             self.searchfox,
             self.treeherder,
             self.bugzilla,
-            self.phabricator
+            self.phabricator,
+            self.github
         )
         
         # Select API Key based on provider
@@ -274,24 +275,14 @@ class UnifiedBugAgent:
         
         report['refined_analysis'] = refined_analysis
         
-        # 5. Missing Info Analysis (New from Crash logic)
-        logger.step("STEP 5: MISSING INFO ANALYSIS & SIMULATION")
-        missing_info = self.missing_info_analyst.analyze_missing_info(bug_data, refined_analysis)
-        report['missing_info'] = missing_info
-        
-        # 6. Simulation (New from Crash logic)
-        simulated_data = self.simulator.simulate_info(bug_data, missing_info)
-        report['simulated_data'] = simulated_data
-        logger.info("Simulated plausible missing info to aid fix generation")
-        
-        # 7. Filtering (New from Crash logic)
-        logger.step("STEP 6: FILTERING CONTEXT")
-        filtered_context = self.filter.filter_report(bug_data, refined_analysis, simulated_data)
+        # 5. Filtering (New from Crash logic)
+        logger.step("STEP 5: FILTERING CONTEXT")
+        filtered_context = self.filter.filter_report(bug_data, refined_analysis)
         report['filtered_context'] = filtered_context
         
-        # 8. Generate Fix
+        # 6. Generate Fix
 
-        logger.step("STEP 7: GENERATING FIX")
+        logger.step("STEP 6: GENERATING FIX")
         # We pass the filtered context if available, else standard analysis
         fix_patch = self.fix_generator.generate_fix(bug_data, filtered_context if filtered_context else refined_analysis)
         report['generated_fix'] = fix_patch

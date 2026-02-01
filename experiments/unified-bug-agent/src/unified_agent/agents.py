@@ -88,18 +88,20 @@ class RefinementAgent(BaseAgent):
     """Agent responsible for critiquing and refining the analysis."""
     
     def refine(self, analysis: Dict, repo_context: Dict) -> Dict:
+        # Checklist based on "What Makes a GitHub Issue Ready for Copilot?" (2512.21426)
         checklist = """
-CHECKS FOR AI-READY ISSUES:
-1. Problem Definition: Is the problem statement clear? Are logs/screenshots included? Is the task scoped? Root cause identified?
-2. Technical Context: Are relevant files/modules identified? Is a solution direction proposed? Is the component localized?
-3. Acceptance: Is validation guidance provided?
-4. Risk: Are side effects or backward compatibility risks considered?
-5. Traceability: Is the information self-contained?
-"""
+        AI-READINESS CHECKLIST:
+        1. Conciseness & Scope: Is the bug description short, strictly defined, and free of noise/fluff? (Shorter issues = higher merge rate).
+        2. Artifact Hints: Are specific files, functions, or code paths explicitly identified? (Strongest predictor of success).
+        3. Implementation Guidance: Is there a clear, high-level plan or "solution sketch"?
+        4. Self-Contained: Is the information self-contained without needing external references or complex environment setup?
+        """
         analysis_text = json.dumps(analysis, indent=2)
         context_text = json.dumps(repo_context, indent=2)
         
-        prompt = f"""You are a senior developer reviewing a bug analysis for an AI agent.
+        prompt = f"""You are a senior developer reviewing a bug analysis for an AI coding agent.
+        
+        Your goal is to transform the analysis into an "AI-Ready" directive that maximizes the chance of a merged PR.
         
         CHECKLIST:
         {checklist}
@@ -115,13 +117,27 @@ CHECKS FOR AI-READY ISSUES:
         2. Score it from 1-10.
         3. Do you need more specific data? (read a file, search for usage/definitions).
         4. Generate an IMPROVED analysis.
+           - Crucially, create an "optimized_context" field. This should be a REWRITE of the bug summary/description that is shorter, highly scoped, and points to specific files.
         
         Return JSON:
         {{
           "score": 8,
-          "critique": "...",
+          "critique": "Analysis is too verbose and lacks file hints...",
           "data_request": {{ "type": "read_file", "target": "path/to/file.cpp" }} OR {{ "type": "search_code", "target": "ClassName" }} (OR null),
-          "improved_analysis": {{ ... }}
+          "improved_analysis": {{
+              "bug_type": "{analysis.get('bug_type')}",
+              "root_cause": "{analysis.get('root_cause')}",
+              "symptoms": {json.dumps(analysis.get('symptoms', []))},
+              "affected_components": {json.dumps(analysis.get('affected_components', []))},
+              "reproduction_steps": {json.dumps(analysis.get('reproduction_steps', []))},
+              "technical_details": "{analysis.get('technical_details')}",
+              "user_impact": "{analysis.get('user_impact')}",
+              "severity_assessment": "{analysis.get('severity_assessment')}",
+              "keywords": {json.dumps(analysis.get('keywords', []))},
+              "likely_repository_paths": {json.dumps(analysis.get('likely_repository_paths', []))},
+              "proposed_fix_approach": "...",
+              "optimized_context": "Refactored, concise description with specific file pointers..." 
+          }}
         }}
         """
         
@@ -196,7 +212,7 @@ class SimulatorAgent(BaseAgent):
 class FilterAgent(BaseAgent):
     """Agent responsible for filtering the bug report to only relevant details for patching."""
     
-    def filter_report(self, bug_data: Dict, analysis: Dict, simulated_info: Dict) -> Dict:
+    def filter_report(self, bug_data: Dict, analysis: Dict) -> Dict:
         logger.info("Filtering bug report for patch generation...")
         
         prompt = f"""You are a senior Firefox triager.
@@ -204,8 +220,10 @@ class FilterAgent(BaseAgent):
         Your goal is to create a CONCISE summary of the bug that contains ONLY the information necessary for a developer to write a patch. Remove noise.
         
         BUG: {bug_data.get('summary')}
+        BUG: {bug_data.get('summary')}
         ANALYSIS: {json.dumps(analysis, indent=2)}
-        SIMULATED EXTRA INFO: {json.dumps(simulated_info, indent=2)}
+        
+        If "optimized_context" is present in the ANALYSIS, treat it as the ground truth for maximum conciseness and scope.
         
         Return JSON:
         {{
@@ -264,6 +282,7 @@ class FixGeneratorAgent(BaseAgent):
         sanitized_context = {
             'bug_id': bug_data.get('id'),
             'summary': bug_data.get('summary'),
+            'optimized_context': analysis.get('optimized_context', 'N/A'),
             'root_cause': analysis.get('root_cause'),
             'proposed_fix': analysis.get('proposed_fix_approach', 'Not specified')
         }
@@ -280,7 +299,7 @@ class FixGeneratorAgent(BaseAgent):
         {json.dumps(analysis, indent=2)}
         
         INSTRUCTIONS:
-        1. Analyze the bug description, root cause, and proposed fix approach.
+        1. Analyze the bug description. Use the "optimized_context" if available as it contains the most accurate scope and file pointers.
         2. Generate the necessary code changes (C++, JavaScript, Python, etc.).
         3. Output the result as a standard Unified Diff.
         4. If the exact file path is unknown, make a reasonable guess based on the component/product.

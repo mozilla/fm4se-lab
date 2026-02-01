@@ -1,7 +1,7 @@
 from typing import Dict, List, Optional
 import requests
 import re
-from .clients import CrashStatsClient, SearchfoxClient, TreeherderClient, BugzillaClient, PhabricatorClient
+from .clients import CrashStatsClient, SearchfoxClient, TreeherderClient, BugzillaClient, PhabricatorClient, GitHubClient
 from .utils.logging import get_logger
 
 logger = get_logger(__name__)
@@ -15,12 +15,14 @@ class AdvancedContextTools:
                  searchfox_client: SearchfoxClient,
                  treeherder_client: TreeherderClient,
                  bugzilla_client: BugzillaClient,
-                 phab_client: PhabricatorClient):
+                 phab_client: PhabricatorClient,
+                 github_client: GitHubClient = None):
         self.crash = crash_client
         self.searchfox = searchfox_client
         self.treeherder = treeherder_client
         self.bugzilla = bugzilla_client
         self.phab = phab_client
+        self.github = github_client
 
     def collect_crash_context(self, bug_id: int) -> Dict:
         """
@@ -88,7 +90,13 @@ class AdvancedContextTools:
             if clean_token:
                 res = self.searchfox.search(clean_token)
                 if res and 'normal' in res and res['normal']:
-                     results.append(f"Frame {clean_token}: Found {len(res['normal'])} hits")
+                     results.append(f"Frame {clean_token}: Found {len(res['normal'])} hits (Searchfox)")
+            
+            # Fallback to GitHub if loose search failed with Searchfox or returned nothing
+            if not results and self.github:
+                 gh_res = self.github.search_code(clean_token)
+                 if gh_res:
+                      results.append(f"Frame {clean_token}: Found {len(gh_res)} hits (GitHub)")
         return results
 
 
