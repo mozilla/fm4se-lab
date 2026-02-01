@@ -1,0 +1,732 @@
+{
+  "mentors_detail": [],
+  "cf_tracking_firefox_esr115": "---",
+  "cf_status_firefox149": "fixed",
+  "cf_user_story": "",
+  "cf_webcompat_score": "---",
+  "cc_detail": [
+    {
+      "real_name": "Alexandru Trif, Desktop Test Engineering [:atrif]",
+      "id": 631815,
+      "nick": "atrif",
+      "name": "atrif@mozilla.com",
+      "email": "atrif@mozilla.com"
+    },
+    {
+      "nick": "cbellini",
+      "name": "cbellini@mozilla.com",
+      "email": "cbellini@mozilla.com",
+      "real_name": "Chris Bellini (:cbellini)",
+      "id": 696039
+    },
+    {
+      "id": 721399,
+      "real_name": "Cristina Horotan [:chorotan]",
+      "name": "chorotan@mozilla.com",
+      "email": "chorotan@mozilla.com",
+      "nick": "chorotan"
+    },
+    {
+      "real_name": "Dale Harvey (:daleharvey)",
+      "id": 389449,
+      "name": "dharvey@mozilla.com",
+      "email": "dharvey@mozilla.com",
+      "nick": "daleharvey"
+    },
+    {
+      "email": "jteow@mozilla.com",
+      "name": "jteow@mozilla.com",
+      "nick": "jteow",
+      "real_name": "James Teow [:jteow]",
+      "id": 701257
+    },
+    {
+      "id": 707663,
+      "real_name": "Kelly Cochrane [:kcochrane]",
+      "nick": "kcochrane",
+      "name": "kcochrane@mozilla.com",
+      "email": "kcochrane@mozilla.com"
+    },
+    {
+      "email": "phorea@mozilla.com",
+      "name": "phorea@mozilla.com",
+      "nick": "phorea",
+      "id": 475155,
+      "real_name": "Petruta Horea [:phorea]"
+    }
+  ],
+  "cf_qa_whiteboard": "[search] [qa-triage-done-c149/b148]",
+  "url": "",
+  "cf_fx_points": "---",
+  "is_creator_accessible": true,
+  "creator": "sclements@mozilla.com",
+  "cc": [
+    "atrif@mozilla.com",
+    "cbellini@mozilla.com",
+    "chorotan@mozilla.com",
+    "dharvey@mozilla.com",
+    "jteow@mozilla.com",
+    "kcochrane@mozilla.com",
+    "phorea@mozilla.com"
+  ],
+  "description": "For tabs within a splitview, we want to change the default behavior so that the address bar result default opens the URL in the split view but provide a quick action for users to switch to tab (so a reverse of current default behavior, and which flipping the `browser.urlbar.secondaryActions.switchToTab` pref to true does). \n\nAs part of this effort, Dale has offered to support this work by making the `browser.urlbar.secondaryActions.switchToTab` behavior the default behavior when clicking on an address bar result. See bug 1996142 for more details.\n\nEdit: After a chat with Dale, we're going to utilize the existing quickActions/behavior [gated by the secondaryAction pref](https://searchfox.org/firefox-main/source/browser/components/urlbar/content/UrlbarInput.mjs#1496) so we can get this into 149 (only for tabs within a splitview) and Dale is going to work in parallel to enable the pref by default which will ideally land in 149 but might have a longer timeline.",
+  "target_milestone": "149 Branch",
+  "flags": [
+    {
+      "type_id": 800,
+      "setter": "atrif@mozilla.com",
+      "status": "?",
+      "creation_date": "2026-01-26T15:44:57Z",
+      "id": 2327692,
+      "modification_date": "2026-01-26T15:44:57Z",
+      "requestee": "sclements@mozilla.com",
+      "name": "needinfo"
+    }
+  ],
+  "depends_on": [
+    2012399,
+    2013459,
+    2013464
+  ],
+  "triage_owner_detail": {
+    "email": "jteow@mozilla.com",
+    "name": "jteow@mozilla.com",
+    "nick": "jteow",
+    "id": 701257,
+    "real_name": "James Teow [:jteow]"
+  },
+  "dupe_of": null,
+  "cf_last_resolved": "2026-01-24T08:59:21Z",
+  "duplicates": [],
+  "mentors": [],
+  "last_change_time": "2026-01-30T07:00:19Z",
+  "cf_tracking_firefox_esr140": "---",
+  "blocks": [
+    1996142
+  ],
+  "cf_has_str": "---",
+  "status": "RESOLVED",
+  "groups": [],
+  "last_change_time_non_bot": "2026-01-30T07:00:19Z",
+  "cf_accessibility_severity": "---",
+  "creator_detail": {
+    "id": 603840,
+    "real_name": "Sarah Clements [:sclements]",
+    "nick": "sclements",
+    "email": "sclements@mozilla.com",
+    "name": "sclements@mozilla.com"
+  },
+  "classification": "Client Software",
+  "attachments": [
+    {
+      "last_change_time": "2026-01-23T19:57:00Z",
+      "file_name": "phabricator-D278545-url.txt",
+      "bug_id": 2003892,
+      "is_obsolete": 0,
+      "creator": "kcochrane@mozilla.com",
+      "creator_detail": {
+        "real_name": "Kelly Cochrane [:kcochrane]",
+        "id": 707663,
+        "email": "kcochrane@mozilla.com",
+        "name": "kcochrane@mozilla.com",
+        "nick": "kcochrane"
+      },
+      "description": "Bug 2003892 - Move tab to split view instead of switching to tab for Urlbar results when split view is active",
+      "is_patch": 0,
+      "flags": [],
+      "creation_time": "2026-01-09T21:25:29Z",
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjc4NTQ1",
+      "id": 9536731,
+      "summary": "Bug 2003892 - Move tab to split view instead of switching to tab for Urlbar results when split view is active",
+      "size": 48,
+      "attacher": "kcochrane@mozilla.com",
+      "is_private": 0,
+      "content_type": "text/x-phabricator-request"
+    }
+  ],
+  "resolution": "FIXED",
+  "component": "Address Bar",
+  "counts": {
+    "regressed_by": 0,
+    "comments": 14,
+    "blocks": 3,
+    "depends_on": 1,
+    "cc": 7,
+    "duplicates": 0,
+    "keywords": 0,
+    "attachments": 1,
+    "regressions": 0
+  },
+  "is_open": false,
+  "creation_time": "2025-12-03T18:18:43Z",
+  "cf_fx_iteration": "---",
+  "id": 2003892,
+  "summary": "[Split View Support] Utilize behavior behind secondaryAction pref for tabs within a splitview",
+  "priority": "P2",
+  "cf_status_firefox148": "---",
+  "assigned_to": "kcochrane@mozilla.com",
+  "filed_via": "standard_form",
+  "severity": "N/A",
+  "product": "Firefox",
+  "keywords": [],
+  "history": [
+    {
+      "who": "jira-integration@bots.tld",
+      "when": "2025-12-03T18:19:16Z",
+      "changes": [
+        {
+          "added": "https://mozilla-hub.atlassian.net/browse/FIDEFE-7661",
+          "field_name": "see_also",
+          "removed": ""
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "cc",
+          "added": "atrif@mozilla.com"
+        }
+      ],
+      "when": "2025-12-04T08:07:34Z",
+      "who": "atrif@mozilla.com"
+    },
+    {
+      "changes": [
+        {
+          "removed": "P1",
+          "added": "P2",
+          "field_name": "priority"
+        },
+        {
+          "removed": "",
+          "added": "jteow@mozilla.com",
+          "field_name": "cc"
+        },
+        {
+          "field_name": "flagtypes.name",
+          "added": "needinfo?(sclements@mozilla.com)",
+          "removed": ""
+        },
+        {
+          "removed": "--",
+          "field_name": "severity",
+          "added": "N/A"
+        }
+      ],
+      "when": "2025-12-15T16:44:01Z",
+      "who": "jteow@mozilla.com"
+    },
+    {
+      "changes": [
+        {
+          "added": "",
+          "field_name": "flagtypes.name",
+          "removed": "needinfo?(sclements@mozilla.com)"
+        }
+      ],
+      "who": "sclements@mozilla.com",
+      "when": "2025-12-16T10:49:33Z"
+    },
+    {
+      "changes": [
+        {
+          "field_name": "whiteboard",
+          "added": "[fidefe-splitview][sng]",
+          "removed": "[fidefe-splitview]"
+        },
+        {
+          "removed": "Add QuickAction to support switching to tab with splitview",
+          "field_name": "summary",
+          "added": "[Split View Support] Add QuickAction to support switching to tab with splitview"
+        },
+        {
+          "field_name": "cc",
+          "added": "cbellini@mozilla.com",
+          "removed": ""
+        }
+      ],
+      "when": "2025-12-16T13:46:44Z",
+      "who": "cbellini@mozilla.com"
+    },
+    {
+      "who": "kcochrane@mozilla.com",
+      "when": "2026-01-05T21:50:51Z",
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "cc",
+          "added": "kcochrane@mozilla.com"
+        },
+        {
+          "removed": "NEW",
+          "added": "ASSIGNED",
+          "field_name": "status"
+        },
+        {
+          "field_name": "assigned_to",
+          "added": "kcochrane@mozilla.com",
+          "removed": "nobody@mozilla.org"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "removed": "",
+          "added": "https://mozilla-hub.atlassian.net/browse/SNG-3205",
+          "field_name": "see_also"
+        }
+      ],
+      "who": "jira-integration@bots.tld",
+      "when": "2026-01-05T21:51:09Z"
+    },
+    {
+      "who": "sclements@mozilla.com",
+      "when": "2026-01-09T17:53:37Z",
+      "changes": [
+        {
+          "removed": "[Split View Support] Add QuickAction to support switching to tab with splitview",
+          "added": "[Split View Support] Utilize behavior behind secondaryAction pref for tabs within a splitview",
+          "field_name": "summary"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "removed": "",
+          "added": "needinfo?(kcochrane@mozilla.com)",
+          "field_name": "flagtypes.name"
+        },
+        {
+          "removed": "",
+          "added": "chorotan@mozilla.com",
+          "field_name": "cc"
+        }
+      ],
+      "who": "chorotan@mozilla.com",
+      "when": "2026-01-17T01:12:06Z"
+    },
+    {
+      "changes": [
+        {
+          "removed": "needinfo?(kcochrane@mozilla.com)",
+          "added": "",
+          "field_name": "flagtypes.name"
+        }
+      ],
+      "who": "kcochrane@mozilla.com",
+      "when": "2026-01-20T13:47:14Z"
+    },
+    {
+      "changes": [
+        {
+          "removed": "Bug 2003892 - Use secondary 'switch to tab' action for URLbar results when split view is active",
+          "attachment_id": 9536731,
+          "added": "Bug 2003892 - Use 'current' for URLbar results navigation location and change label to 'Move tab to Split View' when split view is active",
+          "field_name": "attachments.description"
+        }
+      ],
+      "when": "2026-01-21T19:09:20Z",
+      "who": "phab-bot@bmo.tld"
+    },
+    {
+      "when": "2026-01-22T20:18:08Z",
+      "who": "phab-bot@bmo.tld",
+      "changes": [
+        {
+          "attachment_id": 9536731,
+          "removed": "Bug 2003892 - Use 'current' for URLbar results navigation location and change label to 'Move tab to Split View' when split view is active",
+          "field_name": "attachments.description",
+          "added": "Bug 2003892 - Change label to 'Move tab to Split View' for URLbar results when split view is active"
+        }
+      ]
+    },
+    {
+      "when": "2026-01-23T16:05:16Z",
+      "who": "agoloman@mozilla.com",
+      "changes": [
+        {
+          "field_name": "flagtypes.name",
+          "added": "needinfo?(kcochrane@mozilla.com)",
+          "removed": ""
+        }
+      ]
+    },
+    {
+      "who": "phab-bot@bmo.tld",
+      "when": "2026-01-23T19:57:00Z",
+      "changes": [
+        {
+          "added": "Bug 2003892 - Move tab to split view instead of switching to tab for Urlbar results when split view is active",
+          "field_name": "attachments.description",
+          "attachment_id": 9536731,
+          "removed": "Bug 2003892 - Change label to 'Move tab to Split View' for URLbar results when split view is active"
+        }
+      ]
+    },
+    {
+      "when": "2026-01-23T20:09:42Z",
+      "who": "kcochrane@mozilla.com",
+      "changes": [
+        {
+          "added": "",
+          "field_name": "flagtypes.name",
+          "removed": "needinfo?(kcochrane@mozilla.com)"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "removed": "---",
+          "field_name": "target_milestone",
+          "added": "149 Branch"
+        },
+        {
+          "field_name": "resolution",
+          "added": "FIXED",
+          "removed": ""
+        },
+        {
+          "removed": "ASSIGNED",
+          "field_name": "status",
+          "added": "RESOLVED"
+        },
+        {
+          "added": "2026-01-24T08:59:21Z",
+          "field_name": "cf_last_resolved",
+          "removed": ""
+        },
+        {
+          "added": "fixed",
+          "field_name": "cf_status_firefox149",
+          "removed": "---"
+        },
+        {
+          "comment_count": 12,
+          "field_name": "comment_tag",
+          "added": "bugherder",
+          "comment_id": 17857222,
+          "removed": ""
+        }
+      ],
+      "when": "2026-01-24T08:59:21Z",
+      "who": "chorotan@mozilla.com"
+    },
+    {
+      "changes": [
+        {
+          "field_name": "depends_on",
+          "added": "2012399",
+          "removed": ""
+        }
+      ],
+      "when": "2026-01-26T07:50:19Z",
+      "who": "atrif@mozilla.com"
+    },
+    {
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "cf_qa_whiteboard",
+          "added": "[search] [qa-triage-done-c149/b148]"
+        },
+        {
+          "removed": "",
+          "added": "phorea@mozilla.com",
+          "field_name": "cc"
+        }
+      ],
+      "who": "phorea@mozilla.com",
+      "when": "2026-01-26T13:42:18Z"
+    },
+    {
+      "who": "atrif@mozilla.com",
+      "when": "2026-01-26T15:44:57Z",
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "flagtypes.name",
+          "added": "needinfo?(sclements@mozilla.com)"
+        }
+      ]
+    },
+    {
+      "when": "2026-01-30T06:55:03Z",
+      "who": "atrif@mozilla.com",
+      "changes": [
+        {
+          "removed": "",
+          "added": "2013464",
+          "field_name": "depends_on"
+        }
+      ]
+    },
+    {
+      "when": "2026-01-30T07:00:19Z",
+      "who": "atrif@mozilla.com",
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "depends_on",
+          "added": "2013459"
+        }
+      ]
+    }
+  ],
+  "platform": "Unspecified",
+  "cf_tracking_firefox_relnote": "---",
+  "cf_tracking_firefox149": "---",
+  "version": "unspecified",
+  "qa_contact": "",
+  "regressions": [],
+  "cf_crash_signature": "",
+  "cf_status_firefox_esr140": "---",
+  "comment_count": 14,
+  "cf_cab_review": "---",
+  "votes": 0,
+  "whiteboard": "[fidefe-splitview][sng]",
+  "cf_tracking_firefox147": "---",
+  "comments": [
+    {
+      "attachment_id": null,
+      "id": 17792035,
+      "time": "2025-12-03T18:18:43Z",
+      "raw_text": "For tabs within a splitview, we want to change the default behavior so that the address bar result default opens the URL in the split view but provide a quick action for users to switch to tab (so a reverse of current default behavior, and which flipping the `browser.urlbar.secondaryActions.switchToTab` pref to true does). \n\nAs part of this effort, Dale has offered to support this work by making the `browser.urlbar.secondaryActions.switchToTab` behavior the default behavior when clicking on an address bar result. See bug 1996142 for more details.\n\nEdit: After a chat with Dale, we're going to utilize the existing quickActions/behavior [gated by the secondaryAction pref](https://searchfox.org/firefox-main/source/browser/components/urlbar/content/UrlbarInput.mjs#1496) so we can get this into 149 (only for tabs within a splitview) and Dale is going to work in parallel to enable the pref by default which will ideally land in 149 but might have a longer timeline.",
+      "author": "sclements@mozilla.com",
+      "is_private": false,
+      "count": 0,
+      "creation_time": "2025-12-03T18:18:43Z",
+      "tags": [],
+      "creator": "sclements@mozilla.com",
+      "text": "For tabs within a splitview, we want to change the default behavior so that the address bar result default opens the URL in the split view but provide a quick action for users to switch to tab (so a reverse of current default behavior, and which flipping the `browser.urlbar.secondaryActions.switchToTab` pref to true does). \n\nAs part of this effort, Dale has offered to support this work by making the `browser.urlbar.secondaryActions.switchToTab` behavior the default behavior when clicking on an address bar result. See bug 1996142 for more details.\n\nEdit: After a chat with Dale, we're going to utilize the existing quickActions/behavior [gated by the secondaryAction pref](https://searchfox.org/firefox-main/source/browser/components/urlbar/content/UrlbarInput.mjs#1496) so we can get this into 149 (only for tabs within a splitview) and Dale is going to work in parallel to enable the pref by default which will ideally land in 149 but might have a longer timeline.",
+      "reactions": {},
+      "bug_id": 2003892
+    },
+    {
+      "tags": [],
+      "creation_time": "2025-12-15T16:44:01Z",
+      "time": "2025-12-15T16:44:01Z",
+      "count": 1,
+      "author": "jteow@mozilla.com",
+      "is_private": false,
+      "raw_text": "Hi Sarah, we're just downgrading this to P2 just because it seems as if no one is currently assigned to it.\n\nIs this something we on the Search are supposed to work on or is someone from your team going to work on it?",
+      "attachment_id": null,
+      "id": 17809691,
+      "bug_id": 2003892,
+      "reactions": {},
+      "text": "Hi Sarah, we're just downgrading this to P2 just because it seems as if no one is currently assigned to it.\n\nIs this something we on the Search are supposed to work on or is someone from your team going to work on it?",
+      "creator": "jteow@mozilla.com"
+    },
+    {
+      "creation_time": "2025-12-16T10:49:33Z",
+      "tags": [],
+      "attachment_id": null,
+      "id": 17810890,
+      "raw_text": "(In reply to James Teow [:jteow] from comment #1)\n> Hi Sarah, we're just downgrading this to P2 just because it seems as if no one is currently assigned to it.\n> \n> Is this something we on the Search are supposed to work on or is someone from your team going to work on it?\n\nFrom my perspective its a P1, though it may not get done in 148. My intention is for someone from my team to pick up as soon as they are able - we are targeting 149 for this - and so that's why I added the [fidife-splitview] tag. (We do not have a general \"splitview\" component so that's why I filed it here as it seemed the most appropriate place).\n\nSince your teams whiteboard tag was added to bug 1996142, and since Dale said he'd need to do some work to support the functionality for the [secondary action pref](https://bugzilla.mozilla.org/show_bug.cgi?id=1996142#c7) , I had thought the intention was for your team to use that bug for that purpose.",
+      "is_private": false,
+      "author": "sclements@mozilla.com",
+      "count": 2,
+      "time": "2025-12-16T10:49:33Z",
+      "reactions": {},
+      "bug_id": 2003892,
+      "creator": "sclements@mozilla.com",
+      "text": "(In reply to James Teow [:jteow] from comment #1)\n> Hi Sarah, we're just downgrading this to P2 just because it seems as if no one is currently assigned to it.\n> \n> Is this something we on the Search are supposed to work on or is someone from your team going to work on it?\n\nFrom my perspective its a P1, though it may not get done in 148. My intention is for someone from my team to pick up as soon as they are able - we are targeting 149 for this - and so that's why I added the [fidife-splitview] tag. (We do not have a general \"splitview\" component so that's why I filed it here as it seemed the most appropriate place).\n\nSince your teams whiteboard tag was added to bug 1996142, and since Dale said he'd need to do some work to support the functionality for the [secondary action pref](https://bugzilla.mozilla.org/show_bug.cgi?id=1996142#c7) , I had thought the intention was for your team to use that bug for that purpose."
+    },
+    {
+      "tags": [],
+      "creation_time": "2026-01-09T21:25:29Z",
+      "time": "2026-01-09T21:25:29Z",
+      "raw_text": "",
+      "author": "kcochrane@mozilla.com",
+      "is_private": false,
+      "count": 3,
+      "id": 17835804,
+      "attachment_id": 9536731,
+      "reactions": {},
+      "bug_id": 2003892,
+      "text": "Created attachment 9536731\nBug 2003892 - Move tab to split view instead of switching to tab for Urlbar results when split view is active",
+      "creator": "kcochrane@mozilla.com"
+    },
+    {
+      "text": "Pushed by kcochrane@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/efdf494545a9\nhttps://hg.mozilla.org/integration/autoland/rev/f31e85e1f7dc\nUse secondary 'switch to tab' action for URLbar results when split view is active r=urlbar-reviewers,daleharvey,sclements,adw",
+      "creator": "pulsebot@bmo.tld",
+      "reactions": {},
+      "bug_id": 2003892,
+      "raw_text": "Pushed by kcochrane@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/efdf494545a9\nhttps://hg.mozilla.org/integration/autoland/rev/f31e85e1f7dc\nUse secondary 'switch to tab' action for URLbar results when split view is active r=urlbar-reviewers,daleharvey,sclements,adw",
+      "count": 4,
+      "is_private": false,
+      "author": "pulsebot@bmo.tld",
+      "time": "2026-01-16T23:14:46Z",
+      "id": 17846729,
+      "attachment_id": null,
+      "tags": [],
+      "creation_time": "2026-01-16T23:14:46Z"
+    },
+    {
+      "creation_time": "2026-01-17T01:10:23Z",
+      "tags": [],
+      "attachment_id": null,
+      "id": 17846842,
+      "author": "pulsebot@bmo.tld",
+      "count": 5,
+      "is_private": false,
+      "raw_text": "Pushed by chorotan@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/ce412b775b63\nhttps://hg.mozilla.org/integration/autoland/rev/98ed326586eb\nRevert \"Bug 2003892 - Use secondary 'switch to tab' action for URLbar results when split view is active r=urlbar-reviewers,daleharvey,sclements,adw\" for causing xpc failures on test_quicksuggest.js",
+      "time": "2026-01-17T01:10:23Z",
+      "bug_id": 2003892,
+      "reactions": {},
+      "creator": "pulsebot@bmo.tld",
+      "text": "Pushed by chorotan@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/ce412b775b63\nhttps://hg.mozilla.org/integration/autoland/rev/98ed326586eb\nRevert \"Bug 2003892 - Use secondary 'switch to tab' action for URLbar results when split view is active r=urlbar-reviewers,daleharvey,sclements,adw\" for causing xpc failures on test_quicksuggest.js"
+    },
+    {
+      "time": "2026-01-17T01:12:06Z",
+      "raw_text": "Backed out for causing xpc failures on test_quicksuggest.js and test_providerOmnibox.js\n\n[Backout link](https://hg.mozilla.org/integration/autoland/rev/98ed326586eb)\n\n[Push with failures](https://treeherder.mozilla.org/jobs?repo=autoland&group_state=expanded&revision=f31e85e1f7dcbc646a9e99b2e4434ca8e49d978d)\n\n[Failure log](https://treeherder.mozilla.org/logviewer?job_id=544067142&repo=autoland&task=TjUuWuPdSLSO3KAaQdPNXg.0&lineNumber=4655)\n[Failure log](https://treeherder.mozilla.org/logviewer?job_id=544068809&repo=autoland&task=Y2HtRrkwRzuS6nJ_C8CBwQ.0&lineNumber=8465)",
+      "count": 6,
+      "author": "chorotan@mozilla.com",
+      "is_private": false,
+      "id": 17846844,
+      "attachment_id": null,
+      "tags": [],
+      "creation_time": "2026-01-17T01:12:06Z",
+      "text": "Backed out for causing xpc failures on test_quicksuggest.js and test_providerOmnibox.js\n\n[Backout link](https://hg.mozilla.org/integration/autoland/rev/98ed326586eb)\n\n[Push with failures](https://treeherder.mozilla.org/jobs?repo=autoland&group_state=expanded&revision=f31e85e1f7dcbc646a9e99b2e4434ca8e49d978d)\n\n[Failure log](https://treeherder.mozilla.org/logviewer?job_id=544067142&repo=autoland&task=TjUuWuPdSLSO3KAaQdPNXg.0&lineNumber=4655)\n[Failure log](https://treeherder.mozilla.org/logviewer?job_id=544068809&repo=autoland&task=Y2HtRrkwRzuS6nJ_C8CBwQ.0&lineNumber=8465)",
+      "creator": "chorotan@mozilla.com",
+      "reactions": {},
+      "bug_id": 2003892
+    },
+    {
+      "time": "2026-01-23T15:08:06Z",
+      "count": 7,
+      "is_private": false,
+      "author": "pulsebot@bmo.tld",
+      "raw_text": "Pushed by kcochrane@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/5ac824e6e5cc\nhttps://hg.mozilla.org/integration/autoland/rev/9bb7602ee754\nChange label to 'Move tab to Split View' for URLbar results when split view is active r=urlbar-reviewers,daleharvey,sclements,adw,fluent-reviewers,bolsson",
+      "id": 17856328,
+      "attachment_id": null,
+      "tags": [],
+      "creation_time": "2026-01-23T15:08:06Z",
+      "text": "Pushed by kcochrane@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/5ac824e6e5cc\nhttps://hg.mozilla.org/integration/autoland/rev/9bb7602ee754\nChange label to 'Move tab to Split View' for URLbar results when split view is active r=urlbar-reviewers,daleharvey,sclements,adw,fluent-reviewers,bolsson",
+      "creator": "pulsebot@bmo.tld",
+      "bug_id": 2003892,
+      "reactions": {}
+    },
+    {
+      "attachment_id": null,
+      "id": 17856362,
+      "raw_text": "After discussion with other teams, we decided to use the inactionable \"chicklet\" or badge but change the text to \"Move Tab to Split View\" and have it move the tab to the split view rather than switching to that tab.",
+      "is_private": false,
+      "count": 8,
+      "author": "kcochrane@mozilla.com",
+      "time": "2026-01-23T15:28:17Z",
+      "creation_time": "2026-01-23T15:28:17Z",
+      "tags": [],
+      "creator": "kcochrane@mozilla.com",
+      "text": "After discussion with other teams, we decided to use the inactionable \"chicklet\" or badge but change the text to \"Move Tab to Split View\" and have it move the tab to the split view rather than switching to that tab.",
+      "reactions": {},
+      "bug_id": 2003892
+    },
+    {
+      "creation_time": "2026-01-23T16:00:40Z",
+      "tags": [],
+      "attachment_id": null,
+      "id": 17856416,
+      "time": "2026-01-23T16:00:40Z",
+      "raw_text": "Pushed by agoloman@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/01e8c1d7346d\nhttps://hg.mozilla.org/integration/autoland/rev/b433b0e991e6\nRevert \"Bug 2003892 - Change label to 'Move tab to Split View' for URLbar results when split view is active r=urlbar-reviewers,daleharvey,sclements,adw,fluent-reviewers,bolsson\" for causing bc failures @browser_switchTab_across_user_context.js.",
+      "author": "pulsebot@bmo.tld",
+      "count": 9,
+      "is_private": false,
+      "reactions": {},
+      "bug_id": 2003892,
+      "creator": "pulsebot@bmo.tld",
+      "text": "Pushed by agoloman@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/01e8c1d7346d\nhttps://hg.mozilla.org/integration/autoland/rev/b433b0e991e6\nRevert \"Bug 2003892 - Change label to 'Move tab to Split View' for URLbar results when split view is active r=urlbar-reviewers,daleharvey,sclements,adw,fluent-reviewers,bolsson\" for causing bc failures @browser_switchTab_across_user_context.js."
+    },
+    {
+      "author": "agoloman@mozilla.com",
+      "is_private": false,
+      "count": 10,
+      "raw_text": "Backed out for causing bc failures @browser_switchTab_across_user_context.js.\n* [Backout link](https://hg.mozilla.org/integration/autoland/rev/b433b0e991e6)\n* [Push with failures](https://treeherder.mozilla.org/jobs?repo=autoland&group_state=expanded&resultStatus=success%2Cpending%2Crunning%2Ctestfailed%2Cbusted%2Cexception%2Crunnable&fromchange=9f0a4d8e49e682a1c908ba34c153227791589e5a&searchStr=linux%2C24.04%2Cdebug%2Cmochitests%2Cwith%2Csoftware%2Cwebrender%2Cenabled%2Ctest-linux2404-64%2Fdebug-mochitest-browser-chrome-swr%2Cbc11&tochange=1a85317b348f9e7f95b74ea50adda67c4dc41487) \n* [Failure Log](https://treeherder.mozilla.org/logviewer?job_id=545132001&repo=autoland&task=D8LxSVwAQLOo5mPdUHiPMQ.0)",
+      "time": "2026-01-23T16:05:16Z",
+      "id": 17856431,
+      "attachment_id": null,
+      "tags": [],
+      "creation_time": "2026-01-23T16:05:16Z",
+      "text": "Backed out for causing bc failures @browser_switchTab_across_user_context.js.\n* [Backout link](https://hg.mozilla.org/integration/autoland/rev/b433b0e991e6)\n* [Push with failures](https://treeherder.mozilla.org/jobs?repo=autoland&group_state=expanded&resultStatus=success%2Cpending%2Crunning%2Ctestfailed%2Cbusted%2Cexception%2Crunnable&fromchange=9f0a4d8e49e682a1c908ba34c153227791589e5a&searchStr=linux%2C24.04%2Cdebug%2Cmochitests%2Cwith%2Csoftware%2Cwebrender%2Cenabled%2Ctest-linux2404-64%2Fdebug-mochitest-browser-chrome-swr%2Cbc11&tochange=1a85317b348f9e7f95b74ea50adda67c4dc41487) \n* [Failure Log](https://treeherder.mozilla.org/logviewer?job_id=545132001&repo=autoland&task=D8LxSVwAQLOo5mPdUHiPMQ.0)",
+      "creator": "agoloman@mozilla.com",
+      "bug_id": 2003892,
+      "reactions": {}
+    },
+    {
+      "reactions": {},
+      "bug_id": 2003892,
+      "creator": "pulsebot@bmo.tld",
+      "text": "Pushed by kcochrane@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/236b0fdf7398\nhttps://hg.mozilla.org/integration/autoland/rev/133f1c71691a\nMove tab to split view instead of switching to tab for Urlbar results when split view is active r=urlbar-reviewers,daleharvey,sclements,adw,fluent-reviewers,bolsson",
+      "creation_time": "2026-01-23T21:01:08Z",
+      "tags": [],
+      "id": 17856791,
+      "attachment_id": null,
+      "raw_text": "Pushed by kcochrane@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/236b0fdf7398\nhttps://hg.mozilla.org/integration/autoland/rev/133f1c71691a\nMove tab to split view instead of switching to tab for Urlbar results when split view is active r=urlbar-reviewers,daleharvey,sclements,adw,fluent-reviewers,bolsson",
+      "count": 11,
+      "author": "pulsebot@bmo.tld",
+      "is_private": false,
+      "time": "2026-01-23T21:01:08Z"
+    },
+    {
+      "time": "2026-01-24T08:59:21Z",
+      "author": "chorotan@mozilla.com",
+      "count": 12,
+      "is_private": false,
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/133f1c71691a",
+      "id": 17857222,
+      "attachment_id": null,
+      "tags": [
+        "bugherder"
+      ],
+      "creation_time": "2026-01-24T08:59:21Z",
+      "text": "https://hg.mozilla.org/mozilla-central/rev/133f1c71691a",
+      "creator": "chorotan@mozilla.com",
+      "bug_id": 2003892,
+      "reactions": {}
+    },
+    {
+      "creation_time": "2026-01-26T15:44:57Z",
+      "tags": [],
+      "id": 17860018,
+      "attachment_id": null,
+      "time": "2026-01-26T15:44:57Z",
+      "count": 13,
+      "is_private": false,
+      "author": "atrif@mozilla.com",
+      "raw_text": "Verified fixed with Firefox 149.0a1 (2026-01-26) on Windows 11, macOS 14 and Ubuntu 24. The selected tab from the address bar is correctly moved to Split View when selected from Firefox Suggest or the Shortcuts section. Note that I filed bug 2012399 when testing this. \n\nI have added a [test case](https://mozilla.testrail.io/index.php?/cases/view/3333707) for this implementation. Is there something else that we should look for here? Also, is there a preference? Kelly is on PTO, please change the ni? if needed. Thank you in advance!",
+      "bug_id": 2003892,
+      "reactions": {},
+      "creator": "atrif@mozilla.com",
+      "text": "Verified fixed with Firefox 149.0a1 (2026-01-26) on Windows 11, macOS 14 and Ubuntu 24. The selected tab from the address bar is correctly moved to Split View when selected from Firefox Suggest or the Shortcuts section. Note that I filed bug 2012399 when testing this. \n\nI have added a [test case](https://mozilla.testrail.io/index.php?/cases/view/3333707) for this implementation. Is there something else that we should look for here? Also, is there a preference? Kelly is on PTO, please change the ni? if needed. Thank you in advance!"
+    }
+  ],
+  "op_sys": "Unspecified",
+  "see_also": [
+    "https://mozilla-hub.atlassian.net/browse/FIDEFE-7661",
+    "https://mozilla-hub.atlassian.net/browse/SNG-3205"
+  ],
+  "cf_a11y_review_project_flag": "---",
+  "cf_rank": null,
+  "triage_owner": "jteow@mozilla.com",
+  "cf_status_firefox_esr115": "---",
+  "cf_webcompat_priority": "---",
+  "is_confirmed": true,
+  "regressed_by": [],
+  "cf_tracking_firefox148": "---",
+  "cf_performance_impact": "---",
+  "alias": null,
+  "cf_status_firefox147": "---",
+  "is_cc_accessible": true,
+  "assigned_to_detail": {
+    "nick": "kcochrane",
+    "email": "kcochrane@mozilla.com",
+    "name": "kcochrane@mozilla.com",
+    "real_name": "Kelly Cochrane [:kcochrane]",
+    "id": 707663
+  },
+  "type": "task"
+}

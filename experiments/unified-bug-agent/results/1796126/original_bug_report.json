@@ -1,0 +1,1321 @@
+{
+  "type": "defect",
+  "assigned_to_detail": {
+    "email": "nobody@mozilla.org",
+    "name": "nobody@mozilla.org",
+    "nick": "nobody",
+    "id": 1,
+    "real_name": "Nobody; OK to take it and work on it"
+  },
+  "is_cc_accessible": true,
+  "cf_performance_impact": "---",
+  "cf_tracking_firefox148": "---",
+  "cf_status_firefox147": "---",
+  "alias": null,
+  "cf_webcompat_priority": "---",
+  "is_confirmed": true,
+  "cf_status_firefox_esr115": "---",
+  "regressed_by": [],
+  "cf_rank": null,
+  "triage_owner": "bhood@mozilla.com",
+  "cf_a11y_review_project_flag": "---",
+  "see_also": [
+    "https://bugzilla.mozilla.org/show_bug.cgi?id=1796128",
+    "https://bugzilla.mozilla.org/show_bug.cgi?id=1796129",
+    "https://bugzilla.mozilla.org/show_bug.cgi?id=1687914",
+    "https://bugzilla.mozilla.org/show_bug.cgi?id=1766471",
+    "https://bugzilla.mozilla.org/show_bug.cgi?id=1796282",
+    "https://bugzilla.mozilla.org/show_bug.cgi?id=1359569",
+    "https://bugzilla.mozilla.org/show_bug.cgi?id=1844401"
+  ],
+  "comments": [
+    {
+      "creator": "pascalc@gmail.com",
+      "text": "Crash report: https://crash-stats.mozilla.org/report/index/9b145d1b-1934-45b3-a92e-374190221019\n\nReason: ```EXCEPTION_ACCESS_VIOLATION_READ```\n\nTop 10 frames of crashing thread:\n```\n0 xul.dll mozilla::nsDisplayItem::GetClippedBounds const layout/painting/nsDisplayList.cpp:2692\n0 xul.dll mozilla::nsDisplayList::GetClippedBoundsWithRespectToASR const layout/painting/nsDisplayList.cpp:2104\n1 xul.dll mozilla::nsDisplayContainer::UpdateBounds layout/painting/nsDisplayList.cpp:2773\n1 xul.dll mozilla::nsDisplayContainer::nsDisplayContainer layout/painting/nsDisplayList.cpp:2703\n1 xul.dll mozilla::MakeDisplayItemWithIndex layout/painting/nsDisplayList.h:1999\n1 xul.dll mozilla::MakeDisplayItem layout/painting/nsDisplayList.h:2045\n1 xul.dll WrapInWrapList layout/generic/nsIFrame.cpp:3862\n1 xul.dll nsIFrame::BuildDisplayListForChild layout/generic/nsIFrame.cpp:4329\n2 xul.dll DisplayLine layout/generic/nsBlockFrame.cpp:7045\n2 xul.dll nsBlockFrame::BuildDisplayList layout/generic/nsBlockFrame.cpp:7200\n```\nNew crash signature in 106.0",
+      "bug_id": 1796126,
+      "reactions": {},
+      "id": 16120948,
+      "attachment_id": null,
+      "time": "2022-10-19T12:49:03Z",
+      "author": "pascalc@gmail.com",
+      "count": 0,
+      "is_private": false,
+      "raw_text": "Crash report: https://crash-stats.mozilla.org/report/index/9b145d1b-1934-45b3-a92e-374190221019\n\nReason: ```EXCEPTION_ACCESS_VIOLATION_READ```\n\nTop 10 frames of crashing thread:\n```\n0 xul.dll mozilla::nsDisplayItem::GetClippedBounds const layout/painting/nsDisplayList.cpp:2692\n0 xul.dll mozilla::nsDisplayList::GetClippedBoundsWithRespectToASR const layout/painting/nsDisplayList.cpp:2104\n1 xul.dll mozilla::nsDisplayContainer::UpdateBounds layout/painting/nsDisplayList.cpp:2773\n1 xul.dll mozilla::nsDisplayContainer::nsDisplayContainer layout/painting/nsDisplayList.cpp:2703\n1 xul.dll mozilla::MakeDisplayItemWithIndex layout/painting/nsDisplayList.h:1999\n1 xul.dll mozilla::MakeDisplayItem layout/painting/nsDisplayList.h:2045\n1 xul.dll WrapInWrapList layout/generic/nsIFrame.cpp:3862\n1 xul.dll nsIFrame::BuildDisplayListForChild layout/generic/nsIFrame.cpp:4329\n2 xul.dll DisplayLine layout/generic/nsBlockFrame.cpp:7045\n2 xul.dll nsBlockFrame::BuildDisplayList layout/generic/nsBlockFrame.cpp:7200\n```\nNew crash signature in 106.0",
+      "creation_time": "2022-10-19T12:49:03Z",
+      "tags": []
+    },
+    {
+      "tags": [],
+      "creation_time": "2022-10-19T14:32:41Z",
+      "time": "2022-10-19T14:32:41Z",
+      "raw_text": "Tim, seems like DisplayList is a involved here.  Could you please have a look?",
+      "is_private": false,
+      "author": "bhood@mozilla.com",
+      "count": 1,
+      "id": 16121090,
+      "attachment_id": null,
+      "reactions": {},
+      "bug_id": 1796126,
+      "text": "Tim, seems like DisplayList is a involved here.  Could you please have a look?",
+      "creator": "bhood@mozilla.com"
+    },
+    {
+      "creation_time": "2022-10-19T15:32:20Z",
+      "tags": [],
+      "attachment_id": null,
+      "id": 16121174,
+      "time": "2022-10-19T15:32:20Z",
+      "raw_text": "This seems like it's CPU specific and probably not graphics related",
+      "author": "jmuizelaar@mozilla.com",
+      "count": 2,
+      "is_private": false,
+      "reactions": {},
+      "bug_id": 1796126,
+      "creator": "jmuizelaar@mozilla.com",
+      "text": "This seems like it's CPU specific and probably not graphics related"
+    },
+    {
+      "attachment_id": null,
+      "id": 16121180,
+      "author": "jmuizelaar@mozilla.com",
+      "count": 3,
+      "is_private": false,
+      "raw_text": "",
+      "time": "2022-10-19T15:33:25Z",
+      "creation_time": "2022-10-19T15:33:25Z",
+      "tags": [],
+      "creator": "jmuizelaar@mozilla.com",
+      "text": "*** Bug 1796129 has been marked as a duplicate of this bug. ***",
+      "bug_id": 1796126,
+      "reactions": {}
+    },
+    {
+      "creator": "jmuizelaar@mozilla.com",
+      "text": "*** Bug 1796128 has been marked as a duplicate of this bug. ***",
+      "bug_id": 1796126,
+      "reactions": {},
+      "id": 16121185,
+      "attachment_id": null,
+      "time": "2022-10-19T15:36:02Z",
+      "author": "jmuizelaar@mozilla.com",
+      "is_private": false,
+      "count": 4,
+      "raw_text": "",
+      "creation_time": "2022-10-19T15:36:02Z",
+      "tags": []
+    },
+    {
+      "creation_time": "2022-10-19T16:07:16Z",
+      "tags": [],
+      "id": 16121228,
+      "attachment_id": null,
+      "count": 5,
+      "author": "jmuizelaar@mozilla.com",
+      "is_private": false,
+      "raw_text": "I had a look at a minidump for `mozilla::LinkedListIterator<T>::operator*` and the crashing instruction is: `mov dword ptr [rsp+44h], eax`. This instruction comes after a `mov dword ptr [rsp+64h], ecx` and a `mov dword ptr [rsp+38h], r9`",
+      "time": "2022-10-19T16:07:16Z",
+      "bug_id": 1796126,
+      "reactions": {},
+      "creator": "jmuizelaar@mozilla.com",
+      "text": "I had a look at a minidump for `mozilla::LinkedListIterator<T>::operator*` and the crashing instruction is: `mov dword ptr [rsp+44h], eax`. This instruction comes after a `mov dword ptr [rsp+64h], ecx` and a `mov dword ptr [rsp+38h], r9`"
+    },
+    {
+      "bug_id": 1796126,
+      "reactions": {},
+      "text": "Gabriele, could you help us diagnose and confirm that we are hitting  a CPU bug in 106.0? If this is the case, issuing a dot release should be a viable solution for us, otherwise we would need more investigation to fix this at the code level. Thanks!",
+      "creator": "pascalc@gmail.com",
+      "tags": [],
+      "creation_time": "2022-10-19T16:16:47Z",
+      "author": "pascalc@gmail.com",
+      "is_private": false,
+      "count": 6,
+      "raw_text": "Gabriele, could you help us diagnose and confirm that we are hitting  a CPU bug in 106.0? If this is the case, issuing a dot release should be a viable solution for us, otherwise we would need more investigation to fix this at the code level. Thanks!",
+      "time": "2022-10-19T16:16:47Z",
+      "attachment_id": null,
+      "id": 16121245
+    },
+    {
+      "tags": [],
+      "creation_time": "2022-10-19T16:55:08Z",
+      "author": "gpascutto@mozilla.com",
+      "count": 7,
+      "is_private": false,
+      "raw_text": "``(100.0% in signature vs 25.87% overall) CPU Info = family 23 model 1 stepping 1 [100.0% vs 31.58% if cpu_arch = amd64]``\n\nThis correlation seems so strong it's almost certainly a hardware issue. But the 25% overall for an older AMD CPU seems...unexpected?",
+      "time": "2022-10-19T16:55:08Z",
+      "attachment_id": null,
+      "id": 16121314,
+      "bug_id": 1796126,
+      "reactions": {},
+      "text": "``(100.0% in signature vs 25.87% overall) CPU Info = family 23 model 1 stepping 1 [100.0% vs 31.58% if cpu_arch = amd64]``\n\nThis correlation seems so strong it's almost certainly a hardware issue. But the 25% overall for an older AMD CPU seems...unexpected?",
+      "creator": "gpascutto@mozilla.com"
+    },
+    {
+      "count": 8,
+      "author": "jscher2000@gmail.com",
+      "is_private": false,
+      "raw_text": "At least one user on SUMO referenced Twitch as a site with such crashes: https://support.mozilla.org/questions/1393585 \n\nIf there is any mitigation for this -- such as modifying the value of a preference or denying a site permission -- that would be helpful to know for support purposes.",
+      "time": "2022-10-19T17:54:31Z",
+      "id": 16121394,
+      "attachment_id": null,
+      "tags": [],
+      "creation_time": "2022-10-19T17:54:31Z",
+      "text": "At least one user on SUMO referenced Twitch as a site with such crashes: https://support.mozilla.org/questions/1393585 \n\nIf there is any mitigation for this -- such as modifying the value of a preference or denying a site permission -- that would be helpful to know for support purposes.",
+      "creator": "jscher2000@gmail.com",
+      "bug_id": 1796126,
+      "reactions": {}
+    },
+    {
+      "creator": "gpascutto@mozilla.com",
+      "text": ">If there is any mitigation for this -- such as modifying the value of a preference or denying a site permission -- that would be helpful to know for support purposes.\n\nJeff, is there a pref that avoids this codepath? It sounds like Firefox is effectively unusable on affected machines, and I'm not sure what options we have here except to re-jiggle the code and hope that fixes it?",
+      "bug_id": 1796126,
+      "reactions": {},
+      "id": 16121464,
+      "attachment_id": null,
+      "author": "gpascutto@mozilla.com",
+      "count": 9,
+      "is_private": false,
+      "raw_text": ">If there is any mitigation for this -- such as modifying the value of a preference or denying a site permission -- that would be helpful to know for support purposes.\n\nJeff, is there a pref that avoids this codepath? It sounds like Firefox is effectively unusable on affected machines, and I'm not sure what options we have here except to re-jiggle the code and hope that fixes it?",
+      "time": "2022-10-19T18:24:46Z",
+      "creation_time": "2022-10-19T18:24:46Z",
+      "tags": []
+    },
+    {
+      "reactions": {},
+      "bug_id": 1796126,
+      "creator": "jmuizelaar@mozilla.com",
+      "text": "Nope. Most of the crashes our in our regular paint path.",
+      "creation_time": "2022-10-19T18:33:02Z",
+      "tags": [],
+      "id": 16121478,
+      "attachment_id": null,
+      "raw_text": "Nope. Most of the crashes our in our regular paint path.",
+      "is_private": false,
+      "author": "jmuizelaar@mozilla.com",
+      "count": 10,
+      "time": "2022-10-19T18:33:02Z"
+    },
+    {
+      "reactions": {},
+      "bug_id": 1796126,
+      "creator": "rkraesig@mozilla.com",
+      "text": "(In reply to Jeff Muizelaar [:jrmuizel] from comment #5)\n> I had a look at a minidump for `mozilla::LinkedListIterator<T>::operator*` and the crashing instruction is: `mov dword ptr [rsp+44h], eax`. This instruction comes after a `mov dword ptr [rsp+64h], ecx` and a `mov dword ptr [rsp+38h], r9`\n\nThis is not static. So far I've confirmed three crash locations in four minidumps for this signature:\n\n```\n00007FFD274060A5 45 31 E4             xor         r12d,r12d  \n00007FFD274060A8 31 F6                xor         esi,esi  \n00007FFD274060AA 31 C9                xor         ecx,ecx  \n00007FFD274060AC 31 C0                xor         eax,eax  \n00007FFD274060AE 4C 89 4C 24 38       mov         qword ptr [rsp+38h],r9  \n00007FFD274060B3 89 4C 24 64          mov         dword ptr [rsp+64h],ecx  \n00007FFD274060B7 89 44 24 44          mov         dword ptr [rsp+44h],eax      // CRASH: 0xFFF...FFF\n00007FFD274060BB 44 89 64 24 40       mov         dword ptr [rsp+40h],r12d  \n00007FFD274060C0 89 74 24 54          mov         dword ptr [rsp+54h],esi      // CRASH: 0xFFF...FFF\n00007FFD274060C4 48 89 5C 24 48       mov         qword ptr [rsp+48h],rbx  \n00007FFD274060C9 4C 8B 7B 08          mov         r15,qword ptr [rbx+8]        // CRASH: 0x000...008\n00007FFD274060CD 49 8B 07             mov         rax,qword ptr [r15]  \n00007FFD274060D0 48 8B 80 B0 00 00 00 mov         rax,qword ptr [rax+0B0h]  \n```\n\nIn all cases, the crash was reported as an attempt to ~~access~~ (**EDIT:** specifically, _read_) an inaccessible memory location.\n* In the case of the first two locations, with address `0xFFF...FFF`, this is not consistent with the register values reported in the minidump (that is, `rsp` has something that looks reasonable). (**EDIT:** Also, it's not consistent with the opcodes, which are _writing_ rather than reading.)\n* In the last case, with address `0x000...008`, `rbx` is reported to have a value of 0, so the crash is what would be expected... except of course that `rbx` probably shouldn't have a value of 0 there, due to the test up at `...6094`.\n\nThe crash is probably not localized to the point to which it is attributed in the crash dump. Crashes are distributed across several functions in a way which seems consistent with arising *<mumble>*&zwj;ns after something else happens.  [Here](https://crash-stats.mozilla.org/search/?cpu_info=%3Dfamily%2023%20model%201%20stepping%201&reason=%3DEXCEPTION_ACCESS_VIOLATION_READ&address=%3D0xffffffffffffffff&product=Firefox&version=106.0&date=%3E%3D2022-10-12T18%3A58%3A00.000Z&date=%3C2022-10-19T18%3A58%3A00.000Z&_facets=signature&_sort=-date&_columns=date&_columns=signature&_columns=product&_columns=version&_columns=build_id&_columns=platform#facet-signature) is a more extensive crash-stats link, showing that crashes are not limited to a small handful of functions.\n\nI haven't looked at many of the crashes yet (so far, only about 10, with a lot of selection-bias-induced correlation); but those that I have checked seem to have `MakeDisplayItemWithIndex` as their lowest common ancestor in the call stack, and  `nsIFrame::BuildDisplayListForChild` as their highest shared ancestor above that.",
+      "creation_time": "2022-10-19T19:17:45Z",
+      "tags": [],
+      "attachment_id": null,
+      "id": 16121550,
+      "time": "2022-10-19T19:17:45Z",
+      "raw_text": "(In reply to Jeff Muizelaar [:jrmuizel] from comment #5)\n> I had a look at a minidump for `mozilla::LinkedListIterator<T>::operator*` and the crashing instruction is: `mov dword ptr [rsp+44h], eax`. This instruction comes after a `mov dword ptr [rsp+64h], ecx` and a `mov dword ptr [rsp+38h], r9`\n\nThis is not static. So far I've confirmed three crash locations in four minidumps for this signature:\n\n```\n00007FFD274060A5 45 31 E4             xor         r12d,r12d  \n00007FFD274060A8 31 F6                xor         esi,esi  \n00007FFD274060AA 31 C9                xor         ecx,ecx  \n00007FFD274060AC 31 C0                xor         eax,eax  \n00007FFD274060AE 4C 89 4C 24 38       mov         qword ptr [rsp+38h],r9  \n00007FFD274060B3 89 4C 24 64          mov         dword ptr [rsp+64h],ecx  \n00007FFD274060B7 89 44 24 44          mov         dword ptr [rsp+44h],eax      // CRASH: 0xFFF...FFF\n00007FFD274060BB 44 89 64 24 40       mov         dword ptr [rsp+40h],r12d  \n00007FFD274060C0 89 74 24 54          mov         dword ptr [rsp+54h],esi      // CRASH: 0xFFF...FFF\n00007FFD274060C4 48 89 5C 24 48       mov         qword ptr [rsp+48h],rbx  \n00007FFD274060C9 4C 8B 7B 08          mov         r15,qword ptr [rbx+8]        // CRASH: 0x000...008\n00007FFD274060CD 49 8B 07             mov         rax,qword ptr [r15]  \n00007FFD274060D0 48 8B 80 B0 00 00 00 mov         rax,qword ptr [rax+0B0h]  \n```\n\nIn all cases, the crash was reported as an attempt to ~~access~~ (**EDIT:** specifically, _read_) an inaccessible memory location.\n* In the case of the first two locations, with address `0xFFF...FFF`, this is not consistent with the register values reported in the minidump (that is, `rsp` has something that looks reasonable). (**EDIT:** Also, it's not consistent with the opcodes, which are _writing_ rather than reading.)\n* In the last case, with address `0x000...008`, `rbx` is reported to have a value of 0, so the crash is what would be expected... except of course that `rbx` probably shouldn't have a value of 0 there, due to the test up at `...6094`.\n\nThe crash is probably not localized to the point to which it is attributed in the crash dump. Crashes are distributed across several functions in a way which seems consistent with arising *<mumble>*&zwj;ns after something else happens.  [Here](https://crash-stats.mozilla.org/search/?cpu_info=%3Dfamily%2023%20model%201%20stepping%201&reason=%3DEXCEPTION_ACCESS_VIOLATION_READ&address=%3D0xffffffffffffffff&product=Firefox&version=106.0&date=%3E%3D2022-10-12T18%3A58%3A00.000Z&date=%3C2022-10-19T18%3A58%3A00.000Z&_facets=signature&_sort=-date&_columns=date&_columns=signature&_columns=product&_columns=version&_columns=build_id&_columns=platform#facet-signature) is a more extensive crash-stats link, showing that crashes are not limited to a small handful of functions.\n\nI haven't looked at many of the crashes yet (so far, only about 10, with a lot of selection-bias-induced correlation); but those that I have checked seem to have `MakeDisplayItemWithIndex` as their lowest common ancestor in the call stack, and  `nsIFrame::BuildDisplayListForChild` as their highest shared ancestor above that.",
+      "count": 11,
+      "is_private": false,
+      "author": "rkraesig@mozilla.com"
+    },
+    {
+      "time": "2022-10-19T19:58:02Z",
+      "is_private": false,
+      "author": "gsvelto@mozilla.com",
+      "count": 12,
+      "raw_text": "Family 23 model 1, that's first-gen Ryzen right? We already had issues in the past and I looked at the uncorrected errata, see bug 1687914 comment 8. The revision guide I pointed to in the comment has never been updated past that version, so even though more recent microcode bundles have been released for those processors it's unlikely that the erratas have been fixed.",
+      "attachment_id": null,
+      "id": 16121613,
+      "tags": [],
+      "creation_time": "2022-10-19T19:58:02Z",
+      "text": "Family 23 model 1, that's first-gen Ryzen right? We already had issues in the past and I looked at the uncorrected errata, see bug 1687914 comment 8. The revision guide I pointed to in the comment has never been updated past that version, so even though more recent microcode bundles have been released for those processors it's unlikely that the erratas have been fixed.",
+      "creator": "gsvelto@mozilla.com",
+      "bug_id": 1796126,
+      "reactions": {}
+    },
+    {
+      "id": 16121708,
+      "attachment_id": null,
+      "raw_text": "(In reply to Gabriele Svelto [:gsvelto] from comment #12)\n> Family 23 model 1, that's first-gen Ryzen right? We already had issues in the past and I looked at the uncorrected errata, see bug 1687914 comment 8. The revision guide I pointed to in the comment has never been updated past that version, so even though more recent microcode bundles have been released for those processors it's unlikely that the erratas have been fixed.\n\nFamily 23 (which AMD calls 17h) model 1 is AMD Threadripper 1900X as far as I can tell, but all models of this generation appear to be affected (e.g. Ryzen 5 1400 and others), the identifying part of the product name is the 1xxx naming.",
+      "count": 13,
+      "author": "ahale@mozilla.com",
+      "is_private": false,
+      "time": "2022-10-19T21:05:25Z",
+      "creation_time": "2022-10-19T21:05:25Z",
+      "tags": [],
+      "creator": "ahale@mozilla.com",
+      "text": "(In reply to Gabriele Svelto [:gsvelto] from comment #12)\n> Family 23 model 1, that's first-gen Ryzen right? We already had issues in the past and I looked at the uncorrected errata, see bug 1687914 comment 8. The revision guide I pointed to in the comment has never been updated past that version, so even though more recent microcode bundles have been released for those processors it's unlikely that the erratas have been fixed.\n\nFamily 23 (which AMD calls 17h) model 1 is AMD Threadripper 1900X as far as I can tell, but all models of this generation appear to be affected (e.g. Ryzen 5 1400 and others), the identifying part of the product name is the 1xxx naming.",
+      "reactions": {},
+      "bug_id": 1796126
+    },
+    {
+      "id": 16121773,
+      "attachment_id": null,
+      "raw_text": "(In reply to Ashley Hale from comment #13)\n> Family 23 (which AMD calls 17h) model 1 is AMD Threadripper 1900X as far as I can tell\n\nNo, it stands for the whole family using that core (see [this table](https://en.wikichip.org/wiki/amd/cpuid#Family_23_.2817h.29)).",
+      "author": "gsvelto@mozilla.com",
+      "count": 14,
+      "is_private": false,
+      "time": "2022-10-19T21:29:43Z",
+      "creation_time": "2022-10-19T21:29:43Z",
+      "tags": [],
+      "creator": "gsvelto@mozilla.com",
+      "text": "(In reply to Ashley Hale from comment #13)\n> Family 23 (which AMD calls 17h) model 1 is AMD Threadripper 1900X as far as I can tell\n\nNo, it stands for the whole family using that core (see [this table](https://en.wikichip.org/wiki/amd/cpuid#Family_23_.2817h.29)).",
+      "reactions": {},
+      "bug_id": 1796126
+    },
+    {
+      "creation_time": "2022-10-19T21:40:42Z",
+      "tags": [],
+      "attachment_id": null,
+      "id": 16121793,
+      "count": 15,
+      "is_private": false,
+      "author": "gsvelto@mozilla.com",
+      "raw_text": "I've looked at a whole bunch of crashes and I really think it's the same erratas I thought we hit in bug 1687914 (1021 and 1091 in AMD's [errata](https://www.amd.com/system/files/TechDocs/55449_Fam_17h_M_00h-0Fh_Rev_Guide.pdf)). Both issues cause a bug in the store-to-load forwarding logic so a load delivers stale data instead of the contents of a previous store. Now looking at the crashes we see fundamentally two different types: one hitting address `0xffffffffffffffff` and one hitting an address near NULL. In the first case that's because the CPU tried to load from a non-canonical address and the OS reported a global protection fault (hence the lack of an actual crash address). However disassembly of crashes disproves this: the processor was loading a register containing a valid pointer, hence it must have tried to load some other data instead, stale data probably. The second type of crashes are more subtle but still due to the same cause: we have a load to a pointer after a NULL check... but disassembling the crashes show that the register that was just tested contained NULL! So the preceding test instruction operated on stale non-NULL data, caused the control-flow to go past it and then follow up with the crash.",
+      "time": "2022-10-19T21:40:42Z",
+      "bug_id": 1796126,
+      "reactions": {},
+      "creator": "gsvelto@mozilla.com",
+      "text": "I've looked at a whole bunch of crashes and I really think it's the same erratas I thought we hit in bug 1687914 (1021 and 1091 in AMD's [errata](https://www.amd.com/system/files/TechDocs/55449_Fam_17h_M_00h-0Fh_Rev_Guide.pdf)). Both issues cause a bug in the store-to-load forwarding logic so a load delivers stale data instead of the contents of a previous store. Now looking at the crashes we see fundamentally two different types: one hitting address `0xffffffffffffffff` and one hitting an address near NULL. In the first case that's because the CPU tried to load from a non-canonical address and the OS reported a global protection fault (hence the lack of an actual crash address). However disassembly of crashes disproves this: the processor was loading a register containing a valid pointer, hence it must have tried to load some other data instead, stale data probably. The second type of crashes are more subtle but still due to the same cause: we have a load to a pointer after a NULL check... but disassembling the crashes show that the register that was just tested contained NULL! So the preceding test instruction operated on stale non-NULL data, caused the control-flow to go past it and then follow up with the crash."
+    },
+    {
+      "creator": "ahale@mozilla.com",
+      "text": "I read https://www.amd.com/system/files/TechDocs/55449_Fam_17h_M_00h-0Fh_Rev_Guide.pdf while following along with this incident, if other values than 0xffffffffffffffff are being hit then I agree.  For it to be only 0xffffffffffffffff seemed too anomalous for me to consider those errata in my reading, but having other values show up makes sense.",
+      "reactions": {},
+      "bug_id": 1796126,
+      "id": 16121838,
+      "attachment_id": null,
+      "time": "2022-10-19T22:03:29Z",
+      "raw_text": "I read https://www.amd.com/system/files/TechDocs/55449_Fam_17h_M_00h-0Fh_Rev_Guide.pdf while following along with this incident, if other values than 0xffffffffffffffff are being hit then I agree.  For it to be only 0xffffffffffffffff seemed too anomalous for me to consider those errata in my reading, but having other values show up makes sense.",
+      "author": "ahale@mozilla.com",
+      "is_private": false,
+      "count": 16,
+      "creation_time": "2022-10-19T22:03:29Z",
+      "tags": []
+    },
+    {
+      "reactions": {},
+      "bug_id": 1796126,
+      "text": "Fixed by the 106.0.1 rebuild.",
+      "creator": "dmeehan@mozilla.com",
+      "tags": [],
+      "creation_time": "2022-10-19T22:26:15Z",
+      "time": "2022-10-19T22:26:15Z",
+      "raw_text": "Fixed by the 106.0.1 rebuild.",
+      "count": 17,
+      "author": "dmeehan@mozilla.com",
+      "is_private": false,
+      "id": 16121869,
+      "attachment_id": null
+    },
+    {
+      "reactions": {},
+      "bug_id": 1796126,
+      "creator": "ahale@mozilla.com",
+      "text": "(In reply to Ashley Hale from comment #16)\n> I read https://www.amd.com/system/files/TechDocs/55449_Fam_17h_M_00h-0Fh_Rev_Guide.pdf while following along with this incident, if other values than 0xffffffffffffffff are being hit then I agree.  For it to be only 0xffffffffffffffff seemed too anomalous for me to consider those errata in my reading, but having other values show up makes sense.\n\nOne more detail of interest, there are two errata cited (1021, 1091), and while 1021 affects the entire Zen/Zen+/Zen2 family (but not Zen3 and later), the errata 1091 only affects original Ryzen 1xxx series.  If this bug is selective about which CPU series it affects, it would be more likely to be errata 1091 and we should be able to completely avoid that errata by properly aligning 64bit values, there's a penalty to unaligned access already so we have performance reasons to avoid that case as well as stability on this chip.",
+      "creation_time": "2022-10-19T23:52:11Z",
+      "tags": [],
+      "attachment_id": null,
+      "id": 16121993,
+      "time": "2022-10-19T23:52:11Z",
+      "raw_text": "(In reply to Ashley Hale from comment #16)\n> I read https://www.amd.com/system/files/TechDocs/55449_Fam_17h_M_00h-0Fh_Rev_Guide.pdf while following along with this incident, if other values than 0xffffffffffffffff are being hit then I agree.  For it to be only 0xffffffffffffffff seemed too anomalous for me to consider those errata in my reading, but having other values show up makes sense.\n\nOne more detail of interest, there are two errata cited (1021, 1091), and while 1021 affects the entire Zen/Zen+/Zen2 family (but not Zen3 and later), the errata 1091 only affects original Ryzen 1xxx series.  If this bug is selective about which CPU series it affects, it would be more likely to be errata 1091 and we should be able to completely avoid that errata by properly aligning 64bit values, there's a penalty to unaligned access already so we have performance reasons to avoid that case as well as stability on this chip.",
+      "count": 18,
+      "is_private": false,
+      "author": "ahale@mozilla.com"
+    },
+    {
+      "bug_id": 1796126,
+      "reactions": {},
+      "text": "Hmm... do we know which kind of unaligned access might we be performing? I don't see any fancy packing or so in the code surrounding the crashing address, but I might've missed it.",
+      "creator": "emilio@crisal.io",
+      "tags": [],
+      "creation_time": "2022-10-20T09:02:54Z",
+      "count": 19,
+      "is_private": false,
+      "author": "emilio@crisal.io",
+      "raw_text": "Hmm... do we know which kind of unaligned access might we be performing? I don't see any fancy packing or so in the code surrounding the crashing address, but I might've missed it.",
+      "time": "2022-10-20T09:02:54Z",
+      "id": 16122406,
+      "attachment_id": null
+    },
+    {
+      "text": ">One more detail of interest, there are two errata cited (1021, 1091), and while 1021 affects the entire Zen/Zen+/Zen2 family (but not Zen3 and later), the errata 1091 only affects original Ryzen 1xxx series. If this bug is selective about which CPU series it affects\n\nFrom my looking, it's really only ``Family 23 model 1 stepping 1`` in the crash reports. But if I read the errata guide, Zen+ is also affected by 1021, which would be ``Family 23 Model 8``, yet we don't seem to be seeing this either. So I'm not sure what to conclude from this.",
+      "creator": "gpascutto@mozilla.com",
+      "reactions": {},
+      "bug_id": 1796126,
+      "time": "2022-10-25T16:57:09Z",
+      "raw_text": ">One more detail of interest, there are two errata cited (1021, 1091), and while 1021 affects the entire Zen/Zen+/Zen2 family (but not Zen3 and later), the errata 1091 only affects original Ryzen 1xxx series. If this bug is selective about which CPU series it affects\n\nFrom my looking, it's really only ``Family 23 model 1 stepping 1`` in the crash reports. But if I read the errata guide, Zen+ is also affected by 1021, which would be ``Family 23 Model 8``, yet we don't seem to be seeing this either. So I'm not sure what to conclude from this.",
+      "count": 20,
+      "is_private": false,
+      "author": "gpascutto@mozilla.com",
+      "attachment_id": null,
+      "id": 16130105,
+      "tags": [],
+      "creation_time": "2022-10-25T16:57:09Z"
+    },
+    {
+      "creator": "paul.blinzer@amd.com",
+      "text": "This specific issue identified would be limited to Family 23 model 1 stepping 1 only, other Zen1/Zen1+ CPUs are not affected.\n\nThere is a fix available in AMD provided system updates for the affected CPUs, which would imply that the affected platforms actually install it. One item that is surprising that this issue only now showed up with Firefox.",
+      "bug_id": 1796126,
+      "reactions": {},
+      "id": 16130767,
+      "attachment_id": null,
+      "count": 21,
+      "is_private": false,
+      "author": "paul.blinzer@amd.com",
+      "raw_text": "This specific issue identified would be limited to Family 23 model 1 stepping 1 only, other Zen1/Zen1+ CPUs are not affected.\n\nThere is a fix available in AMD provided system updates for the affected CPUs, which would imply that the affected platforms actually install it. One item that is surprising that this issue only now showed up with Firefox.",
+      "time": "2022-10-26T00:18:05Z",
+      "creation_time": "2022-10-26T00:18:05Z",
+      "tags": []
+    },
+    {
+      "attachment_id": null,
+      "id": 16130814,
+      "time": "2022-10-26T01:13:07Z",
+      "author": "ahale@mozilla.com",
+      "count": 22,
+      "is_private": false,
+      "raw_text": "My interest in this is purely in identifying if we have any coding patterns that are particularly vulnerable to a data race on Family 23 model 1 stepping 1 CPUs, as we could see this affect a future release.\n\nTo cite an example of a hot code path that would be very vulnerable to errata that cause stale loads, there is at least one place in the code where we use std::push_heap to insert items in a list, while also reading it from another thread, this rapidly hits the addresses with store and load operations in several different orderings (which makes it more likely to hit cpu errata), presumably there are x86 lock prefix instructions occurring around this time, and not necessarily on the writing thread - if errata 1021 caused a stale load on the writing thread, it would corrupt the list being inserted into (not to be confused with the expected behavior of stale values seen by the reading thread - x86 lockless programming is fun like that).\n\nWhereas for errata 1091 the most likely similar data structure I can imagine is just a map implementation using unaligned structs - if alignment is enabled then struct {int32 key;void *value;} takes 16 bytes on x86_64, but if not enabled it would be 12 bytes and half the elements of a vector of these structs would be unaligned pointers, making it very possible to get stale data for loads of pointers crossing a 4K boundary in a data race condition.",
+      "creation_time": "2022-10-26T01:13:07Z",
+      "tags": [],
+      "creator": "ahale@mozilla.com",
+      "text": "My interest in this is purely in identifying if we have any coding patterns that are particularly vulnerable to a data race on Family 23 model 1 stepping 1 CPUs, as we could see this affect a future release.\n\nTo cite an example of a hot code path that would be very vulnerable to errata that cause stale loads, there is at least one place in the code where we use std::push_heap to insert items in a list, while also reading it from another thread, this rapidly hits the addresses with store and load operations in several different orderings (which makes it more likely to hit cpu errata), presumably there are x86 lock prefix instructions occurring around this time, and not necessarily on the writing thread - if errata 1021 caused a stale load on the writing thread, it would corrupt the list being inserted into (not to be confused with the expected behavior of stale values seen by the reading thread - x86 lockless programming is fun like that).\n\nWhereas for errata 1091 the most likely similar data structure I can imagine is just a map implementation using unaligned structs - if alignment is enabled then struct {int32 key;void *value;} takes 16 bytes on x86_64, but if not enabled it would be 12 bytes and half the elements of a vector of these structs would be unaligned pointers, making it very possible to get stale data for loads of pointers crossing a 4K boundary in a data race condition.",
+      "bug_id": 1796126,
+      "reactions": {}
+    },
+    {
+      "bug_id": 1796126,
+      "reactions": {},
+      "text": "Not sure if it'll help, but I've created a [list](https://gist.github.com/krzysdz/9cfec694ce1b0ce3ab37604743ab9163) of Firefox 106.0 crashes on my computer.\nThere are 29 crashes on the list, but one of them seems not to be related to this issue - `EXCEPTION_ACCESS_VIOLATION_WRITE` in Rust code. The crashes are all over the place, including one in `__security_check_cookie()`, but all have `nsIFrame::BuildDisplayListForChild(mozilla::nsDisplayListBuilder*, nsIFrame*, mozilla::nsDisplayListSet const&, mozilla::EnumSet<nsIFrame::DisplayChildFlag, unsigned int>);` at least once in frames <=2.\n\nMost of these crashes occurred while loading an issue on GitHub. If you're interested I have a 434 MiB minidump from a crash with WinDbg attached.",
+      "creator": "krzysdz@konto.pl",
+      "tags": [],
+      "creation_time": "2022-10-26T03:35:43Z",
+      "time": "2022-10-26T03:35:43Z",
+      "count": 23,
+      "is_private": false,
+      "author": "krzysdz@konto.pl",
+      "raw_text": "Not sure if it'll help, but I've created a [list](https://gist.github.com/krzysdz/9cfec694ce1b0ce3ab37604743ab9163) of Firefox 106.0 crashes on my computer.\nThere are 29 crashes on the list, but one of them seems not to be related to this issue - `EXCEPTION_ACCESS_VIOLATION_WRITE` in Rust code. The crashes are all over the place, including one in `__security_check_cookie()`, but all have `nsIFrame::BuildDisplayListForChild(mozilla::nsDisplayListBuilder*, nsIFrame*, mozilla::nsDisplayListSet const&, mozilla::EnumSet<nsIFrame::DisplayChildFlag, unsigned int>);` at least once in frames <=2.\n\nMost of these crashes occurred while loading an issue on GitHub. If you're interested I have a 434 MiB minidump from a crash with WinDbg attached.",
+      "attachment_id": null,
+      "id": 16130848
+    },
+    {
+      "reactions": {},
+      "bug_id": 1796126,
+      "creator": "jmuizelaar@mozilla.com",
+      "text": "krzysdz, can you still reproduce these crashes on demand using 106.0? Can you check what version of the AMD chipset drivers you have?",
+      "creation_time": "2022-10-26T23:46:04Z",
+      "tags": [],
+      "id": 16132460,
+      "attachment_id": null,
+      "time": "2022-10-26T23:46:04Z",
+      "raw_text": "krzysdz, can you still reproduce these crashes on demand using 106.0? Can you check what version of the AMD chipset drivers you have?",
+      "count": 24,
+      "is_private": false,
+      "author": "jmuizelaar@mozilla.com"
+    },
+    {
+      "id": 16132747,
+      "attachment_id": null,
+      "raw_text": "I've just installed 106.0 and can reproduce crashes ([bp-a2e3a85d-aa30-4a57-b43a-0def70221027](https://crash-stats.mozilla.org/report/index/a2e3a85d-aa30-4a57-b43a-0def70221027) is from a fresh 106.0 install).\n\nAMD Chipset Drivers version: 3.10.08.506 (2021-10-21) ([screenshot](https://i.imgur.com/7auiKmd.png))",
+      "author": "krzysdz@konto.pl",
+      "count": 25,
+      "is_private": false,
+      "time": "2022-10-27T09:15:03Z",
+      "creation_time": "2022-10-27T09:15:03Z",
+      "tags": [],
+      "creator": "krzysdz@konto.pl",
+      "text": "I've just installed 106.0 and can reproduce crashes ([bp-a2e3a85d-aa30-4a57-b43a-0def70221027](https://crash-stats.mozilla.org/report/index/a2e3a85d-aa30-4a57-b43a-0def70221027) is from a fresh 106.0 install).\n\nAMD Chipset Drivers version: 3.10.08.506 (2021-10-21) ([screenshot](https://i.imgur.com/7auiKmd.png))",
+      "reactions": {},
+      "bug_id": 1796126
+    },
+    {
+      "creator": "jmuizelaar@mozilla.com",
+      "text": "krzysdz, can you try installing the latest AMD chipset drivers from www.amd.com/support and check if you can still reproduce the problem after that?",
+      "bug_id": 1796126,
+      "reactions": {},
+      "id": 16132899,
+      "attachment_id": null,
+      "count": 26,
+      "is_private": false,
+      "author": "jmuizelaar@mozilla.com",
+      "raw_text": "krzysdz, can you try installing the latest AMD chipset drivers from www.amd.com/support and check if you can still reproduce the problem after that?",
+      "time": "2022-10-27T11:47:09Z",
+      "creation_time": "2022-10-27T11:47:09Z",
+      "tags": []
+    },
+    {
+      "tags": [],
+      "creation_time": "2022-10-27T12:25:57Z",
+      "time": "2022-10-27T12:25:57Z",
+      "raw_text": "(In reply to Paul Blinzer from comment #21)\n> One item that is surprising that this issue only now showed up with Firefox.\n\nWe have already encountered similar issues in the past, just not on the release channel. See comment 15.",
+      "is_private": false,
+      "author": "gsvelto@mozilla.com",
+      "count": 27,
+      "attachment_id": null,
+      "id": 16133010,
+      "reactions": {},
+      "bug_id": 1796126,
+      "text": "(In reply to Paul Blinzer from comment #21)\n> One item that is surprising that this issue only now showed up with Firefox.\n\nWe have already encountered similar issues in the past, just not on the release channel. See comment 15.",
+      "creator": "gsvelto@mozilla.com"
+    },
+    {
+      "bug_id": 1796126,
+      "reactions": {},
+      "creator": "krzysdz@konto.pl",
+      "text": "Crashes still occur after updating chipset drivers to the latest version (4.09.23.507) and rebooting. I'm also running an \"old\" BIOS version - 5603 for ASUS Prime X370-Pro, but it was the last update until Ryzen 5xxx support was introduced and default settings changed for Windows 11.\n\nPre-update *verification*: [39a368de-3315-4b23-9493-5f7320221027](https://crash-stats.mozilla.org/report/index/39a368de-3315-4b23-9493-5f7320221027)\nNew drivers crash #1 (GitHub): no report form ([screenshot](https://imgur.com/zseiJBi))\nNew drivers crash #2 (GitHub): [ed4d447b-015e-47a2-8881-f73d90221027](https://crash-stats.mozilla.org/report/index/ed4d447b-015e-47a2-8881-f73d90221027) ([screenshot](https://imgur.com/tIq8ATC))\nNew drivers crash #3 (Mozilla Crash Reports): [ae240229-281f-47f4-bd9f-aa9c30221027](https://crash-stats.mozilla.org/report/index/ae240229-281f-47f4-bd9f-aa9c30221027)\nNew drivers crash #4 (Mozilla Crash Reports): [5b4addb4-06c5-48a9-a85e-3bbb10221027](https://crash-stats.mozilla.org/report/index/5b4addb4-06c5-48a9-a85e-3bbb10221027)\nNew drivers crash #5 (GitHub): [WinDbg screenshot](https://imgur.com/Bpfo5xQ)\n\nFull WinDbg message (can't be seen on the screenshot):\n```\n(588.25c0): Access violation - code c0000005 (first chance)\nFirst chance exceptions are reported before any exception handling.\nThis exception may be expected and handled.\nxul!mozilla::nsDisplayItem::GetClippedBounds [inlined in xul!mozilla::nsDisplayList::GetClippedBoundsWithRespectToASR+0x7d]:\n00007ff8`76be60cd 498b07          mov     rax,qword ptr [r15] ds:0000028b`26d5d7d0={xul!mozilla::nsDisplayCompositorHitTestInfo::`vftable' (00007ff8`7a6f06d0)}\n```",
+      "creation_time": "2022-10-27T15:16:35Z",
+      "tags": [],
+      "id": 16133315,
+      "attachment_id": null,
+      "author": "krzysdz@konto.pl",
+      "is_private": false,
+      "count": 28,
+      "raw_text": "Crashes still occur after updating chipset drivers to the latest version (4.09.23.507) and rebooting. I'm also running an \"old\" BIOS version - 5603 for ASUS Prime X370-Pro, but it was the last update until Ryzen 5xxx support was introduced and default settings changed for Windows 11.\n\nPre-update *verification*: [39a368de-3315-4b23-9493-5f7320221027](https://crash-stats.mozilla.org/report/index/39a368de-3315-4b23-9493-5f7320221027)\nNew drivers crash #1 (GitHub): no report form ([screenshot](https://imgur.com/zseiJBi))\nNew drivers crash #2 (GitHub): [ed4d447b-015e-47a2-8881-f73d90221027](https://crash-stats.mozilla.org/report/index/ed4d447b-015e-47a2-8881-f73d90221027) ([screenshot](https://imgur.com/tIq8ATC))\nNew drivers crash #3 (Mozilla Crash Reports): [ae240229-281f-47f4-bd9f-aa9c30221027](https://crash-stats.mozilla.org/report/index/ae240229-281f-47f4-bd9f-aa9c30221027)\nNew drivers crash #4 (Mozilla Crash Reports): [5b4addb4-06c5-48a9-a85e-3bbb10221027](https://crash-stats.mozilla.org/report/index/5b4addb4-06c5-48a9-a85e-3bbb10221027)\nNew drivers crash #5 (GitHub): [WinDbg screenshot](https://imgur.com/Bpfo5xQ)\n\nFull WinDbg message (can't be seen on the screenshot):\n```\n(588.25c0): Access violation - code c0000005 (first chance)\nFirst chance exceptions are reported before any exception handling.\nThis exception may be expected and handled.\nxul!mozilla::nsDisplayItem::GetClippedBounds [inlined in xul!mozilla::nsDisplayList::GetClippedBoundsWithRespectToASR+0x7d]:\n00007ff8`76be60cd 498b07          mov     rax,qword ptr [r15] ds:0000028b`26d5d7d0={xul!mozilla::nsDisplayCompositorHitTestInfo::`vftable' (00007ff8`7a6f06d0)}\n```",
+      "time": "2022-10-27T15:16:35Z"
+    },
+    {
+      "text": " kryzsdz AMD has released a new chipset driver that should fix this: https://drivers.amd.com/drivers/amd_chipset_software_4.11.15.342.exe\n\nCan you try installing that and check if you can still reproduce the problem?",
+      "creator": "jmuizelaar@mozilla.com",
+      "bug_id": 1796126,
+      "reactions": {},
+      "is_private": false,
+      "author": "jmuizelaar@mozilla.com",
+      "count": 29,
+      "raw_text": " kryzsdz AMD has released a new chipset driver that should fix this: https://drivers.amd.com/drivers/amd_chipset_software_4.11.15.342.exe\n\nCan you try installing that and check if you can still reproduce the problem?",
+      "time": "2022-11-22T02:32:20Z",
+      "id": 16169241,
+      "attachment_id": null,
+      "tags": [],
+      "creation_time": "2022-11-22T02:32:20Z"
+    },
+    {
+      "bug_id": 1796126,
+      "reactions": {},
+      "text": "Hmm, it seems like that link needs an AMD referrer to work. You'll need to find it (4.11.15.342) from here: https://www.amd.com/en/support",
+      "creator": "jmuizelaar@mozilla.com",
+      "tags": [],
+      "creation_time": "2022-11-22T02:35:37Z",
+      "time": "2022-11-22T02:35:37Z",
+      "is_private": false,
+      "count": 30,
+      "author": "jmuizelaar@mozilla.com",
+      "raw_text": "Hmm, it seems like that link needs an AMD referrer to work. You'll need to find it (4.11.15.342) from here: https://www.amd.com/en/support",
+      "id": 16169243,
+      "attachment_id": null
+    },
+    {
+      "text": "Sorry for not replying earlier, but I did not have permissions to reply here in 2022. Here's what I prepared on 2022-12-01:\n\n> I did some more testing and now I'm quite sure that the 4.11.15.342 version of AMD chipset drivers fixes this CPU bug (at least in Firefox 106.0).\n>\n> I've installed Windows on a different drive and was able to easily and reliably reproduce the problem with the old drivers (crash immediately after clicking the \"express\" repository on https://github.com/expressjs). After updating the chipset drivers to 4.11.15.342 I couldn't make Firefox crash. Out of curiosity I had also tried uninstalling the 4.11.15.342 version and installing the older one (4.09.23.507) and was again able to crash Firefox when using GitHub.",
+      "creator": "krzysdz@konto.pl",
+      "reactions": {},
+      "bug_id": 1796126,
+      "raw_text": "Sorry for not replying earlier, but I did not have permissions to reply here in 2022. Here's what I prepared on 2022-12-01:\n\n> I did some more testing and now I'm quite sure that the 4.11.15.342 version of AMD chipset drivers fixes this CPU bug (at least in Firefox 106.0).\n>\n> I've installed Windows on a different drive and was able to easily and reliably reproduce the problem with the old drivers (crash immediately after clicking the \"express\" repository on https://github.com/expressjs). After updating the chipset drivers to 4.11.15.342 I couldn't make Firefox crash. Out of curiosity I had also tried uninstalling the 4.11.15.342 version and installing the older one (4.09.23.507) and was again able to crash Firefox when using GitHub.",
+      "count": 31,
+      "author": "krzysdz@konto.pl",
+      "is_private": false,
+      "time": "2026-01-22T20:37:13Z",
+      "id": 17855161,
+      "attachment_id": null,
+      "tags": [],
+      "creation_time": "2026-01-22T20:37:13Z"
+    }
+  ],
+  "cf_tracking_thunderbird_esr140": "---",
+  "cf_tracking_firefox147": "---",
+  "op_sys": "Windows 10",
+  "votes": 0,
+  "whiteboard": "",
+  "cf_status_firefox_esr140": "---",
+  "comment_count": 32,
+  "cf_cab_review": "---",
+  "regressions": [],
+  "cf_crash_signature": "[@ mozilla::nsDisplayItem::GetClippedBounds]\r\n[@ nsRect::SaturatingUnionEdges ]\r\n[@ nsRect::SaturatingUnion]\r\n[@ mozilla::nsDisplayContainer::UpdateBounds]\r\n[@ mozilla::LinkedListIterator<T>::operator*]",
+  "qa_contact": "",
+  "version": "unspecified",
+  "cf_tracking_firefox149": "---",
+  "cf_tracking_firefox_relnote": "106+",
+  "platform": "Unspecified",
+  "keywords": [
+    "crash",
+    "regression"
+  ],
+  "history": [
+    {
+      "changes": [
+        {
+          "removed": "---",
+          "added": "affected",
+          "field_name": "cf_status_firefox106"
+        },
+        {
+          "added": "affected",
+          "field_name": "cf_status_firefox107",
+          "removed": "---"
+        }
+      ],
+      "when": "2022-10-19T12:49:23Z",
+      "who": "pascalc@gmail.com"
+    },
+    {
+      "who": "pascalc@gmail.com",
+      "when": "2022-10-19T12:52:22Z",
+      "changes": [
+        {
+          "field_name": "see_also",
+          "added": "https://bugzilla.mozilla.org/show_bug.cgi?id=1796128",
+          "removed": ""
+        }
+      ]
+    },
+    {
+      "who": "pascalc@gmail.com",
+      "when": "2022-10-19T12:54:33Z",
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "see_also",
+          "added": "https://bugzilla.mozilla.org/show_bug.cgi?id=1796129"
+        }
+      ]
+    },
+    {
+      "who": "bhood@mozilla.com",
+      "when": "2022-10-19T14:32:41Z",
+      "changes": [
+        {
+          "added": "bhood@mozilla.com, tnikkel@gmail.com",
+          "field_name": "cc",
+          "removed": ""
+        },
+        {
+          "field_name": "flagtypes.name",
+          "added": "needinfo?(tnikkel@gmail.com)",
+          "removed": ""
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "removed": "Crash in [@ mozilla::nsDisplayItem::GetClippedBounds]",
+          "field_name": "summary",
+          "added": "Crashes on AMD Zen (family 23 model 1 stepping 1)"
+        },
+        {
+          "removed": "",
+          "field_name": "cc",
+          "added": "jmuizelaar@mozilla.com"
+        }
+      ],
+      "who": "jmuizelaar@mozilla.com",
+      "when": "2022-10-19T15:32:20Z"
+    },
+    {
+      "changes": [
+        {
+          "added": "[@ mozilla::nsDisplayItem::GetClippedBounds]\r\n[@ nsRect::SaturatingUnionEdges ]",
+          "field_name": "cf_crash_signature",
+          "removed": "[@ mozilla::nsDisplayItem::GetClippedBounds]"
+        }
+      ],
+      "when": "2022-10-19T15:34:00Z",
+      "who": "jmuizelaar@mozilla.com"
+    },
+    {
+      "who": "jmuizelaar@mozilla.com",
+      "when": "2022-10-19T15:36:29Z",
+      "changes": [
+        {
+          "removed": "[@ mozilla::nsDisplayItem::GetClippedBounds]\r\n[@ nsRect::SaturatingUnionEdges ]",
+          "field_name": "cf_crash_signature",
+          "added": "[@ mozilla::nsDisplayItem::GetClippedBounds]\r\n[@ nsRect::SaturatingUnionEdges ]\r\n[@ nsRect::SaturatingUnion]"
+        }
+      ]
+    },
+    {
+      "who": "jmuizelaar@mozilla.com",
+      "when": "2022-10-19T15:41:44Z",
+      "changes": [
+        {
+          "removed": "[@ mozilla::nsDisplayItem::GetClippedBounds]\r\n[@ nsRect::SaturatingUnionEdges ]\r\n[@ nsRect::SaturatingUnion]",
+          "added": "[@ mozilla::nsDisplayItem::GetClippedBounds]\r\n[@ nsRect::SaturatingUnionEdges ]\r\n[@ nsRect::SaturatingUnion]\r\n[@ mozilla::nsDisplayContainer::UpdateBounds]",
+          "field_name": "cf_crash_signature"
+        }
+      ]
+    },
+    {
+      "when": "2022-10-19T15:45:15Z",
+      "who": "jmuizelaar@mozilla.com",
+      "changes": [
+        {
+          "removed": "[@ mozilla::nsDisplayItem::GetClippedBounds]\r\n[@ nsRect::SaturatingUnionEdges ]\r\n[@ nsRect::SaturatingUnion]\r\n[@ mozilla::nsDisplayContainer::UpdateBounds]",
+          "added": "[@ mozilla::nsDisplayItem::GetClippedBounds]\r\n[@ nsRect::SaturatingUnionEdges ]\r\n[@ nsRect::SaturatingUnion]\r\n[@ mozilla::nsDisplayContainer::UpdateBounds]\r\n[@ mozilla::LinkedListIterator<T>::operator*]",
+          "field_name": "cf_crash_signature"
+        }
+      ]
+    },
+    {
+      "who": "dmeehan@mozilla.com",
+      "when": "2022-10-19T15:57:16Z",
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "cc",
+          "added": "dmeehan@mozilla.com"
+        }
+      ]
+    },
+    {
+      "when": "2022-10-19T16:13:35Z",
+      "who": "jmuizelaar@mozilla.com",
+      "changes": [
+        {
+          "removed": "",
+          "added": "gsvelto@mozilla.com",
+          "field_name": "cc"
+        }
+      ]
+    },
+    {
+      "who": "pascalc@gmail.com",
+      "when": "2022-10-19T16:16:47Z",
+      "changes": [
+        {
+          "added": "needinfo?(gsvelto@mozilla.com)",
+          "field_name": "flagtypes.name",
+          "removed": ""
+        },
+        {
+          "removed": "---",
+          "field_name": "cf_status_firefox_esr102",
+          "added": "unaffected"
+        },
+        {
+          "removed": "---",
+          "field_name": "cf_tracking_firefox106",
+          "added": "+"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "added": "continuation@gmail.com",
+          "field_name": "cc",
+          "removed": ""
+        }
+      ],
+      "who": "continuation@gmail.com",
+      "when": "2022-10-19T16:32:01Z"
+    },
+    {
+      "when": "2022-10-19T16:40:51Z",
+      "who": "ryanvm@gmail.com",
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "cc",
+          "added": "ryanvm@gmail.com"
+        }
+      ]
+    },
+    {
+      "who": "michelle@masterwayz.nl",
+      "when": "2022-10-19T16:42:50Z",
+      "changes": [
+        {
+          "added": "mgoossens@mozilla.com",
+          "field_name": "cc",
+          "removed": ""
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "field_name": "cc",
+          "added": "gpascutto@mozilla.com",
+          "removed": ""
+        }
+      ],
+      "when": "2022-10-19T16:55:08Z",
+      "who": "gpascutto@mozilla.com"
+    },
+    {
+      "changes": [
+        {
+          "added": "jchaupitre@mozilla.com",
+          "field_name": "cc",
+          "removed": ""
+        }
+      ],
+      "when": "2022-10-19T16:56:34Z",
+      "who": "jchaupitre@mozilla.com"
+    },
+    {
+      "changes": [
+        {
+          "field_name": "cc",
+          "added": "jscher2000@gmail.com",
+          "removed": ""
+        }
+      ],
+      "who": "jscher2000@gmail.com",
+      "when": "2022-10-19T17:54:31Z"
+    },
+    {
+      "who": "gpascutto@mozilla.com",
+      "when": "2022-10-19T18:24:46Z",
+      "changes": [
+        {
+          "removed": "",
+          "added": "needinfo?(jmuizelaar@mozilla.com)",
+          "field_name": "flagtypes.name"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "field_name": "flagtypes.name",
+          "added": "",
+          "removed": "needinfo?(jmuizelaar@mozilla.com)"
+        }
+      ],
+      "when": "2022-10-19T18:33:02Z",
+      "who": "jmuizelaar@mozilla.com"
+    },
+    {
+      "who": "jmuizelaar@mozilla.com",
+      "when": "2022-10-19T18:33:09Z",
+      "changes": [
+        {
+          "added": "",
+          "field_name": "flagtypes.name",
+          "removed": "needinfo?(tnikkel@gmail.com)"
+        }
+      ]
+    },
+    {
+      "when": "2022-10-19T19:36:25Z",
+      "who": "dschubert@mozilla.com",
+      "changes": [
+        {
+          "field_name": "cc",
+          "added": "dschubert@mozilla.com",
+          "removed": ""
+        }
+      ]
+    },
+    {
+      "who": "gsvelto@mozilla.com",
+      "when": "2022-10-19T19:58:02Z",
+      "changes": [
+        {
+          "added": "",
+          "field_name": "flagtypes.name",
+          "removed": "needinfo?(gsvelto@mozilla.com)"
+        }
+      ]
+    },
+    {
+      "who": "jmuizelaar@mozilla.com",
+      "when": "2022-10-19T20:07:21Z",
+      "changes": [
+        {
+          "added": "Crashes on AMD Zen 1 (family 23 model 1 stepping 1)",
+          "field_name": "summary",
+          "removed": "Crashes on AMD Zen (family 23 model 1 stepping 1)"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "removed": "",
+          "added": "https://bugzilla.mozilla.org/show_bug.cgi?id=1687914",
+          "field_name": "see_also"
+        }
+      ],
+      "who": "jmuizelaar@mozilla.com",
+      "when": "2022-10-19T20:07:47Z"
+    },
+    {
+      "changes": [
+        {
+          "removed": "",
+          "added": "yoasif@gmail.com",
+          "field_name": "cc"
+        }
+      ],
+      "who": "yoasif@gmail.com",
+      "when": "2022-10-19T20:40:10Z"
+    },
+    {
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "cc",
+          "added": "ahale@mozilla.com"
+        }
+      ],
+      "who": "ahale@mozilla.com",
+      "when": "2022-10-19T21:05:25Z"
+    },
+    {
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "cc",
+          "added": "krzysdz@konto.pl"
+        }
+      ],
+      "who": "krzysdz@konto.pl",
+      "when": "2022-10-19T21:39:28Z"
+    },
+    {
+      "who": "tnikkel@gmail.com",
+      "when": "2022-10-19T22:16:29Z",
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "see_also",
+          "added": "https://bugzilla.mozilla.org/show_bug.cgi?id=1766471"
+        }
+      ]
+    },
+    {
+      "when": "2022-10-19T22:26:15Z",
+      "who": "dmeehan@mozilla.com",
+      "changes": [
+        {
+          "added": "RESOLVED",
+          "field_name": "status",
+          "removed": "NEW"
+        },
+        {
+          "removed": "",
+          "added": "FIXED",
+          "field_name": "resolution"
+        },
+        {
+          "added": "2022-10-19T22:26:15Z",
+          "field_name": "cf_last_resolved",
+          "removed": ""
+        },
+        {
+          "field_name": "cf_status_firefox106",
+          "added": "fixed",
+          "removed": "affected"
+        },
+        {
+          "removed": "affected",
+          "added": "---",
+          "field_name": "cf_status_firefox107"
+        }
+      ]
+    },
+    {
+      "who": "jmuizelaar@mozilla.com",
+      "when": "2022-10-19T23:46:23Z",
+      "changes": [
+        {
+          "added": "https://bugzilla.mozilla.org/show_bug.cgi?id=1796282",
+          "field_name": "see_also",
+          "removed": ""
+        }
+      ]
+    },
+    {
+      "when": "2022-10-20T06:31:35Z",
+      "who": "aryx.bugmail@gmx-topmail.de",
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "see_also",
+          "added": "https://bugzilla.mozilla.org/show_bug.cgi?id=1359569"
+        }
+      ]
+    },
+    {
+      "when": "2022-10-20T09:02:54Z",
+      "who": "emilio@crisal.io",
+      "changes": [
+        {
+          "added": "emilio@crisal.io",
+          "field_name": "cc",
+          "removed": ""
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "removed": "",
+          "added": "soeren.hentzschel@googlemail.com",
+          "field_name": "cc"
+        }
+      ],
+      "who": "soeren.hentzschel@googlemail.com",
+      "when": "2022-10-20T14:32:21Z"
+    },
+    {
+      "changes": [
+        {
+          "removed": "",
+          "added": "echuber2@illinois.edu",
+          "field_name": "cc"
+        }
+      ],
+      "who": "echuber2@illinois.edu",
+      "when": "2022-10-21T16:40:35Z"
+    },
+    {
+      "changes": [
+        {
+          "removed": "",
+          "added": "paul.blinzer@amd.com",
+          "field_name": "cc"
+        }
+      ],
+      "who": "paul.blinzer@amd.com",
+      "when": "2022-10-26T00:18:05Z"
+    },
+    {
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "flagtypes.name",
+          "added": "needinfo?(krzysdz@konto.pl)"
+        }
+      ],
+      "when": "2022-10-26T23:46:04Z",
+      "who": "jmuizelaar@mozilla.com"
+    },
+    {
+      "who": "krzysdz@konto.pl",
+      "when": "2022-10-27T09:15:03Z",
+      "changes": [
+        {
+          "removed": "needinfo?(krzysdz@konto.pl)",
+          "field_name": "flagtypes.name",
+          "added": ""
+        }
+      ]
+    },
+    {
+      "when": "2022-10-27T11:47:09Z",
+      "who": "jmuizelaar@mozilla.com",
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "flagtypes.name",
+          "added": "needinfo?(krzysdz@konto.pl)"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "removed": "needinfo?(krzysdz@konto.pl)",
+          "field_name": "flagtypes.name",
+          "added": ""
+        }
+      ],
+      "who": "krzysdz@konto.pl",
+      "when": "2022-10-27T15:16:35Z"
+    },
+    {
+      "changes": [
+        {
+          "field_name": "cc",
+          "added": "dsmith@mozilla.com",
+          "removed": ""
+        },
+        {
+          "added": "106+",
+          "field_name": "cf_tracking_firefox_relnote",
+          "removed": "---"
+        }
+      ],
+      "when": "2022-11-10T19:03:05Z",
+      "who": "dsmith@mozilla.com"
+    },
+    {
+      "when": "2022-11-22T02:32:20Z",
+      "who": "jmuizelaar@mozilla.com",
+      "changes": [
+        {
+          "removed": "",
+          "added": "needinfo?(krzysdz@konto.pl)",
+          "field_name": "flagtypes.name"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "added": "https://bugzilla.mozilla.org/show_bug.cgi?id=1844401",
+          "field_name": "see_also",
+          "removed": ""
+        }
+      ],
+      "who": "ryanvm@gmail.com",
+      "when": "2023-07-26T13:59:55Z"
+    },
+    {
+      "who": "nical.bugzilla@gmail.com",
+      "when": "2024-05-13T14:11:39Z",
+      "changes": [
+        {
+          "removed": "",
+          "added": "1896406",
+          "field_name": "blocks"
+        }
+      ]
+    },
+    {
+      "when": "2026-01-22T20:37:13Z",
+      "who": "krzysdz@konto.pl",
+      "changes": [
+        {
+          "field_name": "flagtypes.name",
+          "added": "",
+          "removed": "needinfo?(krzysdz@konto.pl)"
+        }
+      ]
+    }
+  ],
+  "product": "Core",
+  "severity": "S2",
+  "filed_via": "standard_form",
+  "priority": "--",
+  "cf_status_firefox148": "---",
+  "assigned_to": "nobody@mozilla.org",
+  "cf_status_thunderbird_esr140": "---",
+  "id": 1796126,
+  "summary": "Crashes on AMD Zen 1 (family 23 model 1 stepping 1)",
+  "component": "Graphics",
+  "creation_time": "2022-10-19T12:49:03Z",
+  "cf_fx_iteration": "---",
+  "is_open": false,
+  "counts": {
+    "duplicates": 2,
+    "attachments": 0,
+    "keywords": 2,
+    "cc": 20,
+    "regressions": 0,
+    "regressed_by": 0,
+    "comments": 32,
+    "blocks": 0,
+    "depends_on": 1
+  },
+  "cf_status_thunderbird_esr115": "---",
+  "attachments": [],
+  "resolution": "FIXED",
+  "cf_tracking_firefox106": "+",
+  "cf_accessibility_severity": "---",
+  "last_change_time_non_bot": "2026-01-22T20:37:13Z",
+  "creator_detail": {
+    "real_name": "Pascal Chevrel:pascalc",
+    "id": 24572,
+    "nick": "pascalc",
+    "email": "pascalc@gmail.com",
+    "name": "pascalc@gmail.com"
+  },
+  "classification": "Components",
+  "groups": [],
+  "status": "RESOLVED",
+  "last_change_time": "2026-01-22T20:37:13Z",
+  "mentors": [],
+  "cf_has_str": "---",
+  "blocks": [
+    1896406
+  ],
+  "cf_tracking_firefox_esr140": "---",
+  "duplicates": [
+    1796128,
+    1796129
+  ],
+  "cf_tracking_thunderbird_esr115": "---",
+  "cf_last_resolved": "2022-10-19T22:26:15Z",
+  "cf_size_estimate": "---",
+  "dupe_of": null,
+  "triage_owner_detail": {
+    "nick": "bhood",
+    "name": "bhood@mozilla.com",
+    "email": "bhood@mozilla.com",
+    "real_name": "Bob Hood [:bhood]",
+    "id": 697075
+  },
+  "flags": [],
+  "depends_on": [],
+  "description": "Crash report: https://crash-stats.mozilla.org/report/index/9b145d1b-1934-45b3-a92e-374190221019\n\nReason: ```EXCEPTION_ACCESS_VIOLATION_READ```\n\nTop 10 frames of crashing thread:\n```\n0 xul.dll mozilla::nsDisplayItem::GetClippedBounds const layout/painting/nsDisplayList.cpp:2692\n0 xul.dll mozilla::nsDisplayList::GetClippedBoundsWithRespectToASR const layout/painting/nsDisplayList.cpp:2104\n1 xul.dll mozilla::nsDisplayContainer::UpdateBounds layout/painting/nsDisplayList.cpp:2773\n1 xul.dll mozilla::nsDisplayContainer::nsDisplayContainer layout/painting/nsDisplayList.cpp:2703\n1 xul.dll mozilla::MakeDisplayItemWithIndex layout/painting/nsDisplayList.h:1999\n1 xul.dll mozilla::MakeDisplayItem layout/painting/nsDisplayList.h:2045\n1 xul.dll WrapInWrapList layout/generic/nsIFrame.cpp:3862\n1 xul.dll nsIFrame::BuildDisplayListForChild layout/generic/nsIFrame.cpp:4329\n2 xul.dll DisplayLine layout/generic/nsBlockFrame.cpp:7045\n2 xul.dll nsBlockFrame::BuildDisplayList layout/generic/nsBlockFrame.cpp:7200\n```\nNew crash signature in 106.0",
+  "cc": [
+    "ahale@mozilla.com",
+    "bhood@mozilla.com",
+    "continuation@gmail.com",
+    "dmeehan@mozilla.com",
+    "dschubert@mozilla.com",
+    "dsmith@mozilla.com",
+    "echuber2@illinois.edu",
+    "emilio@crisal.io",
+    "gpascutto@mozilla.com",
+    "gsvelto@mozilla.com",
+    "jchaupitre@mozilla.com",
+    "jmuizelaar@mozilla.com",
+    "jscher2000@gmail.com",
+    "krzysdz@konto.pl",
+    "michelle@masterwayz.nl",
+    "paul.blinzer@amd.com",
+    "ryanvm@gmail.com",
+    "soeren.hentzschel@googlemail.com",
+    "tnikkel@gmail.com",
+    "yoasif@gmail.com"
+  ],
+  "target_milestone": "---",
+  "cf_status_firefox106": "fixed",
+  "cf_fx_points": "---",
+  "cf_status_firefox_esr102": "unaffected",
+  "creator": "pascalc@gmail.com",
+  "is_creator_accessible": true,
+  "cc_detail": [
+    {
+      "email": "ahale@mozilla.com",
+      "name": "ahale@mozilla.com",
+      "nick": "ahale",
+      "id": 706885,
+      "real_name": "Ashley Hale [:ahale]"
+    },
+    {
+      "name": "bhood@mozilla.com",
+      "email": "bhood@mozilla.com",
+      "nick": "bhood",
+      "real_name": "Bob Hood [:bhood]",
+      "id": 697075
+    },
+    {
+      "name": "continuation@gmail.com",
+      "email": "continuation@gmail.com",
+      "nick": "mccr8",
+      "real_name": "Andrew McCreight [:mccr8]",
+      "id": 406194
+    },
+    {
+      "id": 695136,
+      "real_name": "Donal Meehan [:dmeehan]",
+      "email": "dmeehan@mozilla.com",
+      "name": "dmeehan@mozilla.com",
+      "nick": "dmeehan"
+    },
+    {
+      "id": 421268,
+      "real_name": "Dennis Schubert [:denschub]",
+      "name": "dschubert@mozilla.com",
+      "email": "dschubert@mozilla.com",
+      "nick": "denschub"
+    },
+    {
+      "name": "dsmith@mozilla.com",
+      "email": "dsmith@mozilla.com",
+      "nick": "diannaS",
+      "real_name": "Dianna Smith [:diannaS]",
+      "id": 690067
+    },
+    {
+      "id": 579244,
+      "real_name": "Eric Huber",
+      "nick": "echuber2",
+      "name": "echuber2@illinois.edu",
+      "email": "echuber2@illinois.edu"
+    },
+    {
+      "id": 546716,
+      "real_name": "Emilio Cobos \u00c1lvarez [:emilio]",
+      "nick": "emilio",
+      "name": "emilio@crisal.io",
+      "email": "emilio@crisal.io"
+    },
+    {
+      "nick": "gcp",
+      "name": "gpascutto@mozilla.com",
+      "email": "gpascutto@mozilla.com",
+      "id": 151147,
+      "real_name": "Gian-Carlo Pascutto [:gcp]"
+    },
+    {
+      "id": 448747,
+      "real_name": "Gabriele Svelto [:gsvelto]",
+      "nick": "gsvelto",
+      "name": "gsvelto@mozilla.com",
+      "email": "gsvelto@mozilla.com"
+    },
+    {
+      "name": "jchaupitre@mozilla.com",
+      "email": "jchaupitre@mozilla.com",
+      "nick": "jchaupitre",
+      "real_name": "Julien Chaupitre",
+      "id": 654294
+    },
+    {
+      "real_name": "Jeff Muizelaar [:jrmuizel]",
+      "id": 309398,
+      "nick": "jrmuizel",
+      "email": "jmuizelaar@mozilla.com",
+      "name": "jmuizelaar@mozilla.com"
+    },
+    {
+      "id": 565766,
+      "real_name": "",
+      "nick": "jscher2000",
+      "email": "jscher2000@gmail.com",
+      "name": "jscher2000@gmail.com"
+    },
+    {
+      "nick": "krzysdz",
+      "name": "krzysdz@konto.pl",
+      "email": "krzysdz@konto.pl",
+      "id": 592584,
+      "real_name": ""
+    },
+    {
+      "id": 636428,
+      "real_name": "Michelle Goossens [:masterwayz]",
+      "name": "michelle@masterwayz.nl",
+      "email": "michelle@masterwayz.nl",
+      "nick": "masterwayz"
+    },
+    {
+      "id": 519408,
+      "real_name": "Paul Blinzer",
+      "nick": "paul.blinzer",
+      "name": "paul.blinzer@amd.com",
+      "email": "paul.blinzer@amd.com"
+    },
+    {
+      "real_name": "Ryan VanderMeulen [:RyanVM]",
+      "id": 75935,
+      "email": "ryanvm@gmail.com",
+      "name": "ryanvm@gmail.com",
+      "nick": "RyanVM"
+    },
+    {
+      "name": "soeren.hentzschel@googlemail.com",
+      "email": "soeren.hentzschel@googlemail.com",
+      "nick": "soeren.hentzschel",
+      "real_name": "S\u00f6ren Hentzschel",
+      "id": 359208
+    },
+    {
+      "real_name": "Timothy Nikkel (:tnikkel)",
+      "id": 255010,
+      "name": "tnikkel@gmail.com",
+      "email": "tnikkel@gmail.com",
+      "nick": "tnikkel"
+    },
+    {
+      "real_name": "Asif Youssuff",
+      "id": 347239,
+      "nick": "yoasif",
+      "email": "yoasif@gmail.com",
+      "name": "yoasif@gmail.com"
+    }
+  ],
+  "cf_qa_whiteboard": "",
+  "cf_webcompat_score": "---",
+  "url": "",
+  "mentors_detail": [],
+  "cf_user_story": "",
+  "cf_tracking_firefox_esr115": "---",
+  "cf_status_firefox149": "---"
+}

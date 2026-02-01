@@ -1,0 +1,48 @@
+--- a/browser/components/urlbar/UrlbarPrefs.sys.mjs
++++ b/browser/components/urlbar/UrlbarPrefs.sys.mjs
+@@ -50,14 +50,6 @@
+-// Preference: browser.urlbar.switchTabs.searchAllContainers
+-export const switchTabsSearchAllContainersPref = "browser.urlbar.switchTabs.searchAllContainers";
+-
+-export function get switchTabsSearchAllContainers() {
+-  return Services.prefs.getBoolPref(switchTabsSearchAllContainersPref, false);
+-}
+-
+-export function set switchTabsSearchAllContainers(value) {
+-  Services.prefs.setBoolPref(switchTabsSearchAllContainersPref, value);
+-}
+--- a/browser/components/addressbar/UrlbarUtils.jsm
++++ b/browser/components/addressbar/UrlbarUtils.jsm
+@@ -120,10 +120,6 @@
+-  // If the pref to search all containers when switching tabs is enabled, modify behavior.
+-  if (UrlbarPrefs.switchTabsSearchAllContainers) {
+-    // Some logic related to searching all containers
+-  }
+--- a/browser/components/addressbar/UrlbarInput.jsm
++++ b/browser/components/addressbar/UrlbarInput.jsm
+@@ -85,10 +85,6 @@
+-  if (UrlbarPrefs.switchTabsSearchAllContainers) {
+-    // Adjust the query or behavior for all containers
+-  }
+--- a/toolkit/components/telemetry/metrics.yaml
++++ b/toolkit/components/telemetry/metrics.yaml
+@@ -1020,10 +1020,6 @@
+-# Telemetry probe for 'browser.urlbar.switchTabs.searchAllContainers' usage
+-browser_urlbar_switchTabs_searchAllContainers:
+-  type: boolean
+-  description: "Telemetry for the 'browser.urlbar.switchTabs.searchAllContainers' preference."
+-  lifetime: ping
+-  opt-out: true
+-  release_channel_collection: true
+-  bug_numbers:
+-    - 2006623
+-  expires: 2025-01-01
+--- a/browser/components/addressbar/UrlbarTelemetry.jsm
++++ b/browser/components/addressbar/UrlbarTelemetry.jsm
+@@ -200,12 +200,6 @@
+-// Telemetry related to switchTabsSearchAllContainers pref
+-if (UrlbarPrefs.switchTabsSearchAllContainers) {
+-  Telemetry.recordEvent("urlbar.switchTabs.searchAllContainers.enabled");
+-}
+-  
+-// Remove any other telemetry code referencing switchTabsSearchAllContainers pref

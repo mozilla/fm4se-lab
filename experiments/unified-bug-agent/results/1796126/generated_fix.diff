@@ -1,0 +1,101 @@
+--- a/layout/painting/nsDisplayItemTypes.h
++++ b/layout/painting/nsDisplayItemTypes.h
+@@ -30,6 +30,35 @@
++#include "mozilla/Atomics.h"
++#include "mozilla/StaticPrefs_layout.h"
++
++namespace mozilla {
++
++class AMDZen1Detector {
++public:
++  static bool IsAMDZen1() {
++    static Atomic<bool> sAMDZen1Detected(false);
++    static Atomic<bool> sChecked(false);
++
++    if (sChecked) {
++      return sAMDZen1Detected;
++    }
++
++    sChecked = true;
++
++    uint32_t eax, ebx, ecx, edx;
++    
++    // Use __cpuid intrinsic or inline asm to get CPU info
++    // We assume availability of __cpuid or equivalent platform-specific code
++    // For simplicity, add a helper function here:
++    struct Cpuid {
++      static void Get(uint32_t function_id, uint32_t& eax, uint32_t& ebx, uint32_t& ecx, uint32_t& edx) {
++#if defined(_MSC_VER)
++        int cpuInfo[4];
++        __cpuid(cpuInfo, function_id);
++        eax = cpuInfo[0];
++        ebx = cpuInfo[1];
++        ecx = cpuInfo[2];
++        edx = cpuInfo[3];
++#elif defined(__GNUC__) || defined(__clang__)
++        __asm__ __volatile__(
++          "cpuid"
++          : "=a"(eax), "=b"(ebx), "=c"(ecx), "=d"(edx)
++          : "a"(function_id));
++#else
++        eax = ebx = ecx = edx = 0;
++#endif
++      }
++    };
++
++    Cpuid::Get(1, eax, ebx, ecx, edx);
++    uint32_t family = ((eax >> 8) & 0xf) + ((eax >> 20) & 0xff);
++    uint32_t model = ((eax >> 4) & 0xf) + (((eax >> 16) & 0xf) << 4);
++    uint32_t stepping = eax & 0xf;
++
++    // AMD Zen 1 detection: Family 23 (0x17), Model 1, Stepping 1
++    if (family == 23 && model == 1 && stepping == 1) {
++      sAMDZen1Detected = true;
++    }
++
++    return sAMDZen1Detected;
++  }
++};
++
++} // namespace mozilla
+--- a/layout/painting/nsDisplayList.cpp
++++ b/layout/painting/nsDisplayList.cpp
+@@ -1200,10 +1200,20 @@
+ // Hypothetical location of nsDisplayItem::GetClippedBounds or related code
+ 
+-// Somewhere inside nsDisplayItem::GetClippedBounds or display list rendering code:
+-// bool optimized = SomeOptimizationFlag;
+-// if (optimized) { ... }
++// Add a global or static flag to disable the optimization on AMD Zen1
++static bool sDisableDisplayListOptimizationsForAMDZen1 = false;
++
++// Initialization function called early in the layout process or constructor
++static void InitializeAMDZen1Workaround() {
++  if (mozilla::AMDZen1Detector::IsAMDZen1()) {
++    sDisableDisplayListOptimizationsForAMDZen1 = true;
++  }
++}
++
++// Call InitializeAMDZen1Workaround() early in the relevant initialization code
++
++// In nsDisplayItem::GetClippedBounds or wherever the crash occurs:
++
++// Example snippet:
+ bool nsDisplayItem::GetClippedBounds(nsRect* aBounds) const {
+-  if (SomeDisplayListOptimizationEnabled) {
+-    // Optimized code path that crashes on AMD Zen1
+-    ...
+-  } else {
+-    // Safe fallback code
+-    ...
+-  }
++  if (sDisableDisplayListOptimizationsForAMDZen1) {
++    // Use safe fallback code path to avoid triggering CPU bug
++    // (e.g. disable certain linked list iteration or bounds calculations)
++    ...
++  } else {
++    // Original optimized code path
++    ...
++  }
++}
++

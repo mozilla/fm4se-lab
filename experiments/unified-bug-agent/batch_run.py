@@ -61,6 +61,8 @@ def main():
     parser = argparse.ArgumentParser(description="Batch Run Unified Bug Agent")
     parser.add_argument("--input", type=str, required=True, help="Input file containing Bug IDs (TXT or CSV)")
     parser.add_argument("--output-dir", type=str, default="results", help="Directory to save output reports")
+    parser.add_argument("--start", type=int, default=1, help="Start index for processing (1-based)")
+    parser.add_argument("--end", type=int, default=None, help="End index for processing (1-based, inclusive)")
     
     args = parser.parse_args()
     
@@ -69,8 +71,29 @@ def main():
         
     setup_logging()
     
-    bug_ids = read_bug_ids(args.input)
-    logger.info(f"Found {len(bug_ids)} bugs to process.")
+    all_bug_ids = read_bug_ids(args.input)
+    
+    if not all_bug_ids:
+        logger.error("No valid bug IDs found.")
+        sys.exit(1)
+
+    # Slice logic (convert 1-based args to 0-based python slice)
+    # Start: 1 -> 0
+    # End: 50 -> 50 (slice upper bound is exclusive, so it covers up to index 49)
+    start_arg = args.start
+    end_arg = args.end
+    
+    start_idx = start_arg - 1 if start_arg > 0 else 0
+    end_idx = end_arg if end_arg is not None else len(all_bug_ids)
+    
+    # Validate indices
+    if start_idx < 0: start_idx = 0
+    if end_idx > len(all_bug_ids): end_idx = len(all_bug_ids)
+    
+    bug_ids = all_bug_ids[start_idx:end_idx]
+    
+    logger.info(f"Loaded {len(all_bug_ids)} total bugs.")
+    logger.info(f"Processing range [{start_idx+1}:{end_idx}], total: {len(bug_ids)}")
     
     if not bug_ids:
         logger.error("No valid bug IDs found.")

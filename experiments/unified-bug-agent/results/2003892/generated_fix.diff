@@ -1,0 +1,67 @@
+--- a/browser/components/urlbar/content/UrlbarInput.mjs
++++ b/browser/components/urlbar/content/UrlbarInput.mjs
+@@ -1200,14 +1200,42 @@
+-  async handleOpenURL(url, openParams) {
+-    // Existing logic to open the URL, including checking if the URL is already open in a tab,
+-    // and switching to that tab if browser.urlbar.secondaryActions.switchToTab is true.
+-    // Otherwise, open a new tab.
+-    ...
+-  }
++  async handleOpenURL(url, openParams) {
++    const { gBrowser } = window;
++    const switchToTabPref = Services.prefs.getBoolPref("browser.urlbar.secondaryActions.switchToTab", false);
++
++    // Check if split view is active
++    const splitView = gBrowser?.tabContainer?.splitView;
++    let openInSplitView = false;
++    if (splitView && splitView.isVisible()) {
++      // If split view is visible, respect the switchToTab pref for tabs in split view
++      openInSplitView = true;
++    }
++
++    // Try to find an existing tab with this URL
++    let existingTab = null;
++    for (let tab of gBrowser.tabs) {
++      if (tab.linkedBrowser.currentURI.spec === url) {
++        existingTab = tab;
++        break;
++      }
++    }
++
++    if (existingTab && switchToTabPref) {
++      if (openInSplitView) {
++        // Instead of switching directly to the tab,
++        // show an inactionable 'Move Tab to Split View' quick action badge
++        // to prevent direct tab switching and regressions.
++        this._showMoveTabToSplitViewQuickAction(existingTab);
++        return;
++      }
++
++      // Outside split view, switch to existing tab normally
++      gBrowser.selectedTab = existingTab;
++      gBrowser.ensureTabIsVisible(existingTab);
++      return;
++    }
++
++    // No existing tab or switchToTabPref is false: open new tab
++    if (openInSplitView) {
++      // Open new tab in split view
++      splitView.openInSplitView(url, openParams);
++    } else {
++      gBrowser.loadURI(url, openParams);
++    }
++  }
++
++  _showMoveTabToSplitViewQuickAction(tab) {
++    // Implement showing an inactionable quick action badge
++    // labeled "Move Tab to Split View" for the given tab,
++    // to signal the user that switching is disabled here.
++    // Placeholder implementation:
++    const quickAction = {
++      label: "Move Tab to Split View",
++      action: () => {}, // no-op
++      inactionable: true,
++    };
++    this._showQuickActionBadge(tab, quickAction);
++  }
++

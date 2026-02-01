@@ -1,0 +1,856 @@
+{
+  "cf_qa_whiteboard": "[qa-triage-done-c149/b148]",
+  "triage_owner_detail": {
+    "nick": "valentin",
+    "name": "valentin.gosu@gmail.com",
+    "email": "valentin.gosu@gmail.com",
+    "id": 415378,
+    "real_name": "Valentin Gosu [:valentin] (he/him)"
+  },
+  "platform": "Unspecified",
+  "is_cc_accessible": true,
+  "regressions": [],
+  "cf_fx_iteration": "---",
+  "cf_cab_review": "---",
+  "assigned_to_detail": {
+    "real_name": "Valentin Gosu [:valentin] (he/him)",
+    "email": "valentin.gosu@gmail.com",
+    "id": 415378,
+    "name": "valentin.gosu@gmail.com",
+    "nick": "valentin"
+  },
+  "cf_status_firefox146": "wontfix",
+  "component": "Networking",
+  "mentors": [],
+  "cf_performance_impact": "---",
+  "blocks": [],
+  "classification": "Components",
+  "counts": {
+    "keywords": 2,
+    "duplicates": 0,
+    "regressions": 1,
+    "comments": 17,
+    "attachments": 2,
+    "regressed_by": 1,
+    "cc": 8,
+    "depends_on": 0,
+    "blocks": 0
+  },
+  "cf_tracking_firefox_esr115": "---",
+  "description": "Crash report: https://crash-stats.mozilla.org/report/index/46b917b7-ef6a-4040-aecf-c93c60251003\n\nMOZ_CRASH Reason:\n```\nMOZ_RELEASE_ASSERT(NS_IsMainThread()) (nsXPCWrappedJS::AddRef called off main thread)\n```\n\nTop 10 frames:\n```\n0  xul.dll  nsXPCWrappedJS::AddRef()  js/xpconnect/src/XPCWrappedJS.cpp:253\n0  xul.dll  nsXPTCStubBase::AddRef()  xpcom/reflect/xptcall/xptcall.cpp:24\n1  xul.dll  mozilla::RefPtrTraits<nsIStreamListener>::AddRef(nsIStreamListener*)  mfbt/RefPtr.h:48\n1  xul.dll  nsCOMPtr<nsIStreamListener>::nsCOMPtr(nsCOMPtr<nsIStreamListener> const&)  xpcom/base/nsCOMPtr.h:387\n1  xul.dll  nsDocumentOpenInfo::OnDataFinished(nsresult)  uriloader/base/nsURILoader.cpp:238\n2  xul.dll  mozilla::net::InterceptFailedOnStop::OnDataFinished(nsresult)  netwerk/protocol/http/HttpBaseChannel.cpp:1434\n3  xul.dll  mozilla::net::nsHTTPCompressConv::OnDataFinished(nsresult)  netwerk/streamconv/converters/nsHTTPCompressConv.cpp:1016\n4  xul.dll  mozilla::net::HttpChannelChild::SendOnDataFinished(nsresult const&)  netwerk/protocol/http/HttpChannelChild.cpp:858\n4  xul.dll  mozilla::net::HttpChannelChild::ProcessOnStopRequest::<lambda_30>::operator()...  netwerk/protocol/http/HttpChannelChild.cpp:930\n4  xul.dll  std::invoke(mozilla::net::HttpChannelChild::ProcessOnStopRequest::<lambda_30>&)  /builds/worker/fetches/vs/VC/Tools/MSVC/14.39.33519/include/type_traits:1729\n```\n\nI'm not sure if this can be fixed by just making [nsIThreadRetargetableStreamListener](https://searchfox.org/firefox-main/rev/dcdbc805276cd5bf131cac2dbf53dda1538a32d5/netwerk/base/nsIThreadRetargetableStreamListener.idl#16) a builtinclass, or whether we can never QI a COMPtr to a JS object off main thread?",
+  "votes": 0,
+  "is_open": false,
+  "is_creator_accessible": true,
+  "cf_accessibility_severity": "---",
+  "cf_tracking_firefox_relnote": "---",
+  "flags": [],
+  "creation_time": "2025-10-03T20:20:15Z",
+  "dupe_of": null,
+  "type": "defect",
+  "last_change_time": "2026-01-22T03:17:34Z",
+  "whiteboard": "[necko-triaged] [necko-priority-queue]",
+  "cf_status_firefox147": "wontfix",
+  "url": "",
+  "cf_tracking_firefox_esr140": "---",
+  "priority": "P2",
+  "last_change_time_non_bot": "2026-01-22T03:17:34Z",
+  "creator_detail": {
+    "email": "valentin.gosu@gmail.com",
+    "id": 415378,
+    "name": "valentin.gosu@gmail.com",
+    "nick": "valentin",
+    "real_name": "Valentin Gosu [:valentin] (he/him)"
+  },
+  "regressed_by": [
+    1851992
+  ],
+  "cf_tracking_thunderbird_esr115": "---",
+  "depends_on": [],
+  "cc_detail": [
+    {
+      "real_name": "Donal Meehan [:dmeehan]",
+      "nick": "dmeehan",
+      "name": "dmeehan@mozilla.com",
+      "id": 695136,
+      "email": "dmeehan@mozilla.com"
+    },
+    {
+      "email": "dsmith@mozilla.com",
+      "id": 690067,
+      "nick": "diannaS",
+      "name": "dsmith@mozilla.com",
+      "real_name": "Dianna Smith [:diannaS]"
+    },
+    {
+      "nick": "nika",
+      "name": "nika@thelayzells.com",
+      "email": "nika@thelayzells.com",
+      "id": 534482,
+      "real_name": "Nika Layzell [:nika] (ni? for response)"
+    },
+    {
+      "id": 24572,
+      "email": "pascalc@gmail.com",
+      "name": "pascalc@gmail.com",
+      "nick": "pascalc",
+      "real_name": "Pascal Chevrel:pascalc"
+    },
+    {
+      "name": "rjesup@jesup.org",
+      "nick": "jesup",
+      "email": "rjesup@jesup.org",
+      "id": 11539,
+      "real_name": "Randell Jesup [:jesup] (needinfo me)"
+    },
+    {
+      "email": "ryanvm@gmail.com",
+      "id": 75935,
+      "nick": "RyanVM",
+      "name": "ryanvm@gmail.com",
+      "real_name": "Ryan VanderMeulen [:RyanVM]"
+    },
+    {
+      "email": "smayya@mozilla.com",
+      "id": 711499,
+      "name": "smayya@mozilla.com",
+      "nick": "smayya",
+      "real_name": "Sunil Mayya"
+    },
+    {
+      "email": "valentin.gosu@gmail.com",
+      "id": 415378,
+      "nick": "valentin",
+      "name": "valentin.gosu@gmail.com",
+      "real_name": "Valentin Gosu [:valentin] (he/him)"
+    }
+  ],
+  "cf_status_firefox145": "wontfix",
+  "cf_status_firefox149": "---",
+  "cf_status_firefox143": "wontfix",
+  "cf_status_thunderbird_esr140": "---",
+  "resolution": "FIXED",
+  "cf_tracking_firefox148": "---",
+  "keywords": [
+    "crash",
+    "regression"
+  ],
+  "comments": [
+    {
+      "id": 17701445,
+      "reactions": {},
+      "is_private": false,
+      "bug_id": 1992512,
+      "text": "Crash report: https://crash-stats.mozilla.org/report/index/46b917b7-ef6a-4040-aecf-c93c60251003\n\nMOZ_CRASH Reason:\n```\nMOZ_RELEASE_ASSERT(NS_IsMainThread()) (nsXPCWrappedJS::AddRef called off main thread)\n```\n\nTop 10 frames:\n```\n0  xul.dll  nsXPCWrappedJS::AddRef()  js/xpconnect/src/XPCWrappedJS.cpp:253\n0  xul.dll  nsXPTCStubBase::AddRef()  xpcom/reflect/xptcall/xptcall.cpp:24\n1  xul.dll  mozilla::RefPtrTraits<nsIStreamListener>::AddRef(nsIStreamListener*)  mfbt/RefPtr.h:48\n1  xul.dll  nsCOMPtr<nsIStreamListener>::nsCOMPtr(nsCOMPtr<nsIStreamListener> const&)  xpcom/base/nsCOMPtr.h:387\n1  xul.dll  nsDocumentOpenInfo::OnDataFinished(nsresult)  uriloader/base/nsURILoader.cpp:238\n2  xul.dll  mozilla::net::InterceptFailedOnStop::OnDataFinished(nsresult)  netwerk/protocol/http/HttpBaseChannel.cpp:1434\n3  xul.dll  mozilla::net::nsHTTPCompressConv::OnDataFinished(nsresult)  netwerk/streamconv/converters/nsHTTPCompressConv.cpp:1016\n4  xul.dll  mozilla::net::HttpChannelChild::SendOnDataFinished(nsresult const&)  netwerk/protocol/http/HttpChannelChild.cpp:858\n4  xul.dll  mozilla::net::HttpChannelChild::ProcessOnStopRequest::<lambda_30>::operator()...  netwerk/protocol/http/HttpChannelChild.cpp:930\n4  xul.dll  std::invoke(mozilla::net::HttpChannelChild::ProcessOnStopRequest::<lambda_30>&)  /builds/worker/fetches/vs/VC/Tools/MSVC/14.39.33519/include/type_traits:1729\n```\n\nI'm not sure if this can be fixed by just making [nsIThreadRetargetableStreamListener](https://searchfox.org/firefox-main/rev/dcdbc805276cd5bf131cac2dbf53dda1538a32d5/netwerk/base/nsIThreadRetargetableStreamListener.idl#16) a builtinclass, or whether we can never QI a COMPtr to a JS object off main thread?",
+      "creator": "valentin.gosu@gmail.com",
+      "creation_time": "2025-10-03T20:20:15Z",
+      "raw_text": "Crash report: https://crash-stats.mozilla.org/report/index/46b917b7-ef6a-4040-aecf-c93c60251003\n\nMOZ_CRASH Reason:\n```\nMOZ_RELEASE_ASSERT(NS_IsMainThread()) (nsXPCWrappedJS::AddRef called off main thread)\n```\n\nTop 10 frames:\n```\n0  xul.dll  nsXPCWrappedJS::AddRef()  js/xpconnect/src/XPCWrappedJS.cpp:253\n0  xul.dll  nsXPTCStubBase::AddRef()  xpcom/reflect/xptcall/xptcall.cpp:24\n1  xul.dll  mozilla::RefPtrTraits<nsIStreamListener>::AddRef(nsIStreamListener*)  mfbt/RefPtr.h:48\n1  xul.dll  nsCOMPtr<nsIStreamListener>::nsCOMPtr(nsCOMPtr<nsIStreamListener> const&)  xpcom/base/nsCOMPtr.h:387\n1  xul.dll  nsDocumentOpenInfo::OnDataFinished(nsresult)  uriloader/base/nsURILoader.cpp:238\n2  xul.dll  mozilla::net::InterceptFailedOnStop::OnDataFinished(nsresult)  netwerk/protocol/http/HttpBaseChannel.cpp:1434\n3  xul.dll  mozilla::net::nsHTTPCompressConv::OnDataFinished(nsresult)  netwerk/streamconv/converters/nsHTTPCompressConv.cpp:1016\n4  xul.dll  mozilla::net::HttpChannelChild::SendOnDataFinished(nsresult const&)  netwerk/protocol/http/HttpChannelChild.cpp:858\n4  xul.dll  mozilla::net::HttpChannelChild::ProcessOnStopRequest::<lambda_30>::operator()...  netwerk/protocol/http/HttpChannelChild.cpp:930\n4  xul.dll  std::invoke(mozilla::net::HttpChannelChild::ProcessOnStopRequest::<lambda_30>&)  /builds/worker/fetches/vs/VC/Tools/MSVC/14.39.33519/include/type_traits:1729\n```\n\nI'm not sure if this can be fixed by just making [nsIThreadRetargetableStreamListener](https://searchfox.org/firefox-main/rev/dcdbc805276cd5bf131cac2dbf53dda1538a32d5/netwerk/base/nsIThreadRetargetableStreamListener.idl#16) a builtinclass, or whether we can never QI a COMPtr to a JS object off main thread?",
+      "time": "2025-10-03T20:20:15Z",
+      "tags": [],
+      "count": 0,
+      "attachment_id": null,
+      "author": "valentin.gosu@gmail.com"
+    },
+    {
+      "time": "2025-10-03T20:42:37Z",
+      "tags": [],
+      "count": 1,
+      "author": "release-mgmt-account-bot@mozilla.tld",
+      "attachment_id": null,
+      "is_private": false,
+      "id": 17701469,
+      "reactions": {},
+      "bug_id": 1992512,
+      "text": "Set release status flags based on info from the regressing bug 1851992\n\n:smayya, since you are the author of the regressor, bug 1851992, could you take a look? Also, could you set the severity field?\n\nFor more information, please visit [BugBot documentation](https://wiki.mozilla.org/BugBot#needinfo_regression_author.py).",
+      "creation_time": "2025-10-03T20:42:37Z",
+      "creator": "release-mgmt-account-bot@mozilla.tld",
+      "raw_text": "Set release status flags based on info from the regressing bug 1851992\n\n:smayya, since you are the author of the regressor, bug 1851992, could you take a look? Also, could you set the severity field?\n\nFor more information, please visit [BugBot documentation](https://wiki.mozilla.org/BugBot#needinfo_regression_author.py)."
+    },
+    {
+      "bug_id": 1992512,
+      "text": "Thoughts on Valentin's question in comment 0 about QI to COMPtr for a JS object OffMainThread?",
+      "is_private": false,
+      "id": 17701484,
+      "reactions": {},
+      "raw_text": "Thoughts on Valentin's question in comment 0 about QI to COMPtr for a JS object OffMainThread?",
+      "creation_time": "2025-10-03T20:57:44Z",
+      "creator": "rjesup@jesup.org",
+      "tags": [],
+      "count": 2,
+      "time": "2025-10-03T20:57:44Z",
+      "attachment_id": null,
+      "author": "rjesup@jesup.org"
+    },
+    {
+      "author": "valentin.gosu@gmail.com",
+      "attachment_id": null,
+      "count": 3,
+      "tags": [],
+      "time": "2025-10-06T08:50:14Z",
+      "raw_text": "(In reply to Valentin Gosu [:valentin] (he/him) from comment #0)\n> I'm not sure if this can be fixed by just making [nsIThreadRetargetableStreamListener](https://searchfox.org/firefox-main/rev/dcdbc805276cd5bf131cac2dbf53dda1538a32d5/netwerk/base/nsIThreadRetargetableStreamListener.idl#16) a builtinclass, or whether we can never QI a COMPtr to a JS object off main thread?\n\nIf we can't do that, then we should QI to nsIThreadRetargetableStreamListener in OnStartRequest calling CheckListenerChain and keep a reference around (and maybe figure out a way to clear it at the same time as the listener)",
+      "creator": "valentin.gosu@gmail.com",
+      "creation_time": "2025-10-06T08:50:14Z",
+      "text": "(In reply to Valentin Gosu [:valentin] (he/him) from comment #0)\n> I'm not sure if this can be fixed by just making [nsIThreadRetargetableStreamListener](https://searchfox.org/firefox-main/rev/dcdbc805276cd5bf131cac2dbf53dda1538a32d5/netwerk/base/nsIThreadRetargetableStreamListener.idl#16) a builtinclass, or whether we can never QI a COMPtr to a JS object off main thread?\n\nIf we can't do that, then we should QI to nsIThreadRetargetableStreamListener in OnStartRequest calling CheckListenerChain and keep a reference around (and maybe figure out a way to clear it at the same time as the listener)",
+      "bug_id": 1992512,
+      "reactions": {},
+      "id": 17704360,
+      "is_private": false
+    },
+    {
+      "creation_time": "2025-10-08T14:18:51Z",
+      "creator": "nika@thelayzells.com",
+      "raw_text": "(In reply to Valentin Gosu [:valentin] (he/him) from comment #0)\n> I'm not sure if this can be fixed by just making [nsIThreadRetargetableStreamListener](https://searchfox.org/firefox-main/rev/dcdbc805276cd5bf131cac2dbf53dda1538a32d5/netwerk/base/nsIThreadRetargetableStreamListener.idl#16) a builtinclass, or whether we can never QI a COMPtr to a JS object off main thread?\n\nIt's quite unsafe to QI a COMPtr to a JS object from off-main-thread, yeah. That can run arbitrary JS.",
+      "is_private": false,
+      "id": 17708206,
+      "reactions": {},
+      "text": "(In reply to Valentin Gosu [:valentin] (he/him) from comment #0)\n> I'm not sure if this can be fixed by just making [nsIThreadRetargetableStreamListener](https://searchfox.org/firefox-main/rev/dcdbc805276cd5bf131cac2dbf53dda1538a32d5/netwerk/base/nsIThreadRetargetableStreamListener.idl#16) a builtinclass, or whether we can never QI a COMPtr to a JS object off main thread?\n\nIt's quite unsafe to QI a COMPtr to a JS object from off-main-thread, yeah. That can run arbitrary JS.",
+      "bug_id": 1992512,
+      "author": "nika@thelayzells.com",
+      "attachment_id": null,
+      "time": "2025-10-08T14:18:51Z",
+      "count": 4,
+      "tags": []
+    },
+    {
+      "attachment_id": null,
+      "author": "valentin.gosu@gmail.com",
+      "time": "2025-10-13T11:21:37Z",
+      "tags": [],
+      "count": 5,
+      "creation_time": "2025-10-13T11:21:37Z",
+      "creator": "valentin.gosu@gmail.com",
+      "raw_text": "The problem here seems to be with nsIStreamConverter which extends nsIThreadRetargetableStreamListener but can be JS implemented by [converter-child.js](https://searchfox.org/firefox-main/rev/91e6069b9c1e7289d0c727b5110e144edc589204/devtools/client/jsonview/converter-child.js#49) and [PdfStreamConverter](https://searchfox.org/firefox-main/rev/91e6069b9c1e7289d0c727b5110e144edc589204/toolkit/components/pdfjs/content/PdfStreamConverter.sys.mjs#926,930)",
+      "is_private": false,
+      "reactions": {},
+      "id": 17713746,
+      "bug_id": 1992512,
+      "text": "The problem here seems to be with nsIStreamConverter which extends nsIThreadRetargetableStreamListener but can be JS implemented by [converter-child.js](https://searchfox.org/firefox-main/rev/91e6069b9c1e7289d0c727b5110e144edc589204/devtools/client/jsonview/converter-child.js#49) and [PdfStreamConverter](https://searchfox.org/firefox-main/rev/91e6069b9c1e7289d0c727b5110e144edc589204/toolkit/components/pdfjs/content/PdfStreamConverter.sys.mjs#926,930)"
+    },
+    {
+      "attachment_id": null,
+      "author": "valentin.gosu@gmail.com",
+      "raw_text": "I've been struggling to create a testcase for this.\nMy findings so far:\n- Crashes on HTML5 thread\n- So the retargetting in [nsHtml5StreamParser::OnStartRequest](https://searchfox.org/firefox-main/rev/91e6069b9c1e7289d0c727b5110e144edc589204/parser/html/nsHtml5StreamParser.cpp#1216) is successful.\n- I think the call to CheckListenerChain initially succeeds, but then nsURILoader::OpenChannel happens to add a listener to the chain - in this case the pdfjs converter. Not sure where that is coming from, but I suspect it may be an object or embed - since it's driven by the HTML parser.\n- By the time we call onDataFinished, the pdfjs listener will be addreffed off main thread when QIing, which leads to the crash.\n- I see nsHTTPCompressConv is also on the stack. I initially thought this may be caused by [mozilla::net::nsHTTPCompressConv::MaybeRetarget](https://searchfox.org/firefox-main/rev/91e6069b9c1e7289d0c727b5110e144edc589204/netwerk/streamconv/converters/nsHTTPCompressConv.cpp#287), but since it's on the HTML5 thread we don't retarget again here.",
+      "creation_time": "2025-10-13T15:35:00Z",
+      "creator": "valentin.gosu@gmail.com",
+      "count": 6,
+      "text": "I've been struggling to create a testcase for this.\nMy findings so far:\n- Crashes on HTML5 thread\n- So the retargetting in [nsHtml5StreamParser::OnStartRequest](https://searchfox.org/firefox-main/rev/91e6069b9c1e7289d0c727b5110e144edc589204/parser/html/nsHtml5StreamParser.cpp#1216) is successful.\n- I think the call to CheckListenerChain initially succeeds, but then nsURILoader::OpenChannel happens to add a listener to the chain - in this case the pdfjs converter. Not sure where that is coming from, but I suspect it may be an object or embed - since it's driven by the HTML parser.\n- By the time we call onDataFinished, the pdfjs listener will be addreffed off main thread when QIing, which leads to the crash.\n- I see nsHTTPCompressConv is also on the stack. I initially thought this may be caused by [mozilla::net::nsHTTPCompressConv::MaybeRetarget](https://searchfox.org/firefox-main/rev/91e6069b9c1e7289d0c727b5110e144edc589204/netwerk/streamconv/converters/nsHTTPCompressConv.cpp#287), but since it's on the HTML5 thread we don't retarget again here.",
+      "bug_id": 1992512,
+      "tags": [],
+      "time": "2025-10-13T15:35:00Z",
+      "is_private": false,
+      "id": 17714293,
+      "reactions": {}
+    },
+    {
+      "is_private": false,
+      "reactions": {},
+      "id": 17715444,
+      "text": "Set release status flags based on info from the regressing bug 1851992",
+      "bug_id": 1992512,
+      "creation_time": "2025-10-14T12:45:15Z",
+      "creator": "release-mgmt-account-bot@mozilla.tld",
+      "raw_text": "Set release status flags based on info from the regressing bug 1851992",
+      "time": "2025-10-14T12:45:15Z",
+      "count": 7,
+      "tags": [],
+      "attachment_id": null,
+      "author": "release-mgmt-account-bot@mozilla.tld"
+    },
+    {
+      "time": "2025-10-15T10:39:34Z",
+      "is_private": false,
+      "id": 17717278,
+      "reactions": {},
+      "count": 8,
+      "text": "Created attachment 9520171\nBug 1992512 - Check retargetable listener succeeds CheckListenerChain when retargetting off-main-thread has succeedeed. r=#necko",
+      "tags": [],
+      "bug_id": 1992512,
+      "creation_time": "2025-10-15T10:39:34Z",
+      "creator": "valentin.gosu@gmail.com",
+      "author": "valentin.gosu@gmail.com",
+      "attachment_id": 9520171,
+      "raw_text": ""
+    },
+    {
+      "creation_time": "2025-10-22T21:17:21Z",
+      "creator": "pulsebot@bmo.tld",
+      "raw_text": "Pushed by valentin.gosu@gmail.com:\nhttps://github.com/mozilla-firefox/firefox/commit/d90faf32c738\nhttps://hg.mozilla.org/integration/autoland/rev/177b052bff79\nCheck retargetable listener succeeds CheckListenerChain when retargetting off-main-thread has succeedeed. r=necko-reviewers,jesup",
+      "is_private": false,
+      "reactions": {},
+      "id": 17728922,
+      "bug_id": 1992512,
+      "text": "Pushed by valentin.gosu@gmail.com:\nhttps://github.com/mozilla-firefox/firefox/commit/d90faf32c738\nhttps://hg.mozilla.org/integration/autoland/rev/177b052bff79\nCheck retargetable listener succeeds CheckListenerChain when retargetting off-main-thread has succeedeed. r=necko-reviewers,jesup",
+      "author": "pulsebot@bmo.tld",
+      "attachment_id": null,
+      "time": "2025-10-22T21:17:21Z",
+      "tags": [],
+      "count": 9
+    },
+    {
+      "bug_id": 1992512,
+      "text": "https://hg.mozilla.org/mozilla-central/rev/177b052bff79",
+      "reactions": {},
+      "id": 17729420,
+      "is_private": false,
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/177b052bff79",
+      "creator": "csabou@mozilla.com",
+      "creation_time": "2025-10-23T09:57:25Z",
+      "tags": [
+        "bugherder"
+      ],
+      "count": 10,
+      "time": "2025-10-23T09:57:25Z",
+      "author": "csabou@mozilla.com",
+      "attachment_id": null
+    },
+    {
+      "raw_text": "\nSince nsHTTPCompressConv::CheckListenerChain will return NS_OK in the\ncontent process, that means OnDataFinished might be called even if\nnot all the listeners in the listener chain support being called\noff-main-thread. This is the case for a JS implemented listener.\nIt is important to not QI a JS implemented listener off main thread.\nSince the listener wouldn't benefit from OnDataFinished since it's\nlimited to the main thread, that means we can avoid calling it\nentirely.",
+      "author": "valentin.gosu@gmail.com",
+      "attachment_id": 9529607,
+      "creator": "valentin.gosu@gmail.com",
+      "creation_time": "2025-11-27T17:40:16Z",
+      "text": "Created attachment 9529607\nBug 1992512 - nsHTTPCompressConv::OnDataFinished should not QI listener off-main-thread r=#necko\n\n\nSince nsHTTPCompressConv::CheckListenerChain will return NS_OK in the\ncontent process, that means OnDataFinished might be called even if\nnot all the listeners in the listener chain support being called\noff-main-thread. This is the case for a JS implemented listener.\nIt is important to not QI a JS implemented listener off main thread.\nSince the listener wouldn't benefit from OnDataFinished since it's\nlimited to the main thread, that means we can avoid calling it\nentirely.",
+      "count": 11,
+      "bug_id": 1992512,
+      "tags": [],
+      "time": "2025-11-27T17:40:16Z",
+      "reactions": {},
+      "id": 17783801,
+      "is_private": false
+    },
+    {
+      "bug_id": 1992512,
+      "tags": [],
+      "count": 12,
+      "text": ":valentin what are the next steps here? Do we just wait for the 146 uptake to analyze crashdata?",
+      "is_private": false,
+      "reactions": {},
+      "id": 17801709,
+      "time": "2025-12-10T12:59:53Z",
+      "attachment_id": null,
+      "author": "dsmith@mozilla.com",
+      "raw_text": ":valentin what are the next steps here? Do we just wait for the 146 uptake to analyze crashdata?",
+      "creation_time": "2025-12-10T12:59:53Z",
+      "creator": "dsmith@mozilla.com"
+    },
+    {
+      "raw_text": "actually there are still crashes in 146",
+      "creation_time": "2025-12-12T15:21:12Z",
+      "creator": "dsmith@mozilla.com",
+      "bug_id": 1992512,
+      "text": "actually there are still crashes in 146",
+      "is_private": false,
+      "id": 17805425,
+      "reactions": {},
+      "attachment_id": null,
+      "author": "dsmith@mozilla.com",
+      "tags": [],
+      "count": 13,
+      "time": "2025-12-12T15:21:12Z"
+    },
+    {
+      "time": "2025-12-16T16:48:43Z",
+      "tags": [],
+      "count": 14,
+      "attachment_id": null,
+      "author": "valentin.gosu@gmail.com",
+      "id": 17811505,
+      "reactions": {},
+      "is_private": false,
+      "bug_id": 1992512,
+      "text": "Unfortunately this is too low volume to trigger the diagnostic assertion.\nI'll try to land another speculative fix.",
+      "creator": "valentin.gosu@gmail.com",
+      "creation_time": "2025-12-16T16:48:43Z",
+      "raw_text": "Unfortunately this is too low volume to trigger the diagnostic assertion.\nI'll try to land another speculative fix."
+    },
+    {
+      "count": 15,
+      "text": "Pushed by valentin.gosu@gmail.com:\nhttps://github.com/mozilla-firefox/firefox/commit/a344785815b4\nhttps://hg.mozilla.org/integration/autoland/rev/4dcae0a31e75\nnsHTTPCompressConv::OnDataFinished should not QI listener off-main-thread r=necko-reviewers,kershaw",
+      "bug_id": 1992512,
+      "tags": [],
+      "time": "2026-01-07T09:29:44Z",
+      "is_private": false,
+      "id": 17831758,
+      "reactions": {},
+      "attachment_id": null,
+      "author": "pulsebot@bmo.tld",
+      "raw_text": "Pushed by valentin.gosu@gmail.com:\nhttps://github.com/mozilla-firefox/firefox/commit/a344785815b4\nhttps://hg.mozilla.org/integration/autoland/rev/4dcae0a31e75\nnsHTTPCompressConv::OnDataFinished should not QI listener off-main-thread r=necko-reviewers,kershaw",
+      "creation_time": "2026-01-07T09:29:44Z",
+      "creator": "pulsebot@bmo.tld"
+    },
+    {
+      "creation_time": "2026-01-08T17:03:16Z",
+      "creator": "csabou@mozilla.com",
+      "author": "csabou@mozilla.com",
+      "attachment_id": null,
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/4dcae0a31e75",
+      "time": "2026-01-08T17:03:16Z",
+      "is_private": false,
+      "id": 17833885,
+      "reactions": {},
+      "count": 16,
+      "text": "https://hg.mozilla.org/mozilla-central/rev/4dcae0a31e75",
+      "bug_id": 1992512,
+      "tags": [
+        "bugherder"
+      ]
+    }
+  ],
+  "cf_tracking_thunderbird_esr140": "---",
+  "cf_status_firefox_esr140": "affected",
+  "cf_webcompat_score": "---",
+  "comment_count": 17,
+  "product": "Core",
+  "status": "RESOLVED",
+  "cf_tracking_firefox149": "---",
+  "target_milestone": "148 Branch",
+  "id": 1992512,
+  "cf_crash_signature": "[@ nsXPCWrappedJS::AddRef]",
+  "severity": "S3",
+  "qa_contact": "",
+  "cf_status_thunderbird_esr115": "---",
+  "cf_last_resolved": "2026-01-12T12:30:01Z",
+  "filed_via": "standard_form",
+  "creator": "valentin.gosu@gmail.com",
+  "cf_status_firefox144": "wontfix",
+  "version": "unspecified",
+  "cc": [
+    "dmeehan@mozilla.com",
+    "dsmith@mozilla.com",
+    "nika@thelayzells.com",
+    "pascalc@gmail.com",
+    "rjesup@jesup.org",
+    "ryanvm@gmail.com",
+    "smayya@mozilla.com",
+    "valentin.gosu@gmail.com"
+  ],
+  "is_confirmed": true,
+  "duplicates": [],
+  "cf_status_firefox_esr115": "unaffected",
+  "alias": null,
+  "cf_size_estimate": "---",
+  "cf_user_story": "",
+  "cf_fx_points": "---",
+  "history": [
+    {
+      "who": "release-mgmt-account-bot@mozilla.tld",
+      "changes": [
+        {
+          "added": "smayya@mozilla.com",
+          "field_name": "cc",
+          "removed": ""
+        },
+        {
+          "added": "needinfo?(smayya@mozilla.com)",
+          "field_name": "flagtypes.name",
+          "removed": ""
+        },
+        {
+          "field_name": "cf_status_firefox_esr140",
+          "removed": "---",
+          "added": "affected"
+        },
+        {
+          "added": "affected",
+          "removed": "---",
+          "field_name": "cf_status_firefox143"
+        },
+        {
+          "field_name": "cf_status_firefox144",
+          "removed": "---",
+          "added": "affected"
+        },
+        {
+          "added": "affected",
+          "removed": "---",
+          "field_name": "cf_status_firefox145"
+        }
+      ],
+      "when": "2025-10-03T20:42:37Z"
+    },
+    {
+      "who": "rjesup@jesup.org",
+      "changes": [
+        {
+          "removed": "needinfo?(smayya@mozilla.com)",
+          "field_name": "flagtypes.name",
+          "added": "needinfo?(nika@thelayzells.com)"
+        },
+        {
+          "removed": "",
+          "field_name": "cc",
+          "added": "nika@thelayzells.com, rjesup@jesup.org"
+        }
+      ],
+      "when": "2025-10-03T20:57:44Z"
+    },
+    {
+      "who": "ryanvm@gmail.com",
+      "when": "2025-10-04T23:31:06Z",
+      "changes": [
+        {
+          "removed": "---",
+          "added": "unaffected",
+          "field_name": "cf_status_firefox_esr115"
+        },
+        {
+          "added": "wontfix",
+          "removed": "affected",
+          "field_name": "cf_status_firefox143"
+        },
+        {
+          "removed": "affected",
+          "field_name": "cf_status_firefox144",
+          "added": "fix-optional"
+        }
+      ]
+    },
+    {
+      "when": "2025-10-06T08:50:14Z",
+      "changes": [
+        {
+          "removed": "",
+          "added": "valentin.gosu@gmail.com",
+          "field_name": "cc"
+        }
+      ],
+      "who": "valentin.gosu@gmail.com"
+    },
+    {
+      "changes": [
+        {
+          "added": "",
+          "removed": "needinfo?(nika@thelayzells.com)",
+          "field_name": "flagtypes.name"
+        }
+      ],
+      "when": "2025-10-08T14:18:51Z",
+      "who": "nika@thelayzells.com"
+    },
+    {
+      "when": "2025-10-11T21:01:21Z",
+      "changes": [
+        {
+          "field_name": "flagtypes.name",
+          "removed": "",
+          "added": "needinfo?(valentin.gosu@gmail.com)"
+        }
+      ],
+      "who": "valentin.gosu@gmail.com"
+    },
+    {
+      "when": "2025-10-13T11:21:37Z",
+      "changes": [
+        {
+          "removed": "",
+          "added": "[necko-triaged] [necko-priority-queue]",
+          "field_name": "whiteboard"
+        },
+        {
+          "added": "S3",
+          "removed": "--",
+          "field_name": "severity"
+        },
+        {
+          "added": "",
+          "removed": "needinfo?(valentin.gosu@gmail.com)",
+          "field_name": "flagtypes.name"
+        },
+        {
+          "removed": "nobody@mozilla.org",
+          "field_name": "assigned_to",
+          "added": "valentin.gosu@gmail.com"
+        },
+        {
+          "added": "P2",
+          "field_name": "priority",
+          "removed": "--"
+        }
+      ],
+      "who": "valentin.gosu@gmail.com"
+    },
+    {
+      "who": "release-mgmt-account-bot@mozilla.tld",
+      "changes": [
+        {
+          "added": "affected",
+          "removed": "---",
+          "field_name": "cf_status_firefox146"
+        }
+      ],
+      "when": "2025-10-14T12:45:15Z"
+    },
+    {
+      "when": "2025-10-22T21:10:50Z",
+      "changes": [
+        {
+          "removed": "WIP: Bug 1992512 - Check retargetable listener succeeds CheckListenerChain when retargetting off-main-thread has succeedeed. r=#necko",
+          "added": "Bug 1992512 - Check retargetable listener succeeds CheckListenerChain when retargetting off-main-thread has succeedeed. r=#necko",
+          "field_name": "attachments.description",
+          "attachment_id": 9520171
+        }
+      ],
+      "who": "phab-bot@bmo.tld"
+    },
+    {
+      "who": "valentin.gosu@gmail.com",
+      "when": "2025-10-22T21:11:12Z",
+      "changes": [
+        {
+          "added": "leave-open",
+          "removed": "",
+          "field_name": "keywords"
+        }
+      ]
+    },
+    {
+      "when": "2025-10-23T09:57:25Z",
+      "changes": [
+        {
+          "comment_count": 10,
+          "added": "bugherder",
+          "field_name": "comment_tag",
+          "removed": "",
+          "comment_id": 17729420
+        }
+      ],
+      "who": "csabou@mozilla.com"
+    },
+    {
+      "changes": [
+        {
+          "field_name": "cc",
+          "added": "pascalc@gmail.com",
+          "removed": ""
+        },
+        {
+          "added": "wontfix",
+          "field_name": "cf_status_firefox144",
+          "removed": "fix-optional"
+        },
+        {
+          "added": "wontfix",
+          "removed": "affected",
+          "field_name": "cf_status_firefox145"
+        }
+      ],
+      "when": "2025-10-28T15:54:06Z",
+      "who": "pascalc@gmail.com"
+    },
+    {
+      "when": "2025-12-10T12:59:53Z",
+      "changes": [
+        {
+          "removed": "",
+          "added": "dsmith@mozilla.com",
+          "field_name": "cc"
+        },
+        {
+          "added": "needinfo?(valentin.gosu@gmail.com)",
+          "removed": "",
+          "field_name": "flagtypes.name"
+        }
+      ],
+      "who": "dsmith@mozilla.com"
+    },
+    {
+      "who": "dsmith@mozilla.com",
+      "changes": [
+        {
+          "removed": "affected",
+          "added": "wontfix",
+          "field_name": "cf_status_firefox146"
+        },
+        {
+          "added": "affected",
+          "field_name": "cf_status_firefox147",
+          "removed": "---"
+        },
+        {
+          "removed": "---",
+          "added": "affected",
+          "field_name": "cf_status_firefox148"
+        }
+      ],
+      "when": "2025-12-12T15:22:01Z"
+    },
+    {
+      "changes": [
+        {
+          "removed": "needinfo?(valentin.gosu@gmail.com)",
+          "added": "",
+          "field_name": "flagtypes.name"
+        }
+      ],
+      "when": "2025-12-16T16:48:43Z",
+      "who": "valentin.gosu@gmail.com"
+    },
+    {
+      "who": "ryanvm@gmail.com",
+      "when": "2025-12-18T14:48:40Z",
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "cc",
+          "added": "ryanvm@gmail.com"
+        },
+        {
+          "removed": "affected",
+          "field_name": "cf_status_firefox147",
+          "added": "fix-optional"
+        },
+        {
+          "removed": "affected",
+          "added": "fix-optional",
+          "field_name": "cf_status_firefox148"
+        }
+      ]
+    },
+    {
+      "when": "2026-01-08T17:03:16Z",
+      "changes": [
+        {
+          "comment_id": 17833885,
+          "added": "bugherder",
+          "removed": "",
+          "field_name": "comment_tag",
+          "comment_count": 16
+        }
+      ],
+      "who": "csabou@mozilla.com"
+    },
+    {
+      "when": "2026-01-12T12:30:01Z",
+      "changes": [
+        {
+          "field_name": "keywords",
+          "removed": "leave-open",
+          "added": ""
+        },
+        {
+          "added": "FIXED",
+          "field_name": "resolution",
+          "removed": ""
+        },
+        {
+          "removed": "NEW",
+          "added": "RESOLVED",
+          "field_name": "status"
+        },
+        {
+          "added": "2026-01-12T12:30:01Z",
+          "field_name": "cf_last_resolved",
+          "removed": ""
+        }
+      ],
+      "who": "valentin.gosu@gmail.com"
+    },
+    {
+      "who": "dmeehan@mozilla.com",
+      "when": "2026-01-12T14:50:29Z",
+      "changes": [
+        {
+          "field_name": "cc",
+          "added": "dmeehan@mozilla.com",
+          "removed": ""
+        },
+        {
+          "removed": "---",
+          "added": "148 Branch",
+          "field_name": "target_milestone"
+        },
+        {
+          "removed": "fix-optional",
+          "added": "fixed",
+          "field_name": "cf_status_firefox148"
+        }
+      ]
+    },
+    {
+      "when": "2026-01-14T09:58:34Z",
+      "changes": [
+        {
+          "removed": "",
+          "added": "[qa-triage-done-c149/b148]",
+          "field_name": "cf_qa_whiteboard"
+        }
+      ],
+      "who": "mboldan@mozilla.com"
+    },
+    {
+      "changes": [
+        {
+          "removed": "fix-optional",
+          "added": "wontfix",
+          "field_name": "cf_status_firefox147"
+        }
+      ],
+      "when": "2026-01-22T03:17:34Z",
+      "who": "ryanvm@gmail.com"
+    }
+  ],
+  "triage_owner": "valentin.gosu@gmail.com",
+  "cf_webcompat_priority": "---",
+  "cf_tracking_firefox147": "---",
+  "assigned_to": "valentin.gosu@gmail.com",
+  "attachments": [
+    {
+      "bug_id": 1992512,
+      "file_name": "phabricator-D268684-url.txt",
+      "is_private": 0,
+      "last_change_time": "2025-10-22T21:10:50Z",
+      "id": 9520171,
+      "summary": "Bug 1992512 - Check retargetable listener succeeds CheckListenerChain when retargetting off-main-thread has succeedeed. r=#necko",
+      "creation_time": "2025-10-15T10:39:34Z",
+      "creator": "valentin.gosu@gmail.com",
+      "description": "Bug 1992512 - Check retargetable listener succeeds CheckListenerChain when retargetting off-main-thread has succeedeed. r=#necko",
+      "flags": [],
+      "content_type": "text/x-phabricator-request",
+      "is_obsolete": 0,
+      "attacher": "valentin.gosu@gmail.com",
+      "creator_detail": {
+        "real_name": "Valentin Gosu [:valentin] (he/him)",
+        "id": 415378,
+        "email": "valentin.gosu@gmail.com",
+        "name": "valentin.gosu@gmail.com",
+        "nick": "valentin"
+      },
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjY4Njg0",
+      "size": 48,
+      "is_patch": 0
+    },
+    {
+      "creator_detail": {
+        "real_name": "Valentin Gosu [:valentin] (he/him)",
+        "name": "valentin.gosu@gmail.com",
+        "nick": "valentin",
+        "id": 415378,
+        "email": "valentin.gosu@gmail.com"
+      },
+      "attacher": "valentin.gosu@gmail.com",
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjc0MzI0",
+      "size": 48,
+      "is_patch": 0,
+      "is_obsolete": 0,
+      "content_type": "text/x-phabricator-request",
+      "creator": "valentin.gosu@gmail.com",
+      "creation_time": "2025-11-27T17:40:16Z",
+      "flags": [],
+      "description": "Bug 1992512 - nsHTTPCompressConv::OnDataFinished should not QI listener off-main-thread r=#necko",
+      "file_name": "phabricator-D274324-url.txt",
+      "bug_id": 1992512,
+      "id": 9529607,
+      "last_change_time": "2025-11-27T17:40:16Z",
+      "is_private": 0,
+      "summary": "Bug 1992512 - nsHTTPCompressConv::OnDataFinished should not QI listener off-main-thread r=#necko"
+    }
+  ],
+  "cf_has_str": "---",
+  "cf_a11y_review_project_flag": "---",
+  "cf_status_firefox148": "fixed",
+  "summary": "Crash in [@ nsXPCWrappedJS::AddRef] - nsDocumentOpenInfo::OnDataFinished(nsresult) calling QI on js listener off-main-thread",
+  "groups": [],
+  "op_sys": "Windows 11",
+  "cf_rank": null,
+  "see_also": [],
+  "mentors_detail": []
+}

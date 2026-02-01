@@ -1,0 +1,90 @@
+--- a/gfx/VideoOverlay.cpp
++++ b/gfx/VideoOverlay.cpp
+@@ -120,10 +120,44 @@
+ bool
+ VideoOverlay::ShouldEnableVideoSuperResolution()
+ {
+-  // Existing logic enabling Video Super Resolution based on GPU and driver version
+-  return IsNvidiaGpu() && GetNvidiaDriverVersion() >= 530;
++  // Enable Video Super Resolution only on Windows when charging
++#if defined(XP_WIN)
++  bool isCharging = false;
++  // Query the battery charging state from BatteryManager
++  nsCOMPtr<nsIBatteryManager> batteryManager = do_GetService("@mozilla.org/battery-manager;1");
++  if (batteryManager) {
++    batteryManager->GetCharging(&isCharging);
++  }
++
++  if (!isCharging) {
++    return false;
++  }
++
++  // Check GPU type and driver version
++  if (IsNvidiaGpu()) {
++    uint32_t driverVersion = GetNvidiaDriverVersion();
++    if (driverVersion >= 530) {
++      return true;
++    }
++  } else if (IsIntelGpu()) {
++    uint32_t gen = GetIntelGen();
++    if (gen >= 10) {
++      return true;
++    }
++  }
++
++  return false;
++#else
++  // On non-Windows platforms, disable Video Super Resolution for now
++  return false;
++#endif
+ }
+--- a/dom/battery/BatteryManager.cpp
++++ b/dom/battery/BatteryManager.cpp
+@@ -45,6 +45,18 @@
+ bool
+ BatteryManager::GetCharging(bool* aCharging)
+ {
++  // On Windows, forward charging state from hal/HalBatteryInformation.cpp
++#ifdef XP_WIN
++  hal::BatteryInformation info;
++  hal::GetCurrentBatteryInformation(&info);
++  *aCharging = info.isCharging;
++  return true;
++#else
++  // Fallback or other platform implementation
++  *aCharging = false;
++  return false;
++#endif
+ }
+--- a/hal/HalBatteryInformation.cpp
++++ b/hal/HalBatteryInformation.cpp
+@@ -30,6 +30,14 @@
++bool
++GetCurrentBatteryInformation(BatteryInformation* aInfo)
++{
++  // Windows specific implementation to get battery charging state
++  SYSTEM_POWER_STATUS status = {0};
++  if (!GetSystemPowerStatus(&status)) {
++    return false;
++  }
++  aInfo->isCharging = (status.ACLineStatus == 1);
++  return true;
++}
+--- a/gpu/GPUProcessHost.cpp
++++ b/gpu/GPUProcessHost.cpp
+@@ -88,6 +88,15 @@
++// Forward the battery charging state to GPU process
++void
++GPUProcessHost::UpdateBatteryChargingState(bool aCharging)
++{
++  // Send IPC or notify the GPU process about the charging state
++  SendBatteryChargingStateToGPUProcess(aCharging);
++}
++
++// Called from BatteryManager observer or similar
++void
++GPUProcessHost::OnBatteryChargingChanged(bool aCharging)
++{
++  UpdateBatteryChargingState(aCharging);
++}
++

@@ -1,0 +1,574 @@
+{
+  "bug_id": 1893364,
+  "timestamp": "2026-02-01 18:11:05",
+  "data_sources": [
+    "bugzilla",
+    "crash-stats"
+  ],
+  "bug_data": {
+    "cf_status_firefox_esr140": "---",
+    "assigned_to": "sotaro.ikeda.g@gmail.com",
+    "attachments": [
+      {
+        "size": 48,
+        "is_private": 0,
+        "is_patch": 0,
+        "description": "Bug 1893364 - Add more profiler markers around video overlay handing",
+        "creator_detail": {
+          "name": "sotaro.ikeda.g@gmail.com",
+          "id": 434202,
+          "real_name": "Sotaro Ikeda [:sotaro]",
+          "email": "sotaro.ikeda.g@gmail.com",
+          "nick": "sotaro"
+        },
+        "file_name": "phabricator-D208577-url.txt",
+        "bug_id": 1893364,
+        "last_change_time": "2024-04-25T02:45:56Z",
+        "content_type": "text/x-phabricator-request",
+        "is_obsolete": 0,
+        "creator": "sotaro.ikeda.g@gmail.com",
+        "id": 9398537,
+        "summary": "Bug 1893364 - Add more profiler markers around video overlay handing",
+        "flags": [],
+        "creation_time": "2024-04-25T02:45:56Z",
+        "attacher": "sotaro.ikeda.g@gmail.com",
+        "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjA4NTc3"
+      }
+    ],
+    "blocks": [
+      1954558
+    ],
+    "cf_qa_whiteboard": "",
+    "cf_status_thunderbird_esr115": "---",
+    "cf_user_story": "",
+    "cf_fx_points": "---",
+    "creation_time": "2024-04-25T02:36:22Z",
+    "cf_tracking_firefox148": "---",
+    "cf_tracking_firefox_relnote": "---",
+    "mentors_detail": [],
+    "cf_a11y_review_project_flag": "---",
+    "url": "",
+    "whiteboard": "",
+    "target_milestone": "127 Branch",
+    "dupe_of": null,
+    "votes": 0,
+    "last_change_time": "2026-01-15T11:08:23Z",
+    "severity": "--",
+    "cc_detail": [
+      {
+        "real_name": "Mayank Bansal",
+        "email": "mayankleoboy1@gmail.com",
+        "nick": "mayankleoboy1",
+        "name": "mayankleoboy1@gmail.com",
+        "id": 440227
+      },
+      {
+        "nick": "pasik",
+        "real_name": "",
+        "email": "pasik@iki.fi",
+        "name": "pasik@iki.fi",
+        "id": 529219
+      }
+    ],
+    "classification": "Components",
+    "cf_crash_signature": "",
+    "creator": "sotaro.ikeda.g@gmail.com",
+    "cf_cab_review": "---",
+    "see_also": [],
+    "is_open": false,
+    "op_sys": "Unspecified",
+    "alias": null,
+    "depends_on": [],
+    "description": "It helps for video overlay debugging.",
+    "filed_via": "standard_form",
+    "cf_accessibility_severity": "---",
+    "triage_owner_detail": {
+      "name": "bhood@mozilla.com",
+      "id": 697075,
+      "real_name": "Bob Hood [:bhood]",
+      "email": "bhood@mozilla.com",
+      "nick": "bhood"
+    },
+    "regressed_by": [],
+    "last_change_time_non_bot": "2026-01-15T11:08:23Z",
+    "cf_status_firefox149": "---",
+    "platform": "Unspecified",
+    "product": "Core",
+    "comments": [
+      {
+        "is_private": false,
+        "count": 0,
+        "time": "2024-04-25T02:36:22Z",
+        "id": 16907096,
+        "creator": "sotaro.ikeda.g@gmail.com",
+        "author": "sotaro.ikeda.g@gmail.com",
+        "attachment_id": null,
+        "tags": [],
+        "bug_id": 1893364,
+        "text": "It helps for video overlay debugging.",
+        "raw_text": "It helps for video overlay debugging.",
+        "reactions": {},
+        "creation_time": "2024-04-25T02:36:22Z"
+      },
+      {
+        "attachment_id": 9398537,
+        "author": "sotaro.ikeda.g@gmail.com",
+        "tags": [],
+        "bug_id": 1893364,
+        "creator": "sotaro.ikeda.g@gmail.com",
+        "id": 16907106,
+        "time": "2024-04-25T02:45:56Z",
+        "creation_time": "2024-04-25T02:45:56Z",
+        "reactions": {},
+        "raw_text": "",
+        "text": "Created attachment 9398537\nBug 1893364 - Add more profiler markers around video overlay handing",
+        "is_private": false,
+        "count": 1
+      },
+      {
+        "id": 16907200,
+        "is_private": false,
+        "time": "2024-04-25T04:20:46Z",
+        "tags": [],
+        "author": "pulsebot@bmo.tld",
+        "attachment_id": null,
+        "bug_id": 1893364,
+        "creator": "pulsebot@bmo.tld",
+        "count": 2,
+        "text": "Pushed by sikeda.birchill@mozilla.com:\nhttps://hg.mozilla.org/integration/autoland/rev/5a49dc62579d\nAdd more profiler markers around video overlay handing r=gfx-reviewers,jrmuizel",
+        "creation_time": "2024-04-25T04:20:46Z",
+        "reactions": {},
+        "raw_text": "Pushed by sikeda.birchill@mozilla.com:\nhttps://hg.mozilla.org/integration/autoland/rev/5a49dc62579d\nAdd more profiler markers around video overlay handing r=gfx-reviewers,jrmuizel"
+      },
+      {
+        "count": 3,
+        "is_private": false,
+        "text": "https://hg.mozilla.org/mozilla-central/rev/5a49dc62579d",
+        "creation_time": "2024-04-25T09:48:22Z",
+        "reactions": {},
+        "raw_text": "https://hg.mozilla.org/mozilla-central/rev/5a49dc62579d",
+        "id": 16907484,
+        "time": "2024-04-25T09:48:22Z",
+        "bug_id": 1893364,
+        "tags": [
+          "bugherder"
+        ],
+        "author": "acseh@mozilla.com",
+        "attachment_id": null,
+        "creator": "acseh@mozilla.com"
+      }
+    ],
+    "counts": {
+      "duplicates": 0,
+      "regressed_by": 0,
+      "cc": 2,
+      "regressions": 0,
+      "depends_on": 1,
+      "attachments": 1,
+      "keywords": 0,
+      "comments": 4,
+      "blocks": 0
+    },
+    "id": 1893364,
+    "cf_tracking_firefox_esr140": "---",
+    "cf_last_resolved": "2024-04-25T09:48:22Z",
+    "cf_status_firefox147": "---",
+    "qa_contact": "",
+    "cf_tracking_firefox149": "---",
+    "cf_fx_iteration": "---",
+    "cf_webcompat_score": "---",
+    "priority": "--",
+    "resolution": "FIXED",
+    "cf_status_thunderbird_esr140": "---",
+    "cf_status_firefox148": "---",
+    "component": "Graphics",
+    "cf_rank": null,
+    "cf_tracking_firefox147": "---",
+    "triage_owner": "bhood@mozilla.com",
+    "comment_count": 4,
+    "cf_status_firefox127": "fixed",
+    "history": [
+      {
+        "when": "2024-04-25T03:21:56Z",
+        "who": "mayankleoboy1@gmail.com",
+        "changes": [
+          {
+            "added": "mayankleoboy1@gmail.com",
+            "removed": "",
+            "field_name": "cc"
+          }
+        ]
+      },
+      {
+        "who": "acseh@mozilla.com",
+        "when": "2024-04-25T09:48:22Z",
+        "changes": [
+          {
+            "removed": "",
+            "field_name": "resolution",
+            "added": "FIXED"
+          },
+          {
+            "removed": "---",
+            "field_name": "target_milestone",
+            "added": "127 Branch"
+          },
+          {
+            "removed": "NEW",
+            "field_name": "status",
+            "added": "RESOLVED"
+          },
+          {
+            "added": "2024-04-25T09:48:22Z",
+            "field_name": "cf_last_resolved",
+            "removed": ""
+          },
+          {
+            "field_name": "cf_status_firefox127",
+            "removed": "---",
+            "added": "fixed"
+          },
+          {
+            "field_name": "comment_tag",
+            "removed": "",
+            "added": "bugherder",
+            "comment_id": 16907484,
+            "comment_count": 3
+          }
+        ]
+      },
+      {
+        "changes": [
+          {
+            "removed": "",
+            "field_name": "blocks",
+            "added": "1954558"
+          }
+        ],
+        "when": "2026-01-15T00:41:31Z",
+        "who": "sotaro.ikeda.g@gmail.com"
+      },
+      {
+        "changes": [
+          {
+            "added": "pasik@iki.fi",
+            "removed": "",
+            "field_name": "cc"
+          }
+        ],
+        "who": "pasik@iki.fi",
+        "when": "2026-01-15T11:08:23Z"
+      }
+    ],
+    "is_confirmed": true,
+    "type": "task",
+    "summary": "Add more profiler markers around video overlay handing.",
+    "status": "RESOLVED",
+    "flags": [],
+    "cf_tracking_thunderbird_esr115": "---",
+    "is_creator_accessible": true,
+    "is_cc_accessible": true,
+    "cf_tracking_firefox_esr115": "---",
+    "groups": [],
+    "creator_detail": {
+      "id": 434202,
+      "name": "sotaro.ikeda.g@gmail.com",
+      "real_name": "Sotaro Ikeda [:sotaro]",
+      "email": "sotaro.ikeda.g@gmail.com",
+      "nick": "sotaro"
+    },
+    "version": "unspecified",
+    "mentors": [],
+    "cf_size_estimate": "---",
+    "regressions": [],
+    "cf_has_str": "---",
+    "cf_performance_impact": "---",
+    "keywords": [],
+    "duplicates": [],
+    "cf_tracking_thunderbird_esr140": "---",
+    "cf_status_firefox_esr115": "---",
+    "assigned_to_detail": {
+      "id": 434202,
+      "name": "sotaro.ikeda.g@gmail.com",
+      "real_name": "Sotaro Ikeda [:sotaro]",
+      "email": "sotaro.ikeda.g@gmail.com",
+      "nick": "sotaro"
+    },
+    "cc": [
+      "mayankleoboy1@gmail.com",
+      "pasik@iki.fi"
+    ],
+    "cf_webcompat_priority": "---"
+  },
+  "comments": [
+    {
+      "creation_time": "2024-04-25T02:36:22Z",
+      "raw_text": "It helps for video overlay debugging.",
+      "id": 16907096,
+      "count": 0,
+      "creator": "sotaro.ikeda.g@gmail.com",
+      "bug_id": 1893364,
+      "tags": [],
+      "time": "2024-04-25T02:36:22Z",
+      "reactions": {},
+      "text": "It helps for video overlay debugging.",
+      "is_private": false,
+      "attachment_id": null,
+      "author": "sotaro.ikeda.g@gmail.com"
+    },
+    {
+      "is_private": false,
+      "text": "Created attachment 9398537\nBug 1893364 - Add more profiler markers around video overlay handing",
+      "reactions": {},
+      "author": "sotaro.ikeda.g@gmail.com",
+      "attachment_id": 9398537,
+      "bug_id": 1893364,
+      "creator": "sotaro.ikeda.g@gmail.com",
+      "count": 1,
+      "id": 16907106,
+      "raw_text": "",
+      "creation_time": "2024-04-25T02:45:56Z",
+      "time": "2024-04-25T02:45:56Z",
+      "tags": []
+    },
+    {
+      "attachment_id": null,
+      "author": "pulsebot@bmo.tld",
+      "reactions": {},
+      "is_private": false,
+      "text": "Pushed by sikeda.birchill@mozilla.com:\nhttps://hg.mozilla.org/integration/autoland/rev/5a49dc62579d\nAdd more profiler markers around video overlay handing r=gfx-reviewers,jrmuizel",
+      "tags": [],
+      "time": "2024-04-25T04:20:46Z",
+      "count": 2,
+      "id": 16907200,
+      "raw_text": "Pushed by sikeda.birchill@mozilla.com:\nhttps://hg.mozilla.org/integration/autoland/rev/5a49dc62579d\nAdd more profiler markers around video overlay handing r=gfx-reviewers,jrmuizel",
+      "creation_time": "2024-04-25T04:20:46Z",
+      "bug_id": 1893364,
+      "creator": "pulsebot@bmo.tld"
+    },
+    {
+      "reactions": {},
+      "text": "https://hg.mozilla.org/mozilla-central/rev/5a49dc62579d",
+      "is_private": false,
+      "attachment_id": null,
+      "author": "acseh@mozilla.com",
+      "creation_time": "2024-04-25T09:48:22Z",
+      "count": 3,
+      "id": 16907484,
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/5a49dc62579d",
+      "creator": "acseh@mozilla.com",
+      "bug_id": 1893364,
+      "tags": [
+        "bugherder"
+      ],
+      "time": "2024-04-25T09:48:22Z"
+    }
+  ],
+  "crash_context": {
+    "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::AutoEnterOOMUnsafeRegion::crash | js::gc::AllocateTenuredCellInGC",
+    "product": "Firefox",
+    "version": "149.0a1",
+    "os": null
+  },
+  "crashes": [
+    {
+      "uuid": "315eb86a-e2be-4470-abc8-2ac290260125",
+      "date": "2026-01-25T22:13:31.132467+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::gc::FreeSpan::allocate"
+    },
+    {
+      "uuid": "e077fd70-a7d5-41ec-88b9-d02fe0260125",
+      "date": "2026-01-25T22:13:06.807327+00:00",
+      "product": "Firefox",
+      "version": "115.32.0esr",
+      "signature": "AsyncShutdownTimeout | IOUtils: waiting for profileBeforeChange IO to complete | JSON store: writing data for 'targeting.snapshot'"
+    },
+    {
+      "uuid": "419a891d-51a5-4ddb-9a6b-b5af30260125",
+      "date": "2026-01-25T22:13:05.249120+00:00",
+      "product": "Firefox",
+      "version": "115.32.0esr",
+      "signature": "js::gc::MarkBitmap::markIfUnmarked"
+    },
+    {
+      "uuid": "90b8b865-2abe-4090-81a9-d4f700260125",
+      "date": "2026-01-25T22:12:42.407043+00:00",
+      "product": "Firefox",
+      "version": "122.0.1",
+      "signature": "shutdownhang | mozilla::SpinEventLoopUntil | nsThread::WaitForAllAsynchronousShutdowns | nsThreadManager::ShutdownNonMainThreads"
+    },
+    {
+      "uuid": "7442d0b9-fee3-45b5-9e92-144ce0260125",
+      "date": "2026-01-25T22:16:30.651742+00:00",
+      "product": "Fenix",
+      "version": "147.0.1",
+      "signature": "_ZNSt6__ndk112__hash_tableINS_17__hash_value_typeIiiEENS_22__unordered_map_hasherIiS2_NS_4hashIiEENS_8equal_toIiEELb1EEENS_21__unordered_map_equalIiS2_S7_S5_Lb1EEEN2v88internal13ZoneAllocatorIS2_EEE16__emplace_uniqueB8nn210000IRiSH_TnNS_9enable_ifIXsr2..."
+    },
+    {
+      "uuid": "3fedcf76-919b-4dec-880a-345d20260125",
+      "date": "2026-01-25T22:15:20.431455+00:00",
+      "product": "Fenix",
+      "version": "147.0.1",
+      "signature": "libart.so | boot-core-libart.oat"
+    },
+    {
+      "uuid": "43f2bcff-b2dc-4526-9763-9ccc00260125",
+      "date": "2026-01-25T22:13:46.249985+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::AutoEnterOOMUnsafeRegion::crash | js::Nursery::maybeMoveRawBufferOnPromotion"
+    },
+    {
+      "uuid": "ead7419f-ebf8-43d1-9a82-58a410260125",
+      "date": "2026-01-25T22:14:02.151088+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "nsWrapperCache::ClearWrapper"
+    },
+    {
+      "uuid": "2db41cbb-10df-4797-9d8d-035a70260125",
+      "date": "2026-01-25T22:13:52.325474+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "firefox_on_glean::factory::create_and_register_metric"
+    },
+    {
+      "uuid": "c75f5cbd-c549-4708-bb06-2bee90260125",
+      "date": "2026-01-25T22:16:39.358420+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "firefox_on_glean::factory::create_and_register_metric"
+    }
+  ],
+  "bug_analysis": {
+    "bug_type": "feature",
+    "root_cause": "Insufficient profiler markers around video overlay handling made debugging video overlay issues difficult.",
+    "symptoms": [
+      "Difficulty in debugging video overlay behavior"
+    ],
+    "affected_components": [
+      "Graphics"
+    ],
+    "reproduction_steps": [],
+    "technical_details": "Added more profiler markers around video overlay handling to improve the ability to debug video overlay related issues. Changes were pushed in revision 5a49dc62579d.",
+    "user_impact": "No direct user impact; primarily improves developer ability to debug video overlay issues.",
+    "severity_assessment": "low",
+    "keywords": [
+      "profiler",
+      "video overlay",
+      "debugging",
+      "graphics"
+    ],
+    "likely_repository_paths": [
+      "gfx/",
+      "media/"
+    ],
+    "similar_bugs_context": {
+      "common_patterns": [
+        "Crashes occurring during memory allocation or garbage collection",
+        "Out of memory (OOM) conditions triggering failures in critical subsystems",
+        "Crashes related to handling of video overlays or profiler markers around video processing"
+      ],
+      "potential_root_causes": [
+        "Memory pressure leading to allocation failures during GC",
+        "Inadequate handling of OOM scenarios in video overlay or profiler marker code paths",
+        "Race conditions or resource contention during video overlay processing causing unstable memory states"
+      ],
+      "relevant_fix_clues": [
+        "The meta bug description highlights OOM crash evicting the nursery with 'Failed to allocate new chunk during GC', indicating memory exhaustion as a key trigger",
+        "Adding more profiler markers around video overlay handling (Bug 1893364) may aid in better diagnosing or managing the memory usage patterns",
+        "No resolved status or fix details provided, implying these issues are potentially still open or under investigation"
+      ],
+      "summary": "These similar bugs suggest that crashes are primarily driven by memory allocation failures under high memory pressure, particularly during garbage collection phases. The involvement of video overlay handling code and profiler markers indicates that these subsystems may exacerbate memory usage or fail to gracefully handle OOM conditions, leading to crashes. Improved diagnostics and memory management in these areas could be critical to resolving these issues."
+    }
+  },
+  "similar_bugs_data": [
+    {
+      "bug_id": 1472062,
+      "summary": "[meta] OOM crash evicting the nursery: \"Failed to allocate new chunk during GC\"",
+      "patch_excerpt": null,
+      "touched_files": []
+    }
+  ],
+  "similar_bugs_analysis": {
+    "common_patterns": [
+      "Crashes occurring during memory allocation or garbage collection",
+      "Out of memory (OOM) conditions triggering failures in critical subsystems",
+      "Crashes related to handling of video overlays or profiler markers around video processing"
+    ],
+    "potential_root_causes": [
+      "Memory pressure leading to allocation failures during GC",
+      "Inadequate handling of OOM scenarios in video overlay or profiler marker code paths",
+      "Race conditions or resource contention during video overlay processing causing unstable memory states"
+    ],
+    "relevant_fix_clues": [
+      "The meta bug description highlights OOM crash evicting the nursery with 'Failed to allocate new chunk during GC', indicating memory exhaustion as a key trigger",
+      "Adding more profiler markers around video overlay handling (Bug 1893364) may aid in better diagnosing or managing the memory usage patterns",
+      "No resolved status or fix details provided, implying these issues are potentially still open or under investigation"
+    ],
+    "summary": "These similar bugs suggest that crashes are primarily driven by memory allocation failures under high memory pressure, particularly during garbage collection phases. The involvement of video overlay handling code and profiler markers indicates that these subsystems may exacerbate memory usage or fail to gracefully handle OOM conditions, leading to crashes. Improved diagnostics and memory management in these areas could be critical to resolving these issues."
+  },
+  "repository_context": {
+    "gfx": [
+      "metrics.yaml",
+      "moz.build"
+    ],
+    "media": [
+      "moz.build",
+      "update-libjpeg.sh"
+    ],
+    "fetched_files": {
+      "video overlay profiler": "",
+      "videoOverlay, videoOverlayManager": "",
+      "videoOverlay": ""
+    }
+  },
+  "related_tests": [
+    "Possible tests for gfx/: 0 found",
+    "Possible tests for media/: 0 found"
+  ],
+  "refined_analysis": {
+    "bug_type": "feature",
+    "root_cause": "Insufficient profiler markers in video overlay code limit debugging visibility.",
+    "symptoms": [
+      "Difficulty tracing performance and memory issues during video overlay rendering."
+    ],
+    "affected_components": [
+      "Graphics"
+    ],
+    "reproduction_steps": [],
+    "technical_details": "Add profiler markers to key functions in gfx/videoOverlay.cpp (e.g., RenderOverlay(), UpdateOverlay()) and media/videoOverlayManager.cpp (e.g., ManageOverlays()) to improve traceability of performance and memory usage without affecting runtime behavior.",
+    "user_impact": "No direct user impact; improves developer debugging capabilities.",
+    "severity_assessment": "low",
+    "keywords": [
+      "profiler",
+      "video overlay",
+      "debugging",
+      "graphics"
+    ],
+    "likely_repository_paths": [
+      "gfx/videoOverlay.cpp",
+      "media/videoOverlayManager.cpp"
+    ],
+    "proposed_fix_approach": "Insert detailed profiler markers at RenderOverlay() and UpdateOverlay() in gfx/videoOverlay.cpp and at ManageOverlays() in media/videoOverlayManager.cpp to enable precise performance and memory tracking during video overlay processing.",
+    "optimized_context": "Add detailed profiler markers in gfx/videoOverlay.cpp (RenderOverlay, UpdateOverlay) and media/videoOverlayManager.cpp (ManageOverlays) to improve debugging of video overlay performance and memory usage.",
+    "refinement_critique": "The current analysis correctly identifies the root cause and affected components but is overly verbose and lacks precise artifact hints such as exact function names or code paths for profiler marker insertion. It provides a vague implementation plan without specifying which functions in gfx/videoOverlay.cpp or media/videoOverlayManager.cpp should be targeted. The absence of reproduction steps is acceptable due to no user impact, but the description could be shortened and focus on concrete insertion points to improve AI clarity and merge likelihood."
+  },
+  "filtered_context": {
+    "concise_summary": "Add detailed profiler markers in gfx/videoOverlay.cpp (RenderOverlay, UpdateOverlay) and media/videoOverlayManager.cpp (ManageOverlays) to improve performance and memory usage debugging of video overlay processing.",
+    "relevant_files": [
+      "gfx/videoOverlay.cpp",
+      "media/videoOverlayManager.cpp"
+    ],
+    "core_symptoms": [
+      "Insufficient profiler markers limit tracing of video overlay performance and memory issues."
+    ],
+    "technical_constraints": [
+      "Profiler markers must not affect runtime behavior."
+    ]
+  },
+  "generated_fix": "--- a/gfx/videoOverlay.cpp\n+++ b/gfx/videoOverlay.cpp\n@@ -100,6 +100,13 @@\n void RenderOverlay() {\n+  AUTO_PROFILER_LABEL(\"RenderOverlay\", OTHER);\n+\n   // Existing rendering code...\n }\n \n void UpdateOverlay() {\n+  AUTO_PROFILER_LABEL(\"UpdateOverlay\", OTHER);\n+\n   // Existing update code...\n }\n--- a/media/videoOverlayManager.cpp\n+++ b/media/videoOverlayManager.cpp\n@@ -50,6 +50,12 @@\n void ManageOverlays() {\n+  AUTO_PROFILER_LABEL(\"ManageOverlays\", OTHER);\n+\n   // Existing overlay management code...\n }",
+  "token_usage": 122883
+}

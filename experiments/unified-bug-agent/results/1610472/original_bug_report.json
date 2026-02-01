@@ -1,0 +1,527 @@
+{
+  "cf_tracking_firefox_esr140": "---",
+  "counts": {
+    "duplicates": 1,
+    "regressed_by": 0,
+    "cc": 5,
+    "regressions": 0,
+    "depends_on": 4,
+    "keywords": 1,
+    "attachments": 0,
+    "comments": 2,
+    "blocks": 13
+  },
+  "id": 1610472,
+  "cf_tracking_firefox149": "---",
+  "cf_last_resolved": "2026-01-28T13:46:45Z",
+  "qa_contact": "",
+  "cf_status_firefox147": "---",
+  "last_change_time_non_bot": "2026-01-28T13:46:45Z",
+  "cf_status_firefox149": "---",
+  "product": "Firefox",
+  "comments": [
+    {
+      "is_private": false,
+      "count": 0,
+      "time": "2020-01-21T11:47:24Z",
+      "id": 14602729,
+      "creator": "dao+bmo@mozilla.com",
+      "bug_id": 1610472,
+      "author": "dao+bmo@mozilla.com",
+      "attachment_id": null,
+      "tags": [],
+      "text": "We are considering re-using urlbar modules in products other than Firefox desktop, as well as for Firefox desktop's search bar (if Firefox desktop is to offer a separate search bar in the future). To that end, this bug tracks work that needs to be done for the urlbar modules to be shared. For details see: https://docs.google.com/document/d/1g37DHbs1fTHex2Q0_zbnHF9FhlaVw6mMeOMKXxqIdaY/edit?pli=1",
+      "raw_text": "We are considering re-using urlbar modules in products other than Firefox desktop, as well as for Firefox desktop's search bar (if Firefox desktop is to offer a separate search bar in the future). To that end, this bug tracks work that needs to be done for the urlbar modules to be shared. For details see: https://docs.google.com/document/d/1g37DHbs1fTHex2Q0_zbnHF9FhlaVw6mMeOMKXxqIdaY/edit?pli=1",
+      "reactions": {},
+      "creation_time": "2020-01-21T11:47:24Z"
+    },
+    {
+      "is_private": false,
+      "id": 14681707,
+      "time": "2020-03-07T10:16:20Z",
+      "bug_id": 1610472,
+      "author": "dao+bmo@mozilla.com",
+      "tags": [],
+      "attachment_id": null,
+      "creator": "dao+bmo@mozilla.com",
+      "text": "*** Bug 1517476 has been marked as a duplicate of this bug. ***",
+      "count": 1,
+      "creation_time": "2020-03-07T10:16:20Z",
+      "reactions": {},
+      "raw_text": ""
+    }
+  ],
+  "platform": "All",
+  "triage_owner_detail": {
+    "id": 701257,
+    "name": "jteow@mozilla.com",
+    "nick": "jteow",
+    "real_name": "James Teow [:jteow]",
+    "email": "jteow@mozilla.com"
+  },
+  "regressed_by": [],
+  "op_sys": "All",
+  "alias": "urlbar-modules",
+  "description": "We are considering re-using urlbar modules in products other than Firefox desktop, as well as for Firefox desktop's search bar (if Firefox desktop is to offer a separate search bar in the future). To that end, this bug tracks work that needs to be done for the urlbar modules to be shared. For details see: https://docs.google.com/document/d/1g37DHbs1fTHex2Q0_zbnHF9FhlaVw6mMeOMKXxqIdaY/edit?pli=1",
+  "depends_on": [
+    1539838,
+    1610473,
+    1610475,
+    1610478,
+    1610479,
+    1610530,
+    1610533,
+    1620626,
+    1980372,
+    1980379,
+    1980384,
+    1980913,
+    1981381
+  ],
+  "see_also": [],
+  "is_open": false,
+  "filed_via": "standard_form",
+  "cf_accessibility_severity": "---",
+  "dupe_of": null,
+  "url": "",
+  "whiteboard": "",
+  "target_milestone": "---",
+  "cc_detail": [
+    {
+      "email": "alice0775@gmail.com",
+      "real_name": "Alice0775 White",
+      "nick": "alice0775",
+      "id": 293623,
+      "name": "alice0775@gmail.com"
+    },
+    {
+      "id": 240353,
+      "name": "mak@mozilla.com",
+      "nick": "mak",
+      "real_name": "Marco Bonardo [:mak]",
+      "email": "mak@mozilla.com"
+    },
+    {
+      "id": 463945,
+      "name": "mdeboer@mozilla.com",
+      "real_name": "Mike de Boer [:mikedeboer]",
+      "email": "mdeboer@mozilla.com",
+      "nick": "mikedeboer"
+    },
+    {
+      "name": "standard8@mozilla.com",
+      "id": 112088,
+      "nick": "standard8",
+      "email": "standard8@mozilla.com",
+      "real_name": "Mark Banner (:standard8)"
+    },
+    {
+      "nick": "yoasif",
+      "real_name": "Asif Youssuff",
+      "email": "yoasif@gmail.com",
+      "name": "yoasif@gmail.com",
+      "id": 347239
+    }
+  ],
+  "creator": "dao+bmo@mozilla.com",
+  "cf_cab_review": "---",
+  "classification": "Client Software",
+  "cf_crash_signature": "",
+  "last_change_time": "2026-01-28T13:46:45Z",
+  "votes": 0,
+  "severity": "S3",
+  "cf_user_story": "",
+  "cf_fx_points": "---",
+  "cf_a11y_review_project_flag": "---",
+  "cf_tracking_firefox148": "---",
+  "creation_time": "2020-01-21T11:47:24Z",
+  "mentors_detail": [],
+  "cf_tracking_firefox_relnote": "---",
+  "cf_qa_whiteboard": "",
+  "cf_status_firefox_esr140": "---",
+  "blocks": [
+    1974218,
+    2010269,
+    1551227,
+    1555414
+  ],
+  "attachments": [],
+  "assigned_to": "nobody@mozilla.org",
+  "duplicates": [
+    1517476
+  ],
+  "cc": [
+    "alice0775@gmail.com",
+    "mak@mozilla.com",
+    "mdeboer@mozilla.com",
+    "standard8@mozilla.com",
+    "yoasif@gmail.com"
+  ],
+  "cf_webcompat_priority": "---",
+  "assigned_to_detail": {
+    "id": 1,
+    "name": "nobody@mozilla.org",
+    "email": "nobody@mozilla.org",
+    "real_name": "Nobody; OK to take it and work on it",
+    "nick": "nobody"
+  },
+  "cf_status_firefox_esr115": "---",
+  "cf_has_str": "---",
+  "regressions": [],
+  "cf_performance_impact": "---",
+  "keywords": [
+    "meta"
+  ],
+  "mentors": [],
+  "creator_detail": {
+    "real_name": "D\u00e3o Gottwald [:dao]",
+    "email": "dao+bmo@mozilla.com",
+    "nick": "dao",
+    "id": 219124,
+    "name": "dao+bmo@mozilla.com"
+  },
+  "groups": [],
+  "version": "unspecified",
+  "summary": "[meta] Make urlbar modules better reusable in Firefox and other products",
+  "status": "RESOLVED",
+  "flags": [],
+  "cf_tracking_firefox_esr115": "---",
+  "is_creator_accessible": true,
+  "is_cc_accessible": true,
+  "is_confirmed": true,
+  "history": [
+    {
+      "who": "dao+bmo@mozilla.com",
+      "when": "2020-01-21T11:48:06Z",
+      "changes": [
+        {
+          "added": "1539838",
+          "removed": "",
+          "field_name": "depends_on"
+        }
+      ]
+    },
+    {
+      "when": "2020-01-21T11:50:05Z",
+      "who": "dao+bmo@mozilla.com",
+      "changes": [
+        {
+          "field_name": "depends_on",
+          "removed": "",
+          "added": "1610473"
+        }
+      ]
+    },
+    {
+      "who": "dao+bmo@mozilla.com",
+      "when": "2020-01-21T12:00:22Z",
+      "changes": [
+        {
+          "added": "1610475",
+          "removed": "",
+          "field_name": "depends_on"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "added": "1610478",
+          "field_name": "depends_on",
+          "removed": ""
+        }
+      ],
+      "who": "dao+bmo@mozilla.com",
+      "when": "2020-01-21T12:13:33Z"
+    },
+    {
+      "changes": [
+        {
+          "added": "1610479",
+          "removed": "",
+          "field_name": "depends_on"
+        }
+      ],
+      "who": "dao+bmo@mozilla.com",
+      "when": "2020-01-21T12:22:07Z"
+    },
+    {
+      "changes": [
+        {
+          "added": "mdeboer@mozilla.com",
+          "field_name": "cc",
+          "removed": ""
+        },
+        {
+          "added": "urlbar-modules",
+          "removed": "",
+          "field_name": "alias"
+        }
+      ],
+      "who": "mdeboer@mozilla.com",
+      "when": "2020-01-21T13:29:16Z"
+    },
+    {
+      "when": "2020-01-21T14:57:16Z",
+      "who": "dao+bmo@mozilla.com",
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "depends_on",
+          "added": "1610530"
+        }
+      ]
+    },
+    {
+      "who": "dao+bmo@mozilla.com",
+      "when": "2020-01-21T15:04:53Z",
+      "changes": [
+        {
+          "added": "1610533",
+          "field_name": "depends_on",
+          "removed": ""
+        }
+      ]
+    },
+    {
+      "who": "dao+bmo@mozilla.com",
+      "when": "2020-03-06T16:39:07Z",
+      "changes": [
+        {
+          "field_name": "depends_on",
+          "removed": "",
+          "added": "1620626"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "added": "1551227",
+          "removed": "",
+          "field_name": "blocks"
+        }
+      ],
+      "when": "2020-03-07T10:15:09Z",
+      "who": "dao+bmo@mozilla.com"
+    },
+    {
+      "when": "2020-03-07T10:15:53Z",
+      "who": "dao+bmo@mozilla.com",
+      "changes": [
+        {
+          "added": "1555414",
+          "removed": "",
+          "field_name": "blocks"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "added": "standard8@mozilla.com",
+          "field_name": "cc",
+          "removed": ""
+        }
+      ],
+      "when": "2020-03-07T10:16:20Z",
+      "who": "dao+bmo@mozilla.com"
+    },
+    {
+      "when": "2020-03-07T10:17:31Z",
+      "who": "jan@ikenmeyer.eu",
+      "changes": [
+        {
+          "field_name": "cc",
+          "removed": "",
+          "added": "jan@ikenmeyer.eu"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "depends_on",
+          "added": "1624579"
+        }
+      ],
+      "who": "dao+bmo@mozilla.com",
+      "when": "2020-03-24T13:06:45Z"
+    },
+    {
+      "who": "mak@mozilla.com",
+      "when": "2020-06-11T20:14:43Z",
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "cc",
+          "added": "mak@mozilla.com"
+        },
+        {
+          "added": "P3",
+          "removed": "P1",
+          "field_name": "priority"
+        },
+        {
+          "added": "S3",
+          "field_name": "severity",
+          "removed": "normal"
+        }
+      ]
+    },
+    {
+      "who": "yoasif@gmail.com",
+      "when": "2020-06-11T20:16:35Z",
+      "changes": [
+        {
+          "added": "yoasif@gmail.com",
+          "removed": "",
+          "field_name": "cc"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "added": "",
+          "field_name": "cc",
+          "removed": "jan@ikenmeyer.eu"
+        }
+      ],
+      "who": "jan@ikenmeyer.eu",
+      "when": "2021-12-09T05:59:45Z"
+    },
+    {
+      "changes": [
+        {
+          "added": "1980372",
+          "field_name": "depends_on",
+          "removed": ""
+        }
+      ],
+      "when": "2025-07-31T10:37:46Z",
+      "who": "dao+bmo@mozilla.com"
+    },
+    {
+      "who": "dao+bmo@mozilla.com",
+      "when": "2025-07-31T10:39:56Z",
+      "changes": [
+        {
+          "added": "1974218",
+          "field_name": "blocks",
+          "removed": ""
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "added": "alice0775@gmail.com",
+          "removed": "",
+          "field_name": "cc"
+        }
+      ],
+      "when": "2025-07-31T10:47:30Z",
+      "who": "alice0775@gmail.com"
+    },
+    {
+      "when": "2025-07-31T11:43:48Z",
+      "who": "dao+bmo@mozilla.com",
+      "changes": [
+        {
+          "added": "1980379",
+          "field_name": "depends_on",
+          "removed": ""
+        }
+      ]
+    },
+    {
+      "when": "2025-07-31T12:06:04Z",
+      "who": "dao+bmo@mozilla.com",
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "depends_on",
+          "added": "1980384"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "added": "1980913",
+          "removed": "",
+          "field_name": "depends_on"
+        }
+      ],
+      "when": "2025-08-04T11:02:36Z",
+      "who": "dao+bmo@mozilla.com"
+    },
+    {
+      "who": "dao+bmo@mozilla.com",
+      "when": "2025-08-06T11:01:56Z",
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "depends_on",
+          "added": "1981381"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "field_name": "blocks",
+          "removed": "",
+          "added": "2010269"
+        }
+      ],
+      "who": "dao+bmo@mozilla.com",
+      "when": "2026-01-28T13:24:35Z"
+    },
+    {
+      "changes": [
+        {
+          "field_name": "depends_on",
+          "removed": "1624579",
+          "added": ""
+        }
+      ],
+      "when": "2026-01-28T13:46:37Z",
+      "who": "dao+bmo@mozilla.com"
+    },
+    {
+      "changes": [
+        {
+          "field_name": "resolution",
+          "removed": "",
+          "added": "FIXED"
+        },
+        {
+          "field_name": "status",
+          "removed": "NEW",
+          "added": "RESOLVED"
+        },
+        {
+          "added": "2026-01-28T13:46:45Z",
+          "removed": "",
+          "field_name": "cf_last_resolved"
+        }
+      ],
+      "when": "2026-01-28T13:46:45Z",
+      "who": "dao+bmo@mozilla.com"
+    }
+  ],
+  "comment_count": 2,
+  "type": "task",
+  "component": "Address Bar",
+  "cf_status_firefox148": "---",
+  "triage_owner": "jteow@mozilla.com",
+  "cf_rank": null,
+  "cf_tracking_firefox147": "---",
+  "cf_webcompat_score": "---",
+  "priority": "P3",
+  "resolution": "FIXED",
+  "cf_fx_iteration": "---"
+}

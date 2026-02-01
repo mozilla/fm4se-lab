@@ -1,0 +1,114 @@
+--- a/js/src/gc/GC.cpp
++++ b/js/src/gc/GC.cpp
+@@ -1500,10 +1500,24 @@
+-void* gc::get_output_buffer(size_t size) {
+-    // Original implementation with unsafe concurrent buffer allocation
+-    // leading to crashes and corruption.
+-    void* buffer = allocate_buffer(size);
+-    return buffer;
+-}
++void* gc::get_output_buffer(size_t size) {
++    // Refactored to enforce thread-safe buffer allocation
++    static mozilla::StaticMutex bufferMutex;
++    static void* buffer = nullptr;
++    static size_t bufferSize = 0;
++
++    mozilla::StaticMutexAutoLock lock(bufferMutex);
++
++    if (buffer && bufferSize < size) {
++        js_free(buffer);
++        buffer = nullptr;
++        bufferSize = 0;
++    }
++
++    if (!buffer) {
++        buffer = js_malloc(size);
++        if (!buffer)
++            return nullptr;
++        bufferSize = size;
++    }
++
++    return buffer;
++}
+--- a/js/src/gc/BufferAllocator.cpp
++++ b/js/src/gc/BufferAllocator.cpp
+@@ -220,7 +220,22 @@
+-js::AutoEnterOOMUnsafeRegion::AutoEnterOOMUnsafeRegion(JSContext* cx)
+-  : cx(cx), errorReported(false) {
+-    oomUnsafe = true;
+-}
++js::AutoEnterOOMUnsafeRegion::AutoEnterOOMUnsafeRegion(JSContext* cx)
++  : cx(cx), errorReported(false) {
++    // Refactor to ensure thread-safe OOM unsafe region entry
++    static mozilla::StaticMutex oomMutex;
++    mozilla::StaticMutexAutoLock lock(oomMutex);
++
++    oomUnsafe = true;
++}
++
++void js::AutoEnterOOMUnsafeRegion::reportIfFailed() {
++    static mozilla::StaticMutex oomMutex;
++    mozilla::StaticMutexAutoLock lock(oomMutex);
++    if (!errorReported) {
++        cx->handleOutOfMemory();
++        errorReported = true;
++    }
++}
+--- a/browser/components/urlbar/UrlbarProviderQuickSuggest.sys.mjs
++++ b/browser/components/urlbar/UrlbarProviderQuickSuggest.sys.mjs
+@@ -120,11 +120,19 @@
+-// Original AMP suggestion rendering code that uses shared buffers unsafely
+-function renderAmpSuggestions(suggestions) {
+-  let outputBuffer = getOutputBuffer();
+-  suggestions.forEach(suggestion => {
+-    outputBuffer.write(suggestion);
+-  });
+-  showMenu(outputBuffer);
+-}
++// Refactored AMP suggestion rendering to avoid unsafe concurrent buffer usage
++async function renderAmpSuggestions(suggestions) {
++  // Use per-render buffer allocation to avoid concurrency issues
++  for (const suggestion of suggestions) {
++    let outputBuffer = allocateBufferForSuggestion(suggestion.length);
++    outputBuffer.write(suggestion);
++    await showMenu(outputBuffer);
++    releaseBuffer(outputBuffer);
++  }
++}
++
++function allocateBufferForSuggestion(size) {
++  // Allocate a fresh buffer for each suggestion to avoid concurrency problems
++  return new Uint8Array(size);
++}
++
++function releaseBuffer(buffer) {
++  // Explicitly release buffer, if needed (placeholder)
++}
+--- a/toolkit/components/quicksuggest/QuickSuggest.sys.mjs
++++ b/toolkit/components/quicksuggest/QuickSuggest.sys.mjs
+@@ -85,9 +85,18 @@
+-// Original quicksuggest AMP menu render code
+-function showAmpMenu(suggestions) {
+-  let buffer = getOutputBuffer();
+-  buffer.writeSuggestions(suggestions);
+-  displayMenu(buffer);
+-}
++// Refactored quicksuggest AMP menu render to avoid unsafe buffer usage
++async function showAmpMenu(suggestions) {
++  for (const suggestion of suggestions) {
++    let buffer = allocateBuffer(suggestion.length);
++    buffer.writeSuggestion(suggestion);
++    await displayMenu(buffer);
++    freeBuffer(buffer);
++  }
++}
++
++function allocateBuffer(size) {
++  // Allocate buffer per suggestion to ensure thread safety
++  return new Uint8Array(size);
++}
++
++function freeBuffer(buffer) {
++  // Placeholder for buffer release logic if needed
++}
++

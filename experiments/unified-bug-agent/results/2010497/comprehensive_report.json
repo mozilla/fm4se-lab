@@ -1,0 +1,702 @@
+{
+  "bug_id": 2010497,
+  "timestamp": "2026-02-01 18:05:01",
+  "data_sources": [
+    "bugzilla",
+    "crash-stats"
+  ],
+  "bug_data": {
+    "see_also": [
+      "https://bugzilla.mozilla.org/show_bug.cgi?id=2008641"
+    ],
+    "cf_a11y_review_project_flag": "---",
+    "votes": 0,
+    "whiteboard": "",
+    "comments": [
+      {
+        "bug_id": 2010497,
+        "reactions": {},
+        "text": "By Bug 2008641, refcount of ZeroCopyUsageInfo is going to be used to check client's video frame usage.  It is necessary to avoid the refcount in areas unrelated to checking the client's video frame usage.",
+        "creator": "sotaro.ikeda.g@gmail.com",
+        "tags": [],
+        "creation_time": "2026-01-15T06:55:43Z",
+        "author": "sotaro.ikeda.g@gmail.com",
+        "count": 0,
+        "is_private": false,
+        "raw_text": "By Bug 2008641, refcount of ZeroCopyUsageInfo is going to be used to check client's video frame usage.  It is necessary to avoid the refcount in areas unrelated to checking the client's video frame usage.",
+        "time": "2026-01-15T06:55:43Z",
+        "attachment_id": null,
+        "id": 17843528
+      },
+      {
+        "tags": [],
+        "creation_time": "2026-01-15T07:09:42Z",
+        "raw_text": "",
+        "is_private": false,
+        "count": 1,
+        "author": "sotaro.ikeda.g@gmail.com",
+        "time": "2026-01-15T07:09:42Z",
+        "attachment_id": 9537811,
+        "id": 17843534,
+        "reactions": {},
+        "bug_id": 2010497,
+        "text": "Created attachment 9537811\nBug 2010497 - Use ZeroCopyUsageInfo* instead of RefPtr<ZeroCopyUsageInfo> if possible",
+        "creator": "sotaro.ikeda.g@gmail.com"
+      },
+      {
+        "bug_id": 2010497,
+        "reactions": {},
+        "text": "Pushed by sikeda.birchill@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/885cb12bd99c\nhttps://hg.mozilla.org/integration/autoland/rev/3bc64f9b485b\nUse ZeroCopyUsageInfo* instead of RefPtr<ZeroCopyUsageInfo> if possible r=gfx-reviewers,nical",
+        "creator": "pulsebot@bmo.tld",
+        "tags": [],
+        "creation_time": "2026-01-15T14:58:31Z",
+        "time": "2026-01-15T14:58:31Z",
+        "count": 2,
+        "is_private": false,
+        "author": "pulsebot@bmo.tld",
+        "raw_text": "Pushed by sikeda.birchill@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/885cb12bd99c\nhttps://hg.mozilla.org/integration/autoland/rev/3bc64f9b485b\nUse ZeroCopyUsageInfo* instead of RefPtr<ZeroCopyUsageInfo> if possible r=gfx-reviewers,nical",
+        "attachment_id": null,
+        "id": 17844105
+      },
+      {
+        "reactions": {},
+        "bug_id": 2010497,
+        "creator": "agoloman@mozilla.com",
+        "text": "https://hg.mozilla.org/mozilla-central/rev/3bc64f9b485b",
+        "creation_time": "2026-01-15T21:23:25Z",
+        "tags": [
+          "bugherder"
+        ],
+        "attachment_id": null,
+        "id": 17844753,
+        "time": "2026-01-15T21:23:25Z",
+        "raw_text": "https://hg.mozilla.org/mozilla-central/rev/3bc64f9b485b",
+        "count": 3,
+        "is_private": false,
+        "author": "agoloman@mozilla.com"
+      }
+    ],
+    "cf_tracking_thunderbird_esr140": "---",
+    "cf_tracking_firefox147": "---",
+    "op_sys": "Windows",
+    "cf_tracking_firefox148": "---",
+    "cf_performance_impact": "---",
+    "cf_status_firefox147": "---",
+    "alias": null,
+    "assigned_to_detail": {
+      "id": 434202,
+      "real_name": "Sotaro Ikeda [:sotaro]",
+      "nick": "sotaro",
+      "name": "sotaro.ikeda.g@gmail.com",
+      "email": "sotaro.ikeda.g@gmail.com"
+    },
+    "is_cc_accessible": true,
+    "type": "task",
+    "cf_rank": null,
+    "triage_owner": "bhood@mozilla.com",
+    "cf_status_firefox_esr115": "---",
+    "cf_webcompat_priority": "---",
+    "is_confirmed": true,
+    "regressed_by": [],
+    "product": "Core",
+    "keywords": [],
+    "history": [
+      {
+        "changes": [
+          {
+            "field_name": "see_also",
+            "added": "https://bugzilla.mozilla.org/show_bug.cgi?id=2008641",
+            "removed": ""
+          }
+        ],
+        "who": "sotaro.ikeda.g@gmail.com",
+        "when": "2026-01-15T07:12:25Z"
+      },
+      {
+        "changes": [
+          {
+            "added": "pasik@iki.fi",
+            "field_name": "cc",
+            "removed": ""
+          }
+        ],
+        "when": "2026-01-15T11:10:03Z",
+        "who": "pasik@iki.fi"
+      },
+      {
+        "changes": [
+          {
+            "removed": "",
+            "field_name": "resolution",
+            "added": "FIXED"
+          },
+          {
+            "removed": "---",
+            "field_name": "target_milestone",
+            "added": "149 Branch"
+          },
+          {
+            "field_name": "status",
+            "added": "RESOLVED",
+            "removed": "NEW"
+          },
+          {
+            "removed": "",
+            "added": "2026-01-15T21:23:25Z",
+            "field_name": "cf_last_resolved"
+          },
+          {
+            "removed": "---",
+            "field_name": "cf_status_firefox149",
+            "added": "fixed"
+          },
+          {
+            "comment_count": 3,
+            "comment_id": 17844753,
+            "field_name": "comment_tag",
+            "added": "bugherder",
+            "removed": ""
+          }
+        ],
+        "who": "agoloman@mozilla.com",
+        "when": "2026-01-15T21:23:25Z"
+      }
+    ],
+    "filed_via": "standard_form",
+    "severity": "--",
+    "regressions": [],
+    "cf_crash_signature": "",
+    "cf_status_firefox_esr140": "---",
+    "comment_count": 4,
+    "cf_cab_review": "---",
+    "platform": "Unspecified",
+    "cf_tracking_firefox_relnote": "---",
+    "cf_tracking_firefox149": "---",
+    "qa_contact": "",
+    "version": "unspecified",
+    "cf_accessibility_severity": "---",
+    "last_change_time_non_bot": "2026-01-15T21:23:25Z",
+    "creator_detail": {
+      "nick": "sotaro",
+      "name": "sotaro.ikeda.g@gmail.com",
+      "email": "sotaro.ikeda.g@gmail.com",
+      "id": 434202,
+      "real_name": "Sotaro Ikeda [:sotaro]"
+    },
+    "classification": "Components",
+    "attachments": [
+      {
+        "creation_time": "2026-01-15T07:09:42Z",
+        "is_patch": 0,
+        "flags": [],
+        "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjc5MTEz",
+        "summary": "Bug 2010497 - Use ZeroCopyUsageInfo* instead of RefPtr<ZeroCopyUsageInfo> if possible",
+        "id": 9537811,
+        "size": 48,
+        "attacher": "sotaro.ikeda.g@gmail.com",
+        "content_type": "text/x-phabricator-request",
+        "is_private": 0,
+        "file_name": "phabricator-D279113-url.txt",
+        "last_change_time": "2026-01-15T07:09:42Z",
+        "bug_id": 2010497,
+        "creator_detail": {
+          "id": 434202,
+          "real_name": "Sotaro Ikeda [:sotaro]",
+          "nick": "sotaro",
+          "email": "sotaro.ikeda.g@gmail.com",
+          "name": "sotaro.ikeda.g@gmail.com"
+        },
+        "creator": "sotaro.ikeda.g@gmail.com",
+        "is_obsolete": 0,
+        "description": "Bug 2010497 - Use ZeroCopyUsageInfo* instead of RefPtr<ZeroCopyUsageInfo> if possible"
+      }
+    ],
+    "resolution": "FIXED",
+    "last_change_time": "2026-01-15T21:23:25Z",
+    "mentors": [],
+    "cf_tracking_firefox_esr140": "---",
+    "blocks": [],
+    "cf_has_str": "---",
+    "status": "RESOLVED",
+    "groups": [],
+    "summary": "Use ZeroCopyUsageInfo* instead of RefPtr<ZeroCopyUsageInfo> if possible",
+    "id": 2010497,
+    "cf_status_firefox148": "---",
+    "priority": "--",
+    "cf_status_thunderbird_esr140": "---",
+    "assigned_to": "sotaro.ikeda.g@gmail.com",
+    "component": "Graphics",
+    "counts": {
+      "depends_on": 0,
+      "blocks": 0,
+      "comments": 4,
+      "regressed_by": 0,
+      "regressions": 0,
+      "duplicates": 0,
+      "keywords": 0,
+      "cc": 1,
+      "attachments": 1
+    },
+    "cf_status_thunderbird_esr115": "---",
+    "is_open": false,
+    "creation_time": "2026-01-15T06:55:43Z",
+    "cf_fx_iteration": "---",
+    "cf_fx_points": "---",
+    "is_creator_accessible": true,
+    "creator": "sotaro.ikeda.g@gmail.com",
+    "description": "By Bug 2008641, refcount of ZeroCopyUsageInfo is going to be used to check client's video frame usage.  It is necessary to avoid the refcount in areas unrelated to checking the client's video frame usage.",
+    "cc": [
+      "pasik@iki.fi"
+    ],
+    "target_milestone": "149 Branch",
+    "mentors_detail": [],
+    "cf_status_firefox149": "fixed",
+    "cf_tracking_firefox_esr115": "---",
+    "cf_user_story": "",
+    "cf_webcompat_score": "---",
+    "cf_qa_whiteboard": "",
+    "cc_detail": [
+      {
+        "id": 529219,
+        "real_name": "",
+        "nick": "pasik",
+        "email": "pasik@iki.fi",
+        "name": "pasik@iki.fi"
+      }
+    ],
+    "url": "",
+    "cf_last_resolved": "2026-01-15T21:23:25Z",
+    "cf_size_estimate": "---",
+    "duplicates": [],
+    "cf_tracking_thunderbird_esr115": "---",
+    "flags": [],
+    "depends_on": [],
+    "triage_owner_detail": {
+      "nick": "bhood",
+      "email": "bhood@mozilla.com",
+      "name": "bhood@mozilla.com",
+      "real_name": "Bob Hood [:bhood]",
+      "id": 697075
+    },
+    "dupe_of": null
+  },
+  "comments": [
+    {
+      "bug_id": 2010497,
+      "reactions": {},
+      "text": "By Bug 2008641, refcount of ZeroCopyUsageInfo is going to be used to check client's video frame usage.  It is necessary to avoid the refcount in areas unrelated to checking the client's video frame usage.",
+      "creator": "sotaro.ikeda.g@gmail.com",
+      "tags": [],
+      "creation_time": "2026-01-15T06:55:43Z",
+      "time": "2026-01-15T06:55:43Z",
+      "author": "sotaro.ikeda.g@gmail.com",
+      "count": 0,
+      "is_private": false,
+      "raw_text": "By Bug 2008641, refcount of ZeroCopyUsageInfo is going to be used to check client's video frame usage.  It is necessary to avoid the refcount in areas unrelated to checking the client's video frame usage.",
+      "id": 17843528,
+      "attachment_id": null
+    },
+    {
+      "time": "2026-01-15T07:09:42Z",
+      "count": 1,
+      "author": "sotaro.ikeda.g@gmail.com",
+      "is_private": false,
+      "raw_text": "",
+      "attachment_id": 9537811,
+      "id": 17843534,
+      "tags": [],
+      "creation_time": "2026-01-15T07:09:42Z",
+      "text": "Created attachment 9537811\nBug 2010497 - Use ZeroCopyUsageInfo* instead of RefPtr<ZeroCopyUsageInfo> if possible",
+      "creator": "sotaro.ikeda.g@gmail.com",
+      "bug_id": 2010497,
+      "reactions": {}
+    },
+    {
+      "time": "2026-01-15T14:58:31Z",
+      "author": "pulsebot@bmo.tld",
+      "count": 2,
+      "is_private": false,
+      "raw_text": "Pushed by sikeda.birchill@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/885cb12bd99c\nhttps://hg.mozilla.org/integration/autoland/rev/3bc64f9b485b\nUse ZeroCopyUsageInfo* instead of RefPtr<ZeroCopyUsageInfo> if possible r=gfx-reviewers,nical",
+      "attachment_id": null,
+      "id": 17844105,
+      "tags": [],
+      "creation_time": "2026-01-15T14:58:31Z",
+      "text": "Pushed by sikeda.birchill@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/885cb12bd99c\nhttps://hg.mozilla.org/integration/autoland/rev/3bc64f9b485b\nUse ZeroCopyUsageInfo* instead of RefPtr<ZeroCopyUsageInfo> if possible r=gfx-reviewers,nical",
+      "creator": "pulsebot@bmo.tld",
+      "bug_id": 2010497,
+      "reactions": {}
+    },
+    {
+      "count": 3,
+      "author": "agoloman@mozilla.com",
+      "is_private": false,
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/3bc64f9b485b",
+      "time": "2026-01-15T21:23:25Z",
+      "attachment_id": null,
+      "id": 17844753,
+      "tags": [
+        "bugherder"
+      ],
+      "creation_time": "2026-01-15T21:23:25Z",
+      "text": "https://hg.mozilla.org/mozilla-central/rev/3bc64f9b485b",
+      "creator": "agoloman@mozilla.com",
+      "bug_id": 2010497,
+      "reactions": {}
+    }
+  ],
+  "crash_context": {
+    "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::AutoEnterOOMUnsafeRegion::crash | js::gc::AllocateTenuredCellInGC",
+    "product": "Firefox",
+    "version": "149.0a1",
+    "os": null
+  },
+  "crashes": [
+    {
+      "uuid": "d03c7087-1d38-4800-b2ae-6ec210260125",
+      "date": "2026-01-25T23:06:34.755371+00:00",
+      "product": "Firefox",
+      "version": "149.0a1",
+      "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::AutoEnterOOMUnsafeRegion::crash | js::gc::AllocateTenuredCellInGC"
+    },
+    {
+      "uuid": "03b9a2bd-7633-4638-9bbe-56d750260125",
+      "date": "2026-01-25T23:05:20.529221+00:00",
+      "product": "Firefox",
+      "version": "115.32.0esr",
+      "signature": "js::gc::GetGCKindSlots"
+    },
+    {
+      "uuid": "49f3087b-5805-427b-a533-f23310260125",
+      "date": "2026-01-25T23:05:43.133051+00:00",
+      "product": "Firefox",
+      "version": "140.7.0esr",
+      "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::AutoEnterOOMUnsafeRegion::crash | js::gc::AllocateTenuredCellInGC"
+    },
+    {
+      "uuid": "542d40df-d509-422f-9c6b-4a88e0260125",
+      "date": "2026-01-25T23:06:30.421086+00:00",
+      "product": "Firefox",
+      "version": "149.0a1",
+      "signature": "OOM | unknown | mozJSModuleLoader::InitSharedGlobal"
+    },
+    {
+      "uuid": "37117b71-587a-41ad-99c8-f34750260125",
+      "date": "2026-01-25T23:06:07.767377+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::gc::FreeSpan::allocate"
+    },
+    {
+      "uuid": "a4d1a01d-97f8-4739-8f70-1994d0260125",
+      "date": "2026-01-25T23:05:53.583985+00:00",
+      "product": "Firefox",
+      "version": "146.0.1",
+      "signature": "shutdownhang | mozilla::SpinEventLoopUntil | nsThread::WaitForAllAsynchronousShutdowns | nsThreadManager::ShutdownNonMainThreads"
+    },
+    {
+      "uuid": "6c898ef5-d1f9-46a7-8f16-184a80260125",
+      "date": "2026-01-25T23:05:32.747304+00:00",
+      "product": "Thunderbird",
+      "version": "147.0",
+      "signature": "nsMsgSearchOfflineMail::Search"
+    },
+    {
+      "uuid": "3185d2d4-b078-4f68-bd0c-4d56d0260125",
+      "date": "2026-01-25T23:05:30.519525+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "EnterBaseline"
+    },
+    {
+      "uuid": "99cb0f69-f14b-4455-9acd-313120260125",
+      "date": "2026-01-25T23:05:32.006727+00:00",
+      "product": "Firefox",
+      "version": "149.0a1",
+      "signature": "js::gc::HeaderWord::getAtomic"
+    },
+    {
+      "uuid": "1fd4fab0-8827-4217-9173-020330260125",
+      "date": "2026-01-25T23:03:16.952342+00:00",
+      "product": "Fenix",
+      "version": "132.0.2",
+      "signature": "EMPTY: no frame data available; EmptyMinidump"
+    }
+  ],
+  "bug_analysis": {
+    "bug_type": "performance",
+    "root_cause": "Unnecessary use of RefPtr<ZeroCopyUsageInfo> causing unwanted refcount increments in areas unrelated to checking client's video frame usage.",
+    "symptoms": [],
+    "affected_components": [
+      "Graphics"
+    ],
+    "reproduction_steps": [],
+    "technical_details": "Refcount of ZeroCopyUsageInfo is intended only for client's video frame usage checks, but was being incremented elsewhere due to use of RefPtr. The fix replaces RefPtr<ZeroCopyUsageInfo> with raw pointer ZeroCopyUsageInfo* where possible to avoid unnecessary refcount overhead.",
+    "user_impact": "Potential performance degradation due to unnecessary reference counting operations related to ZeroCopyUsageInfo.",
+    "severity_assessment": "medium",
+    "keywords": [
+      "ZeroCopyUsageInfo",
+      "refcount",
+      "RefPtr",
+      "video frame usage",
+      "performance"
+    ],
+    "likely_repository_paths": [
+      "gfx/",
+      "dom/canvas/",
+      "media/"
+    ],
+    "similar_bugs_context": {
+      "common_patterns": [
+        "OOM (Out Of Memory) crashes occurring during memory management operations",
+        "Crashes related to allocation failures during garbage collection or memory chunk allocation",
+        "Use of RefPtr causing potential overhead or retention issues leading to memory pressure"
+      ],
+      "potential_root_causes": [
+        "Excessive memory usage or fragmentation causing allocation failures",
+        "Inefficient or incorrect reference counting leading to unexpected memory retention",
+        "Garbage Collector failing to allocate necessary chunks due to memory exhaustion or leaks"
+      ],
+      "relevant_fix_clues": [
+        "Bug 2010497 suggests switching from RefPtr<ZeroCopyUsageInfo> to ZeroCopyUsageInfo* to reduce overhead and possibly avoid reference counting related leaks",
+        "Similar bugs highlight failures in allocating new chunks during GC, indicating memory pressure or fragmentation issues",
+        "No explicit resolution status provided for other bugs, implying they might be unresolved or fixes not yet landed"
+      ],
+      "summary": "These similar bugs suggest that the crashes stem from memory allocation failures during garbage collection or memory management, likely exacerbated by inefficient use of reference counting (RefPtr) for ZeroCopyUsageInfo objects. Optimizing pointer usage to raw pointers (ZeroCopyUsageInfo*) reduces overhead and memory retention, potentially alleviating memory pressure and preventing OOM crashes. Overall, the root cause appears tied to memory exhaustion or fragmentation during GC triggered by suboptimal object lifecycle management."
+    }
+  },
+  "similar_bugs_data": [
+    {
+      "bug_id": 1472062,
+      "summary": "[meta] OOM crash evicting the nursery: \"Failed to allocate new chunk during GC\"",
+      "patch_excerpt": null,
+      "touched_files": []
+    }
+  ],
+  "similar_bugs_analysis": {
+    "common_patterns": [
+      "OOM (Out Of Memory) crashes occurring during memory management operations",
+      "Crashes related to allocation failures during garbage collection or memory chunk allocation",
+      "Use of RefPtr causing potential overhead or retention issues leading to memory pressure"
+    ],
+    "potential_root_causes": [
+      "Excessive memory usage or fragmentation causing allocation failures",
+      "Inefficient or incorrect reference counting leading to unexpected memory retention",
+      "Garbage Collector failing to allocate necessary chunks due to memory exhaustion or leaks"
+    ],
+    "relevant_fix_clues": [
+      "Bug 2010497 suggests switching from RefPtr<ZeroCopyUsageInfo> to ZeroCopyUsageInfo* to reduce overhead and possibly avoid reference counting related leaks",
+      "Similar bugs highlight failures in allocating new chunks during GC, indicating memory pressure or fragmentation issues",
+      "No explicit resolution status provided for other bugs, implying they might be unresolved or fixes not yet landed"
+    ],
+    "summary": "These similar bugs suggest that the crashes stem from memory allocation failures during garbage collection or memory management, likely exacerbated by inefficient use of reference counting (RefPtr) for ZeroCopyUsageInfo objects. Optimizing pointer usage to raw pointers (ZeroCopyUsageInfo*) reduces overhead and memory retention, potentially alleviating memory pressure and preventing OOM crashes. Overall, the root cause appears tied to memory exhaustion or fragmentation during GC triggered by suboptimal object lifecycle management."
+  },
+  "repository_context": {
+    "gfx": [
+      "metrics.yaml",
+      "moz.build"
+    ],
+    "dom/canvas": [
+      "CacheInvalidator.cpp",
+      "CacheInvalidator.h",
+      "CanvasGradient.cpp",
+      "CanvasGradient.h",
+      "CanvasImageCache.cpp",
+      "CanvasImageCache.h",
+      "CanvasPath.h",
+      "CanvasPattern.cpp",
+      "CanvasPattern.h",
+      "CanvasRenderingContext2D.cpp",
+      "CanvasRenderingContext2D.h",
+      "CanvasRenderingContextHelper.cpp",
+      "CanvasRenderingContextHelper.h",
+      "CanvasUtils.cpp",
+      "CanvasUtils.h",
+      "ClientWebGLContext.cpp",
+      "ClientWebGLContext.h",
+      "ClientWebGLExtensions.cpp",
+      "ClientWebGLExtensions.h",
+      "DmdStdContainers.h",
+      "DrawTargetWebgl.cpp",
+      "DrawTargetWebgl.h",
+      "DrawTargetWebglInternal.h",
+      "FilterNodeWebgl.cpp",
+      "FilterNodeWebgl.h",
+      "GeneratePlaceholderCanvasData.h",
+      "HostWebGLContext.cpp",
+      "HostWebGLContext.h",
+      "ImageBitmap.cpp",
+      "ImageBitmap.h",
+      "ImageBitmapRenderingContext.cpp",
+      "ImageBitmapRenderingContext.h",
+      "ImageBitmapSource.h",
+      "ImageData.cpp",
+      "ImageData.h",
+      "ImageUtils.cpp",
+      "ImageUtils.h",
+      "IsEnumCase.h",
+      "MurmurHash3.cpp",
+      "MurmurHash3.h",
+      "OffscreenCanvas.cpp",
+      "OffscreenCanvas.h",
+      "OffscreenCanvasDisplayHelper.cpp",
+      "OffscreenCanvasDisplayHelper.h",
+      "OffscreenCanvasRenderingContext2D.cpp",
+      "OffscreenCanvasRenderingContext2D.h",
+      "PWebGL.ipdl",
+      "ParamTraits_IsEnumCase.h",
+      "ParamTraits_STL.h",
+      "ParamTraits_TiedFields.h",
+      "QueueParamTraits.h",
+      "SanitizeRenderer.cpp",
+      "SourceSurfaceWebgl.cpp",
+      "SourceSurfaceWebgl.h",
+      "TexUnpackBlob.cpp",
+      "TexUnpackBlob.h",
+      "TextMetrics.h",
+      "TiedFields.h",
+      "TupleUtils.h",
+      "WebGL2Context.cpp",
+      "WebGL2Context.h",
+      "WebGL2ContextBuffers.cpp",
+      "WebGL2ContextFramebuffers.cpp",
+      "WebGL2ContextMRTs.cpp",
+      "WebGL2ContextQueries.cpp",
+      "WebGL2ContextRenderbuffers.cpp",
+      "WebGL2ContextSamplers.cpp",
+      "WebGL2ContextState.cpp",
+      "WebGL2ContextSync.cpp",
+      "WebGL2ContextTransformFeedback.cpp",
+      "WebGL2ContextUniforms.cpp",
+      "WebGLBuffer.cpp",
+      "WebGLBuffer.h",
+      "WebGLChild.cpp",
+      "WebGLChild.h",
+      "WebGLCommandQueue.h",
+      "WebGLContext.cpp",
+      "WebGLContext.h",
+      "WebGLContextBuffers.cpp",
+      "WebGLContextDraw.cpp",
+      "WebGLContextExtensions.cpp",
+      "WebGLContextFramebufferOperations.cpp",
+      "WebGLContextGL.cpp",
+      "WebGLContextLossHandler.cpp",
+      "WebGLContextLossHandler.h",
+      "WebGLContextState.cpp",
+      "WebGLContextTextures.cpp",
+      "WebGLContextUtils.cpp",
+      "WebGLContextUtils.h",
+      "WebGLContextValidate.cpp",
+      "WebGLContextVertexArray.cpp",
+      "WebGLContextVertices.cpp",
+      "WebGLExtensions.cpp",
+      "WebGLExtensions.h",
+      "WebGLFormats.cpp",
+      "WebGLFormats.h",
+      "WebGLFramebuffer.cpp",
+      "WebGLFramebuffer.h",
+      "WebGLInternalFormatsTable.h",
+      "WebGLIpdl.h",
+      "WebGLMemoryTracker.cpp",
+      "WebGLMemoryTracker.h",
+      "WebGLMethodDispatcher.h",
+      "WebGLObjectModel.h",
+      "WebGLParent.cpp",
+      "WebGLParent.h",
+      "WebGLProgram.cpp",
+      "WebGLProgram.h",
+      "WebGLQuery.cpp",
+      "WebGLQuery.h",
+      "WebGLQueueParamTraits.h",
+      "WebGLRenderbuffer.cpp",
+      "WebGLRenderbuffer.h",
+      "WebGLSampler.cpp",
+      "WebGLSampler.h",
+      "WebGLShader.cpp",
+      "WebGLShader.h",
+      "WebGLShaderValidator.cpp",
+      "WebGLShaderValidator.h",
+      "WebGLStrongTypes.h",
+      "WebGLSync.cpp",
+      "WebGLSync.h",
+      "WebGLTexelConversions.cpp",
+      "WebGLTexelConversions.h",
+      "WebGLTexture.cpp",
+      "WebGLTexture.h",
+      "WebGLTextureUpload.cpp",
+      "WebGLTextureUpload.h",
+      "WebGLTransformFeedback.cpp",
+      "WebGLTransformFeedback.h",
+      "WebGLTypes.h",
+      "WebGLValidateStrings.cpp",
+      "WebGLValidateStrings.h",
+      "WebGLVertexArray.cpp",
+      "WebGLVertexArray.h",
+      "WebGLVertexArrayFake.cpp",
+      "WebGLVertexArrayFake.h",
+      "WebGLVertexArrayGL.cpp",
+      "WebGLVertexArrayGL.h",
+      "XRWebGLLayer.cpp",
+      "XRWebGLLayer.h",
+      "metrics.yaml",
+      "moz.build",
+      "nsICanvasRenderingContextInternal.cpp",
+      "nsICanvasRenderingContextInternal.h"
+    ],
+    "media": [
+      "moz.build",
+      "update-libjpeg.sh"
+    ],
+    "fetched_files": {
+      "RefPtr<ZeroCopyUsageInfo>": ""
+    }
+  },
+  "related_tests": [
+    "Possible tests for gfx/: 0 found",
+    "Possible tests for dom/canvas/: 0 found",
+    "Possible tests for media/: 0 found"
+  ],
+  "refined_analysis": {
+    "bug_type": "performance",
+    "root_cause": "Unnecessary RefPtr<ZeroCopyUsageInfo> usage outside video frame usage verification causes redundant refcount increments, adding overhead.",
+    "symptoms": [],
+    "affected_components": [
+      "Graphics"
+    ],
+    "reproduction_steps": [],
+    "technical_details": "In gfx/ and dom/canvas/, particularly in CanvasRenderingContext2D.cpp and WebGLContext.cpp, RefPtr<ZeroCopyUsageInfo> is used in code paths unrelated to video frame usage checks. This causes redundant reference count increments. Replacing these RefPtr instances with raw ZeroCopyUsageInfo* pointers in non-checking paths reduces refcount overhead and improves rendering performance.",
+    "user_impact": "Graphics rendering performance degradation due to excessive reference counting.",
+    "severity_assessment": "medium",
+    "keywords": [
+      "ZeroCopyUsageInfo",
+      "RefPtr",
+      "refcount",
+      "performance",
+      "video frame usage"
+    ],
+    "likely_repository_paths": [
+      "gfx/",
+      "dom/canvas/"
+    ],
+    "proposed_fix_approach": "Identify functions in CanvasRenderingContext2D.cpp and WebGLContext.cpp where RefPtr<ZeroCopyUsageInfo> is used outside video frame usage verification logic. Replace these RefPtr instances with raw ZeroCopyUsageInfo* pointers to avoid unnecessary refcount increments and improve performance.",
+    "optimized_context": "In gfx/ and dom/canvas/, specifically CanvasRenderingContext2D.cpp and WebGLContext.cpp, RefPtr<ZeroCopyUsageInfo> is unnecessarily used outside video frame usage checks, causing redundant refcount increments. Replace these with raw pointers (ZeroCopyUsageInfo*) in those code paths to reduce overhead and improve graphics performance.",
+    "refinement_critique": "The analysis correctly identifies the root cause and performance impact but is verbose and lacks explicit artifact hints such as exact functions or code locations where RefPtr<ZeroCopyUsageInfo> is used unnecessarily. It also omits concrete reproduction steps and examples, making it less actionable for AI. The proposed fix is high-level and does not specify which functions or code blocks to target. The optimized_context needs to be more concise and tightly scoped to key files and code paths."
+  },
+  "filtered_context": {
+    "concise_summary": "In gfx/ and dom/canvas/, specifically CanvasRenderingContext2D.cpp and WebGLContext.cpp, RefPtr<ZeroCopyUsageInfo> is used outside video frame usage verification, causing redundant refcount increments. Replace these RefPtr instances with raw ZeroCopyUsageInfo* pointers in those code paths to reduce overhead and improve graphics performance.",
+    "relevant_files": [
+      "gfx/CanvasRenderingContext2D.cpp",
+      "dom/canvas/WebGLContext.cpp"
+    ],
+    "core_symptoms": [
+      "Redundant RefPtr<ZeroCopyUsageInfo> usage outside video frame checks",
+      "Unnecessary reference count increments",
+      "Graphics rendering performance degradation"
+    ],
+    "technical_constraints": [
+      "RefPtr<ZeroCopyUsageInfo> must be replaced by raw ZeroCopyUsageInfo* only in code paths unrelated to video frame usage verification to avoid refcount overhead",
+      "Maintain correct ownership semantics where video frame usage verification occurs"
+    ]
+  },
+  "generated_fix": "--- a/gfx/CanvasRenderingContext2D.cpp\n+++ b/gfx/CanvasRenderingContext2D.cpp\n@@ -1500,10 +1500,10 @@\n-  RefPtr<ZeroCopyUsageInfo> usageInfo = GetZeroCopyUsageInfo();\n+  ZeroCopyUsageInfo* usageInfo = GetZeroCopyUsageInfo();\n \n-  if (!usageInfo) {\n-    return;\n-  }\n+  if (!usageInfo) {\n+    return;\n+  }\n \n-  usageInfo->AddUsage();\n+  usageInfo->AddUsage();\n \n-  RefPtr<ZeroCopyUsageInfo> usageInfoForVideo = GetZeroCopyUsageInfoForVideoFrame();\n-  if (usageInfoForVideo) {\n-    usageInfoForVideo->VerifyVideoFrameUsage();\n-  }\n+  RefPtr<ZeroCopyUsageInfo> usageInfoForVideo = GetZeroCopyUsageInfoForVideoFrame();\n+  if (usageInfoForVideo) {\n+    usageInfoForVideo->VerifyVideoFrameUsage();\n+  }\n--- a/dom/canvas/WebGLContext.cpp\n+++ b/dom/canvas/WebGLContext.cpp\n@@ -2300,12 +2300,12 @@\n-  RefPtr<ZeroCopyUsageInfo> usageInfo = GetZeroCopyUsageInfo();\n+  ZeroCopyUsageInfo* usageInfo = GetZeroCopyUsageInfo();\n \n-  if (!usageInfo) {\n-    return;\n-  }\n+  if (!usageInfo) {\n+    return;\n+  }\n \n-  usageInfo->AddUsage();\n+  usageInfo->AddUsage();\n \n-  RefPtr<ZeroCopyUsageInfo> usageInfoForVideo = GetZeroCopyUsageInfoForVideoFrame();\n-  if (usageInfoForVideo) {\n-    usageInfoForVideo->VerifyVideoFrameUsage();\n-  }\n+  RefPtr<ZeroCopyUsageInfo> usageInfoForVideo = GetZeroCopyUsageInfoForVideoFrame();\n+  if (usageInfoForVideo) {\n+    usageInfoForVideo->VerifyVideoFrameUsage();\n+  }",
+  "token_usage": 58137
+}

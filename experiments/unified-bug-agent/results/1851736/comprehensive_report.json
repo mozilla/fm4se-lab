@@ -1,0 +1,860 @@
+{
+  "bug_id": 1851736,
+  "timestamp": "2026-02-01 18:07:22",
+  "data_sources": [
+    "bugzilla",
+    "crash-stats"
+  ],
+  "bug_data": {
+    "cf_status_firefox147": "---",
+    "keywords": [],
+    "cf_status_thunderbird_esr115": "---",
+    "dupe_of": null,
+    "summary": "Enable NVIDIA RTX Video Super Resolution for video overlay on Windows only during power charge",
+    "triage_owner_detail": {
+      "nick": "bhood",
+      "email": "bhood@mozilla.com",
+      "name": "bhood@mozilla.com",
+      "real_name": "Bob Hood [:bhood]",
+      "id": 697075
+    },
+    "cf_tracking_firefox148": "---",
+    "cf_accessibility_severity": "---",
+    "cf_status_firefox_esr140": "---",
+    "triage_owner": "bhood@mozilla.com",
+    "is_cc_accessible": true,
+    "target_milestone": "125 Branch",
+    "last_change_time_non_bot": "2026-01-15T11:08:40Z",
+    "mentors_detail": [],
+    "comment_count": 7,
+    "description": "\"NVIDIA RTX Video Super Resolution for video overlay\" support was added by  Bug 1823135. But it is not enabled by default. Since enabling it consumes more power.\n\nChromium enables it only when power is charging.\n- https://source.chromium.org/chromium/chromium/src/+/main:ui/gl/swap_chain_presenter.cc;l=1891;drc=c78381133ae4a3c49b418dda23efe4f974227cd7\n\nThen it seems better to enable it only when PC is power charged.",
+    "flags": [],
+    "cf_status_firefox149": "---",
+    "groups": [],
+    "creator_detail": {
+      "nick": "sotaro",
+      "email": "sotaro.ikeda.g@gmail.com",
+      "name": "sotaro.ikeda.g@gmail.com",
+      "id": 434202,
+      "real_name": "Sotaro Ikeda [:sotaro]"
+    },
+    "see_also": [],
+    "cf_tracking_thunderbird_esr115": "---",
+    "cf_fx_iteration": "---",
+    "duplicates": [
+      1851768
+    ],
+    "cf_crash_signature": "",
+    "component": "Graphics",
+    "comments": [
+      {
+        "time": "2023-09-06T01:19:36Z",
+        "bug_id": 1851736,
+        "author": "sotaro.ikeda.g@gmail.com",
+        "count": 0,
+        "creation_time": "2023-09-06T01:19:36Z",
+        "is_private": false,
+        "id": 16564635,
+        "attachment_id": null,
+        "creator": "sotaro.ikeda.g@gmail.com",
+        "tags": [],
+        "raw_text": "\"NVIDIA RTX Video Super Resolution for video overlay\" support was added by  Bug 1823135. But it is not enabled by default. Since enabling it consumes more power.\n\nChromium enables it only when power is charging.\n- https://source.chromium.org/chromium/chromium/src/+/main:ui/gl/swap_chain_presenter.cc;l=1891;drc=c78381133ae4a3c49b418dda23efe4f974227cd7\n\nThen it seems better to enable it only when PC is power charged.",
+        "reactions": {},
+        "text": "\"NVIDIA RTX Video Super Resolution for video overlay\" support was added by  Bug 1823135. But it is not enabled by default. Since enabling it consumes more power.\n\nChromium enables it only when power is charging.\n- https://source.chromium.org/chromium/chromium/src/+/main:ui/gl/swap_chain_presenter.cc;l=1891;drc=c78381133ae4a3c49b418dda23efe4f974227cd7\n\nThen it seems better to enable it only when PC is power charged."
+      },
+      {
+        "tags": [],
+        "attachment_id": null,
+        "creator": "sotaro.ikeda.g@gmail.com",
+        "reactions": {},
+        "raw_text": "gecko already supports to notify power status. Though it is not notified to GPU process.\n- https://searchfox.org/mozilla-central/rev/b6cd901cf074c5e75e3902d660bafa3cf3967c40/hal/HalBatteryInformation.h#15\n- https://searchfox.org/mozilla-central/rev/b6cd901cf074c5e75e3902d660bafa3cf3967c40/dom/battery/BatteryManager.cpp#36\n- https://searchfox.org/mozilla-central/rev/b6cd901cf074c5e75e3902d660bafa3cf3967c40/dom/battery/BatteryManager.cpp#144",
+        "text": "gecko already supports to notify power status. Though it is not notified to GPU process.\n- https://searchfox.org/mozilla-central/rev/b6cd901cf074c5e75e3902d660bafa3cf3967c40/hal/HalBatteryInformation.h#15\n- https://searchfox.org/mozilla-central/rev/b6cd901cf074c5e75e3902d660bafa3cf3967c40/dom/battery/BatteryManager.cpp#36\n- https://searchfox.org/mozilla-central/rev/b6cd901cf074c5e75e3902d660bafa3cf3967c40/dom/battery/BatteryManager.cpp#144",
+        "author": "sotaro.ikeda.g@gmail.com",
+        "count": 1,
+        "bug_id": 1851736,
+        "time": "2023-09-06T01:31:06Z",
+        "is_private": false,
+        "id": 16564638,
+        "creation_time": "2023-09-06T01:31:06Z"
+      },
+      {
+        "time": "2023-10-23T06:54:50Z",
+        "bug_id": 1851736,
+        "author": "sotaro.ikeda.g@gmail.com",
+        "count": 2,
+        "creation_time": "2023-10-23T06:54:50Z",
+        "is_private": false,
+        "id": 16633722,
+        "attachment_id": null,
+        "creator": "sotaro.ikeda.g@gmail.com",
+        "tags": [],
+        "raw_text": "video processor super resolution is enabled on Intel Gen10+ GPUs and NVIDIA GPUs with 530+ drivers\n- https://source.chromium.org/chromium/chromium/src/+/main:gpu/config/gpu_driver_bug_list.json;l=3390;drc=371a10c50fec96801c751137c50a6941a48fced3\n\nhttps://bugs.chromium.org/p/chromium/issues/detail?id=1368319\nhttps://bugs.chromium.org/p/chromium/issues/detail?id=1318380",
+        "reactions": {},
+        "text": "video processor super resolution is enabled on Intel Gen10+ GPUs and NVIDIA GPUs with 530+ drivers\n- https://source.chromium.org/chromium/chromium/src/+/main:gpu/config/gpu_driver_bug_list.json;l=3390;drc=371a10c50fec96801c751137c50a6941a48fced3\n\nhttps://bugs.chromium.org/p/chromium/issues/detail?id=1368319\nhttps://bugs.chromium.org/p/chromium/issues/detail?id=1318380"
+      },
+      {
+        "creation_time": "2024-02-27T03:54:18Z",
+        "id": 16813992,
+        "is_private": false,
+        "bug_id": 1851736,
+        "time": "2024-02-27T03:54:18Z",
+        "count": 3,
+        "author": "sotaro.ikeda.g@gmail.com",
+        "text": "*** Bug 1851768 has been marked as a duplicate of this bug. ***",
+        "reactions": {},
+        "raw_text": "",
+        "attachment_id": null,
+        "creator": "sotaro.ikeda.g@gmail.com",
+        "tags": []
+      },
+      {
+        "id": 16814003,
+        "is_private": false,
+        "creation_time": "2024-02-27T04:26:24Z",
+        "count": 4,
+        "author": "sotaro.ikeda.g@gmail.com",
+        "bug_id": 1851736,
+        "time": "2024-02-27T04:26:24Z",
+        "text": "Created attachment 9382760\nBug 1851736 - Enable NVIDIA RTX Video Super Resolution for video overlay on Windows only during power charge",
+        "reactions": {},
+        "raw_text": "",
+        "tags": [],
+        "attachment_id": 9382760,
+        "creator": "sotaro.ikeda.g@gmail.com"
+      },
+      {
+        "id": 16823567,
+        "is_private": false,
+        "creation_time": "2024-03-01T04:05:22Z",
+        "count": 5,
+        "author": "pulsebot@bmo.tld",
+        "bug_id": 1851736,
+        "time": "2024-03-01T04:05:22Z",
+        "text": "Pushed by sikeda.birchill@mozilla.com:\nhttps://hg.mozilla.org/integration/autoland/rev/67d9df31e921\nEnable NVIDIA RTX Video Super Resolution for video overlay on Windows only during power charge r=gfx-reviewers,ahale",
+        "raw_text": "Pushed by sikeda.birchill@mozilla.com:\nhttps://hg.mozilla.org/integration/autoland/rev/67d9df31e921\nEnable NVIDIA RTX Video Super Resolution for video overlay on Windows only during power charge r=gfx-reviewers,ahale",
+        "reactions": {},
+        "tags": [],
+        "attachment_id": null,
+        "creator": "pulsebot@bmo.tld"
+      },
+      {
+        "text": "https://hg.mozilla.org/mozilla-central/rev/67d9df31e921",
+        "reactions": {},
+        "raw_text": "https://hg.mozilla.org/mozilla-central/rev/67d9df31e921",
+        "tags": [
+          "bugherder"
+        ],
+        "attachment_id": null,
+        "creator": "ncsoregi@mozilla.com",
+        "id": 16824538,
+        "is_private": false,
+        "creation_time": "2024-03-01T16:53:02Z",
+        "count": 6,
+        "author": "ncsoregi@mozilla.com",
+        "time": "2024-03-01T16:53:02Z",
+        "bug_id": 1851736
+      }
+    ],
+    "cc": [
+      "alice0775@gmail.com",
+      "emanuel.hoogeveen@protonmail.com",
+      "mayankleoboy1@gmail.com",
+      "pasik@iki.fi"
+    ],
+    "whiteboard": "",
+    "cf_has_str": "---",
+    "url": "",
+    "regressions": [],
+    "cf_tracking_firefox_relnote": "---",
+    "is_confirmed": true,
+    "cf_tracking_firefox_esr140": "---",
+    "is_open": false,
+    "cf_last_resolved": "2024-03-01T16:53:02Z",
+    "cf_webcompat_score": "---",
+    "is_creator_accessible": true,
+    "id": 1851736,
+    "cf_tracking_firefox_esr115": "---",
+    "cf_a11y_review_project_flag": "---",
+    "creation_time": "2023-09-06T01:19:36Z",
+    "resolution": "FIXED",
+    "mentors": [],
+    "cf_tracking_thunderbird_esr140": "---",
+    "cf_tracking_firefox149": "---",
+    "votes": 0,
+    "alias": null,
+    "severity": "--",
+    "cf_qa_whiteboard": "",
+    "cf_performance_impact": "---",
+    "status": "RESOLVED",
+    "cf_status_firefox148": "---",
+    "cf_webcompat_priority": "---",
+    "cf_status_firefox_esr115": "---",
+    "history": [
+      {
+        "when": "2023-09-06T01:19:48Z",
+        "who": "sotaro.ikeda.g@gmail.com",
+        "changes": [
+          {
+            "field_name": "depends_on",
+            "added": "1823135",
+            "removed": ""
+          }
+        ]
+      },
+      {
+        "who": "mayankleoboy1@gmail.com",
+        "when": "2023-09-06T02:30:29Z",
+        "changes": [
+          {
+            "field_name": "cc",
+            "added": "mayankleoboy1@gmail.com",
+            "removed": ""
+          }
+        ]
+      },
+      {
+        "who": "sotaro.ikeda.g@gmail.com",
+        "when": "2023-09-06T07:58:36Z",
+        "changes": [
+          {
+            "removed": "",
+            "added": "1851768",
+            "field_name": "depends_on"
+          }
+        ]
+      },
+      {
+        "changes": [
+          {
+            "field_name": "cc",
+            "removed": "",
+            "added": "emanuel.hoogeveen@protonmail.com"
+          }
+        ],
+        "who": "emanuel.hoogeveen@protonmail.com",
+        "when": "2023-09-16T01:23:39Z"
+      },
+      {
+        "when": "2023-10-17T14:38:41Z",
+        "who": "katyaberezyaka@gmail.com",
+        "changes": [
+          {
+            "field_name": "cc",
+            "removed": "",
+            "added": "broaden_acid002@simplelogin.com"
+          }
+        ]
+      },
+      {
+        "when": "2023-11-14T12:50:18Z",
+        "who": "alice0775@gmail.com",
+        "changes": [
+          {
+            "field_name": "cc",
+            "removed": "",
+            "added": "alice0775@gmail.com"
+          }
+        ]
+      },
+      {
+        "changes": [
+          {
+            "field_name": "duplicates",
+            "removed": "",
+            "added": "1851768"
+          }
+        ],
+        "when": "2024-02-27T03:54:18Z",
+        "who": "sotaro.ikeda.g@gmail.com"
+      },
+      {
+        "changes": [
+          {
+            "field_name": "assigned_to",
+            "added": "sotaro.ikeda.g@gmail.com",
+            "removed": "nobody@mozilla.org"
+          }
+        ],
+        "when": "2024-02-28T00:05:21Z",
+        "who": "sotaro.ikeda.g@gmail.com"
+      },
+      {
+        "when": "2024-02-28T00:05:33Z",
+        "who": "sotaro.ikeda.g@gmail.com",
+        "changes": [
+          {
+            "field_name": "summary",
+            "removed": "Enable NVIDIA RTX Video Super Resolution for video overlay on Windows during power charge",
+            "added": "Enable NVIDIA RTX Video Super Resolution for video overlay on Windows only during power charge"
+          }
+        ]
+      },
+      {
+        "who": "sotaro.ikeda.g@gmail.com",
+        "when": "2024-02-29T05:35:22Z",
+        "changes": [
+          {
+            "added": "1882688",
+            "removed": "",
+            "field_name": "blocks"
+          }
+        ]
+      },
+      {
+        "who": "phab-bot@bmo.tld",
+        "when": "2024-02-29T05:53:43Z",
+        "changes": [
+          {
+            "removed": "WIP: Bug 1851736 - Enable NVIDIA RTX Video Super Resolution for video overlay on Windows only during power charge",
+            "added": "Bug 1851736 - Enable NVIDIA RTX Video Super Resolution for video overlay on Windows only during power charge",
+            "field_name": "attachments.description",
+            "attachment_id": 9382760
+          }
+        ]
+      },
+      {
+        "when": "2024-03-01T16:53:02Z",
+        "who": "ncsoregi@mozilla.com",
+        "changes": [
+          {
+            "field_name": "target_milestone",
+            "removed": "---",
+            "added": "125 Branch"
+          },
+          {
+            "field_name": "resolution",
+            "removed": "",
+            "added": "FIXED"
+          },
+          {
+            "added": "RESOLVED",
+            "removed": "NEW",
+            "field_name": "status"
+          },
+          {
+            "added": "2024-03-01T16:53:02Z",
+            "removed": "",
+            "field_name": "cf_last_resolved"
+          },
+          {
+            "removed": "---",
+            "added": "fixed",
+            "field_name": "cf_status_firefox125"
+          },
+          {
+            "added": "bugherder",
+            "removed": "",
+            "comment_count": 6,
+            "field_name": "comment_tag",
+            "comment_id": 16824538
+          }
+        ]
+      },
+      {
+        "who": "katyaberezyaka@gmail.com",
+        "when": "2024-03-01T16:54:19Z",
+        "changes": [
+          {
+            "removed": "katyaberezyaka@gmail.com",
+            "added": "",
+            "field_name": "cc"
+          }
+        ]
+      },
+      {
+        "when": "2026-01-15T00:43:17Z",
+        "who": "sotaro.ikeda.g@gmail.com",
+        "changes": [
+          {
+            "field_name": "blocks",
+            "removed": "",
+            "added": "1954558"
+          }
+        ]
+      },
+      {
+        "changes": [
+          {
+            "field_name": "cc",
+            "removed": "",
+            "added": "pasik@iki.fi"
+          }
+        ],
+        "who": "pasik@iki.fi",
+        "when": "2026-01-15T11:08:40Z"
+      }
+    ],
+    "qa_contact": "",
+    "regressed_by": [],
+    "assigned_to_detail": {
+      "name": "sotaro.ikeda.g@gmail.com",
+      "real_name": "Sotaro Ikeda [:sotaro]",
+      "id": 434202,
+      "nick": "sotaro",
+      "email": "sotaro.ikeda.g@gmail.com"
+    },
+    "cf_status_firefox125": "fixed",
+    "cf_size_estimate": "---",
+    "blocks": [
+      1954558,
+      1882688
+    ],
+    "depends_on": [
+      1823135,
+      1851768
+    ],
+    "filed_via": "standard_form",
+    "assigned_to": "sotaro.ikeda.g@gmail.com",
+    "cf_fx_points": "---",
+    "op_sys": "Unspecified",
+    "platform": "Unspecified",
+    "cc_detail": [
+      {
+        "email": "alice0775@gmail.com",
+        "nick": "alice0775",
+        "id": 293623,
+        "real_name": "Alice0775 White",
+        "name": "alice0775@gmail.com"
+      },
+      {
+        "name": "emanuel.hoogeveen@protonmail.com",
+        "real_name": "Emanuel Hoogeveen [:ehoogeveen]",
+        "id": 327452,
+        "nick": "ehoogeveen",
+        "email": "emanuel.hoogeveen@protonmail.com"
+      },
+      {
+        "email": "mayankleoboy1@gmail.com",
+        "nick": "mayankleoboy1",
+        "real_name": "Mayank Bansal",
+        "id": 440227,
+        "name": "mayankleoboy1@gmail.com"
+      },
+      {
+        "email": "pasik@iki.fi",
+        "nick": "pasik",
+        "id": 529219,
+        "real_name": "",
+        "name": "pasik@iki.fi"
+      }
+    ],
+    "cf_tracking_firefox147": "---",
+    "classification": "Components",
+    "creator": "sotaro.ikeda.g@gmail.com",
+    "priority": "--",
+    "cf_cab_review": "---",
+    "attachments": [
+      {
+        "id": 9382760,
+        "attacher": "sotaro.ikeda.g@gmail.com",
+        "content_type": "text/x-phabricator-request",
+        "is_private": 0,
+        "creation_time": "2024-02-27T04:26:24Z",
+        "summary": "Bug 1851736 - Enable NVIDIA RTX Video Super Resolution for video overlay on Windows only during power charge",
+        "flags": [],
+        "file_name": "phabricator-D202781-url.txt",
+        "description": "Bug 1851736 - Enable NVIDIA RTX Video Super Resolution for video overlay on Windows only during power charge",
+        "creator_detail": {
+          "nick": "sotaro",
+          "email": "sotaro.ikeda.g@gmail.com",
+          "name": "sotaro.ikeda.g@gmail.com",
+          "id": 434202,
+          "real_name": "Sotaro Ikeda [:sotaro]"
+        },
+        "size": 48,
+        "bug_id": 1851736,
+        "is_obsolete": 0,
+        "last_change_time": "2024-02-29T05:53:43Z",
+        "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjAyNzgx",
+        "is_patch": 0,
+        "creator": "sotaro.ikeda.g@gmail.com"
+      }
+    ],
+    "counts": {
+      "comments": 7,
+      "attachments": 1,
+      "regressions": 0,
+      "depends_on": 3,
+      "blocks": 2,
+      "cc": 4,
+      "duplicates": 1,
+      "keywords": 0,
+      "regressed_by": 0
+    },
+    "last_change_time": "2026-01-15T11:08:40Z",
+    "cf_status_thunderbird_esr140": "---",
+    "product": "Core",
+    "cf_rank": null,
+    "type": "enhancement",
+    "cf_user_story": "",
+    "version": "unspecified"
+  },
+  "comments": [
+    {
+      "creation_time": "2023-09-06T01:19:36Z",
+      "raw_text": "\"NVIDIA RTX Video Super Resolution for video overlay\" support was added by  Bug 1823135. But it is not enabled by default. Since enabling it consumes more power.\n\nChromium enables it only when power is charging.\n- https://source.chromium.org/chromium/chromium/src/+/main:ui/gl/swap_chain_presenter.cc;l=1891;drc=c78381133ae4a3c49b418dda23efe4f974227cd7\n\nThen it seems better to enable it only when PC is power charged.",
+      "reactions": {},
+      "count": 0,
+      "text": "\"NVIDIA RTX Video Super Resolution for video overlay\" support was added by  Bug 1823135. But it is not enabled by default. Since enabling it consumes more power.\n\nChromium enables it only when power is charging.\n- https://source.chromium.org/chromium/chromium/src/+/main:ui/gl/swap_chain_presenter.cc;l=1891;drc=c78381133ae4a3c49b418dda23efe4f974227cd7\n\nThen it seems better to enable it only when PC is power charged.",
+      "tags": [],
+      "author": "sotaro.ikeda.g@gmail.com",
+      "attachment_id": null,
+      "bug_id": 1851736,
+      "creator": "sotaro.ikeda.g@gmail.com",
+      "id": 16564635,
+      "is_private": false,
+      "time": "2023-09-06T01:19:36Z"
+    },
+    {
+      "count": 1,
+      "is_private": false,
+      "reactions": {},
+      "raw_text": "gecko already supports to notify power status. Though it is not notified to GPU process.\n- https://searchfox.org/mozilla-central/rev/b6cd901cf074c5e75e3902d660bafa3cf3967c40/hal/HalBatteryInformation.h#15\n- https://searchfox.org/mozilla-central/rev/b6cd901cf074c5e75e3902d660bafa3cf3967c40/dom/battery/BatteryManager.cpp#36\n- https://searchfox.org/mozilla-central/rev/b6cd901cf074c5e75e3902d660bafa3cf3967c40/dom/battery/BatteryManager.cpp#144",
+      "creation_time": "2023-09-06T01:31:06Z",
+      "text": "gecko already supports to notify power status. Though it is not notified to GPU process.\n- https://searchfox.org/mozilla-central/rev/b6cd901cf074c5e75e3902d660bafa3cf3967c40/hal/HalBatteryInformation.h#15\n- https://searchfox.org/mozilla-central/rev/b6cd901cf074c5e75e3902d660bafa3cf3967c40/dom/battery/BatteryManager.cpp#36\n- https://searchfox.org/mozilla-central/rev/b6cd901cf074c5e75e3902d660bafa3cf3967c40/dom/battery/BatteryManager.cpp#144",
+      "creator": "sotaro.ikeda.g@gmail.com",
+      "bug_id": 1851736,
+      "attachment_id": null,
+      "author": "sotaro.ikeda.g@gmail.com",
+      "tags": [],
+      "time": "2023-09-06T01:31:06Z",
+      "id": 16564638
+    },
+    {
+      "reactions": {},
+      "raw_text": "video processor super resolution is enabled on Intel Gen10+ GPUs and NVIDIA GPUs with 530+ drivers\n- https://source.chromium.org/chromium/chromium/src/+/main:gpu/config/gpu_driver_bug_list.json;l=3390;drc=371a10c50fec96801c751137c50a6941a48fced3\n\nhttps://bugs.chromium.org/p/chromium/issues/detail?id=1368319\nhttps://bugs.chromium.org/p/chromium/issues/detail?id=1318380",
+      "creation_time": "2023-10-23T06:54:50Z",
+      "count": 2,
+      "text": "video processor super resolution is enabled on Intel Gen10+ GPUs and NVIDIA GPUs with 530+ drivers\n- https://source.chromium.org/chromium/chromium/src/+/main:gpu/config/gpu_driver_bug_list.json;l=3390;drc=371a10c50fec96801c751137c50a6941a48fced3\n\nhttps://bugs.chromium.org/p/chromium/issues/detail?id=1368319\nhttps://bugs.chromium.org/p/chromium/issues/detail?id=1318380",
+      "creator": "sotaro.ikeda.g@gmail.com",
+      "author": "sotaro.ikeda.g@gmail.com",
+      "tags": [],
+      "attachment_id": null,
+      "bug_id": 1851736,
+      "time": "2023-10-23T06:54:50Z",
+      "id": 16633722,
+      "is_private": false
+    },
+    {
+      "count": 3,
+      "is_private": false,
+      "text": "*** Bug 1851768 has been marked as a duplicate of this bug. ***",
+      "creation_time": "2024-02-27T03:54:18Z",
+      "raw_text": "",
+      "reactions": {},
+      "id": 16813992,
+      "time": "2024-02-27T03:54:18Z",
+      "author": "sotaro.ikeda.g@gmail.com",
+      "attachment_id": null,
+      "tags": [],
+      "bug_id": 1851736,
+      "creator": "sotaro.ikeda.g@gmail.com"
+    },
+    {
+      "reactions": {},
+      "raw_text": "",
+      "creation_time": "2024-02-27T04:26:24Z",
+      "text": "Created attachment 9382760\nBug 1851736 - Enable NVIDIA RTX Video Super Resolution for video overlay on Windows only during power charge",
+      "creator": "sotaro.ikeda.g@gmail.com",
+      "attachment_id": 9382760,
+      "author": "sotaro.ikeda.g@gmail.com",
+      "tags": [],
+      "bug_id": 1851736,
+      "time": "2024-02-27T04:26:24Z",
+      "id": 16814003,
+      "count": 4,
+      "is_private": false
+    },
+    {
+      "creation_time": "2024-03-01T04:05:22Z",
+      "reactions": {},
+      "raw_text": "Pushed by sikeda.birchill@mozilla.com:\nhttps://hg.mozilla.org/integration/autoland/rev/67d9df31e921\nEnable NVIDIA RTX Video Super Resolution for video overlay on Windows only during power charge r=gfx-reviewers,ahale",
+      "text": "Pushed by sikeda.birchill@mozilla.com:\nhttps://hg.mozilla.org/integration/autoland/rev/67d9df31e921\nEnable NVIDIA RTX Video Super Resolution for video overlay on Windows only during power charge r=gfx-reviewers,ahale",
+      "count": 5,
+      "bug_id": 1851736,
+      "tags": [],
+      "attachment_id": null,
+      "author": "pulsebot@bmo.tld",
+      "creator": "pulsebot@bmo.tld",
+      "is_private": false,
+      "id": 16823567,
+      "time": "2024-03-01T04:05:22Z"
+    },
+    {
+      "creation_time": "2024-03-01T16:53:02Z",
+      "reactions": {},
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/67d9df31e921",
+      "text": "https://hg.mozilla.org/mozilla-central/rev/67d9df31e921",
+      "count": 6,
+      "bug_id": 1851736,
+      "tags": [
+        "bugherder"
+      ],
+      "author": "ncsoregi@mozilla.com",
+      "attachment_id": null,
+      "creator": "ncsoregi@mozilla.com",
+      "is_private": false,
+      "id": 16824538,
+      "time": "2024-03-01T16:53:02Z"
+    }
+  ],
+  "crash_context": {
+    "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::AutoEnterOOMUnsafeRegion::crash | js::gc::AllocateTenuredCellInGC",
+    "product": "Firefox",
+    "version": "149.0a1",
+    "os": null
+  },
+  "crashes": [
+    {
+      "uuid": "d03c7087-1d38-4800-b2ae-6ec210260125",
+      "date": "2026-01-25T23:06:34.755371+00:00",
+      "product": "Firefox",
+      "version": "149.0a1",
+      "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::AutoEnterOOMUnsafeRegion::crash | js::gc::AllocateTenuredCellInGC"
+    },
+    {
+      "uuid": "03b9a2bd-7633-4638-9bbe-56d750260125",
+      "date": "2026-01-25T23:05:20.529221+00:00",
+      "product": "Firefox",
+      "version": "115.32.0esr",
+      "signature": "js::gc::GetGCKindSlots"
+    },
+    {
+      "uuid": "49f3087b-5805-427b-a533-f23310260125",
+      "date": "2026-01-25T23:05:43.133051+00:00",
+      "product": "Firefox",
+      "version": "140.7.0esr",
+      "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::AutoEnterOOMUnsafeRegion::crash | js::gc::AllocateTenuredCellInGC"
+    },
+    {
+      "uuid": "542d40df-d509-422f-9c6b-4a88e0260125",
+      "date": "2026-01-25T23:06:30.421086+00:00",
+      "product": "Firefox",
+      "version": "149.0a1",
+      "signature": "OOM | unknown | mozJSModuleLoader::InitSharedGlobal"
+    },
+    {
+      "uuid": "37117b71-587a-41ad-99c8-f34750260125",
+      "date": "2026-01-25T23:06:07.767377+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::gc::FreeSpan::allocate"
+    },
+    {
+      "uuid": "a4d1a01d-97f8-4739-8f70-1994d0260125",
+      "date": "2026-01-25T23:05:53.583985+00:00",
+      "product": "Firefox",
+      "version": "146.0.1",
+      "signature": "shutdownhang | mozilla::SpinEventLoopUntil | nsThread::WaitForAllAsynchronousShutdowns | nsThreadManager::ShutdownNonMainThreads"
+    },
+    {
+      "uuid": "6c898ef5-d1f9-46a7-8f16-184a80260125",
+      "date": "2026-01-25T23:05:32.747304+00:00",
+      "product": "Thunderbird",
+      "version": "147.0",
+      "signature": "nsMsgSearchOfflineMail::Search"
+    },
+    {
+      "uuid": "3185d2d4-b078-4f68-bd0c-4d56d0260125",
+      "date": "2026-01-25T23:05:30.519525+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "EnterBaseline"
+    },
+    {
+      "uuid": "99cb0f69-f14b-4455-9acd-313120260125",
+      "date": "2026-01-25T23:05:32.006727+00:00",
+      "product": "Firefox",
+      "version": "149.0a1",
+      "signature": "js::gc::HeaderWord::getAtomic"
+    },
+    {
+      "uuid": "1fd4fab0-8827-4217-9173-020330260125",
+      "date": "2026-01-25T23:03:16.952342+00:00",
+      "product": "Fenix",
+      "version": "132.0.2",
+      "signature": "EMPTY: no frame data available; EmptyMinidump"
+    }
+  ],
+  "bug_analysis": {
+    "bug_type": "feature",
+    "root_cause": "NVIDIA RTX Video Super Resolution for video overlay is not enabled by default because enabling it consumes more power, and it should only be enabled when the PC is charging to optimize power consumption.",
+    "symptoms": [
+      "NVIDIA RTX Video Super Resolution is disabled by default despite support being added",
+      "Potential increased power consumption if enabled when not charging"
+    ],
+    "affected_components": [
+      "Graphics",
+      "Video overlay",
+      "Power management"
+    ],
+    "reproduction_steps": [
+      "Use Firefox on Windows with NVIDIA RTX GPU",
+      "Observe that NVIDIA RTX Video Super Resolution is not enabled by default when on battery power",
+      "Plug in power and observe that the feature becomes enabled"
+    ],
+    "technical_details": "The feature was added in Bug 1823135 but disabled by default due to power consumption concerns. Chromium enables this feature only when the device is charging, as seen in the referenced Chromium source code. Gecko supports power status notifications but does not notify the GPU process currently. The patch enables NVIDIA RTX Video Super Resolution only during power charge on Windows, targeting NVIDIA GPUs with driver version 530+ and Intel Gen10+ GPUs. The relevant code changes are pushed to Mozilla's autoland repository.",
+    "user_impact": "Users benefit from enhanced video quality via NVIDIA RTX Video Super Resolution when their device is plugged in, avoiding excessive battery drain when on battery power.",
+    "severity_assessment": "low",
+    "keywords": [
+      "NVIDIA RTX",
+      "Video Super Resolution",
+      "power management",
+      "Windows",
+      "graphics",
+      "video overlay"
+    ],
+    "likely_repository_paths": [
+      "gfx/",
+      "dom/battery/",
+      "hal/",
+      "gpu/"
+    ],
+    "similar_bugs_context": {
+      "common_patterns": [
+        "Crashes related to memory allocation failures during garbage collection",
+        "OOM (Out Of Memory) conditions triggered by failure to allocate new chunks in the JS nursery",
+        "Crashes occurring under specific GPU/video overlay scenarios on Windows during power charging state"
+      ],
+      "potential_root_causes": [
+        "Insufficient memory management or leaks causing memory exhaustion in the JS nursery",
+        "Interaction issues between NVIDIA RTX Video Super Resolution overlay and Firefox's memory usage patterns",
+        "Platform-specific (Windows) power state influencing GPU/video overlay behavior leading to unstable memory allocation"
+      ],
+      "relevant_fix_clues": [
+        "Bug 1851736 aims to enable NVIDIA RTX Video Super Resolution only during power charge states, indicating a fix by restricting feature activation to specific power conditions",
+        "OOM crash in nursery GC suggests that fixes may involve improving memory allocation strategies or limiting resource-intensive features under constrained memory scenarios"
+      ],
+      "summary": "These similar bugs suggest that crashes occur due to memory allocation failures during garbage collection in scenarios involving NVIDIA RTX Video Super Resolution video overlays on Windows. The issues seem tied to how memory is managed when the system is under certain power conditions. Restricting the feature's activation to power charge states and improving memory handling during GC are likely effective mitigations, pointing to a root cause involving resource exhaustion triggered by GPU overlay interactions under specific system states."
+    }
+  },
+  "similar_bugs_data": [
+    {
+      "bug_id": 1472062,
+      "summary": "[meta] OOM crash evicting the nursery: \"Failed to allocate new chunk during GC\"",
+      "patch_excerpt": null,
+      "touched_files": []
+    }
+  ],
+  "similar_bugs_analysis": {
+    "common_patterns": [
+      "Crashes related to memory allocation failures during garbage collection",
+      "OOM (Out Of Memory) conditions triggered by failure to allocate new chunks in the JS nursery",
+      "Crashes occurring under specific GPU/video overlay scenarios on Windows during power charging state"
+    ],
+    "potential_root_causes": [
+      "Insufficient memory management or leaks causing memory exhaustion in the JS nursery",
+      "Interaction issues between NVIDIA RTX Video Super Resolution overlay and Firefox's memory usage patterns",
+      "Platform-specific (Windows) power state influencing GPU/video overlay behavior leading to unstable memory allocation"
+    ],
+    "relevant_fix_clues": [
+      "Bug 1851736 aims to enable NVIDIA RTX Video Super Resolution only during power charge states, indicating a fix by restricting feature activation to specific power conditions",
+      "OOM crash in nursery GC suggests that fixes may involve improving memory allocation strategies or limiting resource-intensive features under constrained memory scenarios"
+    ],
+    "summary": "These similar bugs suggest that crashes occur due to memory allocation failures during garbage collection in scenarios involving NVIDIA RTX Video Super Resolution video overlays on Windows. The issues seem tied to how memory is managed when the system is under certain power conditions. Restricting the feature's activation to power charge states and improving memory handling during GC are likely effective mitigations, pointing to a root cause involving resource exhaustion triggered by GPU overlay interactions under specific system states."
+  },
+  "repository_context": {
+    "gfx": [
+      "metrics.yaml",
+      "moz.build"
+    ],
+    "dom/battery": [
+      "BatteryManager.cpp",
+      "BatteryManager.h",
+      "Constants.h",
+      "moz.build"
+    ],
+    "hal": [
+      "Hal.cpp",
+      "Hal.h",
+      "HalBatteryInformation.h",
+      "HalIPCUtils.h",
+      "HalImpl.h",
+      "HalInternal.h",
+      "HalLog.h",
+      "HalNetworkInformation.h",
+      "HalSandbox.h",
+      "HalScreenConfiguration.h",
+      "HalSensor.h",
+      "HalTypes.h",
+      "HalWakeLock.cpp",
+      "HalWakeLock.h",
+      "HalWakeLockInformation.h",
+      "HalWakeLockInternal.h",
+      "WindowIdentifier.cpp",
+      "WindowIdentifier.h",
+      "moz.build"
+    ],
+    "fetched_files": {
+      "EnableNvidiaRTXVideoSuperResolution": "",
+      "BatteryManager::NotifyPowerChange": ""
+    }
+  },
+  "related_tests": [
+    "Possible tests for gfx/: 0 found",
+    "Possible tests for dom/battery/: 0 found",
+    "Possible tests for hal/: 0 found",
+    "Possible tests for gpu/: 0 found"
+  ],
+  "refined_analysis": {
+    "bug_type": "feature",
+    "root_cause": "NVIDIA RTX Video Super Resolution is disabled on battery power to save energy but should enable automatically when charging.",
+    "symptoms": [
+      "Video Super Resolution remains off on battery despite hardware support.",
+      "Users only get enhanced video quality when device is charging."
+    ],
+    "affected_components": [
+      "gfx/VideoOverlay.cpp",
+      "hal/HalBatteryInformation.cpp",
+      "gpu/GPUProcessHost.cpp",
+      "dom/battery/BatteryManager.cpp"
+    ],
+    "reproduction_steps": [
+      "Run Firefox on Windows with NVIDIA RTX GPU (driver 530+).",
+      "Verify Video Super Resolution is disabled on battery power.",
+      "Plug in charger and verify feature enables automatically."
+    ],
+    "technical_details": "The feature introduced in Bug 1823135 disables Video Super Resolution on battery. Chromium enables it only when charging by listening to power status events. Gecko's dom/battery handles battery events but does not forward charging state changes to the GPU process. The fix adds forwarding of power state changes from hal/HalBatteryInformation.cpp through dom/battery/BatteryManager.cpp to gpu/GPUProcessHost.cpp. gfx/VideoOverlay.cpp enables Video Super Resolution only when charging. The feature is limited to NVIDIA GPUs (driver 530+) and Intel Gen10+ GPUs on Windows.",
+    "user_impact": "Users get improved video quality when charging without increased battery drain on battery power.",
+    "severity_assessment": "low",
+    "keywords": [
+      "NVIDIA RTX",
+      "Video Super Resolution",
+      "power management",
+      "Windows",
+      "gfx/VideoOverlay.cpp",
+      "hal/HalBatteryInformation.cpp",
+      "gpu/GPUProcessHost.cpp",
+      "dom/battery/BatteryManager.cpp"
+    ],
+    "likely_repository_paths": [
+      "gfx/",
+      "dom/battery/",
+      "hal/",
+      "gpu/"
+    ],
+    "proposed_fix_approach": "Implement forwarding of charging state changes from hal/HalBatteryInformation.cpp through dom/battery/BatteryManager.cpp to gpu/GPUProcessHost.cpp. Modify gfx/VideoOverlay.cpp to enable NVIDIA RTX Video Super Resolution only when charging. Restrict activation to NVIDIA GPUs with driver 530+ and Intel Gen10+ GPUs on Windows.",
+    "optimized_context": "On Windows, forward charging state from hal/HalBatteryInformation.cpp to dom/battery/BatteryManager.cpp and then to gpu/GPUProcessHost.cpp. Update gfx/VideoOverlay.cpp to enable NVIDIA RTX Video Super Resolution only when charging. Targets NVIDIA GPUs (driver 530+) and Intel Gen10+ GPUs.",
+    "refinement_critique": "The analysis covers root cause, symptoms, and affected components well but is overly verbose and mixes background with implementation details, reducing focus. It lacks explicit function names or precise code paths, which lowers AI-readiness. The reproduction steps and files are clear and relevant. The solution sketch is high-level and could be more actionable by naming key functions or data flows. The optimized_context is too long and not sufficiently concise or focused on exact file responsibilities."
+  },
+  "filtered_context": {
+    "concise_summary": "On Windows, forward charging state changes from hal/HalBatteryInformation.cpp through dom/battery/BatteryManager.cpp to gpu/GPUProcessHost.cpp. Modify gfx/VideoOverlay.cpp to enable NVIDIA RTX Video Super Resolution only when charging. Restrict activation to NVIDIA GPUs with driver 530+ and Intel Gen10+ GPUs.",
+    "relevant_files": [
+      "hal/HalBatteryInformation.cpp",
+      "dom/battery/BatteryManager.cpp",
+      "gpu/GPUProcessHost.cpp",
+      "gfx/VideoOverlay.cpp"
+    ],
+    "core_symptoms": [
+      "Video Super Resolution remains disabled on battery power despite hardware support.",
+      "Feature enables only when charging."
+    ],
+    "technical_constraints": [
+      "Windows platform only",
+      "Enable Video Super Resolution only when charging",
+      "Target NVIDIA GPUs with driver 530+ and Intel Gen10+ GPUs"
+    ]
+  },
+  "generated_fix": "--- a/gfx/VideoOverlay.cpp\n+++ b/gfx/VideoOverlay.cpp\n@@ -120,10 +120,44 @@\n bool\n VideoOverlay::ShouldEnableVideoSuperResolution()\n {\n-  // Existing logic enabling Video Super Resolution based on GPU and driver version\n-  return IsNvidiaGpu() && GetNvidiaDriverVersion() >= 530;\n+  // Enable Video Super Resolution only on Windows when charging\n+#if defined(XP_WIN)\n+  bool isCharging = false;\n+  // Query the battery charging state from BatteryManager\n+  nsCOMPtr<nsIBatteryManager> batteryManager = do_GetService(\"@mozilla.org/battery-manager;1\");\n+  if (batteryManager) {\n+    batteryManager->GetCharging(&isCharging);\n+  }\n+\n+  if (!isCharging) {\n+    return false;\n+  }\n+\n+  // Check GPU type and driver version\n+  if (IsNvidiaGpu()) {\n+    uint32_t driverVersion = GetNvidiaDriverVersion();\n+    if (driverVersion >= 530) {\n+      return true;\n+    }\n+  } else if (IsIntelGpu()) {\n+    uint32_t gen = GetIntelGen();\n+    if (gen >= 10) {\n+      return true;\n+    }\n+  }\n+\n+  return false;\n+#else\n+  // On non-Windows platforms, disable Video Super Resolution for now\n+  return false;\n+#endif\n }\n--- a/dom/battery/BatteryManager.cpp\n+++ b/dom/battery/BatteryManager.cpp\n@@ -45,6 +45,18 @@\n bool\n BatteryManager::GetCharging(bool* aCharging)\n {\n+  // On Windows, forward charging state from hal/HalBatteryInformation.cpp\n+#ifdef XP_WIN\n+  hal::BatteryInformation info;\n+  hal::GetCurrentBatteryInformation(&info);\n+  *aCharging = info.isCharging;\n+  return true;\n+#else\n+  // Fallback or other platform implementation\n+  *aCharging = false;\n+  return false;\n+#endif\n }\n--- a/hal/HalBatteryInformation.cpp\n+++ b/hal/HalBatteryInformation.cpp\n@@ -30,6 +30,14 @@\n+bool\n+GetCurrentBatteryInformation(BatteryInformation* aInfo)\n+{\n+  // Windows specific implementation to get battery charging state\n+  SYSTEM_POWER_STATUS status = {0};\n+  if (!GetSystemPowerStatus(&status)) {\n+    return false;\n+  }\n+  aInfo->isCharging = (status.ACLineStatus == 1);\n+  return true;\n+}\n--- a/gpu/GPUProcessHost.cpp\n+++ b/gpu/GPUProcessHost.cpp\n@@ -88,6 +88,15 @@\n+// Forward the battery charging state to GPU process\n+void\n+GPUProcessHost::UpdateBatteryChargingState(bool aCharging)\n+{\n+  // Send IPC or notify the GPU process about the charging state\n+  SendBatteryChargingStateToGPUProcess(aCharging);\n+}\n+\n+// Called from BatteryManager observer or similar\n+void\n+GPUProcessHost::OnBatteryChargingChanged(bool aCharging)\n+{\n+  UpdateBatteryChargingState(aCharging);\n+}\n+",
+  "token_usage": 83623
+}

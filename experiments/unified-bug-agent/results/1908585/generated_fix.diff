@@ -1,0 +1,67 @@
+--- a/gfx/webrender_bindings/DCLayerTree.cpp
++++ b/gfx/webrender_bindings/DCLayerTree.cpp
+@@ -150,16 +150,40 @@
+-// Previously, a single global flag disables all video overlays if any one overlay was slow.
+-bool gDisableVideoOverlays = false;
++// Track overlay disablement per video instance to avoid global disablement.
++// Map from video instance ID (or handle) to disable flag.
++#include <unordered_map>
++
++static std::unordered_map<uint64_t, bool> sVideoOverlayDisableMap;
+ 
+ // Existing function that handles video overlay presentation
+ void PresentVideoOverlay(uint64_t aVideoInstanceId, bool aIsSlowPresent)
+ {
+-  if (aIsSlowPresent) {
+-    gDisableVideoOverlays = true;
+-  }
+-  if (gDisableVideoOverlays) {
+-    DisableAllVideoOverlays();
+-  } else {
+-    EnableVideoOverlayForInstance(aVideoInstanceId);
+-  }
++  if (aIsSlowPresent) {
++    sVideoOverlayDisableMap[aVideoInstanceId] = true;
++  }
++
++  bool disableOverlay = false;
++  auto it = sVideoOverlayDisableMap.find(aVideoInstanceId);
++  if (it != sVideoOverlayDisableMap.end()) {
++    disableOverlay = it->second;
++  }
++
++  if (disableOverlay) {
++    DisableVideoOverlayForInstance(aVideoInstanceId);
++  } else {
++    EnableVideoOverlayForInstance(aVideoInstanceId);
++  }
+ }
+ 
+-void ResetVideoOverlayDisableFlag()
+-{
+-  gDisableVideoOverlays = false;
+-}
++// Optional: reset disable flag for a video instance, e.g. when playback improves
++void ResetVideoOverlayDisableFlagForInstance(uint64_t aVideoInstanceId)
++{
++  sVideoOverlayDisableMap.erase(aVideoInstanceId);
++}
++
++// Optional: clear all flags, e.g. on video system reset
++void ClearAllVideoOverlayDisableFlags()
++{
++  sVideoOverlayDisableMap.clear();
++}
+@@ -300,7 +324,11 @@
+-  if (gDisableVideoOverlays) {
+-    DisableAllVideoOverlays();
+-  }
++  // Example usage: iterate over video instances and disable overlays individually
++  for (auto& pair : sVideoOverlayDisableMap) {
++    if (pair.second) {
++      DisableVideoOverlayForInstance(pair.first);
++    }
++  }
++  
++  // Other existing code...
++

@@ -1,0 +1,902 @@
+{
+  "version": "unspecified",
+  "creator_detail": {
+    "name": "jteow@mozilla.com",
+    "id": 701257,
+    "nick": "jteow",
+    "real_name": "James Teow [:jteow]",
+    "email": "jteow@mozilla.com"
+  },
+  "groups": [],
+  "mentors": [],
+  "cf_performance_impact": "---",
+  "keywords": [
+    "regression"
+  ],
+  "cf_has_str": "---",
+  "regressions": [],
+  "cc": [
+    "alice0775@gmail.com",
+    "cbellini@mozilla.com",
+    "dietrich@webtransitions.org",
+    "dmeehan@mozilla.com",
+    "dmosedale@mozilla.com",
+    "e412byoy7@relay.firefox.com",
+    "mak@mozilla.com",
+    "mo.cassidy+github@gmail.com",
+    "oardelean@mozilla.com",
+    "pascalc@gmail.com",
+    "ryanvm@gmail.com",
+    "tschuster@mozilla.com"
+  ],
+  "cf_webcompat_priority": "---",
+  "assigned_to_detail": {
+    "nick": "jteow",
+    "email": "jteow@mozilla.com",
+    "real_name": "James Teow [:jteow]",
+    "id": 701257,
+    "name": "jteow@mozilla.com"
+  },
+  "cf_status_firefox_esr115": "unaffected",
+  "duplicates": [
+    2009430,
+    2010694,
+    2011183,
+    2011515
+  ],
+  "cf_webcompat_score": "---",
+  "priority": "P1",
+  "resolution": "FIXED",
+  "cf_fx_iteration": "---",
+  "triage_owner": "jteow@mozilla.com",
+  "cf_rank": null,
+  "cf_tracking_firefox147": "+",
+  "component": "Address Bar",
+  "cf_status_firefox148": "affected",
+  "type": "defect",
+  "is_confirmed": true,
+  "history": [
+    {
+      "changes": [
+        {
+          "field_name": "see_also",
+          "removed": "",
+          "added": "https://mozilla-hub.atlassian.net/browse/SNG-3250"
+        }
+      ],
+      "when": "2026-01-16T19:50:28Z",
+      "who": "jira-integration@bots.tld"
+    },
+    {
+      "who": "cbellini@mozilla.com",
+      "when": "2026-01-16T20:35:08Z",
+      "changes": [
+        {
+          "field_name": "cc",
+          "removed": "",
+          "added": "cbellini@mozilla.com, mak@mozilla.com"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "field_name": "cc",
+          "removed": "",
+          "added": "alice0775@gmail.com"
+        }
+      ],
+      "who": "alice0775@gmail.com",
+      "when": "2026-01-16T22:28:01Z"
+    },
+    {
+      "changes": [
+        {
+          "added": "dmeehan@mozilla.com",
+          "removed": "",
+          "field_name": "cc"
+        }
+      ],
+      "when": "2026-01-19T13:27:20Z",
+      "who": "dmeehan@mozilla.com"
+    },
+    {
+      "when": "2026-01-19T14:25:08Z",
+      "who": "e412byoy7@relay.firefox.com",
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "cc",
+          "added": "e412byoy7@relay.firefox.com"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "field_name": "cc",
+          "removed": "",
+          "added": "tschuster@mozilla.com"
+        },
+        {
+          "field_name": "duplicates",
+          "removed": "",
+          "added": "2011183"
+        }
+      ],
+      "who": "mak@mozilla.com",
+      "when": "2026-01-19T16:02:06Z"
+    },
+    {
+      "when": "2026-01-19T16:15:00Z",
+      "who": "dharvey@mozilla.com",
+      "changes": [
+        {
+          "field_name": "cc",
+          "removed": "",
+          "added": "dietrich@webtransitions.org"
+        },
+        {
+          "added": "2009430",
+          "field_name": "duplicates",
+          "removed": ""
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "cc",
+          "added": "pascalc@gmail.com"
+        },
+        {
+          "added": "needinfo?(jteow@mozilla.com)",
+          "field_name": "flagtypes.name",
+          "removed": ""
+        }
+      ],
+      "when": "2026-01-20T09:39:14Z",
+      "who": "pascalc@gmail.com"
+    },
+    {
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "blocks",
+          "added": "2010694"
+        }
+      ],
+      "when": "2026-01-20T13:59:23Z",
+      "who": "mak@mozilla.com"
+    },
+    {
+      "who": "jteow@mozilla.com",
+      "when": "2026-01-20T15:55:15Z",
+      "changes": [
+        {
+          "field_name": "keywords",
+          "removed": "",
+          "added": "regression"
+        },
+        {
+          "removed": "",
+          "field_name": "regressed_by",
+          "added": "2001284"
+        },
+        {
+          "removed": "needinfo?(jteow@mozilla.com)",
+          "field_name": "flagtypes.name",
+          "added": ""
+        }
+      ]
+    },
+    {
+      "when": "2026-01-20T15:56:35Z",
+      "who": "pascalc@gmail.com",
+      "changes": [
+        {
+          "added": "unaffected",
+          "removed": "---",
+          "field_name": "cf_status_firefox_esr115"
+        },
+        {
+          "added": "unaffected",
+          "removed": "---",
+          "field_name": "cf_status_firefox_esr140"
+        },
+        {
+          "field_name": "cf_status_firefox147",
+          "removed": "---",
+          "added": "affected"
+        },
+        {
+          "field_name": "cf_status_firefox148",
+          "removed": "---",
+          "added": "affected"
+        },
+        {
+          "added": "affected",
+          "removed": "---",
+          "field_name": "cf_status_firefox149"
+        }
+      ]
+    },
+    {
+      "when": "2026-01-20T15:57:17Z",
+      "who": "ryanvm@gmail.com",
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "cc",
+          "added": "ryanvm@gmail.com"
+        },
+        {
+          "field_name": "cf_tracking_firefox147",
+          "removed": "---",
+          "added": "+"
+        },
+        {
+          "removed": "---",
+          "field_name": "cf_tracking_firefox148",
+          "added": "+"
+        },
+        {
+          "field_name": "cf_tracking_firefox149",
+          "removed": "---",
+          "added": "+"
+        }
+      ]
+    },
+    {
+      "when": "2026-01-20T16:04:10Z",
+      "who": "dmosedale@mozilla.com",
+      "changes": [
+        {
+          "added": "dmosedale@mozilla.com",
+          "removed": "",
+          "field_name": "cc"
+        }
+      ]
+    },
+    {
+      "who": "phorea@mozilla.com",
+      "when": "2026-01-21T07:06:33Z",
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "cc",
+          "added": "mo.cassidy+github@gmail.com"
+        },
+        {
+          "added": "2011515",
+          "removed": "",
+          "field_name": "duplicates"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "attachment_id": 9538285,
+          "added": "Bug 2010941 - Part 1: Autofill origins only when they are typed - r?mak!",
+          "field_name": "attachments.description",
+          "removed": "Bug 2010941 - Penalize non-typed urls in calculating origins threshold - r?mak!"
+        }
+      ],
+      "who": "phab-bot@bmo.tld",
+      "when": "2026-01-21T10:55:06Z"
+    },
+    {
+      "changes": [
+        {
+          "field_name": "flagtypes.name",
+          "removed": "",
+          "added": "needinfo?(cbellini@mozilla.com)"
+        }
+      ],
+      "when": "2026-01-21T12:09:46Z",
+      "who": "release-mgmt-account-bot@mozilla.tld"
+    },
+    {
+      "changes": [
+        {
+          "attachment_id": 9539011,
+          "added": "WIP: - Bug 2010941 - Part 2: Fix tests - r?mak!",
+          "removed": "Bug 2010941 - Part 2: Fix tests - r?mak!",
+          "field_name": "attachments.description"
+        }
+      ],
+      "when": "2026-01-22T10:28:04Z",
+      "who": "phab-bot@bmo.tld"
+    },
+    {
+      "when": "2026-01-23T05:09:08Z",
+      "who": "phab-bot@bmo.tld",
+      "changes": [
+        {
+          "added": "Bug 2010941 - Part 2: Fix tests - r?mak!",
+          "attachment_id": 9539011,
+          "field_name": "attachments.description",
+          "removed": "WIP: - Bug 2010941 - Part 2: Fix tests - r?mak!"
+        }
+      ]
+    },
+    {
+      "who": "nfay@mozilla.com",
+      "when": "2026-01-27T01:18:15Z",
+      "changes": [
+        {
+          "field_name": "flagtypes.name",
+          "removed": "",
+          "added": "needinfo?(jteow@mozilla.com)"
+        }
+      ]
+    },
+    {
+      "when": "2026-01-27T12:49:43Z",
+      "who": "jteow@mozilla.com",
+      "changes": [
+        {
+          "field_name": "flagtypes.name",
+          "removed": "needinfo?(jteow@mozilla.com)",
+          "added": ""
+        }
+      ]
+    },
+    {
+      "when": "2026-01-27T16:10:15Z",
+      "who": "ryanvm@gmail.com",
+      "changes": [
+        {
+          "removed": "affected",
+          "field_name": "cf_status_firefox147",
+          "added": "wontfix"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "removed": "---",
+          "field_name": "target_milestone",
+          "added": "149 Branch"
+        },
+        {
+          "added": "FIXED",
+          "field_name": "resolution",
+          "removed": ""
+        },
+        {
+          "added": "RESOLVED",
+          "removed": "NEW",
+          "field_name": "status"
+        },
+        {
+          "added": "2026-01-27T16:34:27Z",
+          "removed": "",
+          "field_name": "cf_last_resolved"
+        },
+        {
+          "field_name": "cf_status_firefox149",
+          "removed": "affected",
+          "added": "fixed"
+        },
+        {
+          "comment_count": 12,
+          "removed": "",
+          "field_name": "comment_tag",
+          "added": "bugherder",
+          "comment_id": 17861809
+        }
+      ],
+      "who": "sstanca@mozilla.com",
+      "when": "2026-01-27T16:34:27Z"
+    },
+    {
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "cc",
+          "added": "oardelean@mozilla.com"
+        },
+        {
+          "removed": "",
+          "field_name": "cf_qa_whiteboard",
+          "added": "[search] [qa-triage-done-c149/b148][qa-ver-needed-c149/b148]"
+        }
+      ],
+      "who": "oardelean@mozilla.com",
+      "when": "2026-01-28T08:19:07Z"
+    },
+    {
+      "changes": [
+        {
+          "field_name": "flagtypes.name",
+          "removed": "",
+          "added": "needinfo?(jteow@mozilla.com)"
+        }
+      ],
+      "when": "2026-01-28T12:01:42Z",
+      "who": "release-mgmt-account-bot@mozilla.tld"
+    },
+    {
+      "changes": [
+        {
+          "added": "2010694",
+          "removed": "",
+          "field_name": "duplicates"
+        }
+      ],
+      "who": "lissyx+mozillians@lissyx.dyndns.org",
+      "when": "2026-01-29T05:41:32Z"
+    },
+    {
+      "when": "2026-01-29T15:26:43Z",
+      "who": "jteow@mozilla.com",
+      "changes": [
+        {
+          "field_name": "flagtypes.name",
+          "removed": "needinfo?(cbellini@mozilla.com), needinfo?(jteow@mozilla.com)",
+          "added": ""
+        }
+      ]
+    }
+  ],
+  "comment_count": 16,
+  "cf_tracking_firefox_esr115": "---",
+  "is_creator_accessible": true,
+  "is_cc_accessible": true,
+  "summary": "Autofill suggests urls that aren't relevant to the user",
+  "flags": [],
+  "status": "RESOLVED",
+  "cf_accessibility_severity": "---",
+  "filed_via": "standard_form",
+  "alias": null,
+  "op_sys": "Unspecified",
+  "depends_on": [],
+  "description": "A number of users on Reddit have reported seeing a high number of autofill suggestion of a URL they rarely visit.\n\nOne way we can mitigate this is by :mak's suggesting de-emphasizing not-typed links:\n\n```\nSELECT SUM(f) FROM (\n            SELECT CAST(MAX(h.frecency) * CASE MAX(h.typed) WHEN 0 THEN 0.5 ELSE 1 END AS INTEGER) AS f\n            FROM moz_places h\n            WHERE origin_id = moz_origins.id\n            AND last_visit_date >\n              strftime('%s','now','localtime','start of day',\n                       '-90 day','utc') * 1000000\n            GROUP BY date(last_visit_date / 1000000, 'unixepoch')\n          )\n```\n> As I suspect most of the issue is interstitial pages, or anyway pages that the user is less likely to type/pick/remember.",
+  "is_open": false,
+  "see_also": [
+    "https://mozilla-hub.atlassian.net/browse/SNG-3250"
+  ],
+  "regressed_by": [
+    2001284
+  ],
+  "triage_owner_detail": {
+    "nick": "jteow",
+    "email": "jteow@mozilla.com",
+    "real_name": "James Teow [:jteow]",
+    "name": "jteow@mozilla.com",
+    "id": 701257
+  },
+  "product": "Firefox",
+  "comments": [
+    {
+      "text": "A number of users on Reddit have reported seeing a high number of autofill suggestion of a URL they rarely visit.\n\nOne way we can mitigate this is by :mak's suggesting de-emphasizing not-typed links:\n\n```\nSELECT SUM(f) FROM (\n            SELECT CAST(MAX(h.frecency) * CASE MAX(h.typed) WHEN 0 THEN 0.5 ELSE 1 END AS INTEGER) AS f\n            FROM moz_places h\n            WHERE origin_id = moz_origins.id\n            AND last_visit_date >\n              strftime('%s','now','localtime','start of day',\n                       '-90 day','utc') * 1000000\n            GROUP BY date(last_visit_date / 1000000, 'unixepoch')\n          )\n```\n> As I suspect most of the issue is interstitial pages, or anyway pages that the user is less likely to type/pick/remember.",
+      "reactions": {},
+      "raw_text": "A number of users on Reddit have reported seeing a high number of autofill suggestion of a URL they rarely visit.\n\nOne way we can mitigate this is by :mak's suggesting de-emphasizing not-typed links:\n\n```\nSELECT SUM(f) FROM (\n            SELECT CAST(MAX(h.frecency) * CASE MAX(h.typed) WHEN 0 THEN 0.5 ELSE 1 END AS INTEGER) AS f\n            FROM moz_places h\n            WHERE origin_id = moz_origins.id\n            AND last_visit_date >\n              strftime('%s','now','localtime','start of day',\n                       '-90 day','utc') * 1000000\n            GROUP BY date(last_visit_date / 1000000, 'unixepoch')\n          )\n```\n> As I suspect most of the issue is interstitial pages, or anyway pages that the user is less likely to type/pick/remember.",
+      "creation_time": "2026-01-16T19:50:07Z",
+      "time": "2026-01-16T19:50:07Z",
+      "id": 17846418,
+      "creator": "jteow@mozilla.com",
+      "bug_id": 2010941,
+      "tags": [],
+      "attachment_id": null,
+      "author": "jteow@mozilla.com",
+      "count": 0,
+      "is_private": false
+    },
+    {
+      "count": 1,
+      "is_private": false,
+      "creation_time": "2026-01-16T22:26:31Z",
+      "raw_text": "",
+      "reactions": {},
+      "text": "Created attachment 9538285\nBug 2010941 - Part 1: Autofill origins only when they are typed - r?mak!",
+      "bug_id": 2010941,
+      "tags": [],
+      "author": "jteow@mozilla.com",
+      "attachment_id": 9538285,
+      "creator": "jteow@mozilla.com",
+      "id": 17846664,
+      "time": "2026-01-16T22:26:31Z"
+    },
+    {
+      "is_private": false,
+      "count": 2,
+      "creator": "mak@mozilla.com",
+      "tags": [],
+      "attachment_id": null,
+      "author": "mak@mozilla.com",
+      "bug_id": 2010941,
+      "time": "2026-01-19T16:02:06Z",
+      "id": 17849912,
+      "raw_text": "",
+      "reactions": {},
+      "creation_time": "2026-01-19T16:02:06Z",
+      "text": "*** Bug 2011183 has been marked as a duplicate of this bug. ***"
+    },
+    {
+      "raw_text": "",
+      "reactions": {},
+      "creation_time": "2026-01-19T16:15:00Z",
+      "count": 3,
+      "text": "*** Bug 2009430 has been marked as a duplicate of this bug. ***",
+      "creator": "dharvey@mozilla.com",
+      "attachment_id": null,
+      "tags": [],
+      "author": "dharvey@mozilla.com",
+      "bug_id": 2010941,
+      "time": "2026-01-19T16:15:00Z",
+      "id": 17849949,
+      "is_private": false
+    },
+    {
+      "is_private": false,
+      "count": 4,
+      "time": "2026-01-20T09:39:14Z",
+      "id": 17850783,
+      "creator": "pascalc@gmail.com",
+      "bug_id": 2010941,
+      "attachment_id": null,
+      "author": "pascalc@gmail.com",
+      "tags": [],
+      "text": "James, given all this feedback is recent, is that a regression and if it is, what is the regressor? Thanks",
+      "raw_text": "James, given all this feedback is recent, is that a regression and if it is, what is the regressor? Thanks",
+      "reactions": {},
+      "creation_time": "2026-01-20T09:39:14Z"
+    },
+    {
+      "reactions": {},
+      "raw_text": "",
+      "creation_time": "2026-01-21T07:06:33Z",
+      "text": "*** Bug 2011515 has been marked as a duplicate of this bug. ***",
+      "count": 5,
+      "creator": "phorea@mozilla.com",
+      "bug_id": 2010941,
+      "tags": [],
+      "author": "phorea@mozilla.com",
+      "attachment_id": null,
+      "time": "2026-01-21T07:06:33Z",
+      "is_private": false,
+      "id": 17852346
+    },
+    {
+      "creation_time": "2026-01-21T10:57:40Z",
+      "reactions": {},
+      "raw_text": "",
+      "text": "Created attachment 9539011\nBug 2010941 - Part 2: Fix tests - r?mak!",
+      "count": 6,
+      "bug_id": 2010941,
+      "attachment_id": 9539011,
+      "author": "jteow@mozilla.com",
+      "tags": [],
+      "creator": "jteow@mozilla.com",
+      "is_private": false,
+      "id": 17852653,
+      "time": "2026-01-21T10:57:40Z"
+    },
+    {
+      "creation_time": "2026-01-21T12:09:46Z",
+      "reactions": {},
+      "raw_text": "The bug is marked as tracked for firefox147 (release), tracked for firefox148 (beta) and tracked for firefox149 (nightly). However, the bug still has low severity.\n\n:cbellini, could you please increase the severity for this tracked bug? If you disagree with the tracking decision, please talk with the release managers.\n\nFor more information, please visit [BugBot documentation](https://wiki.mozilla.org/BugBot#tracked_attention.py).",
+      "text": "The bug is marked as tracked for firefox147 (release), tracked for firefox148 (beta) and tracked for firefox149 (nightly). However, the bug still has low severity.\n\n:cbellini, could you please increase the severity for this tracked bug? If you disagree with the tracking decision, please talk with the release managers.\n\nFor more information, please visit [BugBot documentation](https://wiki.mozilla.org/BugBot#tracked_attention.py).",
+      "count": 7,
+      "bug_id": 2010941,
+      "tags": [],
+      "author": "release-mgmt-account-bot@mozilla.tld",
+      "attachment_id": null,
+      "creator": "release-mgmt-account-bot@mozilla.tld",
+      "is_private": false,
+      "id": 17852778,
+      "time": "2026-01-21T12:09:46Z"
+    },
+    {
+      "author": "pulsebot@bmo.tld",
+      "attachment_id": null,
+      "tags": [],
+      "bug_id": 2010941,
+      "creator": "pulsebot@bmo.tld",
+      "id": 17860776,
+      "is_private": false,
+      "time": "2026-01-27T00:14:29Z",
+      "creation_time": "2026-01-27T00:14:29Z",
+      "reactions": {},
+      "raw_text": "Pushed by jteow@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/3b3c873ceafe\nhttps://hg.mozilla.org/integration/autoland/rev/271e62e81159\nPart 1: Autofill origins only when they are typed - r=mak,places-reviewers,urlbar-reviewers\nhttps://github.com/mozilla-firefox/firefox/commit/e68f49b4337c\nhttps://hg.mozilla.org/integration/autoland/rev/ba6defeda830\nPart 2: Fix tests - r=mak,urlbar-reviewers,places-reviewers",
+      "count": 8,
+      "text": "Pushed by jteow@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/3b3c873ceafe\nhttps://hg.mozilla.org/integration/autoland/rev/271e62e81159\nPart 1: Autofill origins only when they are typed - r=mak,places-reviewers,urlbar-reviewers\nhttps://github.com/mozilla-firefox/firefox/commit/e68f49b4337c\nhttps://hg.mozilla.org/integration/autoland/rev/ba6defeda830\nPart 2: Fix tests - r=mak,urlbar-reviewers,places-reviewers"
+    },
+    {
+      "count": 9,
+      "text": "Pushed by nfay@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/c3e66f22bef8\nhttps://hg.mozilla.org/integration/autoland/rev/1ece16b1f0a5\nRevert \"Bug 2010941 - Part 2: Fix tests - r=mak,urlbar-reviewers,places-reviewers\" for causing bc failures @ browser_move_tab_to_new_window.js",
+      "reactions": {},
+      "raw_text": "Pushed by nfay@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/c3e66f22bef8\nhttps://hg.mozilla.org/integration/autoland/rev/1ece16b1f0a5\nRevert \"Bug 2010941 - Part 2: Fix tests - r=mak,urlbar-reviewers,places-reviewers\" for causing bc failures @ browser_move_tab_to_new_window.js",
+      "creation_time": "2026-01-27T01:17:57Z",
+      "time": "2026-01-27T01:17:57Z",
+      "id": 17860814,
+      "is_private": false,
+      "creator": "pulsebot@bmo.tld",
+      "tags": [],
+      "author": "pulsebot@bmo.tld",
+      "attachment_id": null,
+      "bug_id": 2010941
+    },
+    {
+      "text": "Backed out for causing bc failures @ browser_move_tab_to_new_window.js\n\n[Backout link](https://hg.mozilla.org/integration/autoland/rev/1ece16b1f0a58adf3490e275bba058608d5701fb)\n\n[Push with failures](https://treeherder.mozilla.org/jobs?repo=autoland&group_state=expanded&resultStatus=testfailed%2Cbusted%2Cexception&revision=ba6defeda8308c2353e2e49a43ae41bf1936150e&test_paths=browser%2Fcomponents%2Furlbar%2Ftests%2Fbrowser&selectedTaskRun=XEaCOEKuS52VJg6iUvEUjw.0)\n\n[Failure log](https://treeherder.mozilla.org/logviewer?job_id=545564228&repo=autoland&task=XEaCOEKuS52VJg6iUvEUjw.0&lineNumber=5756)",
+      "count": 10,
+      "reactions": {},
+      "raw_text": "Backed out for causing bc failures @ browser_move_tab_to_new_window.js\n\n[Backout link](https://hg.mozilla.org/integration/autoland/rev/1ece16b1f0a58adf3490e275bba058608d5701fb)\n\n[Push with failures](https://treeherder.mozilla.org/jobs?repo=autoland&group_state=expanded&resultStatus=testfailed%2Cbusted%2Cexception&revision=ba6defeda8308c2353e2e49a43ae41bf1936150e&test_paths=browser%2Fcomponents%2Furlbar%2Ftests%2Fbrowser&selectedTaskRun=XEaCOEKuS52VJg6iUvEUjw.0)\n\n[Failure log](https://treeherder.mozilla.org/logviewer?job_id=545564228&repo=autoland&task=XEaCOEKuS52VJg6iUvEUjw.0&lineNumber=5756)",
+      "creation_time": "2026-01-27T01:18:15Z",
+      "time": "2026-01-27T01:18:15Z",
+      "is_private": false,
+      "id": 17860815,
+      "creator": "nfay@mozilla.com",
+      "bug_id": 2010941,
+      "author": "nfay@mozilla.com",
+      "tags": [],
+      "attachment_id": null
+    },
+    {
+      "text": "Pushed by jteow@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/841d88a557c0\nhttps://hg.mozilla.org/integration/autoland/rev/ac586b657d89\nPart 1: Autofill origins only when they are typed - r=mak,places-reviewers,urlbar-reviewers\nhttps://github.com/mozilla-firefox/firefox/commit/350a366be2ed\nhttps://hg.mozilla.org/integration/autoland/rev/8c0f9f6efb37\nPart 2: Fix tests - r=mak,urlbar-reviewers,places-reviewers",
+      "creation_time": "2026-01-27T09:20:32Z",
+      "raw_text": "Pushed by jteow@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/841d88a557c0\nhttps://hg.mozilla.org/integration/autoland/rev/ac586b657d89\nPart 1: Autofill origins only when they are typed - r=mak,places-reviewers,urlbar-reviewers\nhttps://github.com/mozilla-firefox/firefox/commit/350a366be2ed\nhttps://hg.mozilla.org/integration/autoland/rev/8c0f9f6efb37\nPart 2: Fix tests - r=mak,urlbar-reviewers,places-reviewers",
+      "reactions": {},
+      "id": 17861213,
+      "time": "2026-01-27T09:20:32Z",
+      "bug_id": 2010941,
+      "attachment_id": null,
+      "tags": [],
+      "author": "pulsebot@bmo.tld",
+      "creator": "pulsebot@bmo.tld",
+      "count": 11,
+      "is_private": false
+    },
+    {
+      "is_private": false,
+      "count": 12,
+      "time": "2026-01-27T16:34:27Z",
+      "id": 17861809,
+      "creator": "sstanca@mozilla.com",
+      "bug_id": 2010941,
+      "author": "sstanca@mozilla.com",
+      "tags": [
+        "bugherder"
+      ],
+      "attachment_id": null,
+      "text": "https://hg.mozilla.org/mozilla-central/rev/ac586b657d89\nhttps://hg.mozilla.org/mozilla-central/rev/8c0f9f6efb37",
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/ac586b657d89\nhttps://hg.mozilla.org/mozilla-central/rev/8c0f9f6efb37",
+      "reactions": {},
+      "creation_time": "2026-01-27T16:34:27Z"
+    },
+    {
+      "count": 13,
+      "is_private": false,
+      "creation_time": "2026-01-28T12:01:42Z",
+      "reactions": {},
+      "raw_text": "The patch landed in nightly and beta is affected.\n:jteow, is this bug important enough to require an uplift?\n- If yes, please nominate the patch for beta approval.\n  - See https://wiki.mozilla.org/Release_Management/Requesting_an_Uplift for documentation on how to request an uplift.\n- If no, please set `status-firefox148` to `wontfix`.\n\nFor more information, please visit [BugBot documentation](https://wiki.mozilla.org/BugBot#uplift_beta.py).",
+      "text": "The patch landed in nightly and beta is affected.\n:jteow, is this bug important enough to require an uplift?\n- If yes, please nominate the patch for beta approval.\n  - See https://wiki.mozilla.org/Release_Management/Requesting_an_Uplift for documentation on how to request an uplift.\n- If no, please set `status-firefox148` to `wontfix`.\n\nFor more information, please visit [BugBot documentation](https://wiki.mozilla.org/BugBot#uplift_beta.py).",
+      "attachment_id": null,
+      "author": "release-mgmt-account-bot@mozilla.tld",
+      "tags": [],
+      "bug_id": 2010941,
+      "creator": "release-mgmt-account-bot@mozilla.tld",
+      "id": 17863120,
+      "time": "2026-01-28T12:01:42Z"
+    },
+    {
+      "raw_text": "",
+      "reactions": {},
+      "creation_time": "2026-01-29T05:41:32Z",
+      "count": 14,
+      "text": "*** Bug 2010694 has been marked as a duplicate of this bug. ***",
+      "creator": "lissyx+mozillians@lissyx.dyndns.org",
+      "tags": [],
+      "attachment_id": null,
+      "author": "lissyx+mozillians@lissyx.dyndns.org",
+      "bug_id": 2010941,
+      "time": "2026-01-29T05:41:32Z",
+      "id": 17864315,
+      "is_private": false
+    },
+    {
+      "is_private": false,
+      "count": 15,
+      "tags": [],
+      "attachment_id": null,
+      "author": "jteow@mozilla.com",
+      "bug_id": 2010941,
+      "creator": "jteow@mozilla.com",
+      "id": 17865300,
+      "time": "2026-01-29T15:26:43Z",
+      "creation_time": "2026-01-29T15:26:43Z",
+      "reactions": {
+        "heart": 1
+      },
+      "raw_text": "There's a strong chance we'll uplift this to Beta but we're going to wait a bit more time to see if there are any issues that pop-up as a result of the change.\n\nI also think S3 is a sufficient evaluation.",
+      "text": "There's a strong chance we'll uplift this to Beta but we're going to wait a bit more time to see if there are any issues that pop-up as a result of the change.\n\nI also think S3 is a sufficient evaluation."
+    }
+  ],
+  "platform": "Unspecified",
+  "last_change_time_non_bot": "2026-01-29T15:26:43Z",
+  "cf_status_firefox149": "fixed",
+  "cf_tracking_firefox149": "+",
+  "cf_last_resolved": "2026-01-27T16:34:27Z",
+  "qa_contact": "",
+  "cf_status_firefox147": "wontfix",
+  "cf_tracking_firefox_esr140": "---",
+  "counts": {
+    "regressions": 1,
+    "depends_on": 1,
+    "attachments": 2,
+    "keywords": 1,
+    "comments": 16,
+    "blocks": 0,
+    "duplicates": 4,
+    "regressed_by": 0,
+    "cc": 12
+  },
+  "id": 2010941,
+  "blocks": [
+    2010694
+  ],
+  "assigned_to": "jteow@mozilla.com",
+  "attachments": [
+    {
+      "creation_time": "2026-01-16T22:26:31Z",
+      "attacher": "jteow@mozilla.com",
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjc5Mzg2",
+      "bug_id": 2010941,
+      "last_change_time": "2026-01-21T10:55:06Z",
+      "file_name": "phabricator-D279386-url.txt",
+      "creator": "jteow@mozilla.com",
+      "content_type": "text/x-phabricator-request",
+      "is_obsolete": 0,
+      "flags": [],
+      "id": 9538285,
+      "summary": "Bug 2010941 - Part 1: Autofill origins only when they are typed - r?mak!",
+      "creator_detail": {
+        "nick": "jteow",
+        "real_name": "James Teow [:jteow]",
+        "email": "jteow@mozilla.com",
+        "name": "jteow@mozilla.com",
+        "id": 701257
+      },
+      "description": "Bug 2010941 - Part 1: Autofill origins only when they are typed - r?mak!",
+      "size": 48,
+      "is_private": 0,
+      "is_patch": 0
+    },
+    {
+      "creator_detail": {
+        "real_name": "James Teow [:jteow]",
+        "email": "jteow@mozilla.com",
+        "nick": "jteow",
+        "id": 701257,
+        "name": "jteow@mozilla.com"
+      },
+      "description": "Bug 2010941 - Part 2: Fix tests - r?mak!",
+      "size": 48,
+      "is_private": 0,
+      "is_patch": 0,
+      "creation_time": "2026-01-21T10:57:40Z",
+      "attacher": "jteow@mozilla.com",
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjc5ODQy",
+      "last_change_time": "2026-01-23T05:09:08Z",
+      "bug_id": 2010941,
+      "file_name": "phabricator-D279842-url.txt",
+      "creator": "jteow@mozilla.com",
+      "is_obsolete": 0,
+      "content_type": "text/x-phabricator-request",
+      "flags": [],
+      "summary": "Bug 2010941 - Part 2: Fix tests - r?mak!",
+      "id": 9539011
+    }
+  ],
+  "cf_status_firefox_esr140": "unaffected",
+  "cf_qa_whiteboard": "[search] [qa-triage-done-c149/b148][qa-ver-needed-c149/b148]",
+  "cf_a11y_review_project_flag": "---",
+  "creation_time": "2026-01-16T19:50:07Z",
+  "cf_tracking_firefox148": "+",
+  "cf_tracking_firefox_relnote": "---",
+  "mentors_detail": [],
+  "cf_user_story": "",
+  "cf_fx_points": "---",
+  "cc_detail": [
+    {
+      "name": "alice0775@gmail.com",
+      "id": 293623,
+      "nick": "alice0775",
+      "email": "alice0775@gmail.com",
+      "real_name": "Alice0775 White"
+    },
+    {
+      "email": "cbellini@mozilla.com",
+      "real_name": "Chris Bellini (:cbellini)",
+      "nick": "cbellini",
+      "name": "cbellini@mozilla.com",
+      "id": 696039
+    },
+    {
+      "id": 213632,
+      "name": "dietrich@webtransitions.org",
+      "nick": "dietrich",
+      "email": "dietrich@webtransitions.org",
+      "real_name": "Dietrich Ayala (:dietrich)"
+    },
+    {
+      "name": "dmeehan@mozilla.com",
+      "id": 695136,
+      "nick": "dmeehan",
+      "email": "dmeehan@mozilla.com",
+      "real_name": "Donal Meehan [:dmeehan]"
+    },
+    {
+      "nick": "dmosedale",
+      "real_name": "Dan Mosedale (:dmosedale, :dmose)",
+      "email": "dmosedale@mozilla.com",
+      "id": 1537,
+      "name": "dmosedale@mozilla.com"
+    },
+    {
+      "name": "e412byoy7@relay.firefox.com",
+      "id": 578799,
+      "email": "e412byoy7@relay.firefox.com",
+      "real_name": "Dan",
+      "nick": "e412byoy7"
+    },
+    {
+      "id": 240353,
+      "name": "mak@mozilla.com",
+      "nick": "mak",
+      "real_name": "Marco Bonardo [:mak]",
+      "email": "mak@mozilla.com"
+    },
+    {
+      "nick": "mo.cassidy+github",
+      "email": "mo.cassidy+github@gmail.com",
+      "real_name": "mo",
+      "name": "mo.cassidy+github@gmail.com",
+      "id": 761684
+    },
+    {
+      "email": "oardelean@mozilla.com",
+      "real_name": "Ardelean Oana, Desktop Test Engineering [:oardelean]",
+      "nick": "oardelean",
+      "name": "oardelean@mozilla.com",
+      "id": 700963
+    },
+    {
+      "name": "pascalc@gmail.com",
+      "id": 24572,
+      "real_name": "Pascal Chevrel:pascalc",
+      "email": "pascalc@gmail.com",
+      "nick": "pascalc"
+    },
+    {
+      "name": "ryanvm@gmail.com",
+      "id": 75935,
+      "real_name": "Ryan VanderMeulen [:RyanVM]",
+      "email": "ryanvm@gmail.com",
+      "nick": "RyanVM"
+    },
+    {
+      "email": "tschuster@mozilla.com",
+      "real_name": "Tom Schuster",
+      "nick": "tschuster",
+      "name": "tschuster@mozilla.com",
+      "id": 703078
+    }
+  ],
+  "cf_cab_review": "---",
+  "classification": "Client Software",
+  "cf_crash_signature": "",
+  "creator": "jteow@mozilla.com",
+  "severity": "S3",
+  "last_change_time": "2026-01-29T15:26:43Z",
+  "votes": 0,
+  "dupe_of": null,
+  "whiteboard": "[sng]",
+  "url": "",
+  "target_milestone": "149 Branch"
+}

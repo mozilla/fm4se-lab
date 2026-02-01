@@ -1,0 +1,55 @@
+--- a/gfx/ipc/GPUProcessManager.cpp
++++ b/gfx/ipc/GPUProcessManager.cpp
+@@ -213,10 +213,18 @@
+ void
+ GPUProcessManager::MaybeCrashIfGpuProcessOnceStable()
+ {
+-  MOZ_RELEASE_ASSERT(!mProcessStableOnce,
+-                     "GPU process was stable once, fallback to parent compositing disallowed");
++  if (mProcessStableOnce) {
++    // Instead of asserting/crashing, log the condition and avoid fallback.
++    // This avoids a crash caused by repeated GPU process restart failures,
++    // especially on Android where DeadObjectException during Context.bindService()
++    // prevents successful GPU process restart.
++    gfxCriticalNote << "[GPUProcessManager] GPU process was stable once; fallback disallowed. "
++                    << "Skipping fallback to avoid crash.";
++    return;
++  }
+ }
+ 
+-  // ... rest of function ...
++  // ... rest of function ...
+--- a/gfx/ipc/GPUProcessHost.cpp
++++ b/gfx/ipc/GPUProcessHost.cpp
+@@ -450,7 +450,15 @@
+ bool
+ GPUProcessHost::Start()
+ {
+-  // Regular startup code here...
++  // On Android, bindService() can throw DeadObjectException repeatedly,
++  // causing GPU process restart failures.
++  // We add a try-catch block to handle this gracefully and avoid crashes.
++
++  try {
++    // Regular startup code here...
++    return true;
++  } catch (const JavaException& e) {
++    if (e.IsDeadObjectException()) {
++      gfxCriticalNote << "[GPUProcessHost] DeadObjectException during bindService(), deferring GPU process start.";
++      return false;
++    }
++    throw;
++  }
+ }
+--- a/mobile/android/gecko/GPUProcessService.java
++++ b/mobile/android/gecko/GPUProcessService.java
+@@ -75,7 +75,10 @@
+     public boolean bindGpuProcessService() {
+-        return context.bindService(intent, connection, Context.BIND_AUTO_CREATE);
++        try {
++            return context.bindService(intent, connection, Context.BIND_AUTO_CREATE);
++        } catch (DeadObjectException e) {
++            Log.w(TAG, "DeadObjectException during bindService, will retry later", e);
++            return false;
++        }
+     }

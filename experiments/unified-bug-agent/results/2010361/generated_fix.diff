@@ -1,0 +1,72 @@
+--- a/browser/components/trust/TrustPanelPopup.sys.mjs
++++ b/browser/components/trust/TrustPanelPopup.sys.mjs
+@@ -20,14 +20,26 @@
+-export class TrustPanelPopup {
+-  get anchorElement() {
+-    // Previously anchored to identity box element, but on trusted about pages,
+-    // this element was hidden causing the popup not to show.
+-    return document.getElementById("identity-box-anchor");
+-  }
+-}
++import { Services } from "resource://gre/modules/Services.sys.mjs";
++
++export class TrustPanelPopup {
++  get anchorElement() {
++    // Determine if current page is a trusted about page.
++    // On such pages, identity box anchor may be hidden, so use an alternative visible element.
++    const trustedAboutPages = new Set([
++      "about:welcome",
++      "about:preferences",
++      "about:addons",
++      "about:config",
++      "about:debugging",
++      "about:privatebrowsing",
++      "about:profiles",
++      "about:performance",
++      "about:crashes",
++      "about:downloads",
++      "about:logins",
++      "about:protections",
++      "about:sessionrestore",
++    ]);
++
++    let currentURI = null;
++    try {
++      currentURI = Services.uriFixup.createExposableURI(window.location.href).spec;
++    } catch {
++      currentURI = window.location.href;
++    }
++
++    if (trustedAboutPages.has(currentURI)) {
++      // Return a visible element on trusted about pages.
++      // Identity box anchor is hidden, so fallback to urlbar or toolbar element.
++      let altAnchor = document.getElementById("urlbar") || document.getElementById("toolbar-menubar");
++      if (altAnchor && altAnchor.offsetParent !== null) {
++        return altAnchor;
++      }
++    }
++
++    // Default anchor element (identity box)
++    return document.getElementById("identity-box-anchor");
++  }
++}
+--- a/browser/components/urlbar/UrlbarView.sys.mjs
++++ b/browser/components/urlbar/UrlbarView.sys.mjs
+@@ -100,7 +100,12 @@
+-  onIdentityBoxClick(event) {
+-    // Previously might have failed to open popup if anchorElement was hidden.
+-    this._trustPanelPopup.showPopup();
+-  }
++  onIdentityBoxClick(event) {
++    // Ensure popup opens when clicking identity box on trusted about pages.
++    if (!this._trustPanelPopup) {
++      return;
++    }
++
++    // Call showPopup with correct anchorElement
++    const anchor = this._trustPanelPopup.anchorElement;
++    if (anchor && anchor.offsetParent !== null) {
++      this._trustPanelPopup.showPopup(anchor);
++    }
++  }
++

@@ -1,0 +1,106 @@
+--- a/browser/components/urlbar/QuickSuggest.sys.mjs
++++ b/browser/components/urlbar/QuickSuggest.sys.mjs
+@@ -450,15 +450,37 @@
+-function renderAMPRow(suggestion, isTopPick) {
+-  return html`
+-    <div class="amp-suggestion-row">
+-      <span class="amp-title">${suggestion.title}</span>
+-      <span class="separator"> - </span>
+-      <span class="amp-source">${suggestion.source}</span>
+-    </div>
+-  `;
+-}
++function renderAMPRow(suggestion, isTopPick) {
++  // Handler to show URL on hover or selection
++  function showURL(e) {
++    const urlLabel = e.currentTarget.querySelector(".amp-url");
++    if (urlLabel) {
++      urlLabel.style.display = "inline";
++    }
++  }
++
++  function hideURL(e) {
++    const urlLabel = e.currentTarget.querySelector(".amp-url");
++    if (urlLabel) {
++      urlLabel.style.display = "none";
++    }
++  }
++
++  return html`
++    <div class="amp-suggestion-row"
++         @mouseenter=${showURL}
++         @mouseleave=${hideURL}
++         @focus=${showURL}
++         @blur=${hideURL}
++         tabindex="0"
++    >
++      <span class="amp-title">${suggestion.title}</span>
++      <span class="separator"> · </span>
++      <span class="amp-source">${suggestion.source}</span>
++      ${isTopPick ? html`<span class="sponsored-label">Sponsored</span>` : ""}
++      <span class="amp-url" style="display:none">${suggestion.url}</span>
++    </div>
++  `;
++}
+--- a/browser/themes/shared/urlbarView.css
++++ b/browser/themes/shared/urlbarView.css
+@@ -120,7 +120,20 @@
+-.amp-suggestion-row .separator {
+-  margin: 0 5px;
+-  color: var(--urlbar-secondary-text-color);
+-}
++.amp-suggestion-row .separator {
++  margin: 0 6px;
++  color: var(--urlbar-secondary-text-color);
++  font-weight: 600;
++}
++
++.amp-suggestion-row .sponsored-label {
++  margin-left: 8px;
++  background-color: var(--urlbar-sponsor-bg);
++  color: var(--urlbar-sponsor-text);
++  font-size: 11px;
++  font-weight: 700;
++  padding: 2px 6px;
++  border-radius: 10px;
++  vertical-align: middle;
++}
++
++.amp-suggestion-row .amp-url {
++  margin-left: 8px;
++  font-size: 11px;
++  color: var(--urlbar-secondary-text-color);
++  font-style: italic;
++  user-select: text;
++}
+--- a/browser/themes/shared/urlbar-dynamic-results.css
++++ b/browser/themes/shared/urlbar-dynamic-results.css
+@@ -85,7 +85,19 @@
+-.amp-suggestion-row .separator {
+-  margin: 0 5px;
+-  color: var(--urlbar-secondary-text-color);
+-}
++.amp-suggestion-row .separator {
++  margin: 0 6px;
++  color: var(--urlbar-secondary-text-color);
++  font-weight: 600;
++}
++
++.amp-suggestion-row .sponsored-label {
++  margin-left: 8px;
++  background-color: var(--urlbar-sponsor-bg);
++  color: var(--urlbar-sponsor-text);
++  font-size: 11px;
++  font-weight: 700;
++  padding: 2px 6px;
++  border-radius: 10px;
++  vertical-align: middle;
++}
++
++.amp-suggestion-row .amp-url {
++  margin-left: 8px;
++  font-size: 11px;
++  color: var(--urlbar-secondary-text-color);
++  font-style: italic;
++  user-select: text;
++}

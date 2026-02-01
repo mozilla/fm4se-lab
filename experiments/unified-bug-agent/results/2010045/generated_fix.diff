@@ -1,0 +1,145 @@
+--- a/browser/components/urlbar/UrlbarUtils.sys.mjs
++++ b/browser/components/urlbar/UrlbarUtils.sys.mjs
+@@ -100,10 +100,32 @@
+-export async function getSecurityState(browser) {
+-  // Existing code that retrieves security state, currently treats exceptions as secure.
+-  let securityInfo = await browser.getSecurityInfo();
+-  if (!securityInfo) {
+-    return { state: "insecure" };
+-  }
+-
+-  if (securityInfo.isSecure) {
+-    return { state: "secure" };
+-  }
+-
+-  return { state: "insecure" };
++import { CertVerifier } from "resource://gre/modules/CertVerifier.sys.mjs";
++
++/**
++ * Returns the security state of the given browser, distinguishing certificate exceptions.
++ *
++ * @param {Browser} browser
++ * @returns {Promise<{state: string, hasException: boolean}>}
++ */
++export async function getSecurityState(browser) {
++  let securityInfo = await browser.getSecurityInfo();
++  if (!securityInfo) {
++    return { state: "insecure", hasException: false };
++  }
++
++  // Query CertVerifier to check if the cert is trusted or has a user exception.
++  let certStatus = securityInfo.certStatus || 0;
++
++  // Call into CertVerifier to check for exceptions.
++  // Assume CertVerifier.hasUserCertException is a new method exposing exception status.
++  let hasException = false;
++  if (securityInfo.securityState === "secure") {
++    try {
++      hasException = await CertVerifier.hasUserCertException(securityInfo);
++    } catch (ex) {
++      // fallback: treat as no exception
++      hasException = false;
++    }
++  }
++
++  if (securityInfo.securityState === "secure" && !hasException) {
++    return { state: "secure", hasException: false };
++  }
++
++  if (hasException) {
++    return { state: "exception", hasException: true };
++  }
++
++  return { state: "insecure", hasException: false };
+ }
+--- a/browser/components/urlbar/UrlbarView.sys.mjs
++++ b/browser/components/urlbar/UrlbarView.sys.mjs
+@@ -250,12 +250,26 @@
+-export function renderLockIcon(state) {
+-  if (state === "secure") {
+-    return `<svg class="lock-icon" aria-label="Connection secure">...</svg>`;
+-  }
+-  return `<svg class="lock-icon insecure" aria-label="Connection insecure">...</svg>`;
++import { getSecurityState } from "./UrlbarUtils.sys.mjs";
++
++/**
++ * Renders the lock icon based on the security state.
++ *
++ * @param {Browser} browser
++ * @returns {Promise<string>} SVG markup string for the lock icon.
++ */
++export async function renderLockIcon(browser) {
++  let { state } = await getSecurityState(browser);
++
++  if (state === "secure") {
++    return `<svg class="lock-icon" aria-label="Connection secure" role="img" viewBox="0 0 24 24">
++      <!-- Secure lock icon SVG -->
++      <path d="..."/>
++    </svg>`;
++  }
++
++  if (state === "exception") {
++    return `<svg class="lock-icon warning" aria-label="Connection not fully secure: certificate exception" role="img" viewBox="0 0 24 24">
++      <!-- Warning lock icon SVG for certificate exception -->
++      <path d="..."/>
++      <path d="..."/> <!-- exclamation mark or warning symbol -->
++    </svg>`;
++  }
++
++  return `<svg class="lock-icon insecure" aria-label="Connection insecure" role="img" viewBox="0 0 24 24">
++    <!-- Insecure lock icon SVG -->
++    <path d="..."/>
++  </svg>`;
+ }
+--- a/security/certverifier/CertVerifier.cpp
++++ b/security/certverifier/CertVerifier.cpp
+@@ -1120,6 +1120,23 @@
+ // Existing CertVerifier methods...
+ 
++// New method to check if there is a user-added certificate exception
++bool
++CertVerifier::HasUserCertException(const nsIURI* aURI, nsIX509Cert* aCert) {
++  // Logic to check if the user has added a certificate exception for the given cert and URI.
++  // This typically involves querying the certificate override service.
++  nsCOMPtr<nsICertOverrideService> overrideSvc = do_GetService("@mozilla.org/security/certoverride;1");
++  if (!overrideSvc) {
++    return false;
++  }
++
++  bool hasException = false;
++  nsresult rv = overrideSvc->HasMatchingOverride(aURI, aCert, &hasException);
++  if (NS_FAILED(rv)) {
++    return false;
++  }
++  return hasException;
++}
++
++// Expose this method to JavaScript via XPIDL or equivalent binding.
++// This code snippet assumes the method is exposed as hasUserCertException in the JS module.
++// Implementation details for binding omitted here.
++ 
++// ...
+--- a/browser/components/urlbar/UrlbarUtils.sys.mjs
++++ b/browser/components/urlbar/UrlbarUtils.sys.mjs
+@@ -120,6 +120,18 @@
++// Add the new CertVerifier method binding.
++export const CertVerifier = {
++  async hasUserCertException(securityInfo) {
++    // Extract URI and cert from securityInfo to pass to native method.
++    // For example:
++    let uri = securityInfo.URI;
++    let cert = securityInfo.cert;
++
++    // Call into native CertVerifier.HasUserCertException
++    // This is a placeholder. Actual binding code depends on XPIDL/XPCOM.
++    return new Promise((resolve, reject) => {
++      try {
++        let result = nativeCertVerifier.HasUserCertException(uri, cert);
++        resolve(result);
++      } catch (e) {
++        reject(e);
++      }
++    });
++  },
++};
++

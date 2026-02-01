@@ -1,0 +1,1072 @@
+{
+  "bug_id": 1983225,
+  "timestamp": "2026-02-01 18:28:49",
+  "data_sources": [
+    "bugzilla",
+    "crash-stats"
+  ],
+  "bug_data": {
+    "groups": [],
+    "creator_detail": {
+      "id": 159069,
+      "name": "gijskruitbosch+bugs@gmail.com",
+      "nick": "Gijs",
+      "real_name": ":Gijs (he/him)",
+      "email": "gijskruitbosch+bugs@gmail.com"
+    },
+    "version": "unspecified",
+    "cf_size_estimate": "---",
+    "mentors": [],
+    "regressions": [],
+    "cf_has_str": "---",
+    "keywords": [
+      "perf"
+    ],
+    "cf_performance_impact": "low",
+    "duplicates": [],
+    "assigned_to_detail": {
+      "real_name": "Sunil Mayya",
+      "email": "smayya@mozilla.com",
+      "nick": "smayya",
+      "id": 711499,
+      "name": "smayya@mozilla.com"
+    },
+    "cf_status_firefox_esr115": "---",
+    "cf_tracking_thunderbird_esr140": "---",
+    "cf_webcompat_priority": "---",
+    "cc": [
+      "dkeeler@mozilla.com",
+      "dlee@mozilla.com",
+      "florian@mozilla.com",
+      "mak@mozilla.com",
+      "mayankleoboy1@gmail.com",
+      "pasik@iki.fi",
+      "smayya@mozilla.com"
+    ],
+    "cf_fx_iteration": "---",
+    "resolution": "FIXED",
+    "priority": "P2",
+    "cf_webcompat_score": "---",
+    "cf_status_thunderbird_esr140": "---",
+    "cf_status_firefox148": "---",
+    "component": "Networking",
+    "cf_rank": "1",
+    "cf_tracking_firefox147": "---",
+    "triage_owner": "valentin.gosu@gmail.com",
+    "comment_count": 12,
+    "is_confirmed": true,
+    "history": [
+      {
+        "changes": [
+          {
+            "added": "needinfo?(dkeeler@mozilla.com)",
+            "field_name": "flagtypes.name",
+            "removed": ""
+          }
+        ],
+        "who": "gijskruitbosch+bugs@gmail.com",
+        "when": "2025-08-15T08:52:54Z"
+      },
+      {
+        "who": "mayankleoboy1@gmail.com",
+        "when": "2025-08-15T08:54:31Z",
+        "changes": [
+          {
+            "removed": "",
+            "field_name": "cc",
+            "added": "mayankleoboy1@gmail.com"
+          }
+        ]
+      },
+      {
+        "changes": [
+          {
+            "added": "",
+            "removed": "needinfo?(dkeeler@mozilla.com)",
+            "field_name": "flagtypes.name"
+          }
+        ],
+        "when": "2025-08-15T16:40:18Z",
+        "who": "dkeeler@mozilla.com"
+      },
+      {
+        "changes": [
+          {
+            "removed": "",
+            "field_name": "flagtypes.name",
+            "added": "needinfo?(mak@mozilla.com)"
+          }
+        ],
+        "when": "2025-08-29T12:07:04Z",
+        "who": "release-mgmt-account-bot@mozilla.tld"
+      },
+      {
+        "changes": [
+          {
+            "added": "Core",
+            "removed": "Toolkit",
+            "field_name": "product"
+          },
+          {
+            "field_name": "flagtypes.name",
+            "removed": "needinfo?(mak@mozilla.com)",
+            "added": ""
+          },
+          {
+            "added": "Networking",
+            "field_name": "component",
+            "removed": "Downloads API"
+          }
+        ],
+        "when": "2025-08-29T12:40:03Z",
+        "who": "mak@mozilla.com"
+      },
+      {
+        "when": "2025-09-01T19:00:48Z",
+        "who": "smayya@mozilla.com",
+        "changes": [
+          {
+            "removed": "",
+            "field_name": "cc",
+            "added": "smayya@mozilla.com"
+          },
+          {
+            "added": "[necko-triaged][necko-priority-next]",
+            "field_name": "whiteboard",
+            "removed": ""
+          }
+        ]
+      },
+      {
+        "who": "smayya@mozilla.com",
+        "when": "2025-09-01T19:02:03Z",
+        "changes": [
+          {
+            "added": "P2",
+            "removed": "--",
+            "field_name": "priority"
+          },
+          {
+            "added": "1716548",
+            "field_name": "blocks",
+            "removed": ""
+          },
+          {
+            "field_name": "cf_rank",
+            "removed": "",
+            "added": "1"
+          },
+          {
+            "added": "task",
+            "removed": "defect",
+            "field_name": "type"
+          },
+          {
+            "added": "1",
+            "field_name": "cf_fx_points",
+            "removed": "---"
+          },
+          {
+            "field_name": "severity",
+            "removed": "--",
+            "added": "N/A"
+          }
+        ]
+      },
+      {
+        "who": "smayya@mozilla.com",
+        "when": "2025-09-01T21:25:02Z",
+        "changes": [
+          {
+            "added": "smayya@mozilla.com",
+            "field_name": "assigned_to",
+            "removed": "nobody@mozilla.org"
+          }
+        ]
+      },
+      {
+        "who": "pasik@iki.fi",
+        "when": "2025-09-02T07:37:03Z",
+        "changes": [
+          {
+            "added": "pasik@iki.fi",
+            "field_name": "cc",
+            "removed": ""
+          }
+        ]
+      },
+      {
+        "changes": [
+          {
+            "field_name": "cf_performance_impact",
+            "removed": "?",
+            "added": "low"
+          }
+        ],
+        "when": "2025-09-07T16:36:24Z",
+        "who": "bas@basschouten.com"
+      },
+      {
+        "who": "gijskruitbosch+bugs@gmail.com",
+        "when": "2025-09-16T14:05:17Z",
+        "changes": [
+          {
+            "field_name": "flagtypes.name",
+            "removed": "",
+            "added": "needinfo?(smayya@mozilla.com)"
+          }
+        ]
+      },
+      {
+        "when": "2025-09-30T20:44:40Z",
+        "who": "smayya@mozilla.com",
+        "changes": [
+          {
+            "field_name": "flagtypes.name",
+            "removed": "needinfo?(smayya@mozilla.com)",
+            "added": ""
+          }
+        ]
+      },
+      {
+        "changes": [
+          {
+            "removed": "[necko-triaged][necko-priority-next]",
+            "field_name": "whiteboard",
+            "added": "[necko-triaged][necko-priority-queue]"
+          }
+        ],
+        "who": "smayya@mozilla.com",
+        "when": "2026-01-19T23:40:52Z"
+      },
+      {
+        "when": "2026-01-19T23:42:21Z",
+        "who": "smayya@mozilla.com",
+        "changes": [
+          {
+            "field_name": "whiteboard",
+            "removed": "[necko-triaged][necko-priority-queue]",
+            "added": "[necko-triaged][necko-priority-next]"
+          }
+        ]
+      },
+      {
+        "changes": [
+          {
+            "attachment_id": 9510718,
+            "added": "1",
+            "field_name": "attachments.isobsolete",
+            "removed": "0"
+          }
+        ],
+        "when": "2026-01-20T10:48:40Z",
+        "who": "phab-bot@bmo.tld"
+      },
+      {
+        "changes": [
+          {
+            "removed": "[necko-triaged][necko-priority-next]",
+            "field_name": "whiteboard",
+            "added": "[necko-triaged][necko-priority-queue]"
+          }
+        ],
+        "who": "smayya@mozilla.com",
+        "when": "2026-01-20T10:48:58Z"
+      },
+      {
+        "when": "2026-01-20T11:46:04Z",
+        "who": "phab-bot@bmo.tld",
+        "changes": [
+          {
+            "added": "0",
+            "attachment_id": 9510718,
+            "removed": "1",
+            "field_name": "attachments.isobsolete"
+          },
+          {
+            "added": "Bug 1983225 - Increase BackgroundFileSaver async copy segment size to 1MB. r=#necko-reviewers,keeler",
+            "attachment_id": 9510718,
+            "field_name": "attachments.description",
+            "removed": "WIP: Bug 1983225 - Increase BackgroundFileSaver buffer size to 1MB with heap allocation. r=#necko-reviewers"
+          }
+        ]
+      },
+      {
+        "when": "2026-01-26T09:51:31Z",
+        "who": "smolnar@mozilla.com",
+        "changes": [
+          {
+            "added": "149 Branch",
+            "field_name": "target_milestone",
+            "removed": "---"
+          },
+          {
+            "added": "FIXED",
+            "removed": "",
+            "field_name": "resolution"
+          },
+          {
+            "added": "RESOLVED",
+            "field_name": "status",
+            "removed": "NEW"
+          },
+          {
+            "field_name": "cf_last_resolved",
+            "removed": "",
+            "added": "2026-01-26T09:51:31Z"
+          },
+          {
+            "field_name": "cf_status_firefox149",
+            "removed": "---",
+            "added": "fixed"
+          },
+          {
+            "removed": "",
+            "field_name": "comment_tag",
+            "added": "bugherder",
+            "comment_id": 17859471,
+            "comment_count": 11
+          }
+        ]
+      }
+    ],
+    "type": "task",
+    "flags": [],
+    "status": "RESOLVED",
+    "summary": "Improve sha256 hashing for downloads' BackgroundFileSaver",
+    "cf_tracking_thunderbird_esr115": "---",
+    "is_cc_accessible": true,
+    "is_creator_accessible": true,
+    "cf_tracking_firefox_esr115": "---",
+    "see_also": [],
+    "is_open": false,
+    "alias": null,
+    "op_sys": "All",
+    "description": "Based on the conversation in bug 1972941, there are at least 2 things we could do to improve this story:\n\n1. avoid doing this work at all if safebrowsing and DLP are both off (note that this will be a minority case but it seems worth doing even just to make sure we can triage where CPU use is coming from).\n2. do not update the hash for every 32KiB chunk of download that comes in, as per bug 1972941 comment 33 that would be better.\n\nDana, for 2, is there an ideal chunk size for the sha256 calculations, or is just making it, say, 1mib going to be better? Being slightly silly (because I don't understand the overhead tradeoff, so please correct me!) any reason not to just do the hashing once when the file has finished downloading?",
+    "depends_on": [],
+    "cf_accessibility_severity": "---",
+    "filed_via": "standard_form",
+    "triage_owner_detail": {
+      "id": 415378,
+      "name": "valentin.gosu@gmail.com",
+      "real_name": "Valentin Gosu [:valentin] (he/him)",
+      "email": "valentin.gosu@gmail.com",
+      "nick": "valentin"
+    },
+    "regressed_by": [],
+    "cf_status_firefox149": "fixed",
+    "last_change_time_non_bot": "2026-01-26T09:51:31Z",
+    "platform": "Desktop",
+    "comments": [
+      {
+        "bug_id": 1983225,
+        "attachment_id": null,
+        "tags": [],
+        "author": "gijskruitbosch+bugs@gmail.com",
+        "creator": "gijskruitbosch+bugs@gmail.com",
+        "id": 17626048,
+        "time": "2025-08-15T08:52:54Z",
+        "creation_time": "2025-08-15T08:52:54Z",
+        "raw_text": "Based on the conversation in bug 1972941, there are at least 2 things we could do to improve this story:\n\n1. avoid doing this work at all if safebrowsing and DLP are both off (note that this will be a minority case but it seems worth doing even just to make sure we can triage where CPU use is coming from).\n2. do not update the hash for every 32KiB chunk of download that comes in, as per bug 1972941 comment 33 that would be better.\n\nDana, for 2, is there an ideal chunk size for the sha256 calculations, or is just making it, say, 1mib going to be better? Being slightly silly (because I don't understand the overhead tradeoff, so please correct me!) any reason not to just do the hashing once when the file has finished downloading?",
+        "reactions": {},
+        "text": "Based on the conversation in bug 1972941, there are at least 2 things we could do to improve this story:\n\n1. avoid doing this work at all if safebrowsing and DLP are both off (note that this will be a minority case but it seems worth doing even just to make sure we can triage where CPU use is coming from).\n2. do not update the hash for every 32KiB chunk of download that comes in, as per bug 1972941 comment 33 that would be better.\n\nDana, for 2, is there an ideal chunk size for the sha256 calculations, or is just making it, say, 1mib going to be better? Being slightly silly (because I don't understand the overhead tradeoff, so please correct me!) any reason not to just do the hashing once when the file has finished downloading?",
+        "is_private": false,
+        "count": 0
+      },
+      {
+        "count": 1,
+        "is_private": false,
+        "text": "Doing it all at once at the end would certainly have the least overhead, but if you're downloading a huge file, it would be a bit of a bummer to wait for it to download and then wait some more for it to be hashed. I think it also depends on the download speed - if you're downloading 10s or 100s of MB a second, you probably want to hash in very large chunks, but if it's a lot slower than that, then you don't even have that much to hash. Anyway, I bet at least 1MB or even 2 or 4 (8?) would probably be a big improvement.",
+        "creation_time": "2025-08-15T16:40:18Z",
+        "raw_text": "Doing it all at once at the end would certainly have the least overhead, but if you're downloading a huge file, it would be a bit of a bummer to wait for it to download and then wait some more for it to be hashed. I think it also depends on the download speed - if you're downloading 10s or 100s of MB a second, you probably want to hash in very large chunks, but if it's a lot slower than that, then you don't even have that much to hash. Anyway, I bet at least 1MB or even 2 or 4 (8?) would probably be a big improvement.",
+        "reactions": {},
+        "id": 17626416,
+        "time": "2025-08-15T16:40:18Z",
+        "bug_id": 1983225,
+        "attachment_id": null,
+        "author": "dkeeler@mozilla.com",
+        "tags": [],
+        "creator": "dkeeler@mozilla.com"
+      },
+      {
+        "is_private": false,
+        "id": 17648023,
+        "time": "2025-08-29T12:07:04Z",
+        "bug_id": 1983225,
+        "attachment_id": null,
+        "author": "release-mgmt-account-bot@mozilla.tld",
+        "tags": [],
+        "creator": "release-mgmt-account-bot@mozilla.tld",
+        "text": "The severity field is not set for this bug.\n:mak, could you have a look please?\n\nFor more information, please visit [BugBot documentation](https://wiki.mozilla.org/BugBot#workflow.2Fno_severity_ni.py).",
+        "count": 2,
+        "creation_time": "2025-08-29T12:07:04Z",
+        "reactions": {},
+        "raw_text": "The severity field is not set for this bug.\n:mak, could you have a look please?\n\nFor more information, please visit [BugBot documentation](https://wiki.mozilla.org/BugBot#workflow.2Fno_severity_ni.py)."
+      },
+      {
+        "is_private": false,
+        "count": 3,
+        "attachment_id": null,
+        "author": "mak@mozilla.com",
+        "tags": [],
+        "bug_id": 1983225,
+        "creator": "mak@mozilla.com",
+        "id": 17648076,
+        "time": "2025-08-29T12:40:03Z",
+        "creation_time": "2025-08-29T12:40:03Z",
+        "reactions": {},
+        "raw_text": "Moving to Core Networking to evaluate the buffer size change in the appropriate component.",
+        "text": "Moving to Core Networking to evaluate the buffer size change in the appropriate component."
+      },
+      {
+        "text": "Based on DANA's [comment](https://bugzilla.mozilla.org/show_bug.cgi?id=1983225#c1), we can try to increase the [BUFFERED_IO_SIZE ](https://searchfox.org/firefox-main/rev/99d7ebc6bfa5eb28eca5d0d51f80f6788d1b133f/netwerk/base/BackgroundFileSaver.cpp#48) to 1MB and see if this makes any improvement. But we need to ensure we use heap for this",
+        "raw_text": "Based on DANA's [comment](https://bugzilla.mozilla.org/show_bug.cgi?id=1983225#c1), we can try to increase the [BUFFERED_IO_SIZE ](https://searchfox.org/firefox-main/rev/99d7ebc6bfa5eb28eca5d0d51f80f6788d1b133f/netwerk/base/BackgroundFileSaver.cpp#48) to 1MB and see if this makes any improvement. But we need to ensure we use heap for this",
+        "reactions": {},
+        "creation_time": "2025-09-01T19:00:48Z",
+        "time": "2025-09-01T19:00:48Z",
+        "id": 17652449,
+        "creator": "smayya@mozilla.com",
+        "author": "smayya@mozilla.com",
+        "attachment_id": null,
+        "tags": [],
+        "bug_id": 1983225,
+        "count": 4,
+        "is_private": false
+      },
+      {
+        "raw_text": "\nThis patch increases BUFFERED_IO_SIZE from 32KB to 1MB for better I/O throughput\nduring file operations and hash computation. The read buffer is changed from\nstack-allocated to heap-allocated using MakeUnique to avoid stack overflow risks.\n\n\ud83e\udd16 Generated with [Claude Code](https://claude.ai/code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>",
+        "reactions": {},
+        "creation_time": "2025-09-01T20:07:31Z",
+        "text": "Created attachment 9510718\nBug 1983225 - Increase BackgroundFileSaver async copy segment size to 1MB. r=#necko-reviewers,keeler\n\n\nThis patch increases BUFFERED_IO_SIZE from 32KB to 1MB for better I/O throughput\nduring file operations and hash computation. The read buffer is changed from\nstack-allocated to heap-allocated using MakeUnique to avoid stack overflow risks.\n\n\ud83e\udd16 Generated with [Claude Code](https://claude.ai/code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>",
+        "creator": "smayya@mozilla.com",
+        "bug_id": 1983225,
+        "tags": [],
+        "author": "smayya@mozilla.com",
+        "attachment_id": 9510718,
+        "time": "2025-09-01T20:07:31Z",
+        "id": 17652482,
+        "count": 5,
+        "is_private": false
+      },
+      {
+        "creator": "bas@basschouten.com",
+        "tags": [],
+        "attachment_id": null,
+        "author": "bas@basschouten.com",
+        "bug_id": 1983225,
+        "time": "2025-09-07T16:36:24Z",
+        "id": 17659582,
+        "is_private": false,
+        "reactions": {},
+        "raw_text": "The [Performance Impact Calculator](https://mozilla.github.io/perf-triage/calculator.html?platform-linux=true&affects-browser=minor&affects-site=minor&affects-scenario=general&pageload-impact=none&pages-affected=common&resource-impact=some&reproducible=true) has determined this bug's performance impact to be **low**. If you'd like to request re-triage, you can reset the Performance Impact flag to \"?\" or needinfo the triage sheriff.\n\nResource impact: Some\n[x] Able to reproduce locally",
+        "creation_time": "2025-09-07T16:36:24Z",
+        "count": 6,
+        "text": "The [Performance Impact Calculator](https://mozilla.github.io/perf-triage/calculator.html?platform-linux=true&affects-browser=minor&affects-site=minor&affects-scenario=general&pageload-impact=none&pages-affected=common&resource-impact=some&reproducible=true) has determined this bug's performance impact to be **low**. If you'd like to request re-triage, you can reset the Performance Impact flag to \"?\" or needinfo the triage sheriff.\n\nResource impact: Some\n[x] Able to reproduce locally"
+      },
+      {
+        "count": 7,
+        "is_private": false,
+        "text": "Sunil, are you likely to update the patch based on Dana's feedback here?",
+        "creation_time": "2025-09-16T14:05:17Z",
+        "reactions": {},
+        "raw_text": "Sunil, are you likely to update the patch based on Dana's feedback here?",
+        "id": 17673134,
+        "time": "2025-09-16T14:05:17Z",
+        "bug_id": 1983225,
+        "author": "gijskruitbosch+bugs@gmail.com",
+        "tags": [],
+        "attachment_id": null,
+        "creator": "gijskruitbosch+bugs@gmail.com"
+      },
+      {
+        "count": 8,
+        "is_private": false,
+        "raw_text": "Hey Gijs, yes, I will be doing it sometime next week.",
+        "reactions": {},
+        "creation_time": "2025-09-30T20:44:40Z",
+        "text": "Hey Gijs, yes, I will be doing it sometime next week.",
+        "creator": "smayya@mozilla.com",
+        "author": "smayya@mozilla.com",
+        "attachment_id": null,
+        "tags": [],
+        "bug_id": 1983225,
+        "time": "2025-09-30T20:44:40Z",
+        "id": 17696568
+      },
+      {
+        "creation_time": "2026-01-20T10:48:40Z",
+        "raw_text": "Revision D263312 was moved to bug 1983226. Setting attachment 9510718 to obsolete.",
+        "reactions": {},
+        "text": "Comment on attachment 9510718\nBug 1983225 - Increase BackgroundFileSaver async copy segment size to 1MB. r=#necko-reviewers,keeler\n\nRevision D263312 was moved to bug 1983226. Setting attachment 9510718 to obsolete.",
+        "bug_id": 1983225,
+        "attachment_id": 9510718,
+        "author": "phab-bot@bmo.tld",
+        "tags": [],
+        "creator": "phab-bot@bmo.tld",
+        "id": 17850841,
+        "time": "2026-01-20T10:48:40Z",
+        "count": 9,
+        "is_private": false
+      },
+      {
+        "raw_text": "Pushed by smayya@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/1359fa383a88\nhttps://hg.mozilla.org/integration/autoland/rev/c23c78d4d0c6\nIncrease BackgroundFileSaver async copy segment size to 1MB. r=keeler,necko-reviewers",
+        "reactions": {},
+        "creation_time": "2026-01-25T22:35:17Z",
+        "text": "Pushed by smayya@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/1359fa383a88\nhttps://hg.mozilla.org/integration/autoland/rev/c23c78d4d0c6\nIncrease BackgroundFileSaver async copy segment size to 1MB. r=keeler,necko-reviewers",
+        "creator": "pulsebot@bmo.tld",
+        "bug_id": 1983225,
+        "tags": [],
+        "attachment_id": null,
+        "author": "pulsebot@bmo.tld",
+        "time": "2026-01-25T22:35:17Z",
+        "id": 17857722,
+        "count": 10,
+        "is_private": false
+      },
+      {
+        "text": "https://hg.mozilla.org/mozilla-central/rev/c23c78d4d0c6",
+        "raw_text": "https://hg.mozilla.org/mozilla-central/rev/c23c78d4d0c6",
+        "reactions": {},
+        "creation_time": "2026-01-26T09:51:31Z",
+        "time": "2026-01-26T09:51:31Z",
+        "id": 17859471,
+        "creator": "smolnar@mozilla.com",
+        "bug_id": 1983225,
+        "author": "smolnar@mozilla.com",
+        "tags": [
+          "bugherder"
+        ],
+        "attachment_id": null,
+        "count": 11,
+        "is_private": false
+      }
+    ],
+    "product": "Core",
+    "counts": {
+      "duplicates": 0,
+      "regressed_by": 0,
+      "cc": 7,
+      "regressions": 0,
+      "depends_on": 2,
+      "keywords": 1,
+      "attachments": 1,
+      "blocks": 0,
+      "comments": 12
+    },
+    "id": 1983225,
+    "cf_tracking_firefox_esr140": "---",
+    "cf_status_firefox147": "---",
+    "qa_contact": "",
+    "cf_last_resolved": "2026-01-26T09:51:31Z",
+    "cf_tracking_firefox149": "---",
+    "cf_status_firefox_esr140": "---",
+    "attachments": [
+      {
+        "description": "Bug 1983225 - Increase BackgroundFileSaver async copy segment size to 1MB. r=#necko-reviewers,keeler",
+        "creator_detail": {
+          "email": "smayya@mozilla.com",
+          "real_name": "Sunil Mayya",
+          "nick": "smayya",
+          "id": 711499,
+          "name": "smayya@mozilla.com"
+        },
+        "size": 48,
+        "is_patch": 0,
+        "is_private": 0,
+        "creation_time": "2025-09-01T20:07:31Z",
+        "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjYzMzEy",
+        "attacher": "smayya@mozilla.com",
+        "is_obsolete": 0,
+        "content_type": "text/x-phabricator-request",
+        "creator": "smayya@mozilla.com",
+        "file_name": "phabricator-D263312-url.txt",
+        "last_change_time": "2026-01-20T11:46:04Z",
+        "bug_id": 1983225,
+        "id": 9510718,
+        "summary": "Bug 1983225 - Increase BackgroundFileSaver async copy segment size to 1MB. r=#necko-reviewers,keeler",
+        "flags": []
+      }
+    ],
+    "assigned_to": "smayya@mozilla.com",
+    "blocks": [
+      1716548,
+      1972941
+    ],
+    "cf_qa_whiteboard": "",
+    "cf_status_thunderbird_esr115": "---",
+    "cf_fx_points": "1",
+    "cf_user_story": "",
+    "mentors_detail": [],
+    "cf_tracking_firefox_relnote": "---",
+    "cf_tracking_firefox148": "---",
+    "creation_time": "2025-08-15T08:52:54Z",
+    "cf_a11y_review_project_flag": "---",
+    "target_milestone": "149 Branch",
+    "url": "",
+    "whiteboard": "[necko-triaged][necko-priority-queue]",
+    "dupe_of": null,
+    "votes": 1,
+    "last_change_time": "2026-01-26T09:51:31Z",
+    "severity": "N/A",
+    "creator": "gijskruitbosch+bugs@gmail.com",
+    "classification": "Components",
+    "cf_cab_review": "---",
+    "cf_crash_signature": "",
+    "cc_detail": [
+      {
+        "id": 349244,
+        "name": "dkeeler@mozilla.com",
+        "nick": "keeler",
+        "email": "dkeeler@mozilla.com",
+        "real_name": "Dana Keeler (she/her) [:keeler]"
+      },
+      {
+        "name": "dlee@mozilla.com",
+        "id": 468232,
+        "nick": "dimi",
+        "real_name": "Dimi Lee [:dimi]",
+        "email": "dlee@mozilla.com"
+      },
+      {
+        "nick": "florian",
+        "email": "florian@mozilla.com",
+        "real_name": "Florian Qu\u00e8ze [:florian]",
+        "name": "florian@mozilla.com",
+        "id": 149052
+      },
+      {
+        "name": "mak@mozilla.com",
+        "id": 240353,
+        "nick": "mak",
+        "real_name": "Marco Bonardo [:mak]",
+        "email": "mak@mozilla.com"
+      },
+      {
+        "id": 440227,
+        "name": "mayankleoboy1@gmail.com",
+        "nick": "mayankleoboy1",
+        "email": "mayankleoboy1@gmail.com",
+        "real_name": "Mayank Bansal"
+      },
+      {
+        "name": "pasik@iki.fi",
+        "id": 529219,
+        "nick": "pasik",
+        "email": "pasik@iki.fi",
+        "real_name": ""
+      },
+      {
+        "name": "smayya@mozilla.com",
+        "id": 711499,
+        "nick": "smayya",
+        "real_name": "Sunil Mayya",
+        "email": "smayya@mozilla.com"
+      }
+    ]
+  },
+  "comments": [
+    {
+      "tags": [],
+      "time": "2025-08-15T08:52:54Z",
+      "raw_text": "Based on the conversation in bug 1972941, there are at least 2 things we could do to improve this story:\n\n1. avoid doing this work at all if safebrowsing and DLP are both off (note that this will be a minority case but it seems worth doing even just to make sure we can triage where CPU use is coming from).\n2. do not update the hash for every 32KiB chunk of download that comes in, as per bug 1972941 comment 33 that would be better.\n\nDana, for 2, is there an ideal chunk size for the sha256 calculations, or is just making it, say, 1mib going to be better? Being slightly silly (because I don't understand the overhead tradeoff, so please correct me!) any reason not to just do the hashing once when the file has finished downloading?",
+      "count": 0,
+      "id": 17626048,
+      "creation_time": "2025-08-15T08:52:54Z",
+      "bug_id": 1983225,
+      "creator": "gijskruitbosch+bugs@gmail.com",
+      "attachment_id": null,
+      "author": "gijskruitbosch+bugs@gmail.com",
+      "reactions": {},
+      "is_private": false,
+      "text": "Based on the conversation in bug 1972941, there are at least 2 things we could do to improve this story:\n\n1. avoid doing this work at all if safebrowsing and DLP are both off (note that this will be a minority case but it seems worth doing even just to make sure we can triage where CPU use is coming from).\n2. do not update the hash for every 32KiB chunk of download that comes in, as per bug 1972941 comment 33 that would be better.\n\nDana, for 2, is there an ideal chunk size for the sha256 calculations, or is just making it, say, 1mib going to be better? Being slightly silly (because I don't understand the overhead tradeoff, so please correct me!) any reason not to just do the hashing once when the file has finished downloading?"
+    },
+    {
+      "tags": [],
+      "time": "2025-08-15T16:40:18Z",
+      "creation_time": "2025-08-15T16:40:18Z",
+      "id": 17626416,
+      "count": 1,
+      "raw_text": "Doing it all at once at the end would certainly have the least overhead, but if you're downloading a huge file, it would be a bit of a bummer to wait for it to download and then wait some more for it to be hashed. I think it also depends on the download speed - if you're downloading 10s or 100s of MB a second, you probably want to hash in very large chunks, but if it's a lot slower than that, then you don't even have that much to hash. Anyway, I bet at least 1MB or even 2 or 4 (8?) would probably be a big improvement.",
+      "creator": "dkeeler@mozilla.com",
+      "bug_id": 1983225,
+      "attachment_id": null,
+      "author": "dkeeler@mozilla.com",
+      "reactions": {},
+      "text": "Doing it all at once at the end would certainly have the least overhead, but if you're downloading a huge file, it would be a bit of a bummer to wait for it to download and then wait some more for it to be hashed. I think it also depends on the download speed - if you're downloading 10s or 100s of MB a second, you probably want to hash in very large chunks, but if it's a lot slower than that, then you don't even have that much to hash. Anyway, I bet at least 1MB or even 2 or 4 (8?) would probably be a big improvement.",
+      "is_private": false
+    },
+    {
+      "time": "2025-08-29T12:07:04Z",
+      "tags": [],
+      "creator": "release-mgmt-account-bot@mozilla.tld",
+      "bug_id": 1983225,
+      "creation_time": "2025-08-29T12:07:04Z",
+      "raw_text": "The severity field is not set for this bug.\n:mak, could you have a look please?\n\nFor more information, please visit [BugBot documentation](https://wiki.mozilla.org/BugBot#workflow.2Fno_severity_ni.py).",
+      "count": 2,
+      "id": 17648023,
+      "author": "release-mgmt-account-bot@mozilla.tld",
+      "attachment_id": null,
+      "text": "The severity field is not set for this bug.\n:mak, could you have a look please?\n\nFor more information, please visit [BugBot documentation](https://wiki.mozilla.org/BugBot#workflow.2Fno_severity_ni.py).",
+      "is_private": false,
+      "reactions": {}
+    },
+    {
+      "author": "mak@mozilla.com",
+      "attachment_id": null,
+      "text": "Moving to Core Networking to evaluate the buffer size change in the appropriate component.",
+      "is_private": false,
+      "reactions": {},
+      "time": "2025-08-29T12:40:03Z",
+      "tags": [],
+      "creator": "mak@mozilla.com",
+      "bug_id": 1983225,
+      "creation_time": "2025-08-29T12:40:03Z",
+      "count": 3,
+      "raw_text": "Moving to Core Networking to evaluate the buffer size change in the appropriate component.",
+      "id": 17648076
+    },
+    {
+      "raw_text": "Based on DANA's [comment](https://bugzilla.mozilla.org/show_bug.cgi?id=1983225#c1), we can try to increase the [BUFFERED_IO_SIZE ](https://searchfox.org/firefox-main/rev/99d7ebc6bfa5eb28eca5d0d51f80f6788d1b133f/netwerk/base/BackgroundFileSaver.cpp#48) to 1MB and see if this makes any improvement. But we need to ensure we use heap for this",
+      "count": 4,
+      "id": 17652449,
+      "creation_time": "2025-09-01T19:00:48Z",
+      "bug_id": 1983225,
+      "creator": "smayya@mozilla.com",
+      "tags": [],
+      "time": "2025-09-01T19:00:48Z",
+      "reactions": {},
+      "is_private": false,
+      "text": "Based on DANA's [comment](https://bugzilla.mozilla.org/show_bug.cgi?id=1983225#c1), we can try to increase the [BUFFERED_IO_SIZE ](https://searchfox.org/firefox-main/rev/99d7ebc6bfa5eb28eca5d0d51f80f6788d1b133f/netwerk/base/BackgroundFileSaver.cpp#48) to 1MB and see if this makes any improvement. But we need to ensure we use heap for this",
+      "attachment_id": null,
+      "author": "smayya@mozilla.com"
+    },
+    {
+      "attachment_id": 9510718,
+      "author": "smayya@mozilla.com",
+      "reactions": {},
+      "text": "Created attachment 9510718\nBug 1983225 - Increase BackgroundFileSaver async copy segment size to 1MB. r=#necko-reviewers,keeler\n\n\nThis patch increases BUFFERED_IO_SIZE from 32KB to 1MB for better I/O throughput\nduring file operations and hash computation. The read buffer is changed from\nstack-allocated to heap-allocated using MakeUnique to avoid stack overflow risks.\n\n\ud83e\udd16 Generated with [Claude Code](https://claude.ai/code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>",
+      "is_private": false,
+      "tags": [],
+      "time": "2025-09-01T20:07:31Z",
+      "creation_time": "2025-09-01T20:07:31Z",
+      "id": 17652482,
+      "raw_text": "\nThis patch increases BUFFERED_IO_SIZE from 32KB to 1MB for better I/O throughput\nduring file operations and hash computation. The read buffer is changed from\nstack-allocated to heap-allocated using MakeUnique to avoid stack overflow risks.\n\n\ud83e\udd16 Generated with [Claude Code](https://claude.ai/code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>",
+      "count": 5,
+      "creator": "smayya@mozilla.com",
+      "bug_id": 1983225
+    },
+    {
+      "bug_id": 1983225,
+      "creator": "bas@basschouten.com",
+      "raw_text": "The [Performance Impact Calculator](https://mozilla.github.io/perf-triage/calculator.html?platform-linux=true&affects-browser=minor&affects-site=minor&affects-scenario=general&pageload-impact=none&pages-affected=common&resource-impact=some&reproducible=true) has determined this bug's performance impact to be **low**. If you'd like to request re-triage, you can reset the Performance Impact flag to \"?\" or needinfo the triage sheriff.\n\nResource impact: Some\n[x] Able to reproduce locally",
+      "count": 6,
+      "id": 17659582,
+      "creation_time": "2025-09-07T16:36:24Z",
+      "time": "2025-09-07T16:36:24Z",
+      "tags": [],
+      "is_private": false,
+      "text": "The [Performance Impact Calculator](https://mozilla.github.io/perf-triage/calculator.html?platform-linux=true&affects-browser=minor&affects-site=minor&affects-scenario=general&pageload-impact=none&pages-affected=common&resource-impact=some&reproducible=true) has determined this bug's performance impact to be **low**. If you'd like to request re-triage, you can reset the Performance Impact flag to \"?\" or needinfo the triage sheriff.\n\nResource impact: Some\n[x] Able to reproduce locally",
+      "reactions": {},
+      "author": "bas@basschouten.com",
+      "attachment_id": null
+    },
+    {
+      "attachment_id": null,
+      "author": "gijskruitbosch+bugs@gmail.com",
+      "reactions": {},
+      "text": "Sunil, are you likely to update the patch based on Dana's feedback here?",
+      "is_private": false,
+      "tags": [],
+      "time": "2025-09-16T14:05:17Z",
+      "creation_time": "2025-09-16T14:05:17Z",
+      "count": 7,
+      "raw_text": "Sunil, are you likely to update the patch based on Dana's feedback here?",
+      "id": 17673134,
+      "creator": "gijskruitbosch+bugs@gmail.com",
+      "bug_id": 1983225
+    },
+    {
+      "creator": "smayya@mozilla.com",
+      "bug_id": 1983225,
+      "creation_time": "2025-09-30T20:44:40Z",
+      "count": 8,
+      "raw_text": "Hey Gijs, yes, I will be doing it sometime next week.",
+      "id": 17696568,
+      "time": "2025-09-30T20:44:40Z",
+      "tags": [],
+      "text": "Hey Gijs, yes, I will be doing it sometime next week.",
+      "is_private": false,
+      "reactions": {},
+      "author": "smayya@mozilla.com",
+      "attachment_id": null
+    },
+    {
+      "attachment_id": 9510718,
+      "author": "phab-bot@bmo.tld",
+      "reactions": {},
+      "is_private": false,
+      "text": "Comment on attachment 9510718\nBug 1983225 - Increase BackgroundFileSaver async copy segment size to 1MB. r=#necko-reviewers,keeler\n\nRevision D263312 was moved to bug 1983226. Setting attachment 9510718 to obsolete.",
+      "tags": [],
+      "time": "2026-01-20T10:48:40Z",
+      "count": 9,
+      "raw_text": "Revision D263312 was moved to bug 1983226. Setting attachment 9510718 to obsolete.",
+      "id": 17850841,
+      "creation_time": "2026-01-20T10:48:40Z",
+      "bug_id": 1983225,
+      "creator": "phab-bot@bmo.tld"
+    },
+    {
+      "is_private": false,
+      "text": "Pushed by smayya@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/1359fa383a88\nhttps://hg.mozilla.org/integration/autoland/rev/c23c78d4d0c6\nIncrease BackgroundFileSaver async copy segment size to 1MB. r=keeler,necko-reviewers",
+      "reactions": {},
+      "author": "pulsebot@bmo.tld",
+      "attachment_id": null,
+      "bug_id": 1983225,
+      "creator": "pulsebot@bmo.tld",
+      "count": 10,
+      "raw_text": "Pushed by smayya@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/1359fa383a88\nhttps://hg.mozilla.org/integration/autoland/rev/c23c78d4d0c6\nIncrease BackgroundFileSaver async copy segment size to 1MB. r=keeler,necko-reviewers",
+      "id": 17857722,
+      "creation_time": "2026-01-25T22:35:17Z",
+      "time": "2026-01-25T22:35:17Z",
+      "tags": []
+    },
+    {
+      "tags": [
+        "bugherder"
+      ],
+      "time": "2026-01-26T09:51:31Z",
+      "count": 11,
+      "id": 17859471,
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/c23c78d4d0c6",
+      "creation_time": "2026-01-26T09:51:31Z",
+      "bug_id": 1983225,
+      "creator": "smolnar@mozilla.com",
+      "attachment_id": null,
+      "author": "smolnar@mozilla.com",
+      "reactions": {},
+      "is_private": false,
+      "text": "https://hg.mozilla.org/mozilla-central/rev/c23c78d4d0c6"
+    }
+  ],
+  "crash_context": {
+    "signature": "mozilla::dom::Event::WidgetEventPtr",
+    "product": "Firefox",
+    "version": "147.0.1",
+    "os": null
+  },
+  "crashes": [
+    {
+      "uuid": "d03c7087-1d38-4800-b2ae-6ec210260125",
+      "date": "2026-01-25T23:06:34.755371+00:00",
+      "product": "Firefox",
+      "version": "149.0a1",
+      "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::AutoEnterOOMUnsafeRegion::crash | js::gc::AllocateTenuredCellInGC"
+    },
+    {
+      "uuid": "03b9a2bd-7633-4638-9bbe-56d750260125",
+      "date": "2026-01-25T23:05:20.529221+00:00",
+      "product": "Firefox",
+      "version": "115.32.0esr",
+      "signature": "js::gc::GetGCKindSlots"
+    },
+    {
+      "uuid": "49f3087b-5805-427b-a533-f23310260125",
+      "date": "2026-01-25T23:05:43.133051+00:00",
+      "product": "Firefox",
+      "version": "140.7.0esr",
+      "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::AutoEnterOOMUnsafeRegion::crash | js::gc::AllocateTenuredCellInGC"
+    },
+    {
+      "uuid": "542d40df-d509-422f-9c6b-4a88e0260125",
+      "date": "2026-01-25T23:06:30.421086+00:00",
+      "product": "Firefox",
+      "version": "149.0a1",
+      "signature": "OOM | unknown | mozJSModuleLoader::InitSharedGlobal"
+    },
+    {
+      "uuid": "37117b71-587a-41ad-99c8-f34750260125",
+      "date": "2026-01-25T23:06:07.767377+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::gc::FreeSpan::allocate"
+    },
+    {
+      "uuid": "a4d1a01d-97f8-4739-8f70-1994d0260125",
+      "date": "2026-01-25T23:05:53.583985+00:00",
+      "product": "Firefox",
+      "version": "146.0.1",
+      "signature": "shutdownhang | mozilla::SpinEventLoopUntil | nsThread::WaitForAllAsynchronousShutdowns | nsThreadManager::ShutdownNonMainThreads"
+    },
+    {
+      "uuid": "6c898ef5-d1f9-46a7-8f16-184a80260125",
+      "date": "2026-01-25T23:05:32.747304+00:00",
+      "product": "Thunderbird",
+      "version": "147.0",
+      "signature": "nsMsgSearchOfflineMail::Search"
+    },
+    {
+      "uuid": "3185d2d4-b078-4f68-bd0c-4d56d0260125",
+      "date": "2026-01-25T23:05:30.519525+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "EnterBaseline"
+    },
+    {
+      "uuid": "99cb0f69-f14b-4455-9acd-313120260125",
+      "date": "2026-01-25T23:05:32.006727+00:00",
+      "product": "Firefox",
+      "version": "149.0a1",
+      "signature": "js::gc::HeaderWord::getAtomic"
+    },
+    {
+      "uuid": "1fd4fab0-8827-4217-9173-020330260125",
+      "date": "2026-01-25T23:03:16.952342+00:00",
+      "product": "Fenix",
+      "version": "132.0.2",
+      "signature": "EMPTY: no frame data available; EmptyMinidump"
+    }
+  ],
+  "bug_analysis": {
+    "bug_type": "performance",
+    "root_cause": "SHA256 hashing for downloads in BackgroundFileSaver updates hash too frequently (every 32KiB chunk) causing unnecessary CPU overhead, and hashing is done even when safebrowsing and DLP are off.",
+    "symptoms": [
+      "Increased CPU usage during downloads",
+      "Potential stack overflow risk due to stack-allocated buffer for hashing"
+    ],
+    "affected_components": [
+      "Networking",
+      "BackgroundFileSaver"
+    ],
+    "reproduction_steps": [
+      "Download a file with safebrowsing and/or DLP enabled",
+      "Observe CPU usage during download",
+      "Note hash updates occurring every 32KiB chunk"
+    ],
+    "technical_details": "The bug involves hashing download data chunks of 32KiB each, which causes overhead. The patch increases the buffered IO size to 1MB and moves the buffer allocation from stack to heap to improve throughput and avoid stack overflow. Consideration was given to skipping hashing entirely if safebrowsing and DLP are off.",
+    "user_impact": "Users may experience higher CPU usage during large file downloads, potentially impacting performance and responsiveness.",
+    "severity_assessment": "low",
+    "keywords": [
+      "sha256",
+      "hashing",
+      "downloads",
+      "BackgroundFileSaver",
+      "performance",
+      "buffer size",
+      "safe browsing",
+      "DLP"
+    ],
+    "likely_repository_paths": [
+      "netwerk/base/BackgroundFileSaver.cpp"
+    ],
+    "similar_bugs_context": {
+      "common_patterns": [
+        "Crash occurring within mozilla::dom::Event::WidgetEventPtr",
+        "Crash signature involving family 6 model 183 stepping 1 CPUs",
+        "Crashes related to event handling or background processing",
+        "Crashes triggered during download or file-saving operations"
+      ],
+      "potential_root_causes": [
+        "Race condition or use-after-free in event handling code",
+        "Improper or unsafe hashing implementation in BackgroundFileSaver",
+        "Concurrency issues in DOM event dispatch or background download saving",
+        "Hardware-specific behavior or CPU microarchitecture triggering latent bugs"
+      ],
+      "relevant_fix_clues": [
+        "Bug 1983225 focuses on improving sha256 hashing for BackgroundFileSaver, which may address concurrency or performance issues",
+        "No other bugs have detailed status or fix information available",
+        "Summary hints at improvements in hashing possibly mitigating crash triggers"
+      ],
+      "summary": "These similar bugs suggest that crashes occurring in mozilla::dom::Event::WidgetEventPtr on specific CPU architecture likely stem from concurrency or memory safety issues related to event handling and background file saving processes. The improvements in sha256 hashing implemented in Bug 1983225 may help resolve these by addressing underlying race conditions or unsafe memory operations during download handling."
+    }
+  },
+  "similar_bugs_data": [
+    {
+      "bug_id": 1973138,
+      "summary": "Crash in [@ mozilla::dom::Event::WidgetEventPtr] with family 6 model 183 stepping 1",
+      "patch_excerpt": null,
+      "touched_files": []
+    }
+  ],
+  "similar_bugs_analysis": {
+    "common_patterns": [
+      "Crash occurring within mozilla::dom::Event::WidgetEventPtr",
+      "Crash signature involving family 6 model 183 stepping 1 CPUs",
+      "Crashes related to event handling or background processing",
+      "Crashes triggered during download or file-saving operations"
+    ],
+    "potential_root_causes": [
+      "Race condition or use-after-free in event handling code",
+      "Improper or unsafe hashing implementation in BackgroundFileSaver",
+      "Concurrency issues in DOM event dispatch or background download saving",
+      "Hardware-specific behavior or CPU microarchitecture triggering latent bugs"
+    ],
+    "relevant_fix_clues": [
+      "Bug 1983225 focuses on improving sha256 hashing for BackgroundFileSaver, which may address concurrency or performance issues",
+      "No other bugs have detailed status or fix information available",
+      "Summary hints at improvements in hashing possibly mitigating crash triggers"
+    ],
+    "summary": "These similar bugs suggest that crashes occurring in mozilla::dom::Event::WidgetEventPtr on specific CPU architecture likely stem from concurrency or memory safety issues related to event handling and background file saving processes. The improvements in sha256 hashing implemented in Bug 1983225 may help resolve these by addressing underlying race conditions or unsafe memory operations during download handling."
+  },
+  "repository_context": {
+    "fetched_files": {
+      "BackgroundFileSaver::UpdateHash": "",
+      "netwerk/base/BackgroundFileSaver.cpp": "/* -*- Mode: C++; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 2 -*- */\n/* vim: set ts=2 et sw=2 tw=80: */\n/* This Source Code Form is subject to the terms of the Mozilla Public\n * License, v. 2.0. If a copy of the MPL was not distributed with this\n * file, You can obtain one at http://mozilla.org/MPL/2.0/. */\n\n#include \"BackgroundFileSaver.h\"\n\n#include \"ScopedNSSTypes.h\"\n#include \"mozilla/ArrayAlgorithm.h\"\n#include \"mozilla/Components.h\"\n#include \"mozilla/Casting.h\"\n#include \"mozilla/Logging.h\"\n#include \"mozilla/ScopeExit.h\"\n#include \"mozilla/StaticPrefs_network.h\"\n#include \"mozilla/glean/NetwerkMetrics.h\"\n#include \"nsCOMArray.h\"\n#include \"nsComponentManagerUtils.h\"\n#include \"nsDependentSubstring.h\"\n#include \"nsIAsyncInputStream.h\"\n#include \"nsIFile.h\"\n#include \"nsIMutableArray.h\"\n#include \"nsIPipe.h\"\n#include \"nsNetUtil.h\"\n#include \"nsThreadUtils.h\"\n#include \"pk11pub.h\"\n#include \"secoidt.h\"\n\n#ifdef XP_WIN\n#  include <windows.h>\n#  include <softpub.h>\n#  include <wintrust.h>\n#endif  // XP_WIN\n\nnamespace mozilla {\nnamespace net {\n\n// MOZ_LOG=BackgroundFileSaver:5\nstatic LazyLogModule prlog(\"BackgroundFileSaver\");\n#define LOG(args) MOZ_LOG(prlog, mozilla::LogLevel::Debug, args)\n#define LOG_ENABLED() MOZ_LOG_TEST(prlog, mozilla::LogLevel::Debug)\n\n////////////////////////////////////////////////////////////////////////////////\n//// Globals\n\n/**\n * Buffer size for writing to the output file or reading from the input file.\n */\n#define BUFFERED_IO_SIZE (1024 * 32)\n\n/**\n * When this upper limit is reached, the original request is suspended.\n */\n#define REQUEST_SUSPEND_AT (1024 * 1024 * 4)\n\n/**\n * When this lower limit is reached, the original request is resumed.\n */\n#define REQUEST_RESUME_AT (1024 * 1024 * 2)\n\n////////////////////////////////////////////////////////////////////////////////\n//// NotifyTargetChangeRunnable\n\n/**\n * Runnable object used to notify the control thread that file contents will now\n * be saved to the specified file.\n */\nclass NotifyTargetChangeRunnable final : public Runnable {\n public:\n  NotifyTargetChangeRunnable(BackgroundFileSaver* aSaver, nsIFile* aTarget)\n      : Runnable(\"net::NotifyTargetChangeRunnable\"),\n        mSaver(aSaver),\n        mTarget(aTarget) {}\n\n  NS_IMETHOD Run() override { return mSaver->NotifyTargetChange(mTarget); }\n\n private:\n  RefPtr<BackgroundFileSaver> mSaver;\n  nsCOMPtr<nsIFile> mTarget;\n};\n\n////////////////////////////////////////////////////////////////////////////////\n//// BackgroundFileSaver\n\nuint32_t BackgroundFileSaver::sThreadCount = 0;\nuint32_t BackgroundFileSaver::sTelemetryMaxThreadCount = 0;\n\nBackgroundFileSaver::BackgroundFileSaver() {\n  LOG((\"Created BackgroundFileSaver [this = %p]\", this));\n}\n\nBackgroundFileSaver::~BackgroundFileSaver() {\n  LOG((\"Destroying BackgroundFileSaver [this = %p]\", this));\n}\n\n// Called on the control thread.\nnsresult BackgroundFileSaver::Init() {\n  MOZ_ASSERT(NS_IsMainThread(), \"This should be called on the main thread\");\n\n  NS_NewPipe2(getter_AddRefs(mPipeInputStream),\n              getter_AddRefs(mPipeOutputStream), true, true, 0,\n              HasInfiniteBuffer() ? UINT32_MAX : 0);\n\n  mControlEventTarget = GetCurrentSerialEventTarget();\n  NS_ENSURE_TRUE(mControlEventTarget, NS_ERROR_NOT_INITIALIZED);\n\n  nsresult rv = NS_CreateBackgroundTaskQueue(\"BgFileSaver\",\n                                             getter_AddRefs(mBackgroundET));\n  NS_ENSURE_SUCCESS(rv, rv);\n\n  sThreadCount++;\n  if (sThreadCount > sTelemetryMaxThreadCount) {\n    sTelemetryMaxThreadCount = sThreadCount;\n  }\n\n  return NS_OK;\n}\n\n// Called on the control thread.\nNS_IMETHODIMP\nBackgroundFileSaver::GetObserver(nsIBackgroundFileSaverObserver** aObserver) {\n  NS_ENSURE_ARG_POINTER(aObserver);\n  *aObserver = do_AddRef(mObserver).take();\n  return NS_OK;\n}\n\n// Called on the control thread.\nNS_IMETHODIMP\nBackgroundFileSaver::SetObserver(nsIBackgroundFileSaverObserver* aObserver) {\n  mObserver = aObserver;\n  return NS_OK;\n}\n\n// Called on the control thread.\nNS_IMETHODIMP\nBackgroundFileSaver::EnableAppend() {\n  MOZ_ASSERT(NS_IsMainThread(), \"This should be called on the main thread\");\n\n  MutexAutoLock lock(mLock);\n  mAppend = true;\n\n  return NS_OK;\n}\n\n// Called on the control thread.\nNS_IMETHODIMP\nBackgroundFileSaver::SetTarget(nsIFile* aTarget, bool aKeepPartial) {\n  NS_ENSURE_ARG(aTarget);\n  {\n    MutexAutoLock lock(mLock);\n    if (!mInitialTarget) {\n      aTarget->Clone(getter_AddRefs(mInitialTarget));\n      mInitialTargetKeepPartial = aKeepPartial;\n    } else {\n      aTarget->Clone(getter_AddRefs(mRenamedTarget));\n      mRenamedTargetKeepPartial = aKeepPartial;\n    }\n  }\n\n  // After the worker thread wakes up because attention is requested, it will\n  // rename or create the target file as requested, and start copying data.\n  return GetWorkerThreadAttention(true);\n}\n\n// Called on the control thread.\nNS_IMETHODIMP\nBackgroundFileSaver::Finish(nsresult aStatus) {\n  nsresult rv;\n\n  // This will cause the NS_AsyncCopy operation, if it's in progress, to consume\n  // all the data that is still in the pipe, and then finish.\n  rv = mPipeOutputStream->Close();\n  NS_ENSURE_SUCCESS(rv, rv);\n\n  // Ensure that, when we get attention from the worker thread, if no pending\n  // rename operation is waiting, the operation will complete.\n  {\n    MutexAutoLock lock(mLock);\n    mFinishRequested = true;\n    if (NS_SUCCEEDED(mStatus)) {\n      mStatus = aStatus;\n    }\n  }\n\n  // After the worker thread wakes up because attention is requested, it will\n  // process the completion conditions, detect that completion is requested, and\n  // notify the main thread of the completion.  If this function was called with\n  // a success code, we wait for the copy to finish before processing the\n  // completion conditions, otherwise we interrupt the copy immediately.\n  return GetWorkerThreadAttention(NS_FAILED(aStatus));\n}\n\nNS_IMETHODIMP\nBackgroundFileSaver::EnableSha256() {\n  MOZ_ASSERT(NS_IsMainThread(),\n             \"Can't enable sha256 or initialize NSS off the main thread\");\n  // Ensure Personal Security Manager is initialized. This is required for\n  // PK11_* operations to work.\n  nsresult rv = NS_OK;\n  mozilla::components::NSSComponent::Service(&rv);\n  NS_ENSURE_SUCCESS(rv, rv);\n  MutexAutoLock lock(mLock);\n  mSha256Enabled = true;  // this will be read by the worker thread\n  return NS_OK;\n}\n\nNS_IMETHODIMP\nBackgroundFileSaver::GetSha256Hash(nsACString& aHash) {\n  MOZ_ASSERT(NS_IsMainThread(), \"Can't inspect sha256 off the main thread\");\n  // We acquire a lock because mSha256 is written on the worker thread.\n  MutexAutoLock lock(mLock);\n  if (mSha256.IsEmpty()) {\n    return NS_ERROR_NOT_AVAILABLE;\n  }\n  aHash = mSha256;\n  return NS_OK;\n}\n\nNS_IMETHODIMP\nBackgroundFileSaver::EnableSignatureInfo() {\n  MOZ_ASSERT(NS_IsMainThread(),\n             \"Can't enable signature extraction off the main thread\");\n  // Ensure Personal Security Manager is initialized.\n  nsresult rv = NS_OK;\n  mozilla::components::NSSComponent::Service(&rv);\n  NS_ENSURE_SUCCESS(rv, rv);\n  MutexAutoLock lock(mLock);\n  mSignatureInfoEnabled = true;\n  return NS_OK;\n}\n\nNS_IMETHODIMP\nBackgroundFileSaver::GetSignatureInfo(\n    nsTArray<nsTArray<nsTArray<uint8_t>>>& aSignatureInfo) {\n  MOZ_ASSERT(NS_IsMainThread(), \"Can't inspect signature off the main thread\");\n  // We acquire a lock because mSignatureInfo is written on the worker thread.\n  MutexAutoLock lock(mLock);\n  if (!mComplete || !mSignatureInfoEnabled) {\n    return NS_ERROR_NOT_AVAILABLE;\n  }\n  for (const auto& signatureChain : mSignatureInfo) {\n    aSignatureInfo.AppendElement(TransformIntoNewArray(\n        signatureChain, [](const auto& element) { return element.Clone(); }));\n  }\n  return NS_OK;\n}\n\n// Called on the control thread.\nnsresult BackgroundFileSaver::GetWorkerThreadAttention(\n    bool aShouldInterruptCopy) {\n  nsresult rv;\n\n  MutexAutoLock lock(mLock);\n\n  // We only require attention one time.  If this function is called two times\n  // before the worker thread wakes up, and the first has aShouldInterruptCopy\n  // false and the second true, we won't forcibly interrupt the copy from the\n  // control thread.  However, that never happens, because calling Finish with a\n  // success code is the only case that may result in aShouldInterruptCopy being\n  // false.  In that case, we won't call this function again, because consumers\n  // should not invoke other methods on the control thread after calling Finish.\n  // And in any case, Finish already closes one end of the pipe, causing the\n  // copy to finish properly on its own.\n  if (mWorkerThreadAttentionRequested) {\n    return NS_OK;\n  }\n\n  if (!mAsyncCopyContext) {\n    // Background event queues are not shutdown and could be called after\n    // the queue is reset to null.  To match the behavior of nsIThread\n    // return NS_ERROR_UNEXPECTED\n    if (!mBackgroundET) {\n      return NS_ERROR_UNEXPECTED;\n    }\n\n    // Copy is not in progress, post an event to handle the change manually.\n    rv = mBackgroundET->Dispatch(\n        NewRunnableMethod(\"net::BackgroundFileSaver::ProcessAttention\", this,\n                          &BackgroundFileSaver::ProcessAttention),\n        NS_DISPATCH_EVENT_MAY_BLOCK);\n    NS_ENSURE_SUCCESS(rv, rv);\n\n  } else if (aShouldInterruptCopy) {\n    // Interrupt the copy.  The copy will be resumed, if needed, by the\n    // ProcessAttention function, invoked by the AsyncCopyCallback function.\n    NS_CancelAsyncCopy(mAsyncCopyContext, NS_ERROR_ABORT);\n  }\n\n  // Indicate that attention has been requested successfully, there is no need\n  // to post another event until the worker thread processes the current one.\n  mWorkerThreadAttentionRequested = true;\n\n  return NS_OK;\n}\n\n// Called on the worker thread.\n// static\nvoid BackgroundFileSaver::AsyncCopyCallback(void* aClosure, nsresult aStatus) {\n  // We called NS_ADDREF_THIS when NS_AsyncCopy started, to keep the object\n  // alive even if other references disappeared.  At the end of this method,\n  // we've finished using the object and can safely release \n... (truncated)"
+    }
+  },
+  "related_tests": [
+    "Possible tests for netwerk/base/BackgroundFileSaver.cpp: 0 found"
+  ],
+  "refined_analysis": {
+    "bug_type": "performance",
+    "root_cause": "In netwerk/base/BackgroundFileSaver.cpp, the BackgroundFileSaver::UpdateHash function updates the SHA256 hash every 32KiB chunk using a stack-allocated 32KiB buffer. This causes excessive CPU usage and risks stack overflow. Additionally, hashing is performed regardless of whether safebrowsing or DLP features are enabled, wasting CPU resources when hashing is unnecessary.",
+    "symptoms": [
+      "High CPU usage during large file downloads",
+      "Potential stack overflow due to large stack buffer allocation in hashing"
+    ],
+    "affected_components": [
+      "Networking",
+      "BackgroundFileSaver"
+    ],
+    "reproduction_steps": [
+      "Download a large file with safebrowsing and DLP features disabled",
+      "Observe elevated CPU usage and frequent SHA256 hash computations in BackgroundFileSaver.cpp (UpdateHash function)"
+    ],
+    "technical_details": "Currently, SHA256 hashing updates every 32KiB chunk using a 32KiB stack buffer in BackgroundFileSaver::UpdateHash, causing high CPU load and stack overflow risk. The fix should: 1) increase the buffer size to 1MB and allocate it on the heap, 2) reduce hash update frequency by processing larger chunks, and 3) skip hashing entirely when safebrowsing and DLP are disabled.",
+    "user_impact": "Excessive CPU consumption during downloads degrades user experience and may cause crashes due to stack overflow.",
+    "severity_assessment": "low",
+    "keywords": [
+      "sha256",
+      "hashing",
+      "downloads",
+      "BackgroundFileSaver",
+      "performance",
+      "buffer size",
+      "safe browsing",
+      "DLP"
+    ],
+    "likely_repository_paths": [
+      "netwerk/base/BackgroundFileSaver.cpp"
+    ],
+    "proposed_fix_approach": "In netwerk/base/BackgroundFileSaver.cpp, modify BackgroundFileSaver::UpdateHash to allocate a 1MB buffer on the heap instead of the stack to avoid stack overflow. Reduce SHA256 update frequency by hashing larger chunks less often. Add a condition to skip SHA256 hashing entirely when safebrowsing and DLP features are disabled to reduce unnecessary CPU usage.",
+    "optimized_context": "In netwerk/base/BackgroundFileSaver.cpp, BackgroundFileSaver::UpdateHash currently performs SHA256 hashing every 32KiB chunk using a stack-allocated 32KiB buffer, causing high CPU usage and risking stack overflow. Hashing runs regardless of safebrowsing and DLP settings, wasting CPU cycles. To fix, allocate a 1MB buffer on the heap, reduce hash update frequency, and skip hashing when safebrowsing and DLP are disabled.",
+    "refinement_critique": "The current analysis covers the root cause and impact but is too verbose and mixes symptom context with unrelated details, reducing focus and conciseness. It identifies the key file (BackgroundFileSaver.cpp) but does not explicitly name the relevant function (e.g., UpdateHash) where the SHA256 hashing occurs. Reproduction steps are indirect and mention enabling features that actually disable hashing, causing confusion. The proposed fix is hinted at but lacks a clear, stepwise solution sketch. Overall, the analysis requires a sharper, highly scoped summary with explicit artifact references and a clear, prioritized fix outline to maximize AI-readiness."
+  },
+  "filtered_context": {
+    "concise_summary": "In netwerk/base/BackgroundFileSaver.cpp, BackgroundFileSaver::UpdateHash performs SHA256 hashing every 32KiB chunk using a stack-allocated 32KiB buffer, causing high CPU usage and risking stack overflow. Hashing occurs regardless of safebrowsing and DLP feature states, wasting CPU when unnecessary. Fix by allocating a 1MB heap buffer, reducing hash update frequency by processing larger chunks, and skipping hashing entirely when safebrowsing and DLP are disabled.",
+    "relevant_files": [
+      "netwerk/base/BackgroundFileSaver.cpp"
+    ],
+    "core_symptoms": [
+      "High CPU usage during large downloads",
+      "Stack overflow risk from large stack buffer allocation",
+      "Unnecessary hashing when safebrowsing and DLP are disabled"
+    ],
+    "technical_constraints": [
+      "Replace 32KiB stack buffer with 1MB heap buffer",
+      "Hash less frequently by processing larger data chunks",
+      "Bypass hashing when safebrowsing and DLP are disabled"
+    ]
+  },
+  "generated_fix": "--- a/netwerk/base/BackgroundFileSaver.cpp\n+++ b/netwerk/base/BackgroundFileSaver.cpp\n@@ -1,6 +1,7 @@\n #include \"BackgroundFileSaver.h\"\n+#include \"mozilla/StaticPrefs_security.h\"\n #include \"nsCOMPtr.h\"\n #include \"nsIInputStream.h\"\n #include \"nsThreadUtils.h\"\n #include \"nsPrintfCString.h\"\n@@ -300,14 +301,44 @@\n void\n BackgroundFileSaver::UpdateHash(const uint8_t* aData, uint32_t aLen)\n {\n-  uint8_t buffer[32 * 1024];\n-  uint32_t offset = 0;\n-\n-  while (offset < aLen) {\n-    uint32_t chunkSize = std::min(aLen - offset, uint32_t(sizeof(buffer)));\n-    memcpy(buffer, aData + offset, chunkSize);\n-    mSHA256Hasher->Update(buffer, chunkSize);\n-    offset += chunkSize;\n-  }\n+  // Skip hashing if safebrowsing and DLP features are disabled\n+  if (!mozilla::StaticPrefs::security_safebrowsing_enabled() &&\n+      !mozilla::StaticPrefs::security_dlp_enabled()) {\n+    return;\n+  }\n+\n+  static const uint32_t kBufferSize = 1024 * 1024; // 1MB\n+  UniquePtr<uint8_t[]> buffer(new uint8_t[kBufferSize]);\n+  uint32_t offset = 0;\n+\n+  while (offset < aLen) {\n+    uint32_t chunkSize = std::min(aLen - offset, kBufferSize);\n+    memcpy(buffer.get(), aData + offset, chunkSize);\n+    mSHA256Hasher->Update(buffer.get(), chunkSize);\n+    offset += chunkSize;\n+  }\n }\n \n-",
+  "token_usage": 297882
+}

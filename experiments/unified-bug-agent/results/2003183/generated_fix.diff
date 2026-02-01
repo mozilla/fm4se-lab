@@ -1,0 +1,23 @@
+--- a/modules/libpref/init/StaticPrefList.yaml
++++ b/modules/libpref/init/StaticPrefList.yaml
+@@ -850,7 +850,6 @@
+-  - name: network.trr.confirmation_telemetry_enabled
+-    type: bool
+-    default: true
+-    locked: false
+-    sticky: false
+-    description: "Unused preference to be removed"
+--- a/modules/libpref/init/StaticPrefListBegin.h
++++ b/modules/libpref/init/StaticPrefListBegin.h
+@@ -200,7 +200,6 @@
+-#define PREF_network_trr_confirmation_telemetry_enabled "network.trr.confirmation_telemetry_enabled"
+--- a/modules/libpref/init/StaticPrefListEnd.h
++++ b/modules/libpref/init/StaticPrefListEnd.h
+@@ -190,7 +190,6 @@
+-#undef PREF_network_trr_confirmation_telemetry_enabled
+--- a/modules/libpref/init/all.js
++++ b/modules/libpref/init/all.js
+@@ -1200,7 +1200,6 @@
+-// network.trr.confirmation_telemetry_enabled pref removed as unused
+-// Removed related initialization and any references to it
+[No other references remain]

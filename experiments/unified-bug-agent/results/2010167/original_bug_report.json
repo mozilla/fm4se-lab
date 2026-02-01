@@ -1,0 +1,473 @@
+{
+  "cf_webcompat_score": "---",
+  "priority": "P1",
+  "resolution": "FIXED",
+  "cf_fx_iteration": "---",
+  "component": "Address Bar",
+  "cf_status_firefox148": "---",
+  "triage_owner": "jteow@mozilla.com",
+  "cf_rank": null,
+  "cf_tracking_firefox147": "---",
+  "history": [
+    {
+      "who": "jira-integration@bots.tld",
+      "when": "2026-01-14T00:43:05Z",
+      "changes": [
+        {
+          "added": "https://mozilla-hub.atlassian.net/browse/SNG-3229",
+          "field_name": "see_also",
+          "removed": ""
+        }
+      ]
+    },
+    {
+      "when": "2026-01-20T23:11:09Z",
+      "who": "daisuke@birchill.co.jp",
+      "changes": [
+        {
+          "field_name": "assigned_to",
+          "removed": "nobody@mozilla.org",
+          "added": "daisuke@birchill.co.jp"
+        },
+        {
+          "removed": "",
+          "field_name": "cc",
+          "added": "daisuke@birchill.co.jp"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "flagtypes.name",
+          "added": "needinfo?(daisuke@birchill.co.jp)"
+        }
+      ],
+      "when": "2026-01-25T00:02:03Z",
+      "who": "smolnar@mozilla.com"
+    },
+    {
+      "when": "2026-01-27T04:11:36Z",
+      "who": "nfay@mozilla.com",
+      "changes": [
+        {
+          "added": "RESOLVED",
+          "field_name": "status",
+          "removed": "NEW"
+        },
+        {
+          "removed": "---",
+          "field_name": "target_milestone",
+          "added": "149 Branch"
+        },
+        {
+          "added": "FIXED",
+          "removed": "",
+          "field_name": "resolution"
+        },
+        {
+          "field_name": "cf_last_resolved",
+          "removed": "",
+          "added": "2026-01-27T04:11:36Z"
+        },
+        {
+          "removed": "---",
+          "field_name": "cf_status_firefox149",
+          "added": "fixed"
+        },
+        {
+          "comment_count": 9,
+          "removed": "",
+          "field_name": "comment_tag",
+          "comment_id": 17860921,
+          "added": "bugherder"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "removed": "needinfo?(daisuke@birchill.co.jp)",
+          "field_name": "flagtypes.name",
+          "added": ""
+        }
+      ],
+      "when": "2026-01-27T07:33:03Z",
+      "who": "daisuke@birchill.co.jp"
+    },
+    {
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "cf_qa_whiteboard",
+          "added": "[search] [qa-triage-done-c149/b148]"
+        },
+        {
+          "added": "oardelean@mozilla.com",
+          "field_name": "cc",
+          "removed": ""
+        }
+      ],
+      "when": "2026-01-28T08:18:33Z",
+      "who": "oardelean@mozilla.com"
+    },
+    {
+      "when": "2026-01-28T09:09:58Z",
+      "who": "cmuntean@mozilla.com",
+      "changes": [
+        {
+          "removed": "[search] [qa-triage-done-c149/b148]",
+          "field_name": "cf_qa_whiteboard",
+          "added": ""
+        },
+        {
+          "field_name": "status",
+          "removed": "RESOLVED",
+          "added": "VERIFIED"
+        },
+        {
+          "removed": "",
+          "field_name": "cc",
+          "added": "cmuntean@mozilla.com"
+        },
+        {
+          "added": "verified",
+          "field_name": "cf_status_firefox149",
+          "removed": "fixed"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "added": "[search] [qa-triage-done-c149/b148]",
+          "removed": "",
+          "field_name": "cf_qa_whiteboard"
+        }
+      ],
+      "who": "cmuntean@mozilla.com",
+      "when": "2026-01-28T09:10:24Z"
+    }
+  ],
+  "is_confirmed": true,
+  "comment_count": 11,
+  "type": "task",
+  "summary": "Update AMP suggestions result menu",
+  "flags": [],
+  "status": "VERIFIED",
+  "cf_tracking_firefox_esr115": "---",
+  "is_cc_accessible": true,
+  "is_creator_accessible": true,
+  "creator_detail": {
+    "nick": "adw",
+    "email": "adw@mozilla.com",
+    "real_name": "Drew Willcoxon :adw",
+    "name": "adw@mozilla.com",
+    "id": 334927
+  },
+  "groups": [],
+  "version": "unspecified",
+  "mentors": [],
+  "cf_has_str": "---",
+  "regressions": [],
+  "cf_performance_impact": "---",
+  "keywords": [],
+  "duplicates": [],
+  "cc": [
+    "cmuntean@mozilla.com",
+    "daisuke@birchill.co.jp",
+    "oardelean@mozilla.com"
+  ],
+  "cf_webcompat_priority": "---",
+  "assigned_to_detail": {
+    "email": "daisuke@birchill.co.jp",
+    "real_name": "Daisuke Akatsuka (:daisuke)",
+    "nick": "daisuke",
+    "id": 439222,
+    "name": "daisuke@birchill.co.jp"
+  },
+  "cf_status_firefox_esr115": "---",
+  "cf_status_firefox_esr140": "---",
+  "blocks": [
+    2010166
+  ],
+  "attachments": [
+    {
+      "flags": [],
+      "summary": "Bug 2010167: Standardize result menu for AMP suggestion",
+      "id": 9539573,
+      "last_change_time": "2026-01-23T01:42:03Z",
+      "bug_id": 2010167,
+      "file_name": "phabricator-D280181-url.txt",
+      "creator": "daisuke@birchill.co.jp",
+      "content_type": "text/x-phabricator-request",
+      "is_obsolete": 0,
+      "attacher": "daisuke@birchill.co.jp",
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjgwMTgx",
+      "creation_time": "2026-01-23T01:42:03Z",
+      "is_private": 0,
+      "is_patch": 0,
+      "size": 48,
+      "creator_detail": {
+        "email": "daisuke@birchill.co.jp",
+        "real_name": "Daisuke Akatsuka (:daisuke)",
+        "nick": "daisuke",
+        "name": "daisuke@birchill.co.jp",
+        "id": 439222
+      },
+      "description": "Bug 2010167: Standardize result menu for AMP suggestion"
+    }
+  ],
+  "assigned_to": "daisuke@birchill.co.jp",
+  "cf_qa_whiteboard": "[search] [qa-triage-done-c149/b148]",
+  "cf_user_story": "",
+  "cf_fx_points": "---",
+  "cf_a11y_review_project_flag": "---",
+  "cf_tracking_firefox148": "---",
+  "creation_time": "2026-01-14T00:42:32Z",
+  "cf_tracking_firefox_relnote": "---",
+  "mentors_detail": [],
+  "dupe_of": null,
+  "whiteboard": "[sng]",
+  "url": "",
+  "target_milestone": "149 Branch",
+  "cc_detail": [
+    {
+      "name": "cmuntean@mozilla.com",
+      "id": 558164,
+      "real_name": "Cosmin Muntean [:cmuntean], Ecosystem QA",
+      "email": "cmuntean@mozilla.com",
+      "nick": "cmuntean"
+    },
+    {
+      "name": "daisuke@birchill.co.jp",
+      "id": 439222,
+      "real_name": "Daisuke Akatsuka (:daisuke)",
+      "email": "daisuke@birchill.co.jp",
+      "nick": "daisuke"
+    },
+    {
+      "name": "oardelean@mozilla.com",
+      "id": 700963,
+      "nick": "oardelean",
+      "email": "oardelean@mozilla.com",
+      "real_name": "Ardelean Oana, Desktop Test Engineering [:oardelean]"
+    }
+  ],
+  "cf_cab_review": "---",
+  "creator": "adw@mozilla.com",
+  "classification": "Client Software",
+  "cf_crash_signature": "",
+  "severity": "N/A",
+  "last_change_time": "2026-01-28T09:10:24Z",
+  "votes": 0,
+  "depends_on": [],
+  "alias": null,
+  "description": "Update the result menu for AMP suggestions as shown in [the Figma spec](https://www.figma.com/design/HlHYKdDVCszbbpjuovBDjg/Carrots---S-S-Online-Explorations?node-id=6493-1833&t=hvtXXuEV9Qui4NIi-0).",
+  "op_sys": "Unspecified",
+  "is_open": false,
+  "see_also": [
+    "https://mozilla-hub.atlassian.net/browse/SNG-3229"
+  ],
+  "cf_accessibility_severity": "---",
+  "filed_via": "standard_form",
+  "triage_owner_detail": {
+    "email": "jteow@mozilla.com",
+    "real_name": "James Teow [:jteow]",
+    "nick": "jteow",
+    "name": "jteow@mozilla.com",
+    "id": 701257
+  },
+  "regressed_by": [],
+  "last_change_time_non_bot": "2026-01-28T09:10:24Z",
+  "cf_status_firefox149": "verified",
+  "product": "Firefox",
+  "comments": [
+    {
+      "count": 0,
+      "is_private": false,
+      "raw_text": "Update the result menu for AMP suggestions as shown in [the Figma spec](https://www.figma.com/design/HlHYKdDVCszbbpjuovBDjg/Carrots---S-S-Online-Explorations?node-id=6493-1833&t=hvtXXuEV9Qui4NIi-0).",
+      "reactions": {},
+      "creation_time": "2026-01-14T00:42:32Z",
+      "text": "Update the result menu for AMP suggestions as shown in [the Figma spec](https://www.figma.com/design/HlHYKdDVCszbbpjuovBDjg/Carrots---S-S-Online-Explorations?node-id=6493-1833&t=hvtXXuEV9Qui4NIi-0).",
+      "creator": "adw@mozilla.com",
+      "attachment_id": null,
+      "tags": [],
+      "author": "adw@mozilla.com",
+      "bug_id": 2010167,
+      "time": "2026-01-14T00:42:32Z",
+      "id": 17841501
+    },
+    {
+      "creator": "daisuke@birchill.co.jp",
+      "author": "daisuke@birchill.co.jp",
+      "tags": [],
+      "attachment_id": 9539573,
+      "bug_id": 2010167,
+      "time": "2026-01-23T01:42:03Z",
+      "id": 17855489,
+      "raw_text": "\nDepends on D279621",
+      "reactions": {},
+      "creation_time": "2026-01-23T01:42:03Z",
+      "text": "Created attachment 9539573\nBug 2010167: Standardize result menu for AMP suggestion\n\n\nDepends on D279621",
+      "is_private": false,
+      "count": 1
+    },
+    {
+      "text": "Pushed by dakatsuka.birchill@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/7fb0e6e53e03\nhttps://hg.mozilla.org/integration/autoland/rev/f0143872246f\nStandardize result menu for AMP suggestion r=adw",
+      "count": 2,
+      "creation_time": "2026-01-24T23:24:02Z",
+      "raw_text": "Pushed by dakatsuka.birchill@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/7fb0e6e53e03\nhttps://hg.mozilla.org/integration/autoland/rev/f0143872246f\nStandardize result menu for AMP suggestion r=adw",
+      "reactions": {},
+      "is_private": false,
+      "id": 17857467,
+      "time": "2026-01-24T23:24:02Z",
+      "bug_id": 2010167,
+      "tags": [],
+      "attachment_id": null,
+      "author": "pulsebot@bmo.tld",
+      "creator": "pulsebot@bmo.tld"
+    },
+    {
+      "count": 3,
+      "is_private": false,
+      "creation_time": "2026-01-25T00:01:16Z",
+      "raw_text": "Pushed by smolnar@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/43cafd5493c5\nhttps://hg.mozilla.org/integration/autoland/rev/c85306b960ec\nRevert \"Bug 2010167: Standardize result menu for AMP suggestion r=adw\" for causing xpc failures DONTBUILD",
+      "reactions": {},
+      "text": "Pushed by smolnar@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/43cafd5493c5\nhttps://hg.mozilla.org/integration/autoland/rev/c85306b960ec\nRevert \"Bug 2010167: Standardize result menu for AMP suggestion r=adw\" for causing xpc failures DONTBUILD",
+      "tags": [],
+      "author": "pulsebot@bmo.tld",
+      "attachment_id": null,
+      "bug_id": 2010167,
+      "creator": "pulsebot@bmo.tld",
+      "id": 17857482,
+      "time": "2026-01-25T00:01:16Z"
+    },
+    {
+      "creation_time": "2026-01-25T00:02:03Z",
+      "raw_text": "Backed out for causing xpc failures\n\nBackout link: hg.mozilla.org/integration/autoland/rev/c85306b960ec1745f905ef02ec3add936db3d2f1\n\n[Push with failures](https://treeherder.mozilla.org/jobs?repo=autoland&selectedTaskRun=CC_e1Q1KTcueVYovRsWSFg.0&resultStatus=testfailed%2Cbusted%2Cexception%2Crunnable&revision=f0143872246f9243bbda5d90f828d4f604970edd&searchStr=Linux%2C24.04%2Ctsan%2Copt%2CXpcshell%2Ctests%2Ctest-linux2404-64-tsan%2Fopt-xpcshell%2CX7)\n\n[Failure log -> TEST-UNEXPECTED-FAIL | browser/components/urlbar/tests/quicksuggest/unit/test_quicksuggest_merino.js](https://treeherder.mozilla.org/logviewer?job_id=545294478&repo=autoland&task=CC_e1Q1KTcueVYovRsWSFg.0&lineNumber=2802)",
+      "reactions": {},
+      "text": "Backed out for causing xpc failures\n\nBackout link: hg.mozilla.org/integration/autoland/rev/c85306b960ec1745f905ef02ec3add936db3d2f1\n\n[Push with failures](https://treeherder.mozilla.org/jobs?repo=autoland&selectedTaskRun=CC_e1Q1KTcueVYovRsWSFg.0&resultStatus=testfailed%2Cbusted%2Cexception%2Crunnable&revision=f0143872246f9243bbda5d90f828d4f604970edd&searchStr=Linux%2C24.04%2Ctsan%2Copt%2CXpcshell%2Ctests%2Ctest-linux2404-64-tsan%2Fopt-xpcshell%2CX7)\n\n[Failure log -> TEST-UNEXPECTED-FAIL | browser/components/urlbar/tests/quicksuggest/unit/test_quicksuggest_merino.js](https://treeherder.mozilla.org/logviewer?job_id=545294478&repo=autoland&task=CC_e1Q1KTcueVYovRsWSFg.0&lineNumber=2802)",
+      "bug_id": 2010167,
+      "tags": [],
+      "attachment_id": null,
+      "author": "smolnar@mozilla.com",
+      "creator": "smolnar@mozilla.com",
+      "id": 17857483,
+      "time": "2026-01-25T00:02:03Z",
+      "count": 4,
+      "is_private": false
+    },
+    {
+      "id": 17857751,
+      "time": "2026-01-26T01:06:08Z",
+      "tags": [],
+      "attachment_id": null,
+      "author": "pulsebot@bmo.tld",
+      "bug_id": 2010167,
+      "creator": "pulsebot@bmo.tld",
+      "text": "Pushed by dakatsuka.birchill@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/edcedc917891\nhttps://hg.mozilla.org/integration/autoland/rev/a2e7d0cccc95\nStandardize result menu for AMP suggestion r=adw",
+      "creation_time": "2026-01-26T01:06:08Z",
+      "raw_text": "Pushed by dakatsuka.birchill@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/edcedc917891\nhttps://hg.mozilla.org/integration/autoland/rev/a2e7d0cccc95\nStandardize result menu for AMP suggestion r=adw",
+      "reactions": {},
+      "is_private": false,
+      "count": 5
+    },
+    {
+      "tags": [],
+      "author": "pulsebot@bmo.tld",
+      "attachment_id": null,
+      "bug_id": 2010167,
+      "creator": "pulsebot@bmo.tld",
+      "id": 17857767,
+      "is_private": false,
+      "time": "2026-01-26T02:34:01Z",
+      "creation_time": "2026-01-26T02:34:01Z",
+      "reactions": {},
+      "raw_text": "Pushed by abutkovits@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/0305418534a1\nhttps://hg.mozilla.org/integration/autoland/rev/420f69e19ff9\nRevert \"Bug 2010167: Standardize result menu for AMP suggestion r=adw\" for causing failures at browser_quicksuggest_ping_amp.js.",
+      "count": 6,
+      "text": "Pushed by abutkovits@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/0305418534a1\nhttps://hg.mozilla.org/integration/autoland/rev/420f69e19ff9\nRevert \"Bug 2010167: Standardize result menu for AMP suggestion r=adw\" for causing failures at browser_quicksuggest_ping_amp.js."
+    },
+    {
+      "is_private": false,
+      "count": 7,
+      "id": 17857768,
+      "time": "2026-01-26T02:36:14Z",
+      "author": "abutkovits@mozilla.com",
+      "tags": [],
+      "attachment_id": null,
+      "bug_id": 2010167,
+      "creator": "abutkovits@mozilla.com",
+      "text": "Backed out for causing failures at browser_quicksuggest_ping_amp.js.\n\nBackout link: https://hg-edge.mozilla.org/integration/autoland/rev/420f69e19ff91f3f211c04792aaa2cab1e4341b0\n\nPush with failures: https://treeherder.mozilla.org/jobs?repo=autoland&resultStatus=testfailed%2Cbusted%2Cexception%2Cretry%2Cusercancel&revision=a2e7d0cccc95fd470532b6813a9deaf85357c26d&selectedTaskRun=RFvBT1CuSU6t1aG3bV317A.0\n\nFailure log: https://treeherder.mozilla.org/logviewer?job_id=545354835&repo=autoland&task=RFvBT1CuSU6t1aG3bV317A.0&lineNumber=13946",
+      "creation_time": "2026-01-26T02:36:14Z",
+      "raw_text": "Backed out for causing failures at browser_quicksuggest_ping_amp.js.\n\nBackout link: https://hg-edge.mozilla.org/integration/autoland/rev/420f69e19ff91f3f211c04792aaa2cab1e4341b0\n\nPush with failures: https://treeherder.mozilla.org/jobs?repo=autoland&resultStatus=testfailed%2Cbusted%2Cexception%2Cretry%2Cusercancel&revision=a2e7d0cccc95fd470532b6813a9deaf85357c26d&selectedTaskRun=RFvBT1CuSU6t1aG3bV317A.0\n\nFailure log: https://treeherder.mozilla.org/logviewer?job_id=545354835&repo=autoland&task=RFvBT1CuSU6t1aG3bV317A.0&lineNumber=13946",
+      "reactions": {}
+    },
+    {
+      "count": 8,
+      "is_private": false,
+      "text": "Pushed by dakatsuka.birchill@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/95e18c4f0018\nhttps://hg.mozilla.org/integration/autoland/rev/5de2bda19e18\nStandardize result menu for AMP suggestion r=adw",
+      "creation_time": "2026-01-26T21:54:50Z",
+      "raw_text": "Pushed by dakatsuka.birchill@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/95e18c4f0018\nhttps://hg.mozilla.org/integration/autoland/rev/5de2bda19e18\nStandardize result menu for AMP suggestion r=adw",
+      "reactions": {},
+      "id": 17860650,
+      "time": "2026-01-26T21:54:50Z",
+      "author": "pulsebot@bmo.tld",
+      "tags": [],
+      "attachment_id": null,
+      "bug_id": 2010167,
+      "creator": "pulsebot@bmo.tld"
+    },
+    {
+      "time": "2026-01-27T04:11:36Z",
+      "is_private": false,
+      "id": 17860921,
+      "creator": "nfay@mozilla.com",
+      "bug_id": 2010167,
+      "attachment_id": null,
+      "tags": [
+        "bugherder"
+      ],
+      "author": "nfay@mozilla.com",
+      "text": "https://hg.mozilla.org/mozilla-central/rev/5de2bda19e18",
+      "count": 9,
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/5de2bda19e18",
+      "reactions": {},
+      "creation_time": "2026-01-27T04:11:36Z"
+    },
+    {
+      "reactions": {},
+      "raw_text": "I have verified this on the latest Nightly 149.0a1 (Build ID: 20260127212501) on Windows 10, macOS 14.4.1 and Ubuntu 24.0. Here are the results:\nThe AMP sponsored results menu contains the following options:\n- Show less frequently\n- Dismiss this suggestion\n- Separator line\n- Manage Firefox Suggest\n- Learn more\n\nThe options are implemented as described in [Figma](https://www.figma.com/design/HlHYKdDVCszbbpjuovBDjg/Carrots---S-S-Online-Explorations?node-id=6493-1833&t=ZmyKW5LGOsTL8iPC-0) and work as expected.",
+      "creation_time": "2026-01-28T09:09:58Z",
+      "text": "I have verified this on the latest Nightly 149.0a1 (Build ID: 20260127212501) on Windows 10, macOS 14.4.1 and Ubuntu 24.0. Here are the results:\nThe AMP sponsored results menu contains the following options:\n- Show less frequently\n- Dismiss this suggestion\n- Separator line\n- Manage Firefox Suggest\n- Learn more\n\nThe options are implemented as described in [Figma](https://www.figma.com/design/HlHYKdDVCszbbpjuovBDjg/Carrots---S-S-Online-Explorations?node-id=6493-1833&t=ZmyKW5LGOsTL8iPC-0) and work as expected.",
+      "creator": "cmuntean@mozilla.com",
+      "tags": [],
+      "attachment_id": null,
+      "author": "cmuntean@mozilla.com",
+      "bug_id": 2010167,
+      "time": "2026-01-28T09:09:58Z",
+      "id": 17862850,
+      "count": 10,
+      "is_private": false
+    }
+  ],
+  "platform": "Unspecified",
+  "cf_tracking_firefox_esr140": "---",
+  "counts": {
+    "duplicates": 0,
+    "regressed_by": 0,
+    "cc": 3,
+    "regressions": 0,
+    "depends_on": 1,
+    "keywords": 0,
+    "attachments": 1,
+    "blocks": 0,
+    "comments": 11
+  },
+  "id": 2010167,
+  "cf_tracking_firefox149": "---",
+  "cf_last_resolved": "2026-01-27T04:11:36Z",
+  "cf_status_firefox147": "---",
+  "qa_contact": ""
+}

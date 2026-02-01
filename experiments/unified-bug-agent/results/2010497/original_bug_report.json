@@ -1,0 +1,275 @@
+{
+  "see_also": [
+    "https://bugzilla.mozilla.org/show_bug.cgi?id=2008641"
+  ],
+  "cf_a11y_review_project_flag": "---",
+  "votes": 0,
+  "whiteboard": "",
+  "comments": [
+    {
+      "bug_id": 2010497,
+      "reactions": {},
+      "text": "By Bug 2008641, refcount of ZeroCopyUsageInfo is going to be used to check client's video frame usage.  It is necessary to avoid the refcount in areas unrelated to checking the client's video frame usage.",
+      "creator": "sotaro.ikeda.g@gmail.com",
+      "tags": [],
+      "creation_time": "2026-01-15T06:55:43Z",
+      "author": "sotaro.ikeda.g@gmail.com",
+      "count": 0,
+      "is_private": false,
+      "raw_text": "By Bug 2008641, refcount of ZeroCopyUsageInfo is going to be used to check client's video frame usage.  It is necessary to avoid the refcount in areas unrelated to checking the client's video frame usage.",
+      "time": "2026-01-15T06:55:43Z",
+      "attachment_id": null,
+      "id": 17843528
+    },
+    {
+      "tags": [],
+      "creation_time": "2026-01-15T07:09:42Z",
+      "raw_text": "",
+      "is_private": false,
+      "count": 1,
+      "author": "sotaro.ikeda.g@gmail.com",
+      "time": "2026-01-15T07:09:42Z",
+      "attachment_id": 9537811,
+      "id": 17843534,
+      "reactions": {},
+      "bug_id": 2010497,
+      "text": "Created attachment 9537811\nBug 2010497 - Use ZeroCopyUsageInfo* instead of RefPtr<ZeroCopyUsageInfo> if possible",
+      "creator": "sotaro.ikeda.g@gmail.com"
+    },
+    {
+      "bug_id": 2010497,
+      "reactions": {},
+      "text": "Pushed by sikeda.birchill@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/885cb12bd99c\nhttps://hg.mozilla.org/integration/autoland/rev/3bc64f9b485b\nUse ZeroCopyUsageInfo* instead of RefPtr<ZeroCopyUsageInfo> if possible r=gfx-reviewers,nical",
+      "creator": "pulsebot@bmo.tld",
+      "tags": [],
+      "creation_time": "2026-01-15T14:58:31Z",
+      "time": "2026-01-15T14:58:31Z",
+      "count": 2,
+      "is_private": false,
+      "author": "pulsebot@bmo.tld",
+      "raw_text": "Pushed by sikeda.birchill@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/885cb12bd99c\nhttps://hg.mozilla.org/integration/autoland/rev/3bc64f9b485b\nUse ZeroCopyUsageInfo* instead of RefPtr<ZeroCopyUsageInfo> if possible r=gfx-reviewers,nical",
+      "attachment_id": null,
+      "id": 17844105
+    },
+    {
+      "reactions": {},
+      "bug_id": 2010497,
+      "creator": "agoloman@mozilla.com",
+      "text": "https://hg.mozilla.org/mozilla-central/rev/3bc64f9b485b",
+      "creation_time": "2026-01-15T21:23:25Z",
+      "tags": [
+        "bugherder"
+      ],
+      "attachment_id": null,
+      "id": 17844753,
+      "time": "2026-01-15T21:23:25Z",
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/3bc64f9b485b",
+      "count": 3,
+      "is_private": false,
+      "author": "agoloman@mozilla.com"
+    }
+  ],
+  "cf_tracking_thunderbird_esr140": "---",
+  "cf_tracking_firefox147": "---",
+  "op_sys": "Windows",
+  "cf_tracking_firefox148": "---",
+  "cf_performance_impact": "---",
+  "cf_status_firefox147": "---",
+  "alias": null,
+  "assigned_to_detail": {
+    "id": 434202,
+    "real_name": "Sotaro Ikeda [:sotaro]",
+    "nick": "sotaro",
+    "name": "sotaro.ikeda.g@gmail.com",
+    "email": "sotaro.ikeda.g@gmail.com"
+  },
+  "is_cc_accessible": true,
+  "type": "task",
+  "cf_rank": null,
+  "triage_owner": "bhood@mozilla.com",
+  "cf_status_firefox_esr115": "---",
+  "cf_webcompat_priority": "---",
+  "is_confirmed": true,
+  "regressed_by": [],
+  "product": "Core",
+  "keywords": [],
+  "history": [
+    {
+      "changes": [
+        {
+          "field_name": "see_also",
+          "added": "https://bugzilla.mozilla.org/show_bug.cgi?id=2008641",
+          "removed": ""
+        }
+      ],
+      "who": "sotaro.ikeda.g@gmail.com",
+      "when": "2026-01-15T07:12:25Z"
+    },
+    {
+      "changes": [
+        {
+          "added": "pasik@iki.fi",
+          "field_name": "cc",
+          "removed": ""
+        }
+      ],
+      "when": "2026-01-15T11:10:03Z",
+      "who": "pasik@iki.fi"
+    },
+    {
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "resolution",
+          "added": "FIXED"
+        },
+        {
+          "removed": "---",
+          "field_name": "target_milestone",
+          "added": "149 Branch"
+        },
+        {
+          "field_name": "status",
+          "added": "RESOLVED",
+          "removed": "NEW"
+        },
+        {
+          "removed": "",
+          "added": "2026-01-15T21:23:25Z",
+          "field_name": "cf_last_resolved"
+        },
+        {
+          "removed": "---",
+          "field_name": "cf_status_firefox149",
+          "added": "fixed"
+        },
+        {
+          "comment_count": 3,
+          "comment_id": 17844753,
+          "field_name": "comment_tag",
+          "added": "bugherder",
+          "removed": ""
+        }
+      ],
+      "who": "agoloman@mozilla.com",
+      "when": "2026-01-15T21:23:25Z"
+    }
+  ],
+  "filed_via": "standard_form",
+  "severity": "--",
+  "regressions": [],
+  "cf_crash_signature": "",
+  "cf_status_firefox_esr140": "---",
+  "comment_count": 4,
+  "cf_cab_review": "---",
+  "platform": "Unspecified",
+  "cf_tracking_firefox_relnote": "---",
+  "cf_tracking_firefox149": "---",
+  "qa_contact": "",
+  "version": "unspecified",
+  "cf_accessibility_severity": "---",
+  "last_change_time_non_bot": "2026-01-15T21:23:25Z",
+  "creator_detail": {
+    "nick": "sotaro",
+    "name": "sotaro.ikeda.g@gmail.com",
+    "email": "sotaro.ikeda.g@gmail.com",
+    "id": 434202,
+    "real_name": "Sotaro Ikeda [:sotaro]"
+  },
+  "classification": "Components",
+  "attachments": [
+    {
+      "creation_time": "2026-01-15T07:09:42Z",
+      "is_patch": 0,
+      "flags": [],
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjc5MTEz",
+      "summary": "Bug 2010497 - Use ZeroCopyUsageInfo* instead of RefPtr<ZeroCopyUsageInfo> if possible",
+      "id": 9537811,
+      "size": 48,
+      "attacher": "sotaro.ikeda.g@gmail.com",
+      "content_type": "text/x-phabricator-request",
+      "is_private": 0,
+      "file_name": "phabricator-D279113-url.txt",
+      "last_change_time": "2026-01-15T07:09:42Z",
+      "bug_id": 2010497,
+      "creator_detail": {
+        "id": 434202,
+        "real_name": "Sotaro Ikeda [:sotaro]",
+        "nick": "sotaro",
+        "email": "sotaro.ikeda.g@gmail.com",
+        "name": "sotaro.ikeda.g@gmail.com"
+      },
+      "creator": "sotaro.ikeda.g@gmail.com",
+      "is_obsolete": 0,
+      "description": "Bug 2010497 - Use ZeroCopyUsageInfo* instead of RefPtr<ZeroCopyUsageInfo> if possible"
+    }
+  ],
+  "resolution": "FIXED",
+  "last_change_time": "2026-01-15T21:23:25Z",
+  "mentors": [],
+  "cf_tracking_firefox_esr140": "---",
+  "blocks": [],
+  "cf_has_str": "---",
+  "status": "RESOLVED",
+  "groups": [],
+  "summary": "Use ZeroCopyUsageInfo* instead of RefPtr<ZeroCopyUsageInfo> if possible",
+  "id": 2010497,
+  "cf_status_firefox148": "---",
+  "priority": "--",
+  "cf_status_thunderbird_esr140": "---",
+  "assigned_to": "sotaro.ikeda.g@gmail.com",
+  "component": "Graphics",
+  "counts": {
+    "depends_on": 0,
+    "blocks": 0,
+    "comments": 4,
+    "regressed_by": 0,
+    "regressions": 0,
+    "duplicates": 0,
+    "keywords": 0,
+    "cc": 1,
+    "attachments": 1
+  },
+  "cf_status_thunderbird_esr115": "---",
+  "is_open": false,
+  "creation_time": "2026-01-15T06:55:43Z",
+  "cf_fx_iteration": "---",
+  "cf_fx_points": "---",
+  "is_creator_accessible": true,
+  "creator": "sotaro.ikeda.g@gmail.com",
+  "description": "By Bug 2008641, refcount of ZeroCopyUsageInfo is going to be used to check client's video frame usage.  It is necessary to avoid the refcount in areas unrelated to checking the client's video frame usage.",
+  "cc": [
+    "pasik@iki.fi"
+  ],
+  "target_milestone": "149 Branch",
+  "mentors_detail": [],
+  "cf_status_firefox149": "fixed",
+  "cf_tracking_firefox_esr115": "---",
+  "cf_user_story": "",
+  "cf_webcompat_score": "---",
+  "cf_qa_whiteboard": "",
+  "cc_detail": [
+    {
+      "id": 529219,
+      "real_name": "",
+      "nick": "pasik",
+      "email": "pasik@iki.fi",
+      "name": "pasik@iki.fi"
+    }
+  ],
+  "url": "",
+  "cf_last_resolved": "2026-01-15T21:23:25Z",
+  "cf_size_estimate": "---",
+  "duplicates": [],
+  "cf_tracking_thunderbird_esr115": "---",
+  "flags": [],
+  "depends_on": [],
+  "triage_owner_detail": {
+    "nick": "bhood",
+    "email": "bhood@mozilla.com",
+    "name": "bhood@mozilla.com",
+    "real_name": "Bob Hood [:bhood]",
+    "id": 697075
+  },
+  "dupe_of": null
+}

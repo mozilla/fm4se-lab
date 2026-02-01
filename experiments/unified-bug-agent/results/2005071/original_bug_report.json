@@ -1,0 +1,636 @@
+{
+  "attachments": [
+    {
+      "is_patch": 0,
+      "creator_detail": {
+        "real_name": "edgul",
+        "name": "edgul@mozilla.com",
+        "nick": "edgul",
+        "email": "edgul@mozilla.com",
+        "id": 701256
+      },
+      "attacher": "edgul@mozilla.com",
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjc2ODU4",
+      "size": 48,
+      "is_obsolete": 0,
+      "content_type": "text/x-phabricator-request",
+      "creator": "edgul@mozilla.com",
+      "creation_time": "2025-12-17T16:35:14Z",
+      "flags": [
+        {
+          "setter": "dmeehan@mozilla.com",
+          "name": "approval-mozilla-beta",
+          "modification_date": "2026-01-22T19:10:34Z",
+          "creation_date": "2026-01-22T18:41:01Z",
+          "type_id": 721,
+          "id": 2327218,
+          "status": "-"
+        }
+      ],
+      "description": "Bug 2005071 - Fixed urlpattern bug where labels are not correctly added to match output groups r?#necko-reviewers",
+      "id": 9533693,
+      "last_change_time": "2026-01-23T03:00:49Z",
+      "is_private": 0,
+      "summary": "Bug 2005071 - Fixed urlpattern bug where labels are not correctly added to match output groups r?#necko-reviewers",
+      "file_name": "phabricator-D276858-url.txt",
+      "bug_id": 2005071
+    },
+    {
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjgwMTQw",
+      "size": 48,
+      "creator_detail": {
+        "id": 546716,
+        "email": "emilio@crisal.io",
+        "name": "emilio@crisal.io",
+        "nick": "emilio",
+        "real_name": "Emilio Cobos \u00c1lvarez [:emilio]"
+      },
+      "attacher": "emilio@crisal.io",
+      "is_patch": 0,
+      "is_obsolete": 0,
+      "content_type": "text/x-phabricator-request",
+      "flags": [
+        {
+          "status": "?",
+          "id": 2327287,
+          "modification_date": "2026-01-22T22:27:35Z",
+          "creation_date": "2026-01-22T22:27:35Z",
+          "type_id": 737,
+          "setter": "emilio@crisal.io",
+          "name": "approval-mozilla-release"
+        }
+      ],
+      "description": "Bug 2005071 - Fixed urlpattern bug where labels are not correctly added to match output groups",
+      "creator": "emilio@crisal.io",
+      "creation_time": "2026-01-22T22:27:35Z",
+      "file_name": "phabricator-D280140-url.txt",
+      "bug_id": 2005071,
+      "summary": "Bug 2005071 - Fixed urlpattern bug where labels are not correctly added to match output groups",
+      "id": 9539527,
+      "last_change_time": "2026-01-22T22:27:35Z",
+      "is_private": 0
+    }
+  ],
+  "creator_detail": {
+    "email": "edgul@mozilla.com",
+    "id": 701256,
+    "name": "edgul@mozilla.com",
+    "nick": "edgul",
+    "real_name": "edgul"
+  },
+  "cf_tracking_firefox_esr140": "---",
+  "priority": "P2",
+  "assigned_to": "edgul@mozilla.com",
+  "last_change_time_non_bot": "2026-01-23T03:00:49Z",
+  "cf_tracking_thunderbird_esr115": "---",
+  "depends_on": [],
+  "regressed_by": [],
+  "cf_a11y_review_project_flag": "---",
+  "cf_status_firefox148": "fixed",
+  "cf_status_firefox149": "---",
+  "cf_has_str": "---",
+  "cc_detail": [
+    {
+      "nick": "cbadau",
+      "name": "cbadau@mozilla.com",
+      "email": "cbadau@mozilla.com",
+      "id": 500622,
+      "real_name": "Camelia Badau [:cbadau], Desktop Test Engineering"
+    },
+    {
+      "real_name": "Donal Meehan [:dmeehan]",
+      "name": "dmeehan@mozilla.com",
+      "nick": "dmeehan",
+      "id": 695136,
+      "email": "dmeehan@mozilla.com"
+    },
+    {
+      "email": "emilio@crisal.io",
+      "id": 546716,
+      "nick": "emilio",
+      "name": "emilio@crisal.io",
+      "real_name": "Emilio Cobos \u00c1lvarez [:emilio]"
+    },
+    {
+      "real_name": "Jeff Muizelaar [:jrmuizel]",
+      "name": "jmuizelaar@mozilla.com",
+      "nick": "jrmuizel",
+      "email": "jmuizelaar@mozilla.com",
+      "id": 309398
+    },
+    {
+      "real_name": "Ryan VanderMeulen [:RyanVM]",
+      "email": "ryanvm@gmail.com",
+      "id": 75935,
+      "nick": "RyanVM",
+      "name": "ryanvm@gmail.com"
+    }
+  ],
+  "see_also": [],
+  "cf_status_thunderbird_esr140": "---",
+  "resolution": "FIXED",
+  "cf_rank": null,
+  "mentors_detail": [],
+  "cf_tracking_firefox148": "---",
+  "op_sys": "Unspecified",
+  "groups": [],
+  "summary": "urlpattern exec implementation differs from chrome",
+  "cf_status_firefox_esr115": "---",
+  "duplicates": [],
+  "cf_size_estimate": "---",
+  "alias": null,
+  "cf_user_story": "",
+  "cf_tracking_firefox_relnote": "---",
+  "history": [
+    {
+      "who": "phab-bot@bmo.tld",
+      "changes": [
+        {
+          "added": "edgul@mozilla.com",
+          "field_name": "assigned_to",
+          "removed": "nobody@mozilla.org"
+        },
+        {
+          "removed": "NEW",
+          "added": "ASSIGNED",
+          "field_name": "status"
+        }
+      ],
+      "when": "2025-12-17T16:35:14Z"
+    },
+    {
+      "when": "2025-12-19T15:26:32Z",
+      "changes": [
+        {
+          "removed": "[necko-triaged][necko-priority-queue]",
+          "field_name": "whiteboard",
+          "added": "[necko-triaged][necko-priority-queue], [wptsync upstream]"
+        }
+      ],
+      "who": "wptsync@mozilla.bugs"
+    },
+    {
+      "changes": [
+        {
+          "removed": "ASSIGNED",
+          "added": "RESOLVED",
+          "field_name": "status"
+        },
+        {
+          "removed": "---",
+          "added": "148 Branch",
+          "field_name": "target_milestone"
+        },
+        {
+          "field_name": "resolution",
+          "added": "FIXED",
+          "removed": ""
+        },
+        {
+          "removed": "",
+          "added": "2025-12-19T22:00:59Z",
+          "field_name": "cf_last_resolved"
+        },
+        {
+          "added": "fixed",
+          "removed": "---",
+          "field_name": "cf_status_firefox148"
+        },
+        {
+          "comment_id": 17816684,
+          "removed": "",
+          "added": "bugherder",
+          "field_name": "comment_tag",
+          "comment_count": 4
+        }
+      ],
+      "when": "2025-12-19T22:00:59Z",
+      "who": "sstanca@mozilla.com"
+    },
+    {
+      "when": "2026-01-13T13:44:53Z",
+      "changes": [
+        {
+          "added": "cbadau@mozilla.com",
+          "removed": "",
+          "field_name": "cc"
+        },
+        {
+          "field_name": "cf_qa_whiteboard",
+          "removed": "",
+          "added": "[qa-triage-done-c149/b148]"
+        }
+      ],
+      "who": "cbadau@mozilla.com"
+    },
+    {
+      "when": "2026-01-22T18:41:01Z",
+      "changes": [
+        {
+          "added": "approval-mozilla-beta?",
+          "removed": "",
+          "field_name": "flagtypes.name",
+          "attachment_id": 9533693
+        }
+      ],
+      "who": "edgul@mozilla.com"
+    },
+    {
+      "changes": [
+        {
+          "removed": "",
+          "added": "emilio@crisal.io",
+          "field_name": "cc"
+        },
+        {
+          "removed": "",
+          "added": "needinfo?(edgul@mozilla.com)",
+          "field_name": "flagtypes.name"
+        }
+      ],
+      "when": "2026-01-22T18:57:54Z",
+      "who": "emilio@crisal.io"
+    },
+    {
+      "who": "edgul@mozilla.com",
+      "changes": [
+        {
+          "removed": "",
+          "added": "jmuizelaar@mozilla.com",
+          "field_name": "cc"
+        },
+        {
+          "field_name": "flagtypes.name",
+          "added": "needinfo?(jmuizelaar@mozilla.com)",
+          "removed": "needinfo?(edgul@mozilla.com)"
+        }
+      ],
+      "when": "2026-01-22T19:05:19Z"
+    },
+    {
+      "who": "dmeehan@mozilla.com",
+      "when": "2026-01-22T19:10:34Z",
+      "changes": [
+        {
+          "removed": "",
+          "added": "dmeehan@mozilla.com",
+          "field_name": "cc"
+        },
+        {
+          "removed": "approval-mozilla-beta?",
+          "field_name": "flagtypes.name",
+          "added": "approval-mozilla-beta-",
+          "attachment_id": 9533693
+        }
+      ]
+    },
+    {
+      "when": "2026-01-22T19:24:42Z",
+      "changes": [
+        {
+          "attachment_id": 9533693,
+          "removed": "",
+          "added": "approval-mozilla-release?",
+          "field_name": "flagtypes.name"
+        }
+      ],
+      "who": "edgul@mozilla.com"
+    },
+    {
+      "when": "2026-01-22T19:25:08Z",
+      "changes": [
+        {
+          "removed": "needinfo?(jmuizelaar@mozilla.com)",
+          "added": "",
+          "field_name": "flagtypes.name"
+        }
+      ],
+      "who": "edgul@mozilla.com"
+    },
+    {
+      "changes": [
+        {
+          "attachment_id": 9539527,
+          "added": "approval-mozilla-release?",
+          "field_name": "flagtypes.name",
+          "removed": ""
+        }
+      ],
+      "when": "2026-01-22T22:27:35Z",
+      "who": "phab-bot@bmo.tld"
+    },
+    {
+      "who": "ryanvm@gmail.com",
+      "changes": [
+        {
+          "removed": "",
+          "added": "ryanvm@gmail.com",
+          "field_name": "cc"
+        },
+        {
+          "attachment_id": 9533693,
+          "field_name": "flagtypes.name",
+          "removed": "approval-mozilla-release?",
+          "added": ""
+        }
+      ],
+      "when": "2026-01-23T03:00:49Z"
+    }
+  ],
+  "cf_fx_points": "---",
+  "dupe_of": null,
+  "type": "defect",
+  "flags": [],
+  "creation_time": "2025-12-09T22:03:30Z",
+  "triage_owner": "valentin.gosu@gmail.com",
+  "url": "",
+  "whiteboard": "[necko-triaged][necko-priority-queue], [wptsync upstream]",
+  "cf_status_firefox147": "---",
+  "cf_webcompat_priority": "---",
+  "cf_tracking_firefox147": "---",
+  "last_change_time": "2026-01-23T03:00:49Z",
+  "cf_status_thunderbird_esr115": "---",
+  "cf_fx_iteration": "---",
+  "cf_cab_review": "---",
+  "assigned_to_detail": {
+    "nick": "edgul",
+    "name": "edgul@mozilla.com",
+    "email": "edgul@mozilla.com",
+    "id": 701256,
+    "real_name": "edgul"
+  },
+  "severity": "S3",
+  "qa_contact": "",
+  "regressions": [],
+  "cf_performance_impact": "---",
+  "filed_via": "standard_form",
+  "blocks": [
+    2005047
+  ],
+  "mentors": [],
+  "cf_last_resolved": "2025-12-19T22:00:59Z",
+  "component": "Networking",
+  "is_open": false,
+  "cf_tracking_firefox_esr115": "---",
+  "description": "Firefox's implementation suffers from a similar bug as deno, probably in the deno implementation of Exec()'s groups creation.\nWhen a pattern is constructed with a pathname that contains something like `:domain(.*)` then upon calling exec() like so:\n```\nconst url = \"https://localhost:5173/de\";\nconst urlpattern = new URLPattern(pattern);\nconst match = urlpattern.exec(url);\n```\nOutput should have: `\"groups\": { \"domain\": \"localhost\" } },` in the hostname component. \nOur implementation returns the following: `\"groups\": { \"0\": \"localhost\" } }` in the hostname component.\n\nSee also:\nurlpattern crate: https://github.com/denoland/rust-urlpattern/issues/58\ndeno: https://github.com/denoland/deno/issues/28247",
+  "classification": "Components",
+  "counts": {
+    "regressed_by": 0,
+    "cc": 5,
+    "depends_on": 1,
+    "blocks": 0,
+    "keywords": 0,
+    "duplicates": 0,
+    "regressions": 0,
+    "comments": 14,
+    "attachments": 2
+  },
+  "votes": 0,
+  "creator": "edgul@mozilla.com",
+  "cf_accessibility_severity": "---",
+  "cc": [
+    "cbadau@mozilla.com",
+    "dmeehan@mozilla.com",
+    "emilio@crisal.io",
+    "jmuizelaar@mozilla.com",
+    "ryanvm@gmail.com"
+  ],
+  "is_creator_accessible": true,
+  "is_confirmed": true,
+  "version": "unspecified",
+  "cf_status_firefox_esr140": "---",
+  "keywords": [],
+  "cf_tracking_thunderbird_esr140": "---",
+  "comments": [
+    {
+      "author": "edgul@mozilla.com",
+      "attachment_id": null,
+      "tags": [],
+      "count": 0,
+      "time": "2025-12-09T22:03:30Z",
+      "raw_text": "Firefox's implementation suffers from a similar bug as deno, probably in the deno implementation of Exec()'s groups creation.\nWhen a pattern is constructed with a pathname that contains something like `:domain(.*)` then upon calling exec() like so:\n```\nconst url = \"https://localhost:5173/de\";\nconst urlpattern = new URLPattern(pattern);\nconst match = urlpattern.exec(url);\n```\nOutput should have: `\"groups\": { \"domain\": \"localhost\" } },` in the hostname component. \nOur implementation returns the following: `\"groups\": { \"0\": \"localhost\" } }` in the hostname component.\n\nSee also:\nurlpattern crate: https://github.com/denoland/rust-urlpattern/issues/58\ndeno: https://github.com/denoland/deno/issues/28247",
+      "creation_time": "2025-12-09T22:03:30Z",
+      "creator": "edgul@mozilla.com",
+      "bug_id": 2005071,
+      "text": "Firefox's implementation suffers from a similar bug as deno, probably in the deno implementation of Exec()'s groups creation.\nWhen a pattern is constructed with a pathname that contains something like `:domain(.*)` then upon calling exec() like so:\n```\nconst url = \"https://localhost:5173/de\";\nconst urlpattern = new URLPattern(pattern);\nconst match = urlpattern.exec(url);\n```\nOutput should have: `\"groups\": { \"domain\": \"localhost\" } },` in the hostname component. \nOur implementation returns the following: `\"groups\": { \"0\": \"localhost\" } }` in the hostname component.\n\nSee also:\nurlpattern crate: https://github.com/denoland/rust-urlpattern/issues/58\ndeno: https://github.com/denoland/deno/issues/28247",
+      "is_private": false,
+      "reactions": {},
+      "id": 17800788
+    },
+    {
+      "tags": [],
+      "count": 1,
+      "time": "2025-12-17T16:35:14Z",
+      "author": "edgul@mozilla.com",
+      "attachment_id": 9533693,
+      "bug_id": 2005071,
+      "text": "Created attachment 9533693\nBug 2005071 - Fixed urlpattern bug where labels are not correctly added to match output groups r?#necko-reviewers",
+      "id": 17813353,
+      "reactions": {},
+      "is_private": false,
+      "raw_text": "",
+      "creator": "edgul@mozilla.com",
+      "creation_time": "2025-12-17T16:35:14Z"
+    },
+    {
+      "creator": "pulsebot@bmo.tld",
+      "creation_time": "2025-12-19T15:24:51Z",
+      "raw_text": "Pushed by eguloien@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/3ae7131cd221\nhttps://hg.mozilla.org/integration/autoland/rev/663a3ee5e134\nFixed urlpattern bug where labels are not correctly added to match output groups r=necko-reviewers,valentin",
+      "id": 17816283,
+      "reactions": {},
+      "is_private": false,
+      "text": "Pushed by eguloien@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/3ae7131cd221\nhttps://hg.mozilla.org/integration/autoland/rev/663a3ee5e134\nFixed urlpattern bug where labels are not correctly added to match output groups r=necko-reviewers,valentin",
+      "bug_id": 2005071,
+      "author": "pulsebot@bmo.tld",
+      "attachment_id": null,
+      "time": "2025-12-19T15:24:51Z",
+      "count": 2,
+      "tags": []
+    },
+    {
+      "text": "Created web-platform-tests PR https://github.com/web-platform-tests/wpt/pull/56879 for changes under testing/web-platform/tests",
+      "count": 3,
+      "tags": [],
+      "bug_id": 2005071,
+      "time": "2025-12-19T15:26:27Z",
+      "reactions": {},
+      "id": 17816285,
+      "is_private": false,
+      "raw_text": "Created web-platform-tests PR https://github.com/web-platform-tests/wpt/pull/56879 for changes under testing/web-platform/tests",
+      "attachment_id": null,
+      "author": "wptsync@mozilla.bugs",
+      "creator": "wptsync@mozilla.bugs",
+      "creation_time": "2025-12-19T15:26:27Z"
+    },
+    {
+      "text": "https://hg.mozilla.org/mozilla-central/rev/663a3ee5e134",
+      "bug_id": 2005071,
+      "reactions": {},
+      "id": 17816684,
+      "is_private": false,
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/663a3ee5e134",
+      "creator": "sstanca@mozilla.com",
+      "creation_time": "2025-12-19T22:00:59Z",
+      "count": 4,
+      "tags": [
+        "bugherder"
+      ],
+      "time": "2025-12-19T22:00:59Z",
+      "author": "sstanca@mozilla.com",
+      "attachment_id": null
+    },
+    {
+      "bug_id": 2005071,
+      "tags": [],
+      "count": 5,
+      "text": "Upstream PR merged by moz-wptsync-bot",
+      "is_private": false,
+      "reactions": {},
+      "id": 17816786,
+      "time": "2025-12-19T22:52:01Z",
+      "attachment_id": null,
+      "author": "wptsync@mozilla.bugs",
+      "raw_text": "Upstream PR merged by moz-wptsync-bot",
+      "creation_time": "2025-12-19T22:52:01Z",
+      "creator": "wptsync@mozilla.bugs"
+    },
+    {
+      "count": 6,
+      "text": "Comment on attachment 9533693\nBug 2005071 - Fixed urlpattern bug where labels are not correctly added to match output groups r?#necko-reviewers\n\n### Beta/Release Uplift Approval Request\n* **User impact if declined/Reason for urgency**: Users with fairly common URLPattern input patterns that do use group results will continue to experience web compat issues\n* **Is this code covered by automated tests?**: Yes\n* **Has the fix been verified in Nightly?**: Yes\n* **Needs manual test from QE?**: No\n* **If yes, steps to reproduce**: \n* **List of other uplifts needed**: None\n* **Risk to taking this patch**: Low\n* **Why is the change risky/not risky? (and alternatives if risky)**: Not risky: Added a test to verify correctness of the input in question, and all other webplatform tests are still passing as well\n* **String changes made/needed**: \n* **Is Android affected?**: Yes",
+      "bug_id": 2005071,
+      "tags": [],
+      "time": "2026-01-22T18:41:01Z",
+      "is_private": false,
+      "id": 17855045,
+      "reactions": {},
+      "author": "edgul@mozilla.com",
+      "attachment_id": 9533693,
+      "raw_text": "### Beta/Release Uplift Approval Request\n* **User impact if declined/Reason for urgency**: Users with fairly common URLPattern input patterns that do use group results will continue to experience web compat issues\n* **Is this code covered by automated tests?**: Yes\n* **Has the fix been verified in Nightly?**: Yes\n* **Needs manual test from QE?**: No\n* **If yes, steps to reproduce**: \n* **List of other uplifts needed**: None\n* **Risk to taking this patch**: Low\n* **Why is the change risky/not risky? (and alternatives if risky)**: Not risky: Added a test to verify correctness of the input in question, and all other webplatform tests are still passing as well\n* **String changes made/needed**: \n* **Is Android affected?**: Yes",
+      "creation_time": "2026-01-22T18:41:01Z",
+      "creator": "edgul@mozilla.com"
+    },
+    {
+      "author": "emilio@crisal.io",
+      "attachment_id": null,
+      "time": "2026-01-22T18:57:54Z",
+      "count": 7,
+      "tags": [],
+      "creator": "emilio@crisal.io",
+      "creation_time": "2026-01-22T18:57:54Z",
+      "raw_text": "It seems this patch is already in beta, right? It made it to 148.",
+      "reactions": {},
+      "id": 17855062,
+      "is_private": false,
+      "text": "It seems this patch is already in beta, right? It made it to 148.",
+      "bug_id": 2005071
+    },
+    {
+      "creation_time": "2026-01-22T19:00:59Z",
+      "creator": "emilio@crisal.io",
+      "attachment_id": null,
+      "author": "emilio@crisal.io",
+      "raw_text": "(I can take care of the release uplift)",
+      "is_private": false,
+      "reactions": {},
+      "id": 17855067,
+      "time": "2026-01-22T19:00:59Z",
+      "bug_id": 2005071,
+      "tags": [],
+      "count": 8,
+      "text": "(I can take care of the release uplift)"
+    },
+    {
+      "raw_text": "You are right, already in beta. I was asked to uplift to beta, Jeff did you mean release?",
+      "creator": "edgul@mozilla.com",
+      "creation_time": "2026-01-22T19:05:19Z",
+      "bug_id": 2005071,
+      "text": "You are right, already in beta. I was asked to uplift to beta, Jeff did you mean release?",
+      "reactions": {},
+      "id": 17855075,
+      "is_private": false,
+      "attachment_id": null,
+      "author": "edgul@mozilla.com",
+      "tags": [],
+      "count": 9,
+      "time": "2026-01-22T19:05:19Z"
+    },
+    {
+      "raw_text": "This is already in Fx148 beta, it landed during the Fx148 nightly cycle.",
+      "creator": "dmeehan@mozilla.com",
+      "creation_time": "2026-01-22T19:10:34Z",
+      "text": "Comment on attachment 9533693\nBug 2005071 - Fixed urlpattern bug where labels are not correctly added to match output groups r?#necko-reviewers\n\nThis is already in Fx148 beta, it landed during the Fx148 nightly cycle.",
+      "bug_id": 2005071,
+      "reactions": {},
+      "id": 17855084,
+      "is_private": false,
+      "attachment_id": 9533693,
+      "author": "dmeehan@mozilla.com",
+      "count": 10,
+      "tags": [],
+      "time": "2026-01-22T19:10:34Z"
+    },
+    {
+      "text": "Comment on attachment 9533693\nBug 2005071 - Fixed urlpattern bug where labels are not correctly added to match output groups r?#necko-reviewers\n\n### Beta/Release Uplift Approval Request\n* **User impact if declined/Reason for urgency**: Users with fairly common URLPattern input patterns that do use group results will continue to experience web compat issues\n* **Is this code covered by automated tests?**: Yes\n* **Has the fix been verified in Nightly?**: Yes\n* **Needs manual test from QE?**: No\n* **If yes, steps to reproduce**: \n* **List of other uplifts needed**: None\n* **Risk to taking this patch**: Low\n* **Why is the change risky/not risky? (and alternatives if risky)**: Not risky: Added a test to verify correctness of the input in question, and all other webplatform tests are still passing as well\n* **String changes made/needed**: \n* **Is Android affected?**: Yes",
+      "count": 11,
+      "tags": [],
+      "bug_id": 2005071,
+      "time": "2026-01-22T19:24:42Z",
+      "reactions": {},
+      "id": 17855099,
+      "is_private": false,
+      "raw_text": "### Beta/Release Uplift Approval Request\n* **User impact if declined/Reason for urgency**: Users with fairly common URLPattern input patterns that do use group results will continue to experience web compat issues\n* **Is this code covered by automated tests?**: Yes\n* **Has the fix been verified in Nightly?**: Yes\n* **Needs manual test from QE?**: No\n* **If yes, steps to reproduce**: \n* **List of other uplifts needed**: None\n* **Risk to taking this patch**: Low\n* **Why is the change risky/not risky? (and alternatives if risky)**: Not risky: Added a test to verify correctness of the input in question, and all other webplatform tests are still passing as well\n* **String changes made/needed**: \n* **Is Android affected?**: Yes",
+      "author": "edgul@mozilla.com",
+      "attachment_id": 9533693,
+      "creator": "edgul@mozilla.com",
+      "creation_time": "2026-01-22T19:24:42Z"
+    },
+    {
+      "author": "edgul@mozilla.com",
+      "attachment_id": null,
+      "tags": [],
+      "count": 12,
+      "time": "2026-01-22T19:25:08Z",
+      "raw_text": "Apologies, aiming for release with this.",
+      "creation_time": "2026-01-22T19:25:08Z",
+      "creator": "edgul@mozilla.com",
+      "bug_id": 2005071,
+      "text": "Apologies, aiming for release with this.",
+      "is_private": false,
+      "reactions": {},
+      "id": 17855103
+    },
+    {
+      "bug_id": 2005071,
+      "text": "Created attachment 9539527\nBug 2005071 - Fixed urlpattern bug where labels are not correctly added to match output groups\n\n\nOriginal Revision: https://phabricator.services.mozilla.com/D276858",
+      "is_private": false,
+      "reactions": {},
+      "id": 17855322,
+      "raw_text": "\nOriginal Revision: https://phabricator.services.mozilla.com/D276858",
+      "creation_time": "2026-01-22T22:27:35Z",
+      "creator": "emilio@crisal.io",
+      "tags": [],
+      "count": 13,
+      "time": "2026-01-22T22:27:35Z",
+      "attachment_id": 9539527,
+      "author": "emilio@crisal.io"
+    }
+  ],
+  "cf_qa_whiteboard": "[qa-triage-done-c149/b148]",
+  "comment_count": 14,
+  "product": "Core",
+  "cf_webcompat_score": "---",
+  "cf_tracking_firefox149": "---",
+  "status": "RESOLVED",
+  "triage_owner_detail": {
+    "real_name": "Valentin Gosu [:valentin] (he/him)",
+    "email": "valentin.gosu@gmail.com",
+    "id": 415378,
+    "name": "valentin.gosu@gmail.com",
+    "nick": "valentin"
+  },
+  "platform": "Unspecified",
+  "is_cc_accessible": true,
+  "target_milestone": "148 Branch",
+  "cf_crash_signature": "",
+  "id": 2005071
+}

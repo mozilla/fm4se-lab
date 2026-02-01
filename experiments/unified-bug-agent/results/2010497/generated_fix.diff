@@ -1,0 +1,48 @@
+--- a/gfx/CanvasRenderingContext2D.cpp
++++ b/gfx/CanvasRenderingContext2D.cpp
+@@ -1500,10 +1500,10 @@
+-  RefPtr<ZeroCopyUsageInfo> usageInfo = GetZeroCopyUsageInfo();
++  ZeroCopyUsageInfo* usageInfo = GetZeroCopyUsageInfo();
+ 
+-  if (!usageInfo) {
+-    return;
+-  }
++  if (!usageInfo) {
++    return;
++  }
+ 
+-  usageInfo->AddUsage();
++  usageInfo->AddUsage();
+ 
+-  RefPtr<ZeroCopyUsageInfo> usageInfoForVideo = GetZeroCopyUsageInfoForVideoFrame();
+-  if (usageInfoForVideo) {
+-    usageInfoForVideo->VerifyVideoFrameUsage();
+-  }
++  RefPtr<ZeroCopyUsageInfo> usageInfoForVideo = GetZeroCopyUsageInfoForVideoFrame();
++  if (usageInfoForVideo) {
++    usageInfoForVideo->VerifyVideoFrameUsage();
++  }
+--- a/dom/canvas/WebGLContext.cpp
++++ b/dom/canvas/WebGLContext.cpp
+@@ -2300,12 +2300,12 @@
+-  RefPtr<ZeroCopyUsageInfo> usageInfo = GetZeroCopyUsageInfo();
++  ZeroCopyUsageInfo* usageInfo = GetZeroCopyUsageInfo();
+ 
+-  if (!usageInfo) {
+-    return;
+-  }
++  if (!usageInfo) {
++    return;
++  }
+ 
+-  usageInfo->AddUsage();
++  usageInfo->AddUsage();
+ 
+-  RefPtr<ZeroCopyUsageInfo> usageInfoForVideo = GetZeroCopyUsageInfoForVideoFrame();
+-  if (usageInfoForVideo) {
+-    usageInfoForVideo->VerifyVideoFrameUsage();
+-  }
++  RefPtr<ZeroCopyUsageInfo> usageInfoForVideo = GetZeroCopyUsageInfoForVideoFrame();
++  if (usageInfoForVideo) {
++    usageInfoForVideo->VerifyVideoFrameUsage();
++  }

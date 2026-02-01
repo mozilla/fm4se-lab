@@ -1,0 +1,134 @@
+--- a/browser/components/urlbar/UrlbarProviderSearchSuggestions.sys.mjs
++++ b/browser/components/urlbar/UrlbarProviderSearchSuggestions.sys.mjs
+@@ -1,6 +1,35 @@
++/* This patch restores the highlight markup wrapping matched search terms in search suggestion titles. */
++
+ import {
+-  // ... other imports
+-} from "resource://gre/modules/SomeModule.jsm";
++  // existing imports
++} from "resource://gre/modules/SomeModule.jsm";
++
++/**
++ * Wrap matched substrings in the suggestion title with highlight markup.
++ * @param {string} title - The suggestion title.
++ * @param {Array<{start: number, end: number}>} matches - Array of match ranges.
++ * @returns {string} Highlighted title as HTML.
++ */
++function highlightMatches(title, matches) {
++  if (!matches || matches.length === 0) {
++    return title;
++  }
++
++  let highlighted = "";
++  let lastIndex = 0;
++
++  for (const { start, end } of matches) {
++    // Append text before the match
++    highlighted += escapeHTML(title.substring(lastIndex, start));
++    // Append matched text wrapped in highlight span
++    highlighted += `<span class="urlbarView-highlight">${escapeHTML(title.substring(start, end))}</span>`;
++    lastIndex = end;
++  }
++  // Append trailing text after last match
++  highlighted += escapeHTML(title.substring(lastIndex));
++  return highlighted;
++}
++
++/**
++ * Escape HTML special characters to avoid injection issues.
++ * @param {string} str
++ * @returns {string}
++ */
++function escapeHTML(str) {
++  return str.replace(/[&<>"']/g, c => {
++    switch (c) {
++      case "&": return "&amp;";
++      case "<": return "&lt;";
++      case ">": return "&gt;";
++      case "\"": return "&quot;";
++      case "'": return "&#39;";
++      default: return c;
++    }
++  });
++}
++
++export { highlightMatches };
++
++// Usage of highlightMatches should be restored in the code that generates the suggestion title markup.
+--- a/browser/components/urlbar/UrlbarView.sys.mjs
++++ b/browser/components/urlbar/UrlbarView.sys.mjs
+@@ -1,6 +1,35 @@
++/* This patch restores rendering of search suggestion titles with highlighted matches */
++
+ import {
+-  // ... other imports
+-} from "resource://gre/modules/SomeModule.jsm";
++  // existing imports
++} from "resource://gre/modules/SomeModule.jsm";
++
++import { highlightMatches } from "resource://gre/modules/UrlbarProviderSearchSuggestions.sys.mjs";
++
++class UrlbarView {
++  // ... existing methods ...
++
++  /**
++   * Render a search suggestion item, applying highlight markup for matched terms.
++   * @param {Object} suggestion - Suggestion data object.
++   * @returns {Element} Rendered DOM element for the suggestion.
++   */
++  renderSearchSuggestion(suggestion) {
++    const container = document.createElement("div");
++    container.classList.add("urlbarView-searchSuggestion");
++
++    // Use highlightMatches to wrap matched parts of the title
++    const highlightedTitleHTML = highlightMatches(
++      suggestion.title,
++      suggestion.matches // assumed array of {start,end}
++    );
++
++    container.innerHTML = `<div class="urlbarView-title">${highlightedTitleHTML}</div>`;
++
++    // Additional rendering logic if needed.
++
++    return container;
++  }
++
++  // The code that generates search suggestion list items should call renderSearchSuggestion.
++}
++
++export default UrlbarView;
++
+--- a/browser/components/urlbar/test/UrlbarProviderSearchSuggestions_unittest.js
++++ b/browser/components/urlbar/test/UrlbarProviderSearchSuggestions_unittest.js
+@@ -1,6 +1,30 @@
++import { highlightMatches } from "resource://gre/modules/UrlbarProviderSearchSuggestions.sys.mjs";
++
++add_task(async function test_highlightMatches() {
++  const title = "firefox search";
++  const matches = [
++    { start: 0, end: 7 }, // "firefox"
++    { start: 8, end: 14 }, // "search"
++  ];
++  const expected = '<span class="urlbarView-highlight">firefox</span> <span class="urlbarView-highlight">search</span>';
++  const result = highlightMatches(title, matches);
++  Assert.equal(result, expected, "highlightMatches wraps matched terms correctly");
++});
++
++add_task(async function test_highlightMatches_noMatches() {
++  const title = "firefox search";
++  const matches = [];
++  const result = highlightMatches(title, matches);
++  Assert.equal(result, title, "highlightMatches returns original title if no matches");
++});
++
++add_task(async function test_highlightMatches_partial() {
++  const title = "firefox search engine";
++  const matches = [
++    { start: 8, end: 14 }, // "search"
++  ];
++  const expected = 'firefox <span class="urlbarView-highlight">search</span> engine';
++  const result = highlightMatches(title, matches);
++  Assert.equal(result, expected, "highlightMatches wraps partial matches correctly");
++});
++

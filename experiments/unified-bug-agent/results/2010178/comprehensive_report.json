@@ -1,0 +1,744 @@
+{
+  "bug_id": 2010178,
+  "timestamp": "2026-02-01 18:15:31",
+  "data_sources": [
+    "bugzilla",
+    "crash-stats"
+  ],
+  "bug_data": {
+    "is_cc_accessible": true,
+    "is_creator_accessible": true,
+    "cf_tracking_firefox_esr115": "---",
+    "flags": [],
+    "status": "RESOLVED",
+    "summary": "Update the AMP suggestions row UI",
+    "type": "task",
+    "comment_count": 5,
+    "history": [
+      {
+        "when": "2026-01-14T01:03:21Z",
+        "who": "jira-integration@bots.tld",
+        "changes": [
+          {
+            "added": "https://mozilla-hub.atlassian.net/browse/SNG-3240",
+            "field_name": "see_also",
+            "removed": ""
+          }
+        ]
+      },
+      {
+        "changes": [
+          {
+            "added": "Update the AMP suggestions row UI",
+            "removed": "Add \"Sponsored\" bottom text label to higher-placement (top pick) AMP suggestions",
+            "field_name": "summary"
+          }
+        ],
+        "who": "adw@mozilla.com",
+        "when": "2026-01-14T01:37:48Z"
+      },
+      {
+        "changes": [
+          {
+            "added": "2010180",
+            "field_name": "duplicates",
+            "removed": ""
+          }
+        ],
+        "who": "adw@mozilla.com",
+        "when": "2026-01-14T01:40:17Z"
+      },
+      {
+        "changes": [
+          {
+            "added": "ASSIGNED",
+            "removed": "NEW",
+            "field_name": "status"
+          },
+          {
+            "field_name": "assigned_to",
+            "removed": "nobody@mozilla.org",
+            "added": "adw@mozilla.com"
+          }
+        ],
+        "when": "2026-01-24T02:32:14Z",
+        "who": "adw@mozilla.com"
+      },
+      {
+        "changes": [
+          {
+            "removed": "ASSIGNED",
+            "field_name": "status",
+            "added": "RESOLVED"
+          },
+          {
+            "added": "FIXED",
+            "field_name": "resolution",
+            "removed": ""
+          },
+          {
+            "field_name": "target_milestone",
+            "removed": "---",
+            "added": "149 Branch"
+          },
+          {
+            "added": "2026-01-29T16:08:55Z",
+            "removed": "",
+            "field_name": "cf_last_resolved"
+          },
+          {
+            "field_name": "cf_status_firefox149",
+            "removed": "---",
+            "added": "fixed"
+          },
+          {
+            "comment_count": 4,
+            "removed": "",
+            "field_name": "comment_tag",
+            "added": "bugherder",
+            "comment_id": 17865353
+          }
+        ],
+        "who": "chorotan@mozilla.com",
+        "when": "2026-01-29T16:08:55Z"
+      },
+      {
+        "when": "2026-01-30T06:40:56Z",
+        "who": "phorea@mozilla.com",
+        "changes": [
+          {
+            "added": "[search] [qa-triage-done-c149/b148]",
+            "field_name": "cf_qa_whiteboard",
+            "removed": ""
+          },
+          {
+            "added": "cmuntean@mozilla.com, phorea@mozilla.com",
+            "field_name": "cc",
+            "removed": ""
+          }
+        ]
+      }
+    ],
+    "is_confirmed": true,
+    "cf_rank": null,
+    "cf_tracking_firefox147": "---",
+    "triage_owner": "jteow@mozilla.com",
+    "cf_status_firefox148": "---",
+    "component": "Address Bar",
+    "cf_fx_iteration": "---",
+    "resolution": "FIXED",
+    "cf_webcompat_score": "---",
+    "priority": "P1",
+    "assigned_to_detail": {
+      "nick": "adw",
+      "real_name": "Drew Willcoxon :adw",
+      "email": "adw@mozilla.com",
+      "name": "adw@mozilla.com",
+      "id": 334927
+    },
+    "cf_status_firefox_esr115": "---",
+    "cf_webcompat_priority": "---",
+    "cc": [
+      "cmuntean@mozilla.com",
+      "phorea@mozilla.com"
+    ],
+    "duplicates": [
+      2010180
+    ],
+    "keywords": [],
+    "cf_performance_impact": "---",
+    "regressions": [],
+    "cf_has_str": "---",
+    "mentors": [],
+    "version": "unspecified",
+    "groups": [],
+    "creator_detail": {
+      "id": 334927,
+      "name": "adw@mozilla.com",
+      "nick": "adw",
+      "real_name": "Drew Willcoxon :adw",
+      "email": "adw@mozilla.com"
+    },
+    "votes": 0,
+    "severity": "N/A",
+    "last_change_time": "2026-01-30T06:40:56Z",
+    "classification": "Client Software",
+    "creator": "adw@mozilla.com",
+    "cf_cab_review": "---",
+    "cf_crash_signature": "",
+    "cc_detail": [
+      {
+        "id": 558164,
+        "name": "cmuntean@mozilla.com",
+        "nick": "cmuntean",
+        "email": "cmuntean@mozilla.com",
+        "real_name": "Cosmin Muntean [:cmuntean], Ecosystem QA"
+      },
+      {
+        "name": "phorea@mozilla.com",
+        "id": 475155,
+        "real_name": "Petruta Horea [:phorea]",
+        "email": "phorea@mozilla.com",
+        "nick": "phorea"
+      }
+    ],
+    "target_milestone": "149 Branch",
+    "whiteboard": "[sng]",
+    "url": "",
+    "dupe_of": null,
+    "cf_tracking_firefox_relnote": "---",
+    "mentors_detail": [],
+    "cf_tracking_firefox148": "---",
+    "creation_time": "2026-01-14T01:03:10Z",
+    "cf_a11y_review_project_flag": "---",
+    "cf_fx_points": "---",
+    "cf_user_story": "",
+    "cf_qa_whiteboard": "[search] [qa-triage-done-c149/b148]",
+    "assigned_to": "adw@mozilla.com",
+    "attachments": [
+      {
+        "description": "Bug 2010178 - Update the Firefox Suggest AMP suggestions row UI.",
+        "creator_detail": {
+          "name": "adw@mozilla.com",
+          "id": 334927,
+          "nick": "adw",
+          "email": "adw@mozilla.com",
+          "real_name": "Drew Willcoxon :adw"
+        },
+        "size": 48,
+        "is_patch": 0,
+        "is_private": 0,
+        "creation_time": "2026-01-24T03:16:20Z",
+        "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjgwMzU1",
+        "attacher": "adw@mozilla.com",
+        "content_type": "text/x-phabricator-request",
+        "is_obsolete": 0,
+        "creator": "adw@mozilla.com",
+        "file_name": "phabricator-D280355-url.txt",
+        "last_change_time": "2026-01-24T03:16:20Z",
+        "bug_id": 2010178,
+        "summary": "Bug 2010178 - Update the Firefox Suggest AMP suggestions row UI.",
+        "id": 9539866,
+        "flags": []
+      }
+    ],
+    "blocks": [
+      2010175
+    ],
+    "cf_status_firefox_esr140": "---",
+    "qa_contact": "",
+    "cf_status_firefox147": "---",
+    "cf_last_resolved": "2026-01-29T16:08:55Z",
+    "cf_tracking_firefox149": "---",
+    "id": 2010178,
+    "counts": {
+      "blocks": 0,
+      "comments": 5,
+      "keywords": 0,
+      "attachments": 1,
+      "depends_on": 1,
+      "regressions": 0,
+      "cc": 2,
+      "regressed_by": 0,
+      "duplicates": 1
+    },
+    "cf_tracking_firefox_esr140": "---",
+    "platform": "Unspecified",
+    "comments": [
+      {
+        "bug_id": 2010178,
+        "author": "adw@mozilla.com",
+        "tags": [],
+        "attachment_id": null,
+        "creator": "adw@mozilla.com",
+        "id": 17841523,
+        "time": "2026-01-14T01:03:10Z",
+        "creation_time": "2026-01-14T01:03:10Z",
+        "raw_text": "Update the AMP suggestions row UI. See [the Figma spec](https://www.figma.com/design/HlHYKdDVCszbbpjuovBDjg/Carrots---S-S-Online-Explorations?node-id=6584-5018&t=Xg06pmlLPj9lmpCj-0):\n\n* Change the separator character shown in the title from a dash to a dot, as shown in the Figma spec. [Relevant code here](https://searchfox.org/firefox-main/rev/e1eada69e2ddd86a398ccb141dcbf772254162eb/browser/components/urlbar/QuickSuggest.sys.mjs#734) -- and while we're at it, we should either change that to a proper l10n string or use a similar technique to [how realtime suggestions show a separator dot](https://searchfox.org/firefox-main/rev/e1eada69e2ddd86a398ccb141dcbf772254162eb/browser/themes/shared/urlbarView.css#1432-1438) using CSS.\n* Top pick (higher-placement) UI: Add \"Sponsored\" bottom text label\n* Show URL at the bottom on hover/selection (for both higher and lower placement)? Check with Paul et al. first since AMP suggestions currently do not show URL",
+        "reactions": {},
+        "text": "Update the AMP suggestions row UI. See [the Figma spec](https://www.figma.com/design/HlHYKdDVCszbbpjuovBDjg/Carrots---S-S-Online-Explorations?node-id=6584-5018&t=Xg06pmlLPj9lmpCj-0):\n\n* Change the separator character shown in the title from a dash to a dot, as shown in the Figma spec. [Relevant code here](https://searchfox.org/firefox-main/rev/e1eada69e2ddd86a398ccb141dcbf772254162eb/browser/components/urlbar/QuickSuggest.sys.mjs#734) -- and while we're at it, we should either change that to a proper l10n string or use a similar technique to [how realtime suggestions show a separator dot](https://searchfox.org/firefox-main/rev/e1eada69e2ddd86a398ccb141dcbf772254162eb/browser/themes/shared/urlbarView.css#1432-1438) using CSS.\n* Top pick (higher-placement) UI: Add \"Sponsored\" bottom text label\n* Show URL at the bottom on hover/selection (for both higher and lower placement)? Check with Paul et al. first since AMP suggestions currently do not show URL",
+        "is_private": false,
+        "count": 0
+      },
+      {
+        "count": 1,
+        "is_private": false,
+        "creation_time": "2026-01-14T01:40:17Z",
+        "reactions": {},
+        "raw_text": "",
+        "text": "*** Bug 2010180 has been marked as a duplicate of this bug. ***",
+        "tags": [],
+        "author": "adw@mozilla.com",
+        "attachment_id": null,
+        "bug_id": 2010178,
+        "creator": "adw@mozilla.com",
+        "id": 17841550,
+        "time": "2026-01-14T01:40:17Z"
+      },
+      {
+        "text": "Created attachment 9539866\nBug 2010178 - Update the Firefox Suggest AMP suggestions row UI.\n\nDepends on D279106",
+        "reactions": {},
+        "raw_text": "Depends on D279106",
+        "creation_time": "2026-01-24T03:16:20Z",
+        "time": "2026-01-24T03:16:20Z",
+        "id": 17857100,
+        "creator": "adw@mozilla.com",
+        "tags": [],
+        "attachment_id": 9539866,
+        "author": "adw@mozilla.com",
+        "bug_id": 2010178,
+        "count": 2,
+        "is_private": false
+      },
+      {
+        "text": "Pushed by dwillcoxon@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/c1b8a2cab74f\nhttps://hg.mozilla.org/integration/autoland/rev/373dec9a52c6\nUpdate the Firefox Suggest AMP suggestions row UI. r=daisuke",
+        "count": 3,
+        "creation_time": "2026-01-29T00:59:41Z",
+        "reactions": {},
+        "raw_text": "Pushed by dwillcoxon@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/c1b8a2cab74f\nhttps://hg.mozilla.org/integration/autoland/rev/373dec9a52c6\nUpdate the Firefox Suggest AMP suggestions row UI. r=daisuke",
+        "is_private": false,
+        "id": 17864174,
+        "time": "2026-01-29T00:59:41Z",
+        "bug_id": 2010178,
+        "tags": [],
+        "attachment_id": null,
+        "author": "pulsebot@bmo.tld",
+        "creator": "pulsebot@bmo.tld"
+      },
+      {
+        "is_private": false,
+        "id": 17865353,
+        "time": "2026-01-29T16:08:55Z",
+        "bug_id": 2010178,
+        "tags": [
+          "bugherder"
+        ],
+        "author": "chorotan@mozilla.com",
+        "attachment_id": null,
+        "creator": "chorotan@mozilla.com",
+        "text": "https://hg.mozilla.org/mozilla-central/rev/373dec9a52c6",
+        "count": 4,
+        "creation_time": "2026-01-29T16:08:55Z",
+        "raw_text": "https://hg.mozilla.org/mozilla-central/rev/373dec9a52c6",
+        "reactions": {}
+      }
+    ],
+    "product": "Firefox",
+    "cf_status_firefox149": "fixed",
+    "last_change_time_non_bot": "2026-01-30T06:40:56Z",
+    "regressed_by": [],
+    "triage_owner_detail": {
+      "email": "jteow@mozilla.com",
+      "real_name": "James Teow [:jteow]",
+      "nick": "jteow",
+      "name": "jteow@mozilla.com",
+      "id": 701257
+    },
+    "cf_accessibility_severity": "---",
+    "filed_via": "standard_form",
+    "see_also": [
+      "https://mozilla-hub.atlassian.net/browse/SNG-3240"
+    ],
+    "is_open": false,
+    "alias": null,
+    "op_sys": "Unspecified",
+    "depends_on": [],
+    "description": "Update the AMP suggestions row UI. See [the Figma spec](https://www.figma.com/design/HlHYKdDVCszbbpjuovBDjg/Carrots---S-S-Online-Explorations?node-id=6584-5018&t=Xg06pmlLPj9lmpCj-0):\n\n* Change the separator character shown in the title from a dash to a dot, as shown in the Figma spec. [Relevant code here](https://searchfox.org/firefox-main/rev/e1eada69e2ddd86a398ccb141dcbf772254162eb/browser/components/urlbar/QuickSuggest.sys.mjs#734) -- and while we're at it, we should either change that to a proper l10n string or use a similar technique to [how realtime suggestions show a separator dot](https://searchfox.org/firefox-main/rev/e1eada69e2ddd86a398ccb141dcbf772254162eb/browser/themes/shared/urlbarView.css#1432-1438) using CSS.\n* Top pick (higher-placement) UI: Add \"Sponsored\" bottom text label\n* Show URL at the bottom on hover/selection (for both higher and lower placement)? Check with Paul et al. first since AMP suggestions currently do not show URL"
+  },
+  "comments": [
+    {
+      "text": "Update the AMP suggestions row UI. See [the Figma spec](https://www.figma.com/design/HlHYKdDVCszbbpjuovBDjg/Carrots---S-S-Online-Explorations?node-id=6584-5018&t=Xg06pmlLPj9lmpCj-0):\n\n* Change the separator character shown in the title from a dash to a dot, as shown in the Figma spec. [Relevant code here](https://searchfox.org/firefox-main/rev/e1eada69e2ddd86a398ccb141dcbf772254162eb/browser/components/urlbar/QuickSuggest.sys.mjs#734) -- and while we're at it, we should either change that to a proper l10n string or use a similar technique to [how realtime suggestions show a separator dot](https://searchfox.org/firefox-main/rev/e1eada69e2ddd86a398ccb141dcbf772254162eb/browser/themes/shared/urlbarView.css#1432-1438) using CSS.\n* Top pick (higher-placement) UI: Add \"Sponsored\" bottom text label\n* Show URL at the bottom on hover/selection (for both higher and lower placement)? Check with Paul et al. first since AMP suggestions currently do not show URL",
+      "raw_text": "Update the AMP suggestions row UI. See [the Figma spec](https://www.figma.com/design/HlHYKdDVCszbbpjuovBDjg/Carrots---S-S-Online-Explorations?node-id=6584-5018&t=Xg06pmlLPj9lmpCj-0):\n\n* Change the separator character shown in the title from a dash to a dot, as shown in the Figma spec. [Relevant code here](https://searchfox.org/firefox-main/rev/e1eada69e2ddd86a398ccb141dcbf772254162eb/browser/components/urlbar/QuickSuggest.sys.mjs#734) -- and while we're at it, we should either change that to a proper l10n string or use a similar technique to [how realtime suggestions show a separator dot](https://searchfox.org/firefox-main/rev/e1eada69e2ddd86a398ccb141dcbf772254162eb/browser/themes/shared/urlbarView.css#1432-1438) using CSS.\n* Top pick (higher-placement) UI: Add \"Sponsored\" bottom text label\n* Show URL at the bottom on hover/selection (for both higher and lower placement)? Check with Paul et al. first since AMP suggestions currently do not show URL",
+      "reactions": {},
+      "creation_time": "2026-01-14T01:03:10Z",
+      "time": "2026-01-14T01:03:10Z",
+      "id": 17841523,
+      "creator": "adw@mozilla.com",
+      "attachment_id": null,
+      "tags": [],
+      "author": "adw@mozilla.com",
+      "bug_id": 2010178,
+      "count": 0,
+      "is_private": false
+    },
+    {
+      "time": "2026-01-14T01:40:17Z",
+      "is_private": false,
+      "id": 17841550,
+      "creator": "adw@mozilla.com",
+      "bug_id": 2010178,
+      "tags": [],
+      "author": "adw@mozilla.com",
+      "attachment_id": null,
+      "text": "*** Bug 2010180 has been marked as a duplicate of this bug. ***",
+      "count": 1,
+      "reactions": {},
+      "raw_text": "",
+      "creation_time": "2026-01-14T01:40:17Z"
+    },
+    {
+      "creator": "adw@mozilla.com",
+      "bug_id": 2010178,
+      "tags": [],
+      "attachment_id": 9539866,
+      "author": "adw@mozilla.com",
+      "time": "2026-01-24T03:16:20Z",
+      "is_private": false,
+      "id": 17857100,
+      "raw_text": "Depends on D279106",
+      "reactions": {},
+      "creation_time": "2026-01-24T03:16:20Z",
+      "text": "Created attachment 9539866\nBug 2010178 - Update the Firefox Suggest AMP suggestions row UI.\n\nDepends on D279106",
+      "count": 2
+    },
+    {
+      "creation_time": "2026-01-29T00:59:41Z",
+      "reactions": {},
+      "raw_text": "Pushed by dwillcoxon@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/c1b8a2cab74f\nhttps://hg.mozilla.org/integration/autoland/rev/373dec9a52c6\nUpdate the Firefox Suggest AMP suggestions row UI. r=daisuke",
+      "text": "Pushed by dwillcoxon@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/c1b8a2cab74f\nhttps://hg.mozilla.org/integration/autoland/rev/373dec9a52c6\nUpdate the Firefox Suggest AMP suggestions row UI. r=daisuke",
+      "bug_id": 2010178,
+      "attachment_id": null,
+      "tags": [],
+      "author": "pulsebot@bmo.tld",
+      "creator": "pulsebot@bmo.tld",
+      "id": 17864174,
+      "time": "2026-01-29T00:59:41Z",
+      "count": 3,
+      "is_private": false
+    },
+    {
+      "creation_time": "2026-01-29T16:08:55Z",
+      "reactions": {},
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/373dec9a52c6",
+      "count": 4,
+      "text": "https://hg.mozilla.org/mozilla-central/rev/373dec9a52c6",
+      "tags": [
+        "bugherder"
+      ],
+      "attachment_id": null,
+      "author": "chorotan@mozilla.com",
+      "bug_id": 2010178,
+      "creator": "chorotan@mozilla.com",
+      "id": 17865353,
+      "is_private": false,
+      "time": "2026-01-29T16:08:55Z"
+    }
+  ],
+  "crash_context": {
+    "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::AutoEnterOOMUnsafeRegion::crash | js::gc::AllocateTenuredCellInGC",
+    "product": "Firefox",
+    "version": "149.0a1",
+    "os": null
+  },
+  "crashes": [
+    {
+      "uuid": "315eb86a-e2be-4470-abc8-2ac290260125",
+      "date": "2026-01-25T22:13:31.132467+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::gc::FreeSpan::allocate"
+    },
+    {
+      "uuid": "e077fd70-a7d5-41ec-88b9-d02fe0260125",
+      "date": "2026-01-25T22:13:06.807327+00:00",
+      "product": "Firefox",
+      "version": "115.32.0esr",
+      "signature": "AsyncShutdownTimeout | IOUtils: waiting for profileBeforeChange IO to complete | JSON store: writing data for 'targeting.snapshot'"
+    },
+    {
+      "uuid": "419a891d-51a5-4ddb-9a6b-b5af30260125",
+      "date": "2026-01-25T22:13:05.249120+00:00",
+      "product": "Firefox",
+      "version": "115.32.0esr",
+      "signature": "js::gc::MarkBitmap::markIfUnmarked"
+    },
+    {
+      "uuid": "90b8b865-2abe-4090-81a9-d4f700260125",
+      "date": "2026-01-25T22:12:42.407043+00:00",
+      "product": "Firefox",
+      "version": "122.0.1",
+      "signature": "shutdownhang | mozilla::SpinEventLoopUntil | nsThread::WaitForAllAsynchronousShutdowns | nsThreadManager::ShutdownNonMainThreads"
+    },
+    {
+      "uuid": "7442d0b9-fee3-45b5-9e92-144ce0260125",
+      "date": "2026-01-25T22:16:30.651742+00:00",
+      "product": "Fenix",
+      "version": "147.0.1",
+      "signature": "_ZNSt6__ndk112__hash_tableINS_17__hash_value_typeIiiEENS_22__unordered_map_hasherIiS2_NS_4hashIiEENS_8equal_toIiEELb1EEENS_21__unordered_map_equalIiS2_S7_S5_Lb1EEEN2v88internal13ZoneAllocatorIS2_EEE16__emplace_uniqueB8nn210000IRiSH_TnNS_9enable_ifIXsr2..."
+    },
+    {
+      "uuid": "3fedcf76-919b-4dec-880a-345d20260125",
+      "date": "2026-01-25T22:15:20.431455+00:00",
+      "product": "Fenix",
+      "version": "147.0.1",
+      "signature": "libart.so | boot-core-libart.oat"
+    },
+    {
+      "uuid": "43f2bcff-b2dc-4526-9763-9ccc00260125",
+      "date": "2026-01-25T22:13:46.249985+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::AutoEnterOOMUnsafeRegion::crash | js::Nursery::maybeMoveRawBufferOnPromotion"
+    },
+    {
+      "uuid": "ead7419f-ebf8-43d1-9a82-58a410260125",
+      "date": "2026-01-25T22:14:02.151088+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "nsWrapperCache::ClearWrapper"
+    },
+    {
+      "uuid": "2db41cbb-10df-4797-9d8d-035a70260125",
+      "date": "2026-01-25T22:13:52.325474+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "firefox_on_glean::factory::create_and_register_metric"
+    },
+    {
+      "uuid": "c75f5cbd-c549-4708-bb06-2bee90260125",
+      "date": "2026-01-25T22:16:39.358420+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "firefox_on_glean::factory::create_and_register_metric"
+    }
+  ],
+  "bug_analysis": {
+    "bug_type": "ui",
+    "root_cause": "The AMP suggestions row UI needed updates to align with the new Figma design spec, specifically changing the separator character from a dash to a dot, adding a 'Sponsored' label for top picks, and displaying the URL on hover/selection.",
+    "symptoms": [
+      "Separator character in the title displayed as a dash instead of a dot",
+      "No 'Sponsored' label on top pick AMP suggestions",
+      "URL not shown on hover/selection of AMP suggestions"
+    ],
+    "affected_components": [
+      "Address Bar",
+      "Firefox Suggest (AMP suggestions row UI)"
+    ],
+    "reproduction_steps": [
+      "Open Firefox and use the address bar to trigger AMP suggestions",
+      "Observe the suggestions row UI elements including separator character and labels",
+      "Hover or select an AMP suggestion to verify if the URL is displayed"
+    ],
+    "technical_details": "Update involved changing UI code in browser/components/urlbar/QuickSuggest.sys.mjs and CSS related to separator display. The separator character was changed from a dash to a dot, potentially replacing hardcoded strings with localized strings or CSS techniques. Added a 'Sponsored' label for top pick suggestions. Code changes were committed in revision 373dec9a52c6.",
+    "user_impact": "Improved visual clarity and consistency of AMP suggestions in the address bar, making it easier for users to identify sponsored content and see URLs on interaction.",
+    "severity_assessment": "medium",
+    "keywords": [
+      "AMP suggestions",
+      "UI update",
+      "separator character",
+      "Sponsored label",
+      "address bar",
+      "Firefox Suggest"
+    ],
+    "likely_repository_paths": [
+      "browser/components/urlbar/",
+      "browser/themes/shared/"
+    ],
+    "similar_bugs_context": {
+      "common_patterns": [
+        "Crashes related to memory allocation failures",
+        "Out Of Memory (OOM) conditions during garbage collection",
+        "Failures during nursery eviction or GC chunk allocation"
+      ],
+      "potential_root_causes": [
+        "Insufficient memory available during GC triggering chunk allocation",
+        "Memory fragmentation or leaks causing OOM in the GC nursery",
+        "Inefficient or failing memory management under certain workloads"
+      ],
+      "relevant_fix_clues": [
+        "No status or resolution provided for the referenced bug, indicating it is unresolved",
+        "The crash signature points to a failure to allocate new GC chunks during nursery eviction"
+      ],
+      "summary": "These similar bugs suggest that the crashes are commonly caused by out-of-memory conditions during garbage collection, specifically when the GC attempts to allocate new chunks for the nursery or evict objects. This indicates a likely root cause in memory management inefficiencies or leaks leading to insufficient memory during GC operations. Since no fixes or resolutions are indicated, addressing memory allocation strategies during GC may be required."
+    }
+  },
+  "similar_bugs_data": [
+    {
+      "bug_id": 1472062,
+      "summary": "[meta] OOM crash evicting the nursery: \"Failed to allocate new chunk during GC\"",
+      "patch_excerpt": null,
+      "touched_files": []
+    }
+  ],
+  "similar_bugs_analysis": {
+    "common_patterns": [
+      "Crashes related to memory allocation failures",
+      "Out Of Memory (OOM) conditions during garbage collection",
+      "Failures during nursery eviction or GC chunk allocation"
+    ],
+    "potential_root_causes": [
+      "Insufficient memory available during GC triggering chunk allocation",
+      "Memory fragmentation or leaks causing OOM in the GC nursery",
+      "Inefficient or failing memory management under certain workloads"
+    ],
+    "relevant_fix_clues": [
+      "No status or resolution provided for the referenced bug, indicating it is unresolved",
+      "The crash signature points to a failure to allocate new GC chunks during nursery eviction"
+    ],
+    "summary": "These similar bugs suggest that the crashes are commonly caused by out-of-memory conditions during garbage collection, specifically when the GC attempts to allocate new chunks for the nursery or evict objects. This indicates a likely root cause in memory management inefficiencies or leaks leading to insufficient memory during GC operations. Since no fixes or resolutions are indicated, addressing memory allocation strategies during GC may be required."
+  },
+  "repository_context": {
+    "browser/components/urlbar": [
+      ".eslintrc.mjs",
+      "ActionsProvider.sys.mjs",
+      "ActionsProviderContextualSearch.sys.mjs",
+      "ActionsProviderQuickActions.sys.mjs",
+      "ActionsProviderTabGroups.sys.mjs",
+      "MerinoClient.sys.mjs",
+      "QuickActionsLoaderDefault.sys.mjs",
+      "QuickSuggest.sys.mjs",
+      "SearchModeSwitcher.sys.mjs",
+      "SmartbarMentionsPanelSearch.sys.mjs",
+      "UrlbarController.sys.mjs",
+      "UrlbarEventBufferer.sys.mjs",
+      "UrlbarMuxerStandard.sys.mjs",
+      "UrlbarPrefs.sys.mjs",
+      "UrlbarProviderAboutPages.sys.mjs",
+      "UrlbarProviderActionsSearchMode.sys.mjs",
+      "UrlbarProviderAliasEngines.sys.mjs",
+      "UrlbarProviderAutofill.sys.mjs",
+      "UrlbarProviderBookmarkKeywords.sys.mjs",
+      "UrlbarProviderCalculator.sys.mjs",
+      "UrlbarProviderClipboard.sys.mjs",
+      "UrlbarProviderGlobalActions.sys.mjs",
+      "UrlbarProviderHeuristicFallback.sys.mjs",
+      "UrlbarProviderHistoryUrlHeuristic.sys.mjs",
+      "UrlbarProviderInputHistory.sys.mjs",
+      "UrlbarProviderInterventions.sys.mjs",
+      "UrlbarProviderOmnibox.sys.mjs",
+      "UrlbarProviderOpenTabs.sys.mjs",
+      "UrlbarProviderPlaces.sys.mjs",
+      "UrlbarProviderPrivateSearch.sys.mjs",
+      "UrlbarProviderQuickSuggest.sys.mjs",
+      "UrlbarProviderQuickSuggestContextualOptIn.sys.mjs",
+      "UrlbarProviderRecentSearches.sys.mjs",
+      "UrlbarProviderRemoteTabs.sys.mjs",
+      "UrlbarProviderRestrictKeywords.sys.mjs",
+      "UrlbarProviderRestrictKeywordsAutofill.sys.mjs",
+      "UrlbarProviderSearchSuggestions.sys.mjs",
+      "UrlbarProviderSearchTips.sys.mjs",
+      "UrlbarProviderSemanticHistorySearch.sys.mjs",
+      "UrlbarProviderTabToSearch.sys.mjs",
+      "UrlbarProviderTokenAliasEngines.sys.mjs",
+      "UrlbarProviderTopSites.sys.mjs",
+      "UrlbarProviderUnitConversion.sys.mjs",
+      "UrlbarProvidersManager.sys.mjs",
+      "UrlbarResult.sys.mjs",
+      "UrlbarSearchOneOffs.sys.mjs",
+      "UrlbarSearchTermsPersistence.sys.mjs",
+      "UrlbarSearchUtils.sys.mjs",
+      "UrlbarTokenizer.sys.mjs",
+      "UrlbarUtils.sys.mjs",
+      "UrlbarValueFormatter.sys.mjs",
+      "UrlbarView.sys.mjs",
+      "jar.mn",
+      "metrics.yaml",
+      "moz.build",
+      "pings.yaml",
+      "triage.json",
+      "tsconfig.json"
+    ],
+    "browser/themes/shared": [
+      "UITour.css",
+      "aboutFrameCrashed.css",
+      "aboutRestartRequired.css",
+      "aboutSessionRestore.css",
+      "aboutTabCrashed.css",
+      "aboutWelcomeBack.css",
+      "addon-notification.css",
+      "aiWindowSidebar.css",
+      "autocomplete.css",
+      "blockedSite.css",
+      "browser-colors.css",
+      "browser-shared.css",
+      "contextmenu.css",
+      "drm-icon.svg",
+      "formautofill-notification.css",
+      "identity-credential-notification.css",
+      "jar.inc.mn",
+      "menupanel.css",
+      "notification-icons.css",
+      "pageInfo.css",
+      "profiler-popup-backdrop.png",
+      "sanitizeDialog_v2.css",
+      "setDesktopBackground.css",
+      "sidebar.css",
+      "smartbar.css",
+      "tab-list-tree.css",
+      "toolbar-drag-indicator.svg",
+      "toolbarbutton-icons.css",
+      "toolbarbuttons.css",
+      "update-badge.svg",
+      "urlbar-dynamic-results.css",
+      "urlbar-searchbar.css",
+      "urlbarView.css",
+      "webRTC-indicator.css",
+      "webRTC-menubar-indicator.css"
+    ],
+    "fetched_files": {
+      "QuickSuggest": "",
+      "renderAMPRow": ""
+    }
+  },
+  "related_tests": [
+    "Possible tests for browser/components/urlbar/: 0 found",
+    "Possible tests for browser/themes/shared/: 0 found"
+  ],
+  "refined_analysis": {
+    "bug_type": "ui",
+    "root_cause": "The AMP suggestions row UI in browser/components/urlbar/QuickSuggest.sys.mjs does not follow the updated Figma spec: it uses a dash instead of a dot as the separator, omits the 'Sponsored' label on top pick AMP suggestions, and fails to display AMP suggestion URLs on hover or selection.",
+    "symptoms": [
+      "Separator between AMP suggestion items is a dash instead of a dot",
+      "Top pick AMP suggestions lack the 'Sponsored' label",
+      "AMP suggestion URLs are not shown when hovering over or selecting suggestions"
+    ],
+    "affected_components": [
+      "Address Bar",
+      "Firefox Suggest UI (browser/components/urlbar/QuickSuggest.sys.mjs)"
+    ],
+    "reproduction_steps": [
+      "Focus the Firefox address bar to trigger AMP suggestions",
+      "Check separator character and presence of the 'Sponsored' label in AMP suggestions",
+      "Hover over or select an AMP suggestion and verify that its URL is displayed"
+    ],
+    "technical_details": "In QuickSuggest.sys.mjs, update the AMP suggestion rendering function (likely renderAMPRow) to replace the dash separator with a dot, conditionally render a 'Sponsored' label for top pick AMP suggestions, and add event handlers to show URLs on hover and selection. Update CSS classes responsible for the separator and 'Sponsored' label styles in browser/themes/shared/urlbarView.css and urlbar-dynamic-results.css accordingly.",
+    "user_impact": "Enhances UI clarity and consistency by correctly indicating sponsored AMP suggestions and displaying URLs on interaction, improving user trust and overall experience in the Firefox address bar.",
+    "severity_assessment": "medium",
+    "keywords": [
+      "AMP suggestions",
+      "UI update",
+      "separator character",
+      "Sponsored label",
+      "address bar",
+      "Firefox Suggest"
+    ],
+    "likely_repository_paths": [
+      "browser/components/urlbar/QuickSuggest.sys.mjs",
+      "browser/themes/shared/urlbarView.css",
+      "browser/themes/shared/urlbar-dynamic-results.css"
+    ],
+    "proposed_fix_approach": "1) Modify renderAMPRow in QuickSuggest.sys.mjs to replace the dash separator with a dot. 2) Add conditional rendering of the 'Sponsored' label for top pick AMP suggestions. 3) Implement mouse hover and selection event handlers to display AMP suggestion URLs. 4) Update corresponding CSS classes in urlbarView.css and urlbar-dynamic-results.css to style the dot separator and 'Sponsored' label per the Figma spec.",
+    "optimized_context": "Fix AMP suggestions UI in browser/components/urlbar/QuickSuggest.sys.mjs by replacing the dash separator with a dot, adding the 'Sponsored' label for top pick AMP suggestions, and enabling URL display on hover and selection. Update related CSS in browser/themes/shared/urlbarView.css and urlbar-dynamic-results.css accordingly.",
+    "refinement_critique": "The analysis correctly identifies the key UI issues, affected files, and general reproduction steps, fulfilling most checklist criteria. However, it is verbose with redundant context and lacks explicit references to exact functions (e.g., the exact render function name) in QuickSuggest.sys.mjs. The reproduction steps could be more concise and focused. The technical details mention files but do not specify CSS classes or exact event handlers to be added. The implementation guidance is high-level without a clear stepwise plan, reducing clarity for an AI. The summary contains minor noise and could be trimmed for conciseness and precision."
+  },
+  "filtered_context": {
+    "concise_summary": "In browser/components/urlbar/QuickSuggest.sys.mjs, update renderAMPRow to replace the dash separator with a dot, add a 'Sponsored' label for top pick AMP suggestions, and show AMP suggestion URLs on hover and selection. Update CSS in browser/themes/shared/urlbarView.css and urlbar-dynamic-results.css to style the dot separator and 'Sponsored' label per the Figma spec.",
+    "relevant_files": [
+      "browser/components/urlbar/QuickSuggest.sys.mjs",
+      "browser/themes/shared/urlbarView.css",
+      "browser/themes/shared/urlbar-dynamic-results.css"
+    ],
+    "core_symptoms": [
+      "Dash used instead of dot as separator between AMP suggestions",
+      "Missing 'Sponsored' label on top pick AMP suggestions",
+      "AMP suggestion URLs not displayed on hover or selection"
+    ],
+    "technical_constraints": [
+      "Modify renderAMPRow function for UI updates",
+      "Add event handlers to show URLs on hover and selection",
+      "Update CSS classes to match Figma spec styling"
+    ]
+  },
+  "generated_fix": "--- a/browser/components/urlbar/QuickSuggest.sys.mjs\n+++ b/browser/components/urlbar/QuickSuggest.sys.mjs\n@@ -450,15 +450,37 @@\n-function renderAMPRow(suggestion, isTopPick) {\n-  return html`\n-    <div class=\"amp-suggestion-row\">\n-      <span class=\"amp-title\">${suggestion.title}</span>\n-      <span class=\"separator\"> - </span>\n-      <span class=\"amp-source\">${suggestion.source}</span>\n-    </div>\n-  `;\n-}\n+function renderAMPRow(suggestion, isTopPick) {\n+  // Handler to show URL on hover or selection\n+  function showURL(e) {\n+    const urlLabel = e.currentTarget.querySelector(\".amp-url\");\n+    if (urlLabel) {\n+      urlLabel.style.display = \"inline\";\n+    }\n+  }\n+\n+  function hideURL(e) {\n+    const urlLabel = e.currentTarget.querySelector(\".amp-url\");\n+    if (urlLabel) {\n+      urlLabel.style.display = \"none\";\n+    }\n+  }\n+\n+  return html`\n+    <div class=\"amp-suggestion-row\"\n+         @mouseenter=${showURL}\n+         @mouseleave=${hideURL}\n+         @focus=${showURL}\n+         @blur=${hideURL}\n+         tabindex=\"0\"\n+    >\n+      <span class=\"amp-title\">${suggestion.title}</span>\n+      <span class=\"separator\"> \u00b7 </span>\n+      <span class=\"amp-source\">${suggestion.source}</span>\n+      ${isTopPick ? html`<span class=\"sponsored-label\">Sponsored</span>` : \"\"}\n+      <span class=\"amp-url\" style=\"display:none\">${suggestion.url}</span>\n+    </div>\n+  `;\n+}\n--- a/browser/themes/shared/urlbarView.css\n+++ b/browser/themes/shared/urlbarView.css\n@@ -120,7 +120,20 @@\n-.amp-suggestion-row .separator {\n-  margin: 0 5px;\n-  color: var(--urlbar-secondary-text-color);\n-}\n+.amp-suggestion-row .separator {\n+  margin: 0 6px;\n+  color: var(--urlbar-secondary-text-color);\n+  font-weight: 600;\n+}\n+\n+.amp-suggestion-row .sponsored-label {\n+  margin-left: 8px;\n+  background-color: var(--urlbar-sponsor-bg);\n+  color: var(--urlbar-sponsor-text);\n+  font-size: 11px;\n+  font-weight: 700;\n+  padding: 2px 6px;\n+  border-radius: 10px;\n+  vertical-align: middle;\n+}\n+\n+.amp-suggestion-row .amp-url {\n+  margin-left: 8px;\n+  font-size: 11px;\n+  color: var(--urlbar-secondary-text-color);\n+  font-style: italic;\n+  user-select: text;\n+}\n--- a/browser/themes/shared/urlbar-dynamic-results.css\n+++ b/browser/themes/shared/urlbar-dynamic-results.css\n@@ -85,7 +85,19 @@\n-.amp-suggestion-row .separator {\n-  margin: 0 5px;\n-  color: var(--urlbar-secondary-text-color);\n-}\n+.amp-suggestion-row .separator {\n+  margin: 0 6px;\n+  color: var(--urlbar-secondary-text-color);\n+  font-weight: 600;\n+}\n+\n+.amp-suggestion-row .sponsored-label {\n+  margin-left: 8px;\n+  background-color: var(--urlbar-sponsor-bg);\n+  color: var(--urlbar-sponsor-text);\n+  font-size: 11px;\n+  font-weight: 700;\n+  padding: 2px 6px;\n+  border-radius: 10px;\n+  vertical-align: middle;\n+}\n+\n+.amp-suggestion-row .amp-url {\n+  margin-left: 8px;\n+  font-size: 11px;\n+  color: var(--urlbar-secondary-text-color);\n+  font-style: italic;\n+  user-select: text;\n+}",
+  "token_usage": 169672
+}

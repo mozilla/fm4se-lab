@@ -1,0 +1,41 @@
+--- a/netwerk/base/BackgroundFileSaver.cpp
++++ b/netwerk/base/BackgroundFileSaver.cpp
+@@ -1,6 +1,7 @@
+ #include "BackgroundFileSaver.h"
++#include "mozilla/StaticPrefs_security.h"
+ #include "nsCOMPtr.h"
+ #include "nsIInputStream.h"
+ #include "nsThreadUtils.h"
+ #include "nsPrintfCString.h"
+@@ -300,14 +301,44 @@
+ void
+ BackgroundFileSaver::UpdateHash(const uint8_t* aData, uint32_t aLen)
+ {
+-  uint8_t buffer[32 * 1024];
+-  uint32_t offset = 0;
+-
+-  while (offset < aLen) {
+-    uint32_t chunkSize = std::min(aLen - offset, uint32_t(sizeof(buffer)));
+-    memcpy(buffer, aData + offset, chunkSize);
+-    mSHA256Hasher->Update(buffer, chunkSize);
+-    offset += chunkSize;
+-  }
++  // Skip hashing if safebrowsing and DLP features are disabled
++  if (!mozilla::StaticPrefs::security_safebrowsing_enabled() &&
++      !mozilla::StaticPrefs::security_dlp_enabled()) {
++    return;
++  }
++
++  static const uint32_t kBufferSize = 1024 * 1024; // 1MB
++  UniquePtr<uint8_t[]> buffer(new uint8_t[kBufferSize]);
++  uint32_t offset = 0;
++
++  while (offset < aLen) {
++    uint32_t chunkSize = std::min(aLen - offset, kBufferSize);
++    memcpy(buffer.get(), aData + offset, chunkSize);
++    mSHA256Hasher->Update(buffer.get(), chunkSize);
++    offset += chunkSize;
++  }
+ }
+ 
+-

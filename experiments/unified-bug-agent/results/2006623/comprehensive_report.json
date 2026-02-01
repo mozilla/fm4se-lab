@@ -1,0 +1,944 @@
+{
+  "bug_id": 2006623,
+  "timestamp": "2026-02-01 18:21:53",
+  "data_sources": [
+    "bugzilla",
+    "crash-stats"
+  ],
+  "bug_data": {
+    "type": "task",
+    "comment_count": 9,
+    "is_confirmed": true,
+    "history": [
+      {
+        "who": "jira-integration@bots.tld",
+        "when": "2025-12-17T13:54:26Z",
+        "changes": [
+          {
+            "added": "https://mozilla-hub.atlassian.net/browse/SNG-3173",
+            "removed": "",
+            "field_name": "see_also"
+          }
+        ]
+      },
+      {
+        "when": "2025-12-17T15:41:33Z",
+        "who": "dong@mozilla.com",
+        "changes": [
+          {
+            "removed": "",
+            "field_name": "cc",
+            "added": "dong@mozilla.com"
+          }
+        ]
+      },
+      {
+        "who": "mak@mozilla.com",
+        "when": "2025-12-18T09:31:31Z",
+        "changes": [
+          {
+            "field_name": "cc",
+            "removed": "",
+            "added": "mak@mozilla.com"
+          },
+          {
+            "added": "needinfo?(dong@mozilla.com)",
+            "field_name": "flagtypes.name",
+            "removed": ""
+          }
+        ]
+      },
+      {
+        "changes": [
+          {
+            "added": "contact@dannycolin.com",
+            "field_name": "cc",
+            "removed": ""
+          },
+          {
+            "added": "needinfo?(mak@mozilla.com)",
+            "removed": "",
+            "field_name": "flagtypes.name"
+          }
+        ],
+        "when": "2025-12-29T01:46:20Z",
+        "who": "contact@dannycolin.com"
+      },
+      {
+        "changes": [
+          {
+            "field_name": "blocks",
+            "removed": "",
+            "added": "2007881"
+          }
+        ],
+        "who": "mak@mozilla.com",
+        "when": "2025-12-29T09:33:08Z"
+      },
+      {
+        "when": "2025-12-29T09:33:50Z",
+        "who": "mak@mozilla.com",
+        "changes": [
+          {
+            "removed": "needinfo?(mak@mozilla.com)",
+            "field_name": "flagtypes.name",
+            "added": ""
+          }
+        ]
+      },
+      {
+        "changes": [
+          {
+            "field_name": "assigned_to",
+            "removed": "nobody@mozilla.org",
+            "added": "dong@mozilla.com"
+          },
+          {
+            "added": "ASSIGNED",
+            "field_name": "status",
+            "removed": "NEW"
+          }
+        ],
+        "when": "2026-01-07T19:21:42Z",
+        "who": "phab-bot@bmo.tld"
+      },
+      {
+        "changes": [
+          {
+            "added": "",
+            "field_name": "flagtypes.name",
+            "removed": "needinfo?(dong@mozilla.com)"
+          }
+        ],
+        "when": "2026-01-07T19:54:56Z",
+        "who": "dong@mozilla.com"
+      },
+      {
+        "when": "2026-01-16T05:05:54Z",
+        "who": "csabou@mozilla.com",
+        "changes": [
+          {
+            "removed": "ASSIGNED",
+            "field_name": "status",
+            "added": "RESOLVED"
+          },
+          {
+            "field_name": "resolution",
+            "removed": "",
+            "added": "FIXED"
+          },
+          {
+            "removed": "---",
+            "field_name": "target_milestone",
+            "added": "149 Branch"
+          },
+          {
+            "added": "2026-01-16T05:05:54Z",
+            "removed": "",
+            "field_name": "cf_last_resolved"
+          },
+          {
+            "removed": "---",
+            "field_name": "cf_status_firefox149",
+            "added": "fixed"
+          },
+          {
+            "comment_count": 7,
+            "comment_id": 17845104,
+            "added": "bugherder",
+            "removed": "",
+            "field_name": "comment_tag"
+          }
+        ]
+      },
+      {
+        "changes": [
+          {
+            "added": "oardelean@mozilla.com",
+            "removed": "",
+            "field_name": "qa_contact"
+          },
+          {
+            "added": "oardelean@mozilla.com",
+            "removed": "",
+            "field_name": "cc"
+          },
+          {
+            "field_name": "status",
+            "removed": "RESOLVED",
+            "added": "VERIFIED"
+          },
+          {
+            "added": "[search] [qa-triage-done-c149/b148] [qa-ver-done-c149/b148]",
+            "field_name": "cf_qa_whiteboard",
+            "removed": ""
+          },
+          {
+            "added": "verified",
+            "field_name": "cf_status_firefox149",
+            "removed": "fixed"
+          }
+        ],
+        "who": "oardelean@mozilla.com",
+        "when": "2026-01-28T09:18:56Z"
+      }
+    ],
+    "is_cc_accessible": true,
+    "is_creator_accessible": true,
+    "cf_tracking_firefox_esr115": "---",
+    "summary": "Remove \"browser.urlbar.switchTabs.searchAllContainers\" pref",
+    "status": "VERIFIED",
+    "flags": [],
+    "cf_fx_iteration": "---",
+    "cf_webcompat_score": "---",
+    "priority": "P3",
+    "resolution": "FIXED",
+    "cf_rank": null,
+    "cf_tracking_firefox147": "---",
+    "triage_owner": "jteow@mozilla.com",
+    "cf_status_firefox148": "---",
+    "component": "Address Bar",
+    "cf_performance_impact": "---",
+    "keywords": [],
+    "regressions": [],
+    "cf_has_str": "---",
+    "cf_status_firefox_esr115": "---",
+    "assigned_to_detail": {
+      "real_name": "dong",
+      "email": "dong@mozilla.com",
+      "nick": "dong",
+      "name": "dong@mozilla.com",
+      "id": 772254
+    },
+    "cc": [
+      "contact@dannycolin.com",
+      "dong@mozilla.com",
+      "mak@mozilla.com",
+      "oardelean@mozilla.com"
+    ],
+    "cf_webcompat_priority": "---",
+    "duplicates": [],
+    "version": "unspecified",
+    "groups": [],
+    "creator_detail": {
+      "name": "mak@mozilla.com",
+      "id": 240353,
+      "email": "mak@mozilla.com",
+      "real_name": "Marco Bonardo [:mak]",
+      "nick": "mak"
+    },
+    "mentors": [],
+    "creation_time": "2025-12-17T13:53:52Z",
+    "cf_tracking_firefox148": "---",
+    "cf_tracking_firefox_relnote": "---",
+    "mentors_detail": [],
+    "cf_a11y_review_project_flag": "---",
+    "cf_user_story": "",
+    "cf_fx_points": "---",
+    "severity": "S3",
+    "votes": 0,
+    "last_change_time": "2026-01-28T09:18:56Z",
+    "cc_detail": [
+      {
+        "name": "contact@dannycolin.com",
+        "id": 598568,
+        "real_name": "Danny Colin [:sdk]",
+        "email": "contact@dannycolin.com",
+        "nick": "sdk"
+      },
+      {
+        "name": "dong@mozilla.com",
+        "id": 772254,
+        "email": "dong@mozilla.com",
+        "real_name": "dong",
+        "nick": "dong"
+      },
+      {
+        "id": 240353,
+        "name": "mak@mozilla.com",
+        "real_name": "Marco Bonardo [:mak]",
+        "email": "mak@mozilla.com",
+        "nick": "mak"
+      },
+      {
+        "name": "oardelean@mozilla.com",
+        "id": 700963,
+        "email": "oardelean@mozilla.com",
+        "real_name": "Ardelean Oana, Desktop Test Engineering [:oardelean]",
+        "nick": "oardelean"
+      }
+    ],
+    "creator": "mak@mozilla.com",
+    "cf_crash_signature": "",
+    "classification": "Client Software",
+    "cf_cab_review": "---",
+    "whiteboard": "[sng]",
+    "url": "",
+    "qa_contact_detail": {
+      "id": 700963,
+      "name": "oardelean@mozilla.com",
+      "nick": "oardelean",
+      "email": "oardelean@mozilla.com",
+      "real_name": "Ardelean Oana, Desktop Test Engineering [:oardelean]"
+    },
+    "target_milestone": "149 Branch",
+    "dupe_of": null,
+    "assigned_to": "dong@mozilla.com",
+    "attachments": [
+      {
+        "creator_detail": {
+          "nick": "dong",
+          "email": "dong@mozilla.com",
+          "real_name": "dong",
+          "id": 772254,
+          "name": "dong@mozilla.com"
+        },
+        "description": "Bug 2006623 - Remove searchAllContainers pref. r=mak",
+        "size": 48,
+        "is_private": 0,
+        "is_patch": 0,
+        "creation_time": "2026-01-07T19:21:42Z",
+        "attacher": "dong@mozilla.com",
+        "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjc4MTc2",
+        "last_change_time": "2026-01-07T19:21:42Z",
+        "bug_id": 2006623,
+        "file_name": "phabricator-D278176-url.txt",
+        "creator": "dong@mozilla.com",
+        "content_type": "text/x-phabricator-request",
+        "is_obsolete": 0,
+        "flags": [],
+        "id": 9536202,
+        "summary": "Bug 2006623 - Remove searchAllContainers pref. r=mak"
+      }
+    ],
+    "blocks": [
+      2007881
+    ],
+    "cf_status_firefox_esr140": "---",
+    "cf_qa_whiteboard": "[search] [qa-triage-done-c149/b148] [qa-ver-done-c149/b148]",
+    "platform": "Unspecified",
+    "product": "Firefox",
+    "comments": [
+      {
+        "is_private": false,
+        "count": 0,
+        "time": "2025-12-17T13:53:52Z",
+        "id": 17813039,
+        "creator": "mak@mozilla.com",
+        "bug_id": 2006623,
+        "author": "mak@mozilla.com",
+        "tags": [],
+        "attachment_id": null,
+        "text": "This pref is adding significant maintanance costs, from our telemetry measurements it has been barely used, less then 0.01% of users set it to false.\nWe feel like the default functionality is pretty good, and if there's the need to search specific containers, I think we should implement it in the unified search button (things like searching specific container, specific group, specific device...) as a search mode.",
+        "raw_text": "This pref is adding significant maintanance costs, from our telemetry measurements it has been barely used, less then 0.01% of users set it to false.\nWe feel like the default functionality is pretty good, and if there's the need to search specific containers, I think we should implement it in the unified search button (things like searching specific container, specific group, specific device...) as a search mode.",
+        "reactions": {},
+        "creation_time": "2025-12-17T13:53:52Z"
+      },
+      {
+        "text": "Hey Marco, I just landed [Bug 2005392](https://bugzilla.mozilla.org/show_bug.cgi?id=2005392) which removes the pref as well. I think we can resolve this bug as fixed as well.",
+        "reactions": {},
+        "raw_text": "Hey Marco, I just landed [Bug 2005392](https://bugzilla.mozilla.org/show_bug.cgi?id=2005392) which removes the pref as well. I think we can resolve this bug as fixed as well.",
+        "creation_time": "2025-12-17T15:41:33Z",
+        "time": "2025-12-17T15:41:33Z",
+        "id": 17813223,
+        "creator": "dong@mozilla.com",
+        "bug_id": 2006623,
+        "attachment_id": null,
+        "tags": [],
+        "author": "dong@mozilla.com",
+        "count": 1,
+        "is_private": false
+      },
+      {
+        "time": "2025-12-18T09:31:31Z",
+        "is_private": false,
+        "id": 17814410,
+        "creator": "mak@mozilla.com",
+        "bug_id": 2006623,
+        "attachment_id": null,
+        "tags": [],
+        "author": "mak@mozilla.com",
+        "text": "The patch removes the telemetry probe, not the pref and the code using it. https://searchfox.org/firefox-main/search?q=switchTabs.searchAllContainers",
+        "count": 2,
+        "reactions": {
+          "+1": 1
+        },
+        "raw_text": "The patch removes the telemetry probe, not the pref and the code using it. https://searchfox.org/firefox-main/search?q=switchTabs.searchAllContainers",
+        "creation_time": "2025-12-18T09:31:31Z"
+      },
+      {
+        "creation_time": "2025-12-29T01:46:20Z",
+        "raw_text": "> This pref is adding significant maintanance costs, from our telemetry measurements it has been barely used, less then 0.01% of users set it to false.\n\nJust a FYI, it was never exposed in the UI which could explain it. See [bug 1882391](https://bugzilla.mozilla.org/show_bug.cgi?id=1882391) (which funnily I just rediscovered we were both involved in).\n\n> I think we should implement it in the unified search button (things like searching specific container, specific group, specific device...) as a search mode.\n\nGood point. :mak do you mind filing a bug report blocking [bug 1191418](https://bugzilla.mozilla.org/show_bug.cgi?id=1191418) so it's documented.",
+        "reactions": {},
+        "count": 3,
+        "text": "> This pref is adding significant maintanance costs, from our telemetry measurements it has been barely used, less then 0.01% of users set it to false.\n\nJust a FYI, it was never exposed in the UI which could explain it. See [bug 1882391](https://bugzilla.mozilla.org/show_bug.cgi?id=1882391) (which funnily I just rediscovered we were both involved in).\n\n> I think we should implement it in the unified search button (things like searching specific container, specific group, specific device...) as a search mode.\n\nGood point. :mak do you mind filing a bug report blocking [bug 1191418](https://bugzilla.mozilla.org/show_bug.cgi?id=1191418) so it's documented.",
+        "author": "contact@dannycolin.com",
+        "tags": [],
+        "attachment_id": null,
+        "bug_id": 2006623,
+        "creator": "contact@dannycolin.com",
+        "id": 17822681,
+        "is_private": false,
+        "time": "2025-12-29T01:46:20Z"
+      },
+      {
+        "creator": "mak@mozilla.com",
+        "bug_id": 2006623,
+        "attachment_id": null,
+        "tags": [],
+        "author": "mak@mozilla.com",
+        "time": "2025-12-29T09:33:50Z",
+        "is_private": false,
+        "id": 17824072,
+        "raw_text": "(In reply to Danny Colin [:sdk] from comment #3)\n> Just a FYI, it was never exposed in the UI which could explain it. See [bug 1882391](https://bugzilla.mozilla.org/show_bug.cgi?id=1882391) (which funnily I just rediscovered we were both involved in).\n\nYep, as I said there we'd have to take a decision, and based on most current discussions, the decision is to wontfix that and remove the pref (for now). I agree that not showing a pref will reduce its use, but it was not shown exactly because we already doubted about the approach.\n\n> > I think we should implement it in the unified search button (things like searching specific container, specific group, specific device...) as a search mode.\n> \n> Good point. :mak do you mind filing a bug report blocking [bug 1191418](https://bugzilla.mozilla.org/show_bug.cgi?id=1191418) so it's documented.\n\nSure, I filed bug 2007881.",
+        "reactions": {},
+        "creation_time": "2025-12-29T09:33:50Z",
+        "text": "(In reply to Danny Colin [:sdk] from comment #3)\n> Just a FYI, it was never exposed in the UI which could explain it. See [bug 1882391](https://bugzilla.mozilla.org/show_bug.cgi?id=1882391) (which funnily I just rediscovered we were both involved in).\n\nYep, as I said there we'd have to take a decision, and based on most current discussions, the decision is to wontfix that and remove the pref (for now). I agree that not showing a pref will reduce its use, but it was not shown exactly because we already doubted about the approach.\n\n> > I think we should implement it in the unified search button (things like searching specific container, specific group, specific device...) as a search mode.\n> \n> Good point. :mak do you mind filing a bug report blocking [bug 1191418](https://bugzilla.mozilla.org/show_bug.cgi?id=1191418) so it's documented.\n\nSure, I filed bug 2007881.",
+        "count": 4
+      },
+      {
+        "creation_time": "2026-01-07T19:21:42Z",
+        "raw_text": "",
+        "reactions": {},
+        "count": 5,
+        "text": "Created attachment 9536202\nBug 2006623 - Remove searchAllContainers pref. r=mak",
+        "tags": [],
+        "author": "dong@mozilla.com",
+        "attachment_id": 9536202,
+        "bug_id": 2006623,
+        "creator": "dong@mozilla.com",
+        "id": 17832562,
+        "is_private": false,
+        "time": "2026-01-07T19:21:42Z"
+      },
+      {
+        "bug_id": 2006623,
+        "tags": [],
+        "attachment_id": null,
+        "author": "pulsebot@bmo.tld",
+        "creator": "pulsebot@bmo.tld",
+        "is_private": false,
+        "id": 17844486,
+        "time": "2026-01-15T19:01:16Z",
+        "creation_time": "2026-01-15T19:01:16Z",
+        "raw_text": "Pushed by dong@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/217febc965db\nhttps://hg.mozilla.org/integration/autoland/rev/b0d4d8cc1b64\nRemove searchAllContainers pref. r=mak,urlbar-reviewers",
+        "reactions": {},
+        "text": "Pushed by dong@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/217febc965db\nhttps://hg.mozilla.org/integration/autoland/rev/b0d4d8cc1b64\nRemove searchAllContainers pref. r=mak,urlbar-reviewers",
+        "count": 6
+      },
+      {
+        "is_private": false,
+        "count": 7,
+        "id": 17845104,
+        "time": "2026-01-16T05:05:54Z",
+        "bug_id": 2006623,
+        "tags": [
+          "bugherder"
+        ],
+        "attachment_id": null,
+        "author": "csabou@mozilla.com",
+        "creator": "csabou@mozilla.com",
+        "text": "https://hg.mozilla.org/mozilla-central/rev/b0d4d8cc1b64",
+        "creation_time": "2026-01-16T05:05:54Z",
+        "reactions": {},
+        "raw_text": "https://hg.mozilla.org/mozilla-central/rev/b0d4d8cc1b64"
+      },
+      {
+        "text": "Verified as fixed on Firefox Nightly 149.0a1 on Windows 10, macOS 15 and Ubuntu 22.",
+        "count": 8,
+        "raw_text": "Verified as fixed on Firefox Nightly 149.0a1 on Windows 10, macOS 15 and Ubuntu 22.",
+        "reactions": {},
+        "creation_time": "2026-01-28T09:18:56Z",
+        "time": "2026-01-28T09:18:56Z",
+        "is_private": false,
+        "id": 17862869,
+        "creator": "oardelean@mozilla.com",
+        "bug_id": 2006623,
+        "attachment_id": null,
+        "tags": [],
+        "author": "oardelean@mozilla.com"
+      }
+    ],
+    "last_change_time_non_bot": "2026-01-28T09:18:56Z",
+    "cf_status_firefox149": "verified",
+    "cf_last_resolved": "2026-01-16T05:05:54Z",
+    "qa_contact": "oardelean@mozilla.com",
+    "cf_status_firefox147": "---",
+    "cf_tracking_firefox149": "---",
+    "counts": {
+      "cc": 4,
+      "regressed_by": 0,
+      "duplicates": 0,
+      "blocks": 1,
+      "comments": 9,
+      "keywords": 0,
+      "attachments": 1,
+      "depends_on": 1,
+      "regressions": 0
+    },
+    "id": 2006623,
+    "cf_tracking_firefox_esr140": "---",
+    "filed_via": "standard_form",
+    "cf_accessibility_severity": "---",
+    "is_open": false,
+    "see_also": [
+      "https://mozilla-hub.atlassian.net/browse/SNG-3173"
+    ],
+    "depends_on": [
+      2005392
+    ],
+    "op_sys": "Unspecified",
+    "description": "This pref is adding significant maintanance costs, from our telemetry measurements it has been barely used, less then 0.01% of users set it to false.\nWe feel like the default functionality is pretty good, and if there's the need to search specific containers, I think we should implement it in the unified search button (things like searching specific container, specific group, specific device...) as a search mode.",
+    "alias": null,
+    "regressed_by": [],
+    "triage_owner_detail": {
+      "id": 701257,
+      "name": "jteow@mozilla.com",
+      "email": "jteow@mozilla.com",
+      "real_name": "James Teow [:jteow]",
+      "nick": "jteow"
+    }
+  },
+  "comments": [
+    {
+      "text": "This pref is adding significant maintanance costs, from our telemetry measurements it has been barely used, less then 0.01% of users set it to false.\nWe feel like the default functionality is pretty good, and if there's the need to search specific containers, I think we should implement it in the unified search button (things like searching specific container, specific group, specific device...) as a search mode.",
+      "count": 0,
+      "tags": [],
+      "bug_id": 2006623,
+      "time": "2025-12-17T13:53:52Z",
+      "id": 17813039,
+      "reactions": {},
+      "is_private": false,
+      "raw_text": "This pref is adding significant maintanance costs, from our telemetry measurements it has been barely used, less then 0.01% of users set it to false.\nWe feel like the default functionality is pretty good, and if there's the need to search specific containers, I think we should implement it in the unified search button (things like searching specific container, specific group, specific device...) as a search mode.",
+      "author": "mak@mozilla.com",
+      "attachment_id": null,
+      "creator": "mak@mozilla.com",
+      "creation_time": "2025-12-17T13:53:52Z"
+    },
+    {
+      "attachment_id": null,
+      "author": "dong@mozilla.com",
+      "time": "2025-12-17T15:41:33Z",
+      "count": 1,
+      "tags": [],
+      "creator": "dong@mozilla.com",
+      "creation_time": "2025-12-17T15:41:33Z",
+      "raw_text": "Hey Marco, I just landed [Bug 2005392](https://bugzilla.mozilla.org/show_bug.cgi?id=2005392) which removes the pref as well. I think we can resolve this bug as fixed as well.",
+      "reactions": {},
+      "id": 17813223,
+      "is_private": false,
+      "text": "Hey Marco, I just landed [Bug 2005392](https://bugzilla.mozilla.org/show_bug.cgi?id=2005392) which removes the pref as well. I think we can resolve this bug as fixed as well.",
+      "bug_id": 2006623
+    },
+    {
+      "id": 17814410,
+      "reactions": {
+        "+1": 1
+      },
+      "is_private": false,
+      "bug_id": 2006623,
+      "text": "The patch removes the telemetry probe, not the pref and the code using it. https://searchfox.org/firefox-main/search?q=switchTabs.searchAllContainers",
+      "creator": "mak@mozilla.com",
+      "creation_time": "2025-12-18T09:31:31Z",
+      "raw_text": "The patch removes the telemetry probe, not the pref and the code using it. https://searchfox.org/firefox-main/search?q=switchTabs.searchAllContainers",
+      "time": "2025-12-18T09:31:31Z",
+      "tags": [],
+      "count": 2,
+      "attachment_id": null,
+      "author": "mak@mozilla.com"
+    },
+    {
+      "count": 3,
+      "text": "> This pref is adding significant maintanance costs, from our telemetry measurements it has been barely used, less then 0.01% of users set it to false.\n\nJust a FYI, it was never exposed in the UI which could explain it. See [bug 1882391](https://bugzilla.mozilla.org/show_bug.cgi?id=1882391) (which funnily I just rediscovered we were both involved in).\n\n> I think we should implement it in the unified search button (things like searching specific container, specific group, specific device...) as a search mode.\n\nGood point. :mak do you mind filing a bug report blocking [bug 1191418](https://bugzilla.mozilla.org/show_bug.cgi?id=1191418) so it's documented.",
+      "bug_id": 2006623,
+      "tags": [],
+      "time": "2025-12-29T01:46:20Z",
+      "is_private": false,
+      "reactions": {},
+      "id": 17822681,
+      "author": "contact@dannycolin.com",
+      "attachment_id": null,
+      "raw_text": "> This pref is adding significant maintanance costs, from our telemetry measurements it has been barely used, less then 0.01% of users set it to false.\n\nJust a FYI, it was never exposed in the UI which could explain it. See [bug 1882391](https://bugzilla.mozilla.org/show_bug.cgi?id=1882391) (which funnily I just rediscovered we were both involved in).\n\n> I think we should implement it in the unified search button (things like searching specific container, specific group, specific device...) as a search mode.\n\nGood point. :mak do you mind filing a bug report blocking [bug 1191418](https://bugzilla.mozilla.org/show_bug.cgi?id=1191418) so it's documented.",
+      "creation_time": "2025-12-29T01:46:20Z",
+      "creator": "contact@dannycolin.com"
+    },
+    {
+      "creator": "mak@mozilla.com",
+      "creation_time": "2025-12-29T09:33:50Z",
+      "raw_text": "(In reply to Danny Colin [:sdk] from comment #3)\n> Just a FYI, it was never exposed in the UI which could explain it. See [bug 1882391](https://bugzilla.mozilla.org/show_bug.cgi?id=1882391) (which funnily I just rediscovered we were both involved in).\n\nYep, as I said there we'd have to take a decision, and based on most current discussions, the decision is to wontfix that and remove the pref (for now). I agree that not showing a pref will reduce its use, but it was not shown exactly because we already doubted about the approach.\n\n> > I think we should implement it in the unified search button (things like searching specific container, specific group, specific device...) as a search mode.\n> \n> Good point. :mak do you mind filing a bug report blocking [bug 1191418](https://bugzilla.mozilla.org/show_bug.cgi?id=1191418) so it's documented.\n\nSure, I filed bug 2007881.",
+      "id": 17824072,
+      "reactions": {},
+      "is_private": false,
+      "bug_id": 2006623,
+      "text": "(In reply to Danny Colin [:sdk] from comment #3)\n> Just a FYI, it was never exposed in the UI which could explain it. See [bug 1882391](https://bugzilla.mozilla.org/show_bug.cgi?id=1882391) (which funnily I just rediscovered we were both involved in).\n\nYep, as I said there we'd have to take a decision, and based on most current discussions, the decision is to wontfix that and remove the pref (for now). I agree that not showing a pref will reduce its use, but it was not shown exactly because we already doubted about the approach.\n\n> > I think we should implement it in the unified search button (things like searching specific container, specific group, specific device...) as a search mode.\n> \n> Good point. :mak do you mind filing a bug report blocking [bug 1191418](https://bugzilla.mozilla.org/show_bug.cgi?id=1191418) so it's documented.\n\nSure, I filed bug 2007881.",
+      "author": "mak@mozilla.com",
+      "attachment_id": null,
+      "time": "2025-12-29T09:33:50Z",
+      "tags": [],
+      "count": 4
+    },
+    {
+      "reactions": {},
+      "id": 17832562,
+      "is_private": false,
+      "time": "2026-01-07T19:21:42Z",
+      "tags": [],
+      "bug_id": 2006623,
+      "text": "Created attachment 9536202\nBug 2006623 - Remove searchAllContainers pref. r=mak",
+      "count": 5,
+      "creator": "dong@mozilla.com",
+      "creation_time": "2026-01-07T19:21:42Z",
+      "raw_text": "",
+      "author": "dong@mozilla.com",
+      "attachment_id": 9536202
+    },
+    {
+      "creator": "pulsebot@bmo.tld",
+      "creation_time": "2026-01-15T19:01:16Z",
+      "raw_text": "Pushed by dong@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/217febc965db\nhttps://hg.mozilla.org/integration/autoland/rev/b0d4d8cc1b64\nRemove searchAllContainers pref. r=mak,urlbar-reviewers",
+      "id": 17844486,
+      "reactions": {},
+      "is_private": false,
+      "bug_id": 2006623,
+      "text": "Pushed by dong@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/217febc965db\nhttps://hg.mozilla.org/integration/autoland/rev/b0d4d8cc1b64\nRemove searchAllContainers pref. r=mak,urlbar-reviewers",
+      "attachment_id": null,
+      "author": "pulsebot@bmo.tld",
+      "time": "2026-01-15T19:01:16Z",
+      "tags": [],
+      "count": 6
+    },
+    {
+      "time": "2026-01-16T05:05:54Z",
+      "tags": [
+        "bugherder"
+      ],
+      "count": 7,
+      "attachment_id": null,
+      "author": "csabou@mozilla.com",
+      "is_private": false,
+      "reactions": {},
+      "id": 17845104,
+      "bug_id": 2006623,
+      "text": "https://hg.mozilla.org/mozilla-central/rev/b0d4d8cc1b64",
+      "creation_time": "2026-01-16T05:05:54Z",
+      "creator": "csabou@mozilla.com",
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/b0d4d8cc1b64"
+    },
+    {
+      "attachment_id": null,
+      "author": "oardelean@mozilla.com",
+      "time": "2026-01-28T09:18:56Z",
+      "tags": [],
+      "count": 8,
+      "creation_time": "2026-01-28T09:18:56Z",
+      "creator": "oardelean@mozilla.com",
+      "raw_text": "Verified as fixed on Firefox Nightly 149.0a1 on Windows 10, macOS 15 and Ubuntu 22.",
+      "is_private": false,
+      "reactions": {},
+      "id": 17862869,
+      "bug_id": 2006623,
+      "text": "Verified as fixed on Firefox Nightly 149.0a1 on Windows 10, macOS 15 and Ubuntu 22."
+    }
+  ],
+  "crash_context": {
+    "signature": "(anonymous namespace)::get_output_buffer",
+    "product": "Firefox",
+    "version": "147.0.1",
+    "os": null
+  },
+  "crashes": [
+    {
+      "uuid": "d03c7087-1d38-4800-b2ae-6ec210260125",
+      "date": "2026-01-25T23:06:34.755371+00:00",
+      "product": "Firefox",
+      "version": "149.0a1",
+      "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::AutoEnterOOMUnsafeRegion::crash | js::gc::AllocateTenuredCellInGC"
+    },
+    {
+      "uuid": "03b9a2bd-7633-4638-9bbe-56d750260125",
+      "date": "2026-01-25T23:05:20.529221+00:00",
+      "product": "Firefox",
+      "version": "115.32.0esr",
+      "signature": "js::gc::GetGCKindSlots"
+    },
+    {
+      "uuid": "49f3087b-5805-427b-a533-f23310260125",
+      "date": "2026-01-25T23:05:43.133051+00:00",
+      "product": "Firefox",
+      "version": "140.7.0esr",
+      "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::AutoEnterOOMUnsafeRegion::crash | js::gc::AllocateTenuredCellInGC"
+    },
+    {
+      "uuid": "542d40df-d509-422f-9c6b-4a88e0260125",
+      "date": "2026-01-25T23:06:30.421086+00:00",
+      "product": "Firefox",
+      "version": "149.0a1",
+      "signature": "OOM | unknown | mozJSModuleLoader::InitSharedGlobal"
+    },
+    {
+      "uuid": "37117b71-587a-41ad-99c8-f34750260125",
+      "date": "2026-01-25T23:06:07.767377+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::gc::FreeSpan::allocate"
+    },
+    {
+      "uuid": "a4d1a01d-97f8-4739-8f70-1994d0260125",
+      "date": "2026-01-25T23:05:53.583985+00:00",
+      "product": "Firefox",
+      "version": "146.0.1",
+      "signature": "shutdownhang | mozilla::SpinEventLoopUntil | nsThread::WaitForAllAsynchronousShutdowns | nsThreadManager::ShutdownNonMainThreads"
+    },
+    {
+      "uuid": "6c898ef5-d1f9-46a7-8f16-184a80260125",
+      "date": "2026-01-25T23:05:32.747304+00:00",
+      "product": "Thunderbird",
+      "version": "147.0",
+      "signature": "nsMsgSearchOfflineMail::Search"
+    },
+    {
+      "uuid": "3185d2d4-b078-4f68-bd0c-4d56d0260125",
+      "date": "2026-01-25T23:05:30.519525+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "EnterBaseline"
+    },
+    {
+      "uuid": "99cb0f69-f14b-4455-9acd-313120260125",
+      "date": "2026-01-25T23:05:32.006727+00:00",
+      "product": "Firefox",
+      "version": "149.0a1",
+      "signature": "js::gc::HeaderWord::getAtomic"
+    },
+    {
+      "uuid": "1fd4fab0-8827-4217-9173-020330260125",
+      "date": "2026-01-25T23:03:16.952342+00:00",
+      "product": "Fenix",
+      "version": "132.0.2",
+      "signature": "EMPTY: no frame data available; EmptyMinidump"
+    }
+  ],
+  "bug_analysis": {
+    "bug_type": "feature",
+    "root_cause": "The preference 'browser.urlbar.switchTabs.searchAllContainers' was rarely used (less than 0.01% of users set it to false), added maintenance costs, and was never exposed in the UI.",
+    "symptoms": [
+      "Increased maintenance burden due to rarely used pref",
+      "Preference not exposed in UI leading to low usage"
+    ],
+    "affected_components": [
+      "Address Bar",
+      "URL Bar"
+    ],
+    "reproduction_steps": [
+      "Check telemetry data for usage of 'browser.urlbar.switchTabs.searchAllContainers' preference",
+      "Observe that less than 0.01% of users set it to false"
+    ],
+    "technical_details": "The patch removes the 'browser.urlbar.switchTabs.searchAllContainers' preference, related telemetry probes, and associated code. The pref was intended to control search behavior across containers but was never exposed in the UI, leading to negligible user interaction and justification for removal.",
+    "user_impact": "Users experience no visible change as the default functionality remains the same; removal reduces maintenance without affecting user experience.",
+    "severity_assessment": "low",
+    "keywords": [
+      "urlbar",
+      "preference",
+      "containers",
+      "search",
+      "maintenance"
+    ],
+    "likely_repository_paths": [
+      "browser/components/urlbar/",
+      "toolkit/components/telemetry/",
+      "browser/components/addressbar/"
+    ],
+    "similar_bugs_context": {
+      "common_patterns": [
+        "Crash signature involving [@ (anonymous namespace)::get_output_buffer]",
+        "Crashes occur in low-level buffer or memory handling code",
+        "Related to browser URL bar or container/tab switching features"
+      ],
+      "potential_root_causes": [
+        "Use-after-free or invalid memory access in output buffer management",
+        "Race conditions or improper synchronization when accessing shared buffers",
+        "Regression caused by removal or modification of browser.urlbar.switchTabs.searchAllContainers pref"
+      ],
+      "relevant_fix_clues": [
+        "Bug 2006623 focuses on removing 'browser.urlbar.switchTabs.searchAllContainers' preference",
+        "Similar crashes occur in anonymous namespace get_output_buffer function, indicating buffer handling issues",
+        "Fix likely involves ensuring safe memory handling and synchronization in output buffer code"
+      ],
+      "summary": "These similar bugs suggest that crashes with the signature in get_output_buffer are related to improper handling of output buffers, potentially triggered or exacerbated by changes to the 'browser.urlbar.switchTabs.searchAllContainers' pref. The root cause likely involves unsafe memory access or race conditions in buffer management code. Fixes would need to address these memory safety issues, possibly by improving synchronization or buffer lifecycle management."
+    }
+  },
+  "similar_bugs_data": [
+    {
+      "bug_id": 1843903,
+      "summary": "Crash in [@ (anonymous namespace)::get_output_buffer]",
+      "patch_excerpt": null,
+      "touched_files": []
+    }
+  ],
+  "similar_bugs_analysis": {
+    "common_patterns": [
+      "Crash signature involving [@ (anonymous namespace)::get_output_buffer]",
+      "Crashes occur in low-level buffer or memory handling code",
+      "Related to browser URL bar or container/tab switching features"
+    ],
+    "potential_root_causes": [
+      "Use-after-free or invalid memory access in output buffer management",
+      "Race conditions or improper synchronization when accessing shared buffers",
+      "Regression caused by removal or modification of browser.urlbar.switchTabs.searchAllContainers pref"
+    ],
+    "relevant_fix_clues": [
+      "Bug 2006623 focuses on removing 'browser.urlbar.switchTabs.searchAllContainers' preference",
+      "Similar crashes occur in anonymous namespace get_output_buffer function, indicating buffer handling issues",
+      "Fix likely involves ensuring safe memory handling and synchronization in output buffer code"
+    ],
+    "summary": "These similar bugs suggest that crashes with the signature in get_output_buffer are related to improper handling of output buffers, potentially triggered or exacerbated by changes to the 'browser.urlbar.switchTabs.searchAllContainers' pref. The root cause likely involves unsafe memory access or race conditions in buffer management code. Fixes would need to address these memory safety issues, possibly by improving synchronization or buffer lifecycle management."
+  },
+  "repository_context": {
+    "browser/components/urlbar": [
+      ".eslintrc.mjs",
+      "ActionsProvider.sys.mjs",
+      "ActionsProviderContextualSearch.sys.mjs",
+      "ActionsProviderQuickActions.sys.mjs",
+      "ActionsProviderTabGroups.sys.mjs",
+      "MerinoClient.sys.mjs",
+      "QuickActionsLoaderDefault.sys.mjs",
+      "QuickSuggest.sys.mjs",
+      "SearchModeSwitcher.sys.mjs",
+      "SmartbarMentionsPanelSearch.sys.mjs",
+      "UrlbarController.sys.mjs",
+      "UrlbarEventBufferer.sys.mjs",
+      "UrlbarMuxerStandard.sys.mjs",
+      "UrlbarPrefs.sys.mjs",
+      "UrlbarProviderAboutPages.sys.mjs",
+      "UrlbarProviderActionsSearchMode.sys.mjs",
+      "UrlbarProviderAliasEngines.sys.mjs",
+      "UrlbarProviderAutofill.sys.mjs",
+      "UrlbarProviderBookmarkKeywords.sys.mjs",
+      "UrlbarProviderCalculator.sys.mjs",
+      "UrlbarProviderClipboard.sys.mjs",
+      "UrlbarProviderGlobalActions.sys.mjs",
+      "UrlbarProviderHeuristicFallback.sys.mjs",
+      "UrlbarProviderHistoryUrlHeuristic.sys.mjs",
+      "UrlbarProviderInputHistory.sys.mjs",
+      "UrlbarProviderInterventions.sys.mjs",
+      "UrlbarProviderOmnibox.sys.mjs",
+      "UrlbarProviderOpenTabs.sys.mjs",
+      "UrlbarProviderPlaces.sys.mjs",
+      "UrlbarProviderPrivateSearch.sys.mjs",
+      "UrlbarProviderQuickSuggest.sys.mjs",
+      "UrlbarProviderQuickSuggestContextualOptIn.sys.mjs",
+      "UrlbarProviderRecentSearches.sys.mjs",
+      "UrlbarProviderRemoteTabs.sys.mjs",
+      "UrlbarProviderRestrictKeywords.sys.mjs",
+      "UrlbarProviderRestrictKeywordsAutofill.sys.mjs",
+      "UrlbarProviderSearchSuggestions.sys.mjs",
+      "UrlbarProviderSearchTips.sys.mjs",
+      "UrlbarProviderSemanticHistorySearch.sys.mjs",
+      "UrlbarProviderTabToSearch.sys.mjs",
+      "UrlbarProviderTokenAliasEngines.sys.mjs",
+      "UrlbarProviderTopSites.sys.mjs",
+      "UrlbarProviderUnitConversion.sys.mjs",
+      "UrlbarProvidersManager.sys.mjs",
+      "UrlbarResult.sys.mjs",
+      "UrlbarSearchOneOffs.sys.mjs",
+      "UrlbarSearchTermsPersistence.sys.mjs",
+      "UrlbarSearchUtils.sys.mjs",
+      "UrlbarTokenizer.sys.mjs",
+      "UrlbarUtils.sys.mjs",
+      "UrlbarValueFormatter.sys.mjs",
+      "UrlbarView.sys.mjs",
+      "jar.mn",
+      "metrics.yaml",
+      "moz.build",
+      "pings.yaml",
+      "triage.json",
+      "tsconfig.json"
+    ],
+    "toolkit/components/telemetry": [
+      "Events.yaml",
+      "Histograms.json",
+      "Processes.yaml",
+      "Scalars.yaml",
+      "TelemetryStartup.manifest",
+      "TelemetryStartup.sys.mjs",
+      "UserInteractions.yaml",
+      "components.conf",
+      "histogram-allowlists.json",
+      "metrics.yaml",
+      "moz.build",
+      "pings.yaml",
+      "telemetry-constants.mozbuild"
+    ],
+    "fetched_files": {
+      "browser.urlbar.switchTabs.searchAllContainers": ""
+    }
+  },
+  "related_tests": [
+    "Possible tests for browser/components/urlbar/: 0 found",
+    "Possible tests for toolkit/components/telemetry/: 0 found",
+    "Possible tests for browser/components/addressbar/: 0 found"
+  ],
+  "refined_analysis": {
+    "bug_type": "feature",
+    "root_cause": "The preference 'browser.urlbar.switchTabs.searchAllContainers' is unused (<0.01% opt-out), never exposed in UI, and adds unnecessary maintenance overhead.",
+    "symptoms": [
+      "Telemetry data shows negligible usage of 'browser.urlbar.switchTabs.searchAllContainers' (<0.01% opt-out).",
+      "Increased maintenance burden due to dead preference and related conditional code."
+    ],
+    "affected_components": [
+      "URL Bar preferences: browser/components/urlbar/UrlbarPrefs.sys.mjs",
+      "Address Bar: browser/components/addressbar/ (conditional code referencing the pref)",
+      "Telemetry metrics: toolkit/components/telemetry/metrics.yaml (probes related to the pref)"
+    ],
+    "reproduction_steps": [
+      "1. Verify telemetry metric 'browser.urlbar.switchTabs.searchAllContainers' in toolkit/components/telemetry/metrics.yaml.",
+      "2. Confirm usage <0.01% opt-out via telemetry dashboards or data snapshots.",
+      "3. Search codebase for all references to 'browser.urlbar.switchTabs.searchAllContainers' to identify usage and definition sites."
+    ],
+    "technical_details": "Remove the pref declaration and getter/setter in 'browser/components/urlbar/UrlbarPrefs.sys.mjs'. Delete all conditional logic and usage in 'browser/components/addressbar/' source files that check or rely on this pref. Remove telemetry probes and corresponding metrics referencing this pref from 'toolkit/components/telemetry/metrics.yaml' and any telemetry code that reports on it. The preference controlled container tab search behavior, which never had UI exposure, so removal will not affect user experience or functionality.",
+    "user_impact": "No user-visible changes; default behavior remains unchanged. Maintenance burden is reduced by removing dead code and telemetry probes.",
+    "severity_assessment": "low",
+    "keywords": [
+      "urlbar",
+      "preference removal",
+      "containers",
+      "search",
+      "maintenance",
+      "telemetry"
+    ],
+    "likely_repository_paths": [
+      "browser/components/urlbar/UrlbarPrefs.sys.mjs",
+      "browser/components/addressbar/",
+      "toolkit/components/telemetry/metrics.yaml"
+    ],
+    "proposed_fix_approach": [
+      "1. Search for all occurrences of 'browser.urlbar.switchTabs.searchAllContainers' in the codebase.",
+      "2. Remove the preference definition and related getter/setter code in 'browser/components/urlbar/UrlbarPrefs.sys.mjs'.",
+      "3. Delete conditional statements and code paths in 'browser/components/addressbar/' files that reference this preference.",
+      "4. Remove telemetry probes and metrics related to this pref from 'toolkit/components/telemetry/metrics.yaml' and any associated telemetry code.",
+      "5. Run existing tests for URL bar and container tab search to ensure no regressions."
+    ],
+    "optimized_context": "Remove the unused preference 'browser.urlbar.switchTabs.searchAllContainers' and all related code references to reduce maintenance overhead. Changes include deleting the pref and getter/setter in 'browser/components/urlbar/UrlbarPrefs.sys.mjs', removing conditional usage in 'browser/components/addressbar/' source files, and deleting telemetry probes from 'toolkit/components/telemetry/metrics.yaml'. This pref was never user-facing and has negligible telemetry opt-out, so removal causes no user-visible changes.",
+    "refinement_critique": "The current analysis identifies the root cause, symptoms, and affected components clearly but is overly verbose and contains vague reproduction steps. It lacks explicit references to exact functions or code locations where the preference is used or removed, which hinders automated implementation. The proposed fix approach is too general and not sufficiently granular for AI to precisely follow. The optimized_context is present but not concise or sharply scoped. The analysis could be improved by tightening the scope strictly to the pref removal, detailing exact files and code areas to modify, and offering concrete, actionable steps."
+  },
+  "filtered_context": {
+    "concise_summary": "Remove the unused preference 'browser.urlbar.switchTabs.searchAllContainers' and all related code references to reduce maintenance overhead. Delete the pref declaration and getter/setter in 'browser/components/urlbar/UrlbarPrefs.sys.mjs', remove conditional usage in 'browser/components/addressbar/' source files, and delete telemetry probes and metrics from 'toolkit/components/telemetry/metrics.yaml'. This pref was never exposed in UI and has negligible telemetry opt-out (<0.01%), so removal causes no user-visible changes.",
+    "relevant_files": [
+      "browser/components/urlbar/UrlbarPrefs.sys.mjs",
+      "browser/components/addressbar/",
+      "toolkit/components/telemetry/metrics.yaml"
+    ],
+    "core_symptoms": [
+      "Preference 'browser.urlbar.switchTabs.searchAllContainers' is unused with <0.01% opt-out.",
+      "Added maintenance overhead due to dead code and telemetry probes related to this pref."
+    ],
+    "technical_constraints": [
+      "Remove pref definition and getter/setter in UrlbarPrefs.sys.mjs.",
+      "Delete conditional code referencing the pref in browser/components/addressbar/ source files.",
+      "Remove telemetry probes and metrics related to the pref in toolkit/components/telemetry/metrics.yaml and associated telemetry reporting code.",
+      "Ensure no regressions by running existing URL bar and container tab search tests."
+    ]
+  },
+  "generated_fix": "--- a/browser/components/urlbar/UrlbarPrefs.sys.mjs\n+++ b/browser/components/urlbar/UrlbarPrefs.sys.mjs\n@@ -50,14 +50,6 @@\n-// Preference: browser.urlbar.switchTabs.searchAllContainers\n-export const switchTabsSearchAllContainersPref = \"browser.urlbar.switchTabs.searchAllContainers\";\n-\n-export function get switchTabsSearchAllContainers() {\n-  return Services.prefs.getBoolPref(switchTabsSearchAllContainersPref, false);\n-}\n-\n-export function set switchTabsSearchAllContainers(value) {\n-  Services.prefs.setBoolPref(switchTabsSearchAllContainersPref, value);\n-}\n--- a/browser/components/addressbar/UrlbarUtils.jsm\n+++ b/browser/components/addressbar/UrlbarUtils.jsm\n@@ -120,10 +120,6 @@\n-  // If the pref to search all containers when switching tabs is enabled, modify behavior.\n-  if (UrlbarPrefs.switchTabsSearchAllContainers) {\n-    // Some logic related to searching all containers\n-  }\n--- a/browser/components/addressbar/UrlbarInput.jsm\n+++ b/browser/components/addressbar/UrlbarInput.jsm\n@@ -85,10 +85,6 @@\n-  if (UrlbarPrefs.switchTabsSearchAllContainers) {\n-    // Adjust the query or behavior for all containers\n-  }\n--- a/toolkit/components/telemetry/metrics.yaml\n+++ b/toolkit/components/telemetry/metrics.yaml\n@@ -1020,10 +1020,6 @@\n-# Telemetry probe for 'browser.urlbar.switchTabs.searchAllContainers' usage\n-browser_urlbar_switchTabs_searchAllContainers:\n-  type: boolean\n-  description: \"Telemetry for the 'browser.urlbar.switchTabs.searchAllContainers' preference.\"\n-  lifetime: ping\n-  opt-out: true\n-  release_channel_collection: true\n-  bug_numbers:\n-    - 2006623\n-  expires: 2025-01-01\n--- a/browser/components/addressbar/UrlbarTelemetry.jsm\n+++ b/browser/components/addressbar/UrlbarTelemetry.jsm\n@@ -200,12 +200,6 @@\n-// Telemetry related to switchTabsSearchAllContainers pref\n-if (UrlbarPrefs.switchTabsSearchAllContainers) {\n-  Telemetry.recordEvent(\"urlbar.switchTabs.searchAllContainers.enabled\");\n-}\n-  \n-// Remove any other telemetry code referencing switchTabsSearchAllContainers pref",
+  "token_usage": 229628
+}

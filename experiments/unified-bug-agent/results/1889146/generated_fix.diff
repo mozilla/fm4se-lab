@@ -1,0 +1,97 @@
+--- a/gfx/VideoOutput.cpp
++++ b/gfx/VideoOutput.cpp
+@@ -1020,10 +1020,26 @@
+ bool
+ VideoOutput::ConfigureColorManagement()
+ {
+-  // Previous logic applies saturation adjustments without per-display HDR detection
+-  bool isHDR = false;
+-  // Simplified check that fails with multi-monitor HDR/SDR setups
+-  isHDR = gfxPlatform::GetPlatform()->GetHDRStatus();
+-
+-  if (isHDR) {
+-    mSaturation = HDR_SATURATION_VALUE;
+-  } else {
+-    mSaturation = SDR_SATURATION_VALUE;
+-  }
++  // New logic: detect if current fullscreen monitor is HDR or SDR
++  bool isHDR = false;
++
++  if (mWindow) {
++    // Get monitor handle for the window
++    HMONITOR hMonitor = MonitorFromWindow(mWindow, MONITOR_DEFAULTTONEAREST);
++    if (hMonitor) {
++      // Query HDR support for this monitor
++      DXGI_COLOR_SPACE_TYPE colorSpace = DXGI_COLOR_SPACE_RGB_FULL_G2084_NONE_P2020;
++      UINT colorSpaceCaps = 0;
++      IDXGIOutput* output = nullptr;
++      // Retrieve DXGI output from HMONITOR (pseudo-code, adapt as needed)
++      if (SUCCEEDED(GetDXGIOutputFromHMONITOR(hMonitor, &output))) {
++        DXGI_OUTPUT_DESC desc;
++        if (SUCCEEDED(output->GetDesc(&desc))) {
++          // Check HDR capability - simplified example
++          isHDR = gfxPlatform::GetPlatform()->IsHDRMonitor(desc.Monitor);
++        }
++        output->Release();
++      }
++    }
++  }
++
++  mSaturation = isHDR ? HDR_SATURATION_VALUE : SDR_SATURATION_VALUE;
+ 
+   return true;
+ }
+--- a/dom/media/VideoFrameContainer.cpp
++++ b/dom/media/VideoFrameContainer.cpp
+@@ -850,11 +850,27 @@
+ void
+ VideoFrameContainer::UpdateColorSaturation()
+ {
+-  // Previous saturation update logic applies a global setting without per-display consideration
+-  bool isHDR = gfxPlatform::GetPlatform()->GetHDRStatus();
+-
+-  if (isHDR) {
+-    mColorSaturation = HDR_SATURATION_VALUE;
+-  } else {
+-    mColorSaturation = SDR_SATURATION_VALUE;
+-  }
++  // Updated logic: determine HDR status of the current display for full-screen video
++  bool isHDR = false;
++
++  nsCOMPtr<nsIWidget> widget = GetWidget();
++  if (widget) {
++    HWND hwnd = (HWND)widget->GetNativeData(NS_NATIVE_WINDOW);
++    if (hwnd) {
++      HMONITOR hMonitor = MonitorFromWindow(hwnd, MONITOR_DEFAULTTONEAREST);
++      if (hMonitor) {
++        DXGI_OUTPUT_DESC desc;
++        IDXGIOutput* output = nullptr;
++        if (SUCCEEDED(GetDXGIOutputFromHMONITOR(hMonitor, &output))) {
++          if (SUCCEEDED(output->GetDesc(&desc))) {
++            isHDR = gfxPlatform::GetPlatform()->IsHDRMonitor(desc.Monitor);
++          }
++          output->Release();
++        }
++      }
++    }
++  }
++
++  mColorSaturation = isHDR ? HDR_SATURATION_VALUE : SDR_SATURATION_VALUE;
+ }
+--- a/media/MediaDecoderStateMachine.cpp
++++ b/media/MediaDecoderStateMachine.cpp
+@@ -1345,7 +1345,14 @@
+ void
+ MediaDecoderStateMachine::HandleFullScreenChange(bool isFullscreen)
+ {
+-  // Previous code does not update color management based on HDR/SDR per display
+-  mVideoFrameContainer->UpdateColorSaturation();
++  // On fullscreen changes, reconfigure color management with per-display HDR detection
++  if (isFullscreen) {
++    mVideoFrameContainer->UpdateColorSaturation();
++    mVideoOutput->ConfigureColorManagement();
++  } else {
++    mVideoFrameContainer->UpdateColorSaturation();
++    mVideoOutput->ConfigureColorManagement();
++  }
+ }

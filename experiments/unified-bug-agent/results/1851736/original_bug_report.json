@@ -1,0 +1,484 @@
+{
+  "cf_status_firefox147": "---",
+  "keywords": [],
+  "cf_status_thunderbird_esr115": "---",
+  "dupe_of": null,
+  "summary": "Enable NVIDIA RTX Video Super Resolution for video overlay on Windows only during power charge",
+  "triage_owner_detail": {
+    "nick": "bhood",
+    "email": "bhood@mozilla.com",
+    "name": "bhood@mozilla.com",
+    "real_name": "Bob Hood [:bhood]",
+    "id": 697075
+  },
+  "cf_tracking_firefox148": "---",
+  "cf_accessibility_severity": "---",
+  "cf_status_firefox_esr140": "---",
+  "triage_owner": "bhood@mozilla.com",
+  "is_cc_accessible": true,
+  "target_milestone": "125 Branch",
+  "last_change_time_non_bot": "2026-01-15T11:08:40Z",
+  "mentors_detail": [],
+  "comment_count": 7,
+  "description": "\"NVIDIA RTX Video Super Resolution for video overlay\" support was added by  Bug 1823135. But it is not enabled by default. Since enabling it consumes more power.\n\nChromium enables it only when power is charging.\n- https://source.chromium.org/chromium/chromium/src/+/main:ui/gl/swap_chain_presenter.cc;l=1891;drc=c78381133ae4a3c49b418dda23efe4f974227cd7\n\nThen it seems better to enable it only when PC is power charged.",
+  "flags": [],
+  "cf_status_firefox149": "---",
+  "groups": [],
+  "creator_detail": {
+    "nick": "sotaro",
+    "email": "sotaro.ikeda.g@gmail.com",
+    "name": "sotaro.ikeda.g@gmail.com",
+    "id": 434202,
+    "real_name": "Sotaro Ikeda [:sotaro]"
+  },
+  "see_also": [],
+  "cf_tracking_thunderbird_esr115": "---",
+  "cf_fx_iteration": "---",
+  "duplicates": [
+    1851768
+  ],
+  "cf_crash_signature": "",
+  "component": "Graphics",
+  "comments": [
+    {
+      "time": "2023-09-06T01:19:36Z",
+      "bug_id": 1851736,
+      "author": "sotaro.ikeda.g@gmail.com",
+      "count": 0,
+      "creation_time": "2023-09-06T01:19:36Z",
+      "is_private": false,
+      "id": 16564635,
+      "attachment_id": null,
+      "creator": "sotaro.ikeda.g@gmail.com",
+      "tags": [],
+      "raw_text": "\"NVIDIA RTX Video Super Resolution for video overlay\" support was added by  Bug 1823135. But it is not enabled by default. Since enabling it consumes more power.\n\nChromium enables it only when power is charging.\n- https://source.chromium.org/chromium/chromium/src/+/main:ui/gl/swap_chain_presenter.cc;l=1891;drc=c78381133ae4a3c49b418dda23efe4f974227cd7\n\nThen it seems better to enable it only when PC is power charged.",
+      "reactions": {},
+      "text": "\"NVIDIA RTX Video Super Resolution for video overlay\" support was added by  Bug 1823135. But it is not enabled by default. Since enabling it consumes more power.\n\nChromium enables it only when power is charging.\n- https://source.chromium.org/chromium/chromium/src/+/main:ui/gl/swap_chain_presenter.cc;l=1891;drc=c78381133ae4a3c49b418dda23efe4f974227cd7\n\nThen it seems better to enable it only when PC is power charged."
+    },
+    {
+      "tags": [],
+      "attachment_id": null,
+      "creator": "sotaro.ikeda.g@gmail.com",
+      "reactions": {},
+      "raw_text": "gecko already supports to notify power status. Though it is not notified to GPU process.\n- https://searchfox.org/mozilla-central/rev/b6cd901cf074c5e75e3902d660bafa3cf3967c40/hal/HalBatteryInformation.h#15\n- https://searchfox.org/mozilla-central/rev/b6cd901cf074c5e75e3902d660bafa3cf3967c40/dom/battery/BatteryManager.cpp#36\n- https://searchfox.org/mozilla-central/rev/b6cd901cf074c5e75e3902d660bafa3cf3967c40/dom/battery/BatteryManager.cpp#144",
+      "text": "gecko already supports to notify power status. Though it is not notified to GPU process.\n- https://searchfox.org/mozilla-central/rev/b6cd901cf074c5e75e3902d660bafa3cf3967c40/hal/HalBatteryInformation.h#15\n- https://searchfox.org/mozilla-central/rev/b6cd901cf074c5e75e3902d660bafa3cf3967c40/dom/battery/BatteryManager.cpp#36\n- https://searchfox.org/mozilla-central/rev/b6cd901cf074c5e75e3902d660bafa3cf3967c40/dom/battery/BatteryManager.cpp#144",
+      "author": "sotaro.ikeda.g@gmail.com",
+      "count": 1,
+      "bug_id": 1851736,
+      "time": "2023-09-06T01:31:06Z",
+      "is_private": false,
+      "id": 16564638,
+      "creation_time": "2023-09-06T01:31:06Z"
+    },
+    {
+      "time": "2023-10-23T06:54:50Z",
+      "bug_id": 1851736,
+      "author": "sotaro.ikeda.g@gmail.com",
+      "count": 2,
+      "creation_time": "2023-10-23T06:54:50Z",
+      "is_private": false,
+      "id": 16633722,
+      "attachment_id": null,
+      "creator": "sotaro.ikeda.g@gmail.com",
+      "tags": [],
+      "raw_text": "video processor super resolution is enabled on Intel Gen10+ GPUs and NVIDIA GPUs with 530+ drivers\n- https://source.chromium.org/chromium/chromium/src/+/main:gpu/config/gpu_driver_bug_list.json;l=3390;drc=371a10c50fec96801c751137c50a6941a48fced3\n\nhttps://bugs.chromium.org/p/chromium/issues/detail?id=1368319\nhttps://bugs.chromium.org/p/chromium/issues/detail?id=1318380",
+      "reactions": {},
+      "text": "video processor super resolution is enabled on Intel Gen10+ GPUs and NVIDIA GPUs with 530+ drivers\n- https://source.chromium.org/chromium/chromium/src/+/main:gpu/config/gpu_driver_bug_list.json;l=3390;drc=371a10c50fec96801c751137c50a6941a48fced3\n\nhttps://bugs.chromium.org/p/chromium/issues/detail?id=1368319\nhttps://bugs.chromium.org/p/chromium/issues/detail?id=1318380"
+    },
+    {
+      "creation_time": "2024-02-27T03:54:18Z",
+      "id": 16813992,
+      "is_private": false,
+      "bug_id": 1851736,
+      "time": "2024-02-27T03:54:18Z",
+      "count": 3,
+      "author": "sotaro.ikeda.g@gmail.com",
+      "text": "*** Bug 1851768 has been marked as a duplicate of this bug. ***",
+      "reactions": {},
+      "raw_text": "",
+      "attachment_id": null,
+      "creator": "sotaro.ikeda.g@gmail.com",
+      "tags": []
+    },
+    {
+      "id": 16814003,
+      "is_private": false,
+      "creation_time": "2024-02-27T04:26:24Z",
+      "count": 4,
+      "author": "sotaro.ikeda.g@gmail.com",
+      "bug_id": 1851736,
+      "time": "2024-02-27T04:26:24Z",
+      "text": "Created attachment 9382760\nBug 1851736 - Enable NVIDIA RTX Video Super Resolution for video overlay on Windows only during power charge",
+      "reactions": {},
+      "raw_text": "",
+      "tags": [],
+      "attachment_id": 9382760,
+      "creator": "sotaro.ikeda.g@gmail.com"
+    },
+    {
+      "id": 16823567,
+      "is_private": false,
+      "creation_time": "2024-03-01T04:05:22Z",
+      "count": 5,
+      "author": "pulsebot@bmo.tld",
+      "bug_id": 1851736,
+      "time": "2024-03-01T04:05:22Z",
+      "text": "Pushed by sikeda.birchill@mozilla.com:\nhttps://hg.mozilla.org/integration/autoland/rev/67d9df31e921\nEnable NVIDIA RTX Video Super Resolution for video overlay on Windows only during power charge r=gfx-reviewers,ahale",
+      "raw_text": "Pushed by sikeda.birchill@mozilla.com:\nhttps://hg.mozilla.org/integration/autoland/rev/67d9df31e921\nEnable NVIDIA RTX Video Super Resolution for video overlay on Windows only during power charge r=gfx-reviewers,ahale",
+      "reactions": {},
+      "tags": [],
+      "attachment_id": null,
+      "creator": "pulsebot@bmo.tld"
+    },
+    {
+      "text": "https://hg.mozilla.org/mozilla-central/rev/67d9df31e921",
+      "reactions": {},
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/67d9df31e921",
+      "tags": [
+        "bugherder"
+      ],
+      "attachment_id": null,
+      "creator": "ncsoregi@mozilla.com",
+      "id": 16824538,
+      "is_private": false,
+      "creation_time": "2024-03-01T16:53:02Z",
+      "count": 6,
+      "author": "ncsoregi@mozilla.com",
+      "time": "2024-03-01T16:53:02Z",
+      "bug_id": 1851736
+    }
+  ],
+  "cc": [
+    "alice0775@gmail.com",
+    "emanuel.hoogeveen@protonmail.com",
+    "mayankleoboy1@gmail.com",
+    "pasik@iki.fi"
+  ],
+  "whiteboard": "",
+  "cf_has_str": "---",
+  "url": "",
+  "regressions": [],
+  "cf_tracking_firefox_relnote": "---",
+  "is_confirmed": true,
+  "cf_tracking_firefox_esr140": "---",
+  "is_open": false,
+  "cf_last_resolved": "2024-03-01T16:53:02Z",
+  "cf_webcompat_score": "---",
+  "is_creator_accessible": true,
+  "id": 1851736,
+  "cf_tracking_firefox_esr115": "---",
+  "cf_a11y_review_project_flag": "---",
+  "creation_time": "2023-09-06T01:19:36Z",
+  "resolution": "FIXED",
+  "mentors": [],
+  "cf_tracking_thunderbird_esr140": "---",
+  "cf_tracking_firefox149": "---",
+  "votes": 0,
+  "alias": null,
+  "severity": "--",
+  "cf_qa_whiteboard": "",
+  "cf_performance_impact": "---",
+  "status": "RESOLVED",
+  "cf_status_firefox148": "---",
+  "cf_webcompat_priority": "---",
+  "cf_status_firefox_esr115": "---",
+  "history": [
+    {
+      "when": "2023-09-06T01:19:48Z",
+      "who": "sotaro.ikeda.g@gmail.com",
+      "changes": [
+        {
+          "field_name": "depends_on",
+          "added": "1823135",
+          "removed": ""
+        }
+      ]
+    },
+    {
+      "who": "mayankleoboy1@gmail.com",
+      "when": "2023-09-06T02:30:29Z",
+      "changes": [
+        {
+          "field_name": "cc",
+          "added": "mayankleoboy1@gmail.com",
+          "removed": ""
+        }
+      ]
+    },
+    {
+      "who": "sotaro.ikeda.g@gmail.com",
+      "when": "2023-09-06T07:58:36Z",
+      "changes": [
+        {
+          "removed": "",
+          "added": "1851768",
+          "field_name": "depends_on"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "field_name": "cc",
+          "removed": "",
+          "added": "emanuel.hoogeveen@protonmail.com"
+        }
+      ],
+      "who": "emanuel.hoogeveen@protonmail.com",
+      "when": "2023-09-16T01:23:39Z"
+    },
+    {
+      "when": "2023-10-17T14:38:41Z",
+      "who": "katyaberezyaka@gmail.com",
+      "changes": [
+        {
+          "field_name": "cc",
+          "removed": "",
+          "added": "broaden_acid002@simplelogin.com"
+        }
+      ]
+    },
+    {
+      "when": "2023-11-14T12:50:18Z",
+      "who": "alice0775@gmail.com",
+      "changes": [
+        {
+          "field_name": "cc",
+          "removed": "",
+          "added": "alice0775@gmail.com"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "field_name": "duplicates",
+          "removed": "",
+          "added": "1851768"
+        }
+      ],
+      "when": "2024-02-27T03:54:18Z",
+      "who": "sotaro.ikeda.g@gmail.com"
+    },
+    {
+      "changes": [
+        {
+          "field_name": "assigned_to",
+          "added": "sotaro.ikeda.g@gmail.com",
+          "removed": "nobody@mozilla.org"
+        }
+      ],
+      "when": "2024-02-28T00:05:21Z",
+      "who": "sotaro.ikeda.g@gmail.com"
+    },
+    {
+      "when": "2024-02-28T00:05:33Z",
+      "who": "sotaro.ikeda.g@gmail.com",
+      "changes": [
+        {
+          "field_name": "summary",
+          "removed": "Enable NVIDIA RTX Video Super Resolution for video overlay on Windows during power charge",
+          "added": "Enable NVIDIA RTX Video Super Resolution for video overlay on Windows only during power charge"
+        }
+      ]
+    },
+    {
+      "who": "sotaro.ikeda.g@gmail.com",
+      "when": "2024-02-29T05:35:22Z",
+      "changes": [
+        {
+          "added": "1882688",
+          "removed": "",
+          "field_name": "blocks"
+        }
+      ]
+    },
+    {
+      "who": "phab-bot@bmo.tld",
+      "when": "2024-02-29T05:53:43Z",
+      "changes": [
+        {
+          "removed": "WIP: Bug 1851736 - Enable NVIDIA RTX Video Super Resolution for video overlay on Windows only during power charge",
+          "added": "Bug 1851736 - Enable NVIDIA RTX Video Super Resolution for video overlay on Windows only during power charge",
+          "field_name": "attachments.description",
+          "attachment_id": 9382760
+        }
+      ]
+    },
+    {
+      "when": "2024-03-01T16:53:02Z",
+      "who": "ncsoregi@mozilla.com",
+      "changes": [
+        {
+          "field_name": "target_milestone",
+          "removed": "---",
+          "added": "125 Branch"
+        },
+        {
+          "field_name": "resolution",
+          "removed": "",
+          "added": "FIXED"
+        },
+        {
+          "added": "RESOLVED",
+          "removed": "NEW",
+          "field_name": "status"
+        },
+        {
+          "added": "2024-03-01T16:53:02Z",
+          "removed": "",
+          "field_name": "cf_last_resolved"
+        },
+        {
+          "removed": "---",
+          "added": "fixed",
+          "field_name": "cf_status_firefox125"
+        },
+        {
+          "added": "bugherder",
+          "removed": "",
+          "comment_count": 6,
+          "field_name": "comment_tag",
+          "comment_id": 16824538
+        }
+      ]
+    },
+    {
+      "who": "katyaberezyaka@gmail.com",
+      "when": "2024-03-01T16:54:19Z",
+      "changes": [
+        {
+          "removed": "katyaberezyaka@gmail.com",
+          "added": "",
+          "field_name": "cc"
+        }
+      ]
+    },
+    {
+      "when": "2026-01-15T00:43:17Z",
+      "who": "sotaro.ikeda.g@gmail.com",
+      "changes": [
+        {
+          "field_name": "blocks",
+          "removed": "",
+          "added": "1954558"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "field_name": "cc",
+          "removed": "",
+          "added": "pasik@iki.fi"
+        }
+      ],
+      "who": "pasik@iki.fi",
+      "when": "2026-01-15T11:08:40Z"
+    }
+  ],
+  "qa_contact": "",
+  "regressed_by": [],
+  "assigned_to_detail": {
+    "name": "sotaro.ikeda.g@gmail.com",
+    "real_name": "Sotaro Ikeda [:sotaro]",
+    "id": 434202,
+    "nick": "sotaro",
+    "email": "sotaro.ikeda.g@gmail.com"
+  },
+  "cf_status_firefox125": "fixed",
+  "cf_size_estimate": "---",
+  "blocks": [
+    1954558,
+    1882688
+  ],
+  "depends_on": [
+    1823135,
+    1851768
+  ],
+  "filed_via": "standard_form",
+  "assigned_to": "sotaro.ikeda.g@gmail.com",
+  "cf_fx_points": "---",
+  "op_sys": "Unspecified",
+  "platform": "Unspecified",
+  "cc_detail": [
+    {
+      "email": "alice0775@gmail.com",
+      "nick": "alice0775",
+      "id": 293623,
+      "real_name": "Alice0775 White",
+      "name": "alice0775@gmail.com"
+    },
+    {
+      "name": "emanuel.hoogeveen@protonmail.com",
+      "real_name": "Emanuel Hoogeveen [:ehoogeveen]",
+      "id": 327452,
+      "nick": "ehoogeveen",
+      "email": "emanuel.hoogeveen@protonmail.com"
+    },
+    {
+      "email": "mayankleoboy1@gmail.com",
+      "nick": "mayankleoboy1",
+      "real_name": "Mayank Bansal",
+      "id": 440227,
+      "name": "mayankleoboy1@gmail.com"
+    },
+    {
+      "email": "pasik@iki.fi",
+      "nick": "pasik",
+      "id": 529219,
+      "real_name": "",
+      "name": "pasik@iki.fi"
+    }
+  ],
+  "cf_tracking_firefox147": "---",
+  "classification": "Components",
+  "creator": "sotaro.ikeda.g@gmail.com",
+  "priority": "--",
+  "cf_cab_review": "---",
+  "attachments": [
+    {
+      "id": 9382760,
+      "attacher": "sotaro.ikeda.g@gmail.com",
+      "content_type": "text/x-phabricator-request",
+      "is_private": 0,
+      "creation_time": "2024-02-27T04:26:24Z",
+      "summary": "Bug 1851736 - Enable NVIDIA RTX Video Super Resolution for video overlay on Windows only during power charge",
+      "flags": [],
+      "file_name": "phabricator-D202781-url.txt",
+      "description": "Bug 1851736 - Enable NVIDIA RTX Video Super Resolution for video overlay on Windows only during power charge",
+      "creator_detail": {
+        "nick": "sotaro",
+        "email": "sotaro.ikeda.g@gmail.com",
+        "name": "sotaro.ikeda.g@gmail.com",
+        "id": 434202,
+        "real_name": "Sotaro Ikeda [:sotaro]"
+      },
+      "size": 48,
+      "bug_id": 1851736,
+      "is_obsolete": 0,
+      "last_change_time": "2024-02-29T05:53:43Z",
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjAyNzgx",
+      "is_patch": 0,
+      "creator": "sotaro.ikeda.g@gmail.com"
+    }
+  ],
+  "counts": {
+    "comments": 7,
+    "attachments": 1,
+    "regressions": 0,
+    "depends_on": 3,
+    "blocks": 2,
+    "cc": 4,
+    "duplicates": 1,
+    "keywords": 0,
+    "regressed_by": 0
+  },
+  "last_change_time": "2026-01-15T11:08:40Z",
+  "cf_status_thunderbird_esr140": "---",
+  "product": "Core",
+  "cf_rank": null,
+  "type": "enhancement",
+  "cf_user_story": "",
+  "version": "unspecified"
+}

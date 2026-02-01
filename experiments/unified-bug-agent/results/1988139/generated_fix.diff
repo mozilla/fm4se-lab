@@ -1,0 +1,140 @@
+--- a/netwerk/test/unit/head_servers.js
++++ b/netwerk/test/unit/head_servers.sys.mjs
+@@ -1,79 +1,110 @@
+-// This file defines NodeHTTPServers for use in unit tests.
+-
+-const { HttpServer } = require("sdk/test/httpd");
+-
+-// Existing HTTP server setup code...
+-
+-// Existing HTTPS server setup code...
+-
+-module.exports = { NodeHTTPServers };
++import { execSync } from "child_process";
++import { existsSync, readFileSync } from "fs";
++import { join } from "path";
++
++// NodeHTTPServers class providing HTTP and HTTPS test servers
++class NodeHTTPServers {
++  constructor() {
++    this._servers = new Map();
++  }
++
++  startHTTP(port = 0) {
++    const http = require("http");
++    const server = http.createServer((req, res) => {
++      res.writeHead(200, { "Content-Type": "text/plain" });
++      res.end("hello world\n");
++    });
++    return new Promise((resolve, reject) => {
++      server.listen(port, () => {
++        this._servers.set(server, "http");
++        resolve(server);
++      });
++      server.on("error", reject);
++    });
++  }
++
++  async startHTTPS(port = 0) {
++    const https = require("https");
++    const certDir = join(__dirname, "certs");
++    const keyPath = join(certDir, "server.key");
++    const certPath = join(certDir, "server.crt");
++
++    if (!existsSync(keyPath) || !existsSync(certPath)) {
++      throw new Error("Certificate files not found in certs directory");
++    }
++
++    // Import cert into certificate DB for xpcshell environment
++    this._importCert(certPath);
++
++    const key = readFileSync(keyPath);
++    const cert = readFileSync(certPath);
++
++    const options = { key, cert };
++
++    const server = https.createServer(options, (req, res) => {
++      res.writeHead(200, { "Content-Type": "text/plain" });
++      res.end("hello secure world\n");
++    });
++
++    return new Promise((resolve, reject) => {
++      server.listen(port, () => {
++        this._servers.set(server, "https");
++        resolve(server);
++      });
++      server.on("error", reject);
++    });
++  }
++
++  _importCert(certPath) {
++    // Only import if in xpcshell environment with certutil available
++    try {
++      const certutil = "certutil";
++      // Check if certutil exists
++      execSync(`${certutil} -V -n ""`, { stdio: "ignore" });
++      // Import the cert
++      execSync(`${certutil} -A -n "test-server-cert" -t "TCu,Cu,Tu" -i "${certPath}" -d sql:$HOME/.pki/nssdb`);
++    } catch (e) {
++      // If certutil not found or error importing cert, log and continue
++      // We do not fail tests on cert import failure
++      console.warn("Certificate import failed or certutil not found, skipping import.");
++    }
++  }
++
++  stopAll() {
++    for (const [server, type] of this._servers) {
++      server.close();
++      this._servers.delete(server);
++    }
++  }
++}
++
++export { NodeHTTPServers };
+--- a/netwerk/docs/NodeServers.md
++++ b/netwerk/docs/NodeServers.md
+@@ -1,15 +1,30 @@
+-# Node HTTP and HTTPS Servers for Testing
+-
+-This document describes the usage of Node-based HTTP and HTTPS servers for networking tests in Mozilla.
+-
+-## head_servers.js
+-
+-The `head_servers.js` file provides HTTP and HTTPS servers for use in unit tests within `netwerk/test/unit`.
+-
+-## Usage
+-
+-Tests requiring HTTP or HTTPS servers can instantiate and listen on these servers to simulate network conditions.
++# Node HTTP and HTTPS Servers for Testing
++
++This document describes the usage of Node-based HTTP and HTTPS servers for networking tests in Mozilla.
++
++## head_servers.sys.mjs
++
++The previous `head_servers.js` has been converted into an ES module named `head_servers.sys.mjs` to allow reuse across all xpcshell tests.
++
++### Importing the module
++
++js
++import { NodeHTTPServers } from "resource://testing-common/head_servers.sys.mjs";
++
++const servers = new NodeHTTPServers();
++const httpServer = await servers.startHTTP();
++const httpsServer = await servers.startHTTPS();
++// Use servers in your tests...
++
++
++### HTTPS Server and Certificate Import
++
++The HTTPS server automatically imports the server certificate into the test environment's certificate database using `certutil`, if available.
++
++This ensures that HTTPS connections in tests do not fail due to untrusted certificates.
++
++If the import fails or `certutil` is not found, a warning is logged, but the test does not fail.
++
++### Certificate Files
++
++The server key and certificate files are located in the `certs` directory alongside `head_servers.sys.mjs`.
++
++Tests should ensure these files are present for HTTPS server usage.
++

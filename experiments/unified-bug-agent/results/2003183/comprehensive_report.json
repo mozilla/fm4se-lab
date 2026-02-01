@@ -1,0 +1,773 @@
+{
+  "bug_id": 2003183,
+  "timestamp": "2026-02-01 18:26:41",
+  "data_sources": [
+    "bugzilla",
+    "crash-stats"
+  ],
+  "bug_data": {
+    "cf_accessibility_severity": "---",
+    "filed_via": "standard_form",
+    "see_also": [
+      "https://bugzilla.mozilla.org/show_bug.cgi?id=2003197"
+    ],
+    "is_open": false,
+    "op_sys": "Unspecified",
+    "depends_on": [],
+    "alias": null,
+    "description": "It became unused in bug 1920562",
+    "regressed_by": [],
+    "triage_owner_detail": {
+      "id": 415378,
+      "name": "valentin.gosu@gmail.com",
+      "real_name": "Valentin Gosu [:valentin] (he/him)",
+      "email": "valentin.gosu@gmail.com",
+      "nick": "valentin"
+    },
+    "platform": "Unspecified",
+    "product": "Core",
+    "comments": [
+      {
+        "reactions": {},
+        "raw_text": "It became unused in bug 1920562",
+        "creation_time": "2025-11-30T12:50:50Z",
+        "count": 0,
+        "text": "It became unused in bug 1920562",
+        "creator": "gregp@tutanota.de",
+        "attachment_id": null,
+        "author": "gregp@tutanota.de",
+        "tags": [],
+        "bug_id": 2003183,
+        "time": "2025-11-30T12:50:50Z",
+        "id": 17785848,
+        "is_private": false
+      },
+      {
+        "count": 1,
+        "text": "- [modules/libpref/init/StaticPrefList.yaml#14895-14899](https://searchfox.org/firefox-main/rev/7032b912c282da6b9b8219e779b2a441a27aaec9/modules/libpref/init/StaticPrefList.yaml#14895-14899)",
+        "reactions": {},
+        "raw_text": "- [modules/libpref/init/StaticPrefList.yaml#14895-14899](https://searchfox.org/firefox-main/rev/7032b912c282da6b9b8219e779b2a441a27aaec9/modules/libpref/init/StaticPrefList.yaml#14895-14899)",
+        "creation_time": "2025-12-01T16:44:20Z",
+        "time": "2025-12-01T16:44:20Z",
+        "id": 17788521,
+        "is_private": false,
+        "creator": "gregp@tutanota.de",
+        "author": "gregp@tutanota.de",
+        "attachment_id": null,
+        "tags": [],
+        "bug_id": 2003183
+      },
+      {
+        "count": 2,
+        "text": "Hi, I\u2019m new to contributing to Mozilla and I\u2019d like to start by working on this bug. I\u2019ve read through the details and I believe this is a good opportunity for me to learn and contribute. Please let me know if anyone is already actively working on it, or if there are any specific guidelines or background information I should be aware of before starting. If possible, I\u2019d be happy to be assigned this bug so I can begin investigating and preparing a patch.\nemail: sadanki190@gmail.com",
+        "reactions": {},
+        "raw_text": "Hi, I\u2019m new to contributing to Mozilla and I\u2019d like to start by working on this bug. I\u2019ve read through the details and I believe this is a good opportunity for me to learn and contribute. Please let me know if anyone is already actively working on it, or if there are any specific guidelines or background information I should be aware of before starting. If possible, I\u2019d be happy to be assigned this bug so I can begin investigating and preparing a patch.\nemail: sadanki190@gmail.com",
+        "creation_time": "2025-12-05T14:43:25Z",
+        "time": "2025-12-05T14:43:25Z",
+        "id": 17794876,
+        "is_private": false,
+        "creator": "sadanki190@gmail.com",
+        "attachment_id": null,
+        "tags": [],
+        "author": "sadanki190@gmail.com",
+        "bug_id": 2003183
+      },
+      {
+        "creator": "sadanki190@gmail.com",
+        "bug_id": 2003183,
+        "attachment_id": 9531193,
+        "tags": [],
+        "author": "sadanki190@gmail.com",
+        "time": "2025-12-05T17:10:40Z",
+        "is_private": false,
+        "id": 17795175,
+        "reactions": {},
+        "raw_text": "Attached patch removes the unused pref as discussed.",
+        "creation_time": "2025-12-05T17:10:40Z",
+        "text": "Created attachment 9531193\nBug 2003183 - Remove unused pref network.trr.confirmation_telemetry_enabled\n\nAttached patch removes the unused pref as discussed.",
+        "count": 3
+      },
+      {
+        "count": 4,
+        "text": "Created attachment 9531226\nBug 2003183 - Remove unused pref network.trr.confirmation_telemetry_enabled",
+        "raw_text": "",
+        "reactions": {},
+        "creation_time": "2025-12-05T20:11:07Z",
+        "time": "2025-12-05T20:11:07Z",
+        "id": 17795388,
+        "is_private": false,
+        "creator": "sadanki190@gmail.com",
+        "author": "sadanki190@gmail.com",
+        "attachment_id": 9531226,
+        "tags": [],
+        "bug_id": 2003183
+      },
+      {
+        "is_private": false,
+        "count": 5,
+        "time": "2025-12-06T02:09:17Z",
+        "id": 17795633,
+        "creator": "phab-bot@bmo.tld",
+        "bug_id": 2003183,
+        "attachment_id": 9531226,
+        "tags": [],
+        "author": "phab-bot@bmo.tld",
+        "text": "Comment on attachment 9531226\nBug 2003183 - Remove unused pref network.trr.confirmation_telemetry_enabled\n\nRevision D275285 was moved to bug 2003197. Setting attachment 9531226 to obsolete.",
+        "raw_text": "Revision D275285 was moved to bug 2003197. Setting attachment 9531226 to obsolete.",
+        "reactions": {},
+        "creation_time": "2025-12-06T02:09:17Z"
+      },
+      {
+        "reactions": {},
+        "raw_text": "The patch landed with the wrong bug number as https://github.com/mozilla-firefox/firefox/commit/f467d4a3f61e",
+        "creation_time": "2026-01-26T20:31:00Z",
+        "count": 6,
+        "text": "The patch landed with the wrong bug number as https://github.com/mozilla-firefox/firefox/commit/f467d4a3f61e",
+        "creator": "mathew.hodson@gmail.com",
+        "tags": [],
+        "attachment_id": null,
+        "author": "mathew.hodson@gmail.com",
+        "bug_id": 2003183,
+        "time": "2026-01-26T20:31:00Z",
+        "id": 17860519,
+        "is_private": false
+      }
+    ],
+    "last_change_time_non_bot": "2026-01-26T20:37:03Z",
+    "cf_status_firefox149": "---",
+    "cf_last_resolved": "2026-01-26T20:31:00Z",
+    "qa_contact": "",
+    "cf_status_firefox147": "---",
+    "cf_tracking_firefox149": "---",
+    "counts": {
+      "regressions": 0,
+      "depends_on": 1,
+      "attachments": 2,
+      "keywords": 1,
+      "comments": 7,
+      "blocks": 0,
+      "duplicates": 0,
+      "regressed_by": 0,
+      "cc": 2
+    },
+    "id": 2003183,
+    "cf_tracking_firefox_esr140": "---",
+    "assigned_to": "sadanki190@gmail.com",
+    "attachments": [
+      {
+        "flags": [
+          {
+            "setter": "sadanki190@gmail.com",
+            "creation_date": "2025-12-05T17:10:40Z",
+            "type_id": 937,
+            "requestee": "rjesup@jesup.org",
+            "name": "review",
+            "modification_date": "2025-12-05T17:10:40Z",
+            "id": 2319755,
+            "status": "?"
+          }
+        ],
+        "summary": "Bug 2003183 - Remove unused pref network.trr.confirmation_telemetry_enabled",
+        "id": 9531193,
+        "last_change_time": "2025-12-05T17:10:40Z",
+        "bug_id": 2003183,
+        "file_name": "0001-Bug-2003197-Remove-unused-pref-network.trr.confirmat.patch",
+        "creator": "sadanki190@gmail.com",
+        "content_type": "text/plain",
+        "is_obsolete": 0,
+        "attacher": "sadanki190@gmail.com",
+        "data": "RnJvbSBlZWYzZjA2NDU5MDUxNDY1ZjhiNTg2MmEwZmNhZmQ1MWVkYTAxNzhiIE1vbiBTZXAgMTcgMDA6MDA6MDAgMjAwMQpGcm9tOiBWaWduZXNoX1NhZGFuYWtlIDwxNjU3NzY0NzgrU2FkYW5raUB1c2Vycy5ub3JlcGx5LmdpdGh1Yi5jb20+CkRhdGU6IEZyaSwgNSBEZWMgMjAyNSAyMjoxODowNiArMDUzMApTdWJqZWN0OiBbUEFUQ0hdIEJ1ZyAyMDAzMTk3IC0gUmVtb3ZlIHVudXNlZCBwcmVmCiBuZXR3b3JrLnRyci5jb25maXJtYXRpb25fdGVsZW1ldHJ5X2VuYWJsZWQKCi0tLQogbW9kdWxlcy9saWJwcmVmL2luaXQvU3RhdGljUHJlZkxpc3QueWFtbCB8IDYgLS0tLS0tCiAxIGZpbGUgY2hhbmdlZCwgNiBkZWxldGlvbnMoLSkKCmRpZmYgLS1naXQgYS9tb2R1bGVzL2xpYnByZWYvaW5pdC9TdGF0aWNQcmVmTGlzdC55YW1sIGIvbW9kdWxlcy9saWJwcmVmL2luaXQvU3RhdGljUHJlZkxpc3QueWFtbAppbmRleCAwNmEyNjUwMmRkN2YuLjNhNTI2ZTA0M2I0NiAxMDA2NDQKLS0tIGEvbW9kdWxlcy9saWJwcmVmL2luaXQvU3RhdGljUHJlZkxpc3QueWFtbAorKysgYi9tb2R1bGVzL2xpYnByZWYvaW5pdC9TdGF0aWNQcmVmTGlzdC55YW1sCkBAIC0xNDg4MCwxMiArMTQ4ODAsNiBAQAogICB2YWx1ZTogNjAwMAogICBtaXJyb3I6IGFsd2F5cwogCi0jIFRoZSB0aW1lb3V0IG9mIHRoZSBUUlIgY29uZmlybWF0aW9uIHJlcXVlc3QKLS0gbmFtZTogbmV0d29yay50cnIuY29uZmlybWF0aW9uX3RlbGVtZXRyeV9lbmFibGVkCi0gIHR5cGU6IFJlbGF4ZWRBdG9taWNCb29sCi0gIHZhbHVlOiB0cnVlCi0gIG1pcnJvcjogYWx3YXlzCi0KICMgV2hldGhlciB0byBzZW5kIHRoZSBBY2NlcHQtTGFuZ3VhZ2UgaGVhZGVyIGZvciBUUlIgcmVxdWVzdHMKIC0gbmFtZTogbmV0d29yay50cnIuc2VuZF9hY2NlcHQtbGFuZ3VhZ2VfaGVhZGVycwogICB0eXBlOiBSZWxheGVkQXRvbWljQm9vbAotLSAKMi40NC4wLndpbmRvd3MuMQoK",
+        "creation_time": "2025-12-05T17:10:40Z",
+        "is_private": 0,
+        "is_patch": 1,
+        "size": 975,
+        "creator_detail": {
+          "name": "sadanki190@gmail.com",
+          "id": 782084,
+          "nick": "sadanki190",
+          "email": "sadanki190@gmail.com",
+          "real_name": "Vignesh Sadankae"
+        },
+        "description": "Bug 2003183 - Remove unused pref network.trr.confirmation_telemetry_enabled"
+      },
+      {
+        "size": 48,
+        "is_patch": 0,
+        "is_private": 0,
+        "description": "Bug 2003183 - Remove unused pref network.trr.confirmation_telemetry_enabled",
+        "creator_detail": {
+          "name": "sadanki190@gmail.com",
+          "id": 782084,
+          "email": "sadanki190@gmail.com",
+          "real_name": "Vignesh Sadankae",
+          "nick": "sadanki190"
+        },
+        "content_type": "text/x-phabricator-request",
+        "is_obsolete": 0,
+        "creator": "sadanki190@gmail.com",
+        "file_name": "phabricator-D275285-url.txt",
+        "bug_id": 2003183,
+        "last_change_time": "2026-01-26T20:37:03Z",
+        "id": 9531226,
+        "summary": "Bug 2003183 - Remove unused pref network.trr.confirmation_telemetry_enabled",
+        "flags": [],
+        "creation_time": "2025-12-05T20:11:07Z",
+        "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjc1Mjg1",
+        "attacher": "sadanki190@gmail.com"
+      }
+    ],
+    "blocks": [
+      1773039
+    ],
+    "cf_status_firefox_esr140": "---",
+    "cf_status_thunderbird_esr115": "---",
+    "cf_qa_whiteboard": "",
+    "cf_tracking_firefox148": "---",
+    "creation_time": "2025-11-30T12:50:50Z",
+    "cf_tracking_firefox_relnote": "---",
+    "mentors_detail": [],
+    "cf_a11y_review_project_flag": "---",
+    "cf_user_story": "",
+    "cf_fx_points": "1",
+    "severity": "N/A",
+    "votes": 0,
+    "last_change_time": "2026-01-26T20:37:03Z",
+    "cc_detail": [
+      {
+        "id": 11539,
+        "name": "rjesup@jesup.org",
+        "nick": "jesup",
+        "email": "rjesup@jesup.org",
+        "real_name": "Randell Jesup [:jesup] (needinfo me)"
+      },
+      {
+        "nick": "sadanki190",
+        "email": "sadanki190@gmail.com",
+        "real_name": "Vignesh Sadankae",
+        "id": 782084,
+        "name": "sadanki190@gmail.com"
+      }
+    ],
+    "cf_crash_signature": "",
+    "cf_cab_review": "---",
+    "creator": "gregp@tutanota.de",
+    "classification": "Components",
+    "whiteboard": "[lang=js] [necko-triaged] [necko-priority-next]",
+    "url": "",
+    "target_milestone": "148 Branch",
+    "dupe_of": null,
+    "version": "unspecified",
+    "groups": [],
+    "creator_detail": {
+      "id": 685138,
+      "name": "gregp@tutanota.de",
+      "real_name": "Gregory Pappas [:gregp]",
+      "email": "gregp@tutanota.de",
+      "nick": "gregp"
+    },
+    "mentors": [],
+    "cf_size_estimate": "---",
+    "cf_performance_impact": "---",
+    "keywords": [
+      "good-first-bug"
+    ],
+    "regressions": [],
+    "cf_has_str": "---",
+    "cf_tracking_thunderbird_esr140": "---",
+    "cf_status_firefox_esr115": "---",
+    "assigned_to_detail": {
+      "id": 782084,
+      "name": "sadanki190@gmail.com",
+      "nick": "sadanki190",
+      "real_name": "Vignesh Sadankae",
+      "email": "sadanki190@gmail.com"
+    },
+    "cc": [
+      "rjesup@jesup.org",
+      "sadanki190@gmail.com"
+    ],
+    "cf_webcompat_priority": "---",
+    "duplicates": [],
+    "cf_status_thunderbird_esr140": "---",
+    "cf_fx_iteration": "---",
+    "cf_webcompat_score": "---",
+    "priority": "P5",
+    "resolution": "FIXED",
+    "cf_tracking_firefox147": "---",
+    "cf_rank": "7",
+    "triage_owner": "valentin.gosu@gmail.com",
+    "cf_status_firefox148": "fixed",
+    "component": "Networking",
+    "type": "task",
+    "comment_count": 7,
+    "history": [
+      {
+        "changes": [
+          {
+            "removed": "",
+            "field_name": "cc",
+            "added": "rjesup@jesup.org"
+          },
+          {
+            "field_name": "cf_rank",
+            "removed": "",
+            "added": "7"
+          },
+          {
+            "added": "[necko-triaged] [necko-priority-next]",
+            "removed": "",
+            "field_name": "whiteboard"
+          },
+          {
+            "removed": "---",
+            "field_name": "cf_fx_points",
+            "added": "1"
+          },
+          {
+            "added": "N/A",
+            "removed": "--",
+            "field_name": "severity"
+          },
+          {
+            "removed": "--",
+            "field_name": "priority",
+            "added": "P5"
+          }
+        ],
+        "who": "rjesup@jesup.org",
+        "when": "2025-11-30T22:36:41Z"
+      },
+      {
+        "changes": [
+          {
+            "field_name": "keywords",
+            "removed": "",
+            "added": "good-first-bug"
+          },
+          {
+            "removed": "[necko-triaged] [necko-priority-next]",
+            "field_name": "whiteboard",
+            "added": "[lang=js] [necko-triaged] [necko-priority-next]"
+          }
+        ],
+        "when": "2025-12-01T16:44:20Z",
+        "who": "gregp@tutanota.de"
+      },
+      {
+        "who": "sadanki190@gmail.com",
+        "when": "2025-12-05T14:43:25Z",
+        "changes": [
+          {
+            "field_name": "cc",
+            "removed": "",
+            "added": "sadanki190@gmail.com"
+          }
+        ]
+      },
+      {
+        "who": "sadanki190@gmail.com",
+        "when": "2025-12-05T17:10:40Z",
+        "changes": [
+          {
+            "field_name": "flagtypes.name",
+            "removed": "",
+            "attachment_id": 9531193,
+            "added": "review?(rjesup@jesup.org)"
+          }
+        ]
+      },
+      {
+        "changes": [
+          {
+            "added": "ASSIGNED",
+            "field_name": "status",
+            "removed": "NEW"
+          },
+          {
+            "field_name": "assigned_to",
+            "removed": "nobody@mozilla.org",
+            "added": "sadanki190@gmail.com"
+          }
+        ],
+        "when": "2025-12-05T20:11:07Z",
+        "who": "phab-bot@bmo.tld"
+      },
+      {
+        "changes": [
+          {
+            "attachment_id": 9531226,
+            "added": "1",
+            "removed": "0",
+            "field_name": "attachments.isobsolete"
+          }
+        ],
+        "who": "phab-bot@bmo.tld",
+        "when": "2025-12-06T02:09:17Z"
+      },
+      {
+        "who": "mathew.hodson@gmail.com",
+        "when": "2026-01-26T20:31:00Z",
+        "changes": [
+          {
+            "added": "https://bugzilla.mozilla.org/show_bug.cgi?id=2003197",
+            "removed": "",
+            "field_name": "see_also"
+          },
+          {
+            "added": "148 Branch",
+            "removed": "---",
+            "field_name": "target_milestone"
+          },
+          {
+            "removed": "",
+            "field_name": "resolution",
+            "added": "FIXED"
+          },
+          {
+            "removed": "ASSIGNED",
+            "field_name": "status",
+            "added": "RESOLVED"
+          },
+          {
+            "field_name": "cf_last_resolved",
+            "removed": "",
+            "added": "2026-01-26T20:31:00Z"
+          },
+          {
+            "added": "fixed",
+            "field_name": "cf_status_firefox148",
+            "removed": "---"
+          }
+        ]
+      },
+      {
+        "changes": [
+          {
+            "added": "0",
+            "attachment_id": 9531226,
+            "removed": "1",
+            "field_name": "attachments.isobsolete"
+          }
+        ],
+        "when": "2026-01-26T20:37:03Z",
+        "who": "phab-bot@bmo.tld"
+      }
+    ],
+    "is_confirmed": true,
+    "is_cc_accessible": true,
+    "is_creator_accessible": true,
+    "cf_tracking_firefox_esr115": "---",
+    "summary": "Remove unused network.trr.confirmation_telemetry_enabled pref",
+    "flags": [],
+    "status": "RESOLVED",
+    "cf_tracking_thunderbird_esr115": "---"
+  },
+  "comments": [
+    {
+      "raw_text": "It became unused in bug 1920562",
+      "reactions": {},
+      "creation_time": "2025-11-30T12:50:50Z",
+      "text": "It became unused in bug 1920562",
+      "creator": "gregp@tutanota.de",
+      "tags": [],
+      "author": "gregp@tutanota.de",
+      "attachment_id": null,
+      "bug_id": 2003183,
+      "time": "2025-11-30T12:50:50Z",
+      "id": 17785848,
+      "count": 0,
+      "is_private": false
+    },
+    {
+      "count": 1,
+      "text": "- [modules/libpref/init/StaticPrefList.yaml#14895-14899](https://searchfox.org/firefox-main/rev/7032b912c282da6b9b8219e779b2a441a27aaec9/modules/libpref/init/StaticPrefList.yaml#14895-14899)",
+      "creation_time": "2025-12-01T16:44:20Z",
+      "reactions": {},
+      "raw_text": "- [modules/libpref/init/StaticPrefList.yaml#14895-14899](https://searchfox.org/firefox-main/rev/7032b912c282da6b9b8219e779b2a441a27aaec9/modules/libpref/init/StaticPrefList.yaml#14895-14899)",
+      "id": 17788521,
+      "is_private": false,
+      "time": "2025-12-01T16:44:20Z",
+      "author": "gregp@tutanota.de",
+      "attachment_id": null,
+      "tags": [],
+      "bug_id": 2003183,
+      "creator": "gregp@tutanota.de"
+    },
+    {
+      "raw_text": "Hi, I\u2019m new to contributing to Mozilla and I\u2019d like to start by working on this bug. I\u2019ve read through the details and I believe this is a good opportunity for me to learn and contribute. Please let me know if anyone is already actively working on it, or if there are any specific guidelines or background information I should be aware of before starting. If possible, I\u2019d be happy to be assigned this bug so I can begin investigating and preparing a patch.\nemail: sadanki190@gmail.com",
+      "reactions": {},
+      "creation_time": "2025-12-05T14:43:25Z",
+      "text": "Hi, I\u2019m new to contributing to Mozilla and I\u2019d like to start by working on this bug. I\u2019ve read through the details and I believe this is a good opportunity for me to learn and contribute. Please let me know if anyone is already actively working on it, or if there are any specific guidelines or background information I should be aware of before starting. If possible, I\u2019d be happy to be assigned this bug so I can begin investigating and preparing a patch.\nemail: sadanki190@gmail.com",
+      "creator": "sadanki190@gmail.com",
+      "author": "sadanki190@gmail.com",
+      "attachment_id": null,
+      "tags": [],
+      "bug_id": 2003183,
+      "time": "2025-12-05T14:43:25Z",
+      "id": 17794876,
+      "count": 2,
+      "is_private": false
+    },
+    {
+      "creation_time": "2025-12-05T17:10:40Z",
+      "raw_text": "Attached patch removes the unused pref as discussed.",
+      "reactions": {},
+      "text": "Created attachment 9531193\nBug 2003183 - Remove unused pref network.trr.confirmation_telemetry_enabled\n\nAttached patch removes the unused pref as discussed.",
+      "bug_id": 2003183,
+      "author": "sadanki190@gmail.com",
+      "tags": [],
+      "attachment_id": 9531193,
+      "creator": "sadanki190@gmail.com",
+      "id": 17795175,
+      "time": "2025-12-05T17:10:40Z",
+      "count": 3,
+      "is_private": false
+    },
+    {
+      "count": 4,
+      "text": "Created attachment 9531226\nBug 2003183 - Remove unused pref network.trr.confirmation_telemetry_enabled",
+      "creation_time": "2025-12-05T20:11:07Z",
+      "raw_text": "",
+      "reactions": {},
+      "id": 17795388,
+      "is_private": false,
+      "time": "2025-12-05T20:11:07Z",
+      "author": "sadanki190@gmail.com",
+      "attachment_id": 9531226,
+      "tags": [],
+      "bug_id": 2003183,
+      "creator": "sadanki190@gmail.com"
+    },
+    {
+      "time": "2025-12-06T02:09:17Z",
+      "id": 17795633,
+      "creator": "phab-bot@bmo.tld",
+      "author": "phab-bot@bmo.tld",
+      "attachment_id": 9531226,
+      "tags": [],
+      "bug_id": 2003183,
+      "text": "Comment on attachment 9531226\nBug 2003183 - Remove unused pref network.trr.confirmation_telemetry_enabled\n\nRevision D275285 was moved to bug 2003197. Setting attachment 9531226 to obsolete.",
+      "reactions": {},
+      "raw_text": "Revision D275285 was moved to bug 2003197. Setting attachment 9531226 to obsolete.",
+      "creation_time": "2025-12-06T02:09:17Z",
+      "is_private": false,
+      "count": 5
+    },
+    {
+      "creator": "mathew.hodson@gmail.com",
+      "tags": [],
+      "author": "mathew.hodson@gmail.com",
+      "attachment_id": null,
+      "bug_id": 2003183,
+      "time": "2026-01-26T20:31:00Z",
+      "id": 17860519,
+      "reactions": {},
+      "raw_text": "The patch landed with the wrong bug number as https://github.com/mozilla-firefox/firefox/commit/f467d4a3f61e",
+      "creation_time": "2026-01-26T20:31:00Z",
+      "text": "The patch landed with the wrong bug number as https://github.com/mozilla-firefox/firefox/commit/f467d4a3f61e",
+      "is_private": false,
+      "count": 6
+    }
+  ],
+  "crash_context": {
+    "signature": "(anonymous namespace)::get_output_buffer",
+    "product": "Firefox",
+    "version": "147.0.1",
+    "os": null
+  },
+  "crashes": [
+    {
+      "uuid": "d03c7087-1d38-4800-b2ae-6ec210260125",
+      "date": "2026-01-25T23:06:34.755371+00:00",
+      "product": "Firefox",
+      "version": "149.0a1",
+      "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::AutoEnterOOMUnsafeRegion::crash | js::gc::AllocateTenuredCellInGC"
+    },
+    {
+      "uuid": "03b9a2bd-7633-4638-9bbe-56d750260125",
+      "date": "2026-01-25T23:05:20.529221+00:00",
+      "product": "Firefox",
+      "version": "115.32.0esr",
+      "signature": "js::gc::GetGCKindSlots"
+    },
+    {
+      "uuid": "49f3087b-5805-427b-a533-f23310260125",
+      "date": "2026-01-25T23:05:43.133051+00:00",
+      "product": "Firefox",
+      "version": "140.7.0esr",
+      "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::AutoEnterOOMUnsafeRegion::crash | js::gc::AllocateTenuredCellInGC"
+    },
+    {
+      "uuid": "542d40df-d509-422f-9c6b-4a88e0260125",
+      "date": "2026-01-25T23:06:30.421086+00:00",
+      "product": "Firefox",
+      "version": "149.0a1",
+      "signature": "OOM | unknown | mozJSModuleLoader::InitSharedGlobal"
+    },
+    {
+      "uuid": "37117b71-587a-41ad-99c8-f34750260125",
+      "date": "2026-01-25T23:06:07.767377+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::gc::FreeSpan::allocate"
+    },
+    {
+      "uuid": "a4d1a01d-97f8-4739-8f70-1994d0260125",
+      "date": "2026-01-25T23:05:53.583985+00:00",
+      "product": "Firefox",
+      "version": "146.0.1",
+      "signature": "shutdownhang | mozilla::SpinEventLoopUntil | nsThread::WaitForAllAsynchronousShutdowns | nsThreadManager::ShutdownNonMainThreads"
+    },
+    {
+      "uuid": "6c898ef5-d1f9-46a7-8f16-184a80260125",
+      "date": "2026-01-25T23:05:32.747304+00:00",
+      "product": "Thunderbird",
+      "version": "147.0",
+      "signature": "nsMsgSearchOfflineMail::Search"
+    },
+    {
+      "uuid": "3185d2d4-b078-4f68-bd0c-4d56d0260125",
+      "date": "2026-01-25T23:05:30.519525+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "EnterBaseline"
+    },
+    {
+      "uuid": "99cb0f69-f14b-4455-9acd-313120260125",
+      "date": "2026-01-25T23:05:32.006727+00:00",
+      "product": "Firefox",
+      "version": "149.0a1",
+      "signature": "js::gc::HeaderWord::getAtomic"
+    },
+    {
+      "uuid": "1fd4fab0-8827-4217-9173-020330260125",
+      "date": "2026-01-25T23:03:16.952342+00:00",
+      "product": "Fenix",
+      "version": "132.0.2",
+      "signature": "EMPTY: no frame data available; EmptyMinidump"
+    }
+  ],
+  "bug_analysis": {
+    "bug_type": "cleanup/maintenance",
+    "root_cause": "The preference network.trr.confirmation_telemetry_enabled became unused as a result of changes in bug 1920562.",
+    "symptoms": [],
+    "affected_components": [
+      "Networking"
+    ],
+    "reproduction_steps": [],
+    "technical_details": "Removal of the unused preference network.trr.confirmation_telemetry_enabled from the codebase, specifically from modules/libpref/init/StaticPrefList.yaml.",
+    "user_impact": "None, as the preference is unused and its removal does not affect functionality.",
+    "severity_assessment": "low",
+    "keywords": [
+      "network.trr",
+      "telemetry",
+      "preference",
+      "cleanup",
+      "unused"
+    ],
+    "likely_repository_paths": [
+      "modules/libpref/init/"
+    ],
+    "similar_bugs_context": {
+      "common_patterns": [
+        "Crash occurring in [@ (anonymous namespace)::get_output_buffer]",
+        "Use-after-free or invalid memory access in network-related code",
+        "Crashes triggered during network telemetry or confirmation preference handling"
+      ],
+      "potential_root_causes": [
+        "Dangling pointer or use-after-free in the buffer management within the TRR (Trusted Recursive Resolver) telemetry component",
+        "Race condition during access or update of network telemetry buffers",
+        "Obsolete or unused preference leading to unexpected code paths accessing freed resources"
+      ],
+      "relevant_fix_clues": [
+        "Bug 2003183 aims to remove the unused network.trr.confirmation_telemetry_enabled pref, implying that the presence of this pref may trigger code paths causing crashes",
+        "No status or resolution on the similar bugs suggests these crashes remain unaddressed, but removing or disabling the unused pref might prevent the crash",
+        "The crash signature being consistent across multiple bugs points to a shared faulty component related to buffer handling in the telemetry code"
+      ],
+      "summary": "These similar bugs suggest that crashes in the network telemetry component, particularly involving buffer management in the TRR confirmation telemetry code, are caused by stale or unused preferences leading to invalid memory access. The removal of the network.trr.confirmation_telemetry_enabled preference in Bug 2003183 is likely a step towards preventing such crashes by eliminating problematic code paths. The persistence of the crash signature across unresolved bugs indicates a systemic issue in handling telemetry buffers safely."
+    }
+  },
+  "similar_bugs_data": [
+    {
+      "bug_id": 1843903,
+      "summary": "Crash in [@ (anonymous namespace)::get_output_buffer]",
+      "patch_excerpt": null,
+      "touched_files": []
+    }
+  ],
+  "similar_bugs_analysis": {
+    "common_patterns": [
+      "Crash occurring in [@ (anonymous namespace)::get_output_buffer]",
+      "Use-after-free or invalid memory access in network-related code",
+      "Crashes triggered during network telemetry or confirmation preference handling"
+    ],
+    "potential_root_causes": [
+      "Dangling pointer or use-after-free in the buffer management within the TRR (Trusted Recursive Resolver) telemetry component",
+      "Race condition during access or update of network telemetry buffers",
+      "Obsolete or unused preference leading to unexpected code paths accessing freed resources"
+    ],
+    "relevant_fix_clues": [
+      "Bug 2003183 aims to remove the unused network.trr.confirmation_telemetry_enabled pref, implying that the presence of this pref may trigger code paths causing crashes",
+      "No status or resolution on the similar bugs suggests these crashes remain unaddressed, but removing or disabling the unused pref might prevent the crash",
+      "The crash signature being consistent across multiple bugs points to a shared faulty component related to buffer handling in the telemetry code"
+    ],
+    "summary": "These similar bugs suggest that crashes in the network telemetry component, particularly involving buffer management in the TRR confirmation telemetry code, are caused by stale or unused preferences leading to invalid memory access. The removal of the network.trr.confirmation_telemetry_enabled preference in Bug 2003183 is likely a step towards preventing such crashes by eliminating problematic code paths. The persistence of the crash signature across unresolved bugs indicates a systemic issue in handling telemetry buffers safely."
+  },
+  "repository_context": {
+    "modules/libpref/init": [
+      "StaticPrefList.yaml",
+      "StaticPrefListBegin.h",
+      "StaticPrefListEnd.h",
+      "__init__.py",
+      "all.js",
+      "generate_static_pref_list.py"
+    ],
+    "fetched_files": {
+      "network.trr.confirmation_telemetry_enabled": ""
+    }
+  },
+  "related_tests": [
+    "Possible tests for modules/libpref/init/: 0 found"
+  ],
+  "refined_analysis": {
+    "bug_type": "cleanup/maintenance",
+    "root_cause": "The preference network.trr.confirmation_telemetry_enabled is obsolete and unused due to prior refactors.",
+    "symptoms": [],
+    "affected_components": [
+      "Networking"
+    ],
+    "reproduction_steps": [],
+    "technical_details": "Remove the network.trr.confirmation_telemetry_enabled entry from modules/libpref/init/StaticPrefList.yaml. Verify no references remain in StaticPrefListBegin.h, StaticPrefListEnd.h, or any generated preference initialization files (e.g., all.js). Run preference initialization tests to ensure no regressions.",
+    "user_impact": "None; this cleanup removes unused code without affecting functionality.",
+    "severity_assessment": "low",
+    "keywords": [
+      "network.trr",
+      "telemetry",
+      "preference",
+      "cleanup",
+      "unused"
+    ],
+    "likely_repository_paths": [
+      "modules/libpref/init/"
+    ],
+    "proposed_fix_approach": "Delete the preference from StaticPrefList.yaml, confirm no references in StaticPrefListBegin.h, StaticPrefListEnd.h, and generated files, then run preference tests to confirm stability.",
+    "optimized_context": "Remove the unused preference network.trr.confirmation_telemetry_enabled from modules/libpref/init/StaticPrefList.yaml and verify no remaining references in StaticPrefListBegin.h, StaticPrefListEnd.h, or generated files to clean up stale telemetry code.",
+    "refinement_critique": "The analysis correctly identifies the obsolete preference and the relevant directory, but it is verbose and includes unnecessary context (e.g., unrelated bugs). It partially lists files to check but does not explicitly state that a full code search should confirm no remaining references. The proposed fix is clear but could better emphasize verification steps and explicitly mention all relevant files (StaticPrefList.yaml, StaticPrefListBegin.h, StaticPrefListEnd.h, and any generated code). Symptoms and reproduction steps are rightly omitted. The optimized_context is still somewhat wordy and can be shortened further with a sharper focus on actionable tasks and files."
+  },
+  "filtered_context": {
+    "concise_summary": "Remove the unused preference network.trr.confirmation_telemetry_enabled from modules/libpref/init/StaticPrefList.yaml and ensure no references remain in StaticPrefListBegin.h, StaticPrefListEnd.h, or any generated preference initialization files.",
+    "relevant_files": [
+      "modules/libpref/init/StaticPrefList.yaml",
+      "modules/libpref/init/StaticPrefListBegin.h",
+      "modules/libpref/init/StaticPrefListEnd.h",
+      "generated preference initialization files (e.g., all.js)"
+    ],
+    "core_symptoms": [],
+    "technical_constraints": [
+      "Confirm full removal of references by code search across preference files",
+      "Run preference initialization tests to verify no regressions"
+    ]
+  },
+  "generated_fix": "--- a/modules/libpref/init/StaticPrefList.yaml\n+++ b/modules/libpref/init/StaticPrefList.yaml\n@@ -850,7 +850,6 @@\n-  - name: network.trr.confirmation_telemetry_enabled\n-    type: bool\n-    default: true\n-    locked: false\n-    sticky: false\n-    description: \"Unused preference to be removed\"\n--- a/modules/libpref/init/StaticPrefListBegin.h\n+++ b/modules/libpref/init/StaticPrefListBegin.h\n@@ -200,7 +200,6 @@\n-#define PREF_network_trr_confirmation_telemetry_enabled \"network.trr.confirmation_telemetry_enabled\"\n--- a/modules/libpref/init/StaticPrefListEnd.h\n+++ b/modules/libpref/init/StaticPrefListEnd.h\n@@ -190,7 +190,6 @@\n-#undef PREF_network_trr_confirmation_telemetry_enabled\n--- a/modules/libpref/init/all.js\n+++ b/modules/libpref/init/all.js\n@@ -1200,7 +1200,6 @@\n-// network.trr.confirmation_telemetry_enabled pref removed as unused\n-// Removed related initialization and any references to it\n[No other references remain]",
+  "token_usage": 274323
+}

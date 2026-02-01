@@ -1,0 +1,30 @@
+--- a/browser/components/trust/TrustPanel.jsm
++++ b/browser/components/trust/TrustPanel.jsm
+@@ -120,10 +120,18 @@
+   onPrivacySettingsClick(event) {
+-    // Existing handler code that navigates to privacy settings
+-    this._navigateToPrivacySettings();
++    // Close the trust panel before navigating
++    if (this._panel && this._panel.state === "open") {
++      this._panel.hidePopup();
++    }
++
++    // Reset trust indicators to prevent stale UI state
++    this._resetTrustIndicators();
++
++    // Now navigate to privacy settings
++    this._navigateToPrivacySettings();
+   }
+ 
++  _resetTrustIndicators() {
++    // Clear any displayed connection warnings or trust UI state
++    if (this._connectionIcon) {
++      this._connectionIcon.removeAttribute("warning");
++      this._connectionIcon.removeAttribute("secure");
++    }
++    if (this._warningLabel) {
++      this._warningLabel.textContent = "";
++    }
++    // Any other UI cleanup needed can be added here
++  }
++

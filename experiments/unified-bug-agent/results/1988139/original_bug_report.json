@@ -1,0 +1,423 @@
+{
+  "version": "unspecified",
+  "qa_contact": "",
+  "cf_tracking_firefox149": "---",
+  "platform": "Unspecified",
+  "cf_tracking_firefox_relnote": "---",
+  "cf_status_firefox_esr140": "---",
+  "cf_cab_review": "---",
+  "comment_count": 5,
+  "cf_crash_signature": "",
+  "regressions": [],
+  "severity": "S3",
+  "filed_via": "standard_form",
+  "keywords": [],
+  "history": [
+    {
+      "changes": [
+        {
+          "added": "ASSIGNED",
+          "field_name": "status",
+          "removed": "NEW"
+        },
+        {
+          "removed": "nobody@mozilla.org",
+          "field_name": "assigned_to",
+          "added": "valentin.gosu@gmail.com"
+        }
+      ],
+      "when": "2025-09-11T12:24:06Z",
+      "who": "phab-bot@bmo.tld"
+    },
+    {
+      "when": "2025-09-19T15:59:53Z",
+      "who": "smolnar@mozilla.com",
+      "changes": [
+        {
+          "removed": "---",
+          "added": "145 Branch",
+          "field_name": "target_milestone"
+        },
+        {
+          "field_name": "status",
+          "added": "RESOLVED",
+          "removed": "ASSIGNED"
+        },
+        {
+          "field_name": "resolution",
+          "added": "FIXED",
+          "removed": ""
+        },
+        {
+          "field_name": "cf_last_resolved",
+          "added": "2025-09-19T15:59:53Z",
+          "removed": ""
+        },
+        {
+          "field_name": "cf_status_firefox145",
+          "added": "fixed",
+          "removed": "---"
+        }
+      ]
+    },
+    {
+      "who": "smolnar@mozilla.com",
+      "when": "2025-09-19T15:59:54Z",
+      "changes": [
+        {
+          "field_name": "comment_tag",
+          "added": "bugherder",
+          "comment_id": 17678356,
+          "comment_count": 4,
+          "removed": ""
+        }
+      ]
+    },
+    {
+      "when": "2025-09-23T11:02:37Z",
+      "who": "valentin.gosu@gmail.com",
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "see_also",
+          "added": "https://bugzilla.mozilla.org/show_bug.cgi?id=1989900"
+        }
+      ]
+    },
+    {
+      "who": "rob@robwu.nl",
+      "when": "2025-10-01T16:47:21Z",
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "see_also",
+          "added": "https://bugzilla.mozilla.org/show_bug.cgi?id=1742061"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "field_name": "cf_qa_whiteboard",
+          "added": "[qa-triage-done-c146/b145]",
+          "removed": ""
+        },
+        {
+          "removed": "",
+          "added": "cbadau@mozilla.com",
+          "field_name": "cc"
+        }
+      ],
+      "when": "2025-10-15T10:59:41Z",
+      "who": "cbadau@mozilla.com"
+    },
+    {
+      "when": "2025-10-17T19:22:21Z",
+      "who": "valentin.gosu@gmail.com",
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "see_also",
+          "added": "https://bugzilla.mozilla.org/show_bug.cgi?id=1995053"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "added": "florian@mozilla.com",
+          "field_name": "cc",
+          "removed": ""
+        }
+      ],
+      "who": "florian@mozilla.com",
+      "when": "2025-11-20T15:18:19Z"
+    },
+    {
+      "changes": [
+        {
+          "removed": "",
+          "added": "2001895",
+          "field_name": "blocks"
+        }
+      ],
+      "when": "2025-11-23T19:39:32Z",
+      "who": "valentin.gosu@gmail.com"
+    },
+    {
+      "who": "valentin.gosu@gmail.com",
+      "when": "2026-01-20T14:59:31Z",
+      "changes": [
+        {
+          "field_name": "blocks",
+          "added": "1527489",
+          "removed": ""
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "field_name": "see_also",
+          "added": "https://bugzilla.mozilla.org/show_bug.cgi?id=469228",
+          "removed": ""
+        }
+      ],
+      "when": "2026-01-20T15:01:21Z",
+      "who": "valentin.gosu@gmail.com"
+    }
+  ],
+  "product": "Core",
+  "is_confirmed": true,
+  "cf_webcompat_priority": "---",
+  "cf_status_firefox_esr115": "---",
+  "regressed_by": [],
+  "cf_rank": null,
+  "triage_owner": "valentin.gosu@gmail.com",
+  "type": "task",
+  "assigned_to_detail": {
+    "real_name": "Valentin Gosu [:valentin] (he/him)",
+    "id": 415378,
+    "nick": "valentin",
+    "name": "valentin.gosu@gmail.com",
+    "email": "valentin.gosu@gmail.com"
+  },
+  "is_cc_accessible": true,
+  "cf_performance_impact": "---",
+  "cf_tracking_firefox148": "---",
+  "cf_status_firefox145": "fixed",
+  "cf_status_firefox147": "---",
+  "alias": null,
+  "cf_tracking_thunderbird_esr140": "---",
+  "cf_tracking_firefox147": "---",
+  "comments": [
+    {
+      "time": "2025-09-11T11:18:58Z",
+      "is_private": false,
+      "author": "valentin.gosu@gmail.com",
+      "count": 0,
+      "raw_text": "[netwerk/test/unit/head_servers.js](https://searchfox.org/firefox-main/rev/3de2d8eb788da636e08c85dbb7b453857d181e87/netwerk/test/unit/head_servers.js) currently holds the implementation for NodeHTTPServers that can be used in xpcshell-tests.\nThese servers are more feature-complete than httpd.js and even than moz-http2.js, so it would be better to convert them into a sys.mjs module so they can be used in other xpcshell-tests too, not just netwerk.\n\nAdditionally, it would be good to update [the docs](https://searchfox.org/firefox-main/source/netwerk/docs/http_server_for_testing.rst) in order to document this test infrastructure and how it's designed.",
+      "attachment_id": null,
+      "id": 17667216,
+      "tags": [],
+      "creation_time": "2025-09-11T11:18:58Z",
+      "text": "[netwerk/test/unit/head_servers.js](https://searchfox.org/firefox-main/rev/3de2d8eb788da636e08c85dbb7b453857d181e87/netwerk/test/unit/head_servers.js) currently holds the implementation for NodeHTTPServers that can be used in xpcshell-tests.\nThese servers are more feature-complete than httpd.js and even than moz-http2.js, so it would be better to convert them into a sys.mjs module so they can be used in other xpcshell-tests too, not just netwerk.\n\nAdditionally, it would be good to update [the docs](https://searchfox.org/firefox-main/source/netwerk/docs/http_server_for_testing.rst) in order to document this test infrastructure and how it's designed.",
+      "creator": "valentin.gosu@gmail.com",
+      "bug_id": 1988139,
+      "reactions": {}
+    },
+    {
+      "creator": "valentin.gosu@gmail.com",
+      "text": "Created attachment 9512820\nBug 1988139 - Convert head_servers.js into a sys.mjs module so it's available to all xpcshell-tests r=#necko",
+      "bug_id": 1988139,
+      "reactions": {},
+      "attachment_id": 9512820,
+      "id": 17667314,
+      "count": 1,
+      "is_private": false,
+      "author": "valentin.gosu@gmail.com",
+      "raw_text": "",
+      "time": "2025-09-11T12:24:06Z",
+      "creation_time": "2025-09-11T12:24:06Z",
+      "tags": []
+    },
+    {
+      "reactions": {},
+      "bug_id": 1988139,
+      "creator": "valentin.gosu@gmail.com",
+      "text": "Created attachment 9512841\nBug 1988139 - Make HTTPS node servers automatically add cert to DB r=#necko",
+      "creation_time": "2025-09-11T13:40:25Z",
+      "tags": [],
+      "id": 17667478,
+      "attachment_id": 9512841,
+      "raw_text": "",
+      "is_private": false,
+      "count": 2,
+      "author": "valentin.gosu@gmail.com",
+      "time": "2025-09-11T13:40:25Z"
+    },
+    {
+      "creator": "pulsebot@bmo.tld",
+      "text": "Pushed by valentin.gosu@gmail.com:\nhttps://github.com/mozilla-firefox/firefox/commit/b60613a88940\nhttps://hg.mozilla.org/integration/autoland/rev/7160fc098e82\nConvert head_servers.js into a sys.mjs module so it's available to all xpcshell-tests r=necko-reviewers,kershaw\nhttps://github.com/mozilla-firefox/firefox/commit/f07a6ea3350a\nhttps://hg.mozilla.org/integration/autoland/rev/8cfb11e55cae\nMake HTTPS node servers automatically add cert to DB r=necko-reviewers,kershaw",
+      "bug_id": 1988139,
+      "reactions": {},
+      "attachment_id": null,
+      "id": 17677546,
+      "time": "2025-09-19T06:54:38Z",
+      "count": 3,
+      "author": "pulsebot@bmo.tld",
+      "is_private": false,
+      "raw_text": "Pushed by valentin.gosu@gmail.com:\nhttps://github.com/mozilla-firefox/firefox/commit/b60613a88940\nhttps://hg.mozilla.org/integration/autoland/rev/7160fc098e82\nConvert head_servers.js into a sys.mjs module so it's available to all xpcshell-tests r=necko-reviewers,kershaw\nhttps://github.com/mozilla-firefox/firefox/commit/f07a6ea3350a\nhttps://hg.mozilla.org/integration/autoland/rev/8cfb11e55cae\nMake HTTPS node servers automatically add cert to DB r=necko-reviewers,kershaw",
+      "creation_time": "2025-09-19T06:54:38Z",
+      "tags": []
+    },
+    {
+      "tags": [
+        "bugherder"
+      ],
+      "creation_time": "2025-09-19T15:59:53Z",
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/7160fc098e82\nhttps://hg.mozilla.org/mozilla-central/rev/8cfb11e55cae",
+      "count": 4,
+      "is_private": false,
+      "author": "smolnar@mozilla.com",
+      "time": "2025-09-19T15:59:53Z",
+      "attachment_id": null,
+      "id": 17678356,
+      "reactions": {},
+      "bug_id": 1988139,
+      "text": "https://hg.mozilla.org/mozilla-central/rev/7160fc098e82\nhttps://hg.mozilla.org/mozilla-central/rev/8cfb11e55cae",
+      "creator": "smolnar@mozilla.com"
+    }
+  ],
+  "op_sys": "Unspecified",
+  "votes": 0,
+  "whiteboard": "[necko-triaged]",
+  "cf_a11y_review_project_flag": "---",
+  "see_also": [
+    "https://bugzilla.mozilla.org/show_bug.cgi?id=1989900",
+    "https://bugzilla.mozilla.org/show_bug.cgi?id=1742061",
+    "https://bugzilla.mozilla.org/show_bug.cgi?id=1995053",
+    "https://bugzilla.mozilla.org/show_bug.cgi?id=469228"
+  ],
+  "triage_owner_detail": {
+    "nick": "valentin",
+    "name": "valentin.gosu@gmail.com",
+    "email": "valentin.gosu@gmail.com",
+    "id": 415378,
+    "real_name": "Valentin Gosu [:valentin] (he/him)"
+  },
+  "dupe_of": null,
+  "flags": [],
+  "depends_on": [],
+  "duplicates": [],
+  "cf_tracking_thunderbird_esr115": "---",
+  "cf_last_resolved": "2025-09-19T15:59:53Z",
+  "cf_size_estimate": "---",
+  "cc_detail": [
+    {
+      "id": 500622,
+      "real_name": "Camelia Badau [:cbadau], Desktop Test Engineering",
+      "nick": "cbadau",
+      "name": "cbadau@mozilla.com",
+      "email": "cbadau@mozilla.com"
+    },
+    {
+      "name": "florian@mozilla.com",
+      "email": "florian@mozilla.com",
+      "nick": "florian",
+      "id": 149052,
+      "real_name": "Florian Qu\u00e8ze [:florian]"
+    }
+  ],
+  "cf_qa_whiteboard": "[qa-triage-done-c146/b145]",
+  "cf_webcompat_score": "---",
+  "url": "",
+  "mentors_detail": [],
+  "cf_user_story": "",
+  "cf_tracking_firefox_esr115": "---",
+  "cf_status_firefox149": "---",
+  "cc": [
+    "cbadau@mozilla.com",
+    "florian@mozilla.com"
+  ],
+  "description": "[netwerk/test/unit/head_servers.js](https://searchfox.org/firefox-main/rev/3de2d8eb788da636e08c85dbb7b453857d181e87/netwerk/test/unit/head_servers.js) currently holds the implementation for NodeHTTPServers that can be used in xpcshell-tests.\nThese servers are more feature-complete than httpd.js and even than moz-http2.js, so it would be better to convert them into a sys.mjs module so they can be used in other xpcshell-tests too, not just netwerk.\n\nAdditionally, it would be good to update [the docs](https://searchfox.org/firefox-main/source/netwerk/docs/http_server_for_testing.rst) in order to document this test infrastructure and how it's designed.",
+  "target_milestone": "145 Branch",
+  "cf_fx_points": "---",
+  "creator": "valentin.gosu@gmail.com",
+  "is_creator_accessible": true,
+  "component": "Networking",
+  "creation_time": "2025-09-11T11:18:58Z",
+  "cf_fx_iteration": "---",
+  "is_open": false,
+  "cf_status_thunderbird_esr115": "---",
+  "counts": {
+    "regressions": 0,
+    "duplicates": 0,
+    "keywords": 0,
+    "cc": 2,
+    "attachments": 2,
+    "depends_on": 2,
+    "blocks": 0,
+    "regressed_by": 0,
+    "comments": 5
+  },
+  "cf_status_firefox148": "---",
+  "priority": "P2",
+  "assigned_to": "valentin.gosu@gmail.com",
+  "cf_status_thunderbird_esr140": "---",
+  "summary": "Convert head_servers.js into a sys.mjs module so it's available to all xpcshell-tests",
+  "id": 1988139,
+  "groups": [],
+  "status": "RESOLVED",
+  "mentors": [],
+  "last_change_time": "2026-01-20T15:01:21Z",
+  "cf_has_str": "---",
+  "blocks": [
+    1527489,
+    2001895
+  ],
+  "cf_tracking_firefox_esr140": "---",
+  "attachments": [
+    {
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjY0NTcw",
+      "flags": [],
+      "is_patch": 0,
+      "creation_time": "2025-09-11T12:24:06Z",
+      "is_private": 0,
+      "content_type": "text/x-phabricator-request",
+      "attacher": "valentin.gosu@gmail.com",
+      "size": 48,
+      "id": 9512820,
+      "summary": "Bug 1988139 - Convert head_servers.js into a sys.mjs module so it's available to all xpcshell-tests r=#necko",
+      "bug_id": 1988139,
+      "last_change_time": "2025-09-11T12:24:06Z",
+      "file_name": "phabricator-D264570-url.txt",
+      "description": "Bug 1988139 - Convert head_servers.js into a sys.mjs module so it's available to all xpcshell-tests r=#necko",
+      "is_obsolete": 0,
+      "creator": "valentin.gosu@gmail.com",
+      "creator_detail": {
+        "id": 415378,
+        "real_name": "Valentin Gosu [:valentin] (he/him)",
+        "nick": "valentin",
+        "name": "valentin.gosu@gmail.com",
+        "email": "valentin.gosu@gmail.com"
+      }
+    },
+    {
+      "last_change_time": "2025-09-11T13:40:25Z",
+      "file_name": "phabricator-D264583-url.txt",
+      "bug_id": 1988139,
+      "is_obsolete": 0,
+      "creator": "valentin.gosu@gmail.com",
+      "creator_detail": {
+        "name": "valentin.gosu@gmail.com",
+        "email": "valentin.gosu@gmail.com",
+        "nick": "valentin",
+        "id": 415378,
+        "real_name": "Valentin Gosu [:valentin] (he/him)"
+      },
+      "description": "Bug 1988139 - Make HTTPS node servers automatically add cert to DB r=#necko",
+      "flags": [],
+      "is_patch": 0,
+      "creation_time": "2025-09-11T13:40:25Z",
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjY0NTgz",
+      "size": 48,
+      "summary": "Bug 1988139 - Make HTTPS node servers automatically add cert to DB r=#necko",
+      "id": 9512841,
+      "content_type": "text/x-phabricator-request",
+      "is_private": 0,
+      "attacher": "valentin.gosu@gmail.com"
+    }
+  ],
+  "resolution": "FIXED",
+  "cf_accessibility_severity": "---",
+  "last_change_time_non_bot": "2026-01-20T15:01:21Z",
+  "creator_detail": {
+    "id": 415378,
+    "real_name": "Valentin Gosu [:valentin] (he/him)",
+    "nick": "valentin",
+    "email": "valentin.gosu@gmail.com",
+    "name": "valentin.gosu@gmail.com"
+  },
+  "classification": "Components"
+}

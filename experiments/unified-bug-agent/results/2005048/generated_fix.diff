@@ -1,0 +1,90 @@
+--- a/docshell/base/nsDocShell.cpp
++++ b/docshell/base/nsDocShell.cpp
+@@ -1800,11 +1800,46 @@
+ // Example line number approximate - actual line numbers may vary.
+ // Locate all speculative connect calls and update them.
+ 
+-  // Existing speculative connect call without notification callback
+-  nsCOMPtr<nsISpeculativeConnect> specCon = ...;
+-  specCon->SpeculativeConnect(host, port, nullptr);
++  // Check if a proxy filter is active
++  nsCOMPtr<nsIProtocolProxyService> proxyService(
++    do_GetService(NS_PROTOCOLPROXYSERVICE_CONTRACTID));
++  nsCOMPtr<nsIProtocolProxyFilter> proxyFilter;
++  if (proxyService) {
++    proxyService->GetProxyFilter(getter_AddRefs(proxyFilter));
++  }
++
++  nsCOMPtr<nsIInterfaceRequestor> notificationCallbacks = nullptr;
++  if (proxyFilter) {
++    // Ensure a valid notification callback is passed to speculative connect
++    notificationCallbacks = do_QueryInterface(mLoadGroup);
++    if (!notificationCallbacks) {
++      notificationCallbacks = do_QueryInterface(mDocShell);
++    }
++    // Fallback: create a minimal notification callback if none available
++    if (!notificationCallbacks) {
++      class MinimalNotificationCallbacks final : public nsIInterfaceRequestor {
++       public:
++        NS_DECL_ISUPPORTS
++        NS_IMETHOD GetInterface(const nsIID &iid, void **result) override {
++          *result = nullptr;
++          return NS_NOINTERFACE;
++        }
++      private:
++        ~MinimalNotificationCallbacks() = default;
++      };
++      NS_IMPL_ISUPPORTS(MinimalNotificationCallbacks, nsIInterfaceRequestor)
++      static MinimalNotificationCallbacks sMinimalCallbacks;
++      notificationCallbacks = do_QueryObject(&sMinimalCallbacks);
++    }
++  }
++
++  nsCOMPtr<nsISpeculativeConnect> specCon = ...;
++  specCon->SpeculativeConnect(host, port, notificationCallbacks);
+@@ -2100,7 +2135,20 @@
+-  mSpeculativeConnect->SpeculativeConnect(aHost, aPort, nullptr);
++  nsCOMPtr<nsIProtocolProxyService> proxyService(
++    do_GetService(NS_PROTOCOLPROXYSERVICE_CONTRACTID));
++  nsCOMPtr<nsIProtocolProxyFilter> proxyFilter;
++  if (proxyService) {
++    proxyService->GetProxyFilter(getter_AddRefs(proxyFilter));
++  }
++
++  nsCOMPtr<nsIInterfaceRequestor> notificationCallbacks = nullptr;
++  if (proxyFilter) {
++    notificationCallbacks = do_QueryInterface(mLoadGroup);
++    if (!notificationCallbacks) {
++      notificationCallbacks = do_QueryInterface(mDocShell);
++    }
++    if (!notificationCallbacks) {
++      // Use minimal dummy callbacks as last resort
++      static MinimalNotificationCallbacks sMinimalCallbacks;
++      notificationCallbacks = do_QueryObject(&sMinimalCallbacks);
++    }
++  }
++
++  mSpeculativeConnect->SpeculativeConnect(aHost, aPort, notificationCallbacks);
+@@ -2500,7 +2548,20 @@
+-  specConnect->SpeculativeConnect(host, port, nullptr);
++  nsCOMPtr<nsIProtocolProxyService> proxyService(
++    do_GetService(NS_PROTOCOLPROXYSERVICE_CONTRACTID));
++  nsCOMPtr<nsIProtocolProxyFilter> proxyFilter;
++  if (proxyService) {
++    proxyService->GetProxyFilter(getter_AddRefs(proxyFilter));
++  }
++
++  nsCOMPtr<nsIInterfaceRequestor> notificationCallbacks = nullptr;
++  if (proxyFilter) {
++    notificationCallbacks = do_QueryInterface(mLoadGroup);
++    if (!notificationCallbacks) {
++      notificationCallbacks = do_QueryInterface(mDocShell);
++    }
++    if (!notificationCallbacks) {
++      static MinimalNotificationCallbacks sMinimalCallbacks;
++      notificationCallbacks = do_QueryObject(&sMinimalCallbacks);
++    }
++  }
++
++  specConnect->SpeculativeConnect(host, port, notificationCallbacks);
++

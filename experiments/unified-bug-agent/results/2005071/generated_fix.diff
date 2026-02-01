@@ -1,0 +1,36 @@
+--- a/dom/url/URLPattern.cpp
++++ b/dom/url/URLPattern.cpp
+@@ -350,10 +350,14 @@
+ // Hypothetical code snippet location in URLPattern::exec() where capture groups are assigned
+ 
+-  // Assign numeric keys for hostname capture groups
+-  for (size_t i = 0; i < hostnameCaptureGroups.size(); ++i) {
+-    resultGroups[i] = hostnameCaptureGroups[i].value();
+-  }
++  // Assign named keys for hostname capture groups
++  for (size_t i = 0; i < hostnameCaptureGroups.size(); ++i) {
++    const auto& groupName = hostnameCaptureGroupNames[i];
++    if (!groupName.empty()) {
++      resultGroups[groupName] = hostnameCaptureGroups[i].value();
++    } else {
++      resultGroups[i] = hostnameCaptureGroups[i].value();
++    }
++  }
+--- a/js/urlpattern/Exec.cpp
++++ b/js/urlpattern/Exec.cpp
+@@ -120,11 +120,16 @@
+ // Hypothetical snippet in Exec.cpp managing the exec() result object for hostname component
+ 
+-  // Assign numeric keys for hostname capture groups
+-  for (unsigned i = 0; i < hostnameGroups.length(); ++i) {
+-    resultObject.defineProperty(i, hostnameGroups[i]);
+-  }
++  // Assign named keys for hostname capture groups
++  for (unsigned i = 0; i < hostnameGroups.length(); ++i) {
++    JS::RootedString groupName(cx, hostnameGroupNames[i]);
++    if (groupName && JS_EncodeStringToUTF8(cx, groupName)) {
++      resultObject.defineProperty(groupName, hostnameGroups[i]);
++    } else {
++      resultObject.defineProperty(i, hostnameGroups[i]);
++    }
++  }

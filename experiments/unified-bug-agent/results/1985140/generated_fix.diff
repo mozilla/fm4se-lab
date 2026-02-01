@@ -1,0 +1,90 @@
+--- a/gfx/platform/mac/OSXVsyncSource.cpp
++++ b/gfx/platform/mac/OSXVsyncSource.cpp
+@@ -230,10 +230,24 @@
+-static void
+-DisplayReconfigurationCallback(CGDirectDisplayID display,
+-                               CGDisplayChangeSummaryFlags flags,
+-                               void *userInfo)
+-{
+-  // Existing implementation
+-}
++static void
++DisplayReconfigurationCallback(CGDirectDisplayID display,
++                               CGDisplayChangeSummaryFlags flags,
++                               void *userInfo)
++{
++  OSXVsyncSource* vsyncSource = static_cast<OSXVsyncSource*>(userInfo);
++
++  // Call existing reconfiguration handling logic (if any)
++  vsyncSource->OnDisplayReconfiguration(display, flags);
++}
++
++void
++OSXVsyncSource::OnDisplayReconfiguration(CGDirectDisplayID aDisplay,
++                                        CGDisplayChangeSummaryFlags aFlags)
++{
++  // Unregister and re-register the display reconfiguration callback to ensure proper handling
++  CGDisplayRemoveReconfigurationCallback(DisplayReconfigurationCallback, this);
++  CGDisplayRegisterReconfigurationCallback(DisplayReconfigurationCallback, this);
++
++  // Restart the VsyncRefreshDriverTimer to ensure it is running after display changes
++  if (mVsyncRefreshTimer) {
++    mVsyncRefreshTimer->Stop();
++    mVsyncRefreshTimer->Start();
++  }
++}
+@@ -150,12 +164,19 @@
+ void
+ OSXVsyncSource::StartVsync()
+ {
+-  if (!mVsyncRefreshTimer) {
+-    mVsyncRefreshTimer = new VsyncRefreshDriverTimer(this);
+-    mVsyncRefreshTimer->Start();
+-    CGDisplayRegisterReconfigurationCallback(DisplayReconfigurationCallback, this);
+-  }
++  if (!mVsyncRefreshTimer) {
++    mVsyncRefreshTimer = new VsyncRefreshDriverTimer(this);
++  }
++
++  if (!mDisplayReconfigurationCallbackRegistered) {
++    CGDisplayRegisterReconfigurationCallback(DisplayReconfigurationCallback, this);
++    mDisplayReconfigurationCallbackRegistered = true;
++  }
++
++  mVsyncRefreshTimer->Start();
+ }
+@@ -165,6 +186,9 @@
+ void
+ OSXVsyncSource::StopVsync()
+ {
+-  if (mVsyncRefreshTimer) {
+-    mVsyncRefreshTimer->Stop();
+-    CGDisplayRemoveReconfigurationCallback(DisplayReconfigurationCallback, this);
+-    delete mVsyncRefreshTimer;
+-    mVsyncRefreshTimer = nullptr;
+-  }
++  if (mVsyncRefreshTimer) {
++    mVsyncRefreshTimer->Stop();
++    delete mVsyncRefreshTimer;
++    mVsyncRefreshTimer = nullptr;
++  }
++
++  if (mDisplayReconfigurationCallbackRegistered) {
++    CGDisplayRemoveReconfigurationCallback(DisplayReconfigurationCallback, this);
++    mDisplayReconfigurationCallbackRegistered = false;
++  }
+ }
+--- a/gfx/platform/mac/OSXVsyncSource.h
++++ b/gfx/platform/mac/OSXVsyncSource.h
+@@ -90,6 +90,8 @@
+-  void StartVsync();
+-  void StopVsync();
++  void StartVsync();
++  void StopVsync();
++
++  void OnDisplayReconfiguration(CGDirectDisplayID aDisplay,
++                               CGDisplayChangeSummaryFlags aFlags);
++
++private:
++  bool mDisplayReconfigurationCallbackRegistered = false;
++

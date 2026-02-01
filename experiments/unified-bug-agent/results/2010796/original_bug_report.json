@@ -1,0 +1,398 @@
+{
+  "cf_status_thunderbird_esr140": "---",
+  "cf_webcompat_score": "---",
+  "priority": "P2",
+  "resolution": "FIXED",
+  "cf_fx_iteration": "---",
+  "triage_owner": "valentin.gosu@gmail.com",
+  "cf_tracking_firefox147": "---",
+  "cf_rank": null,
+  "component": "Networking",
+  "cf_status_firefox148": "---",
+  "type": "task",
+  "is_confirmed": true,
+  "history": [
+    {
+      "changes": [
+        {
+          "added": "2007159",
+          "field_name": "blocks",
+          "removed": ""
+        }
+      ],
+      "when": "2026-01-16T12:21:35Z",
+      "who": "mail@max-inden.de"
+    },
+    {
+      "changes": [
+        {
+          "added": "https://github.com/mozilla/neqo/releases/tag/v0.22.0",
+          "field_name": "see_also",
+          "removed": ""
+        }
+      ],
+      "who": "mail@max-inden.de",
+      "when": "2026-01-19T14:46:49Z"
+    },
+    {
+      "changes": [
+        {
+          "added": "Bug 2010796 - Update neqo to v0.22.0 r=kershaw,leggert",
+          "attachment_id": 9538603,
+          "field_name": "attachments.description",
+          "removed": "WIP: Bug 2010796 - Update neqo to v0.22.0"
+        }
+      ],
+      "who": "phab-bot@bmo.tld",
+      "when": "2026-01-20T11:22:47Z"
+    },
+    {
+      "changes": [
+        {
+          "added": "1986247",
+          "field_name": "depends_on",
+          "removed": ""
+        }
+      ],
+      "who": "mail@max-inden.de",
+      "when": "2026-01-20T16:57:35Z"
+    },
+    {
+      "who": "phab-bot@bmo.tld",
+      "when": "2026-01-21T15:19:33Z",
+      "changes": [
+        {
+          "attachment_id": 9538603,
+          "added": "Bug 2010796 - Update neqo to v0.22.1 r=kershaw,leggert",
+          "removed": "Bug 2010796 - Update neqo to v0.22.0 r=kershaw,leggert",
+          "field_name": "attachments.description"
+        }
+      ]
+    },
+    {
+      "who": "sstanca@mozilla.com",
+      "when": "2026-01-21T17:17:56Z",
+      "changes": [
+        {
+          "added": "needinfo?(mail@max-inden.de)",
+          "removed": "",
+          "field_name": "flagtypes.name"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "removed": "Bug 2010796 - Update neqo to v0.22.1 r=kershaw,leggert",
+          "field_name": "attachments.description",
+          "attachment_id": 9538603,
+          "added": "Bug 2010796 - Update neqo to v0.22.2 r=kershaw,leggert"
+        }
+      ],
+      "when": "2026-01-22T15:33:47Z",
+      "who": "phab-bot@bmo.tld"
+    },
+    {
+      "who": "mail@max-inden.de",
+      "when": "2026-01-23T09:47:57Z",
+      "changes": [
+        {
+          "added": "",
+          "field_name": "flagtypes.name",
+          "removed": "needinfo?(mail@max-inden.de)"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "added": "RESOLVED",
+          "field_name": "status",
+          "removed": "ASSIGNED"
+        },
+        {
+          "added": "149 Branch",
+          "field_name": "target_milestone",
+          "removed": "---"
+        },
+        {
+          "added": "FIXED",
+          "removed": "",
+          "field_name": "resolution"
+        },
+        {
+          "removed": "",
+          "field_name": "cf_last_resolved",
+          "added": "2026-01-26T21:41:57Z"
+        },
+        {
+          "added": "fixed",
+          "removed": "---",
+          "field_name": "cf_status_firefox149"
+        },
+        {
+          "comment_count": 7,
+          "field_name": "comment_tag",
+          "removed": "",
+          "comment_id": 17860605,
+          "added": "bugherder"
+        }
+      ],
+      "when": "2026-01-26T21:41:57Z",
+      "who": "chorotan@mozilla.com"
+    }
+  ],
+  "comment_count": 8,
+  "cf_tracking_firefox_esr115": "---",
+  "is_cc_accessible": true,
+  "is_creator_accessible": true,
+  "cf_tracking_thunderbird_esr115": "---",
+  "summary": "Update neqo to v0.22.0",
+  "status": "RESOLVED",
+  "flags": [],
+  "version": "unspecified",
+  "creator_detail": {
+    "email": "mail@max-inden.de",
+    "real_name": "Max Inden",
+    "nick": "mail",
+    "id": 741948,
+    "name": "mail@max-inden.de"
+  },
+  "groups": [],
+  "cf_size_estimate": "---",
+  "mentors": [],
+  "keywords": [],
+  "cf_performance_impact": "---",
+  "cf_has_str": "---",
+  "regressions": [],
+  "cc": [],
+  "cf_webcompat_priority": "---",
+  "cf_tracking_thunderbird_esr140": "---",
+  "assigned_to_detail": {
+    "nick": "mail",
+    "real_name": "Max Inden",
+    "email": "mail@max-inden.de",
+    "name": "mail@max-inden.de",
+    "id": 741948
+  },
+  "cf_status_firefox_esr115": "---",
+  "duplicates": [],
+  "blocks": [
+    2007159
+  ],
+  "assigned_to": "mail@max-inden.de",
+  "attachments": [
+    {
+      "description": "Bug 2010796 - Update neqo to v0.22.2 r=kershaw,leggert",
+      "creator_detail": {
+        "id": 741948,
+        "name": "mail@max-inden.de",
+        "email": "mail@max-inden.de",
+        "real_name": "Max Inden",
+        "nick": "mail"
+      },
+      "is_private": 0,
+      "is_patch": 0,
+      "size": 48,
+      "attacher": "mail@max-inden.de",
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjc5NTY5",
+      "creation_time": "2026-01-19T20:08:21Z",
+      "summary": "Bug 2010796 - Update neqo to v0.22.2 r=kershaw,leggert",
+      "id": 9538603,
+      "flags": [],
+      "file_name": "phabricator-D279569-url.txt",
+      "bug_id": 2010796,
+      "last_change_time": "2026-01-22T15:33:47Z",
+      "is_obsolete": 0,
+      "content_type": "text/x-phabricator-request",
+      "creator": "mail@max-inden.de"
+    }
+  ],
+  "cf_status_firefox_esr140": "---",
+  "cf_status_thunderbird_esr115": "---",
+  "cf_qa_whiteboard": "",
+  "cf_a11y_review_project_flag": "---",
+  "cf_tracking_firefox148": "---",
+  "creation_time": "2026-01-16T12:14:45Z",
+  "mentors_detail": [],
+  "cf_tracking_firefox_relnote": "---",
+  "cf_user_story": "",
+  "cf_fx_points": "---",
+  "cc_detail": [],
+  "classification": "Components",
+  "creator": "mail@max-inden.de",
+  "cf_crash_signature": "",
+  "cf_cab_review": "---",
+  "votes": 0,
+  "severity": "N/A",
+  "last_change_time": "2026-01-26T21:41:57Z",
+  "dupe_of": null,
+  "whiteboard": "[necko-triaged] ",
+  "url": "",
+  "target_milestone": "149 Branch",
+  "filed_via": "standard_form",
+  "cf_accessibility_severity": "---",
+  "depends_on": [
+    1986247
+  ],
+  "op_sys": "Unspecified",
+  "alias": null,
+  "description": "",
+  "is_open": false,
+  "see_also": [
+    "https://github.com/mozilla/neqo/releases/tag/v0.22.0"
+  ],
+  "regressed_by": [],
+  "triage_owner_detail": {
+    "name": "valentin.gosu@gmail.com",
+    "id": 415378,
+    "nick": "valentin",
+    "email": "valentin.gosu@gmail.com",
+    "real_name": "Valentin Gosu [:valentin] (he/him)"
+  },
+  "product": "Core",
+  "comments": [
+    {
+      "time": "2026-01-16T12:14:45Z",
+      "is_private": false,
+      "id": 17845698,
+      "creator": "mail@max-inden.de",
+      "bug_id": 2010796,
+      "author": "mail@max-inden.de",
+      "tags": [],
+      "attachment_id": null,
+      "text": "",
+      "count": 0,
+      "reactions": {},
+      "raw_text": "",
+      "creation_time": "2026-01-16T12:14:45Z"
+    },
+    {
+      "text": "Created attachment 9538603\nBug 2010796 - Update neqo to v0.22.2 r=kershaw,leggert",
+      "count": 1,
+      "creation_time": "2026-01-19T20:08:21Z",
+      "raw_text": "",
+      "reactions": {},
+      "is_private": false,
+      "id": 17850254,
+      "time": "2026-01-19T20:08:21Z",
+      "bug_id": 2010796,
+      "tags": [],
+      "author": "mail@max-inden.de",
+      "attachment_id": 9538603,
+      "creator": "mail@max-inden.de"
+    },
+    {
+      "creator": "mail@max-inden.de",
+      "tags": [],
+      "author": "mail@max-inden.de",
+      "attachment_id": null,
+      "bug_id": 2010796,
+      "time": "2026-01-20T16:57:35Z",
+      "id": 17851424,
+      "is_private": false,
+      "raw_text": "Depends on discussion in Bug 1986247. See [this comment](https://bugzilla.mozilla.org/show_bug.cgi?id=1986247#c8).",
+      "reactions": {},
+      "creation_time": "2026-01-20T16:57:35Z",
+      "count": 2,
+      "text": "Depends on discussion in Bug 1986247. See [this comment](https://bugzilla.mozilla.org/show_bug.cgi?id=1986247#c8)."
+    },
+    {
+      "reactions": {},
+      "raw_text": "Pushed by mail@max-inden.de:\nhttps://github.com/mozilla-firefox/firefox/commit/c27ee45280fe\nhttps://hg.mozilla.org/integration/autoland/rev/578cedf096a6\nUpdate neqo to v0.22.1 r=kershaw,necko-reviewers,supply-chain-reviewers",
+      "creation_time": "2026-01-21T16:36:05Z",
+      "text": "Pushed by mail@max-inden.de:\nhttps://github.com/mozilla-firefox/firefox/commit/c27ee45280fe\nhttps://hg.mozilla.org/integration/autoland/rev/578cedf096a6\nUpdate neqo to v0.22.1 r=kershaw,necko-reviewers,supply-chain-reviewers",
+      "creator": "pulsebot@bmo.tld",
+      "author": "pulsebot@bmo.tld",
+      "attachment_id": null,
+      "tags": [],
+      "bug_id": 2010796,
+      "time": "2026-01-21T16:36:05Z",
+      "id": 17853186,
+      "count": 3,
+      "is_private": false
+    },
+    {
+      "id": 17853341,
+      "time": "2026-01-21T17:14:20Z",
+      "author": "pulsebot@bmo.tld",
+      "tags": [],
+      "attachment_id": null,
+      "bug_id": 2010796,
+      "creator": "pulsebot@bmo.tld",
+      "text": "Pushed by sstanca@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/41eb0cc9c8f3\nhttps://hg.mozilla.org/integration/autoland/rev/a516e809139c\nRevert \"Bug 2010796 - Update neqo to v0.22.1 r=kershaw,necko-reviewers,supply-chain-reviewers\" for causing linting failures.",
+      "creation_time": "2026-01-21T17:14:20Z",
+      "reactions": {},
+      "raw_text": "Pushed by sstanca@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/41eb0cc9c8f3\nhttps://hg.mozilla.org/integration/autoland/rev/a516e809139c\nRevert \"Bug 2010796 - Update neqo to v0.22.1 r=kershaw,necko-reviewers,supply-chain-reviewers\" for causing linting failures.",
+      "is_private": false,
+      "count": 4
+    },
+    {
+      "text": "Reverted this because it was causing linting failures.\n* [Revert link](https://hg.mozilla.org/integration/autoland/rev/a516e809139c3e32ddcbb05b497107461f3975f2)\n* [Push with failures](https://treeherder.mozilla.org/jobs?repo=autoland&group_state=expanded&resultStatus=testfailed%2Cbusted%2Cexception&revision=578cedf096a6279346cb465efc5e31f1b8d4ef61&selectedTaskRun=CRwMfSifS5i_TXBGpuBS9Q.0&searchStr=Linting%2Copt%2CRust%2Cchecks%2Csource-test-vendor-rust%2Cvendor) \n* [Failure Log](https://treeherder.mozilla.org/logviewer?job_id=544718211&repo=autoland&task=CRwMfSifS5i_TXBGpuBS9Q.0) \n* Failure line:  toml.decoder.TomlDecodeError: An implicitly defined table can't be an array (line 114 column 1 char 2449)",
+      "raw_text": "Reverted this because it was causing linting failures.\n* [Revert link](https://hg.mozilla.org/integration/autoland/rev/a516e809139c3e32ddcbb05b497107461f3975f2)\n* [Push with failures](https://treeherder.mozilla.org/jobs?repo=autoland&group_state=expanded&resultStatus=testfailed%2Cbusted%2Cexception&revision=578cedf096a6279346cb465efc5e31f1b8d4ef61&selectedTaskRun=CRwMfSifS5i_TXBGpuBS9Q.0&searchStr=Linting%2Copt%2CRust%2Cchecks%2Csource-test-vendor-rust%2Cvendor) \n* [Failure Log](https://treeherder.mozilla.org/logviewer?job_id=544718211&repo=autoland&task=CRwMfSifS5i_TXBGpuBS9Q.0) \n* Failure line:  toml.decoder.TomlDecodeError: An implicitly defined table can't be an array (line 114 column 1 char 2449)",
+      "reactions": {},
+      "creation_time": "2026-01-21T17:17:56Z",
+      "time": "2026-01-21T17:17:56Z",
+      "id": 17853355,
+      "creator": "sstanca@mozilla.com",
+      "author": "sstanca@mozilla.com",
+      "attachment_id": null,
+      "tags": [],
+      "bug_id": 2010796,
+      "count": 5,
+      "is_private": false
+    },
+    {
+      "time": "2026-01-26T12:37:07Z",
+      "id": 17859743,
+      "is_private": false,
+      "creator": "pulsebot@bmo.tld",
+      "attachment_id": null,
+      "author": "pulsebot@bmo.tld",
+      "tags": [],
+      "bug_id": 2010796,
+      "count": 6,
+      "text": "Pushed by mail@max-inden.de:\nhttps://github.com/mozilla-firefox/firefox/commit/de91275e3243\nhttps://hg.mozilla.org/integration/autoland/rev/56a269b54456\nUpdate neqo to v0.22.2 r=kershaw,necko-reviewers,supply-chain-reviewers",
+      "reactions": {},
+      "raw_text": "Pushed by mail@max-inden.de:\nhttps://github.com/mozilla-firefox/firefox/commit/de91275e3243\nhttps://hg.mozilla.org/integration/autoland/rev/56a269b54456\nUpdate neqo to v0.22.2 r=kershaw,necko-reviewers,supply-chain-reviewers",
+      "creation_time": "2026-01-26T12:37:07Z"
+    },
+    {
+      "time": "2026-01-26T21:41:57Z",
+      "is_private": false,
+      "id": 17860605,
+      "creator": "chorotan@mozilla.com",
+      "bug_id": 2010796,
+      "tags": [
+        "bugherder"
+      ],
+      "author": "chorotan@mozilla.com",
+      "attachment_id": null,
+      "text": "https://hg.mozilla.org/mozilla-central/rev/56a269b54456",
+      "count": 7,
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/56a269b54456",
+      "reactions": {},
+      "creation_time": "2026-01-26T21:41:57Z"
+    }
+  ],
+  "platform": "Unspecified",
+  "last_change_time_non_bot": "2026-01-26T21:41:57Z",
+  "cf_status_firefox149": "fixed",
+  "cf_tracking_firefox149": "---",
+  "cf_last_resolved": "2026-01-26T21:41:57Z",
+  "cf_status_firefox147": "---",
+  "qa_contact": "",
+  "cf_tracking_firefox_esr140": "---",
+  "counts": {
+    "regressed_by": 0,
+    "cc": 0,
+    "duplicates": 0,
+    "keywords": 0,
+    "attachments": 1,
+    "comments": 8,
+    "blocks": 1,
+    "regressions": 0,
+    "depends_on": 1
+  },
+  "id": 2010796
+}

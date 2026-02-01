@@ -1,0 +1,22 @@
+--- a/gfx/videoOverlay.cpp
++++ b/gfx/videoOverlay.cpp
+@@ -100,6 +100,13 @@
+ void RenderOverlay() {
++  AUTO_PROFILER_LABEL("RenderOverlay", OTHER);
++
+   // Existing rendering code...
+ }
+ 
+ void UpdateOverlay() {
++  AUTO_PROFILER_LABEL("UpdateOverlay", OTHER);
++
+   // Existing update code...
+ }
+--- a/media/videoOverlayManager.cpp
++++ b/media/videoOverlayManager.cpp
+@@ -50,6 +50,12 @@
+ void ManageOverlays() {
++  AUTO_PROFILER_LABEL("ManageOverlays", OTHER);
++
+   // Existing overlay management code...
+ }

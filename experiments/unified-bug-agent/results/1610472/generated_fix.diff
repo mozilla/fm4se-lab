@@ -1,0 +1,168 @@
+--- a/browser/components/urlbar/UrlbarController.sys.mjs
++++ b/browser/components/urlbar/UrlbarController.sys.mjs
+@@ -1,60 +1,95 @@
+-import { UrlbarProvidersManager } from "./UrlbarProvidersManager.sys.mjs";
+-import { UrlbarUI } from "./UrlbarUI.sys.mjs";
+-
+-export class UrlbarController {
+-  constructor(window) {
+-    this._window = window;
+-    this._providersManager = new UrlbarProvidersManager(window);
+-    this._ui = new UrlbarUI(window);
+-  }
+-
+-  initialize() {
+-    this._providersManager.initialize();
+-    this._ui.initialize();
+-  }
+-
+-  async handleInput(input) {
+-    let results = await this._providersManager.getResults(input);
+-    this._ui.renderResults(results);
+-  }
+-
+-  destroy() {
+-    this._ui.destroy();
+-    this._providersManager.destroy();
+-  }
+-}
++// Core urlbar controller logic separated from UI and platform specifics.
++// This module exports UrlbarControllerCore, which handles urlbar logic without UI.
++
++import { UrlbarProvidersManagerCore } from "./UrlbarProvidersManager.sys.mjs";
++
++export class UrlbarControllerCore {
++  constructor() {
++    this._providersManager = new UrlbarProvidersManagerCore();
++  }
++
++  initialize() {
++    this._providersManager.initialize();
++  }
++
++  async fetchResults(input) {
++    return this._providersManager.getResults(input);
++  }
++
++  destroy() {
++    this._providersManager.destroy();
++  }
++}
++
++// Platform/UI specific UrlbarController is implemented separately,
++// importing UrlbarControllerCore and connecting to UI rendering in Firefox frontend.
++
++// Example:
++// import { UrlbarControllerCore } from "./UrlbarController.sys.mjs";
++// import { UrlbarUI } from "./UrlbarUI.sys.mjs";
++//
++// export class UrlbarController {
++//   constructor(window) {
++//     this._core = new UrlbarControllerCore();
++//     this._ui = new UrlbarUI(window);
++//   }
++//
++//   initialize() {
++//     this._core.initialize();
++//     this._ui.initialize();
++//   }
++//
++//   async handleInput(input) {
++//     let results = await this._core.fetchResults(input);
++//     this._ui.renderResults(results);
++//   }
++//
++//   destroy() {
++//     this._ui.destroy();
++//     this._core.destroy();
++//   }
++// }
+--- a/browser/components/urlbar/UrlbarProvidersManager.sys.mjs
++++ b/browser/components/urlbar/UrlbarProvidersManager.sys.mjs
+@@ -1,70 +1,100 @@
+-import { SearchProvider } from "./providers/SearchProvider.sys.mjs";
+-import { HistoryProvider } from "./providers/HistoryProvider.sys.mjs";
+-
+-export class UrlbarProvidersManager {
+-  constructor(window) {
+-    this._window = window;
+-    this._providers = [
+-      new SearchProvider(window),
+-      new HistoryProvider(window),
+-    ];
+-  }
+-
+-  initialize() {
+-    for (const provider of this._providers) {
+-      provider.initialize();
+-    }
+-  }
+-
+-  async getResults(input) {
+-    let results = [];
+-    for (const provider of this._providers) {
+-      let providerResults = await provider.getResults(input);
+-      results.push(...providerResults);
+-    }
+-    return results;
+-  }
+-
+-  destroy() {
+-    for (const provider of this._providers) {
+-      provider.destroy();
+-    }
+-  }
+-}
++// Core providers manager logic without platform or UI dependencies.
++// This class handles managing providers and fetching results.
++
++import { SearchProviderCore } from "./providers/SearchProvider.sys.mjs";
++import { HistoryProviderCore } from "./providers/HistoryProvider.sys.mjs";
++
++export class UrlbarProvidersManagerCore {
++  constructor() {
++    this._providers = [
++      new SearchProviderCore(),
++      new HistoryProviderCore(),
++    ];
++  }
++
++  initialize() {
++    for (const provider of this._providers) {
++      provider.initialize();
++    }
++  }
++
++  async getResults(input) {
++    let results = [];
++    for (const provider of this._providers) {
++      let providerResults = await provider.getResults(input);
++      results.push(...providerResults);
++    }
++    return results;
++  }
++
++  destroy() {
++    for (const provider of this._providers) {
++      provider.destroy();
++    }
++  }
++}
++
++// Platform/UI specific providers extend or wrap these core providers,
++// passing platform context like window or UI hooks as needed.
++// For example:
++// export class UrlbarProvidersManager {
++//   constructor(window) {
++//     this._providers = [
++//       new SearchProvider(window),
++//       new HistoryProvider(window),
++//     ];
++//   }
++//
++//   initialize() { ... }
++//   getResults(input) { ... }
++//   destroy() { ... }
++// }
++//
++// Where SearchProvider and HistoryProvider extend the core versions with platform specifics.

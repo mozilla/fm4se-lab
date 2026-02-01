@@ -1,0 +1,19 @@
+--- a/dom/media/media_config.cpp
++++ b/dom/media/media_config.cpp
+@@ -150,6 +150,10 @@
+ void InitializeMediaConfig() {
+   // existing initialization code...
+ 
++#ifdef MOZ_ENABLE_RTX_VIDEO_SUPER_RESOLUTION
++  RtxVideoSuperResolution::Init();
++#endif
++
+   // rest of initialization code...
+ }
+--- a/gfx/moz.build
++++ b/gfx/moz.build
+@@ -20,6 +20,7 @@
+ # Feature flags for gfx
+ 
+ # Enable NVIDIA RTX Video Super Resolution support
++MOZ_ENABLE_RTX_VIDEO_SUPER_RESOLUTION = True

@@ -50,7 +50,7 @@ python fetch_bugs.py --count 20 --output bugs.txt
 Execute the agent on the list of bugs. This process is sequential to respect API rate limits.
 
 ```bash
-python batch_run.py --input bugs.txt --output-dir results
+python batch_run.py --input bugs.txt --output-dir results --start 1 --end 10
 ```
 
 #### 3. Output Structure

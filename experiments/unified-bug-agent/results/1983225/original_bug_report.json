@@ -1,0 +1,659 @@
+{
+  "groups": [],
+  "creator_detail": {
+    "id": 159069,
+    "name": "gijskruitbosch+bugs@gmail.com",
+    "nick": "Gijs",
+    "real_name": ":Gijs (he/him)",
+    "email": "gijskruitbosch+bugs@gmail.com"
+  },
+  "version": "unspecified",
+  "cf_size_estimate": "---",
+  "mentors": [],
+  "regressions": [],
+  "cf_has_str": "---",
+  "keywords": [
+    "perf"
+  ],
+  "cf_performance_impact": "low",
+  "duplicates": [],
+  "assigned_to_detail": {
+    "real_name": "Sunil Mayya",
+    "email": "smayya@mozilla.com",
+    "nick": "smayya",
+    "id": 711499,
+    "name": "smayya@mozilla.com"
+  },
+  "cf_status_firefox_esr115": "---",
+  "cf_tracking_thunderbird_esr140": "---",
+  "cf_webcompat_priority": "---",
+  "cc": [
+    "dkeeler@mozilla.com",
+    "dlee@mozilla.com",
+    "florian@mozilla.com",
+    "mak@mozilla.com",
+    "mayankleoboy1@gmail.com",
+    "pasik@iki.fi",
+    "smayya@mozilla.com"
+  ],
+  "cf_fx_iteration": "---",
+  "resolution": "FIXED",
+  "priority": "P2",
+  "cf_webcompat_score": "---",
+  "cf_status_thunderbird_esr140": "---",
+  "cf_status_firefox148": "---",
+  "component": "Networking",
+  "cf_rank": "1",
+  "cf_tracking_firefox147": "---",
+  "triage_owner": "valentin.gosu@gmail.com",
+  "comment_count": 12,
+  "is_confirmed": true,
+  "history": [
+    {
+      "changes": [
+        {
+          "added": "needinfo?(dkeeler@mozilla.com)",
+          "field_name": "flagtypes.name",
+          "removed": ""
+        }
+      ],
+      "who": "gijskruitbosch+bugs@gmail.com",
+      "when": "2025-08-15T08:52:54Z"
+    },
+    {
+      "who": "mayankleoboy1@gmail.com",
+      "when": "2025-08-15T08:54:31Z",
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "cc",
+          "added": "mayankleoboy1@gmail.com"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "added": "",
+          "removed": "needinfo?(dkeeler@mozilla.com)",
+          "field_name": "flagtypes.name"
+        }
+      ],
+      "when": "2025-08-15T16:40:18Z",
+      "who": "dkeeler@mozilla.com"
+    },
+    {
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "flagtypes.name",
+          "added": "needinfo?(mak@mozilla.com)"
+        }
+      ],
+      "when": "2025-08-29T12:07:04Z",
+      "who": "release-mgmt-account-bot@mozilla.tld"
+    },
+    {
+      "changes": [
+        {
+          "added": "Core",
+          "removed": "Toolkit",
+          "field_name": "product"
+        },
+        {
+          "field_name": "flagtypes.name",
+          "removed": "needinfo?(mak@mozilla.com)",
+          "added": ""
+        },
+        {
+          "added": "Networking",
+          "field_name": "component",
+          "removed": "Downloads API"
+        }
+      ],
+      "when": "2025-08-29T12:40:03Z",
+      "who": "mak@mozilla.com"
+    },
+    {
+      "when": "2025-09-01T19:00:48Z",
+      "who": "smayya@mozilla.com",
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "cc",
+          "added": "smayya@mozilla.com"
+        },
+        {
+          "added": "[necko-triaged][necko-priority-next]",
+          "field_name": "whiteboard",
+          "removed": ""
+        }
+      ]
+    },
+    {
+      "who": "smayya@mozilla.com",
+      "when": "2025-09-01T19:02:03Z",
+      "changes": [
+        {
+          "added": "P2",
+          "removed": "--",
+          "field_name": "priority"
+        },
+        {
+          "added": "1716548",
+          "field_name": "blocks",
+          "removed": ""
+        },
+        {
+          "field_name": "cf_rank",
+          "removed": "",
+          "added": "1"
+        },
+        {
+          "added": "task",
+          "removed": "defect",
+          "field_name": "type"
+        },
+        {
+          "added": "1",
+          "field_name": "cf_fx_points",
+          "removed": "---"
+        },
+        {
+          "field_name": "severity",
+          "removed": "--",
+          "added": "N/A"
+        }
+      ]
+    },
+    {
+      "who": "smayya@mozilla.com",
+      "when": "2025-09-01T21:25:02Z",
+      "changes": [
+        {
+          "added": "smayya@mozilla.com",
+          "field_name": "assigned_to",
+          "removed": "nobody@mozilla.org"
+        }
+      ]
+    },
+    {
+      "who": "pasik@iki.fi",
+      "when": "2025-09-02T07:37:03Z",
+      "changes": [
+        {
+          "added": "pasik@iki.fi",
+          "field_name": "cc",
+          "removed": ""
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "field_name": "cf_performance_impact",
+          "removed": "?",
+          "added": "low"
+        }
+      ],
+      "when": "2025-09-07T16:36:24Z",
+      "who": "bas@basschouten.com"
+    },
+    {
+      "who": "gijskruitbosch+bugs@gmail.com",
+      "when": "2025-09-16T14:05:17Z",
+      "changes": [
+        {
+          "field_name": "flagtypes.name",
+          "removed": "",
+          "added": "needinfo?(smayya@mozilla.com)"
+        }
+      ]
+    },
+    {
+      "when": "2025-09-30T20:44:40Z",
+      "who": "smayya@mozilla.com",
+      "changes": [
+        {
+          "field_name": "flagtypes.name",
+          "removed": "needinfo?(smayya@mozilla.com)",
+          "added": ""
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "removed": "[necko-triaged][necko-priority-next]",
+          "field_name": "whiteboard",
+          "added": "[necko-triaged][necko-priority-queue]"
+        }
+      ],
+      "who": "smayya@mozilla.com",
+      "when": "2026-01-19T23:40:52Z"
+    },
+    {
+      "when": "2026-01-19T23:42:21Z",
+      "who": "smayya@mozilla.com",
+      "changes": [
+        {
+          "field_name": "whiteboard",
+          "removed": "[necko-triaged][necko-priority-queue]",
+          "added": "[necko-triaged][necko-priority-next]"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "attachment_id": 9510718,
+          "added": "1",
+          "field_name": "attachments.isobsolete",
+          "removed": "0"
+        }
+      ],
+      "when": "2026-01-20T10:48:40Z",
+      "who": "phab-bot@bmo.tld"
+    },
+    {
+      "changes": [
+        {
+          "removed": "[necko-triaged][necko-priority-next]",
+          "field_name": "whiteboard",
+          "added": "[necko-triaged][necko-priority-queue]"
+        }
+      ],
+      "who": "smayya@mozilla.com",
+      "when": "2026-01-20T10:48:58Z"
+    },
+    {
+      "when": "2026-01-20T11:46:04Z",
+      "who": "phab-bot@bmo.tld",
+      "changes": [
+        {
+          "added": "0",
+          "attachment_id": 9510718,
+          "removed": "1",
+          "field_name": "attachments.isobsolete"
+        },
+        {
+          "added": "Bug 1983225 - Increase BackgroundFileSaver async copy segment size to 1MB. r=#necko-reviewers,keeler",
+          "attachment_id": 9510718,
+          "field_name": "attachments.description",
+          "removed": "WIP: Bug 1983225 - Increase BackgroundFileSaver buffer size to 1MB with heap allocation. r=#necko-reviewers"
+        }
+      ]
+    },
+    {
+      "when": "2026-01-26T09:51:31Z",
+      "who": "smolnar@mozilla.com",
+      "changes": [
+        {
+          "added": "149 Branch",
+          "field_name": "target_milestone",
+          "removed": "---"
+        },
+        {
+          "added": "FIXED",
+          "removed": "",
+          "field_name": "resolution"
+        },
+        {
+          "added": "RESOLVED",
+          "field_name": "status",
+          "removed": "NEW"
+        },
+        {
+          "field_name": "cf_last_resolved",
+          "removed": "",
+          "added": "2026-01-26T09:51:31Z"
+        },
+        {
+          "field_name": "cf_status_firefox149",
+          "removed": "---",
+          "added": "fixed"
+        },
+        {
+          "removed": "",
+          "field_name": "comment_tag",
+          "added": "bugherder",
+          "comment_id": 17859471,
+          "comment_count": 11
+        }
+      ]
+    }
+  ],
+  "type": "task",
+  "flags": [],
+  "status": "RESOLVED",
+  "summary": "Improve sha256 hashing for downloads' BackgroundFileSaver",
+  "cf_tracking_thunderbird_esr115": "---",
+  "is_cc_accessible": true,
+  "is_creator_accessible": true,
+  "cf_tracking_firefox_esr115": "---",
+  "see_also": [],
+  "is_open": false,
+  "alias": null,
+  "op_sys": "All",
+  "description": "Based on the conversation in bug 1972941, there are at least 2 things we could do to improve this story:\n\n1. avoid doing this work at all if safebrowsing and DLP are both off (note that this will be a minority case but it seems worth doing even just to make sure we can triage where CPU use is coming from).\n2. do not update the hash for every 32KiB chunk of download that comes in, as per bug 1972941 comment 33 that would be better.\n\nDana, for 2, is there an ideal chunk size for the sha256 calculations, or is just making it, say, 1mib going to be better? Being slightly silly (because I don't understand the overhead tradeoff, so please correct me!) any reason not to just do the hashing once when the file has finished downloading?",
+  "depends_on": [],
+  "cf_accessibility_severity": "---",
+  "filed_via": "standard_form",
+  "triage_owner_detail": {
+    "id": 415378,
+    "name": "valentin.gosu@gmail.com",
+    "real_name": "Valentin Gosu [:valentin] (he/him)",
+    "email": "valentin.gosu@gmail.com",
+    "nick": "valentin"
+  },
+  "regressed_by": [],
+  "cf_status_firefox149": "fixed",
+  "last_change_time_non_bot": "2026-01-26T09:51:31Z",
+  "platform": "Desktop",
+  "comments": [
+    {
+      "bug_id": 1983225,
+      "attachment_id": null,
+      "tags": [],
+      "author": "gijskruitbosch+bugs@gmail.com",
+      "creator": "gijskruitbosch+bugs@gmail.com",
+      "id": 17626048,
+      "time": "2025-08-15T08:52:54Z",
+      "creation_time": "2025-08-15T08:52:54Z",
+      "raw_text": "Based on the conversation in bug 1972941, there are at least 2 things we could do to improve this story:\n\n1. avoid doing this work at all if safebrowsing and DLP are both off (note that this will be a minority case but it seems worth doing even just to make sure we can triage where CPU use is coming from).\n2. do not update the hash for every 32KiB chunk of download that comes in, as per bug 1972941 comment 33 that would be better.\n\nDana, for 2, is there an ideal chunk size for the sha256 calculations, or is just making it, say, 1mib going to be better? Being slightly silly (because I don't understand the overhead tradeoff, so please correct me!) any reason not to just do the hashing once when the file has finished downloading?",
+      "reactions": {},
+      "text": "Based on the conversation in bug 1972941, there are at least 2 things we could do to improve this story:\n\n1. avoid doing this work at all if safebrowsing and DLP are both off (note that this will be a minority case but it seems worth doing even just to make sure we can triage where CPU use is coming from).\n2. do not update the hash for every 32KiB chunk of download that comes in, as per bug 1972941 comment 33 that would be better.\n\nDana, for 2, is there an ideal chunk size for the sha256 calculations, or is just making it, say, 1mib going to be better? Being slightly silly (because I don't understand the overhead tradeoff, so please correct me!) any reason not to just do the hashing once when the file has finished downloading?",
+      "is_private": false,
+      "count": 0
+    },
+    {
+      "count": 1,
+      "is_private": false,
+      "text": "Doing it all at once at the end would certainly have the least overhead, but if you're downloading a huge file, it would be a bit of a bummer to wait for it to download and then wait some more for it to be hashed. I think it also depends on the download speed - if you're downloading 10s or 100s of MB a second, you probably want to hash in very large chunks, but if it's a lot slower than that, then you don't even have that much to hash. Anyway, I bet at least 1MB or even 2 or 4 (8?) would probably be a big improvement.",
+      "creation_time": "2025-08-15T16:40:18Z",
+      "raw_text": "Doing it all at once at the end would certainly have the least overhead, but if you're downloading a huge file, it would be a bit of a bummer to wait for it to download and then wait some more for it to be hashed. I think it also depends on the download speed - if you're downloading 10s or 100s of MB a second, you probably want to hash in very large chunks, but if it's a lot slower than that, then you don't even have that much to hash. Anyway, I bet at least 1MB or even 2 or 4 (8?) would probably be a big improvement.",
+      "reactions": {},
+      "id": 17626416,
+      "time": "2025-08-15T16:40:18Z",
+      "bug_id": 1983225,
+      "attachment_id": null,
+      "author": "dkeeler@mozilla.com",
+      "tags": [],
+      "creator": "dkeeler@mozilla.com"
+    },
+    {
+      "is_private": false,
+      "id": 17648023,
+      "time": "2025-08-29T12:07:04Z",
+      "bug_id": 1983225,
+      "attachment_id": null,
+      "author": "release-mgmt-account-bot@mozilla.tld",
+      "tags": [],
+      "creator": "release-mgmt-account-bot@mozilla.tld",
+      "text": "The severity field is not set for this bug.\n:mak, could you have a look please?\n\nFor more information, please visit [BugBot documentation](https://wiki.mozilla.org/BugBot#workflow.2Fno_severity_ni.py).",
+      "count": 2,
+      "creation_time": "2025-08-29T12:07:04Z",
+      "reactions": {},
+      "raw_text": "The severity field is not set for this bug.\n:mak, could you have a look please?\n\nFor more information, please visit [BugBot documentation](https://wiki.mozilla.org/BugBot#workflow.2Fno_severity_ni.py)."
+    },
+    {
+      "is_private": false,
+      "count": 3,
+      "attachment_id": null,
+      "author": "mak@mozilla.com",
+      "tags": [],
+      "bug_id": 1983225,
+      "creator": "mak@mozilla.com",
+      "id": 17648076,
+      "time": "2025-08-29T12:40:03Z",
+      "creation_time": "2025-08-29T12:40:03Z",
+      "reactions": {},
+      "raw_text": "Moving to Core Networking to evaluate the buffer size change in the appropriate component.",
+      "text": "Moving to Core Networking to evaluate the buffer size change in the appropriate component."
+    },
+    {
+      "text": "Based on DANA's [comment](https://bugzilla.mozilla.org/show_bug.cgi?id=1983225#c1), we can try to increase the [BUFFERED_IO_SIZE ](https://searchfox.org/firefox-main/rev/99d7ebc6bfa5eb28eca5d0d51f80f6788d1b133f/netwerk/base/BackgroundFileSaver.cpp#48) to 1MB and see if this makes any improvement. But we need to ensure we use heap for this",
+      "raw_text": "Based on DANA's [comment](https://bugzilla.mozilla.org/show_bug.cgi?id=1983225#c1), we can try to increase the [BUFFERED_IO_SIZE ](https://searchfox.org/firefox-main/rev/99d7ebc6bfa5eb28eca5d0d51f80f6788d1b133f/netwerk/base/BackgroundFileSaver.cpp#48) to 1MB and see if this makes any improvement. But we need to ensure we use heap for this",
+      "reactions": {},
+      "creation_time": "2025-09-01T19:00:48Z",
+      "time": "2025-09-01T19:00:48Z",
+      "id": 17652449,
+      "creator": "smayya@mozilla.com",
+      "author": "smayya@mozilla.com",
+      "attachment_id": null,
+      "tags": [],
+      "bug_id": 1983225,
+      "count": 4,
+      "is_private": false
+    },
+    {
+      "raw_text": "\nThis patch increases BUFFERED_IO_SIZE from 32KB to 1MB for better I/O throughput\nduring file operations and hash computation. The read buffer is changed from\nstack-allocated to heap-allocated using MakeUnique to avoid stack overflow risks.\n\n\ud83e\udd16 Generated with [Claude Code](https://claude.ai/code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>",
+      "reactions": {},
+      "creation_time": "2025-09-01T20:07:31Z",
+      "text": "Created attachment 9510718\nBug 1983225 - Increase BackgroundFileSaver async copy segment size to 1MB. r=#necko-reviewers,keeler\n\n\nThis patch increases BUFFERED_IO_SIZE from 32KB to 1MB for better I/O throughput\nduring file operations and hash computation. The read buffer is changed from\nstack-allocated to heap-allocated using MakeUnique to avoid stack overflow risks.\n\n\ud83e\udd16 Generated with [Claude Code](https://claude.ai/code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>",
+      "creator": "smayya@mozilla.com",
+      "bug_id": 1983225,
+      "tags": [],
+      "author": "smayya@mozilla.com",
+      "attachment_id": 9510718,
+      "time": "2025-09-01T20:07:31Z",
+      "id": 17652482,
+      "count": 5,
+      "is_private": false
+    },
+    {
+      "creator": "bas@basschouten.com",
+      "tags": [],
+      "attachment_id": null,
+      "author": "bas@basschouten.com",
+      "bug_id": 1983225,
+      "time": "2025-09-07T16:36:24Z",
+      "id": 17659582,
+      "is_private": false,
+      "reactions": {},
+      "raw_text": "The [Performance Impact Calculator](https://mozilla.github.io/perf-triage/calculator.html?platform-linux=true&affects-browser=minor&affects-site=minor&affects-scenario=general&pageload-impact=none&pages-affected=common&resource-impact=some&reproducible=true) has determined this bug's performance impact to be **low**. If you'd like to request re-triage, you can reset the Performance Impact flag to \"?\" or needinfo the triage sheriff.\n\nResource impact: Some\n[x] Able to reproduce locally",
+      "creation_time": "2025-09-07T16:36:24Z",
+      "count": 6,
+      "text": "The [Performance Impact Calculator](https://mozilla.github.io/perf-triage/calculator.html?platform-linux=true&affects-browser=minor&affects-site=minor&affects-scenario=general&pageload-impact=none&pages-affected=common&resource-impact=some&reproducible=true) has determined this bug's performance impact to be **low**. If you'd like to request re-triage, you can reset the Performance Impact flag to \"?\" or needinfo the triage sheriff.\n\nResource impact: Some\n[x] Able to reproduce locally"
+    },
+    {
+      "count": 7,
+      "is_private": false,
+      "text": "Sunil, are you likely to update the patch based on Dana's feedback here?",
+      "creation_time": "2025-09-16T14:05:17Z",
+      "reactions": {},
+      "raw_text": "Sunil, are you likely to update the patch based on Dana's feedback here?",
+      "id": 17673134,
+      "time": "2025-09-16T14:05:17Z",
+      "bug_id": 1983225,
+      "author": "gijskruitbosch+bugs@gmail.com",
+      "tags": [],
+      "attachment_id": null,
+      "creator": "gijskruitbosch+bugs@gmail.com"
+    },
+    {
+      "count": 8,
+      "is_private": false,
+      "raw_text": "Hey Gijs, yes, I will be doing it sometime next week.",
+      "reactions": {},
+      "creation_time": "2025-09-30T20:44:40Z",
+      "text": "Hey Gijs, yes, I will be doing it sometime next week.",
+      "creator": "smayya@mozilla.com",
+      "author": "smayya@mozilla.com",
+      "attachment_id": null,
+      "tags": [],
+      "bug_id": 1983225,
+      "time": "2025-09-30T20:44:40Z",
+      "id": 17696568
+    },
+    {
+      "creation_time": "2026-01-20T10:48:40Z",
+      "raw_text": "Revision D263312 was moved to bug 1983226. Setting attachment 9510718 to obsolete.",
+      "reactions": {},
+      "text": "Comment on attachment 9510718\nBug 1983225 - Increase BackgroundFileSaver async copy segment size to 1MB. r=#necko-reviewers,keeler\n\nRevision D263312 was moved to bug 1983226. Setting attachment 9510718 to obsolete.",
+      "bug_id": 1983225,
+      "attachment_id": 9510718,
+      "author": "phab-bot@bmo.tld",
+      "tags": [],
+      "creator": "phab-bot@bmo.tld",
+      "id": 17850841,
+      "time": "2026-01-20T10:48:40Z",
+      "count": 9,
+      "is_private": false
+    },
+    {
+      "raw_text": "Pushed by smayya@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/1359fa383a88\nhttps://hg.mozilla.org/integration/autoland/rev/c23c78d4d0c6\nIncrease BackgroundFileSaver async copy segment size to 1MB. r=keeler,necko-reviewers",
+      "reactions": {},
+      "creation_time": "2026-01-25T22:35:17Z",
+      "text": "Pushed by smayya@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/1359fa383a88\nhttps://hg.mozilla.org/integration/autoland/rev/c23c78d4d0c6\nIncrease BackgroundFileSaver async copy segment size to 1MB. r=keeler,necko-reviewers",
+      "creator": "pulsebot@bmo.tld",
+      "bug_id": 1983225,
+      "tags": [],
+      "attachment_id": null,
+      "author": "pulsebot@bmo.tld",
+      "time": "2026-01-25T22:35:17Z",
+      "id": 17857722,
+      "count": 10,
+      "is_private": false
+    },
+    {
+      "text": "https://hg.mozilla.org/mozilla-central/rev/c23c78d4d0c6",
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/c23c78d4d0c6",
+      "reactions": {},
+      "creation_time": "2026-01-26T09:51:31Z",
+      "time": "2026-01-26T09:51:31Z",
+      "id": 17859471,
+      "creator": "smolnar@mozilla.com",
+      "bug_id": 1983225,
+      "author": "smolnar@mozilla.com",
+      "tags": [
+        "bugherder"
+      ],
+      "attachment_id": null,
+      "count": 11,
+      "is_private": false
+    }
+  ],
+  "product": "Core",
+  "counts": {
+    "duplicates": 0,
+    "regressed_by": 0,
+    "cc": 7,
+    "regressions": 0,
+    "depends_on": 2,
+    "keywords": 1,
+    "attachments": 1,
+    "blocks": 0,
+    "comments": 12
+  },
+  "id": 1983225,
+  "cf_tracking_firefox_esr140": "---",
+  "cf_status_firefox147": "---",
+  "qa_contact": "",
+  "cf_last_resolved": "2026-01-26T09:51:31Z",
+  "cf_tracking_firefox149": "---",
+  "cf_status_firefox_esr140": "---",
+  "attachments": [
+    {
+      "description": "Bug 1983225 - Increase BackgroundFileSaver async copy segment size to 1MB. r=#necko-reviewers,keeler",
+      "creator_detail": {
+        "email": "smayya@mozilla.com",
+        "real_name": "Sunil Mayya",
+        "nick": "smayya",
+        "id": 711499,
+        "name": "smayya@mozilla.com"
+      },
+      "size": 48,
+      "is_patch": 0,
+      "is_private": 0,
+      "creation_time": "2025-09-01T20:07:31Z",
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjYzMzEy",
+      "attacher": "smayya@mozilla.com",
+      "is_obsolete": 0,
+      "content_type": "text/x-phabricator-request",
+      "creator": "smayya@mozilla.com",
+      "file_name": "phabricator-D263312-url.txt",
+      "last_change_time": "2026-01-20T11:46:04Z",
+      "bug_id": 1983225,
+      "id": 9510718,
+      "summary": "Bug 1983225 - Increase BackgroundFileSaver async copy segment size to 1MB. r=#necko-reviewers,keeler",
+      "flags": []
+    }
+  ],
+  "assigned_to": "smayya@mozilla.com",
+  "blocks": [
+    1716548,
+    1972941
+  ],
+  "cf_qa_whiteboard": "",
+  "cf_status_thunderbird_esr115": "---",
+  "cf_fx_points": "1",
+  "cf_user_story": "",
+  "mentors_detail": [],
+  "cf_tracking_firefox_relnote": "---",
+  "cf_tracking_firefox148": "---",
+  "creation_time": "2025-08-15T08:52:54Z",
+  "cf_a11y_review_project_flag": "---",
+  "target_milestone": "149 Branch",
+  "url": "",
+  "whiteboard": "[necko-triaged][necko-priority-queue]",
+  "dupe_of": null,
+  "votes": 1,
+  "last_change_time": "2026-01-26T09:51:31Z",
+  "severity": "N/A",
+  "creator": "gijskruitbosch+bugs@gmail.com",
+  "classification": "Components",
+  "cf_cab_review": "---",
+  "cf_crash_signature": "",
+  "cc_detail": [
+    {
+      "id": 349244,
+      "name": "dkeeler@mozilla.com",
+      "nick": "keeler",
+      "email": "dkeeler@mozilla.com",
+      "real_name": "Dana Keeler (she/her) [:keeler]"
+    },
+    {
+      "name": "dlee@mozilla.com",
+      "id": 468232,
+      "nick": "dimi",
+      "real_name": "Dimi Lee [:dimi]",
+      "email": "dlee@mozilla.com"
+    },
+    {
+      "nick": "florian",
+      "email": "florian@mozilla.com",
+      "real_name": "Florian Qu\u00e8ze [:florian]",
+      "name": "florian@mozilla.com",
+      "id": 149052
+    },
+    {
+      "name": "mak@mozilla.com",
+      "id": 240353,
+      "nick": "mak",
+      "real_name": "Marco Bonardo [:mak]",
+      "email": "mak@mozilla.com"
+    },
+    {
+      "id": 440227,
+      "name": "mayankleoboy1@gmail.com",
+      "nick": "mayankleoboy1",
+      "email": "mayankleoboy1@gmail.com",
+      "real_name": "Mayank Bansal"
+    },
+    {
+      "name": "pasik@iki.fi",
+      "id": 529219,
+      "nick": "pasik",
+      "email": "pasik@iki.fi",
+      "real_name": ""
+    },
+    {
+      "name": "smayya@mozilla.com",
+      "id": 711499,
+      "nick": "smayya",
+      "real_name": "Sunil Mayya",
+      "email": "smayya@mozilla.com"
+    }
+  ]
+}

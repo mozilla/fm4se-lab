@@ -1,0 +1,362 @@
+{
+  "cf_tracking_firefox_esr140": "---",
+  "creator": "sotaro.ikeda.g@gmail.com",
+  "cf_performance_impact": "---",
+  "see_also": [],
+  "cf_status_firefox148": "---",
+  "priority": "--",
+  "cf_fx_points": "---",
+  "whiteboard": "",
+  "cf_tracking_firefox149": "---",
+  "cf_status_firefox130": "fixed",
+  "op_sys": "Unspecified",
+  "resolution": "FIXED",
+  "flags": [],
+  "status": "RESOLVED",
+  "cf_status_firefox_esr140": "---",
+  "cf_status_firefox149": "---",
+  "is_confirmed": true,
+  "cf_tracking_thunderbird_esr140": "---",
+  "id": 1908585,
+  "creation_time": "2024-07-18T03:53:11Z",
+  "description": "gecko disables overlay in system wide when video overlay present is slow. It is not good.\n- https://searchfox.org/mozilla-central/rev/f7b41fc41c5505db507d076c16961a8da67dd318/gfx/webrender_bindings/DCLayerTree.cpp#683\n- https://searchfox.org/mozilla-central/rev/f7b41fc41c5505db507d076c16961a8da67dd318/gfx/webrender_bindings/DCLayerTree.cpp#1624",
+  "cf_fx_iteration": "---",
+  "cf_webcompat_priority": "---",
+  "mentors": [],
+  "duplicates": [],
+  "version": "unspecified",
+  "cc_detail": [
+    {
+      "email": "mayankleoboy1@gmail.com",
+      "id": 440227,
+      "name": "mayankleoboy1@gmail.com",
+      "nick": "mayankleoboy1",
+      "real_name": "Mayank Bansal"
+    },
+    {
+      "name": "nissan4321@gmail.com",
+      "nick": "nissan4321",
+      "real_name": "Mikel",
+      "email": "nissan4321@gmail.com",
+      "id": 414417
+    },
+    {
+      "real_name": "",
+      "nick": "pasik",
+      "name": "pasik@iki.fi",
+      "id": 529219,
+      "email": "pasik@iki.fi"
+    }
+  ],
+  "cf_tracking_thunderbird_esr115": "---",
+  "alias": null,
+  "cf_rank": null,
+  "history": [
+    {
+      "who": "sotaro.ikeda.g@gmail.com",
+      "when": "2024-07-18T03:54:09Z",
+      "changes": [
+        {
+          "field_name": "blocks",
+          "added": "1903455",
+          "removed": ""
+        }
+      ]
+    },
+    {
+      "who": "mayankleoboy1@gmail.com",
+      "changes": [
+        {
+          "field_name": "cc",
+          "removed": "",
+          "added": "mayankleoboy1@gmail.com"
+        }
+      ],
+      "when": "2024-07-18T03:54:14Z"
+    },
+    {
+      "who": "nissan4321@gmail.com",
+      "when": "2024-07-21T09:01:25Z",
+      "changes": [
+        {
+          "field_name": "cc",
+          "added": "nissan4321@gmail.com",
+          "removed": ""
+        }
+      ]
+    },
+    {
+      "who": "phab-bot@bmo.tld",
+      "changes": [
+        {
+          "removed": "WIP: Bug 1908585 - Disable overlay only for slow present video",
+          "added": "Bug 1908585 - Disable overlay only for slow present video",
+          "field_name": "attachments.description",
+          "attachment_id": 9414254
+        }
+      ],
+      "when": "2024-07-23T18:30:05Z"
+    },
+    {
+      "changes": [
+        {
+          "removed": "Disable overlay only for slow present video",
+          "added": "Disable video overlay only for slow present video",
+          "field_name": "summary"
+        }
+      ],
+      "when": "2024-07-24T00:22:27Z",
+      "who": "sotaro.ikeda.g@gmail.com"
+    },
+    {
+      "who": "imoraru@mozilla.com",
+      "when": "2024-07-24T09:55:40Z",
+      "changes": [
+        {
+          "field_name": "resolution",
+          "removed": "",
+          "added": "FIXED"
+        },
+        {
+          "removed": "---",
+          "added": "130 Branch",
+          "field_name": "target_milestone"
+        },
+        {
+          "field_name": "status",
+          "added": "RESOLVED",
+          "removed": "NEW"
+        },
+        {
+          "removed": "",
+          "added": "2024-07-24T09:55:40Z",
+          "field_name": "cf_last_resolved"
+        },
+        {
+          "removed": "---",
+          "added": "fixed",
+          "field_name": "cf_status_firefox130"
+        },
+        {
+          "removed": "",
+          "added": "bugherder",
+          "comment_id": 17039471,
+          "field_name": "comment_tag",
+          "comment_count": 3
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "removed": "",
+          "added": "pasik@iki.fi",
+          "field_name": "cc"
+        }
+      ],
+      "when": "2024-07-24T16:14:39Z",
+      "who": "pasik@iki.fi"
+    },
+    {
+      "when": "2024-07-30T15:51:24Z",
+      "changes": [
+        {
+          "field_name": "regressions",
+          "added": "1910637",
+          "removed": ""
+        }
+      ],
+      "who": "mayankleoboy1@gmail.com"
+    },
+    {
+      "when": "2026-01-15T00:55:56Z",
+      "changes": [
+        {
+          "removed": "",
+          "added": "1954558",
+          "field_name": "blocks"
+        }
+      ],
+      "who": "sotaro.ikeda.g@gmail.com"
+    }
+  ],
+  "regressed_by": [],
+  "platform": "Unspecified",
+  "cf_a11y_review_project_flag": "---",
+  "target_milestone": "130 Branch",
+  "cf_size_estimate": "---",
+  "cf_status_thunderbird_esr115": "---",
+  "mentors_detail": [],
+  "filed_via": "standard_form",
+  "is_cc_accessible": true,
+  "cf_last_resolved": "2024-07-24T09:55:40Z",
+  "counts": {
+    "duplicates": 0,
+    "regressions": 0,
+    "regressed_by": 1,
+    "attachments": 1,
+    "keywords": 0,
+    "blocks": 0,
+    "comments": 4,
+    "cc": 3,
+    "depends_on": 2
+  },
+  "attachments": [
+    {
+      "creator": "sotaro.ikeda.g@gmail.com",
+      "summary": "Bug 1908585 - Disable overlay only for slow present video",
+      "bug_id": 1908585,
+      "creation_time": "2024-07-23T03:01:54Z",
+      "description": "Bug 1908585 - Disable overlay only for slow present video",
+      "id": 9414254,
+      "creator_detail": {
+        "email": "sotaro.ikeda.g@gmail.com",
+        "id": 434202,
+        "real_name": "Sotaro Ikeda [:sotaro]",
+        "name": "sotaro.ikeda.g@gmail.com",
+        "nick": "sotaro"
+      },
+      "file_name": "phabricator-D217355-url.txt",
+      "is_private": 0,
+      "is_obsolete": 0,
+      "attacher": "sotaro.ikeda.g@gmail.com",
+      "flags": [],
+      "size": 48,
+      "content_type": "text/x-phabricator-request",
+      "is_patch": 0,
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjE3MzU1",
+      "last_change_time": "2024-07-23T18:30:05Z"
+    }
+  ],
+  "cf_cab_review": "---",
+  "cf_tracking_firefox_relnote": "---",
+  "url": "",
+  "assigned_to": "sotaro.ikeda.g@gmail.com",
+  "blocks": [
+    1903455,
+    1954558
+  ],
+  "severity": "--",
+  "cf_status_thunderbird_esr140": "---",
+  "cf_accessibility_severity": "---",
+  "type": "enhancement",
+  "cf_status_firefox147": "---",
+  "keywords": [],
+  "cf_webcompat_score": "---",
+  "summary": "Disable video overlay only for slow present video",
+  "cf_crash_signature": "",
+  "cf_tracking_firefox148": "---",
+  "cf_qa_whiteboard": "",
+  "last_change_time_non_bot": "2026-01-15T00:55:56Z",
+  "creator_detail": {
+    "email": "sotaro.ikeda.g@gmail.com",
+    "id": 434202,
+    "name": "sotaro.ikeda.g@gmail.com",
+    "nick": "sotaro",
+    "real_name": "Sotaro Ikeda [:sotaro]"
+  },
+  "classification": "Components",
+  "comment_count": 4,
+  "cf_user_story": "",
+  "cf_status_firefox_esr115": "---",
+  "cf_has_str": "---",
+  "groups": [],
+  "triage_owner": "bhood@mozilla.com",
+  "qa_contact": "",
+  "product": "Core",
+  "cf_tracking_firefox147": "---",
+  "triage_owner_detail": {
+    "email": "bhood@mozilla.com",
+    "id": 697075,
+    "real_name": "Bob Hood [:bhood]",
+    "name": "bhood@mozilla.com",
+    "nick": "bhood"
+  },
+  "cc": [
+    "mayankleoboy1@gmail.com",
+    "nissan4321@gmail.com",
+    "pasik@iki.fi"
+  ],
+  "comments": [
+    {
+      "raw_text": "gecko disables overlay in system wide when video overlay present is slow. It is not good.\n- https://searchfox.org/mozilla-central/rev/f7b41fc41c5505db507d076c16961a8da67dd318/gfx/webrender_bindings/DCLayerTree.cpp#683\n- https://searchfox.org/mozilla-central/rev/f7b41fc41c5505db507d076c16961a8da67dd318/gfx/webrender_bindings/DCLayerTree.cpp#1624",
+      "id": 17030395,
+      "count": 0,
+      "creation_time": "2024-07-18T03:53:11Z",
+      "bug_id": 1908585,
+      "creator": "sotaro.ikeda.g@gmail.com",
+      "tags": [],
+      "time": "2024-07-18T03:53:11Z",
+      "reactions": {},
+      "is_private": false,
+      "text": "gecko disables overlay in system wide when video overlay present is slow. It is not good.\n- https://searchfox.org/mozilla-central/rev/f7b41fc41c5505db507d076c16961a8da67dd318/gfx/webrender_bindings/DCLayerTree.cpp#683\n- https://searchfox.org/mozilla-central/rev/f7b41fc41c5505db507d076c16961a8da67dd318/gfx/webrender_bindings/DCLayerTree.cpp#1624",
+      "attachment_id": null,
+      "author": "sotaro.ikeda.g@gmail.com"
+    },
+    {
+      "is_private": false,
+      "text": "Created attachment 9414254\nBug 1908585 - Disable overlay only for slow present video",
+      "reactions": {},
+      "author": "sotaro.ikeda.g@gmail.com",
+      "attachment_id": 9414254,
+      "bug_id": 1908585,
+      "creator": "sotaro.ikeda.g@gmail.com",
+      "id": 17037718,
+      "count": 1,
+      "raw_text": "",
+      "creation_time": "2024-07-23T03:01:54Z",
+      "time": "2024-07-23T03:01:54Z",
+      "tags": []
+    },
+    {
+      "tags": [],
+      "time": "2024-07-24T00:24:17Z",
+      "count": 2,
+      "raw_text": "Pushed by sikeda.birchill@mozilla.com:\nhttps://hg.mozilla.org/integration/autoland/rev/1c5bc6b20fcc\nDisable overlay only for slow present video r=gfx-reviewers,lsalzman",
+      "id": 17039198,
+      "creation_time": "2024-07-24T00:24:17Z",
+      "bug_id": 1908585,
+      "creator": "pulsebot@bmo.tld",
+      "attachment_id": null,
+      "author": "pulsebot@bmo.tld",
+      "reactions": {},
+      "is_private": false,
+      "text": "Pushed by sikeda.birchill@mozilla.com:\nhttps://hg.mozilla.org/integration/autoland/rev/1c5bc6b20fcc\nDisable overlay only for slow present video r=gfx-reviewers,lsalzman"
+    },
+    {
+      "is_private": false,
+      "text": "https://hg.mozilla.org/mozilla-central/rev/1c5bc6b20fcc",
+      "reactions": {},
+      "author": "imoraru@mozilla.com",
+      "attachment_id": null,
+      "bug_id": 1908585,
+      "creator": "imoraru@mozilla.com",
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/1c5bc6b20fcc",
+      "count": 3,
+      "id": 17039471,
+      "creation_time": "2024-07-24T09:55:40Z",
+      "time": "2024-07-24T09:55:40Z",
+      "tags": [
+        "bugherder"
+      ]
+    }
+  ],
+  "is_creator_accessible": true,
+  "is_open": false,
+  "depends_on": [],
+  "votes": 0,
+  "component": "Graphics",
+  "dupe_of": null,
+  "regressions": [
+    1910637
+  ],
+  "last_change_time": "2026-01-15T00:55:56Z",
+  "cf_tracking_firefox_esr115": "---",
+  "assigned_to_detail": {
+    "nick": "sotaro",
+    "name": "sotaro.ikeda.g@gmail.com",
+    "real_name": "Sotaro Ikeda [:sotaro]",
+    "id": 434202,
+    "email": "sotaro.ikeda.g@gmail.com"
+  }
+}

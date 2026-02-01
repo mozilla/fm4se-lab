@@ -1,0 +1,318 @@
+{
+  "cf_size_estimate": "---",
+  "cf_last_resolved": "2024-03-12T09:33:56Z",
+  "cf_tracking_thunderbird_esr115": "---",
+  "duplicates": [],
+  "depends_on": [],
+  "flags": [],
+  "dupe_of": null,
+  "triage_owner_detail": {
+    "name": "bhood@mozilla.com",
+    "email": "bhood@mozilla.com",
+    "nick": "bhood",
+    "id": 697075,
+    "real_name": "Bob Hood [:bhood]"
+  },
+  "is_creator_accessible": true,
+  "creator": "sotaro.ikeda.g@gmail.com",
+  "cf_fx_points": "---",
+  "target_milestone": "125 Branch",
+  "description": "DCSurfaceVideo::CallVideoProcessorBlt() needs more error handling.",
+  "cc": [
+    "mayankleoboy1@gmail.com",
+    "pasik@iki.fi"
+  ],
+  "cf_status_firefox149": "---",
+  "cf_tracking_firefox_esr115": "---",
+  "cf_user_story": "",
+  "mentors_detail": [],
+  "url": "",
+  "cf_webcompat_score": "---",
+  "cf_qa_whiteboard": "",
+  "cc_detail": [
+    {
+      "name": "mayankleoboy1@gmail.com",
+      "email": "mayankleoboy1@gmail.com",
+      "nick": "mayankleoboy1",
+      "id": 440227,
+      "real_name": "Mayank Bansal"
+    },
+    {
+      "real_name": "",
+      "id": 529219,
+      "name": "pasik@iki.fi",
+      "email": "pasik@iki.fi",
+      "nick": "pasik"
+    }
+  ],
+  "summary": "Add error handling to Super Resolution setting",
+  "id": 1883577,
+  "cf_status_thunderbird_esr140": "---",
+  "assigned_to": "sotaro.ikeda.g@gmail.com",
+  "priority": "--",
+  "cf_status_firefox148": "---",
+  "counts": {
+    "regressed_by": 0,
+    "comments": 4,
+    "depends_on": 3,
+    "blocks": 0,
+    "duplicates": 0,
+    "attachments": 1,
+    "cc": 2,
+    "keywords": 0,
+    "regressions": 0
+  },
+  "cf_status_thunderbird_esr115": "---",
+  "cf_fx_iteration": "---",
+  "creation_time": "2024-03-05T06:22:41Z",
+  "is_open": false,
+  "component": "Graphics",
+  "classification": "Components",
+  "creator_detail": {
+    "name": "sotaro.ikeda.g@gmail.com",
+    "email": "sotaro.ikeda.g@gmail.com",
+    "nick": "sotaro",
+    "id": 434202,
+    "real_name": "Sotaro Ikeda [:sotaro]"
+  },
+  "last_change_time_non_bot": "2026-01-15T11:08:29Z",
+  "cf_accessibility_severity": "---",
+  "resolution": "FIXED",
+  "attachments": [
+    {
+      "last_change_time": "2024-03-11T04:15:37Z",
+      "file_name": "phabricator-D204172-url.txt",
+      "bug_id": 1883577,
+      "is_obsolete": 0,
+      "creator_detail": {
+        "real_name": "Sotaro Ikeda [:sotaro]",
+        "id": 434202,
+        "nick": "sotaro",
+        "email": "sotaro.ikeda.g@gmail.com",
+        "name": "sotaro.ikeda.g@gmail.com"
+      },
+      "creator": "sotaro.ikeda.g@gmail.com",
+      "description": "Bug 1883577 - Add error handling to Super Resolution setting",
+      "is_patch": 0,
+      "flags": [],
+      "creation_time": "2024-03-11T04:15:37Z",
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjA0MTcy",
+      "id": 9390429,
+      "summary": "Bug 1883577 - Add error handling to Super Resolution setting",
+      "size": 48,
+      "attacher": "sotaro.ikeda.g@gmail.com",
+      "content_type": "text/x-phabricator-request",
+      "is_private": 0
+    }
+  ],
+  "cf_tracking_firefox_esr140": "---",
+  "blocks": [
+    1954558,
+    1882688
+  ],
+  "cf_has_str": "---",
+  "mentors": [],
+  "last_change_time": "2026-01-15T11:08:29Z",
+  "status": "RESOLVED",
+  "groups": [],
+  "cf_status_firefox125": "fixed",
+  "regressions": [],
+  "cf_crash_signature": "",
+  "comment_count": 4,
+  "cf_cab_review": "---",
+  "cf_status_firefox_esr140": "---",
+  "cf_tracking_firefox_relnote": "---",
+  "platform": "Unspecified",
+  "cf_tracking_firefox149": "---",
+  "qa_contact": "",
+  "version": "unspecified",
+  "product": "Core",
+  "history": [
+    {
+      "when": "2024-03-05T06:23:56Z",
+      "who": "sotaro.ikeda.g@gmail.com",
+      "changes": [
+        {
+          "added": "1882688",
+          "field_name": "blocks",
+          "removed": ""
+        }
+      ]
+    },
+    {
+      "when": "2024-03-05T08:01:56Z",
+      "who": "mayankleoboy1@gmail.com",
+      "changes": [
+        {
+          "removed": "",
+          "added": "mayankleoboy1@gmail.com",
+          "field_name": "cc"
+        }
+      ]
+    },
+    {
+      "when": "2024-03-11T04:14:12Z",
+      "who": "sotaro.ikeda.g@gmail.com",
+      "changes": [
+        {
+          "removed": "Add more error handling to DCSurfaceVideo::CallVideoProcessorBlt()",
+          "added": "Add error handling to Super Resolution setting",
+          "field_name": "summary"
+        }
+      ]
+    },
+    {
+      "who": "sstanca@mozilla.com",
+      "when": "2024-03-12T09:33:56Z",
+      "changes": [
+        {
+          "removed": "",
+          "added": "FIXED",
+          "field_name": "resolution"
+        },
+        {
+          "removed": "---",
+          "field_name": "target_milestone",
+          "added": "125 Branch"
+        },
+        {
+          "removed": "NEW",
+          "field_name": "status",
+          "added": "RESOLVED"
+        },
+        {
+          "removed": "",
+          "added": "2024-03-12T09:33:56Z",
+          "field_name": "cf_last_resolved"
+        },
+        {
+          "field_name": "cf_status_firefox125",
+          "added": "fixed",
+          "removed": "---"
+        },
+        {
+          "comment_id": 16839829,
+          "added": "bugherder",
+          "field_name": "comment_tag",
+          "comment_count": 3,
+          "removed": ""
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "added": "1954558",
+          "field_name": "blocks",
+          "removed": ""
+        }
+      ],
+      "who": "sotaro.ikeda.g@gmail.com",
+      "when": "2026-01-15T00:41:55Z"
+    },
+    {
+      "who": "pasik@iki.fi",
+      "when": "2026-01-15T11:08:29Z",
+      "changes": [
+        {
+          "removed": "",
+          "added": "pasik@iki.fi",
+          "field_name": "cc"
+        }
+      ]
+    }
+  ],
+  "keywords": [],
+  "filed_via": "standard_form",
+  "severity": "--",
+  "alias": null,
+  "cf_status_firefox147": "---",
+  "cf_performance_impact": "---",
+  "cf_tracking_firefox148": "---",
+  "assigned_to_detail": {
+    "name": "sotaro.ikeda.g@gmail.com",
+    "email": "sotaro.ikeda.g@gmail.com",
+    "nick": "sotaro",
+    "id": 434202,
+    "real_name": "Sotaro Ikeda [:sotaro]"
+  },
+  "is_cc_accessible": true,
+  "type": "enhancement",
+  "triage_owner": "bhood@mozilla.com",
+  "cf_rank": null,
+  "regressed_by": [],
+  "cf_status_firefox_esr115": "---",
+  "cf_webcompat_priority": "---",
+  "is_confirmed": true,
+  "see_also": [],
+  "cf_a11y_review_project_flag": "---",
+  "whiteboard": "",
+  "votes": 0,
+  "op_sys": "Unspecified",
+  "comments": [
+    {
+      "bug_id": 1883577,
+      "reactions": {},
+      "text": "DCSurfaceVideo::CallVideoProcessorBlt() needs more error handling.",
+      "creator": "sotaro.ikeda.g@gmail.com",
+      "tags": [],
+      "creation_time": "2024-03-05T06:22:41Z",
+      "time": "2024-03-05T06:22:41Z",
+      "count": 0,
+      "author": "sotaro.ikeda.g@gmail.com",
+      "is_private": false,
+      "raw_text": "DCSurfaceVideo::CallVideoProcessorBlt() needs more error handling.",
+      "id": 16829839,
+      "attachment_id": null
+    },
+    {
+      "reactions": {},
+      "bug_id": 1883577,
+      "creator": "sotaro.ikeda.g@gmail.com",
+      "text": "Created attachment 9390429\nBug 1883577 - Add error handling to Super Resolution setting",
+      "creation_time": "2024-03-11T04:15:37Z",
+      "tags": [],
+      "id": 16836039,
+      "attachment_id": 9390429,
+      "raw_text": "",
+      "count": 1,
+      "author": "sotaro.ikeda.g@gmail.com",
+      "is_private": false,
+      "time": "2024-03-11T04:15:37Z"
+    },
+    {
+      "reactions": {},
+      "bug_id": 1883577,
+      "text": "Pushed by sikeda.birchill@mozilla.com:\nhttps://hg.mozilla.org/integration/autoland/rev/9c238083d175\nAdd error handling to Super Resolution setting r=gfx-reviewers,bradwerth",
+      "creator": "pulsebot@bmo.tld",
+      "tags": [],
+      "creation_time": "2024-03-12T00:45:48Z",
+      "time": "2024-03-12T00:45:48Z",
+      "raw_text": "Pushed by sikeda.birchill@mozilla.com:\nhttps://hg.mozilla.org/integration/autoland/rev/9c238083d175\nAdd error handling to Super Resolution setting r=gfx-reviewers,bradwerth",
+      "count": 2,
+      "author": "pulsebot@bmo.tld",
+      "is_private": false,
+      "attachment_id": null,
+      "id": 16839508
+    },
+    {
+      "creation_time": "2024-03-12T09:33:56Z",
+      "tags": [
+        "bugherder"
+      ],
+      "attachment_id": null,
+      "id": 16839829,
+      "time": "2024-03-12T09:33:56Z",
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/9c238083d175",
+      "author": "sstanca@mozilla.com",
+      "is_private": false,
+      "count": 3,
+      "reactions": {},
+      "bug_id": 1883577,
+      "creator": "sstanca@mozilla.com",
+      "text": "https://hg.mozilla.org/mozilla-central/rev/9c238083d175"
+    }
+  ],
+  "cf_tracking_thunderbird_esr140": "---",
+  "cf_tracking_firefox147": "---"
+}

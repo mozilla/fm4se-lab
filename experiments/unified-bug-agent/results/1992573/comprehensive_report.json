@@ -1,0 +1,1118 @@
+{
+  "bug_id": 1992573,
+  "timestamp": "2026-02-01 18:01:21",
+  "data_sources": [
+    "bugzilla",
+    "crash-stats"
+  ],
+  "bug_data": {
+    "is_creator_accessible": true,
+    "is_cc_accessible": true,
+    "summary": "Crash in [@ mozilla::gfx::GPUProcessManager::MaybeCrashIfGpuProcessOnceStable]",
+    "flags": [],
+    "status": "RESOLVED",
+    "cf_tracking_thunderbird_esr115": "---",
+    "type": "defect",
+    "comment_count": 14,
+    "cf_rank": null,
+    "cf_tracking_firefox147": "---",
+    "cf_webcompat_score": "---",
+    "priority": "--",
+    "assigned_to_detail": {
+      "nick": "aosmond",
+      "real_name": "Andrew Osmond [:aosmond] (he/him)",
+      "email": "aosmond@mozilla.com",
+      "name": "aosmond@mozilla.com",
+      "id": 505306
+    },
+    "regressions": [],
+    "cf_has_str": "---",
+    "mentors": [],
+    "groups": [],
+    "cf_status_firefox144": "unaffected",
+    "creator_detail": {
+      "name": "ryanvm@gmail.com",
+      "id": 75935,
+      "nick": "RyanVM",
+      "real_name": "Ryan VanderMeulen [:RyanVM]",
+      "email": "ryanvm@gmail.com"
+    },
+    "cf_status_firefox143": "unaffected",
+    "last_change_time": "2026-01-22T20:53:35Z",
+    "votes": 0,
+    "classification": "Components",
+    "cf_crash_signature": "[@ mozilla::gfx::GPUProcessManager::MaybeCrashIfGpuProcessOnceStable]",
+    "whiteboard": "",
+    "dupe_of": null,
+    "cf_tracking_firefox148": "---",
+    "creation_time": "2025-10-04T18:29:22Z",
+    "assigned_to": "aosmond@mozilla.com",
+    "attachments": [
+      {
+        "creation_time": "2026-01-21T16:59:28Z",
+        "attacher": "aosmond@mozilla.com",
+        "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjc5OTAz",
+        "file_name": "phabricator-D279903-url.txt",
+        "bug_id": 1992573,
+        "last_change_time": "2026-01-21T16:59:28Z",
+        "content_type": "text/x-phabricator-request",
+        "is_obsolete": 0,
+        "creator": "aosmond@mozilla.com",
+        "summary": "Bug 1992573 - Disable crashing if compositing falls back to the parent process in nightly.",
+        "id": 9539111,
+        "flags": [],
+        "description": "Bug 1992573 - Disable crashing if compositing falls back to the parent process in nightly.",
+        "creator_detail": {
+          "nick": "aosmond",
+          "real_name": "Andrew Osmond [:aosmond] (he/him)",
+          "email": "aosmond@mozilla.com",
+          "id": 505306,
+          "name": "aosmond@mozilla.com"
+        },
+        "size": 48,
+        "is_private": 0,
+        "is_patch": 0
+      }
+    ],
+    "qa_contact": "",
+    "cf_tracking_firefox_esr140": "---",
+    "comments": [
+      {
+        "count": 0,
+        "is_private": false,
+        "reactions": {},
+        "raw_text": "Crash report: https://crash-stats.mozilla.org/report/index/3b0050ba-159b-49ab-bb23-8da730251004\n\nMOZ_CRASH Reason:\n```\nMOZ_RELEASE_ASSERT(!mProcessStableOnce) (Fallback to parent process not allowed!)\n```\n\nTop 10 frames:\n```\n0  libxul.so  MOZ_CrashSequence(void*, long)  mfbt/Assertions.h:242\n0  libxul.so  mozilla::gfx::GPUProcessManager::MaybeCrashIfGpuProcessOnceStable()  gfx/ipc/GPUProcessManager.cpp:217\n1  libxul.so  mozilla::gfx::GPUProcessManager::MaybeDisableGPUProcess(char const*, bool)  gfx/ipc/GPUProcessManager.cpp:346\n2  libxul.so  mozilla::gfx::GPUProcessManager::DisableGPUProcess(char const*)  gfx/ipc/GPUProcessManager.cpp:299\n2  libxul.so  mozilla::gfx::GPUProcessManager::OnProcessLaunchComplete(mozilla::gfx::GPUPro...  gfx/ipc/GPUProcessManager.cpp:601\n3  libxul.so  mozilla::gfx::GPUProcessHost::InitAfterConnect(bool)  gfx/ipc/GPUProcessHost.cpp:168\n4  libxul.so  mozilla::gfx::GPUProcessHost::WaitForLaunch()  gfx/ipc/GPUProcessHost.cpp:101\n5  libxul.so  mozilla::gfx::GPUProcessManager::EnsureGPUReady(bool)  gfx/ipc/GPUProcessManager.cpp:404\n6  libxul.so  gfxPlatform::BuildContentDeviceData(mozilla::gfx::ContentDeviceData*)  gfx/thebes/gfxPlatform.cpp:4102\n7  libxul.so  mozilla::dom::ContentParent::InitInternal(mozilla::hal::ProcessPriority)  dom/ipc/ContentParent.cpp:2793\n```",
+        "creation_time": "2025-10-04T18:29:22Z",
+        "text": "Crash report: https://crash-stats.mozilla.org/report/index/3b0050ba-159b-49ab-bb23-8da730251004\n\nMOZ_CRASH Reason:\n```\nMOZ_RELEASE_ASSERT(!mProcessStableOnce) (Fallback to parent process not allowed!)\n```\n\nTop 10 frames:\n```\n0  libxul.so  MOZ_CrashSequence(void*, long)  mfbt/Assertions.h:242\n0  libxul.so  mozilla::gfx::GPUProcessManager::MaybeCrashIfGpuProcessOnceStable()  gfx/ipc/GPUProcessManager.cpp:217\n1  libxul.so  mozilla::gfx::GPUProcessManager::MaybeDisableGPUProcess(char const*, bool)  gfx/ipc/GPUProcessManager.cpp:346\n2  libxul.so  mozilla::gfx::GPUProcessManager::DisableGPUProcess(char const*)  gfx/ipc/GPUProcessManager.cpp:299\n2  libxul.so  mozilla::gfx::GPUProcessManager::OnProcessLaunchComplete(mozilla::gfx::GPUPro...  gfx/ipc/GPUProcessManager.cpp:601\n3  libxul.so  mozilla::gfx::GPUProcessHost::InitAfterConnect(bool)  gfx/ipc/GPUProcessHost.cpp:168\n4  libxul.so  mozilla::gfx::GPUProcessHost::WaitForLaunch()  gfx/ipc/GPUProcessHost.cpp:101\n5  libxul.so  mozilla::gfx::GPUProcessManager::EnsureGPUReady(bool)  gfx/ipc/GPUProcessManager.cpp:404\n6  libxul.so  gfxPlatform::BuildContentDeviceData(mozilla::gfx::ContentDeviceData*)  gfx/thebes/gfxPlatform.cpp:4102\n7  libxul.so  mozilla::dom::ContentParent::InitInternal(mozilla::hal::ProcessPriority)  dom/ipc/ContentParent.cpp:2793\n```",
+        "creator": "ryanvm@gmail.com",
+        "bug_id": 1992573,
+        "attachment_id": null,
+        "tags": [],
+        "author": "ryanvm@gmail.com",
+        "time": "2025-10-04T18:29:22Z",
+        "id": 17701913
+      },
+      {
+        "creation_time": "2025-10-06T18:19:26Z",
+        "reactions": {},
+        "raw_text": "Yep, as the name of the signature suggests, this is expected behaviour, in theory. It is possible we crash in circumstances that we didn't expect, but this is what will now happen if we fail to restart the GPU process enough times when we previously had a stable GPU process. We should brace ourselves for increasing numbers as this hits further channels.",
+        "count": 2,
+        "text": "Yep, as the name of the signature suggests, this is expected behaviour, in theory. It is possible we crash in circumstances that we didn't expect, but this is what will now happen if we fail to restart the GPU process enough times when we previously had a stable GPU process. We should brace ourselves for increasing numbers as this hits further channels.",
+        "author": "aosmond@mozilla.com",
+        "attachment_id": null,
+        "tags": [],
+        "bug_id": 1992573,
+        "creator": "aosmond@mozilla.com",
+        "id": 17705328,
+        "is_private": false,
+        "time": "2025-10-06T18:19:26Z"
+      },
+      {
+        "author": "aosmond@mozilla.com",
+        "attachment_id": null,
+        "tags": [],
+        "bug_id": 1992573,
+        "creator": "aosmond@mozilla.com",
+        "id": 17705348,
+        "is_private": false,
+        "time": "2025-10-06T18:27:53Z",
+        "creation_time": "2025-10-06T18:27:53Z",
+        "raw_text": "Most of these crashes appear to be happening because the launching is failing. Given the numbers are higher on Android, this does make a case for getting bug 1991502 working there too.",
+        "reactions": {},
+        "count": 3,
+        "text": "Most of these crashes appear to be happening because the launching is failing. Given the numbers are higher on Android, this does make a case for getting bug 1991502 working there too."
+      },
+      {
+        "id": 17705380,
+        "is_private": false,
+        "time": "2025-10-06T18:37:18Z",
+        "attachment_id": null,
+        "author": "jnicol@mozilla.com",
+        "tags": [],
+        "bug_id": 1992573,
+        "creator": "jnicol@mozilla.com",
+        "count": 4,
+        "text": "Today I was additionally looking at getting some more information about why the process launch failed annotated in the crash reports. Hopefully have something up tomorrow. Likely won't tell us anything particularly useful, but worth a shot",
+        "creation_time": "2025-10-06T18:37:18Z",
+        "reactions": {},
+        "raw_text": "Today I was additionally looking at getting some more information about why the process launch failed annotated in the crash reports. Hopefully have something up tomorrow. Likely won't tell us anything particularly useful, but worth a shot"
+      },
+      {
+        "creation_time": "2025-10-13T10:49:12Z",
+        "raw_text": "Some of the android crashes now have the annotation from bug 1992951. (Most don't have: perhaps the error in these cases does not come from the java code, or there is an issue with the annotation.) But the ones which do have this message:\n\n> Error launching GPU process: Error while binding: android.os.DeadObjectException;\n\nI expect this therefore originates from the `Context.bindService()` call which is called from within [this call](https://searchfox.org/firefox-main/source/mobile/android/geckoview/src/main/java/org/mozilla/gecko/process/GeckoProcessManager.java#923), and indicates that the process is already dead by this point.\n\nPerhaps the new process was immediately killed (eg due to low resources)? Or, perhaps the `getConnectionForStart()` call [immediately above](https://searchfox.org/firefox-main/source/mobile/android/geckoview/src/main/java/org/mozilla/gecko/process/GeckoProcessManager.java#921) is returning the stale `Connection` for the process that _previously_ crashed (ie the one for which we are attempting to launch its replacement).\n\nIt grabs an [existing connection](https://searchfox.org/firefox-main/source/mobile/android/geckoview/src/main/java/org/mozilla/gecko/process/GeckoProcessManager.java#658) from `mNonContentConnections`, if one exists. The connection for the previous process should get removed in [`removeConnection`](https://searchfox.org/firefox-main/rev/91e6069b9c1e7289d0c727b5110e144edc589204/mobile/android/geckoview/src/main/java/org/mozilla/gecko/process/GeckoProcessManager.java#582), which is called from [`unbindService`](https://searchfox.org/firefox-main/rev/91e6069b9c1e7289d0c727b5110e144edc589204/mobile/android/geckoview/src/main/java/org/mozilla/gecko/process/ServiceAllocator.java#266), which gets called from the [`onBinderConnectionLost` callback](https://searchfox.org/firefox-main/rev/91e6069b9c1e7289d0c727b5110e144edc589204/mobile/android/geckoview/src/main/java/org/mozilla/gecko/process/ServiceAllocator.java#303). Perhaps that callback being fired is racing with gecko detecting the process loss and relaunching it.",
+        "reactions": {},
+        "count": 5,
+        "text": "Some of the android crashes now have the annotation from bug 1992951. (Most don't have: perhaps the error in these cases does not come from the java code, or there is an issue with the annotation.) But the ones which do have this message:\n\n> Error launching GPU process: Error while binding: android.os.DeadObjectException;\n\nI expect this therefore originates from the `Context.bindService()` call which is called from within [this call](https://searchfox.org/firefox-main/source/mobile/android/geckoview/src/main/java/org/mozilla/gecko/process/GeckoProcessManager.java#923), and indicates that the process is already dead by this point.\n\nPerhaps the new process was immediately killed (eg due to low resources)? Or, perhaps the `getConnectionForStart()` call [immediately above](https://searchfox.org/firefox-main/source/mobile/android/geckoview/src/main/java/org/mozilla/gecko/process/GeckoProcessManager.java#921) is returning the stale `Connection` for the process that _previously_ crashed (ie the one for which we are attempting to launch its replacement).\n\nIt grabs an [existing connection](https://searchfox.org/firefox-main/source/mobile/android/geckoview/src/main/java/org/mozilla/gecko/process/GeckoProcessManager.java#658) from `mNonContentConnections`, if one exists. The connection for the previous process should get removed in [`removeConnection`](https://searchfox.org/firefox-main/rev/91e6069b9c1e7289d0c727b5110e144edc589204/mobile/android/geckoview/src/main/java/org/mozilla/gecko/process/GeckoProcessManager.java#582), which is called from [`unbindService`](https://searchfox.org/firefox-main/rev/91e6069b9c1e7289d0c727b5110e144edc589204/mobile/android/geckoview/src/main/java/org/mozilla/gecko/process/ServiceAllocator.java#266), which gets called from the [`onBinderConnectionLost` callback](https://searchfox.org/firefox-main/rev/91e6069b9c1e7289d0c727b5110e144edc589204/mobile/android/geckoview/src/main/java/org/mozilla/gecko/process/ServiceAllocator.java#303). Perhaps that callback being fired is racing with gecko detecting the process loss and relaunching it.",
+        "attachment_id": null,
+        "author": "jnicol@mozilla.com",
+        "tags": [],
+        "bug_id": 1992573,
+        "creator": "jnicol@mozilla.com",
+        "id": 17713719,
+        "is_private": false,
+        "time": "2025-10-13T10:49:12Z"
+      },
+      {
+        "raw_text": "The bug is linked to a topcrash signature, which matches the following [criterion](https://wiki.mozilla.org/CrashKill/Topcrash):\n- Top 10 AArch64 and ARM crashes on nightly \n\n:aosmond, could you consider increasing the severity of this top-crash bug?\n\nFor more information, please visit [BugBot documentation](https://wiki.mozilla.org/BugBot#topcrash_highlight.py).",
+        "reactions": {},
+        "creation_time": "2025-10-17T12:11:49Z",
+        "count": 7,
+        "text": "The bug is linked to a topcrash signature, which matches the following [criterion](https://wiki.mozilla.org/CrashKill/Topcrash):\n- Top 10 AArch64 and ARM crashes on nightly \n\n:aosmond, could you consider increasing the severity of this top-crash bug?\n\nFor more information, please visit [BugBot documentation](https://wiki.mozilla.org/BugBot#topcrash_highlight.py).",
+        "creator": "release-mgmt-account-bot@mozilla.tld",
+        "tags": [],
+        "attachment_id": null,
+        "author": "release-mgmt-account-bot@mozilla.tld",
+        "bug_id": 1992573,
+        "time": "2025-10-17T12:11:49Z",
+        "id": 17720587,
+        "is_private": false
+      },
+      {
+        "count": 8,
+        "text": "As we make improvements to the GPU process management, we hope to either reduce the number of these crashes, or embrace them if Firefox was going to crash soon anyways. For the moment these crashes are limited to nightly due to the pref, so I don't think the topcrash concern is warranted.",
+        "creation_time": "2025-10-20T18:48:31Z",
+        "reactions": {},
+        "raw_text": "As we make improvements to the GPU process management, we hope to either reduce the number of these crashes, or embrace them if Firefox was going to crash soon anyways. For the moment these crashes are limited to nightly due to the pref, so I don't think the topcrash concern is warranted.",
+        "id": 17725239,
+        "is_private": false,
+        "time": "2025-10-20T18:48:31Z",
+        "attachment_id": null,
+        "author": "aosmond@mozilla.com",
+        "tags": [],
+        "bug_id": 1992573,
+        "creator": "aosmond@mozilla.com"
+      },
+      {
+        "text": "I do appreciate though that crash pings says this is the #1 crash, at ~11% of the total, on nightly:\nhttps://crash-pings.mozilla.org/#LIlojH",
+        "count": 9,
+        "creation_time": "2025-10-20T18:50:47Z",
+        "reactions": {},
+        "raw_text": "I do appreciate though that crash pings says this is the #1 crash, at ~11% of the total, on nightly:\nhttps://crash-pings.mozilla.org/#LIlojH",
+        "is_private": false,
+        "id": 17725243,
+        "time": "2025-10-20T18:50:47Z",
+        "bug_id": 1992573,
+        "attachment_id": null,
+        "author": "aosmond@mozilla.com",
+        "tags": [],
+        "creator": "aosmond@mozilla.com"
+      },
+      {
+        "text": "Based on the [topcrash criteria](https://wiki.mozilla.org/CrashKill/Topcrash), the crash signature linked to this bug is not a topcrash signature anymore.\n\nFor more information, please visit [BugBot documentation](https://wiki.mozilla.org/BugBot#crash_small_volume.py).",
+        "count": 10,
+        "reactions": {},
+        "raw_text": "Based on the [topcrash criteria](https://wiki.mozilla.org/CrashKill/Topcrash), the crash signature linked to this bug is not a topcrash signature anymore.\n\nFor more information, please visit [BugBot documentation](https://wiki.mozilla.org/BugBot#crash_small_volume.py).",
+        "creation_time": "2025-11-11T12:10:57Z",
+        "time": "2025-11-11T12:10:57Z",
+        "is_private": false,
+        "id": 17758084,
+        "creator": "release-mgmt-account-bot@mozilla.tld",
+        "bug_id": 1992573,
+        "author": "release-mgmt-account-bot@mozilla.tld",
+        "attachment_id": null,
+        "tags": []
+      },
+      {
+        "text": "Created attachment 9539111\nBug 1992573 - Disable crashing if compositing falls back to the parent process in nightly.\n\n\nWe only crash in nightly right now, and since we aren't actively working\non getting rid of parent process compositing at this moment, let's just\ndisable this for convenience.",
+        "count": 11,
+        "creation_time": "2026-01-21T16:59:28Z",
+        "raw_text": "\nWe only crash in nightly right now, and since we aren't actively working\non getting rid of parent process compositing at this moment, let's just\ndisable this for convenience.",
+        "reactions": {},
+        "is_private": false,
+        "id": 17853301,
+        "time": "2026-01-21T16:59:28Z",
+        "bug_id": 1992573,
+        "author": "aosmond@mozilla.com",
+        "tags": [],
+        "attachment_id": 9539111,
+        "creator": "aosmond@mozilla.com"
+      },
+      {
+        "reactions": {},
+        "raw_text": "Pushed by aosmond@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/e00a233460d4\nhttps://hg.mozilla.org/integration/autoland/rev/c735d25804c8\nDisable crashing if compositing falls back to the parent process in nightly. r=gfx-reviewers,bradwerth",
+        "creation_time": "2026-01-21T18:56:48Z",
+        "text": "Pushed by aosmond@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/e00a233460d4\nhttps://hg.mozilla.org/integration/autoland/rev/c735d25804c8\nDisable crashing if compositing falls back to the parent process in nightly. r=gfx-reviewers,bradwerth",
+        "count": 12,
+        "creator": "pulsebot@bmo.tld",
+        "bug_id": 1992573,
+        "tags": [],
+        "attachment_id": null,
+        "author": "pulsebot@bmo.tld",
+        "time": "2026-01-21T18:56:48Z",
+        "is_private": false,
+        "id": 17853518
+      },
+      {
+        "count": 13,
+        "text": "https://hg.mozilla.org/mozilla-central/rev/c735d25804c8",
+        "creation_time": "2026-01-22T04:26:12Z",
+        "raw_text": "https://hg.mozilla.org/mozilla-central/rev/c735d25804c8",
+        "reactions": {},
+        "id": 17853995,
+        "is_private": false,
+        "time": "2026-01-22T04:26:12Z",
+        "tags": [
+          "bugherder"
+        ],
+        "attachment_id": null,
+        "author": "nfay@mozilla.com",
+        "bug_id": 1992573,
+        "creator": "nfay@mozilla.com"
+      }
+    ],
+    "cf_status_firefox149": "fixed",
+    "regressed_by": [],
+    "filed_via": "standard_form",
+    "cf_accessibility_severity": "---",
+    "is_open": false,
+    "see_also": [
+      "https://bugzilla.mozilla.org/show_bug.cgi?id=1991502",
+      "https://bugzilla.mozilla.org/show_bug.cgi?id=1992835",
+      "https://bugzilla.mozilla.org/show_bug.cgi?id=1993874"
+    ],
+    "alias": null,
+    "depends_on": [],
+    "cf_tracking_firefox_esr115": "---",
+    "is_confirmed": true,
+    "history": [
+      {
+        "changes": [
+          {
+            "field_name": "flagtypes.name",
+            "removed": "",
+            "added": "needinfo?(aosmond@mozilla.com)"
+          },
+          {
+            "removed": "",
+            "field_name": "cc",
+            "added": "aosmond@mozilla.com"
+          },
+          {
+            "removed": "---",
+            "field_name": "cf_status_firefox_esr140",
+            "added": "unaffected"
+          },
+          {
+            "added": "unaffected",
+            "removed": "---",
+            "field_name": "cf_status_firefox143"
+          },
+          {
+            "added": "unaffected",
+            "removed": "---",
+            "field_name": "cf_status_firefox144"
+          },
+          {
+            "field_name": "cf_status_firefox145",
+            "removed": "---",
+            "added": "affected"
+          }
+        ],
+        "who": "release-mgmt-account-bot@mozilla.tld",
+        "when": "2025-10-04T18:42:22Z"
+      },
+      {
+        "changes": [
+          {
+            "removed": "",
+            "field_name": "cc",
+            "added": "tnikkel@gmail.com"
+          }
+        ],
+        "who": "tnikkel@gmail.com",
+        "when": "2025-10-05T10:58:17Z"
+      },
+      {
+        "changes": [
+          {
+            "added": "continuation@gmail.com",
+            "removed": "",
+            "field_name": "cc"
+          }
+        ],
+        "when": "2025-10-06T13:39:44Z",
+        "who": "continuation@gmail.com"
+      },
+      {
+        "who": "lsalzman@mozilla.com",
+        "when": "2025-10-06T18:06:47Z",
+        "changes": [
+          {
+            "added": "lsalzman@mozilla.com",
+            "field_name": "cc",
+            "removed": ""
+          }
+        ]
+      },
+      {
+        "who": "aosmond@mozilla.com",
+        "when": "2025-10-06T18:19:26Z",
+        "changes": [
+          {
+            "added": "",
+            "removed": "needinfo?(aosmond@mozilla.com)",
+            "field_name": "flagtypes.name"
+          },
+          {
+            "removed": "--",
+            "field_name": "severity",
+            "added": "S3"
+          },
+          {
+            "field_name": "assigned_to",
+            "removed": "nobody@mozilla.org",
+            "added": "aosmond@mozilla.com"
+          }
+        ]
+      },
+      {
+        "who": "aosmond@mozilla.com",
+        "when": "2025-10-06T18:28:12Z",
+        "changes": [
+          {
+            "added": "jnicol@mozilla.com",
+            "field_name": "cc",
+            "removed": ""
+          },
+          {
+            "added": "https://bugzilla.mozilla.org/show_bug.cgi?id=1991502",
+            "field_name": "see_also",
+            "removed": ""
+          }
+        ]
+      },
+      {
+        "changes": [
+          {
+            "added": "1873086",
+            "removed": "",
+            "field_name": "blocks"
+          }
+        ],
+        "who": "aosmond@mozilla.com",
+        "when": "2025-10-06T18:28:27Z"
+      },
+      {
+        "when": "2025-10-06T18:28:38Z",
+        "who": "aosmond@mozilla.com",
+        "changes": [
+          {
+            "added": "Graphics",
+            "removed": "Graphics: Canvas2D",
+            "field_name": "component"
+          }
+        ]
+      },
+      {
+        "who": "aosmond@mozilla.com",
+        "when": "2025-10-06T18:34:31Z",
+        "changes": [
+          {
+            "removed": "",
+            "field_name": "see_also",
+            "added": "https://bugzilla.mozilla.org/show_bug.cgi?id=1992835"
+          }
+        ]
+      },
+      {
+        "who": "pasik@iki.fi",
+        "when": "2025-10-06T19:23:09Z",
+        "changes": [
+          {
+            "added": "pasik@iki.fi",
+            "field_name": "cc",
+            "removed": ""
+          }
+        ]
+      },
+      {
+        "when": "2025-10-12T17:51:56Z",
+        "who": "mstange.moz@gmail.com",
+        "changes": [
+          {
+            "added": "mstange.moz@gmail.com",
+            "removed": "",
+            "field_name": "cc"
+          }
+        ]
+      },
+      {
+        "when": "2025-10-13T04:36:06Z",
+        "who": "mayankleoboy1@gmail.com",
+        "changes": [
+          {
+            "added": "https://bugzilla.mozilla.org/show_bug.cgi?id=1993874",
+            "removed": "",
+            "field_name": "see_also"
+          }
+        ]
+      },
+      {
+        "who": "release-mgmt-account-bot@mozilla.tld",
+        "when": "2025-10-14T12:44:53Z",
+        "changes": [
+          {
+            "added": "affected",
+            "field_name": "cf_status_firefox146",
+            "removed": "---"
+          }
+        ]
+      },
+      {
+        "when": "2025-10-14T21:29:27Z",
+        "who": "c52w1h6sv@mozmail.com",
+        "changes": [
+          {
+            "added": "c52w1h6sv@mozmail.com",
+            "field_name": "cc",
+            "removed": ""
+          }
+        ]
+      },
+      {
+        "who": "aosmond@mozilla.com",
+        "when": "2025-10-16T13:50:48Z",
+        "changes": [
+          {
+            "field_name": "cf_status_firefox145",
+            "removed": "affected",
+            "added": "disabled"
+          }
+        ]
+      },
+      {
+        "who": "release-mgmt-account-bot@mozilla.tld",
+        "when": "2025-10-17T12:11:49Z",
+        "changes": [
+          {
+            "removed": "",
+            "field_name": "flagtypes.name",
+            "added": "needinfo?(aosmond@mozilla.com)"
+          },
+          {
+            "added": "topcrash",
+            "field_name": "keywords",
+            "removed": ""
+          }
+        ]
+      },
+      {
+        "changes": [
+          {
+            "field_name": "flagtypes.name",
+            "removed": "needinfo?(aosmond@mozilla.com)",
+            "added": ""
+          }
+        ],
+        "who": "aosmond@mozilla.com",
+        "when": "2025-10-20T18:48:31Z"
+      },
+      {
+        "changes": [
+          {
+            "removed": "topcrash",
+            "field_name": "keywords",
+            "added": ""
+          }
+        ],
+        "when": "2025-11-11T12:10:57Z",
+        "who": "release-mgmt-account-bot@mozilla.tld"
+      },
+      {
+        "when": "2025-11-15T01:33:57Z",
+        "who": "o8wq58usm@mozmail.com",
+        "changes": [
+          {
+            "added": "o8wq58usm@mozmail.com",
+            "removed": "",
+            "field_name": "cc"
+          }
+        ]
+      },
+      {
+        "when": "2025-11-18T16:51:32Z",
+        "who": "dmeehan@mozilla.com",
+        "changes": [
+          {
+            "removed": "",
+            "field_name": "cc",
+            "added": "dmeehan@mozilla.com"
+          },
+          {
+            "field_name": "cf_status_firefox146",
+            "removed": "affected",
+            "added": "disabled"
+          }
+        ]
+      },
+      {
+        "changes": [
+          {
+            "field_name": "target_milestone",
+            "removed": "---",
+            "added": "149 Branch"
+          },
+          {
+            "removed": "",
+            "field_name": "resolution",
+            "added": "FIXED"
+          },
+          {
+            "added": "RESOLVED",
+            "removed": "NEW",
+            "field_name": "status"
+          },
+          {
+            "removed": "",
+            "field_name": "cf_last_resolved",
+            "added": "2026-01-22T04:26:12Z"
+          },
+          {
+            "field_name": "cf_status_firefox149",
+            "removed": "---",
+            "added": "fixed"
+          },
+          {
+            "comment_count": 13,
+            "comment_id": 17853995,
+            "added": "bugherder",
+            "removed": "",
+            "field_name": "comment_tag"
+          }
+        ],
+        "when": "2026-01-22T04:26:12Z",
+        "who": "nfay@mozilla.com"
+      },
+      {
+        "when": "2026-01-22T20:53:35Z",
+        "who": "ryanvm@gmail.com",
+        "changes": [
+          {
+            "added": "disabled",
+            "removed": "---",
+            "field_name": "cf_status_firefox147"
+          },
+          {
+            "added": "disabled",
+            "removed": "---",
+            "field_name": "cf_status_firefox148"
+          }
+        ]
+      }
+    ],
+    "triage_owner": "bhood@mozilla.com",
+    "cf_status_firefox148": "disabled",
+    "component": "Graphics",
+    "cf_status_thunderbird_esr140": "---",
+    "cf_fx_iteration": "---",
+    "resolution": "FIXED",
+    "cf_tracking_thunderbird_esr140": "---",
+    "cf_status_firefox_esr115": "---",
+    "cc": [
+      "aosmond@mozilla.com",
+      "c52w1h6sv@mozmail.com",
+      "continuation@gmail.com",
+      "dmeehan@mozilla.com",
+      "jnicol@mozilla.com",
+      "lsalzman@mozilla.com",
+      "mstange.moz@gmail.com",
+      "o8wq58usm@mozmail.com",
+      "pasik@iki.fi",
+      "tnikkel@gmail.com"
+    ],
+    "cf_webcompat_priority": "---",
+    "cf_status_firefox145": "disabled",
+    "duplicates": [],
+    "keywords": [
+      "crash",
+      "regression"
+    ],
+    "cf_performance_impact": "---",
+    "cf_size_estimate": "---",
+    "version": "unspecified",
+    "severity": "S3",
+    "cc_detail": [
+      {
+        "nick": "aosmond",
+        "email": "aosmond@mozilla.com",
+        "real_name": "Andrew Osmond [:aosmond] (he/him)",
+        "id": 505306,
+        "name": "aosmond@mozilla.com"
+      },
+      {
+        "name": "c52w1h6sv@mozmail.com",
+        "id": 687244,
+        "nick": "Webworkr",
+        "email": "c52w1h6sv@mozmail.com",
+        "real_name": "Denis M\u00fcller [:Webworkr]"
+      },
+      {
+        "name": "continuation@gmail.com",
+        "id": 406194,
+        "email": "continuation@gmail.com",
+        "real_name": "Andrew McCreight [:mccr8]",
+        "nick": "mccr8"
+      },
+      {
+        "id": 695136,
+        "name": "dmeehan@mozilla.com",
+        "nick": "dmeehan",
+        "real_name": "Donal Meehan [:dmeehan]",
+        "email": "dmeehan@mozilla.com"
+      },
+      {
+        "nick": "jnicol",
+        "real_name": "Jamie Nicol [:jnicol]",
+        "email": "jnicol@mozilla.com",
+        "id": 541747,
+        "name": "jnicol@mozilla.com"
+      },
+      {
+        "email": "lsalzman@mozilla.com",
+        "real_name": "Lee Salzman [:lsalzman]",
+        "nick": "lsalzman",
+        "name": "lsalzman@mozilla.com",
+        "id": 536714
+      },
+      {
+        "id": 293943,
+        "name": "mstange.moz@gmail.com",
+        "email": "mstange.moz@gmail.com",
+        "real_name": "Markus Stange [:mstange]",
+        "nick": "mstange"
+      },
+      {
+        "nick": "BlindMoon38",
+        "real_name": "Diego Ram\u00edrez [:BlindMoon38]",
+        "email": "o8wq58usm@mozmail.com",
+        "id": 720611,
+        "name": "o8wq58usm@mozmail.com"
+      },
+      {
+        "real_name": "",
+        "email": "pasik@iki.fi",
+        "nick": "pasik",
+        "name": "pasik@iki.fi",
+        "id": 529219
+      },
+      {
+        "name": "tnikkel@gmail.com",
+        "id": 255010,
+        "nick": "tnikkel",
+        "email": "tnikkel@gmail.com",
+        "real_name": "Timothy Nikkel (:tnikkel)"
+      }
+    ],
+    "creator": "ryanvm@gmail.com",
+    "cf_cab_review": "---",
+    "url": "",
+    "target_milestone": "149 Branch",
+    "mentors_detail": [],
+    "cf_tracking_firefox_relnote": "---",
+    "cf_a11y_review_project_flag": "---",
+    "cf_user_story": "",
+    "cf_fx_points": "---",
+    "cf_status_thunderbird_esr115": "---",
+    "cf_qa_whiteboard": "",
+    "blocks": [
+      1873086
+    ],
+    "cf_status_firefox_esr140": "unaffected",
+    "cf_last_resolved": "2026-01-22T04:26:12Z",
+    "cf_status_firefox147": "disabled",
+    "cf_tracking_firefox149": "---",
+    "counts": {
+      "duplicates": 0,
+      "regressed_by": 0,
+      "cc": 10,
+      "regressions": 1,
+      "depends_on": 1,
+      "attachments": 1,
+      "keywords": 2,
+      "blocks": 0,
+      "comments": 12
+    },
+    "id": 1992573,
+    "platform": "All",
+    "product": "Core",
+    "last_change_time_non_bot": "2026-01-22T20:53:35Z",
+    "cf_status_firefox146": "disabled",
+    "triage_owner_detail": {
+      "email": "bhood@mozilla.com",
+      "real_name": "Bob Hood [:bhood]",
+      "nick": "bhood",
+      "name": "bhood@mozilla.com",
+      "id": 697075
+    },
+    "description": "Crash report: https://crash-stats.mozilla.org/report/index/3b0050ba-159b-49ab-bb23-8da730251004\n\nMOZ_CRASH Reason:\n```\nMOZ_RELEASE_ASSERT(!mProcessStableOnce) (Fallback to parent process not allowed!)\n```\n\nTop 10 frames:\n```\n0  libxul.so  MOZ_CrashSequence(void*, long)  mfbt/Assertions.h:242\n0  libxul.so  mozilla::gfx::GPUProcessManager::MaybeCrashIfGpuProcessOnceStable()  gfx/ipc/GPUProcessManager.cpp:217\n1  libxul.so  mozilla::gfx::GPUProcessManager::MaybeDisableGPUProcess(char const*, bool)  gfx/ipc/GPUProcessManager.cpp:346\n2  libxul.so  mozilla::gfx::GPUProcessManager::DisableGPUProcess(char const*)  gfx/ipc/GPUProcessManager.cpp:299\n2  libxul.so  mozilla::gfx::GPUProcessManager::OnProcessLaunchComplete(mozilla::gfx::GPUPro...  gfx/ipc/GPUProcessManager.cpp:601\n3  libxul.so  mozilla::gfx::GPUProcessHost::InitAfterConnect(bool)  gfx/ipc/GPUProcessHost.cpp:168\n4  libxul.so  mozilla::gfx::GPUProcessHost::WaitForLaunch()  gfx/ipc/GPUProcessHost.cpp:101\n5  libxul.so  mozilla::gfx::GPUProcessManager::EnsureGPUReady(bool)  gfx/ipc/GPUProcessManager.cpp:404\n6  libxul.so  gfxPlatform::BuildContentDeviceData(mozilla::gfx::ContentDeviceData*)  gfx/thebes/gfxPlatform.cpp:4102\n7  libxul.so  mozilla::dom::ContentParent::InitInternal(mozilla::hal::ProcessPriority)  dom/ipc/ContentParent.cpp:2793\n```",
+    "op_sys": "All"
+  },
+  "comments": [
+    {
+      "raw_text": "Crash report: https://crash-stats.mozilla.org/report/index/3b0050ba-159b-49ab-bb23-8da730251004\n\nMOZ_CRASH Reason:\n```\nMOZ_RELEASE_ASSERT(!mProcessStableOnce) (Fallback to parent process not allowed!)\n```\n\nTop 10 frames:\n```\n0  libxul.so  MOZ_CrashSequence(void*, long)  mfbt/Assertions.h:242\n0  libxul.so  mozilla::gfx::GPUProcessManager::MaybeCrashIfGpuProcessOnceStable()  gfx/ipc/GPUProcessManager.cpp:217\n1  libxul.so  mozilla::gfx::GPUProcessManager::MaybeDisableGPUProcess(char const*, bool)  gfx/ipc/GPUProcessManager.cpp:346\n2  libxul.so  mozilla::gfx::GPUProcessManager::DisableGPUProcess(char const*)  gfx/ipc/GPUProcessManager.cpp:299\n2  libxul.so  mozilla::gfx::GPUProcessManager::OnProcessLaunchComplete(mozilla::gfx::GPUPro...  gfx/ipc/GPUProcessManager.cpp:601\n3  libxul.so  mozilla::gfx::GPUProcessHost::InitAfterConnect(bool)  gfx/ipc/GPUProcessHost.cpp:168\n4  libxul.so  mozilla::gfx::GPUProcessHost::WaitForLaunch()  gfx/ipc/GPUProcessHost.cpp:101\n5  libxul.so  mozilla::gfx::GPUProcessManager::EnsureGPUReady(bool)  gfx/ipc/GPUProcessManager.cpp:404\n6  libxul.so  gfxPlatform::BuildContentDeviceData(mozilla::gfx::ContentDeviceData*)  gfx/thebes/gfxPlatform.cpp:4102\n7  libxul.so  mozilla::dom::ContentParent::InitInternal(mozilla::hal::ProcessPriority)  dom/ipc/ContentParent.cpp:2793\n```",
+      "creation_time": "2025-10-04T18:29:22Z",
+      "creator": "ryanvm@gmail.com",
+      "bug_id": 1992573,
+      "text": "Crash report: https://crash-stats.mozilla.org/report/index/3b0050ba-159b-49ab-bb23-8da730251004\n\nMOZ_CRASH Reason:\n```\nMOZ_RELEASE_ASSERT(!mProcessStableOnce) (Fallback to parent process not allowed!)\n```\n\nTop 10 frames:\n```\n0  libxul.so  MOZ_CrashSequence(void*, long)  mfbt/Assertions.h:242\n0  libxul.so  mozilla::gfx::GPUProcessManager::MaybeCrashIfGpuProcessOnceStable()  gfx/ipc/GPUProcessManager.cpp:217\n1  libxul.so  mozilla::gfx::GPUProcessManager::MaybeDisableGPUProcess(char const*, bool)  gfx/ipc/GPUProcessManager.cpp:346\n2  libxul.so  mozilla::gfx::GPUProcessManager::DisableGPUProcess(char const*)  gfx/ipc/GPUProcessManager.cpp:299\n2  libxul.so  mozilla::gfx::GPUProcessManager::OnProcessLaunchComplete(mozilla::gfx::GPUPro...  gfx/ipc/GPUProcessManager.cpp:601\n3  libxul.so  mozilla::gfx::GPUProcessHost::InitAfterConnect(bool)  gfx/ipc/GPUProcessHost.cpp:168\n4  libxul.so  mozilla::gfx::GPUProcessHost::WaitForLaunch()  gfx/ipc/GPUProcessHost.cpp:101\n5  libxul.so  mozilla::gfx::GPUProcessManager::EnsureGPUReady(bool)  gfx/ipc/GPUProcessManager.cpp:404\n6  libxul.so  gfxPlatform::BuildContentDeviceData(mozilla::gfx::ContentDeviceData*)  gfx/thebes/gfxPlatform.cpp:4102\n7  libxul.so  mozilla::dom::ContentParent::InitInternal(mozilla::hal::ProcessPriority)  dom/ipc/ContentParent.cpp:2793\n```",
+      "is_private": false,
+      "id": 17701913,
+      "reactions": {},
+      "author": "ryanvm@gmail.com",
+      "attachment_id": null,
+      "tags": [],
+      "count": 0,
+      "time": "2025-10-04T18:29:22Z"
+    },
+    {
+      "time": "2025-10-06T18:19:26Z",
+      "tags": [],
+      "count": 2,
+      "author": "aosmond@mozilla.com",
+      "attachment_id": null,
+      "reactions": {},
+      "id": 17705328,
+      "is_private": false,
+      "bug_id": 1992573,
+      "text": "Yep, as the name of the signature suggests, this is expected behaviour, in theory. It is possible we crash in circumstances that we didn't expect, but this is what will now happen if we fail to restart the GPU process enough times when we previously had a stable GPU process. We should brace ourselves for increasing numbers as this hits further channels.",
+      "creator": "aosmond@mozilla.com",
+      "creation_time": "2025-10-06T18:19:26Z",
+      "raw_text": "Yep, as the name of the signature suggests, this is expected behaviour, in theory. It is possible we crash in circumstances that we didn't expect, but this is what will now happen if we fail to restart the GPU process enough times when we previously had a stable GPU process. We should brace ourselves for increasing numbers as this hits further channels."
+    },
+    {
+      "attachment_id": null,
+      "author": "aosmond@mozilla.com",
+      "time": "2025-10-06T18:27:53Z",
+      "count": 3,
+      "tags": [],
+      "creation_time": "2025-10-06T18:27:53Z",
+      "creator": "aosmond@mozilla.com",
+      "raw_text": "Most of these crashes appear to be happening because the launching is failing. Given the numbers are higher on Android, this does make a case for getting bug 1991502 working there too.",
+      "is_private": false,
+      "reactions": {},
+      "id": 17705348,
+      "text": "Most of these crashes appear to be happening because the launching is failing. Given the numbers are higher on Android, this does make a case for getting bug 1991502 working there too.",
+      "bug_id": 1992573
+    },
+    {
+      "raw_text": "Today I was additionally looking at getting some more information about why the process launch failed annotated in the crash reports. Hopefully have something up tomorrow. Likely won't tell us anything particularly useful, but worth a shot",
+      "creator": "jnicol@mozilla.com",
+      "creation_time": "2025-10-06T18:37:18Z",
+      "text": "Today I was additionally looking at getting some more information about why the process launch failed annotated in the crash reports. Hopefully have something up tomorrow. Likely won't tell us anything particularly useful, but worth a shot",
+      "bug_id": 1992573,
+      "reactions": {},
+      "id": 17705380,
+      "is_private": false,
+      "author": "jnicol@mozilla.com",
+      "attachment_id": null,
+      "count": 4,
+      "tags": [],
+      "time": "2025-10-06T18:37:18Z"
+    },
+    {
+      "id": 17713719,
+      "reactions": {},
+      "is_private": false,
+      "bug_id": 1992573,
+      "text": "Some of the android crashes now have the annotation from bug 1992951. (Most don't have: perhaps the error in these cases does not come from the java code, or there is an issue with the annotation.) But the ones which do have this message:\n\n> Error launching GPU process: Error while binding: android.os.DeadObjectException;\n\nI expect this therefore originates from the `Context.bindService()` call which is called from within [this call](https://searchfox.org/firefox-main/source/mobile/android/geckoview/src/main/java/org/mozilla/gecko/process/GeckoProcessManager.java#923), and indicates that the process is already dead by this point.\n\nPerhaps the new process was immediately killed (eg due to low resources)? Or, perhaps the `getConnectionForStart()` call [immediately above](https://searchfox.org/firefox-main/source/mobile/android/geckoview/src/main/java/org/mozilla/gecko/process/GeckoProcessManager.java#921) is returning the stale `Connection` for the process that _previously_ crashed (ie the one for which we are attempting to launch its replacement).\n\nIt grabs an [existing connection](https://searchfox.org/firefox-main/source/mobile/android/geckoview/src/main/java/org/mozilla/gecko/process/GeckoProcessManager.java#658) from `mNonContentConnections`, if one exists. The connection for the previous process should get removed in [`removeConnection`](https://searchfox.org/firefox-main/rev/91e6069b9c1e7289d0c727b5110e144edc589204/mobile/android/geckoview/src/main/java/org/mozilla/gecko/process/GeckoProcessManager.java#582), which is called from [`unbindService`](https://searchfox.org/firefox-main/rev/91e6069b9c1e7289d0c727b5110e144edc589204/mobile/android/geckoview/src/main/java/org/mozilla/gecko/process/ServiceAllocator.java#266), which gets called from the [`onBinderConnectionLost` callback](https://searchfox.org/firefox-main/rev/91e6069b9c1e7289d0c727b5110e144edc589204/mobile/android/geckoview/src/main/java/org/mozilla/gecko/process/ServiceAllocator.java#303). Perhaps that callback being fired is racing with gecko detecting the process loss and relaunching it.",
+      "creator": "jnicol@mozilla.com",
+      "creation_time": "2025-10-13T10:49:12Z",
+      "raw_text": "Some of the android crashes now have the annotation from bug 1992951. (Most don't have: perhaps the error in these cases does not come from the java code, or there is an issue with the annotation.) But the ones which do have this message:\n\n> Error launching GPU process: Error while binding: android.os.DeadObjectException;\n\nI expect this therefore originates from the `Context.bindService()` call which is called from within [this call](https://searchfox.org/firefox-main/source/mobile/android/geckoview/src/main/java/org/mozilla/gecko/process/GeckoProcessManager.java#923), and indicates that the process is already dead by this point.\n\nPerhaps the new process was immediately killed (eg due to low resources)? Or, perhaps the `getConnectionForStart()` call [immediately above](https://searchfox.org/firefox-main/source/mobile/android/geckoview/src/main/java/org/mozilla/gecko/process/GeckoProcessManager.java#921) is returning the stale `Connection` for the process that _previously_ crashed (ie the one for which we are attempting to launch its replacement).\n\nIt grabs an [existing connection](https://searchfox.org/firefox-main/source/mobile/android/geckoview/src/main/java/org/mozilla/gecko/process/GeckoProcessManager.java#658) from `mNonContentConnections`, if one exists. The connection for the previous process should get removed in [`removeConnection`](https://searchfox.org/firefox-main/rev/91e6069b9c1e7289d0c727b5110e144edc589204/mobile/android/geckoview/src/main/java/org/mozilla/gecko/process/GeckoProcessManager.java#582), which is called from [`unbindService`](https://searchfox.org/firefox-main/rev/91e6069b9c1e7289d0c727b5110e144edc589204/mobile/android/geckoview/src/main/java/org/mozilla/gecko/process/ServiceAllocator.java#266), which gets called from the [`onBinderConnectionLost` callback](https://searchfox.org/firefox-main/rev/91e6069b9c1e7289d0c727b5110e144edc589204/mobile/android/geckoview/src/main/java/org/mozilla/gecko/process/ServiceAllocator.java#303). Perhaps that callback being fired is racing with gecko detecting the process loss and relaunching it.",
+      "time": "2025-10-13T10:49:12Z",
+      "tags": [],
+      "count": 5,
+      "attachment_id": null,
+      "author": "jnicol@mozilla.com"
+    },
+    {
+      "attachment_id": null,
+      "author": "release-mgmt-account-bot@mozilla.tld",
+      "raw_text": "The bug is linked to a topcrash signature, which matches the following [criterion](https://wiki.mozilla.org/CrashKill/Topcrash):\n- Top 10 AArch64 and ARM crashes on nightly \n\n:aosmond, could you consider increasing the severity of this top-crash bug?\n\nFor more information, please visit [BugBot documentation](https://wiki.mozilla.org/BugBot#topcrash_highlight.py).",
+      "creation_time": "2025-10-17T12:11:49Z",
+      "creator": "release-mgmt-account-bot@mozilla.tld",
+      "bug_id": 1992573,
+      "tags": [],
+      "count": 7,
+      "text": "The bug is linked to a topcrash signature, which matches the following [criterion](https://wiki.mozilla.org/CrashKill/Topcrash):\n- Top 10 AArch64 and ARM crashes on nightly \n\n:aosmond, could you consider increasing the severity of this top-crash bug?\n\nFor more information, please visit [BugBot documentation](https://wiki.mozilla.org/BugBot#topcrash_highlight.py).",
+      "is_private": false,
+      "id": 17720587,
+      "reactions": {},
+      "time": "2025-10-17T12:11:49Z"
+    },
+    {
+      "author": "aosmond@mozilla.com",
+      "attachment_id": null,
+      "tags": [],
+      "count": 8,
+      "time": "2025-10-20T18:48:31Z",
+      "raw_text": "As we make improvements to the GPU process management, we hope to either reduce the number of these crashes, or embrace them if Firefox was going to crash soon anyways. For the moment these crashes are limited to nightly due to the pref, so I don't think the topcrash concern is warranted.",
+      "creator": "aosmond@mozilla.com",
+      "creation_time": "2025-10-20T18:48:31Z",
+      "bug_id": 1992573,
+      "text": "As we make improvements to the GPU process management, we hope to either reduce the number of these crashes, or embrace them if Firefox was going to crash soon anyways. For the moment these crashes are limited to nightly due to the pref, so I don't think the topcrash concern is warranted.",
+      "reactions": {},
+      "id": 17725239,
+      "is_private": false
+    },
+    {
+      "time": "2025-10-20T18:50:47Z",
+      "tags": [],
+      "count": 9,
+      "author": "aosmond@mozilla.com",
+      "attachment_id": null,
+      "is_private": false,
+      "id": 17725243,
+      "reactions": {},
+      "bug_id": 1992573,
+      "text": "I do appreciate though that crash pings says this is the #1 crash, at ~11% of the total, on nightly:\nhttps://crash-pings.mozilla.org/#LIlojH",
+      "creation_time": "2025-10-20T18:50:47Z",
+      "creator": "aosmond@mozilla.com",
+      "raw_text": "I do appreciate though that crash pings says this is the #1 crash, at ~11% of the total, on nightly:\nhttps://crash-pings.mozilla.org/#LIlojH"
+    },
+    {
+      "time": "2025-11-11T12:10:57Z",
+      "tags": [],
+      "count": 10,
+      "attachment_id": null,
+      "author": "release-mgmt-account-bot@mozilla.tld",
+      "id": 17758084,
+      "reactions": {},
+      "is_private": false,
+      "bug_id": 1992573,
+      "text": "Based on the [topcrash criteria](https://wiki.mozilla.org/CrashKill/Topcrash), the crash signature linked to this bug is not a topcrash signature anymore.\n\nFor more information, please visit [BugBot documentation](https://wiki.mozilla.org/BugBot#crash_small_volume.py).",
+      "creator": "release-mgmt-account-bot@mozilla.tld",
+      "creation_time": "2025-11-11T12:10:57Z",
+      "raw_text": "Based on the [topcrash criteria](https://wiki.mozilla.org/CrashKill/Topcrash), the crash signature linked to this bug is not a topcrash signature anymore.\n\nFor more information, please visit [BugBot documentation](https://wiki.mozilla.org/BugBot#crash_small_volume.py)."
+    },
+    {
+      "count": 11,
+      "tags": [],
+      "time": "2026-01-21T16:59:28Z",
+      "author": "aosmond@mozilla.com",
+      "attachment_id": 9539111,
+      "text": "Created attachment 9539111\nBug 1992573 - Disable crashing if compositing falls back to the parent process in nightly.\n\n\nWe only crash in nightly right now, and since we aren't actively working\non getting rid of parent process compositing at this moment, let's just\ndisable this for convenience.",
+      "bug_id": 1992573,
+      "reactions": {},
+      "id": 17853301,
+      "is_private": false,
+      "raw_text": "\nWe only crash in nightly right now, and since we aren't actively working\non getting rid of parent process compositing at this moment, let's just\ndisable this for convenience.",
+      "creator": "aosmond@mozilla.com",
+      "creation_time": "2026-01-21T16:59:28Z"
+    },
+    {
+      "text": "Pushed by aosmond@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/e00a233460d4\nhttps://hg.mozilla.org/integration/autoland/rev/c735d25804c8\nDisable crashing if compositing falls back to the parent process in nightly. r=gfx-reviewers,bradwerth",
+      "bug_id": 1992573,
+      "is_private": false,
+      "id": 17853518,
+      "reactions": {},
+      "raw_text": "Pushed by aosmond@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/e00a233460d4\nhttps://hg.mozilla.org/integration/autoland/rev/c735d25804c8\nDisable crashing if compositing falls back to the parent process in nightly. r=gfx-reviewers,bradwerth",
+      "creation_time": "2026-01-21T18:56:48Z",
+      "creator": "pulsebot@bmo.tld",
+      "count": 12,
+      "tags": [],
+      "time": "2026-01-21T18:56:48Z",
+      "author": "pulsebot@bmo.tld",
+      "attachment_id": null
+    },
+    {
+      "bug_id": 1992573,
+      "text": "https://hg.mozilla.org/mozilla-central/rev/c735d25804c8",
+      "is_private": false,
+      "id": 17853995,
+      "reactions": {},
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/c735d25804c8",
+      "creation_time": "2026-01-22T04:26:12Z",
+      "creator": "nfay@mozilla.com",
+      "tags": [
+        "bugherder"
+      ],
+      "count": 13,
+      "time": "2026-01-22T04:26:12Z",
+      "author": "nfay@mozilla.com",
+      "attachment_id": null
+    }
+  ],
+  "crash_context": {
+    "signature": "mozilla::net::nsStandardURL::~nsStandardURL",
+    "product": "Firefox",
+    "version": "140.5.0esr",
+    "os": null
+  },
+  "crashes": [
+    {
+      "uuid": "b6560b73-4a41-4f50-aba2-6aad20260125",
+      "date": "2026-01-25T21:59:45.490256+00:00",
+      "product": "Firefox",
+      "version": "140.5.0esr",
+      "signature": "mozilla::net::nsStandardURL::~nsStandardURL"
+    },
+    {
+      "uuid": "c246f376-56c0-4370-b8ed-ce6910260125",
+      "date": "2026-01-25T22:00:17.477443+00:00",
+      "product": "Firefox",
+      "version": "115.32.0esr",
+      "signature": "shutdownhang | libsystem_kernel.dylib"
+    },
+    {
+      "uuid": "fccde839-6c9c-4d99-b6d2-3749b0260125",
+      "date": "2026-01-25T22:00:21.699824+00:00",
+      "product": "Firefox",
+      "version": "140.7.0esr",
+      "signature": "_IO_vtable_check"
+    },
+    {
+      "uuid": "72210804-28c4-414b-92db-df14a0260125",
+      "date": "2026-01-25T21:59:50.011624+00:00",
+      "product": "Focus",
+      "version": "143.0.3",
+      "signature": "java.lang.IllegalArgumentException: at android.os.Parcel.readException(Parcel.java)"
+    },
+    {
+      "uuid": "5767c4c7-58ac-4940-86d9-5d0f60260125",
+      "date": "2026-01-25T21:59:20.228263+00:00",
+      "product": "Focus",
+      "version": "146.0",
+      "signature": "EMPTY: no frame data available"
+    },
+    {
+      "uuid": "7083cb44-95c0-4373-b8fb-996e30260125",
+      "date": "2026-01-25T22:02:12.663316+00:00",
+      "product": "Firefox",
+      "version": "148.0a1",
+      "signature": "IPCError-browser | ShutDownKill"
+    },
+    {
+      "uuid": "b866fb4b-a9d4-4361-a854-b44a20260125",
+      "date": "2026-01-25T22:01:48.000295+00:00",
+      "product": "Thunderbird",
+      "version": "147.0",
+      "signature": "OOM | small"
+    },
+    {
+      "uuid": "f5da8838-92f7-486a-82cf-7f8a60260125",
+      "date": "2026-01-25T22:01:02.324296+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "ArenaAvailTreeTrait::Compare"
+    },
+    {
+      "uuid": "1df57338-38c8-4086-bf6e-ca8a20260125",
+      "date": "2026-01-25T22:01:46.292335+00:00",
+      "product": "Thunderbird",
+      "version": "140.7.0esr",
+      "signature": "shutdownhang | mozilla::SpinEventLoopUntil | nsThread::WaitForAllAsynchronousShutdowns | nsThreadManager::ShutdownNonMainThreads"
+    },
+    {
+      "uuid": "2b2b8add-c8a5-4571-a504-c599f0260125",
+      "date": "2026-01-25T22:00:28.948420+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "firefox_on_glean::factory::create_and_register_metric"
+    }
+  ],
+  "bug_analysis": {
+    "bug_type": "crash",
+    "root_cause": "The crash is caused by the GPU process manager asserting that fallback to the parent process compositing is not allowed once the GPU process was previously stable, triggered when the GPU process fails to restart after multiple attempts.",
+    "symptoms": [
+      "Firefox crashes with MOZ_RELEASE_ASSERT(!mProcessStableOnce) failure",
+      "GPU process launch failure, especially on Android",
+      "Error launching GPU process: android.os.DeadObjectException"
+    ],
+    "affected_components": [
+      "Graphics",
+      "GPUProcessManager",
+      "GPUProcessHost",
+      "gfxPlatform",
+      "mobile/android"
+    ],
+    "reproduction_steps": [
+      "Run Firefox with GPU process compositing enabled (currently nightly only)",
+      "Cause GPU process to fail launching or restart multiple times after being stable",
+      "Observe crash triggered by MOZ_CRASH in GPUProcessManager::MaybeCrashIfGpuProcessOnceStable"
+    ],
+    "technical_details": "The crash is triggered by a MOZ_RELEASE_ASSERT in GPUProcessManager::MaybeCrashIfGpuProcessOnceStable when the component detects fallback to the parent process compositing, which is disallowed after the GPU process was considered stable. The failure to restart the GPU process, particularly on Android due to android.os.DeadObjectException during Context.bindService(), causes this assertion. The crash occurs in libxul.so within gfx/ipc/GPUProcessManager.cpp around lines 217 and 346.",
+    "user_impact": "Users experience Firefox crashes, especially on Android devices, when the GPU process fails to start or restart properly. This results in instability and potential loss of browsing session or data.",
+    "severity_assessment": "medium",
+    "keywords": [
+      "GPU process",
+      "crash",
+      "MOZ_RELEASE_ASSERT",
+      "fallback",
+      "Android",
+      "gfxPlatform",
+      "Context.bindService"
+    ],
+    "likely_repository_paths": [
+      "gfx/ipc/GPUProcessManager.cpp",
+      "gfx/ipc/GPUProcessHost.cpp",
+      "gfx/thebes/gfxPlatform.cpp",
+      "dom/ipc/ContentParent.cpp",
+      "mobile/android/gecko"
+    ]
+  },
+  "repository_context": {},
+  "related_tests": [
+    "Possible tests for gfx/ipc/GPUProcessManager.cpp: 0 found",
+    "Possible tests for gfx/ipc/GPUProcessHost.cpp: 0 found",
+    "Possible tests for gfx/thebes/gfxPlatform.cpp: 0 found",
+    "Possible tests for dom/ipc/ContentParent.cpp: 0 found",
+    "Possible tests for mobile/android/gecko: 0 found"
+  ],
+  "refined_analysis": {
+    "bug_type": "crash",
+    "root_cause": "GPUProcessManager triggers a MOZ_RELEASE_ASSERT in MaybeCrashIfGpuProcessOnceStable when fallback to parent compositing is disallowed after the GPU process was stable. This happens due to repeated GPU process restart failures on Android caused by android.os.DeadObjectException thrown during Context.bindService().",
+    "symptoms": [
+      "Firefox crashes with MOZ_RELEASE_ASSERT(!mProcessStableOnce) in GPUProcessManager",
+      "GPU process repeatedly fails to launch or restart on Android",
+      "android.os.DeadObjectException logged during GPU process startup"
+    ],
+    "affected_components": [
+      "gfx/ipc/GPUProcessManager.cpp",
+      "gfx/ipc/GPUProcessHost.cpp",
+      "mobile/android/gecko"
+    ],
+    "reproduction_steps": [
+      "Enable GPU process compositing (nightly builds)",
+      "Force GPU process restart failures after GPU process was stable",
+      "Observe MOZ_CRASH in GPUProcessManager::MaybeCrashIfGpuProcessOnceStable (lines ~217, ~346)"
+    ],
+    "technical_details": "The MOZ_RELEASE_ASSERT fails in GPUProcessManager.cpp lines ~217 and ~346 when fallback to parent compositing is disallowed after GPU process stability. On Android, repeated GPU process restart attempts fail due to android.os.DeadObjectException thrown in Context.bindService(), preventing successful restarts and triggering the assertion.",
+    "user_impact": "Crashes on Firefox Android cause browsing instability and potential data loss during GPU process restart failures.",
+    "severity_assessment": "medium",
+    "keywords": [
+      "GPU process",
+      "crash",
+      "MOZ_RELEASE_ASSERT",
+      "fallback",
+      "Android",
+      "Context.bindService"
+    ],
+    "likely_repository_paths": [
+      "gfx/ipc/GPUProcessManager.cpp",
+      "gfx/ipc/GPUProcessHost.cpp",
+      "mobile/android/gecko"
+    ],
+    "proposed_fix_approach": "Modify GPUProcessManager to handle repeated GPU process restart failures gracefully on Android by allowing controlled fallback or recovery. Implement retry limits and conditionally disable the MOZ_RELEASE_ASSERT in MaybeCrashIfGpuProcessOnceStable to prevent crashes while preserving system stability.",
+    "optimized_context": "Firefox Android crashes due to MOZ_RELEASE_ASSERT failures in GPUProcessManager.cpp (lines ~217, ~346) when fallback to parent compositing is disallowed after GPU process stability. The root cause is repeated GPU process restart failures triggered by android.os.DeadObjectException during Context.bindService(). Key files involved: gfx/ipc/GPUProcessManager.cpp (MaybeCrashIfGpuProcessOnceStable), gfx/ipc/GPUProcessHost.cpp, and mobile/android/gecko.",
+    "refinement_critique": "The analysis is comprehensive and identifies root cause, symptoms, and affected files clearly, but it is verbose with some redundancy. The reproduction steps and technical details could be more concise. The biggest gap is the lack of a clear, high-level implementation plan or solution sketch, which is crucial for AI-readiness. The optimized_context is present but still somewhat long and could be shortened further with precise file and function references to improve focus. Overall, it is mostly self-contained but would benefit from a sharper, more scoped summary and explicit function-level pointers."
+  },
+  "filtered_context": {
+    "concise_summary": "On Firefox Android, GPUProcessManager::MaybeCrashIfGpuProcessOnceStable triggers a MOZ_RELEASE_ASSERT when fallback to parent compositing is disallowed after the GPU process was stable. This occurs due to repeated GPU process restart failures caused by android.os.DeadObjectException thrown during Context.bindService(), preventing successful GPU process restarts and causing crashes.",
+    "relevant_files": [
+      "gfx/ipc/GPUProcessManager.cpp",
+      "gfx/ipc/GPUProcessHost.cpp",
+      "mobile/android/gecko"
+    ],
+    "core_symptoms": [
+      "MOZ_RELEASE_ASSERT(!mProcessStableOnce) failure in GPUProcessManager.cpp (~lines 217, 346)",
+      "Repeated GPU process restart failures on Android",
+      "android.os.DeadObjectException during GPU process startup"
+    ],
+    "technical_constraints": [
+      "Fallback to parent compositing is disallowed after GPU process stability",
+      "GPU process restart failures must be handled gracefully to avoid crashes",
+      "Context.bindService() can throw DeadObjectException repeatedly on Android"
+    ]
+  },
+  "generated_fix": "--- a/gfx/ipc/GPUProcessManager.cpp\n+++ b/gfx/ipc/GPUProcessManager.cpp\n@@ -213,10 +213,18 @@\n void\n GPUProcessManager::MaybeCrashIfGpuProcessOnceStable()\n {\n-  MOZ_RELEASE_ASSERT(!mProcessStableOnce,\n-                     \"GPU process was stable once, fallback to parent compositing disallowed\");\n+  if (mProcessStableOnce) {\n+    // Instead of asserting/crashing, log the condition and avoid fallback.\n+    // This avoids a crash caused by repeated GPU process restart failures,\n+    // especially on Android where DeadObjectException during Context.bindService()\n+    // prevents successful GPU process restart.\n+    gfxCriticalNote << \"[GPUProcessManager] GPU process was stable once; fallback disallowed. \"\n+                    << \"Skipping fallback to avoid crash.\";\n+    return;\n+  }\n }\n \n-  // ... rest of function ...\n+  // ... rest of function ...\n--- a/gfx/ipc/GPUProcessHost.cpp\n+++ b/gfx/ipc/GPUProcessHost.cpp\n@@ -450,7 +450,15 @@\n bool\n GPUProcessHost::Start()\n {\n-  // Regular startup code here...\n+  // On Android, bindService() can throw DeadObjectException repeatedly,\n+  // causing GPU process restart failures.\n+  // We add a try-catch block to handle this gracefully and avoid crashes.\n+\n+  try {\n+    // Regular startup code here...\n+    return true;\n+  } catch (const JavaException& e) {\n+    if (e.IsDeadObjectException()) {\n+      gfxCriticalNote << \"[GPUProcessHost] DeadObjectException during bindService(), deferring GPU process start.\";\n+      return false;\n+    }\n+    throw;\n+  }\n }\n--- a/mobile/android/gecko/GPUProcessService.java\n+++ b/mobile/android/gecko/GPUProcessService.java\n@@ -75,7 +75,10 @@\n     public boolean bindGpuProcessService() {\n-        return context.bindService(intent, connection, Context.BIND_AUTO_CREATE);\n+        try {\n+            return context.bindService(intent, connection, Context.BIND_AUTO_CREATE);\n+        } catch (DeadObjectException e) {\n+            Log.w(TAG, \"DeadObjectException during bindService, will retry later\", e);\n+            return false;\n+        }\n     }",
+  "token_usage": 10322
+}

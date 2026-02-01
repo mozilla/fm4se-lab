@@ -1,0 +1,1261 @@
+{
+  "bug_id": 2011628,
+  "timestamp": "2026-02-01 18:27:27",
+  "data_sources": [
+    "bugzilla",
+    "crash-stats"
+  ],
+  "bug_data": {
+    "see_also": [
+      "https://bugzilla.mozilla.org/show_bug.cgi?id=1881258",
+      "https://github.com/whatwg/mimesniff/issues/205"
+    ],
+    "is_open": false,
+    "alias": null,
+    "op_sys": "Unspecified",
+    "depends_on": [],
+    "description": "According to mimesniff <!-- should be followed by space or > to be sniffed as HTML. But Chrome does it regardless.\nThis bug is to match that behaviour (with a pref)",
+    "filed_via": "standard_form",
+    "cf_accessibility_severity": "---",
+    "triage_owner_detail": {
+      "name": "valentin.gosu@gmail.com",
+      "id": 415378,
+      "email": "valentin.gosu@gmail.com",
+      "real_name": "Valentin Gosu [:valentin] (he/him)",
+      "nick": "valentin"
+    },
+    "regressed_by": [],
+    "last_change_time_non_bot": "2026-01-26T10:19:13Z",
+    "cf_status_firefox149": "verified",
+    "platform": "Unspecified",
+    "product": "Core",
+    "comments": [
+      {
+        "is_private": false,
+        "count": 0,
+        "creator": "valentin.gosu@gmail.com",
+        "attachment_id": null,
+        "author": "valentin.gosu@gmail.com",
+        "tags": [],
+        "bug_id": 2011628,
+        "time": "2026-01-21T11:06:56Z",
+        "id": 17852673,
+        "raw_text": "According to mimesniff <!-- should be followed by space or > to be sniffed as HTML. But Chrome does it regardless.\nThis bug is to match that behaviour (with a pref)",
+        "reactions": {},
+        "creation_time": "2026-01-21T11:06:56Z",
+        "text": "According to mimesniff <!-- should be followed by space or > to be sniffed as HTML. But Chrome does it regardless.\nThis bug is to match that behaviour (with a pref)"
+      },
+      {
+        "creation_time": "2026-01-21T11:36:56Z",
+        "raw_text": "",
+        "reactions": {},
+        "text": "Created attachment 9539018\nBug 2011628 - Add tentative WPT for sniffing <!-- as HTML when not followed by space or > r=#necko",
+        "author": "valentin.gosu@gmail.com",
+        "attachment_id": 9539018,
+        "tags": [],
+        "bug_id": 2011628,
+        "creator": "valentin.gosu@gmail.com",
+        "id": 17852694,
+        "time": "2026-01-21T11:36:56Z",
+        "count": 1,
+        "is_private": false
+      },
+      {
+        "creation_time": "2026-01-21T11:37:11Z",
+        "reactions": {},
+        "raw_text": "",
+        "text": "Created attachment 9539019\nBug 2011628 - Sniff <!-- as HTML to match Chrome r=#necko",
+        "count": 2,
+        "bug_id": 2011628,
+        "tags": [],
+        "author": "valentin.gosu@gmail.com",
+        "attachment_id": 9539019,
+        "creator": "valentin.gosu@gmail.com",
+        "is_private": false,
+        "id": 17852695,
+        "time": "2026-01-21T11:37:11Z"
+      },
+      {
+        "raw_text": "Pushed by valentin.gosu@gmail.com:\nhttps://github.com/mozilla-firefox/firefox/commit/f4d5c2a51c84\nhttps://hg.mozilla.org/integration/autoland/rev/ba8b7fc9f987\nAdd tentative WPT for sniffing <!-- as HTML when not followed by space or > r=necko-reviewers,kershaw\nhttps://github.com/mozilla-firefox/firefox/commit/1db684dd9b7c\nhttps://hg.mozilla.org/integration/autoland/rev/621e87a0bb78\nSniff <!-- as HTML to match Chrome r=necko-reviewers,kershaw",
+        "reactions": {},
+        "creation_time": "2026-01-21T20:20:47Z",
+        "text": "Pushed by valentin.gosu@gmail.com:\nhttps://github.com/mozilla-firefox/firefox/commit/f4d5c2a51c84\nhttps://hg.mozilla.org/integration/autoland/rev/ba8b7fc9f987\nAdd tentative WPT for sniffing <!-- as HTML when not followed by space or > r=necko-reviewers,kershaw\nhttps://github.com/mozilla-firefox/firefox/commit/1db684dd9b7c\nhttps://hg.mozilla.org/integration/autoland/rev/621e87a0bb78\nSniff <!-- as HTML to match Chrome r=necko-reviewers,kershaw",
+        "count": 3,
+        "creator": "pulsebot@bmo.tld",
+        "bug_id": 2011628,
+        "attachment_id": null,
+        "author": "pulsebot@bmo.tld",
+        "tags": [],
+        "time": "2026-01-21T20:20:47Z",
+        "is_private": false,
+        "id": 17853655
+      },
+      {
+        "creator": "wptsync@mozilla.bugs",
+        "bug_id": 2011628,
+        "author": "wptsync@mozilla.bugs",
+        "tags": [],
+        "attachment_id": null,
+        "time": "2026-01-21T20:23:22Z",
+        "is_private": false,
+        "id": 17853661,
+        "raw_text": "Created web-platform-tests PR https://github.com/web-platform-tests/wpt/pull/57285 for changes under testing/web-platform/tests",
+        "reactions": {},
+        "creation_time": "2026-01-21T20:23:22Z",
+        "text": "Created web-platform-tests PR https://github.com/web-platform-tests/wpt/pull/57285 for changes under testing/web-platform/tests",
+        "count": 4
+      },
+      {
+        "reactions": {},
+        "raw_text": "https://hg.mozilla.org/mozilla-central/rev/ba8b7fc9f987\nhttps://hg.mozilla.org/mozilla-central/rev/621e87a0bb78",
+        "creation_time": "2026-01-22T04:27:30Z",
+        "text": "https://hg.mozilla.org/mozilla-central/rev/ba8b7fc9f987\nhttps://hg.mozilla.org/mozilla-central/rev/621e87a0bb78",
+        "creator": "nfay@mozilla.com",
+        "author": "nfay@mozilla.com",
+        "tags": [
+          "bugherder"
+        ],
+        "attachment_id": null,
+        "bug_id": 2011628,
+        "time": "2026-01-22T04:27:30Z",
+        "id": 17854023,
+        "count": 5,
+        "is_private": false
+      },
+      {
+        "creation_time": "2026-01-22T08:53:37Z",
+        "raw_text": "Upstream PR merged by moz-wptsync-bot",
+        "reactions": {},
+        "count": 6,
+        "text": "Upstream PR merged by moz-wptsync-bot",
+        "attachment_id": null,
+        "author": "wptsync@mozilla.bugs",
+        "tags": [],
+        "bug_id": 2011628,
+        "creator": "wptsync@mozilla.bugs",
+        "id": 17854209,
+        "is_private": false,
+        "time": "2026-01-22T08:53:37Z"
+      },
+      {
+        "count": 7,
+        "text": "Upstream PR merged by moz-wptsync-bot",
+        "reactions": {},
+        "raw_text": "Upstream PR merged by moz-wptsync-bot",
+        "creation_time": "2026-01-22T08:54:15Z",
+        "time": "2026-01-22T08:54:15Z",
+        "id": 17854210,
+        "is_private": false,
+        "creator": "wptsync@mozilla.bugs",
+        "attachment_id": null,
+        "author": "wptsync@mozilla.bugs",
+        "tags": [],
+        "bug_id": 2011628
+      },
+      {
+        "creator": "valentin.gosu@gmail.com",
+        "tags": [],
+        "attachment_id": null,
+        "author": "valentin.gosu@gmail.com",
+        "bug_id": 2011628,
+        "time": "2026-01-22T12:23:49Z",
+        "id": 17854460,
+        "is_private": false,
+        "raw_text": "",
+        "reactions": {},
+        "creation_time": "2026-01-22T12:23:49Z",
+        "count": 8,
+        "text": "*** Bug 2006569 has been marked as a duplicate of this bug. ***"
+      },
+      {
+        "reactions": {},
+        "raw_text": "\nOriginal Revision: https://phabricator.services.mozilla.com/D279843",
+        "creation_time": "2026-01-22T12:30:57Z",
+        "text": "Created attachment 9539358\nBug 2011628 - Add tentative WPT for sniffing <!-- as HTML when not followed by space or >\n\n\nOriginal Revision: https://phabricator.services.mozilla.com/D279843",
+        "count": 9,
+        "creator": "valentin.gosu@gmail.com",
+        "bug_id": 2011628,
+        "author": "valentin.gosu@gmail.com",
+        "tags": [],
+        "attachment_id": 9539358,
+        "time": "2026-01-22T12:30:57Z",
+        "is_private": false,
+        "id": 17854473
+      },
+      {
+        "creation_time": "2026-01-22T12:31:03Z",
+        "reactions": {},
+        "raw_text": "### firefox-beta Uplift Approval Request\n- **User impact if declined**: Webcompat issues when pages are served without a content type, and they start with a <!--comment.  Note no space between !-- and the text.\nSee bug 2006569.\n- **Code covered by automated testing**: yes\n- **Fix verified in Nightly**: yes\n- **Needs manual QE test**: yes\n- **Steps to reproduce for manual QE testing**: See bug 2006569 comment 0\n- **Risk associated with taking this patch**: low\n- **Explanation of risk level**: Fixes a regression. Aligns Firefox sniffing of HTML with other browsers. Fix is really simple and behind a pref\n- **String changes made/needed**: none\n- **Is Android affected?**: yes",
+        "count": 10,
+        "text": "### firefox-beta Uplift Approval Request\n- **User impact if declined**: Webcompat issues when pages are served without a content type, and they start with a <!--comment.  Note no space between !-- and the text.\nSee bug 2006569.\n- **Code covered by automated testing**: yes\n- **Fix verified in Nightly**: yes\n- **Needs manual QE test**: yes\n- **Steps to reproduce for manual QE testing**: See bug 2006569 comment 0\n- **Risk associated with taking this patch**: low\n- **Explanation of risk level**: Fixes a regression. Aligns Firefox sniffing of HTML with other browsers. Fix is really simple and behind a pref\n- **String changes made/needed**: none\n- **Is Android affected?**: yes",
+        "tags": [],
+        "attachment_id": null,
+        "author": "phab-bot@bmo.tld",
+        "bug_id": 2011628,
+        "creator": "phab-bot@bmo.tld",
+        "id": 17854474,
+        "is_private": false,
+        "time": "2026-01-22T12:31:03Z"
+      },
+      {
+        "text": "Created attachment 9539359\nBug 2011628 - Sniff <!-- as HTML to match Chrome\n\n\nOriginal Revision: https://phabricator.services.mozilla.com/D279844",
+        "reactions": {},
+        "raw_text": "\nOriginal Revision: https://phabricator.services.mozilla.com/D279844",
+        "creation_time": "2026-01-22T12:31:03Z",
+        "time": "2026-01-22T12:31:03Z",
+        "id": 17854475,
+        "creator": "valentin.gosu@gmail.com",
+        "bug_id": 2011628,
+        "attachment_id": 9539359,
+        "tags": [],
+        "author": "valentin.gosu@gmail.com",
+        "count": 11,
+        "is_private": false
+      },
+      {
+        "creation_time": "2026-01-23T10:58:35Z",
+        "raw_text": "Reproduced the issue with Firefox 148.0a1 (2025-12-17) on Windows 11. The https://ghosttogether.net/change/password webpage is displayed in html code when opened.\nThe issue is verified fixed with Firefox 149.0a1 (2026-01-22) on Windows 11, macOS 15 and Ubuntu 24. While the `network.mimesniff.non_standard_html_comment` pref it's true (as default) the https://ghosttogether.net/change/password page is correctly displayed. Turning `network.mimesniff.non_standard_html_comment` will reproduce the issue again.",
+        "reactions": {},
+        "text": "Reproduced the issue with Firefox 148.0a1 (2025-12-17) on Windows 11. The https://ghosttogether.net/change/password webpage is displayed in html code when opened.\nThe issue is verified fixed with Firefox 149.0a1 (2026-01-22) on Windows 11, macOS 15 and Ubuntu 24. While the `network.mimesniff.non_standard_html_comment` pref it's true (as default) the https://ghosttogether.net/change/password page is correctly displayed. Turning `network.mimesniff.non_standard_html_comment` will reproduce the issue again.",
+        "tags": [],
+        "attachment_id": null,
+        "author": "atrif@mozilla.com",
+        "bug_id": 2011628,
+        "creator": "atrif@mozilla.com",
+        "id": 17855946,
+        "time": "2026-01-23T10:58:35Z",
+        "count": 12,
+        "is_private": false
+      },
+      {
+        "id": 17856749,
+        "is_private": false,
+        "time": "2026-01-23T20:24:25Z",
+        "author": "pulsebot@bmo.tld",
+        "tags": [
+          "uplift"
+        ],
+        "attachment_id": null,
+        "bug_id": 2011628,
+        "creator": "pulsebot@bmo.tld",
+        "count": 13,
+        "text": "https://github.com/mozilla-firefox/firefox/commit/7fec64dae82b\nhttps://hg.mozilla.org/releases/mozilla-beta/rev/2afa35920951\nhttps://github.com/mozilla-firefox/firefox/commit/1c9e8f2e4fe4\nhttps://hg.mozilla.org/releases/mozilla-beta/rev/76dea93dcbc3",
+        "creation_time": "2026-01-23T20:24:25Z",
+        "reactions": {},
+        "raw_text": "https://github.com/mozilla-firefox/firefox/commit/7fec64dae82b\nhttps://hg.mozilla.org/releases/mozilla-beta/rev/2afa35920951\nhttps://github.com/mozilla-firefox/firefox/commit/1c9e8f2e4fe4\nhttps://hg.mozilla.org/releases/mozilla-beta/rev/76dea93dcbc3"
+      },
+      {
+        "is_private": false,
+        "count": 14,
+        "id": 17859496,
+        "time": "2026-01-26T10:19:13Z",
+        "author": "atrif@mozilla.com",
+        "tags": [],
+        "attachment_id": null,
+        "bug_id": 2011628,
+        "creator": "atrif@mozilla.com",
+        "text": "Verified fixed with 148.0b7 (20260125090536) [build](https://treeherder.mozilla.org/jobs?repo=mozilla-beta&revision=423d51461928874ff1b1ea476c9b2aa2fa3ed3f3) on Windows 11, macOS 14 and Ubuntu 24.  While the `network.mimesniff.non_standard_html_comment` pref it's true (as default) the https://ghosttogether.net/change/password page is correctly displayed. Turning `network.mimesniff.non_standard_html_comment` to false will reproduce the issue again.",
+        "creation_time": "2026-01-26T10:19:13Z",
+        "reactions": {},
+        "raw_text": "Verified fixed with 148.0b7 (20260125090536) [build](https://treeherder.mozilla.org/jobs?repo=mozilla-beta&revision=423d51461928874ff1b1ea476c9b2aa2fa3ed3f3) on Windows 11, macOS 14 and Ubuntu 24.  While the `network.mimesniff.non_standard_html_comment` pref it's true (as default) the https://ghosttogether.net/change/password page is correctly displayed. Turning `network.mimesniff.non_standard_html_comment` to false will reproduce the issue again."
+      }
+    ],
+    "counts": {
+      "keywords": 1,
+      "attachments": 4,
+      "blocks": 0,
+      "comments": 15,
+      "regressions": 0,
+      "depends_on": 1,
+      "regressed_by": 0,
+      "cc": 5,
+      "duplicates": 1
+    },
+    "id": 2011628,
+    "cf_tracking_firefox_esr140": "---",
+    "cf_last_resolved": "2026-01-22T04:27:30Z",
+    "qa_contact": "atrif@mozilla.com",
+    "cf_status_firefox147": "---",
+    "cf_tracking_firefox149": "---",
+    "cf_status_firefox_esr140": "---",
+    "assigned_to": "valentin.gosu@gmail.com",
+    "attachments": [
+      {
+        "creator_detail": {
+          "name": "valentin.gosu@gmail.com",
+          "id": 415378,
+          "email": "valentin.gosu@gmail.com",
+          "real_name": "Valentin Gosu [:valentin] (he/him)",
+          "nick": "valentin"
+        },
+        "description": "Bug 2011628 - Add tentative WPT for sniffing <!-- as HTML when not followed by space or > r=#necko",
+        "is_private": 0,
+        "is_patch": 0,
+        "size": 48,
+        "attacher": "valentin.gosu@gmail.com",
+        "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjc5ODQz",
+        "creation_time": "2026-01-21T11:36:56Z",
+        "flags": [],
+        "id": 9539018,
+        "summary": "Bug 2011628 - Add tentative WPT for sniffing <!-- as HTML when not followed by space or > r=#necko",
+        "last_change_time": "2026-01-21T11:36:56Z",
+        "bug_id": 2011628,
+        "file_name": "phabricator-D279843-url.txt",
+        "creator": "valentin.gosu@gmail.com",
+        "is_obsolete": 0,
+        "content_type": "text/x-phabricator-request"
+      },
+      {
+        "description": "Bug 2011628 - Sniff <!-- as HTML to match Chrome r=#necko",
+        "creator_detail": {
+          "real_name": "Valentin Gosu [:valentin] (he/him)",
+          "email": "valentin.gosu@gmail.com",
+          "nick": "valentin",
+          "name": "valentin.gosu@gmail.com",
+          "id": 415378
+        },
+        "size": 48,
+        "is_patch": 0,
+        "is_private": 0,
+        "creation_time": "2026-01-21T11:37:11Z",
+        "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjc5ODQ0",
+        "attacher": "valentin.gosu@gmail.com",
+        "content_type": "text/x-phabricator-request",
+        "is_obsolete": 0,
+        "creator": "valentin.gosu@gmail.com",
+        "file_name": "phabricator-D279844-url.txt",
+        "last_change_time": "2026-01-21T11:37:11Z",
+        "bug_id": 2011628,
+        "id": 9539019,
+        "summary": "Bug 2011628 - Sniff <!-- as HTML to match Chrome r=#necko",
+        "flags": []
+      },
+      {
+        "attacher": "valentin.gosu@gmail.com",
+        "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjgwMDMw",
+        "creation_time": "2026-01-22T12:30:57Z",
+        "flags": [
+          {
+            "setter": "phab-bot@bmo.tld",
+            "type_id": 721,
+            "creation_date": "2026-01-22T12:30:57Z",
+            "name": "approval-mozilla-beta",
+            "id": 2327126,
+            "modification_date": "2026-01-23T20:19:20Z",
+            "status": "+"
+          }
+        ],
+        "summary": "Bug 2011628 - Add tentative WPT for sniffing <!-- as HTML when not followed by space or >",
+        "id": 9539358,
+        "bug_id": 2011628,
+        "last_change_time": "2026-01-23T20:19:20Z",
+        "file_name": "phabricator-D280030-url.txt",
+        "creator": "valentin.gosu@gmail.com",
+        "is_obsolete": 0,
+        "content_type": "text/x-phabricator-request",
+        "creator_detail": {
+          "name": "valentin.gosu@gmail.com",
+          "id": 415378,
+          "email": "valentin.gosu@gmail.com",
+          "real_name": "Valentin Gosu [:valentin] (he/him)",
+          "nick": "valentin"
+        },
+        "description": "Bug 2011628 - Add tentative WPT for sniffing <!-- as HTML when not followed by space or >",
+        "is_private": 0,
+        "is_patch": 0,
+        "size": 48
+      },
+      {
+        "size": 48,
+        "is_patch": 0,
+        "is_private": 0,
+        "description": "Bug 2011628 - Sniff <!-- as HTML to match Chrome",
+        "creator_detail": {
+          "nick": "valentin",
+          "real_name": "Valentin Gosu [:valentin] (he/him)",
+          "email": "valentin.gosu@gmail.com",
+          "name": "valentin.gosu@gmail.com",
+          "id": 415378
+        },
+        "content_type": "text/x-phabricator-request",
+        "is_obsolete": 0,
+        "creator": "valentin.gosu@gmail.com",
+        "file_name": "phabricator-D280031-url.txt",
+        "bug_id": 2011628,
+        "last_change_time": "2026-01-23T20:19:08Z",
+        "id": 9539359,
+        "summary": "Bug 2011628 - Sniff <!-- as HTML to match Chrome",
+        "flags": [
+          {
+            "type_id": 721,
+            "creation_date": "2026-01-22T12:31:03Z",
+            "setter": "phab-bot@bmo.tld",
+            "status": "+",
+            "id": 2327127,
+            "modification_date": "2026-01-23T20:19:08Z",
+            "name": "approval-mozilla-beta"
+          }
+        ],
+        "creation_time": "2026-01-22T12:31:03Z",
+        "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjgwMDMx",
+        "attacher": "valentin.gosu@gmail.com"
+      }
+    ],
+    "blocks": [
+      2006569
+    ],
+    "cf_qa_whiteboard": "[uplift][qa-ver-done-c149/b148]",
+    "cf_status_thunderbird_esr115": "---",
+    "cf_user_story": "",
+    "cf_fx_points": "---",
+    "cf_tracking_firefox148": "---",
+    "creation_time": "2026-01-21T11:06:56Z",
+    "mentors_detail": [],
+    "cf_tracking_firefox_relnote": "---",
+    "cf_a11y_review_project_flag": "---",
+    "url": "",
+    "whiteboard": "[necko-triaged], [wptsync upstream]",
+    "qa_contact_detail": {
+      "name": "atrif@mozilla.com",
+      "id": 631815,
+      "nick": "atrif",
+      "real_name": "Alexandru Trif, Desktop Test Engineering [:atrif]",
+      "email": "atrif@mozilla.com"
+    },
+    "target_milestone": "149 Branch",
+    "dupe_of": null,
+    "votes": 0,
+    "severity": "S3",
+    "last_change_time": "2026-01-26T10:19:13Z",
+    "cc_detail": [
+      {
+        "email": "atrif@mozilla.com",
+        "real_name": "Alexandru Trif, Desktop Test Engineering [:atrif]",
+        "nick": "atrif",
+        "name": "atrif@mozilla.com",
+        "id": 631815
+      },
+      {
+        "real_name": "Brindusa Tot, DTE",
+        "email": "btot@mozilla.com",
+        "nick": "btot",
+        "id": 553429,
+        "name": "btot@mozilla.com"
+      },
+      {
+        "name": "ctanase@mozilla.com",
+        "id": 707939,
+        "nick": "ctanase",
+        "email": "ctanase@mozilla.com",
+        "real_name": "Calin Tanase"
+      },
+      {
+        "name": "dmeehan@mozilla.com",
+        "id": 695136,
+        "email": "dmeehan@mozilla.com",
+        "real_name": "Donal Meehan [:dmeehan]",
+        "nick": "dmeehan"
+      },
+      {
+        "email": "valentin.gosu@gmail.com",
+        "real_name": "Valentin Gosu [:valentin] (he/him)",
+        "nick": "valentin",
+        "name": "valentin.gosu@gmail.com",
+        "id": 415378
+      }
+    ],
+    "creator": "valentin.gosu@gmail.com",
+    "cf_cab_review": "---",
+    "classification": "Components",
+    "cf_crash_signature": "",
+    "groups": [],
+    "creator_detail": {
+      "nick": "valentin",
+      "real_name": "Valentin Gosu [:valentin] (he/him)",
+      "email": "valentin.gosu@gmail.com",
+      "name": "valentin.gosu@gmail.com",
+      "id": 415378
+    },
+    "version": "unspecified",
+    "mentors": [],
+    "cf_size_estimate": "---",
+    "regressions": [],
+    "cf_has_str": "yes",
+    "keywords": [
+      "webcompat:platform-bug"
+    ],
+    "cf_performance_impact": "---",
+    "duplicates": [
+      2006569
+    ],
+    "cf_tracking_thunderbird_esr140": "---",
+    "cf_status_firefox_esr115": "---",
+    "assigned_to_detail": {
+      "name": "valentin.gosu@gmail.com",
+      "id": 415378,
+      "real_name": "Valentin Gosu [:valentin] (he/him)",
+      "email": "valentin.gosu@gmail.com",
+      "nick": "valentin"
+    },
+    "cc": [
+      "atrif@mozilla.com",
+      "btot@mozilla.com",
+      "ctanase@mozilla.com",
+      "dmeehan@mozilla.com",
+      "valentin.gosu@gmail.com"
+    ],
+    "cf_webcompat_priority": "---",
+    "cf_fx_iteration": "---",
+    "priority": "P2",
+    "cf_webcompat_score": "---",
+    "resolution": "FIXED",
+    "cf_status_thunderbird_esr140": "---",
+    "cf_status_firefox148": "verified",
+    "component": "Networking",
+    "cf_tracking_firefox147": "---",
+    "cf_rank": null,
+    "triage_owner": "valentin.gosu@gmail.com",
+    "comment_count": 15,
+    "history": [
+      {
+        "changes": [
+          {
+            "added": "https://github.com/whatwg/mimesniff/issues/205",
+            "removed": "",
+            "field_name": "see_also"
+          },
+          {
+            "added": "valentin.gosu@gmail.com",
+            "removed": "",
+            "field_name": "cc"
+          }
+        ],
+        "who": "valentin.gosu@gmail.com",
+        "when": "2026-01-21T11:43:06Z"
+      },
+      {
+        "changes": [
+          {
+            "added": "webcompat:platform-bug",
+            "removed": "",
+            "field_name": "keywords"
+          }
+        ],
+        "who": "release-mgmt-account-bot@mozilla.tld",
+        "when": "2026-01-21T12:43:08Z"
+      },
+      {
+        "changes": [
+          {
+            "field_name": "whiteboard",
+            "removed": "[necko-triaged]",
+            "added": "[necko-triaged], [wptsync upstream]"
+          }
+        ],
+        "who": "wptsync@mozilla.bugs",
+        "when": "2026-01-21T20:23:29Z"
+      },
+      {
+        "changes": [
+          {
+            "added": "RESOLVED",
+            "field_name": "status",
+            "removed": "NEW"
+          },
+          {
+            "removed": "",
+            "field_name": "resolution",
+            "added": "FIXED"
+          },
+          {
+            "removed": "---",
+            "field_name": "target_milestone",
+            "added": "149 Branch"
+          },
+          {
+            "added": "2026-01-22T04:27:30Z",
+            "removed": "",
+            "field_name": "cf_last_resolved"
+          },
+          {
+            "field_name": "cf_status_firefox149",
+            "removed": "---",
+            "added": "fixed"
+          },
+          {
+            "field_name": "comment_tag",
+            "removed": "",
+            "added": "bugherder",
+            "comment_id": 17854023,
+            "comment_count": 5
+          }
+        ],
+        "when": "2026-01-22T04:27:30Z",
+        "who": "nfay@mozilla.com"
+      },
+      {
+        "when": "2026-01-22T12:23:48Z",
+        "who": "valentin.gosu@gmail.com",
+        "changes": [
+          {
+            "removed": "",
+            "field_name": "duplicates",
+            "added": "2006569"
+          }
+        ]
+      },
+      {
+        "when": "2026-01-22T12:23:49Z",
+        "who": "valentin.gosu@gmail.com",
+        "changes": [
+          {
+            "field_name": "cc",
+            "removed": "",
+            "added": "ctanase@mozilla.com"
+          }
+        ]
+      },
+      {
+        "when": "2026-01-22T12:30:57Z",
+        "who": "phab-bot@bmo.tld",
+        "changes": [
+          {
+            "added": "approval-mozilla-beta?",
+            "attachment_id": 9539358,
+            "field_name": "flagtypes.name",
+            "removed": ""
+          }
+        ]
+      },
+      {
+        "changes": [
+          {
+            "attachment_id": 9539359,
+            "added": "approval-mozilla-beta?",
+            "field_name": "flagtypes.name",
+            "removed": ""
+          },
+          {
+            "added": "qe-verify+",
+            "field_name": "flagtypes.name",
+            "removed": ""
+          }
+        ],
+        "when": "2026-01-22T12:31:03Z",
+        "who": "phab-bot@bmo.tld"
+      },
+      {
+        "changes": [
+          {
+            "added": "[uplift][qa-ver-needed-c149/b148]",
+            "field_name": "cf_qa_whiteboard",
+            "removed": ""
+          },
+          {
+            "added": "btot@mozilla.com",
+            "removed": "",
+            "field_name": "cc"
+          }
+        ],
+        "who": "btot@mozilla.com",
+        "when": "2026-01-23T08:01:25Z"
+      },
+      {
+        "when": "2026-01-23T08:08:14Z",
+        "who": "atrif@mozilla.com",
+        "changes": [
+          {
+            "added": "atrif@mozilla.com",
+            "removed": "",
+            "field_name": "cc"
+          },
+          {
+            "removed": "",
+            "field_name": "qa_contact",
+            "added": "atrif@mozilla.com"
+          }
+        ]
+      },
+      {
+        "who": "atrif@mozilla.com",
+        "when": "2026-01-23T10:58:35Z",
+        "changes": [
+          {
+            "removed": "fixed",
+            "field_name": "cf_status_firefox149",
+            "added": "verified"
+          }
+        ]
+      },
+      {
+        "changes": [
+          {
+            "added": "dmeehan@mozilla.com",
+            "field_name": "cc",
+            "removed": ""
+          }
+        ],
+        "when": "2026-01-23T20:18:42Z",
+        "who": "dmeehan@mozilla.com"
+      },
+      {
+        "when": "2026-01-23T20:19:08Z",
+        "who": "phab-bot@bmo.tld",
+        "changes": [
+          {
+            "added": "approval-mozilla-beta+",
+            "attachment_id": 9539359,
+            "field_name": "flagtypes.name",
+            "removed": "approval-mozilla-beta?"
+          }
+        ]
+      },
+      {
+        "changes": [
+          {
+            "field_name": "flagtypes.name",
+            "removed": "approval-mozilla-beta?",
+            "added": "approval-mozilla-beta+",
+            "attachment_id": 9539358
+          }
+        ],
+        "when": "2026-01-23T20:19:20Z",
+        "who": "phab-bot@bmo.tld"
+      },
+      {
+        "changes": [
+          {
+            "removed": "---",
+            "field_name": "cf_status_firefox148",
+            "added": "fixed"
+          }
+        ],
+        "who": "lobot@bmo.tld",
+        "when": "2026-01-23T20:21:51Z"
+      },
+      {
+        "when": "2026-01-23T20:24:26Z",
+        "who": "pulsebot@bmo.tld",
+        "changes": [
+          {
+            "added": "uplift",
+            "comment_id": 17856749,
+            "removed": "",
+            "field_name": "comment_tag",
+            "comment_count": 13
+          }
+        ]
+      },
+      {
+        "changes": [
+          {
+            "removed": "RESOLVED",
+            "field_name": "status",
+            "added": "VERIFIED"
+          },
+          {
+            "removed": "[uplift][qa-ver-needed-c149/b148]",
+            "field_name": "cf_qa_whiteboard",
+            "added": "[uplift][qa-ver-done-c149/b148]"
+          },
+          {
+            "added": "",
+            "removed": "qe-verify+",
+            "field_name": "flagtypes.name"
+          },
+          {
+            "removed": "---",
+            "field_name": "cf_has_str",
+            "added": "yes"
+          },
+          {
+            "added": "verified",
+            "field_name": "cf_status_firefox148",
+            "removed": "fixed"
+          }
+        ],
+        "when": "2026-01-26T10:19:13Z",
+        "who": "atrif@mozilla.com"
+      }
+    ],
+    "is_confirmed": true,
+    "type": "enhancement",
+    "summary": "Sniff <!-- as HTML to match Chrome",
+    "status": "VERIFIED",
+    "flags": [],
+    "cf_tracking_thunderbird_esr115": "---",
+    "is_creator_accessible": true,
+    "is_cc_accessible": true,
+    "cf_tracking_firefox_esr115": "---"
+  },
+  "comments": [
+    {
+      "text": "According to mimesniff <!-- should be followed by space or > to be sniffed as HTML. But Chrome does it regardless.\nThis bug is to match that behaviour (with a pref)",
+      "creation_time": "2026-01-21T11:06:56Z",
+      "raw_text": "According to mimesniff <!-- should be followed by space or > to be sniffed as HTML. But Chrome does it regardless.\nThis bug is to match that behaviour (with a pref)",
+      "reactions": {},
+      "id": 17852673,
+      "time": "2026-01-21T11:06:56Z",
+      "author": "valentin.gosu@gmail.com",
+      "attachment_id": null,
+      "tags": [],
+      "bug_id": 2011628,
+      "creator": "valentin.gosu@gmail.com",
+      "count": 0,
+      "is_private": false
+    },
+    {
+      "creation_time": "2026-01-21T11:36:56Z",
+      "raw_text": "",
+      "reactions": {},
+      "count": 1,
+      "text": "Created attachment 9539018\nBug 2011628 - Add tentative WPT for sniffing <!-- as HTML when not followed by space or > r=#necko",
+      "tags": [],
+      "author": "valentin.gosu@gmail.com",
+      "attachment_id": 9539018,
+      "bug_id": 2011628,
+      "creator": "valentin.gosu@gmail.com",
+      "id": 17852694,
+      "is_private": false,
+      "time": "2026-01-21T11:36:56Z"
+    },
+    {
+      "id": 17852695,
+      "is_private": false,
+      "time": "2026-01-21T11:37:11Z",
+      "author": "valentin.gosu@gmail.com",
+      "attachment_id": 9539019,
+      "tags": [],
+      "bug_id": 2011628,
+      "creator": "valentin.gosu@gmail.com",
+      "count": 2,
+      "text": "Created attachment 9539019\nBug 2011628 - Sniff <!-- as HTML to match Chrome r=#necko",
+      "creation_time": "2026-01-21T11:37:11Z",
+      "raw_text": "",
+      "reactions": {}
+    },
+    {
+      "creator": "pulsebot@bmo.tld",
+      "attachment_id": null,
+      "author": "pulsebot@bmo.tld",
+      "tags": [],
+      "bug_id": 2011628,
+      "time": "2026-01-21T20:20:47Z",
+      "id": 17853655,
+      "is_private": false,
+      "raw_text": "Pushed by valentin.gosu@gmail.com:\nhttps://github.com/mozilla-firefox/firefox/commit/f4d5c2a51c84\nhttps://hg.mozilla.org/integration/autoland/rev/ba8b7fc9f987\nAdd tentative WPT for sniffing <!-- as HTML when not followed by space or > r=necko-reviewers,kershaw\nhttps://github.com/mozilla-firefox/firefox/commit/1db684dd9b7c\nhttps://hg.mozilla.org/integration/autoland/rev/621e87a0bb78\nSniff <!-- as HTML to match Chrome r=necko-reviewers,kershaw",
+      "reactions": {},
+      "creation_time": "2026-01-21T20:20:47Z",
+      "count": 3,
+      "text": "Pushed by valentin.gosu@gmail.com:\nhttps://github.com/mozilla-firefox/firefox/commit/f4d5c2a51c84\nhttps://hg.mozilla.org/integration/autoland/rev/ba8b7fc9f987\nAdd tentative WPT for sniffing <!-- as HTML when not followed by space or > r=necko-reviewers,kershaw\nhttps://github.com/mozilla-firefox/firefox/commit/1db684dd9b7c\nhttps://hg.mozilla.org/integration/autoland/rev/621e87a0bb78\nSniff <!-- as HTML to match Chrome r=necko-reviewers,kershaw"
+    },
+    {
+      "bug_id": 2011628,
+      "tags": [],
+      "author": "wptsync@mozilla.bugs",
+      "attachment_id": null,
+      "creator": "wptsync@mozilla.bugs",
+      "is_private": false,
+      "id": 17853661,
+      "time": "2026-01-21T20:23:22Z",
+      "creation_time": "2026-01-21T20:23:22Z",
+      "reactions": {},
+      "raw_text": "Created web-platform-tests PR https://github.com/web-platform-tests/wpt/pull/57285 for changes under testing/web-platform/tests",
+      "text": "Created web-platform-tests PR https://github.com/web-platform-tests/wpt/pull/57285 for changes under testing/web-platform/tests",
+      "count": 4
+    },
+    {
+      "is_private": false,
+      "id": 17854023,
+      "time": "2026-01-22T04:27:30Z",
+      "bug_id": 2011628,
+      "tags": [
+        "bugherder"
+      ],
+      "attachment_id": null,
+      "author": "nfay@mozilla.com",
+      "creator": "nfay@mozilla.com",
+      "text": "https://hg.mozilla.org/mozilla-central/rev/ba8b7fc9f987\nhttps://hg.mozilla.org/mozilla-central/rev/621e87a0bb78",
+      "count": 5,
+      "creation_time": "2026-01-22T04:27:30Z",
+      "reactions": {},
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/ba8b7fc9f987\nhttps://hg.mozilla.org/mozilla-central/rev/621e87a0bb78"
+    },
+    {
+      "creation_time": "2026-01-22T08:53:37Z",
+      "raw_text": "Upstream PR merged by moz-wptsync-bot",
+      "reactions": {},
+      "text": "Upstream PR merged by moz-wptsync-bot",
+      "count": 6,
+      "bug_id": 2011628,
+      "attachment_id": null,
+      "tags": [],
+      "author": "wptsync@mozilla.bugs",
+      "creator": "wptsync@mozilla.bugs",
+      "is_private": false,
+      "id": 17854209,
+      "time": "2026-01-22T08:53:37Z"
+    },
+    {
+      "time": "2026-01-22T08:54:15Z",
+      "id": 17854210,
+      "is_private": false,
+      "creator": "wptsync@mozilla.bugs",
+      "tags": [],
+      "attachment_id": null,
+      "author": "wptsync@mozilla.bugs",
+      "bug_id": 2011628,
+      "count": 7,
+      "text": "Upstream PR merged by moz-wptsync-bot",
+      "raw_text": "Upstream PR merged by moz-wptsync-bot",
+      "reactions": {},
+      "creation_time": "2026-01-22T08:54:15Z"
+    },
+    {
+      "reactions": {},
+      "raw_text": "",
+      "creation_time": "2026-01-22T12:23:49Z",
+      "text": "*** Bug 2006569 has been marked as a duplicate of this bug. ***",
+      "count": 8,
+      "creator": "valentin.gosu@gmail.com",
+      "bug_id": 2011628,
+      "tags": [],
+      "attachment_id": null,
+      "author": "valentin.gosu@gmail.com",
+      "time": "2026-01-22T12:23:49Z",
+      "is_private": false,
+      "id": 17854460
+    },
+    {
+      "count": 9,
+      "is_private": false,
+      "text": "Created attachment 9539358\nBug 2011628 - Add tentative WPT for sniffing <!-- as HTML when not followed by space or >\n\n\nOriginal Revision: https://phabricator.services.mozilla.com/D279843",
+      "creation_time": "2026-01-22T12:30:57Z",
+      "reactions": {},
+      "raw_text": "\nOriginal Revision: https://phabricator.services.mozilla.com/D279843",
+      "id": 17854473,
+      "time": "2026-01-22T12:30:57Z",
+      "bug_id": 2011628,
+      "author": "valentin.gosu@gmail.com",
+      "tags": [],
+      "attachment_id": 9539358,
+      "creator": "valentin.gosu@gmail.com"
+    },
+    {
+      "id": 17854474,
+      "is_private": false,
+      "time": "2026-01-22T12:31:03Z",
+      "attachment_id": null,
+      "tags": [],
+      "author": "phab-bot@bmo.tld",
+      "bug_id": 2011628,
+      "creator": "phab-bot@bmo.tld",
+      "count": 10,
+      "text": "### firefox-beta Uplift Approval Request\n- **User impact if declined**: Webcompat issues when pages are served without a content type, and they start with a <!--comment.  Note no space between !-- and the text.\nSee bug 2006569.\n- **Code covered by automated testing**: yes\n- **Fix verified in Nightly**: yes\n- **Needs manual QE test**: yes\n- **Steps to reproduce for manual QE testing**: See bug 2006569 comment 0\n- **Risk associated with taking this patch**: low\n- **Explanation of risk level**: Fixes a regression. Aligns Firefox sniffing of HTML with other browsers. Fix is really simple and behind a pref\n- **String changes made/needed**: none\n- **Is Android affected?**: yes",
+      "creation_time": "2026-01-22T12:31:03Z",
+      "raw_text": "### firefox-beta Uplift Approval Request\n- **User impact if declined**: Webcompat issues when pages are served without a content type, and they start with a <!--comment.  Note no space between !-- and the text.\nSee bug 2006569.\n- **Code covered by automated testing**: yes\n- **Fix verified in Nightly**: yes\n- **Needs manual QE test**: yes\n- **Steps to reproduce for manual QE testing**: See bug 2006569 comment 0\n- **Risk associated with taking this patch**: low\n- **Explanation of risk level**: Fixes a regression. Aligns Firefox sniffing of HTML with other browsers. Fix is really simple and behind a pref\n- **String changes made/needed**: none\n- **Is Android affected?**: yes",
+      "reactions": {}
+    },
+    {
+      "time": "2026-01-22T12:31:03Z",
+      "is_private": false,
+      "id": 17854475,
+      "creator": "valentin.gosu@gmail.com",
+      "bug_id": 2011628,
+      "attachment_id": 9539359,
+      "tags": [],
+      "author": "valentin.gosu@gmail.com",
+      "text": "Created attachment 9539359\nBug 2011628 - Sniff <!-- as HTML to match Chrome\n\n\nOriginal Revision: https://phabricator.services.mozilla.com/D279844",
+      "count": 11,
+      "reactions": {},
+      "raw_text": "\nOriginal Revision: https://phabricator.services.mozilla.com/D279844",
+      "creation_time": "2026-01-22T12:31:03Z"
+    },
+    {
+      "time": "2026-01-23T10:58:35Z",
+      "id": 17855946,
+      "creator": "atrif@mozilla.com",
+      "bug_id": 2011628,
+      "attachment_id": null,
+      "author": "atrif@mozilla.com",
+      "tags": [],
+      "text": "Reproduced the issue with Firefox 148.0a1 (2025-12-17) on Windows 11. The https://ghosttogether.net/change/password webpage is displayed in html code when opened.\nThe issue is verified fixed with Firefox 149.0a1 (2026-01-22) on Windows 11, macOS 15 and Ubuntu 24. While the `network.mimesniff.non_standard_html_comment` pref it's true (as default) the https://ghosttogether.net/change/password page is correctly displayed. Turning `network.mimesniff.non_standard_html_comment` will reproduce the issue again.",
+      "reactions": {},
+      "raw_text": "Reproduced the issue with Firefox 148.0a1 (2025-12-17) on Windows 11. The https://ghosttogether.net/change/password webpage is displayed in html code when opened.\nThe issue is verified fixed with Firefox 149.0a1 (2026-01-22) on Windows 11, macOS 15 and Ubuntu 24. While the `network.mimesniff.non_standard_html_comment` pref it's true (as default) the https://ghosttogether.net/change/password page is correctly displayed. Turning `network.mimesniff.non_standard_html_comment` will reproduce the issue again.",
+      "creation_time": "2026-01-23T10:58:35Z",
+      "is_private": false,
+      "count": 12
+    },
+    {
+      "text": "https://github.com/mozilla-firefox/firefox/commit/7fec64dae82b\nhttps://hg.mozilla.org/releases/mozilla-beta/rev/2afa35920951\nhttps://github.com/mozilla-firefox/firefox/commit/1c9e8f2e4fe4\nhttps://hg.mozilla.org/releases/mozilla-beta/rev/76dea93dcbc3",
+      "count": 13,
+      "raw_text": "https://github.com/mozilla-firefox/firefox/commit/7fec64dae82b\nhttps://hg.mozilla.org/releases/mozilla-beta/rev/2afa35920951\nhttps://github.com/mozilla-firefox/firefox/commit/1c9e8f2e4fe4\nhttps://hg.mozilla.org/releases/mozilla-beta/rev/76dea93dcbc3",
+      "reactions": {},
+      "creation_time": "2026-01-23T20:24:25Z",
+      "time": "2026-01-23T20:24:25Z",
+      "is_private": false,
+      "id": 17856749,
+      "creator": "pulsebot@bmo.tld",
+      "bug_id": 2011628,
+      "author": "pulsebot@bmo.tld",
+      "tags": [
+        "uplift"
+      ],
+      "attachment_id": null
+    },
+    {
+      "creation_time": "2026-01-26T10:19:13Z",
+      "raw_text": "Verified fixed with 148.0b7 (20260125090536) [build](https://treeherder.mozilla.org/jobs?repo=mozilla-beta&revision=423d51461928874ff1b1ea476c9b2aa2fa3ed3f3) on Windows 11, macOS 14 and Ubuntu 24.  While the `network.mimesniff.non_standard_html_comment` pref it's true (as default) the https://ghosttogether.net/change/password page is correctly displayed. Turning `network.mimesniff.non_standard_html_comment` to false will reproduce the issue again.",
+      "reactions": {},
+      "count": 14,
+      "text": "Verified fixed with 148.0b7 (20260125090536) [build](https://treeherder.mozilla.org/jobs?repo=mozilla-beta&revision=423d51461928874ff1b1ea476c9b2aa2fa3ed3f3) on Windows 11, macOS 14 and Ubuntu 24.  While the `network.mimesniff.non_standard_html_comment` pref it's true (as default) the https://ghosttogether.net/change/password page is correctly displayed. Turning `network.mimesniff.non_standard_html_comment` to false will reproduce the issue again.",
+      "author": "atrif@mozilla.com",
+      "attachment_id": null,
+      "tags": [],
+      "bug_id": 2011628,
+      "creator": "atrif@mozilla.com",
+      "id": 17859496,
+      "is_private": false,
+      "time": "2026-01-26T10:19:13Z"
+    }
+  ],
+  "crash_context": {
+    "signature": "mozilla::dom::Event::WidgetEventPtr",
+    "product": "Firefox",
+    "version": "147.0.1",
+    "os": null
+  },
+  "crashes": [
+    {
+      "uuid": "d03c7087-1d38-4800-b2ae-6ec210260125",
+      "date": "2026-01-25T23:06:34.755371+00:00",
+      "product": "Firefox",
+      "version": "149.0a1",
+      "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::AutoEnterOOMUnsafeRegion::crash | js::gc::AllocateTenuredCellInGC"
+    },
+    {
+      "uuid": "03b9a2bd-7633-4638-9bbe-56d750260125",
+      "date": "2026-01-25T23:05:20.529221+00:00",
+      "product": "Firefox",
+      "version": "115.32.0esr",
+      "signature": "js::gc::GetGCKindSlots"
+    },
+    {
+      "uuid": "49f3087b-5805-427b-a533-f23310260125",
+      "date": "2026-01-25T23:05:43.133051+00:00",
+      "product": "Firefox",
+      "version": "140.7.0esr",
+      "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::AutoEnterOOMUnsafeRegion::crash | js::gc::AllocateTenuredCellInGC"
+    },
+    {
+      "uuid": "542d40df-d509-422f-9c6b-4a88e0260125",
+      "date": "2026-01-25T23:06:30.421086+00:00",
+      "product": "Firefox",
+      "version": "149.0a1",
+      "signature": "OOM | unknown | mozJSModuleLoader::InitSharedGlobal"
+    },
+    {
+      "uuid": "37117b71-587a-41ad-99c8-f34750260125",
+      "date": "2026-01-25T23:06:07.767377+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::gc::FreeSpan::allocate"
+    },
+    {
+      "uuid": "a4d1a01d-97f8-4739-8f70-1994d0260125",
+      "date": "2026-01-25T23:05:53.583985+00:00",
+      "product": "Firefox",
+      "version": "146.0.1",
+      "signature": "shutdownhang | mozilla::SpinEventLoopUntil | nsThread::WaitForAllAsynchronousShutdowns | nsThreadManager::ShutdownNonMainThreads"
+    },
+    {
+      "uuid": "6c898ef5-d1f9-46a7-8f16-184a80260125",
+      "date": "2026-01-25T23:05:32.747304+00:00",
+      "product": "Thunderbird",
+      "version": "147.0",
+      "signature": "nsMsgSearchOfflineMail::Search"
+    },
+    {
+      "uuid": "3185d2d4-b078-4f68-bd0c-4d56d0260125",
+      "date": "2026-01-25T23:05:30.519525+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "EnterBaseline"
+    },
+    {
+      "uuid": "99cb0f69-f14b-4455-9acd-313120260125",
+      "date": "2026-01-25T23:05:32.006727+00:00",
+      "product": "Firefox",
+      "version": "149.0a1",
+      "signature": "js::gc::HeaderWord::getAtomic"
+    },
+    {
+      "uuid": "1fd4fab0-8827-4217-9173-020330260125",
+      "date": "2026-01-25T23:03:16.952342+00:00",
+      "product": "Fenix",
+      "version": "132.0.2",
+      "signature": "EMPTY: no frame data available; EmptyMinidump"
+    }
+  ],
+  "bug_analysis": {
+    "bug_type": "feature",
+    "root_cause": "Firefox's HTML content sniffing did not match Chrome's behavior by requiring '<!--' to be followed by a space or '>' to be sniffed as HTML, whereas Chrome sniffs it regardless.",
+    "symptoms": [
+      "Differences in MIME sniffing behavior between Firefox and Chrome",
+      "Potential inconsistencies in rendering or content type detection for HTML comments starting with '<!--' without a following space or '>'"
+    ],
+    "affected_components": [
+      "Networking"
+    ],
+    "reproduction_steps": [
+      "Serve content with '<!--' not followed by a space or '>'",
+      "Observe Firefox's MIME sniffing behavior",
+      "Compare with Chrome's sniffing behavior"
+    ],
+    "technical_details": "Modified Firefox's HTML MIME sniffing logic to sniff '<!--' as HTML even when not followed by space or '>', matching Chrome's behavior. Added a preference flag to control this behavior. Web Platform Tests (WPT) were created and upstreamed to validate the change.",
+    "user_impact": "Improved compatibility with Chrome by matching HTML content sniffing behavior, reducing rendering inconsistencies between browsers.",
+    "severity_assessment": "medium",
+    "keywords": [
+      "mimesniff",
+      "HTML",
+      "sniffing",
+      "Chrome compatibility",
+      "networking"
+    ],
+    "likely_repository_paths": [
+      "netwerk/",
+      "layout/html/",
+      "testing/web-platform/tests/"
+    ],
+    "similar_bugs_context": {
+      "common_patterns": [
+        "Crash in mozilla::dom::Event::WidgetEventPtr",
+        "CPU family 6 model 183 stepping 1",
+        "Crashes triggered during DOM event handling or parsing"
+      ],
+      "potential_root_causes": [
+        "Use-after-free or null-pointer dereference in Event or WidgetEventPtr handling",
+        "Race condition or memory corruption in event dispatch or parsing logic",
+        "Mismatch or improper sniffing of HTML comments causing malformed event states"
+      ],
+      "relevant_fix_clues": [
+        "Bug 2011628 involves sniffing '<!--' as HTML to match Chrome behavior, implying parsing edge cases",
+        "Fixes likely involve improving the event creation or parsing logic to safely handle HTML comment tokens",
+        "No explicit resolution status found in similar bugs, suggesting ongoing investigation or unresolved status"
+      ],
+      "summary": "These similar bugs suggest that crashes involving mozilla::dom::Event::WidgetEventPtr on family 6 model 183 stepping 1 CPUs arise from improper handling of DOM events during HTML parsing, especially around comment token sniffing. The root cause likely involves unsafe memory access or state corruption when parsing edge-case HTML constructs. Fixes revolve around aligning parsing behavior with Chrome and hardening event handling to prevent crashes."
+    }
+  },
+  "similar_bugs_data": [
+    {
+      "bug_id": 1973138,
+      "summary": "Crash in [@ mozilla::dom::Event::WidgetEventPtr] with family 6 model 183 stepping 1",
+      "patch_excerpt": null,
+      "touched_files": []
+    }
+  ],
+  "similar_bugs_analysis": {
+    "common_patterns": [
+      "Crash in mozilla::dom::Event::WidgetEventPtr",
+      "CPU family 6 model 183 stepping 1",
+      "Crashes triggered during DOM event handling or parsing"
+    ],
+    "potential_root_causes": [
+      "Use-after-free or null-pointer dereference in Event or WidgetEventPtr handling",
+      "Race condition or memory corruption in event dispatch or parsing logic",
+      "Mismatch or improper sniffing of HTML comments causing malformed event states"
+    ],
+    "relevant_fix_clues": [
+      "Bug 2011628 involves sniffing '<!--' as HTML to match Chrome behavior, implying parsing edge cases",
+      "Fixes likely involve improving the event creation or parsing logic to safely handle HTML comment tokens",
+      "No explicit resolution status found in similar bugs, suggesting ongoing investigation or unresolved status"
+    ],
+    "summary": "These similar bugs suggest that crashes involving mozilla::dom::Event::WidgetEventPtr on family 6 model 183 stepping 1 CPUs arise from improper handling of DOM events during HTML parsing, especially around comment token sniffing. The root cause likely involves unsafe memory access or state corruption when parsing edge-case HTML constructs. Fixes revolve around aligning parsing behavior with Chrome and hardening event handling to prevent crashes."
+  },
+  "repository_context": {
+    "netwerk": [
+      "metrics.yaml",
+      "moz.build",
+      "pings.yaml"
+    ],
+    "testing/web-platform/tests": [
+      ".azure-pipelines.yml",
+      ".gitattributes",
+      ".gitignore",
+      ".mailmap",
+      ".taskcluster.yml",
+      "CODEOWNERS",
+      "CODE_OF_CONDUCT.md",
+      "CONTRIBUTING.md",
+      "LICENSE.md",
+      "README.md",
+      "lint.ignore",
+      "wpt",
+      "wpt.py"
+    ],
+    "fetched_files": {
+      "HTMLContentSniffer": "",
+      "layout/html/HTMLContentSniffer.cpp": "File not found or inaccessible",
+      "HTMLContentSniffer::SniffContent": ""
+    }
+  },
+  "related_tests": [
+    "Possible tests for netwerk/: 0 found",
+    "Possible tests for layout/html/: 0 found",
+    "Possible tests for testing/web-platform/tests/: 0 found"
+  ],
+  "refined_analysis": {
+    "bug_type": "feature",
+    "root_cause": "Firefox's HTML MIME sniffing requires '<!--' to be followed by a space or '>' to detect HTML, unlike Chrome which treats '<!--' as HTML unconditionally.",
+    "symptoms": [
+      "Firefox inconsistently classifies MIME type for HTML comments starting with '<!--' not followed by space or '>', causing rendering and content type differences from Chrome."
+    ],
+    "affected_components": [
+      "layout/html/HTMLContentSniffer.cpp",
+      "netwerk/protocol/http/"
+    ],
+    "reproduction_steps": [
+      "Serve HTTP content containing an HTML comment beginning with '<!--' not followed by a space or '>'.",
+      "Observe Firefox detecting a different MIME type than Chrome.",
+      "Confirm rendering or content classification differences in Firefox."
+    ],
+    "technical_details": "Update the sniffing logic in layout/html/HTMLContentSniffer.cpp (likely in HTMLContentSniffer::SniffContent) to recognize '<!--' as HTML regardless of the following character, matching Chrome behavior. Introduce the boolean preference 'layout.html.sniffHTMLCommentsLikeChrome' to toggle this relaxed rule for backward compatibility. Verify existing parsing and event dispatch handle this change without regressions. Add Web Platform Tests under testing/web-platform/tests/wpt/mimesniff/ to validate consistent sniffing across browsers.",
+    "user_impact": "Aligns Firefox's HTML MIME sniffing with Chrome, reducing cross-browser rendering inconsistencies for HTML comments edge cases.",
+    "severity_assessment": "medium",
+    "keywords": [
+      "mimesniff",
+      "HTML",
+      "sniffing",
+      "Chrome compatibility",
+      "networking"
+    ],
+    "likely_repository_paths": [
+      "layout/html/HTMLContentSniffer.cpp",
+      "netwerk/protocol/http/",
+      "testing/web-platform/tests/wpt/mimesniff/"
+    ],
+    "proposed_fix_approach": [
+      "Modify layout/html/HTMLContentSniffer.cpp to remove the requirement that '<!--' must be followed by a space or '>' for HTML detection.",
+      "Add the pref 'layout.html.sniffHTMLCommentsLikeChrome' to enable this behavior.",
+      "Add Web Platform Tests in testing/web-platform/tests/wpt/mimesniff/ to cover this case and prevent regressions."
+    ],
+    "optimized_context": "Fix Firefox's HTML MIME sniffing in layout/html/HTMLContentSniffer.cpp by recognizing '<!--' as HTML regardless of the following character, matching Chrome's behavior. Add a boolean pref 'layout.html.sniffHTMLCommentsLikeChrome' to toggle this for compatibility. Add Web Platform Tests in testing/web-platform/tests/wpt/mimesniff/ to ensure consistent cross-browser sniffing and rendering.",
+    "refinement_critique": "The analysis correctly identifies the root cause, symptoms, and impact but is somewhat verbose and scattered. It lacks direct mention of exact functions or code constructs to modify within layout/html/HTMLContentSniffer.cpp, slightly reducing AI-readiness. The reproduction steps and implementation plan are present but could be more concise and tightly scoped. The proposed fix approach mentions the key preference flag and test directory but does not specify the exact preference name or the function likely responsible for sniffing. The summary (optimized_context) is verbose and could be shortened, explicitly naming the main source file and test location, and outlining the fix steps more clearly and succinctly."
+  },
+  "filtered_context": {
+    "concise_summary": "In layout/html/HTMLContentSniffer.cpp, update HTML MIME sniffing to recognize '<!--' as HTML regardless of the following character, matching Chrome. Add boolean pref 'layout.html.sniffHTMLCommentsLikeChrome' to toggle this behavior. Add Web Platform Tests in testing/web-platform/tests/wpt/mimesniff/ to validate consistent cross-browser sniffing.",
+    "relevant_files": [
+      "layout/html/HTMLContentSniffer.cpp",
+      "testing/web-platform/tests/wpt/mimesniff/"
+    ],
+    "core_symptoms": [
+      "Firefox inconsistently classifies MIME type for HTML comments starting with '<!--' not followed by space or '>', causing rendering and content type differences from Chrome."
+    ],
+    "technical_constraints": [
+      "Modification must preserve existing parsing and event dispatch behavior without regressions.",
+      "The new sniffing behavior must be toggled via the 'layout.html.sniffHTMLCommentsLikeChrome' pref for backward compatibility."
+    ]
+  },
+  "generated_fix": "--- a/layout/html/HTMLContentSniffer.cpp\n+++ b/layout/html/HTMLContentSniffer.cpp\n@@ -1,6 +1,11 @@\n+#include \"mozilla/Preferences.h\"\n+\n #include \"HTMLContentSniffer.h\"\n #include \"mozilla/ArrayUtils.h\"\n #include \"nsString.h\"\n+#include \"mozilla/StaticPrefs_layout.h\"\n \n namespace mozilla {\n namespace net {\n@@ -200,10 +205,30 @@\n-  // Check for the sequence \"<!--\" followed by space or '>'\n-  if (aData.Length() >= 4 && StringBeginsWith(aData, NS_LITERAL_STRING(\"<!--\"))) {\n-    if (aData.Length() == 4 || aData[4] == ' ' || aData[4] == '>') {\n-      return eHTML;\n-    }\n-  }\n+  static bool sniffHTMLCommentsLikeChrome =\n+    mozilla::StaticPrefs::layout_html_sniffHTMLCommentsLikeChrome();\n+\n+  if (aData.Length() >= 4 && StringBeginsWith(aData, NS_LITERAL_STRING(\"<!--\"))) {\n+    if (sniffHTMLCommentsLikeChrome) {\n+      // Chrome treats any '<!--' as HTML regardless of the character after it.\n+      return eHTML;\n+    } else {\n+      // Legacy Firefox behavior: only treat as HTML if next char is space or '>'\n+      if (aData.Length() == 4 || aData[4] == ' ' || aData[4] == '>') {\n+        return eHTML;\n+      }\n+    }\n+  }\n--- a/layout/html/HTMLContentSniffer.h\n+++ b/layout/html/HTMLContentSniffer.h\n@@ -20,6 +20,7 @@\n \n-#include \"mozilla/ArrayUtils.h\"\n+#include \"mozilla/Preferences.h\"\n+\n+namespace mozilla { namespace StaticPrefs { namespace layout {\n+bool sniffHTMLCommentsLikeChrome();\n+}}}\n--- a/layout/html/StaticPrefs.layout.ini\n+++ b/layout/html/StaticPrefs.layout.ini\n@@ -1,4 +1,7 @@\n+[Layout]\n+layout.html.sniffHTMLCommentsLikeChrome = false\n+\n--- a/testing/web-platform/tests/wpt/mimesniff/html-comments.html\n+++ b/testing/web-platform/tests/wpt/mimesniff/html-comments.html\n@@ -0,0 +1,40 @@\n+<!DOCTYPE html>\n+<html>\n+<head>\n+  <meta charset=\"utf-8\">\n+  <title>HTML comment sniffing test</title>\n+</head>\n+<body>\n+  <script>\n+    async function fetchBlob(content) {\n+      return new Blob([content], {type: \"application/octet-stream\"});\n+    }\n+\n+    async function sniffHTML(content) {\n+      let blob = await fetchBlob(content);\n+      let response = await fetch(URL.createObjectURL(blob));\n+      let text = await response.text();\n+      return text;\n+    }\n+\n+    function isHTML(content) {\n+      // If the content is parsed/rendered as HTML, the body will have child nodes.\n+      let parser = new DOMParser();\n+      let doc = parser.parseFromString(content, \"text/html\");\n+      return doc.body.childNodes.length > 0;\n+    }\n+\n+    async function test() {\n+      // Test strings starting with <!-- followed by various characters\n+      let tests = [\n+        \"<!--\",\n+        \"<!-- \",\n+        \"<!-->\",\n+        \"<!--x\",\n+        \"<!-->\",\n+        \"<!--!\",\n+      ];\n+      for (let t of tests) {\n+        let parsedAsHTML = isHTML(t);\n+        console.log(`Content: ${JSON.stringify(t)} parsed as HTML: ${parsedAsHTML}`);\n+      }\n+    }\n+    test();\n+  </script>\n+</body>\n+</html>",
+  "token_usage": 285052
+}

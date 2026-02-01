@@ -1,0 +1,295 @@
+{
+  "cf_status_firefox_esr140": "---",
+  "assigned_to": "sotaro.ikeda.g@gmail.com",
+  "attachments": [
+    {
+      "size": 48,
+      "is_private": 0,
+      "is_patch": 0,
+      "description": "Bug 1893364 - Add more profiler markers around video overlay handing",
+      "creator_detail": {
+        "name": "sotaro.ikeda.g@gmail.com",
+        "id": 434202,
+        "real_name": "Sotaro Ikeda [:sotaro]",
+        "email": "sotaro.ikeda.g@gmail.com",
+        "nick": "sotaro"
+      },
+      "file_name": "phabricator-D208577-url.txt",
+      "bug_id": 1893364,
+      "last_change_time": "2024-04-25T02:45:56Z",
+      "content_type": "text/x-phabricator-request",
+      "is_obsolete": 0,
+      "creator": "sotaro.ikeda.g@gmail.com",
+      "id": 9398537,
+      "summary": "Bug 1893364 - Add more profiler markers around video overlay handing",
+      "flags": [],
+      "creation_time": "2024-04-25T02:45:56Z",
+      "attacher": "sotaro.ikeda.g@gmail.com",
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjA4NTc3"
+    }
+  ],
+  "blocks": [
+    1954558
+  ],
+  "cf_qa_whiteboard": "",
+  "cf_status_thunderbird_esr115": "---",
+  "cf_user_story": "",
+  "cf_fx_points": "---",
+  "creation_time": "2024-04-25T02:36:22Z",
+  "cf_tracking_firefox148": "---",
+  "cf_tracking_firefox_relnote": "---",
+  "mentors_detail": [],
+  "cf_a11y_review_project_flag": "---",
+  "url": "",
+  "whiteboard": "",
+  "target_milestone": "127 Branch",
+  "dupe_of": null,
+  "votes": 0,
+  "last_change_time": "2026-01-15T11:08:23Z",
+  "severity": "--",
+  "cc_detail": [
+    {
+      "real_name": "Mayank Bansal",
+      "email": "mayankleoboy1@gmail.com",
+      "nick": "mayankleoboy1",
+      "name": "mayankleoboy1@gmail.com",
+      "id": 440227
+    },
+    {
+      "nick": "pasik",
+      "real_name": "",
+      "email": "pasik@iki.fi",
+      "name": "pasik@iki.fi",
+      "id": 529219
+    }
+  ],
+  "classification": "Components",
+  "cf_crash_signature": "",
+  "creator": "sotaro.ikeda.g@gmail.com",
+  "cf_cab_review": "---",
+  "see_also": [],
+  "is_open": false,
+  "op_sys": "Unspecified",
+  "alias": null,
+  "depends_on": [],
+  "description": "It helps for video overlay debugging.",
+  "filed_via": "standard_form",
+  "cf_accessibility_severity": "---",
+  "triage_owner_detail": {
+    "name": "bhood@mozilla.com",
+    "id": 697075,
+    "real_name": "Bob Hood [:bhood]",
+    "email": "bhood@mozilla.com",
+    "nick": "bhood"
+  },
+  "regressed_by": [],
+  "last_change_time_non_bot": "2026-01-15T11:08:23Z",
+  "cf_status_firefox149": "---",
+  "platform": "Unspecified",
+  "product": "Core",
+  "comments": [
+    {
+      "is_private": false,
+      "count": 0,
+      "time": "2024-04-25T02:36:22Z",
+      "id": 16907096,
+      "creator": "sotaro.ikeda.g@gmail.com",
+      "author": "sotaro.ikeda.g@gmail.com",
+      "attachment_id": null,
+      "tags": [],
+      "bug_id": 1893364,
+      "text": "It helps for video overlay debugging.",
+      "raw_text": "It helps for video overlay debugging.",
+      "reactions": {},
+      "creation_time": "2024-04-25T02:36:22Z"
+    },
+    {
+      "attachment_id": 9398537,
+      "author": "sotaro.ikeda.g@gmail.com",
+      "tags": [],
+      "bug_id": 1893364,
+      "creator": "sotaro.ikeda.g@gmail.com",
+      "id": 16907106,
+      "time": "2024-04-25T02:45:56Z",
+      "creation_time": "2024-04-25T02:45:56Z",
+      "reactions": {},
+      "raw_text": "",
+      "text": "Created attachment 9398537\nBug 1893364 - Add more profiler markers around video overlay handing",
+      "is_private": false,
+      "count": 1
+    },
+    {
+      "id": 16907200,
+      "is_private": false,
+      "time": "2024-04-25T04:20:46Z",
+      "tags": [],
+      "author": "pulsebot@bmo.tld",
+      "attachment_id": null,
+      "bug_id": 1893364,
+      "creator": "pulsebot@bmo.tld",
+      "count": 2,
+      "text": "Pushed by sikeda.birchill@mozilla.com:\nhttps://hg.mozilla.org/integration/autoland/rev/5a49dc62579d\nAdd more profiler markers around video overlay handing r=gfx-reviewers,jrmuizel",
+      "creation_time": "2024-04-25T04:20:46Z",
+      "reactions": {},
+      "raw_text": "Pushed by sikeda.birchill@mozilla.com:\nhttps://hg.mozilla.org/integration/autoland/rev/5a49dc62579d\nAdd more profiler markers around video overlay handing r=gfx-reviewers,jrmuizel"
+    },
+    {
+      "count": 3,
+      "is_private": false,
+      "text": "https://hg.mozilla.org/mozilla-central/rev/5a49dc62579d",
+      "creation_time": "2024-04-25T09:48:22Z",
+      "reactions": {},
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/5a49dc62579d",
+      "id": 16907484,
+      "time": "2024-04-25T09:48:22Z",
+      "bug_id": 1893364,
+      "tags": [
+        "bugherder"
+      ],
+      "author": "acseh@mozilla.com",
+      "attachment_id": null,
+      "creator": "acseh@mozilla.com"
+    }
+  ],
+  "counts": {
+    "duplicates": 0,
+    "regressed_by": 0,
+    "cc": 2,
+    "regressions": 0,
+    "depends_on": 1,
+    "attachments": 1,
+    "keywords": 0,
+    "comments": 4,
+    "blocks": 0
+  },
+  "id": 1893364,
+  "cf_tracking_firefox_esr140": "---",
+  "cf_last_resolved": "2024-04-25T09:48:22Z",
+  "cf_status_firefox147": "---",
+  "qa_contact": "",
+  "cf_tracking_firefox149": "---",
+  "cf_fx_iteration": "---",
+  "cf_webcompat_score": "---",
+  "priority": "--",
+  "resolution": "FIXED",
+  "cf_status_thunderbird_esr140": "---",
+  "cf_status_firefox148": "---",
+  "component": "Graphics",
+  "cf_rank": null,
+  "cf_tracking_firefox147": "---",
+  "triage_owner": "bhood@mozilla.com",
+  "comment_count": 4,
+  "cf_status_firefox127": "fixed",
+  "history": [
+    {
+      "when": "2024-04-25T03:21:56Z",
+      "who": "mayankleoboy1@gmail.com",
+      "changes": [
+        {
+          "added": "mayankleoboy1@gmail.com",
+          "removed": "",
+          "field_name": "cc"
+        }
+      ]
+    },
+    {
+      "who": "acseh@mozilla.com",
+      "when": "2024-04-25T09:48:22Z",
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "resolution",
+          "added": "FIXED"
+        },
+        {
+          "removed": "---",
+          "field_name": "target_milestone",
+          "added": "127 Branch"
+        },
+        {
+          "removed": "NEW",
+          "field_name": "status",
+          "added": "RESOLVED"
+        },
+        {
+          "added": "2024-04-25T09:48:22Z",
+          "field_name": "cf_last_resolved",
+          "removed": ""
+        },
+        {
+          "field_name": "cf_status_firefox127",
+          "removed": "---",
+          "added": "fixed"
+        },
+        {
+          "field_name": "comment_tag",
+          "removed": "",
+          "added": "bugherder",
+          "comment_id": 16907484,
+          "comment_count": 3
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "blocks",
+          "added": "1954558"
+        }
+      ],
+      "when": "2026-01-15T00:41:31Z",
+      "who": "sotaro.ikeda.g@gmail.com"
+    },
+    {
+      "changes": [
+        {
+          "added": "pasik@iki.fi",
+          "removed": "",
+          "field_name": "cc"
+        }
+      ],
+      "who": "pasik@iki.fi",
+      "when": "2026-01-15T11:08:23Z"
+    }
+  ],
+  "is_confirmed": true,
+  "type": "task",
+  "summary": "Add more profiler markers around video overlay handing.",
+  "status": "RESOLVED",
+  "flags": [],
+  "cf_tracking_thunderbird_esr115": "---",
+  "is_creator_accessible": true,
+  "is_cc_accessible": true,
+  "cf_tracking_firefox_esr115": "---",
+  "groups": [],
+  "creator_detail": {
+    "id": 434202,
+    "name": "sotaro.ikeda.g@gmail.com",
+    "real_name": "Sotaro Ikeda [:sotaro]",
+    "email": "sotaro.ikeda.g@gmail.com",
+    "nick": "sotaro"
+  },
+  "version": "unspecified",
+  "mentors": [],
+  "cf_size_estimate": "---",
+  "regressions": [],
+  "cf_has_str": "---",
+  "cf_performance_impact": "---",
+  "keywords": [],
+  "duplicates": [],
+  "cf_tracking_thunderbird_esr140": "---",
+  "cf_status_firefox_esr115": "---",
+  "assigned_to_detail": {
+    "id": 434202,
+    "name": "sotaro.ikeda.g@gmail.com",
+    "real_name": "Sotaro Ikeda [:sotaro]",
+    "email": "sotaro.ikeda.g@gmail.com",
+    "nick": "sotaro"
+  },
+  "cc": [
+    "mayankleoboy1@gmail.com",
+    "pasik@iki.fi"
+  ],
+  "cf_webcompat_priority": "---"
+}

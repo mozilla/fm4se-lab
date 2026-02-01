@@ -1,0 +1,297 @@
+{
+  "cf_rank": null,
+  "history": [
+    {
+      "who": "mayankleoboy1@gmail.com",
+      "changes": [
+        {
+          "removed": "",
+          "added": "mayankleoboy1@gmail.com",
+          "field_name": "cc"
+        }
+      ],
+      "when": "2025-12-10T01:17:27Z"
+    },
+    {
+      "who": "phab-bot@bmo.tld",
+      "changes": [
+        {
+          "added": "ASSIGNED",
+          "removed": "NEW",
+          "field_name": "status"
+        },
+        {
+          "field_name": "assigned_to",
+          "added": "nbarrett@mozilla.com",
+          "removed": "nobody@mozilla.org"
+        }
+      ],
+      "when": "2026-01-09T23:05:00Z"
+    },
+    {
+      "changes": [
+        {
+          "added": "RESOLVED",
+          "removed": "ASSIGNED",
+          "field_name": "status"
+        },
+        {
+          "added": "FIXED",
+          "removed": "",
+          "field_name": "resolution"
+        },
+        {
+          "field_name": "cf_last_resolved",
+          "added": "2026-01-12T21:34:12Z",
+          "removed": ""
+        },
+        {
+          "added": "fixed",
+          "removed": "---",
+          "field_name": "cf_status_firefox149"
+        },
+        {
+          "comment_id": 17839391,
+          "removed": "",
+          "added": "bugherder",
+          "field_name": "comment_tag",
+          "comment_count": 3
+        }
+      ],
+      "when": "2026-01-12T21:34:12Z",
+      "who": "ctuns@mozilla.com"
+    },
+    {
+      "who": "aryx.bugmail@gmx-topmail.de",
+      "changes": [
+        {
+          "field_name": "target_milestone",
+          "added": "149 Branch",
+          "removed": "---"
+        }
+      ],
+      "when": "2026-01-12T21:48:38Z"
+    },
+    {
+      "who": "nbarrett@mozilla.com",
+      "changes": [
+        {
+          "added": "2011746",
+          "removed": "",
+          "field_name": "blocks"
+        }
+      ],
+      "when": "2026-01-21T19:23:47Z"
+    }
+  ],
+  "alias": null,
+  "cf_tracking_thunderbird_esr115": "---",
+  "regressed_by": [],
+  "platform": "Unspecified",
+  "cf_size_estimate": "---",
+  "target_milestone": "149 Branch",
+  "cf_a11y_review_project_flag": "---",
+  "id": 2005048,
+  "description": "When a proxy filter is registered, we now require speculative connection requests to provide a notification callback (see Bug 1943804). This breaks callers that don\u2019t supply one ([example](https://searchfox.org/firefox-main/rev/16b037c409dcd2e6dca11e0ce61384bc52dbb78d/docshell/base/nsDocShell.cpp#14038)).\nThis bug aims to ensure a callback is provided wherever possible.",
+  "creation_time": "2025-12-09T20:11:00Z",
+  "is_confirmed": true,
+  "cf_tracking_thunderbird_esr140": "---",
+  "cf_fx_iteration": "---",
+  "mentors": [],
+  "cf_webcompat_priority": "---",
+  "duplicates": [],
+  "version": "unspecified",
+  "cc_detail": [
+    {
+      "real_name": "Mayank Bansal",
+      "name": "mayankleoboy1@gmail.com",
+      "nick": "mayankleoboy1",
+      "email": "mayankleoboy1@gmail.com",
+      "id": 440227
+    }
+  ],
+  "op_sys": "Unspecified",
+  "resolution": "FIXED",
+  "flags": [],
+  "status": "RESOLVED",
+  "cf_status_firefox149": "fixed",
+  "cf_status_firefox_esr140": "---",
+  "creator": "kershaw@mozilla.com",
+  "cf_tracking_firefox_esr140": "---",
+  "cf_status_firefox148": "---",
+  "priority": "P2",
+  "see_also": [],
+  "cf_performance_impact": "---",
+  "cf_tracking_firefox149": "---",
+  "cf_fx_points": "---",
+  "whiteboard": "[necko-triaged] [necko-priority-queue]",
+  "is_creator_accessible": true,
+  "is_open": false,
+  "cc": [
+    "mayankleoboy1@gmail.com"
+  ],
+  "comments": [
+    {
+      "creation_time": "2025-12-09T20:11:00Z",
+      "count": 0,
+      "raw_text": "When a proxy filter is registered, we now require speculative connection requests to provide a notification callback (see Bug 1943804). This breaks callers that don\u2019t supply one ([example](https://searchfox.org/firefox-main/rev/16b037c409dcd2e6dca11e0ce61384bc52dbb78d/docshell/base/nsDocShell.cpp#14038)).\nThis bug aims to ensure a callback is provided wherever possible.",
+      "id": 17800664,
+      "creator": "kershaw@mozilla.com",
+      "bug_id": 2005048,
+      "tags": [],
+      "time": "2025-12-09T20:11:00Z",
+      "reactions": {},
+      "text": "When a proxy filter is registered, we now require speculative connection requests to provide a notification callback (see Bug 1943804). This breaks callers that don\u2019t supply one ([example](https://searchfox.org/firefox-main/rev/16b037c409dcd2e6dca11e0ce61384bc52dbb78d/docshell/base/nsDocShell.cpp#14038)).\nThis bug aims to ensure a callback is provided wherever possible.",
+      "is_private": false,
+      "attachment_id": null,
+      "author": "kershaw@mozilla.com"
+    },
+    {
+      "bug_id": 2005048,
+      "creator": "nbarrett@mozilla.com",
+      "id": 17835916,
+      "raw_text": "",
+      "count": 1,
+      "creation_time": "2026-01-09T23:05:00Z",
+      "time": "2026-01-09T23:05:00Z",
+      "tags": [],
+      "is_private": false,
+      "text": "Created attachment 9536756\nBug 2005048 - Provide notification callback for nsDocShell speculative connections r=mconley,valentin",
+      "reactions": {},
+      "author": "nbarrett@mozilla.com",
+      "attachment_id": 9536756
+    },
+    {
+      "author": "pulsebot@bmo.tld",
+      "attachment_id": null,
+      "is_private": false,
+      "text": "Pushed by nbarrett@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/bc8f1722a3fe\nhttps://hg.mozilla.org/integration/autoland/rev/1033e038a1e6\nProvide notification callback for nsDocShell speculative connections r=valentin,necko-reviewers,kershaw",
+      "reactions": {},
+      "time": "2026-01-12T15:19:56Z",
+      "tags": [],
+      "bug_id": 2005048,
+      "creator": "pulsebot@bmo.tld",
+      "count": 2,
+      "id": 17838810,
+      "raw_text": "Pushed by nbarrett@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/bc8f1722a3fe\nhttps://hg.mozilla.org/integration/autoland/rev/1033e038a1e6\nProvide notification callback for nsDocShell speculative connections r=valentin,necko-reviewers,kershaw",
+      "creation_time": "2026-01-12T15:19:56Z"
+    },
+    {
+      "time": "2026-01-12T21:34:12Z",
+      "tags": [
+        "bugherder"
+      ],
+      "bug_id": 2005048,
+      "creator": "ctuns@mozilla.com",
+      "id": 17839391,
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/1033e038a1e6",
+      "count": 3,
+      "creation_time": "2026-01-12T21:34:12Z",
+      "author": "ctuns@mozilla.com",
+      "attachment_id": null,
+      "is_private": false,
+      "text": "https://hg.mozilla.org/mozilla-central/rev/1033e038a1e6",
+      "reactions": {}
+    }
+  ],
+  "depends_on": [],
+  "regressions": [],
+  "votes": 0,
+  "component": "Networking",
+  "dupe_of": null,
+  "cf_tracking_firefox_esr115": "---",
+  "assigned_to_detail": {
+    "name": "nbarrett@mozilla.com",
+    "nick": "nbarrett",
+    "real_name": "Nathan Barrett [:nbarrett]",
+    "email": "nbarrett@mozilla.com",
+    "id": 690000
+  },
+  "last_change_time": "2026-01-21T19:23:47Z",
+  "cf_qa_whiteboard": "",
+  "last_change_time_non_bot": "2026-01-21T19:23:47Z",
+  "cf_tracking_firefox148": "---",
+  "summary": "Speculative connection without a notification callback is blocked when proxy filter is registered",
+  "cf_crash_signature": "",
+  "classification": "Components",
+  "cf_user_story": "",
+  "comment_count": 4,
+  "creator_detail": {
+    "real_name": "Kershaw Chang [:kershaw]",
+    "nick": "kershaw",
+    "name": "kershaw@mozilla.com",
+    "id": 505624,
+    "email": "kershaw@mozilla.com"
+  },
+  "cf_has_str": "---",
+  "cf_status_firefox_esr115": "---",
+  "cf_tracking_firefox147": "---",
+  "product": "Core",
+  "triage_owner_detail": {
+    "email": "valentin.gosu@gmail.com",
+    "id": 415378,
+    "name": "valentin.gosu@gmail.com",
+    "nick": "valentin",
+    "real_name": "Valentin Gosu [:valentin] (he/him)"
+  },
+  "groups": [],
+  "qa_contact": "",
+  "triage_owner": "valentin.gosu@gmail.com",
+  "blocks": [
+    2011746
+  ],
+  "url": "",
+  "assigned_to": "nbarrett@mozilla.com",
+  "severity": "S3",
+  "cf_accessibility_severity": "---",
+  "cf_status_thunderbird_esr140": "---",
+  "cf_status_firefox147": "---",
+  "type": "defect",
+  "keywords": [],
+  "cf_webcompat_score": "---",
+  "cf_status_thunderbird_esr115": "---",
+  "mentors_detail": [],
+  "is_cc_accessible": true,
+  "filed_via": "standard_form",
+  "counts": {
+    "depends_on": 1,
+    "comments": 4,
+    "cc": 1,
+    "blocks": 0,
+    "attachments": 1,
+    "keywords": 0,
+    "regressed_by": 0,
+    "regressions": 0,
+    "duplicates": 0
+  },
+  "cf_last_resolved": "2026-01-12T21:34:12Z",
+  "cf_cab_review": "---",
+  "cf_tracking_firefox_relnote": "---",
+  "attachments": [
+    {
+      "creator_detail": {
+        "real_name": "Nathan Barrett [:nbarrett]",
+        "name": "nbarrett@mozilla.com",
+        "nick": "nbarrett",
+        "email": "nbarrett@mozilla.com",
+        "id": 690000
+      },
+      "description": "Bug 2005048 - Provide notification callback for nsDocShell speculative connections r=mconley,valentin",
+      "creation_time": "2026-01-09T23:05:00Z",
+      "id": 9536756,
+      "creator": "nbarrett@mozilla.com",
+      "bug_id": 2005048,
+      "summary": "Bug 2005048 - Provide notification callback for nsDocShell speculative connections r=mconley,valentin",
+      "is_private": 0,
+      "file_name": "phabricator-D278556-url.txt",
+      "flags": [],
+      "size": 48,
+      "content_type": "text/x-phabricator-request",
+      "attacher": "nbarrett@mozilla.com",
+      "is_obsolete": 0,
+      "last_change_time": "2026-01-09T23:05:00Z",
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjc4NTU2",
+      "is_patch": 0
+    }
+  ]
+}

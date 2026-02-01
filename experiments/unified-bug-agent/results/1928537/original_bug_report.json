@@ -1,0 +1,1799 @@
+{
+  "cf_status_firefox_esr140": "wontfix",
+  "cf_cab_review": "---",
+  "cf_tracking_firefox149": "---",
+  "qa_contact": "",
+  "cf_tracking_firefox_relnote": "---",
+  "platform": "Unspecified",
+  "history": [
+    {
+      "changes": [
+        {
+          "field_name": "comment_tag",
+          "added": "treeherder",
+          "comment_id": 17190318,
+          "comment_count": 0,
+          "removed": ""
+        }
+      ],
+      "when": "2024-10-31T22:18:49Z",
+      "who": "intermittent-bug-filer@mozilla.bugs"
+    },
+    {
+      "when": "2025-01-17T14:02:59Z",
+      "who": "kershaw@mozilla.com",
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "flagtypes.name",
+          "added": "needinfo?(sekim@mozilla.com)"
+        },
+        {
+          "field_name": "cc",
+          "added": "kershaw@mozilla.com, sekim@mozilla.com",
+          "removed": ""
+        }
+      ]
+    },
+    {
+      "when": "2025-01-17T15:25:21Z",
+      "who": "sean.skim21@gmail.com",
+      "changes": [
+        {
+          "removed": "needinfo?(sekim@mozilla.com)",
+          "field_name": "flagtypes.name",
+          "added": "needinfo?(kershaw@mozilla.com)"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "removed": "nobody@mozilla.org",
+          "added": "sekim@mozilla.com",
+          "field_name": "assigned_to"
+        }
+      ],
+      "when": "2025-01-17T21:31:18Z",
+      "who": "sean.skim21@gmail.com"
+    },
+    {
+      "who": "kershaw@mozilla.com",
+      "when": "2025-01-20T13:08:59Z",
+      "changes": [
+        {
+          "removed": "needinfo?(kershaw@mozilla.com)",
+          "field_name": "flagtypes.name",
+          "added": ""
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "whiteboard",
+          "added": "[necko-triaged][necko-priority-next]"
+        }
+      ],
+      "who": "sean.skim21@gmail.com",
+      "when": "2025-02-05T16:06:55Z"
+    },
+    {
+      "who": "sean.skim21@gmail.com",
+      "when": "2025-02-24T17:47:31Z",
+      "changes": [
+        {
+          "field_name": "keywords",
+          "added": "regression",
+          "removed": ""
+        },
+        {
+          "field_name": "assigned_to",
+          "added": "nobody@mozilla.org",
+          "removed": "sekim@mozilla.com"
+        },
+        {
+          "removed": "[necko-triaged][necko-priority-next]",
+          "added": "[necko-triaged]",
+          "field_name": "whiteboard"
+        },
+        {
+          "removed": "",
+          "added": "1733498",
+          "field_name": "regressed_by"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "depends_on",
+          "added": "1950166"
+        }
+      ],
+      "when": "2025-02-24T17:52:59Z",
+      "who": "sean.skim21@gmail.com"
+    },
+    {
+      "changes": [
+        {
+          "field_name": "cf_status_firefox_esr128",
+          "added": "unaffected",
+          "removed": "---"
+        },
+        {
+          "added": "affected",
+          "field_name": "cf_status_firefox135",
+          "removed": "---"
+        },
+        {
+          "added": "affected",
+          "field_name": "cf_status_firefox136",
+          "removed": "---"
+        },
+        {
+          "removed": "---",
+          "field_name": "cf_status_firefox137",
+          "added": "affected"
+        }
+      ],
+      "when": "2025-02-24T18:42:49Z",
+      "who": "release-mgmt-account-bot@mozilla.tld"
+    },
+    {
+      "who": "release-mgmt-account-bot@mozilla.tld",
+      "when": "2025-03-04T14:45:36Z",
+      "changes": [
+        {
+          "added": "affected",
+          "field_name": "cf_status_firefox138",
+          "removed": "---"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "added": "needinfo?(valentin.gosu@gmail.com)",
+          "field_name": "flagtypes.name",
+          "removed": ""
+        },
+        {
+          "removed": "",
+          "field_name": "cc",
+          "added": "valentin.gosu@gmail.com"
+        },
+        {
+          "removed": "nobody@mozilla.org",
+          "field_name": "assigned_to",
+          "added": "valentin.gosu@gmail.com"
+        }
+      ],
+      "when": "2025-12-11T09:13:45Z",
+      "who": "valentin.gosu@gmail.com"
+    },
+    {
+      "when": "2026-01-08T09:15:01Z",
+      "who": "valentin.gosu@gmail.com",
+      "changes": [
+        {
+          "added": "",
+          "field_name": "flagtypes.name",
+          "removed": "needinfo?(valentin.gosu@gmail.com)"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "added": "FIXED",
+          "field_name": "resolution",
+          "removed": ""
+        },
+        {
+          "field_name": "target_milestone",
+          "added": "148 Branch",
+          "removed": "---"
+        },
+        {
+          "removed": "NEW",
+          "added": "RESOLVED",
+          "field_name": "status"
+        },
+        {
+          "removed": "",
+          "field_name": "cf_last_resolved",
+          "added": "2026-01-08T17:02:29Z"
+        },
+        {
+          "field_name": "cf_status_firefox148",
+          "added": "fixed",
+          "removed": "---"
+        },
+        {
+          "removed": "",
+          "comment_count": 71,
+          "added": "bugherder",
+          "field_name": "comment_tag",
+          "comment_id": 17833871
+        }
+      ],
+      "when": "2026-01-08T17:02:29Z",
+      "who": "csabou@mozilla.com"
+    },
+    {
+      "when": "2026-01-08T22:11:43Z",
+      "who": "sstanca@mozilla.com",
+      "changes": [
+        {
+          "field_name": "status",
+          "added": "REOPENED",
+          "removed": "RESOLVED"
+        },
+        {
+          "field_name": "flagtypes.name",
+          "added": "needinfo?(valentin.gosu@gmail.com)",
+          "removed": ""
+        },
+        {
+          "field_name": "target_milestone",
+          "added": "---",
+          "removed": "148 Branch"
+        },
+        {
+          "removed": "FIXED",
+          "added": "",
+          "field_name": "resolution"
+        },
+        {
+          "added": "---",
+          "field_name": "cf_status_firefox148",
+          "removed": "fixed"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "removed": "needinfo?(valentin.gosu@gmail.com)",
+          "field_name": "flagtypes.name",
+          "added": ""
+        }
+      ],
+      "when": "2026-01-10T09:25:31Z",
+      "who": "valentin.gosu@gmail.com"
+    },
+    {
+      "when": "2026-01-20T05:21:29Z",
+      "who": "imoraru@mozilla.com",
+      "changes": [
+        {
+          "added": "149 Branch",
+          "field_name": "target_milestone",
+          "removed": "---"
+        },
+        {
+          "added": "FIXED",
+          "field_name": "resolution",
+          "removed": ""
+        },
+        {
+          "removed": "REOPENED",
+          "added": "RESOLVED",
+          "field_name": "status"
+        },
+        {
+          "field_name": "cf_last_resolved",
+          "added": "2026-01-20T05:21:29Z",
+          "removed": "2026-01-08T17:02:29Z"
+        },
+        {
+          "removed": "---",
+          "field_name": "cf_status_firefox149",
+          "added": "fixed"
+        },
+        {
+          "removed": "",
+          "added": "bugherder",
+          "field_name": "comment_tag",
+          "comment_id": 17850547,
+          "comment_count": 77
+        }
+      ]
+    },
+    {
+      "who": "ryanvm@gmail.com",
+      "when": "2026-01-22T03:45:34Z",
+      "changes": [
+        {
+          "removed": "---",
+          "field_name": "cf_status_firefox_esr140",
+          "added": "fix-optional"
+        },
+        {
+          "added": "wontfix",
+          "field_name": "cf_status_firefox135",
+          "removed": "affected"
+        },
+        {
+          "field_name": "cf_status_firefox136",
+          "added": "wontfix",
+          "removed": "affected"
+        },
+        {
+          "added": "wontfix",
+          "field_name": "cf_status_firefox137",
+          "removed": "affected"
+        },
+        {
+          "removed": "affected",
+          "added": "wontfix",
+          "field_name": "cf_status_firefox138"
+        },
+        {
+          "field_name": "cf_status_firefox147",
+          "added": "wontfix",
+          "removed": "---"
+        },
+        {
+          "removed": "---",
+          "field_name": "cf_status_firefox148",
+          "added": "fix-optional"
+        }
+      ]
+    },
+    {
+      "who": "pulsebot@bmo.tld",
+      "when": "2026-01-22T03:51:25Z",
+      "changes": [
+        {
+          "comment_id": 17853974,
+          "field_name": "comment_tag",
+          "added": "uplift",
+          "comment_count": 78,
+          "removed": ""
+        }
+      ]
+    },
+    {
+      "when": "2026-01-22T03:53:18Z",
+      "who": "ryanvm@gmail.com",
+      "changes": [
+        {
+          "removed": "",
+          "added": "ryanvm@gmail.com",
+          "field_name": "cc"
+        },
+        {
+          "added": "fixed",
+          "field_name": "cf_status_firefox148",
+          "removed": "fix-optional"
+        }
+      ]
+    },
+    {
+      "when": "2026-01-22T03:55:08Z",
+      "who": "ryanvm@gmail.com",
+      "changes": [
+        {
+          "field_name": "cf_status_firefox_esr140",
+          "added": "wontfix",
+          "removed": "fix-optional"
+        }
+      ]
+    }
+  ],
+  "product": "Core",
+  "filed_via": "api",
+  "severity": "S4",
+  "cf_performance_impact": "---",
+  "cf_status_firefox147": "wontfix",
+  "cf_webcompat_priority": "---",
+  "regressed_by": [
+    1733498
+  ],
+  "cf_rank": null,
+  "see_also": [],
+  "cf_tracking_firefox147": "---",
+  "op_sys": "Unspecified",
+  "whiteboard": "[necko-triaged]",
+  "duplicates": [],
+  "cf_tracking_thunderbird_esr115": "---",
+  "cf_status_firefox_esr128": "unaffected",
+  "cf_last_resolved": "2026-01-20T05:21:29Z",
+  "dupe_of": null,
+  "triage_owner_detail": {
+    "real_name": "Valentin Gosu [:valentin] (he/him)",
+    "id": 415378,
+    "nick": "valentin",
+    "email": "valentin.gosu@gmail.com",
+    "name": "valentin.gosu@gmail.com"
+  },
+  "flags": [],
+  "target_milestone": "149 Branch",
+  "cf_status_firefox138": "wontfix",
+  "cc_detail": [
+    {
+      "nick": "kershaw",
+      "name": "kershaw@mozilla.com",
+      "email": "kershaw@mozilla.com",
+      "real_name": "Kershaw Chang [:kershaw]",
+      "id": 505624
+    },
+    {
+      "id": 75935,
+      "real_name": "Ryan VanderMeulen [:RyanVM]",
+      "nick": "RyanVM",
+      "email": "ryanvm@gmail.com",
+      "name": "ryanvm@gmail.com"
+    },
+    {
+      "nick": "sekim",
+      "email": "sean.skim21@gmail.com",
+      "name": "sean.skim21@gmail.com",
+      "real_name": "Sean Kim [:sekim]",
+      "id": 753926
+    },
+    {
+      "nick": "valentin",
+      "name": "valentin.gosu@gmail.com",
+      "email": "valentin.gosu@gmail.com",
+      "real_name": "Valentin Gosu [:valentin] (he/him)",
+      "id": 415378
+    }
+  ],
+  "mentors_detail": [],
+  "cf_user_story": "",
+  "priority": "P5",
+  "cf_status_thunderbird_esr140": "---",
+  "counts": {
+    "regressed_by": 0,
+    "comments": 80,
+    "blocks": 1,
+    "depends_on": 0,
+    "keywords": 3,
+    "duplicates": 0,
+    "attachments": 2,
+    "cc": 4,
+    "regressions": 1
+  },
+  "cf_status_thunderbird_esr115": "---",
+  "is_open": false,
+  "attachments": [
+    {
+      "file_name": "phabricator-D278249-url.txt",
+      "last_change_time": "2026-01-08T09:15:03Z",
+      "bug_id": 1928537,
+      "creator": "valentin.gosu@gmail.com",
+      "creator_detail": {
+        "name": "valentin.gosu@gmail.com",
+        "email": "valentin.gosu@gmail.com",
+        "nick": "valentin",
+        "real_name": "Valentin Gosu [:valentin] (he/him)",
+        "id": 415378
+      },
+      "is_obsolete": 0,
+      "description": "Bug 1928537 - Fix raciness in browser_necko_l10n.js r=#necko",
+      "creation_time": "2026-01-08T09:15:03Z",
+      "flags": [],
+      "is_patch": 0,
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjc4MjQ5",
+      "size": 48,
+      "summary": "Bug 1928537 - Fix raciness in browser_necko_l10n.js r=#necko",
+      "id": 9536305,
+      "is_private": 0,
+      "content_type": "text/x-phabricator-request",
+      "attacher": "valentin.gosu@gmail.com"
+    },
+    {
+      "summary": "Bug 1928537 - Fix intermittent browser_necko_l10n.js r=#necko",
+      "id": 9538470,
+      "size": 48,
+      "attacher": "valentin.gosu@gmail.com",
+      "is_private": 0,
+      "content_type": "text/x-phabricator-request",
+      "creation_time": "2026-01-19T09:46:10Z",
+      "is_patch": 0,
+      "flags": [],
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjc5NDk2",
+      "creator_detail": {
+        "id": 415378,
+        "real_name": "Valentin Gosu [:valentin] (he/him)",
+        "name": "valentin.gosu@gmail.com",
+        "email": "valentin.gosu@gmail.com",
+        "nick": "valentin"
+      },
+      "creator": "valentin.gosu@gmail.com",
+      "is_obsolete": 0,
+      "description": "Bug 1928537 - Fix intermittent browser_necko_l10n.js r=#necko",
+      "file_name": "phabricator-D279496-url.txt",
+      "last_change_time": "2026-01-19T09:46:10Z",
+      "bug_id": 1928537
+    }
+  ],
+  "last_change_time_non_bot": "2026-01-26T06:46:05Z",
+  "cf_accessibility_severity": "---",
+  "classification": "Components",
+  "groups": [],
+  "last_change_time": "2026-01-26T06:46:05Z",
+  "mentors": [],
+  "cf_tracking_firefox_esr140": "---",
+  "comment_count": 80,
+  "cf_crash_signature": "",
+  "regressions": [],
+  "cf_status_firefox136": "wontfix",
+  "version": "unspecified",
+  "keywords": [
+    "intermittent-failure",
+    "intermittent-testcase",
+    "regression"
+  ],
+  "cf_status_firefox135": "wontfix",
+  "cf_status_firefox137": "wontfix",
+  "is_cc_accessible": true,
+  "assigned_to_detail": {
+    "email": "valentin.gosu@gmail.com",
+    "name": "valentin.gosu@gmail.com",
+    "nick": "valentin",
+    "id": 415378,
+    "real_name": "Valentin Gosu [:valentin] (he/him)"
+  },
+  "type": "defect",
+  "cf_tracking_firefox148": "---",
+  "alias": null,
+  "cf_status_firefox_esr115": "---",
+  "is_confirmed": true,
+  "triage_owner": "valentin.gosu@gmail.com",
+  "cf_a11y_review_project_flag": "---",
+  "cf_tracking_thunderbird_esr140": "---",
+  "comments": [
+    {
+      "reactions": {},
+      "bug_id": 1928537,
+      "text": "**Filed by:** smolnar [at] mozilla.com\n**Parsed log:** https://treeherder.mozilla.org/logviewer?job_id=480661817&repo=autoland\n**Full log:** https://firefox-ci-tc.services.mozilla.com/api/queue/v1/task/cV0SnnsCQ6q-lhYoRN1sVg/runs/0/artifacts/public/logs/live_backing.log\n\n---\n```\nTEST-START | netwerk/test/browser/browser_necko_l10n.js\n[task 2024-10-31T21:38:42.117Z] 21:38:42     INFO - GECKO(21752) | ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmphl5ud7r1.mozrunner/runtests_leaks_tab_pid27520.log\n[task 2024-10-31T21:38:42.181Z] 21:38:42     INFO - GECKO(21752) | ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmphl5ud7r1.mozrunner/runtests_leaks_tab_pid27539.log\n[task 2024-10-31T21:39:27.079Z] 21:39:27     INFO - TEST-INFO | started process screentopng\n[task 2024-10-31T21:39:27.218Z] 21:39:27     INFO - TEST-INFO | screentopng: exit 0\n[task 2024-10-31T21:39:27.223Z] 21:39:27     INFO - Buffered messages logged at 21:38:42\n[task 2024-10-31T21:39:27.224Z] 21:39:27     INFO - Entering test bound test_domain_change\n[task 2024-10-31T21:39:27.224Z] 21:39:27     INFO - Console message: [JavaScript Warning: \"This page is in Quirks Mode. Page layout may be impacted. For Standards Mode use \u201c<!DOCTYPE html>\u201d.\" {file: \"http://example.com:38240/\" line: 0}]\n[task 2024-10-31T21:39:27.224Z] 21:39:27     INFO - Buffered messages finished\n[task 2024-10-31T21:39:27.224Z] 21:39:27     INFO - TEST-UNEXPECTED-FAIL | netwerk/test/browser/browser_necko_l10n.js | Test timed out - \n[task 2024-10-31T21:39:27.224Z] 21:39:27     INFO - GECKO(21752) | Completed ShutdownLeaks collections in process 21752\n[task 2024-10-31T21:39:27.224Z] 21:39:27     INFO - TEST-START | Shutdown\n```",
+      "creator": "intermittent-bug-filer@mozilla.bugs",
+      "tags": [
+        "treeherder"
+      ],
+      "creation_time": "2024-10-31T22:18:49Z",
+      "time": "2024-10-31T22:18:49Z",
+      "raw_text": "**Filed by:** smolnar [at] mozilla.com\n**Parsed log:** https://treeherder.mozilla.org/logviewer?job_id=480661817&repo=autoland\n**Full log:** https://firefox-ci-tc.services.mozilla.com/api/queue/v1/task/cV0SnnsCQ6q-lhYoRN1sVg/runs/0/artifacts/public/logs/live_backing.log\n\n---\n```\nTEST-START | netwerk/test/browser/browser_necko_l10n.js\n[task 2024-10-31T21:38:42.117Z] 21:38:42     INFO - GECKO(21752) | ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmphl5ud7r1.mozrunner/runtests_leaks_tab_pid27520.log\n[task 2024-10-31T21:38:42.181Z] 21:38:42     INFO - GECKO(21752) | ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmphl5ud7r1.mozrunner/runtests_leaks_tab_pid27539.log\n[task 2024-10-31T21:39:27.079Z] 21:39:27     INFO - TEST-INFO | started process screentopng\n[task 2024-10-31T21:39:27.218Z] 21:39:27     INFO - TEST-INFO | screentopng: exit 0\n[task 2024-10-31T21:39:27.223Z] 21:39:27     INFO - Buffered messages logged at 21:38:42\n[task 2024-10-31T21:39:27.224Z] 21:39:27     INFO - Entering test bound test_domain_change\n[task 2024-10-31T21:39:27.224Z] 21:39:27     INFO - Console message: [JavaScript Warning: \"This page is in Quirks Mode. Page layout may be impacted. For Standards Mode use \u201c<!DOCTYPE html>\u201d.\" {file: \"http://example.com:38240/\" line: 0}]\n[task 2024-10-31T21:39:27.224Z] 21:39:27     INFO - Buffered messages finished\n[task 2024-10-31T21:39:27.224Z] 21:39:27     INFO - TEST-UNEXPECTED-FAIL | netwerk/test/browser/browser_necko_l10n.js | Test timed out - \n[task 2024-10-31T21:39:27.224Z] 21:39:27     INFO - GECKO(21752) | Completed ShutdownLeaks collections in process 21752\n[task 2024-10-31T21:39:27.224Z] 21:39:27     INFO - TEST-START | Shutdown\n```",
+      "author": "intermittent-bug-filer@mozilla.bugs",
+      "is_private": false,
+      "count": 0,
+      "id": 17190318,
+      "attachment_id": null
+    },
+    {
+      "tags": [],
+      "creation_time": "2024-11-04T07:14:42Z",
+      "time": "2024-11-04T07:14:42Z",
+      "author": "orangefactor@bots.tld",
+      "count": 1,
+      "is_private": false,
+      "raw_text": "1 failures in 4361 pushes (0.0 failures/push) were associated with this bug in the last 7 days.\n\nRepository breakdown:\n* autoland: 1\n\nPlatform and build breakdown:\n* linux1804-64-qr: 1\n  * opt: 1\n\nFor more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2024-10-28&endday=2024-11-03&tree=all",
+      "id": 17194422,
+      "attachment_id": null,
+      "bug_id": 1928537,
+      "reactions": {},
+      "text": "1 failures in 4361 pushes (0.0 failures/push) were associated with this bug in the last 7 days.\n\nRepository breakdown:\n* autoland: 1\n\nPlatform and build breakdown:\n* linux1804-64-qr: 1\n  * opt: 1\n\nFor more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2024-10-28&endday=2024-11-03&tree=all",
+      "creator": "orangefactor@bots.tld"
+    },
+    {
+      "creation_time": "2024-11-11T06:17:33Z",
+      "tags": [],
+      "id": 17205130,
+      "attachment_id": null,
+      "count": 2,
+      "is_private": false,
+      "author": "orangefactor@bots.tld",
+      "raw_text": "11 failures in 4515 pushes (0.002 failures/push) were associated with this bug in the last 7 days.\n\nRepository breakdown:\n* try: 1\n* autoland: 9\n* mozilla-central: 1\n\nPlatform and build breakdown:\n* windows11-64-2009-shippable-qr: 1\n  * opt: 1\n* linux1804-64-qr: 6\n  * opt: 5\n  * debug: 1\n* linux1804-64-shippable-qr: 4\n  * opt: 4\n\nFor more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2024-11-04&endday=2024-11-10&tree=all",
+      "time": "2024-11-11T06:17:33Z",
+      "bug_id": 1928537,
+      "reactions": {},
+      "creator": "orangefactor@bots.tld",
+      "text": "11 failures in 4515 pushes (0.002 failures/push) were associated with this bug in the last 7 days.\n\nRepository breakdown:\n* try: 1\n* autoland: 9\n* mozilla-central: 1\n\nPlatform and build breakdown:\n* windows11-64-2009-shippable-qr: 1\n  * opt: 1\n* linux1804-64-qr: 6\n  * opt: 5\n  * debug: 1\n* linux1804-64-shippable-qr: 4\n  * opt: 4\n\nFor more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2024-11-04&endday=2024-11-10&tree=all"
+    },
+    {
+      "attachment_id": null,
+      "id": 17218565,
+      "time": "2024-11-18T07:19:31Z",
+      "author": "orangefactor@bots.tld",
+      "is_private": false,
+      "count": 3,
+      "raw_text": "16 failures in 4227 pushes (0.004 failures/push) were associated with this bug in the last 7 days.\n\nRepository breakdown:\n* try: 3\n* autoland: 13\n\nPlatform and build breakdown:\n* windows11-64-2009-devedition-qr: 1\n  * opt: 1\n* windows11-64-2009-shippable-qr: 1\n  * opt: 1\n* linux1804-64-qr: 12\n  * opt: 11\n  * debug: 1\n* linux1804-64-shippable-qr: 1\n  * opt: 1\n* macosx1015-64-qr: 1\n  * opt: 1\n\nFor more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2024-11-11&endday=2024-11-17&tree=all",
+      "creation_time": "2024-11-18T07:19:31Z",
+      "tags": [],
+      "creator": "orangefactor@bots.tld",
+      "text": "16 failures in 4227 pushes (0.004 failures/push) were associated with this bug in the last 7 days.\n\nRepository breakdown:\n* try: 3\n* autoland: 13\n\nPlatform and build breakdown:\n* windows11-64-2009-devedition-qr: 1\n  * opt: 1\n* windows11-64-2009-shippable-qr: 1\n  * opt: 1\n* linux1804-64-qr: 12\n  * opt: 11\n  * debug: 1\n* linux1804-64-shippable-qr: 1\n  * opt: 1\n* macosx1015-64-qr: 1\n  * opt: 1\n\nFor more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2024-11-11&endday=2024-11-17&tree=all",
+      "bug_id": 1928537,
+      "reactions": {}
+    },
+    {
+      "reactions": {},
+      "bug_id": 1928537,
+      "creator": "orangefactor@bots.tld",
+      "text": "23 failures in 3002 pushes (0.008 failures/push) were associated with this bug in the last 7 days.\n\nRepository breakdown:\n* autoland: 21\n* mozilla-central: 2\n\nPlatform and build breakdown:\n* linux1804-64-qr: 15\n  * debug: 2\n  * opt: 13\n* linux1804-64-shippable-qr: 5\n  * opt: 5\n* windows11-64-2009-qr: 1\n  * debug: 1\n* linux1804-64-asan-qr: 2\n  * opt: 2\n\nFor more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2024-11-18&endday=2024-11-24&tree=all",
+      "creation_time": "2024-11-25T06:02:46Z",
+      "tags": [],
+      "id": 17227974,
+      "attachment_id": null,
+      "time": "2024-11-25T06:02:46Z",
+      "raw_text": "23 failures in 3002 pushes (0.008 failures/push) were associated with this bug in the last 7 days.\n\nRepository breakdown:\n* autoland: 21\n* mozilla-central: 2\n\nPlatform and build breakdown:\n* linux1804-64-qr: 15\n  * debug: 2\n  * opt: 13\n* linux1804-64-shippable-qr: 5\n  * opt: 5\n* windows11-64-2009-qr: 1\n  * debug: 1\n* linux1804-64-asan-qr: 2\n  * opt: 2\n\nFor more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2024-11-18&endday=2024-11-24&tree=all",
+      "count": 4,
+      "is_private": false,
+      "author": "orangefactor@bots.tld"
+    },
+    {
+      "creation_time": "2024-12-02T06:22:44Z",
+      "tags": [],
+      "attachment_id": null,
+      "id": 17238837,
+      "raw_text": "19 failures in 3953 pushes (0.005 failures/push) were associated with this bug in the last 7 days.\n\nRepository breakdown:\n* autoland: 15\n* try: 2\n* mozilla-beta: 1\n* mozilla-central: 1\n\nPlatform and build breakdown:\n* linux1804-64-shippable-qr: 6\n  * opt: 6\n* windows11-64-2009-qr: 3\n  * debug: 3\n* linux1804-64-asan-qr: 2\n  * opt: 2\n* linux1804-64-qr: 8\n  * debug: 3\n  * opt: 5\n\nFor more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2024-11-25&endday=2024-12-01&tree=all",
+      "author": "orangefactor@bots.tld",
+      "count": 5,
+      "is_private": false,
+      "time": "2024-12-02T06:22:44Z",
+      "reactions": {},
+      "bug_id": 1928537,
+      "creator": "orangefactor@bots.tld",
+      "text": "19 failures in 3953 pushes (0.005 failures/push) were associated with this bug in the last 7 days.\n\nRepository breakdown:\n* autoland: 15\n* try: 2\n* mozilla-beta: 1\n* mozilla-central: 1\n\nPlatform and build breakdown:\n* linux1804-64-shippable-qr: 6\n  * opt: 6\n* windows11-64-2009-qr: 3\n  * debug: 3\n* linux1804-64-asan-qr: 2\n  * opt: 2\n* linux1804-64-qr: 8\n  * debug: 3\n  * opt: 5\n\nFor more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2024-11-25&endday=2024-12-01&tree=all"
+    },
+    {
+      "text": "15 failures in 4722 pushes (0.003 failures/push) were associated with this bug in the last 7 days.\n\nRepository breakdown:\n* autoland: 10\n* mozilla-central: 2\n* mozilla-beta: 3\n\nPlatform and build breakdown:\n* linux1804-64-qr: 9\n  * opt: 7\n  * debug: 2\n* linux1804-64-shippable-qr: 3\n  * opt: 3\n* linux1804-64-asan-qr: 1\n  * opt: 1\n* windows11-64-2009-shippable-qr: 1\n  * opt: 1\n* windows11-64-2009-qr: 1\n  * debug: 1\n\nFor more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2024-12-02&endday=2024-12-08&tree=all",
+      "creator": "orangefactor@bots.tld",
+      "reactions": {},
+      "bug_id": 1928537,
+      "time": "2024-12-09T06:22:27Z",
+      "raw_text": "15 failures in 4722 pushes (0.003 failures/push) were associated with this bug in the last 7 days.\n\nRepository breakdown:\n* autoland: 10\n* mozilla-central: 2\n* mozilla-beta: 3\n\nPlatform and build breakdown:\n* linux1804-64-qr: 9\n  * opt: 7\n  * debug: 2\n* linux1804-64-shippable-qr: 3\n  * opt: 3\n* linux1804-64-asan-qr: 1\n  * opt: 1\n* windows11-64-2009-shippable-qr: 1\n  * opt: 1\n* windows11-64-2009-qr: 1\n  * debug: 1\n\nFor more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2024-12-02&endday=2024-12-08&tree=all",
+      "is_private": false,
+      "count": 6,
+      "author": "orangefactor@bots.tld",
+      "attachment_id": null,
+      "id": 17250808,
+      "tags": [],
+      "creation_time": "2024-12-09T06:22:27Z"
+    },
+    {
+      "reactions": {},
+      "bug_id": 1928537,
+      "creator": "orangefactor@bots.tld",
+      "text": "## Summary\n22 failures in 4615 pushes (0.005 failures/push) were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 19\n* mozilla-beta: 2\n* mozilla-central: 1\n\n## Platform and build breakdown:\n* linux1804-64-asan-qr: 3\n  * opt: 3\n* linux1804-64-qr: 15\n  * opt: 14\n  * debug: 1\n* linux1804-64-shippable-qr: 2\n  * opt: 2\n* windows11-32-2009-qr: 1\n  * debug: 1\n* windows11-64-2009-shippable-qr: 1\n  * opt: 1\n\n## Table\n| |**1proc**|**1proc-s**|**a11y-checks**|**a11y-checks-s**|**a11y-checks-swr**|**a11y-checks-swr-s**|**condprof**|**condprof-s**|**fis**|**fis-hv**|**fis-hv-s**|**fis-s**|**headless**|**headless-s**|**http2**|**http3**|**msix**|**msix-s**|**no_variant**|**nofis**|**nofis-aab**|**nofis-s**|**nofis-ship**|**nofis-ship-s**|**nofis-spi**|**nofis-swr**|**nofis-swr-s**|**nogpu**|**nogpu-s**|**s**|**spi**|**spi-nw**|**spi-nw-1proc**|**spi-nw-s**|**spi-s**|**swr**|**swr-s**|**wr-dc1-p**|**xorig**|**xorig-s**|\n|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n|**linux1804-64-asan-qr/opt**| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |3| | | | |\n|**linux1804-64-qr/opt**| | | | |1| | | | | | | | | | | | | | | | | | | | | | | | | | |13| | | | | | | | |\n|**linux1804-64-qr/debug**| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |1| | | | | | | | |\n|**linux1804-64-shippable-qr/opt**| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |2| | | | | | |\n|**windows11-32-2009-qr/debug**| | | | | | | | | | | | | | | | | | |1| | | | | | | | | | | | | | | | | | | | | |\n|**windows11-64-2009-shippable-qr/opt**| | | | | | | | | | | | | | | | | | | | | | | | | | | | | |1| | | | | | | | | | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2024-12-09&endday=2024-12-15&tree=all",
+      "creation_time": "2024-12-16T18:22:23Z",
+      "tags": [],
+      "attachment_id": null,
+      "id": 17263254,
+      "time": "2024-12-16T18:22:23Z",
+      "raw_text": "## Summary\n22 failures in 4615 pushes (0.005 failures/push) were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 19\n* mozilla-beta: 2\n* mozilla-central: 1\n\n## Platform and build breakdown:\n* linux1804-64-asan-qr: 3\n  * opt: 3\n* linux1804-64-qr: 15\n  * opt: 14\n  * debug: 1\n* linux1804-64-shippable-qr: 2\n  * opt: 2\n* windows11-32-2009-qr: 1\n  * debug: 1\n* windows11-64-2009-shippable-qr: 1\n  * opt: 1\n\n## Table\n| |**1proc**|**1proc-s**|**a11y-checks**|**a11y-checks-s**|**a11y-checks-swr**|**a11y-checks-swr-s**|**condprof**|**condprof-s**|**fis**|**fis-hv**|**fis-hv-s**|**fis-s**|**headless**|**headless-s**|**http2**|**http3**|**msix**|**msix-s**|**no_variant**|**nofis**|**nofis-aab**|**nofis-s**|**nofis-ship**|**nofis-ship-s**|**nofis-spi**|**nofis-swr**|**nofis-swr-s**|**nogpu**|**nogpu-s**|**s**|**spi**|**spi-nw**|**spi-nw-1proc**|**spi-nw-s**|**spi-s**|**swr**|**swr-s**|**wr-dc1-p**|**xorig**|**xorig-s**|\n|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n|**linux1804-64-asan-qr/opt**| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |3| | | | |\n|**linux1804-64-qr/opt**| | | | |1| | | | | | | | | | | | | | | | | | | | | | | | | | |13| | | | | | | | |\n|**linux1804-64-qr/debug**| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |1| | | | | | | | |\n|**linux1804-64-shippable-qr/opt**| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |2| | | | | | |\n|**windows11-32-2009-qr/debug**| | | | | | | | | | | | | | | | | | |1| | | | | | | | | | | | | | | | | | | | | |\n|**windows11-64-2009-shippable-qr/opt**| | | | | | | | | | | | | | | | | | | | | | | | | | | | | |1| | | | | | | | | | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2024-12-09&endday=2024-12-15&tree=all",
+      "author": "orangefactor@bots.tld",
+      "is_private": false,
+      "count": 7
+    },
+    {
+      "time": "2024-12-23T06:21:10Z",
+      "raw_text": "## Summary\n17 failures in 3774 pushes (0.005 failures/push) were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 16\n* mozilla-central: 1\n\n## Platform and build breakdown:\n* linux1804-64-asan-qr: 3\n  * opt: 3\n* linux1804-64-qr: 9\n  * opt: 8\n  * debug: 1\n* linux1804-64-shippable-qr: 5\n  * opt: 5\n\n## Table\n| |**1proc**|**1proc-s**|**a11y-checks**|**a11y-checks-s**|**a11y-checks-swr**|**a11y-checks-swr-s**|**condprof-s**|**fis**|**fis-hv**|**fis-hv-s**|**fis-s**|**headless**|**http2**|**http3**|**mda-gpu-s**|**msix**|**msix-s**|**no_variant**|**nofis**|**nofis-aab**|**nofis-s**|**nofis-ship**|**nofis-ship-s**|**nofis-spi**|**nofis-swr**|**nofis-swr-s**|**nogpu**|**nogpu-s**|**s**|**spi**|**spi-nw**|**spi-nw-1proc**|**spi-nw-nofis**|**spi-nw-nofis-s**|**spi-nw-s**|**swr**|**swr-s**|**wmfme**|**wr-dc2-o**|**xorig**|**xorig-s**|\n|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n|**linux1804-64-asan-qr/opt**| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |3| | | | | |\n|**linux1804-64-qr/opt**| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |7| | | | |1| | | | | |\n|**linux1804-64-qr/debug**| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |1| | | | | | | | | | |\n|**linux1804-64-shippable-qr/opt**| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |5| | | | | | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2024-12-16&endday=2024-12-22&tree=all",
+      "count": 8,
+      "is_private": false,
+      "author": "orangefactor@bots.tld",
+      "id": 17272659,
+      "attachment_id": null,
+      "tags": [],
+      "creation_time": "2024-12-23T06:21:10Z",
+      "text": "## Summary\n17 failures in 3774 pushes (0.005 failures/push) were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 16\n* mozilla-central: 1\n\n## Platform and build breakdown:\n* linux1804-64-asan-qr: 3\n  * opt: 3\n* linux1804-64-qr: 9\n  * opt: 8\n  * debug: 1\n* linux1804-64-shippable-qr: 5\n  * opt: 5\n\n## Table\n| |**1proc**|**1proc-s**|**a11y-checks**|**a11y-checks-s**|**a11y-checks-swr**|**a11y-checks-swr-s**|**condprof-s**|**fis**|**fis-hv**|**fis-hv-s**|**fis-s**|**headless**|**http2**|**http3**|**mda-gpu-s**|**msix**|**msix-s**|**no_variant**|**nofis**|**nofis-aab**|**nofis-s**|**nofis-ship**|**nofis-ship-s**|**nofis-spi**|**nofis-swr**|**nofis-swr-s**|**nogpu**|**nogpu-s**|**s**|**spi**|**spi-nw**|**spi-nw-1proc**|**spi-nw-nofis**|**spi-nw-nofis-s**|**spi-nw-s**|**swr**|**swr-s**|**wmfme**|**wr-dc2-o**|**xorig**|**xorig-s**|\n|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n|**linux1804-64-asan-qr/opt**| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |3| | | | | |\n|**linux1804-64-qr/opt**| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |7| | | | |1| | | | | |\n|**linux1804-64-qr/debug**| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |1| | | | | | | | | | |\n|**linux1804-64-shippable-qr/opt**| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |5| | | | | | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2024-12-16&endday=2024-12-22&tree=all",
+      "creator": "orangefactor@bots.tld",
+      "reactions": {},
+      "bug_id": 1928537
+    },
+    {
+      "bug_id": 1928537,
+      "reactions": {},
+      "creator": "orangefactor@bots.tld",
+      "text": "## Summary\n10 failures in 900 pushes (0.011 failures/push) were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 7\n* try: 2\n* mozilla-beta: 1\n\n## Platform and build breakdown:\n* linux1804-64-asan-qr: 2\n  * opt: 2\n* linux1804-64-qr: 4\n  * debug: 1\n  * opt: 3\n* linux1804-64-shippable-qr: 1\n  * opt: 1\n* macosx1015-64-shippable-qr: 1\n  * opt: 1\n* windows11-64-2009-shippable-qr: 2\n  * opt: 2\n\n## Table\n| |**1proc**|**1proc-s**|**a11y-checks-swr**|**a11y-checks-swr-s**|**fis**|**fis-hv**|**fis-hv-s**|**fis-s**|**headless**|**headless-s**|**http2**|**http3**|**msix**|**msix-s**|**no_variant**|**nofis**|**nofis-aab**|**nofis-s**|**nofis-ship**|**nofis-ship-s**|**nofis-spi**|**nofis-swr**|**nogpu**|**nogpu-s**|**s**|**spi**|**spi-nw**|**spi-nw-s**|**swr**|**swr-s**|**wmfme**|**wmfme-s**|**xorig**|**xorig-s**|\n|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n|**linux1804-64-asan-qr/opt**| | | | | | | | | | | | | | | | | | | | | | | | | | | | |2| | | | | |\n|**linux1804-64-qr/debug**| | | | | | | | | | | | | | | | | | | | | | | | | | | | |1| | | | | |\n|**linux1804-64-qr/opt**| | | | | | | | | | | | | | | | | | | | | | | | | | |3| | | | | | | |\n|**linux1804-64-shippable-qr/opt**| | | | | | | | | | | | | | | | | | | | | | | | | | | |1| | | | | | |\n|**macosx1015-64-shippable-qr/opt**| | | | | | | | | | | | | | | | | | | | | | | | | | | |1| | | | | | |\n|**windows11-64-2009-shippable-qr/opt**| | | | | | | | | | | | | | | | | | | | | | | | |1| | |1| | | | | | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2024-12-23&endday=2024-12-29&tree=all",
+      "creation_time": "2024-12-30T06:11:52Z",
+      "tags": [],
+      "id": 17277545,
+      "attachment_id": null,
+      "author": "orangefactor@bots.tld",
+      "count": 9,
+      "is_private": false,
+      "raw_text": "## Summary\n10 failures in 900 pushes (0.011 failures/push) were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 7\n* try: 2\n* mozilla-beta: 1\n\n## Platform and build breakdown:\n* linux1804-64-asan-qr: 2\n  * opt: 2\n* linux1804-64-qr: 4\n  * debug: 1\n  * opt: 3\n* linux1804-64-shippable-qr: 1\n  * opt: 1\n* macosx1015-64-shippable-qr: 1\n  * opt: 1\n* windows11-64-2009-shippable-qr: 2\n  * opt: 2\n\n## Table\n| |**1proc**|**1proc-s**|**a11y-checks-swr**|**a11y-checks-swr-s**|**fis**|**fis-hv**|**fis-hv-s**|**fis-s**|**headless**|**headless-s**|**http2**|**http3**|**msix**|**msix-s**|**no_variant**|**nofis**|**nofis-aab**|**nofis-s**|**nofis-ship**|**nofis-ship-s**|**nofis-spi**|**nofis-swr**|**nogpu**|**nogpu-s**|**s**|**spi**|**spi-nw**|**spi-nw-s**|**swr**|**swr-s**|**wmfme**|**wmfme-s**|**xorig**|**xorig-s**|\n|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n|**linux1804-64-asan-qr/opt**| | | | | | | | | | | | | | | | | | | | | | | | | | | | |2| | | | | |\n|**linux1804-64-qr/debug**| | | | | | | | | | | | | | | | | | | | | | | | | | | | |1| | | | | |\n|**linux1804-64-qr/opt**| | | | | | | | | | | | | | | | | | | | | | | | | | |3| | | | | | | |\n|**linux1804-64-shippable-qr/opt**| | | | | | | | | | | | | | | | | | | | | | | | | | | |1| | | | | | |\n|**macosx1015-64-shippable-qr/opt**| | | | | | | | | | | | | | | | | | | | | | | | | | | |1| | | | | | |\n|**windows11-64-2009-shippable-qr/opt**| | | | | | | | | | | | | | | | | | | | | | | | |1| | |1| | | | | | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2024-12-23&endday=2024-12-29&tree=all",
+      "time": "2024-12-30T06:11:52Z"
+    },
+    {
+      "time": "2025-01-06T06:19:17Z",
+      "raw_text": "## Summary\n7 failures in 1319 pushes (0.005 failures/push) were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 6\n* mozilla-central: 1\n\n## Platform and build breakdown:\n* linux1804-64-qr: 3\n  * opt: 3\n* linux1804-64-shippable-qr: 3\n  * opt: 3\n* windows11-64-2009-shippable-qr: 1\n  * opt: 1\n\n## Table\n| |**msix**|**spi-nw**|**swr**|\n|---|:-:|:-:|:-:|\n|**linux1804-64-qr/opt**| |2|1|\n|**linux1804-64-shippable-qr/opt**| |3| |\n|**windows11-64-2009-shippable-qr/opt**|1| | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2024-12-30&endday=2025-01-05&tree=all",
+      "author": "orangefactor@bots.tld",
+      "count": 10,
+      "is_private": false,
+      "attachment_id": null,
+      "id": 17282979,
+      "tags": [],
+      "creation_time": "2025-01-06T06:19:17Z",
+      "text": "## Summary\n7 failures in 1319 pushes (0.005 failures/push) were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 6\n* mozilla-central: 1\n\n## Platform and build breakdown:\n* linux1804-64-qr: 3\n  * opt: 3\n* linux1804-64-shippable-qr: 3\n  * opt: 3\n* windows11-64-2009-shippable-qr: 1\n  * opt: 1\n\n## Table\n| |**msix**|**spi-nw**|**swr**|\n|---|:-:|:-:|:-:|\n|**linux1804-64-qr/opt**| |2|1|\n|**linux1804-64-shippable-qr/opt**| |3| |\n|**windows11-64-2009-shippable-qr/opt**|1| | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2024-12-30&endday=2025-01-05&tree=all",
+      "creator": "orangefactor@bots.tld",
+      "reactions": {},
+      "bug_id": 1928537
+    },
+    {
+      "tags": [],
+      "creation_time": "2025-01-13T06:21:00Z",
+      "raw_text": "## Summary\n18 failures in 3682 pushes (0.005 failures/push) were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 14\n* mozilla-beta: 1\n* mozilla-central: 3\n\n## Platform and build breakdown:\n* linux1804-64-asan-qr: 2\n  * opt: 2\n* linux1804-64-qr: 11\n  * opt: 8\n  * debug: 3\n* linux1804-64-shippable-qr: 2\n  * opt: 2\n* windows11-64-2009-shippable-qr: 3\n  * opt: 3\n\n## Table\n| |**msix**|**no_variant**|**spi-nw**|**swr**|\n|---|:-:|:-:|:-:|:-:|\n|**linux1804-64-asan-qr/opt**| | | |2|\n|**linux1804-64-qr/opt**| | |8| |\n|**linux1804-64-qr/debug**| | |3| |\n|**linux1804-64-shippable-qr/opt**| | |2| |\n|**windows11-64-2009-shippable-qr/opt**|1|1|1| |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-01-06&endday=2025-01-12&tree=all",
+      "count": 11,
+      "is_private": false,
+      "author": "orangefactor@bots.tld",
+      "time": "2025-01-13T06:21:00Z",
+      "attachment_id": null,
+      "id": 17293537,
+      "reactions": {},
+      "bug_id": 1928537,
+      "text": "## Summary\n18 failures in 3682 pushes (0.005 failures/push) were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 14\n* mozilla-beta: 1\n* mozilla-central: 3\n\n## Platform and build breakdown:\n* linux1804-64-asan-qr: 2\n  * opt: 2\n* linux1804-64-qr: 11\n  * opt: 8\n  * debug: 3\n* linux1804-64-shippable-qr: 2\n  * opt: 2\n* windows11-64-2009-shippable-qr: 3\n  * opt: 3\n\n## Table\n| |**msix**|**no_variant**|**spi-nw**|**swr**|\n|---|:-:|:-:|:-:|:-:|\n|**linux1804-64-asan-qr/opt**| | | |2|\n|**linux1804-64-qr/opt**| | |8| |\n|**linux1804-64-qr/debug**| | |3| |\n|**linux1804-64-shippable-qr/opt**| | |2| |\n|**windows11-64-2009-shippable-qr/opt**|1|1|1| |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-01-06&endday=2025-01-12&tree=all",
+      "creator": "orangefactor@bots.tld"
+    },
+    {
+      "is_private": false,
+      "author": "kershaw@mozilla.com",
+      "count": 12,
+      "raw_text": "Hi Sean, could you take a look at this intermittent failure?\nAny idea why the test is timeout?",
+      "time": "2025-01-17T14:02:59Z",
+      "id": 17302808,
+      "attachment_id": null,
+      "tags": [],
+      "creation_time": "2025-01-17T14:02:59Z",
+      "text": "Hi Sean, could you take a look at this intermittent failure?\nAny idea why the test is timeout?",
+      "creator": "kershaw@mozilla.com",
+      "bug_id": 1928537,
+      "reactions": {}
+    },
+    {
+      "creation_time": "2025-01-17T15:25:21Z",
+      "tags": [],
+      "id": 17302918,
+      "attachment_id": null,
+      "time": "2025-01-17T15:25:21Z",
+      "count": 13,
+      "author": "sean.skim21@gmail.com",
+      "is_private": false,
+      "raw_text": "I think I had this issue few times on Try when I worked on this patch (I believe that it had to do with the timing of [`MutationObserver`](https://searchfox.org/mozilla-central/rev/a9824b3ffc2efea7a317f114bc3192ccdffa0ef7/netwerk/test/browser/browser_necko_l10n.js#29) when removing each expected messages), but it passed when I reran the test. \n\nAlso it seems like more than [90% of the failures](https://treeherder.mozilla.org/intermittent-failures/bugdetails?startday=2024-09-19&endday=2025-01-17&tree=trunk&failurehash=all&bug=1928537) comes from Linux. I am wondering if it would be a good idea to disable the test on Linux.",
+      "bug_id": 1928537,
+      "reactions": {},
+      "creator": "sean.skim21@gmail.com",
+      "text": "I think I had this issue few times on Try when I worked on this patch (I believe that it had to do with the timing of [`MutationObserver`](https://searchfox.org/mozilla-central/rev/a9824b3ffc2efea7a317f114bc3192ccdffa0ef7/netwerk/test/browser/browser_necko_l10n.js#29) when removing each expected messages), but it passed when I reran the test. \n\nAlso it seems like more than [90% of the failures](https://treeherder.mozilla.org/intermittent-failures/bugdetails?startday=2024-09-19&endday=2025-01-17&tree=trunk&failurehash=all&bug=1928537) comes from Linux. I am wondering if it would be a good idea to disable the test on Linux."
+    },
+    {
+      "text": "## Summary\n17 failures in 4508 pushes (0.004 failures/push) were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* mozilla-beta: 2\n* autoland: 15\n\n## Platform and build breakdown:\n* linux1804-64-asan-qr: 2\n  * opt: 2\n* linux1804-64-qr: 15\n  * opt: 11\n  * debug: 4\n\n## Table\n| |**spi-nw**|**swr**|\n|---|:-:|:-:|\n|**linux1804-64-asan-qr/-/opt**| |2|\n|**linux1804-64-qr/-/opt**|11| |\n|**linux1804-64-qr/-/debug**|1|3|\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-01-13&endday=2025-01-19&tree=all",
+      "creator": "orangefactor@bots.tld",
+      "bug_id": 1928537,
+      "reactions": {},
+      "time": "2025-01-20T06:25:22Z",
+      "count": 14,
+      "is_private": false,
+      "author": "orangefactor@bots.tld",
+      "raw_text": "## Summary\n17 failures in 4508 pushes (0.004 failures/push) were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* mozilla-beta: 2\n* autoland: 15\n\n## Platform and build breakdown:\n* linux1804-64-asan-qr: 2\n  * opt: 2\n* linux1804-64-qr: 15\n  * opt: 11\n  * debug: 4\n\n## Table\n| |**spi-nw**|**swr**|\n|---|:-:|:-:|\n|**linux1804-64-asan-qr/-/opt**| |2|\n|**linux1804-64-qr/-/opt**|11| |\n|**linux1804-64-qr/-/debug**|1|3|\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-01-13&endday=2025-01-19&tree=all",
+      "attachment_id": null,
+      "id": 17304943,
+      "tags": [],
+      "creation_time": "2025-01-20T06:25:22Z"
+    },
+    {
+      "raw_text": "(In reply to Sean Kim from comment #13)\n> I think I had this issue few times on Try when I worked on this patch (I believe that it had to do with the timing of [`MutationObserver`](https://searchfox.org/mozilla-central/rev/a9824b3ffc2efea7a317f114bc3192ccdffa0ef7/netwerk/test/browser/browser_necko_l10n.js#29) when removing each expected messages), but it passed when I reran the test. \n> \n> Also it seems like more than [90% of the failures](https://treeherder.mozilla.org/intermittent-failures/bugdetails?startday=2024-09-19&endday=2025-01-17&tree=trunk&failurehash=all&bug=1928537) comes from Linux. I am wondering if it would be a good idea to disable the test on Linux.\n\nNo, I think we need to understand the root cause of this intermittent failure instead of hiding it.",
+      "count": 15,
+      "is_private": false,
+      "author": "kershaw@mozilla.com",
+      "time": "2025-01-20T13:08:59Z",
+      "id": 17307337,
+      "attachment_id": null,
+      "tags": [],
+      "creation_time": "2025-01-20T13:08:59Z",
+      "text": "(In reply to Sean Kim from comment #13)\n> I think I had this issue few times on Try when I worked on this patch (I believe that it had to do with the timing of [`MutationObserver`](https://searchfox.org/mozilla-central/rev/a9824b3ffc2efea7a317f114bc3192ccdffa0ef7/netwerk/test/browser/browser_necko_l10n.js#29) when removing each expected messages), but it passed when I reran the test. \n> \n> Also it seems like more than [90% of the failures](https://treeherder.mozilla.org/intermittent-failures/bugdetails?startday=2024-09-19&endday=2025-01-17&tree=trunk&failurehash=all&bug=1928537) comes from Linux. I am wondering if it would be a good idea to disable the test on Linux.\n\nNo, I think we need to understand the root cause of this intermittent failure instead of hiding it.",
+      "creator": "kershaw@mozilla.com",
+      "reactions": {},
+      "bug_id": 1928537
+    },
+    {
+      "creation_time": "2025-01-27T06:22:44Z",
+      "tags": [],
+      "attachment_id": null,
+      "id": 17315998,
+      "time": "2025-01-27T06:22:44Z",
+      "raw_text": "## Summary\n3 failures in 4035 pushes (0.001 failures/push) were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* mozilla-central: 2\n* autoland: 1\n\n## Platform and build breakdown:\n* linux1804-64-asan-qr: 1\n  * opt: 1\n* linux1804-64-qr: 2\n  * opt: 2\n\n## Table\n| |**spi-nw**|**swr**|\n|---|:-:|:-:|\n|**linux1804-64-asan-qr--/opt**| |1|\n|**linux1804-64-qr--/opt**|2| |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-01-20&endday=2025-01-26&tree=all",
+      "count": 16,
+      "author": "orangefactor@bots.tld",
+      "is_private": false,
+      "reactions": {},
+      "bug_id": 1928537,
+      "creator": "orangefactor@bots.tld",
+      "text": "## Summary\n3 failures in 4035 pushes (0.001 failures/push) were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* mozilla-central: 2\n* autoland: 1\n\n## Platform and build breakdown:\n* linux1804-64-asan-qr: 1\n  * opt: 1\n* linux1804-64-qr: 2\n  * opt: 2\n\n## Table\n| |**spi-nw**|**swr**|\n|---|:-:|:-:|\n|**linux1804-64-asan-qr--/opt**| |1|\n|**linux1804-64-qr--/opt**|2| |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-01-20&endday=2025-01-26&tree=all"
+    },
+    {
+      "text": "One observation is that `[dom/l10n] Errors during l10n mutation frame.`  exists in the log for all of the test failures. Wasn't able to reproduce it locally.",
+      "creator": "sean.skim21@gmail.com",
+      "reactions": {},
+      "bug_id": 1928537,
+      "time": "2025-01-30T19:49:56Z",
+      "raw_text": "One observation is that `[dom/l10n] Errors during l10n mutation frame.`  exists in the log for all of the test failures. Wasn't able to reproduce it locally.",
+      "is_private": false,
+      "author": "sean.skim21@gmail.com",
+      "count": 17,
+      "id": 17324270,
+      "attachment_id": null,
+      "tags": [],
+      "creation_time": "2025-01-30T19:49:56Z"
+    },
+    {
+      "id": 17327644,
+      "attachment_id": null,
+      "time": "2025-02-03T06:33:31Z",
+      "raw_text": "## Summary\n5 failures in 4566 pushes (0.001 failures/push) were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 5\n\n## Platform and build breakdown:\n* linux1804-64-qr: 5\n  * opt: 5\n\n## Table\n| |**spi-nw**|\n|---|:-:|\n|**linux1804-64-qr--/opt**|5|\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-01-27&endday=2025-02-02&tree=all",
+      "is_private": false,
+      "count": 18,
+      "author": "orangefactor@bots.tld",
+      "creation_time": "2025-02-03T06:33:31Z",
+      "tags": [],
+      "creator": "orangefactor@bots.tld",
+      "text": "## Summary\n5 failures in 4566 pushes (0.001 failures/push) were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 5\n\n## Platform and build breakdown:\n* linux1804-64-qr: 5\n  * opt: 5\n\n## Table\n| |**spi-nw**|\n|---|:-:|\n|**linux1804-64-qr--/opt**|5|\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-01-27&endday=2025-02-02&tree=all",
+      "reactions": {},
+      "bug_id": 1928537
+    },
+    {
+      "attachment_id": null,
+      "id": 17333296,
+      "time": "2025-02-05T14:31:42Z",
+      "is_private": false,
+      "count": 19,
+      "author": "sean.skim21@gmail.com",
+      "raw_text": "As Valentin suggested, we could add a static pref for the timer value instead of 160 here and make sure that we always get notified.\n\n[This](https://searchfox.org/mozilla-central/source/toolkit/components/statusfilter/nsBrowserStatusFilter.cpp#316) might be causing the timeout to happen.",
+      "creation_time": "2025-02-05T14:31:42Z",
+      "tags": [],
+      "creator": "sean.skim21@gmail.com",
+      "text": "As Valentin suggested, we could add a static pref for the timer value instead of 160 here and make sure that we always get notified.\n\n[This](https://searchfox.org/mozilla-central/source/toolkit/components/statusfilter/nsBrowserStatusFilter.cpp#316) might be causing the timeout to happen.",
+      "bug_id": 1928537,
+      "reactions": {}
+    },
+    {
+      "reactions": {},
+      "bug_id": 1928537,
+      "text": "## Summary\n1 failures in 4309 pushes (0.0 failures/push) were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* mozilla-central: 1\n\n## Platform and build breakdown:\n* linux1804-64-qr: 1\n  * opt: 1\n\n## Table\n| |**spi-nw**|\n|---|:-:|\n|**linux1804-64-qr--/opt**|1|\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-02-03&endday=2025-02-09&tree=all",
+      "creator": "orangefactor@bots.tld",
+      "tags": [],
+      "creation_time": "2025-02-10T06:47:19Z",
+      "time": "2025-02-10T06:47:19Z",
+      "raw_text": "## Summary\n1 failures in 4309 pushes (0.0 failures/push) were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* mozilla-central: 1\n\n## Platform and build breakdown:\n* linux1804-64-qr: 1\n  * opt: 1\n\n## Table\n| |**spi-nw**|\n|---|:-:|\n|**linux1804-64-qr--/opt**|1|\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-02-03&endday=2025-02-09&tree=all",
+      "is_private": false,
+      "author": "orangefactor@bots.tld",
+      "count": 20,
+      "attachment_id": null,
+      "id": 17340136
+    },
+    {
+      "text": "## Summary\n6 failures in 5022 pushes (0.001 failures/push) were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* mozilla-beta: 1\n* try: 1\n* autoland: 3\n* mozilla-release: 1\n\n## Platform and build breakdown:\n* linux1804-64-asan-qr: 1\n  * opt: 1\n* linux1804-64-qr: 4\n  * opt: 4\n* windows11-64-2009-qr: 1\n  * opt: 1\n\n## Table\n| |**no_variant**|**spi-nw**|**swr**|\n|---|:-:|:-:|:-:|\n|**linux1804-64-asan-qr--/opt**| | |1|\n|**linux1804-64-qr--/opt**| |4| |\n|**windows11-64-2009-qr--/opt**|1| | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-02-10&endday=2025-02-16&tree=all",
+      "creator": "orangefactor@bots.tld",
+      "bug_id": 1928537,
+      "reactions": {},
+      "count": 21,
+      "is_private": false,
+      "author": "orangefactor@bots.tld",
+      "raw_text": "## Summary\n6 failures in 5022 pushes (0.001 failures/push) were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* mozilla-beta: 1\n* try: 1\n* autoland: 3\n* mozilla-release: 1\n\n## Platform and build breakdown:\n* linux1804-64-asan-qr: 1\n  * opt: 1\n* linux1804-64-qr: 4\n  * opt: 4\n* windows11-64-2009-qr: 1\n  * opt: 1\n\n## Table\n| |**no_variant**|**spi-nw**|**swr**|\n|---|:-:|:-:|:-:|\n|**linux1804-64-asan-qr--/opt**| | |1|\n|**linux1804-64-qr--/opt**| |4| |\n|**windows11-64-2009-qr--/opt**|1| | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-02-10&endday=2025-02-16&tree=all",
+      "time": "2025-02-17T06:25:03Z",
+      "id": 17351334,
+      "attachment_id": null,
+      "tags": [],
+      "creation_time": "2025-02-17T06:25:03Z"
+    },
+    {
+      "creator": "orangefactor@bots.tld",
+      "text": "## Summary\n6 failures in 4340 pushes (0.001 failures/push) were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* try: 1\n* mozilla-central: 1\n* autoland: 4\n\n## Platform and build breakdown:\n* linux1804-64-asan-qr: 2\n  * opt: 2\n* linux1804-64-qr: 4\n  * opt: 3\n  * debug: 1\n\n## Table\n| |**spi-nw**|**swr**|\n|---|:-:|:-:|\n|**linux1804-64-asan-qr--/opt**| |2|\n|**linux1804-64-qr--/opt**|3| |\n|**linux1804-64-qr--/debug**|1| |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-02-17&endday=2025-02-23&tree=all",
+      "bug_id": 1928537,
+      "reactions": {},
+      "id": 17362250,
+      "attachment_id": null,
+      "is_private": false,
+      "count": 22,
+      "author": "orangefactor@bots.tld",
+      "raw_text": "## Summary\n6 failures in 4340 pushes (0.001 failures/push) were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* try: 1\n* mozilla-central: 1\n* autoland: 4\n\n## Platform and build breakdown:\n* linux1804-64-asan-qr: 2\n  * opt: 2\n* linux1804-64-qr: 4\n  * opt: 3\n  * debug: 1\n\n## Table\n| |**spi-nw**|**swr**|\n|---|:-:|:-:|\n|**linux1804-64-asan-qr--/opt**| |2|\n|**linux1804-64-qr--/opt**|3| |\n|**linux1804-64-qr--/debug**|1| |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-02-17&endday=2025-02-23&tree=all",
+      "time": "2025-02-24T06:17:02Z",
+      "creation_time": "2025-02-24T06:17:02Z",
+      "tags": []
+    },
+    {
+      "creation_time": "2025-02-24T17:54:20Z",
+      "tags": [],
+      "attachment_id": null,
+      "id": 17365036,
+      "time": "2025-02-24T17:54:20Z",
+      "raw_text": "Bug 1950166 should handle this regression.",
+      "is_private": false,
+      "count": 23,
+      "author": "sean.skim21@gmail.com",
+      "reactions": {},
+      "bug_id": 1928537,
+      "creator": "sean.skim21@gmail.com",
+      "text": "Bug 1950166 should handle this regression."
+    },
+    {
+      "reactions": {},
+      "bug_id": 1928537,
+      "text": "Set release status flags based on info from the regressing bug 1733498",
+      "creator": "release-mgmt-account-bot@mozilla.tld",
+      "tags": [],
+      "creation_time": "2025-02-24T18:42:49Z",
+      "time": "2025-02-24T18:42:49Z",
+      "raw_text": "Set release status flags based on info from the regressing bug 1733498",
+      "count": 24,
+      "is_private": false,
+      "author": "release-mgmt-account-bot@mozilla.tld",
+      "id": 17365118,
+      "attachment_id": null
+    },
+    {
+      "raw_text": "## Summary\n3 failures in 4564 pushes (0.001 failures/push) were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 3\n\n## Platform and build breakdown:\n* linux1804-64-asan-qr: 3\n  * opt: 3\n\n## Table\n| |**swr**|\n|---|:-:|\n|**linux1804-64-asan-qr--/opt**|3|\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-02-24&endday=2025-03-02&tree=all",
+      "count": 25,
+      "is_private": false,
+      "author": "orangefactor@bots.tld",
+      "time": "2025-03-03T06:17:19Z",
+      "id": 17373335,
+      "attachment_id": null,
+      "tags": [],
+      "creation_time": "2025-03-03T06:17:19Z",
+      "text": "## Summary\n3 failures in 4564 pushes (0.001 failures/push) were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 3\n\n## Platform and build breakdown:\n* linux1804-64-asan-qr: 3\n  * opt: 3\n\n## Table\n| |**swr**|\n|---|:-:|\n|**linux1804-64-asan-qr--/opt**|3|\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-02-24&endday=2025-03-02&tree=all",
+      "creator": "orangefactor@bots.tld",
+      "reactions": {},
+      "bug_id": 1928537
+    },
+    {
+      "creation_time": "2025-03-04T14:45:36Z",
+      "tags": [],
+      "attachment_id": null,
+      "id": 17377157,
+      "time": "2025-03-04T14:45:36Z",
+      "is_private": false,
+      "author": "release-mgmt-account-bot@mozilla.tld",
+      "count": 26,
+      "raw_text": "Set release status flags based on info from the regressing bug 1733498",
+      "bug_id": 1928537,
+      "reactions": {},
+      "creator": "release-mgmt-account-bot@mozilla.tld",
+      "text": "Set release status flags based on info from the regressing bug 1733498"
+    },
+    {
+      "creation_time": "2025-03-10T06:20:05Z",
+      "tags": [],
+      "attachment_id": null,
+      "id": 17383486,
+      "time": "2025-03-10T06:20:05Z",
+      "raw_text": "## Summary\n4 failures in 4009 pushes (0.001 failures/push) were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 3\n* try: 1\n\n## Platform and build breakdown:\n* linux1804-64-asan-qr: 1\n  * opt: 1\n* linux1804-64-qr: 3\n  * opt: 3\n\n## Table\n| |**spi-nw**|**swr**|\n|---|:-:|:-:|\n|**linux1804-64-asan-qr--/opt**| |1|\n|**linux1804-64-qr--/opt**|2|1|\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-03-03&endday=2025-03-09&tree=all",
+      "is_private": false,
+      "author": "orangefactor@bots.tld",
+      "count": 27,
+      "reactions": {},
+      "bug_id": 1928537,
+      "creator": "orangefactor@bots.tld",
+      "text": "## Summary\n4 failures in 4009 pushes (0.001 failures/push) were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 3\n* try: 1\n\n## Platform and build breakdown:\n* linux1804-64-asan-qr: 1\n  * opt: 1\n* linux1804-64-qr: 3\n  * opt: 3\n\n## Table\n| |**spi-nw**|**swr**|\n|---|:-:|:-:|\n|**linux1804-64-asan-qr--/opt**| |1|\n|**linux1804-64-qr--/opt**|2|1|\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-03-03&endday=2025-03-09&tree=all"
+    },
+    {
+      "tags": [],
+      "creation_time": "2025-03-17T06:39:29Z",
+      "is_private": false,
+      "count": 28,
+      "author": "orangefactor@bots.tld",
+      "raw_text": "## Summary\n6 failures in 4826 pushes (0.001 failures/push) were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 5\n* mozilla-central: 1\n\n## Platform and build breakdown:\n* linux1804-64-qr: 5\n  * debug: 2\n  * opt: 3\n* macosx1015-64-qr: 1\n  * opt: 1\n\n## Table\n| |**spi-nw**|**swr**|\n|---|:-:|:-:|\n|**linux1804-64-qr--/debug**|1|1|\n|**linux1804-64-qr--/opt**|3| |\n|**macosx1015-64-qr--/opt**|1| |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-03-10&endday=2025-03-16&tree=all",
+      "time": "2025-03-17T06:39:29Z",
+      "id": 17395758,
+      "attachment_id": null,
+      "bug_id": 1928537,
+      "reactions": {},
+      "text": "## Summary\n6 failures in 4826 pushes (0.001 failures/push) were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 5\n* mozilla-central: 1\n\n## Platform and build breakdown:\n* linux1804-64-qr: 5\n  * debug: 2\n  * opt: 3\n* macosx1015-64-qr: 1\n  * opt: 1\n\n## Table\n| |**spi-nw**|**swr**|\n|---|:-:|:-:|\n|**linux1804-64-qr--/debug**|1|1|\n|**linux1804-64-qr--/opt**|3| |\n|**macosx1015-64-qr--/opt**|1| |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-03-10&endday=2025-03-16&tree=all",
+      "creator": "orangefactor@bots.tld"
+    },
+    {
+      "creator": "orangefactor@bots.tld",
+      "text": "## Summary\n4 failures in 5035 pushes (0.001 failures/push) were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* try: 1\n* mozilla-beta: 1\n* autoland: 1\n* mozilla-central: 1\n\n## Platform and build breakdown:\n* linux1804-64-asan-qr: 2\n  * opt: 2\n* linux1804-64-qr: 2\n  * debug: 1\n  * opt: 1\n\n## Table\n| |**spi-nw**|**swr**|\n|---|:-:|:-:|\n|**linux1804-64-asan-qr--/opt**| |2|\n|**linux1804-64-qr--/debug**|1| |\n|**linux1804-64-qr--/opt**|1| |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-03-17&endday=2025-03-23&tree=all",
+      "reactions": {},
+      "bug_id": 1928537,
+      "id": 17407408,
+      "attachment_id": null,
+      "time": "2025-03-24T06:21:43Z",
+      "raw_text": "## Summary\n4 failures in 5035 pushes (0.001 failures/push) were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* try: 1\n* mozilla-beta: 1\n* autoland: 1\n* mozilla-central: 1\n\n## Platform and build breakdown:\n* linux1804-64-asan-qr: 2\n  * opt: 2\n* linux1804-64-qr: 2\n  * debug: 1\n  * opt: 1\n\n## Table\n| |**spi-nw**|**swr**|\n|---|:-:|:-:|\n|**linux1804-64-asan-qr--/opt**| |2|\n|**linux1804-64-qr--/debug**|1| |\n|**linux1804-64-qr--/opt**|1| |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-03-17&endday=2025-03-23&tree=all",
+      "is_private": false,
+      "author": "orangefactor@bots.tld",
+      "count": 29,
+      "creation_time": "2025-03-24T06:21:43Z",
+      "tags": []
+    },
+    {
+      "reactions": {},
+      "bug_id": 1928537,
+      "text": "\n\n## Repository breakdown:\n* autoland: 4\n* try: 4\n* mozilla-central: 1\n\n## Table\n| |**no_variant**|**spi-nw**|\n|---|:-:|:-:|\n|**linux1804-64-qr--/opt**| |1|\n|**windows11-64-24h2--/asan**|8| |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-03-24&endday=2025-03-30&tree=all",
+      "creator": "orangefactor@bots.tld",
+      "tags": [],
+      "creation_time": "2025-03-31T06:39:56Z",
+      "raw_text": "\n\n## Repository breakdown:\n* autoland: 4\n* try: 4\n* mozilla-central: 1\n\n## Table\n| |**no_variant**|**spi-nw**|\n|---|:-:|:-:|\n|**linux1804-64-qr--/opt**| |1|\n|**windows11-64-24h2--/asan**|8| |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-03-24&endday=2025-03-30&tree=all",
+      "author": "orangefactor@bots.tld",
+      "is_private": false,
+      "count": 30,
+      "time": "2025-03-31T06:39:56Z",
+      "id": 17419083,
+      "attachment_id": null
+    },
+    {
+      "reactions": {},
+      "bug_id": 1928537,
+      "text": "11 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 6\n* try: 2\n* mozilla-central: 1\n* mozilla-beta: 2\n\n## Table\n| |**no_variant**|\n|---|:-:|\n|**windows11-64-24h2--/asan**|11|\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-03-31&endday=2025-04-06&tree=all",
+      "creator": "orangefactor@bots.tld",
+      "tags": [],
+      "creation_time": "2025-04-07T07:21:58Z",
+      "raw_text": "11 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 6\n* try: 2\n* mozilla-central: 1\n* mozilla-beta: 2\n\n## Table\n| |**no_variant**|\n|---|:-:|\n|**windows11-64-24h2--/asan**|11|\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-03-31&endday=2025-04-06&tree=all",
+      "is_private": false,
+      "count": 31,
+      "author": "orangefactor@bots.tld",
+      "time": "2025-04-07T07:21:58Z",
+      "attachment_id": null,
+      "id": 17430605
+    },
+    {
+      "author": "orangefactor@bots.tld",
+      "count": 32,
+      "is_private": false,
+      "raw_text": "11 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* mozilla-beta: 8\n* mozilla-central: 2\n* autoland: 1\n\n## Table\n| |**no_variant**|\n|---|:-:|\n|**windows11-64-24h2--/asan**|11|\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-04-07&endday=2025-04-13&tree=all",
+      "time": "2025-04-14T07:26:27Z",
+      "id": 17442303,
+      "attachment_id": null,
+      "tags": [],
+      "creation_time": "2025-04-14T07:26:27Z",
+      "text": "11 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* mozilla-beta: 8\n* mozilla-central: 2\n* autoland: 1\n\n## Table\n| |**no_variant**|\n|---|:-:|\n|**windows11-64-24h2--/asan**|11|\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-04-07&endday=2025-04-13&tree=all",
+      "creator": "orangefactor@bots.tld",
+      "bug_id": 1928537,
+      "reactions": {}
+    },
+    {
+      "creator": "orangefactor@bots.tld",
+      "text": "12 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* mozilla-beta: 5\n* autoland: 6\n* mozilla-central: 1\n\n## Table\n| |**no_variant**|\n|---|:-:|\n|**windows11-64-24h2--/asan**|12|\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-04-14&endday=2025-04-20&tree=all",
+      "bug_id": 1928537,
+      "reactions": {},
+      "attachment_id": null,
+      "id": 17452747,
+      "author": "orangefactor@bots.tld",
+      "count": 33,
+      "is_private": false,
+      "raw_text": "12 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* mozilla-beta: 5\n* autoland: 6\n* mozilla-central: 1\n\n## Table\n| |**no_variant**|\n|---|:-:|\n|**windows11-64-24h2--/asan**|12|\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-04-14&endday=2025-04-20&tree=all",
+      "time": "2025-04-21T07:34:30Z",
+      "creation_time": "2025-04-21T07:34:30Z",
+      "tags": []
+    },
+    {
+      "creator": "orangefactor@bots.tld",
+      "text": "3 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* mozilla-beta: 2\n* autoland: 1\n\n## Table\n| |**no_variant**|\n|---|:-:|\n|**windows11-64-24h2--/asan**|3|\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-04-21&endday=2025-04-27&tree=all",
+      "reactions": {},
+      "bug_id": 1928537,
+      "id": 17463304,
+      "attachment_id": null,
+      "time": "2025-04-28T06:57:16Z",
+      "raw_text": "3 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* mozilla-beta: 2\n* autoland: 1\n\n## Table\n| |**no_variant**|\n|---|:-:|\n|**windows11-64-24h2--/asan**|3|\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-04-21&endday=2025-04-27&tree=all",
+      "is_private": false,
+      "count": 34,
+      "author": "orangefactor@bots.tld",
+      "creation_time": "2025-04-28T06:57:16Z",
+      "tags": []
+    },
+    {
+      "text": "10 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 3\n* mozilla-beta: 3\n* try: 1\n* mozilla-release: 3\n\n## Table\n| |**asan**|**debug**|**no_variant**|**opt**|**swr**|**tsan**|\n|---|:-:|:-:|:-:|:-:|:-:|:-:|\n|**linux1804-x86_64/asan**| | | | |3| |\n|**windows11-x86_64/asan**| | |7| | | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-05-05&endday=2025-05-11&tree=all",
+      "creator": "orangefactor@bots.tld",
+      "reactions": {},
+      "bug_id": 1928537,
+      "raw_text": "10 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 3\n* mozilla-beta: 3\n* try: 1\n* mozilla-release: 3\n\n## Table\n| |**asan**|**debug**|**no_variant**|**opt**|**swr**|**tsan**|\n|---|:-:|:-:|:-:|:-:|:-:|:-:|\n|**linux1804-x86_64/asan**| | | | |3| |\n|**windows11-x86_64/asan**| | |7| | | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-05-05&endday=2025-05-11&tree=all",
+      "author": "orangefactor@bots.tld",
+      "is_private": false,
+      "count": 35,
+      "time": "2025-05-12T18:06:05Z",
+      "attachment_id": null,
+      "id": 17486026,
+      "tags": [],
+      "creation_time": "2025-05-12T18:06:05Z"
+    },
+    {
+      "reactions": {},
+      "bug_id": 1928537,
+      "text": "6 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 3\n* mozilla-beta: 3\n\n## Table\n| |**asan**|**debug**|**no_variant**|**opt**|**swr**|**tsan**|\n|---|:-:|:-:|:-:|:-:|:-:|:-:|\n|**linux1804-x86_64/asan**| | | | |3| |\n|**windows11-x86_64/asan**| | |3| | | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-05-12&endday=2025-05-18&tree=all",
+      "creator": "orangefactor@bots.tld",
+      "tags": [],
+      "creation_time": "2025-05-19T06:56:27Z",
+      "time": "2025-05-19T06:56:27Z",
+      "raw_text": "6 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 3\n* mozilla-beta: 3\n\n## Table\n| |**asan**|**debug**|**no_variant**|**opt**|**swr**|**tsan**|\n|---|:-:|:-:|:-:|:-:|:-:|:-:|\n|**linux1804-x86_64/asan**| | | | |3| |\n|**windows11-x86_64/asan**| | |3| | | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-05-12&endday=2025-05-18&tree=all",
+      "count": 36,
+      "author": "orangefactor@bots.tld",
+      "is_private": false,
+      "id": 17496454,
+      "attachment_id": null
+    },
+    {
+      "attachment_id": null,
+      "id": 17508858,
+      "time": "2025-05-26T07:10:57Z",
+      "raw_text": "1 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 1\n\n## Table\n| |**no_variant**|\n|---|:-:|\n|**windows11-x86_64/asan**|1|\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-05-19&endday=2025-05-25&tree=all",
+      "author": "orangefactor@bots.tld",
+      "count": 37,
+      "is_private": false,
+      "creation_time": "2025-05-26T07:10:57Z",
+      "tags": [],
+      "creator": "orangefactor@bots.tld",
+      "text": "1 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 1\n\n## Table\n| |**no_variant**|\n|---|:-:|\n|**windows11-x86_64/asan**|1|\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-05-19&endday=2025-05-25&tree=all",
+      "reactions": {},
+      "bug_id": 1928537
+    },
+    {
+      "attachment_id": null,
+      "id": 17518890,
+      "count": 38,
+      "is_private": false,
+      "author": "orangefactor@bots.tld",
+      "raw_text": "2 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 2\n\n## Table\n| |**no_variant**|\n|---|:-:|\n|**windows11-x86_64/asan**|2|\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-05-26&endday=2025-06-01&tree=all",
+      "time": "2025-06-02T07:27:53Z",
+      "creation_time": "2025-06-02T07:27:53Z",
+      "tags": [],
+      "creator": "orangefactor@bots.tld",
+      "text": "2 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 2\n\n## Table\n| |**no_variant**|\n|---|:-:|\n|**windows11-x86_64/asan**|2|\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-05-26&endday=2025-06-01&tree=all",
+      "bug_id": 1928537,
+      "reactions": {}
+    },
+    {
+      "attachment_id": null,
+      "id": 17530047,
+      "time": "2025-06-09T07:34:55Z",
+      "author": "orangefactor@bots.tld",
+      "is_private": false,
+      "count": 39,
+      "raw_text": "8 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 4\n* mozilla-beta: 1\n* mozilla-central: 3\n\n## Table\n| |**msix**|**no_variant**|**spi-nw**|\n|---|:-:|:-:|:-:|\n|**windows11-x86_64/asan**| |4| |\n|**windows11-x86_64/opt**|1| |3|\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-06-02&endday=2025-06-08&tree=all",
+      "creation_time": "2025-06-09T07:34:55Z",
+      "tags": [],
+      "creator": "orangefactor@bots.tld",
+      "text": "8 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 4\n* mozilla-beta: 1\n* mozilla-central: 3\n\n## Table\n| |**msix**|**no_variant**|**spi-nw**|\n|---|:-:|:-:|:-:|\n|**windows11-x86_64/asan**| |4| |\n|**windows11-x86_64/opt**|1| |3|\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-06-02&endday=2025-06-08&tree=all",
+      "bug_id": 1928537,
+      "reactions": {}
+    },
+    {
+      "reactions": {},
+      "bug_id": 1928537,
+      "text": "12 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 8\n* mozilla-central: 2\n* try: 1\n* mozilla-beta: 1\n\n## Table\n| |**no_variant**|**socketprocess_networking**|**spi-nw**|\n|---|:-:|:-:|:-:|\n|**macosx1015-x86_64/opt**|1| |1|\n|**windows11-x86_64/asan**|1| | |\n|**windows11-x86_64/opt**| | |1|\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-06-09&endday=2025-06-15&tree=all",
+      "creator": "orangefactor@bots.tld",
+      "tags": [],
+      "creation_time": "2025-06-16T20:19:59Z",
+      "time": "2025-06-16T20:19:59Z",
+      "raw_text": "12 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 8\n* mozilla-central: 2\n* try: 1\n* mozilla-beta: 1\n\n## Table\n| |**no_variant**|**socketprocess_networking**|**spi-nw**|\n|---|:-:|:-:|:-:|\n|**macosx1015-x86_64/opt**|1| |1|\n|**windows11-x86_64/asan**|1| | |\n|**windows11-x86_64/opt**| | |1|\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-06-09&endday=2025-06-15&tree=all",
+      "is_private": false,
+      "author": "orangefactor@bots.tld",
+      "count": 40,
+      "id": 17540575,
+      "attachment_id": null
+    },
+    {
+      "bug_id": 1928537,
+      "reactions": {},
+      "creator": "orangefactor@bots.tld",
+      "text": "19 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 13\n* mozilla-central: 5\n* try: 1\n\n## Table\n| |**no_variant**|**socketprocess_networking**|**spi-nw**|**swgl**|\n|---|:-:|:-:|:-:|:-:|\n|**linux1804-x86_64/opt**| | |1| |\n|**macosx1015-x86_64/opt**| | |8| |\n|**macosx1500-aarch64/opt**| | |2| |\n|**windows11-x86_64/asan**|6| | | |\n|**windows11-x86_64/opt**| | |2| |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-06-16&endday=2025-06-22&tree=all",
+      "creation_time": "2025-06-23T06:41:16Z",
+      "tags": [],
+      "attachment_id": null,
+      "id": 17548663,
+      "time": "2025-06-23T06:41:16Z",
+      "is_private": false,
+      "author": "orangefactor@bots.tld",
+      "count": 41,
+      "raw_text": "19 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 13\n* mozilla-central: 5\n* try: 1\n\n## Table\n| |**no_variant**|**socketprocess_networking**|**spi-nw**|**swgl**|\n|---|:-:|:-:|:-:|:-:|\n|**linux1804-x86_64/opt**| | |1| |\n|**macosx1015-x86_64/opt**| | |8| |\n|**macosx1500-aarch64/opt**| | |2| |\n|**windows11-x86_64/asan**|6| | | |\n|**windows11-x86_64/opt**| | |2| |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-06-16&endday=2025-06-22&tree=all"
+    },
+    {
+      "reactions": {},
+      "bug_id": 1928537,
+      "creator": "orangefactor@bots.tld",
+      "text": "13 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 9\n* try: 2\n* mozilla-beta: 2\n\n## Table\n| |**no_variant**|**socketprocess_networking**|**spi-nw**|**swgl**|**swgl+a11y_checks**|\n|---|:-:|:-:|:-:|:-:|:-:|\n|**linux2404-x86_64/opt**| | |1| | |\n|**macosx1015-x86_64/opt**| | |6| | |\n|**windows11-x86_64/asan**|5| | | | |\n|**windows11-x86_64/opt**| | |1| | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-06-23&endday=2025-06-29&tree=all",
+      "creation_time": "2025-06-30T07:26:59Z",
+      "tags": [],
+      "attachment_id": null,
+      "id": 17559719,
+      "time": "2025-06-30T07:26:59Z",
+      "raw_text": "13 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 9\n* try: 2\n* mozilla-beta: 2\n\n## Table\n| |**no_variant**|**socketprocess_networking**|**spi-nw**|**swgl**|**swgl+a11y_checks**|\n|---|:-:|:-:|:-:|:-:|:-:|\n|**linux2404-x86_64/opt**| | |1| | |\n|**macosx1015-x86_64/opt**| | |6| | |\n|**windows11-x86_64/asan**|5| | | | |\n|**windows11-x86_64/opt**| | |1| | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-06-23&endday=2025-06-29&tree=all",
+      "is_private": false,
+      "count": 42,
+      "author": "orangefactor@bots.tld"
+    },
+    {
+      "creation_time": "2025-07-08T22:08:00Z",
+      "tags": [],
+      "attachment_id": null,
+      "id": 17573311,
+      "raw_text": "20 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 9\n* mozilla-central: 4\n* mozilla-beta: 7\n\n## Table\n| |**msix**|**no_variant**|**socketprocess_networking**|**spi-nw**|**swgl**|**swgl+a11y_checks**|\n|---|:-:|:-:|:-:|:-:|:-:|:-:|\n|**linux2404-x86_64/opt**| | | |1/57| | |\n|**macosx1015-x86_64/opt**| | | |5/50| | |\n|**macosx1500-aarch64/opt**| | | |4/54| | |\n|**windows11-x86_64/asan**| |7/54| | | | |\n|**windows11-x86_64/opt**|1/18| | |2/36| | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-06-30&endday=2025-07-06&tree=all",
+      "author": "orangefactor@bots.tld",
+      "count": 43,
+      "is_private": false,
+      "time": "2025-07-08T22:08:00Z",
+      "reactions": {},
+      "bug_id": 1928537,
+      "creator": "orangefactor@bots.tld",
+      "text": "20 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 9\n* mozilla-central: 4\n* mozilla-beta: 7\n\n## Table\n| |**msix**|**no_variant**|**socketprocess_networking**|**spi-nw**|**swgl**|**swgl+a11y_checks**|\n|---|:-:|:-:|:-:|:-:|:-:|:-:|\n|**linux2404-x86_64/opt**| | | |1/57| | |\n|**macosx1015-x86_64/opt**| | | |5/50| | |\n|**macosx1500-aarch64/opt**| | | |4/54| | |\n|**windows11-x86_64/asan**| |7/54| | | | |\n|**windows11-x86_64/opt**|1/18| | |2/36| | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-06-30&endday=2025-07-06&tree=all"
+    },
+    {
+      "tags": [],
+      "creation_time": "2025-07-21T19:26:43Z",
+      "time": "2025-07-21T19:26:43Z",
+      "raw_text": "17 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 14\n* mozilla-release: 1\n* mozilla-central: 2\n\n## Table\n| |**no_variant**|**socketprocess_networking**|**spi-nw**|\n|---|:-:|:-:|:-:|\n|**macosx1015-x86_64/opt**| | |5/56|\n|**macosx1500-aarch64/opt**| | |1/56|\n|**windows11-x86_64/asan**|7/60| | |\n|**windows11-x86_64/opt**| | |4/56|\n\n* x/y indicates test failures and total runs; only x means number of runs is unknown.\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-07-14&endday=2025-07-20&tree=all",
+      "author": "orangefactor@bots.tld",
+      "is_private": false,
+      "count": 44,
+      "id": 17590082,
+      "attachment_id": null,
+      "reactions": {},
+      "bug_id": 1928537,
+      "text": "17 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 14\n* mozilla-release: 1\n* mozilla-central: 2\n\n## Table\n| |**no_variant**|**socketprocess_networking**|**spi-nw**|\n|---|:-:|:-:|:-:|\n|**macosx1015-x86_64/opt**| | |5/56|\n|**macosx1500-aarch64/opt**| | |1/56|\n|**windows11-x86_64/asan**|7/60| | |\n|**windows11-x86_64/opt**| | |4/56|\n\n* x/y indicates test failures and total runs; only x means number of runs is unknown.\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-07-14&endday=2025-07-20&tree=all",
+      "creator": "orangefactor@bots.tld"
+    },
+    {
+      "reactions": {},
+      "bug_id": 1928537,
+      "text": "14 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 6\n* mozilla-central: 2\n* mozilla-beta: 5\n* mozilla-esr140: 1\n\n## Table\n| |**no_variant**|**socketprocess_networking**|**spi-nw**|\n|---|:-:|:-:|:-:|\n|**macosx1015-x86_64/opt**| | |3/56|\n|**macosx1500-aarch64/opt**| | |2/56|\n|**windows11-x86_64/asan**|9/72| | |\n\n* x/y indicates test failures and total runs; only x means number of runs is unknown.\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-07-21&endday=2025-07-27&tree=all",
+      "creator": "orangefactor@bots.tld",
+      "tags": [],
+      "creation_time": "2025-07-28T23:37:06Z",
+      "raw_text": "14 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 6\n* mozilla-central: 2\n* mozilla-beta: 5\n* mozilla-esr140: 1\n\n## Table\n| |**no_variant**|**socketprocess_networking**|**spi-nw**|\n|---|:-:|:-:|:-:|\n|**macosx1015-x86_64/opt**| | |3/56|\n|**macosx1500-aarch64/opt**| | |2/56|\n|**windows11-x86_64/asan**|9/72| | |\n\n* x/y indicates test failures and total runs; only x means number of runs is unknown.\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-07-21&endday=2025-07-27&tree=all",
+      "count": 45,
+      "author": "orangefactor@bots.tld",
+      "is_private": false,
+      "time": "2025-07-28T23:37:06Z",
+      "id": 17601335,
+      "attachment_id": null
+    },
+    {
+      "bug_id": 1928537,
+      "reactions": {},
+      "text": "3 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 2\n* mozilla-beta: 1\n\n## Table\n| |**no_variant**|**socketprocess_networking**|**spi-nw**|\n|---|:-:|:-:|:-:|\n|**macosx1015-x86_64/opt**| | |1/55|\n|**macosx1500-aarch64/opt**| | |1/54|\n|**windows11-x86_64/opt**|1/14| | |\n\n* x/y indicates test failures and total runs; only x means number of runs is unknown.\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-07-28&endday=2025-08-03&tree=all",
+      "creator": "orangefactor@bots.tld",
+      "tags": [],
+      "creation_time": "2025-08-04T22:57:42Z",
+      "is_private": false,
+      "count": 46,
+      "author": "orangefactor@bots.tld",
+      "raw_text": "3 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 2\n* mozilla-beta: 1\n\n## Table\n| |**no_variant**|**socketprocess_networking**|**spi-nw**|\n|---|:-:|:-:|:-:|\n|**macosx1015-x86_64/opt**| | |1/55|\n|**macosx1500-aarch64/opt**| | |1/54|\n|**windows11-x86_64/opt**|1/14| | |\n\n* x/y indicates test failures and total runs; only x means number of runs is unknown.\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-07-28&endday=2025-08-03&tree=all",
+      "time": "2025-08-04T22:57:42Z",
+      "attachment_id": null,
+      "id": 17612296
+    },
+    {
+      "time": "2025-08-18T06:29:43Z",
+      "raw_text": "5 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 2\n* try: 1\n* mozilla-beta: 1\n* mozilla-central: 1\n\n## Table\n| |**no_variant**|**socketprocess_networking**|**spi-nw**|\n|---|:-:|:-:|:-:|\n|**macosx1015-x86_64/opt**| | |1|\n|**windows11-x86_64/asan**|4| | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-08-11&endday=2025-08-17&tree=all",
+      "count": 47,
+      "is_private": false,
+      "author": "orangefactor@bots.tld",
+      "id": 17628250,
+      "attachment_id": null,
+      "tags": [],
+      "creation_time": "2025-08-18T06:29:43Z",
+      "text": "5 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 2\n* try: 1\n* mozilla-beta: 1\n* mozilla-central: 1\n\n## Table\n| |**no_variant**|**socketprocess_networking**|**spi-nw**|\n|---|:-:|:-:|:-:|\n|**macosx1015-x86_64/opt**| | |1|\n|**windows11-x86_64/asan**|4| | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-08-11&endday=2025-08-17&tree=all",
+      "creator": "orangefactor@bots.tld",
+      "reactions": {},
+      "bug_id": 1928537
+    },
+    {
+      "creation_time": "2025-08-25T06:58:47Z",
+      "tags": [],
+      "id": 17639575,
+      "attachment_id": null,
+      "raw_text": "8 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 7\n* mozilla-beta: 1\n\n## Table\n| |**no_variant**|**socketprocess_networking**|**spi-nw**|\n|---|:-:|:-:|:-:|\n|**macosx1015-x86_64/opt**| | |1|\n|**windows11-x86_64/asan**|7| | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-08-18&endday=2025-08-24&tree=all",
+      "count": 48,
+      "is_private": false,
+      "author": "orangefactor@bots.tld",
+      "time": "2025-08-25T06:58:47Z",
+      "reactions": {},
+      "bug_id": 1928537,
+      "creator": "orangefactor@bots.tld",
+      "text": "8 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 7\n* mozilla-beta: 1\n\n## Table\n| |**no_variant**|**socketprocess_networking**|**spi-nw**|\n|---|:-:|:-:|:-:|\n|**macosx1015-x86_64/opt**| | |1|\n|**windows11-x86_64/asan**|7| | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-08-18&endday=2025-08-24&tree=all"
+    },
+    {
+      "text": "8 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* try: 1\n* mozilla-central: 2\n* autoland: 2\n* mozilla-release: 2\n* mozilla-beta: 1\n\n## Table\n| |**no_variant**|**socketprocess_networking**|**spi-nw**|\n|---|:-:|:-:|:-:|\n|**macosx1015-x86_64/opt**|1| |1|\n|**windows11-x86_64/asan**|6| | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-08-25&endday=2025-08-31&tree=all",
+      "creator": "orangefactor@bots.tld",
+      "reactions": {},
+      "bug_id": 1928537,
+      "raw_text": "8 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* try: 1\n* mozilla-central: 2\n* autoland: 2\n* mozilla-release: 2\n* mozilla-beta: 1\n\n## Table\n| |**no_variant**|**socketprocess_networking**|**spi-nw**|\n|---|:-:|:-:|:-:|\n|**macosx1015-x86_64/opt**|1| |1|\n|**windows11-x86_64/asan**|6| | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-08-25&endday=2025-08-31&tree=all",
+      "is_private": false,
+      "count": 49,
+      "author": "orangefactor@bots.tld",
+      "time": "2025-09-01T06:45:15Z",
+      "attachment_id": null,
+      "id": 17650905,
+      "tags": [],
+      "creation_time": "2025-09-01T06:45:15Z"
+    },
+    {
+      "creator": "orangefactor@bots.tld",
+      "text": "6 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 4\n* mozilla-central: 2\n\n## Table\n| |**no_variant**|\n|---|:-:|\n|**windows11-x86_64/asan**|6|\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-09-01&endday=2025-09-07&tree=all",
+      "reactions": {},
+      "bug_id": 1928537,
+      "id": 17661799,
+      "attachment_id": null,
+      "time": "2025-09-08T07:11:24Z",
+      "raw_text": "6 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 4\n* mozilla-central: 2\n\n## Table\n| |**no_variant**|\n|---|:-:|\n|**windows11-x86_64/asan**|6|\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-09-01&endday=2025-09-07&tree=all",
+      "author": "orangefactor@bots.tld",
+      "count": 50,
+      "is_private": false,
+      "creation_time": "2025-09-08T07:11:24Z",
+      "tags": []
+    },
+    {
+      "creator": "orangefactor@bots.tld",
+      "text": "3 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* try: 1\n* autoland: 1\n* mozilla-central: 1\n\n## Table\n| |**no_variant**|\n|---|:-:|\n|**windows11-x86_64/asan**|3|\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-09-08&endday=2025-09-14&tree=all",
+      "reactions": {},
+      "bug_id": 1928537,
+      "id": 17670952,
+      "attachment_id": null,
+      "raw_text": "3 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* try: 1\n* autoland: 1\n* mozilla-central: 1\n\n## Table\n| |**no_variant**|\n|---|:-:|\n|**windows11-x86_64/asan**|3|\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-09-08&endday=2025-09-14&tree=all",
+      "is_private": false,
+      "author": "orangefactor@bots.tld",
+      "count": 51,
+      "time": "2025-09-15T06:56:05Z",
+      "creation_time": "2025-09-15T06:56:05Z",
+      "tags": []
+    },
+    {
+      "text": "4 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* mozilla-central: 1\n* mozilla-beta: 1\n* try: 1\n* autoland: 1\n\n## Table\n| |**no_variant**|\n|---|:-:|\n|**windows11-x86_64/asan**|4|\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-09-15&endday=2025-09-21&tree=all",
+      "creator": "orangefactor@bots.tld",
+      "bug_id": 1928537,
+      "reactions": {},
+      "count": 52,
+      "author": "orangefactor@bots.tld",
+      "is_private": false,
+      "raw_text": "4 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* mozilla-central: 1\n* mozilla-beta: 1\n* try: 1\n* autoland: 1\n\n## Table\n| |**no_variant**|\n|---|:-:|\n|**windows11-x86_64/asan**|4|\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-09-15&endday=2025-09-21&tree=all",
+      "time": "2025-09-22T07:20:22Z",
+      "id": 17681530,
+      "attachment_id": null,
+      "tags": [],
+      "creation_time": "2025-09-22T07:20:22Z"
+    },
+    {
+      "attachment_id": null,
+      "id": 17692528,
+      "author": "orangefactor@bots.tld",
+      "count": 53,
+      "is_private": false,
+      "raw_text": "14 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* mozilla-central: 3\n* autoland: 10\n* try: 1\n\n## Table\n| |**no_variant**|**socketprocess_networking**|**spi-nw**|**swgl**|**swgl+a11y_checks**|**swr**|\n|---|:-:|:-:|:-:|:-:|:-:|:-:|\n|**linux2404-x86_64/asan**| | | | | |6|\n|**linux2404-x86_64/debug**| | |2| | | |\n|**macosx1015-x86_64/debug**|1| |1| | | |\n|**macosx1015-x86_64/opt**|1| |2| | | |\n|**windows11-x86/opt**|1| | | | | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-09-22&endday=2025-09-28&tree=all",
+      "time": "2025-09-29T06:32:47Z",
+      "creation_time": "2025-09-29T06:32:47Z",
+      "tags": [],
+      "creator": "orangefactor@bots.tld",
+      "text": "14 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* mozilla-central: 3\n* autoland: 10\n* try: 1\n\n## Table\n| |**no_variant**|**socketprocess_networking**|**spi-nw**|**swgl**|**swgl+a11y_checks**|**swr**|\n|---|:-:|:-:|:-:|:-:|:-:|:-:|\n|**linux2404-x86_64/asan**| | | | | |6|\n|**linux2404-x86_64/debug**| | |2| | | |\n|**macosx1015-x86_64/debug**|1| |1| | | |\n|**macosx1015-x86_64/opt**|1| |2| | | |\n|**windows11-x86/opt**|1| | | | | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-09-22&endday=2025-09-28&tree=all",
+      "bug_id": 1928537,
+      "reactions": {}
+    },
+    {
+      "raw_text": "21 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* mozilla-central: 4\n* autoland: 14\n* try: 2\n* mozilla-beta: 1\n\n## Table\n| |**msix**|**no_variant**|**socketprocess_networking**|**spi-nw**|**swgl**|**swgl+a11y_checks**|**swr**|\n|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n|**linux2404-x86_64/asan**| | | | | | |3|\n|**linux2404-x86_64/debug**| | | |1| | | |\n|**macosx1015-x86_64/debug**| |4| | | | | |\n|**macosx1015-x86_64/opt**| |3| | | | | |\n|**macosx1500-aarch64/opt**| | | |1| | | |\n|**windows11-x86/debug**| |3| | | | | |\n|**windows11-x86/opt**| |1| | | | | |\n|**windows11-x86_64/asan**| |1| | | | | |\n|**windows11-x86_64/debug**|1|3| | | | | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-09-29&endday=2025-10-05&tree=all",
+      "author": "orangefactor@bots.tld",
+      "count": 54,
+      "is_private": false,
+      "time": "2025-10-06T06:33:27Z",
+      "attachment_id": null,
+      "id": 17703164,
+      "tags": [],
+      "creation_time": "2025-10-06T06:33:27Z",
+      "text": "21 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* mozilla-central: 4\n* autoland: 14\n* try: 2\n* mozilla-beta: 1\n\n## Table\n| |**msix**|**no_variant**|**socketprocess_networking**|**spi-nw**|**swgl**|**swgl+a11y_checks**|**swr**|\n|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n|**linux2404-x86_64/asan**| | | | | | |3|\n|**linux2404-x86_64/debug**| | | |1| | | |\n|**macosx1015-x86_64/debug**| |4| | | | | |\n|**macosx1015-x86_64/opt**| |3| | | | | |\n|**macosx1500-aarch64/opt**| | | |1| | | |\n|**windows11-x86/debug**| |3| | | | | |\n|**windows11-x86/opt**| |1| | | | | |\n|**windows11-x86_64/asan**| |1| | | | | |\n|**windows11-x86_64/debug**|1|3| | | | | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-09-29&endday=2025-10-05&tree=all",
+      "creator": "orangefactor@bots.tld",
+      "reactions": {},
+      "bug_id": 1928537
+    },
+    {
+      "creator": "orangefactor@bots.tld",
+      "text": "11 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* mozilla-central: 1\n* autoland: 9\n* try: 1\n\n## Table\n| |**msix**|**no_variant**|**socketprocess_networking**|**spi-nw**|**swgl**|**swgl+a11y_checks**|**swr**|\n|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n|**linux2404-x86_64/asan**| | | | | | |3|\n|**linux2404-x86_64/debug**| | | |1| | | |\n|**macosx1015-x86_64/debug**| |2| | | | | |\n|**macosx1015-x86_64/opt**| |2| |1| | | |\n|**windows11-x86_64/debug**|2| | | | | | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-10-06&endday=2025-10-12&tree=all",
+      "bug_id": 1928537,
+      "reactions": {},
+      "attachment_id": null,
+      "id": 17712556,
+      "count": 55,
+      "is_private": false,
+      "author": "orangefactor@bots.tld",
+      "raw_text": "11 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* mozilla-central: 1\n* autoland: 9\n* try: 1\n\n## Table\n| |**msix**|**no_variant**|**socketprocess_networking**|**spi-nw**|**swgl**|**swgl+a11y_checks**|**swr**|\n|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n|**linux2404-x86_64/asan**| | | | | | |3|\n|**linux2404-x86_64/debug**| | | |1| | | |\n|**macosx1015-x86_64/debug**| |2| | | | | |\n|**macosx1015-x86_64/opt**| |2| |1| | | |\n|**windows11-x86_64/debug**|2| | | | | | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-10-06&endday=2025-10-12&tree=all",
+      "time": "2025-10-13T06:26:12Z",
+      "creation_time": "2025-10-13T06:26:12Z",
+      "tags": []
+    },
+    {
+      "reactions": {},
+      "bug_id": 1928537,
+      "creator": "orangefactor@bots.tld",
+      "text": "17 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* mozilla-central: 6\n* autoland: 7\n* mozilla-beta: 4\n\n## Table\n| |**a11y_checks+swgl**|**msix**|**no_variant**|**socketprocess_networking**|**spi-nw**|**swgl**|**swr**|\n|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n|**linux2404-x86_64/asan**| | | | | | |1|\n|**linux2404-x86_64/debug**| | | | | | |1|\n|**linux2404-x86_64/tsan**| | | | | | |1|\n|**macosx1015-x86_64/debug**| | |2| | | | |\n|**macosx1015-x86_64/opt**| | |2| |2| | |\n|**macosx1500-aarch64/opt**| | | | |1| | |\n|**windows11-x86_64/asan**| | |1| | | | |\n|**windows11-x86_64/debug**| |1|4| | | | |\n|**windows11-x86_64/opt**| | |1| | | | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-10-13&endday=2025-10-19&tree=all",
+      "creation_time": "2025-10-20T06:39:51Z",
+      "tags": [],
+      "id": 17722929,
+      "attachment_id": null,
+      "raw_text": "17 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* mozilla-central: 6\n* autoland: 7\n* mozilla-beta: 4\n\n## Table\n| |**a11y_checks+swgl**|**msix**|**no_variant**|**socketprocess_networking**|**spi-nw**|**swgl**|**swr**|\n|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n|**linux2404-x86_64/asan**| | | | | | |1|\n|**linux2404-x86_64/debug**| | | | | | |1|\n|**linux2404-x86_64/tsan**| | | | | | |1|\n|**macosx1015-x86_64/debug**| | |2| | | | |\n|**macosx1015-x86_64/opt**| | |2| |2| | |\n|**macosx1500-aarch64/opt**| | | | |1| | |\n|**windows11-x86_64/asan**| | |1| | | | |\n|**windows11-x86_64/debug**| |1|4| | | | |\n|**windows11-x86_64/opt**| | |1| | | | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-10-13&endday=2025-10-19&tree=all",
+      "is_private": false,
+      "count": 56,
+      "author": "orangefactor@bots.tld",
+      "time": "2025-10-20T06:39:51Z"
+    },
+    {
+      "bug_id": 1928537,
+      "reactions": {},
+      "text": "12 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* mozilla-central: 3\n* try: 2\n* autoland: 5\n* mozilla-beta: 2\n\n## Table\n| |**a11y_checks+swgl**|**msix**|**no_variant**|**socketprocess_networking**|**swgl**|**swr**|\n|---|:-:|:-:|:-:|:-:|:-:|:-:|\n|**linux2404-x86_64/asan**| | | | | |1|\n|**linux2404-x86_64/debug**| | | | | |1|\n|**macosx1015-x86_64/debug**| | |2| | | |\n|**macosx1015-x86_64/opt**| | |2| | | |\n|**windows11-x86/debug**| | |4| | | |\n|**windows11-x86_64/debug**| |2| | | | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-10-20&endday=2025-10-26&tree=all",
+      "creator": "orangefactor@bots.tld",
+      "tags": [],
+      "creation_time": "2025-10-27T06:24:31Z",
+      "count": 57,
+      "author": "orangefactor@bots.tld",
+      "is_private": false,
+      "raw_text": "12 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* mozilla-central: 3\n* try: 2\n* autoland: 5\n* mozilla-beta: 2\n\n## Table\n| |**a11y_checks+swgl**|**msix**|**no_variant**|**socketprocess_networking**|**swgl**|**swr**|\n|---|:-:|:-:|:-:|:-:|:-:|:-:|\n|**linux2404-x86_64/asan**| | | | | |1|\n|**linux2404-x86_64/debug**| | | | | |1|\n|**macosx1015-x86_64/debug**| | |2| | | |\n|**macosx1015-x86_64/opt**| | |2| | | |\n|**windows11-x86/debug**| | |4| | | |\n|**windows11-x86_64/debug**| |2| | | | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-10-20&endday=2025-10-26&tree=all",
+      "time": "2025-10-27T06:24:31Z",
+      "id": 17733785,
+      "attachment_id": null
+    },
+    {
+      "id": 17744190,
+      "attachment_id": null,
+      "is_private": false,
+      "author": "orangefactor@bots.tld",
+      "count": 58,
+      "raw_text": "21 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* mozilla-beta: 7\n* autoland: 10\n* try: 1\n* mozilla-central: 3\n\n## Table\n| |**a11y_checks+swgl**|**msix**|**no_variant**|**socketprocess_networking**|**spi-nw**|**swgl**|**swr**|\n|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n|**linux2404-x86_64/asan**| | | | | | |1|\n|**linux2404-x86_64/debug**| | | | | | |5|\n|**linux2404-x86_64/opt**| | | | | | |1|\n|**linux2404-x86_64/tsan**| | | | | | |1|\n|**macosx1015-x86_64/debug**| | |1| | | | |\n|**macosx1015-x86_64/opt**| | |2| |3| | |\n|**macosx1500-aarch64/opt**| | | | |1| | |\n|**windows11-x86/debug**| | |2| | | | |\n|**windows11-x86_64/opt**| |2|2| | | | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-10-27&endday=2025-11-02&tree=all",
+      "time": "2025-11-03T06:24:36Z",
+      "creation_time": "2025-11-03T06:24:36Z",
+      "tags": [],
+      "creator": "orangefactor@bots.tld",
+      "text": "21 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* mozilla-beta: 7\n* autoland: 10\n* try: 1\n* mozilla-central: 3\n\n## Table\n| |**a11y_checks+swgl**|**msix**|**no_variant**|**socketprocess_networking**|**spi-nw**|**swgl**|**swr**|\n|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n|**linux2404-x86_64/asan**| | | | | | |1|\n|**linux2404-x86_64/debug**| | | | | | |5|\n|**linux2404-x86_64/opt**| | | | | | |1|\n|**linux2404-x86_64/tsan**| | | | | | |1|\n|**macosx1015-x86_64/debug**| | |1| | | | |\n|**macosx1015-x86_64/opt**| | |2| |3| | |\n|**macosx1500-aarch64/opt**| | | | |1| | |\n|**windows11-x86/debug**| | |2| | | | |\n|**windows11-x86_64/opt**| |2|2| | | | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-10-27&endday=2025-11-02&tree=all",
+      "bug_id": 1928537,
+      "reactions": {}
+    },
+    {
+      "text": "17 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* mozilla-release: 2\n* autoland: 12\n* mozilla-central: 1\n* try: 1\n* mozilla-esr140: 1\n\n## Table\n| |**a11y_checks+swgl**|**no_variant**|**socketprocess_networking**|**spi-nw**|**swgl**|**swr**|\n|---|:-:|:-:|:-:|:-:|:-:|:-:|\n|**linux2404-x86_64/asan**| | | | | |2|\n|**linux2404-x86_64/debug**| | | |1| |3|\n|**macosx1015-x86_64/debug**| |2| |1| | |\n|**macosx1015-x86_64/opt**| |2| |1| | |\n|**windows11-x86/debug**| |3| | | | |\n|**windows11-x86_64/asan**| |2| | | | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-11-03&endday=2025-11-09&tree=all",
+      "creator": "orangefactor@bots.tld",
+      "bug_id": 1928537,
+      "reactions": {},
+      "author": "orangefactor@bots.tld",
+      "count": 59,
+      "is_private": false,
+      "raw_text": "17 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* mozilla-release: 2\n* autoland: 12\n* mozilla-central: 1\n* try: 1\n* mozilla-esr140: 1\n\n## Table\n| |**a11y_checks+swgl**|**no_variant**|**socketprocess_networking**|**spi-nw**|**swgl**|**swr**|\n|---|:-:|:-:|:-:|:-:|:-:|:-:|\n|**linux2404-x86_64/asan**| | | | | |2|\n|**linux2404-x86_64/debug**| | | |1| |3|\n|**macosx1015-x86_64/debug**| |2| |1| | |\n|**macosx1015-x86_64/opt**| |2| |1| | |\n|**windows11-x86/debug**| |3| | | | |\n|**windows11-x86_64/asan**| |2| | | | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-11-03&endday=2025-11-09&tree=all",
+      "time": "2025-11-10T06:21:47Z",
+      "id": 17754781,
+      "attachment_id": null,
+      "tags": [],
+      "creation_time": "2025-11-10T06:21:47Z"
+    },
+    {
+      "creation_time": "2025-11-17T06:25:05Z",
+      "tags": [],
+      "attachment_id": null,
+      "id": 17765365,
+      "time": "2025-11-17T06:25:05Z",
+      "is_private": false,
+      "author": "orangefactor@bots.tld",
+      "count": 60,
+      "raw_text": "18 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 12\n* mozilla-central: 2\n* mozilla-beta: 3\n* try: 1\n\n## Table\n| |**a11y-checks-swr**|**a11y_checks+swgl**|**msix**|**no_variant**|**socketprocess_networking**|**swgl**|**swr**|\n|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n|**linux2404-x86_64/asan**| | | | | | |3|\n|**linux2404-x86_64/debug**| | | | | | |2|\n|**linux2404-x86_64/opt**|2| | | | | |3|\n|**macosx1015-x86_64/debug**| | | |2| | | |\n|**macosx1015-x86_64/opt**| | | |1| | | |\n|**windows11-x86/debug**| | | |2| | | |\n|**windows11-x86_64/debug**| | | |1| | | |\n|**windows11-x86_64/opt**| | |1|1| | | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-11-10&endday=2025-11-16&tree=all",
+      "bug_id": 1928537,
+      "reactions": {},
+      "creator": "orangefactor@bots.tld",
+      "text": "18 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 12\n* mozilla-central: 2\n* mozilla-beta: 3\n* try: 1\n\n## Table\n| |**a11y-checks-swr**|**a11y_checks+swgl**|**msix**|**no_variant**|**socketprocess_networking**|**swgl**|**swr**|\n|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n|**linux2404-x86_64/asan**| | | | | | |3|\n|**linux2404-x86_64/debug**| | | | | | |2|\n|**linux2404-x86_64/opt**|2| | | | | |3|\n|**macosx1015-x86_64/debug**| | | |2| | | |\n|**macosx1015-x86_64/opt**| | | |1| | | |\n|**windows11-x86/debug**| | | |2| | | |\n|**windows11-x86_64/debug**| | | |1| | | |\n|**windows11-x86_64/opt**| | |1|1| | | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-11-10&endday=2025-11-16&tree=all"
+    },
+    {
+      "tags": [],
+      "creation_time": "2025-11-24T06:24:51Z",
+      "raw_text": "25 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 13\n* try: 2\n* mozilla-release: 2\n* mozilla-beta: 7\n* mozilla-central: 1\n\n## Table\n| |**a11y_checks+swgl**|**msix**|**no_variant**|**socketprocess_networking**|**swgl**|**swr**|\n|---|:-:|:-:|:-:|:-:|:-:|:-:|\n|**linux2404-x86_64/debug**| | | | | |2|\n|**linux2404-x86_64/opt**| | | | | |4|\n|**macosx1015-x86_64/debug**| | |3| | | |\n|**macosx1015-x86_64/opt**| | |5| | | |\n|**macosx1500-aarch64/opt**| | |1| | | |\n|**windows11-x86/debug**| | |3| | | |\n|**windows11-x86/opt**| | |1| | | |\n|**windows11-x86_64/asan**| | |1| | | |\n|**windows11-x86_64/debug**| |2|2| | | |\n|**windows11-x86_64/opt**| | |1| | | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-11-17&endday=2025-11-23&tree=all",
+      "count": 61,
+      "author": "orangefactor@bots.tld",
+      "is_private": false,
+      "time": "2025-11-24T06:24:51Z",
+      "attachment_id": null,
+      "id": 17776507,
+      "reactions": {},
+      "bug_id": 1928537,
+      "text": "25 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 13\n* try: 2\n* mozilla-release: 2\n* mozilla-beta: 7\n* mozilla-central: 1\n\n## Table\n| |**a11y_checks+swgl**|**msix**|**no_variant**|**socketprocess_networking**|**swgl**|**swr**|\n|---|:-:|:-:|:-:|:-:|:-:|:-:|\n|**linux2404-x86_64/debug**| | | | | |2|\n|**linux2404-x86_64/opt**| | | | | |4|\n|**macosx1015-x86_64/debug**| | |3| | | |\n|**macosx1015-x86_64/opt**| | |5| | | |\n|**macosx1500-aarch64/opt**| | |1| | | |\n|**windows11-x86/debug**| | |3| | | |\n|**windows11-x86/opt**| | |1| | | |\n|**windows11-x86_64/asan**| | |1| | | |\n|**windows11-x86_64/debug**| |2|2| | | |\n|**windows11-x86_64/opt**| | |1| | | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-11-17&endday=2025-11-23&tree=all",
+      "creator": "orangefactor@bots.tld"
+    },
+    {
+      "bug_id": 1928537,
+      "reactions": {},
+      "creator": "orangefactor@bots.tld",
+      "text": "9 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 6\n* try: 1\n* mozilla-beta: 1\n* mozilla-central: 1\n\n## Table\n| |**msix**|**no_variant**|**spi-nw**|\n|---|:-:|:-:|:-:|\n|**windows11-x86_64/asan**| |1| |\n|**windows11-x86_64/debug**|1| | |\n|**windows11-x86_64/opt**|3|1|3|\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-11-24&endday=2025-11-30&tree=all",
+      "creation_time": "2025-12-01T06:56:13Z",
+      "tags": [],
+      "id": 17787637,
+      "attachment_id": null,
+      "time": "2025-12-01T06:56:13Z",
+      "author": "orangefactor@bots.tld",
+      "count": 62,
+      "is_private": false,
+      "raw_text": "9 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 6\n* try: 1\n* mozilla-beta: 1\n* mozilla-central: 1\n\n## Table\n| |**msix**|**no_variant**|**spi-nw**|\n|---|:-:|:-:|:-:|\n|**windows11-x86_64/asan**| |1| |\n|**windows11-x86_64/debug**|1| | |\n|**windows11-x86_64/opt**|3|1|3|\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-11-24&endday=2025-11-30&tree=all"
+    },
+    {
+      "is_private": false,
+      "count": 63,
+      "author": "orangefactor@bots.tld",
+      "raw_text": "16 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 10\n* mozilla-beta: 1\n* try: 2\n* mozilla-central: 3\n\n## Table\n| |**a11y_checks+swgl**|**msix**|**no_variant**|**socketprocess_networking**|**spi-nw**|**swgl**|**swr**|\n|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n|**linux2404-x86_64/asan**| | | | | | |2|\n|**linux2404-x86_64/debug**| | | | |1| | |\n|**macosx1015-x86_64/debug**| | | | |1| | |\n|**windows11-x86/debug**| | |2| | | | |\n|**windows11-x86/opt**| | |2| | | | |\n|**windows11-x86_64/ccov**| | |1| | | | |\n|**windows11-x86_64/debug**| | |1| | | | |\n|**windows11-x86_64/opt**| |3|2| |1| | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-12-01&endday=2025-12-07&tree=all",
+      "time": "2025-12-08T06:16:11Z",
+      "id": 17796720,
+      "attachment_id": null,
+      "tags": [],
+      "creation_time": "2025-12-08T06:16:11Z",
+      "text": "16 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 10\n* mozilla-beta: 1\n* try: 2\n* mozilla-central: 3\n\n## Table\n| |**a11y_checks+swgl**|**msix**|**no_variant**|**socketprocess_networking**|**spi-nw**|**swgl**|**swr**|\n|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n|**linux2404-x86_64/asan**| | | | | | |2|\n|**linux2404-x86_64/debug**| | | | |1| | |\n|**macosx1015-x86_64/debug**| | | | |1| | |\n|**windows11-x86/debug**| | |2| | | | |\n|**windows11-x86/opt**| | |2| | | | |\n|**windows11-x86_64/ccov**| | |1| | | | |\n|**windows11-x86_64/debug**| | |1| | | | |\n|**windows11-x86_64/opt**| |3|2| |1| | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-12-01&endday=2025-12-07&tree=all",
+      "creator": "orangefactor@bots.tld",
+      "bug_id": 1928537,
+      "reactions": {}
+    },
+    {
+      "tags": [],
+      "creation_time": "2025-12-11T09:13:45Z",
+      "time": "2025-12-11T09:13:45Z",
+      "author": "valentin.gosu@gmail.com",
+      "count": 64,
+      "is_private": false,
+      "raw_text": "Me to fix racyness.",
+      "attachment_id": null,
+      "id": 17803266,
+      "bug_id": 1928537,
+      "reactions": {},
+      "text": "Me to fix racyness.",
+      "creator": "valentin.gosu@gmail.com"
+    },
+    {
+      "attachment_id": null,
+      "id": 17807611,
+      "author": "orangefactor@bots.tld",
+      "is_private": false,
+      "count": 65,
+      "raw_text": "17 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* mozilla-release: 1\n* autoland: 9\n* mozilla-central: 4\n* mozilla-beta: 2\n* try: 1\n\n## Table\n| |**a11y_checks+swgl**|**msix**|**no_variant**|**socketprocess_networking**|**swgl**|**swr**|\n|---|:-:|:-:|:-:|:-:|:-:|:-:|\n|**linux2404-x86_64/asan**| | | | | |3|\n|**macosx1015-x86_64/debug**| | |3| | | |\n|**windows11-x86_64/asan**| | |1| | | |\n|**windows11-x86_64/debug**| | |3| | | |\n|**windows11-x86_64/opt**| |1|6| | | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-12-08&endday=2025-12-14&tree=all",
+      "time": "2025-12-15T06:24:36Z",
+      "creation_time": "2025-12-15T06:24:36Z",
+      "tags": [],
+      "creator": "orangefactor@bots.tld",
+      "text": "17 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* mozilla-release: 1\n* autoland: 9\n* mozilla-central: 4\n* mozilla-beta: 2\n* try: 1\n\n## Table\n| |**a11y_checks+swgl**|**msix**|**no_variant**|**socketprocess_networking**|**swgl**|**swr**|\n|---|:-:|:-:|:-:|:-:|:-:|:-:|\n|**linux2404-x86_64/asan**| | | | | |3|\n|**macosx1015-x86_64/debug**| | |3| | | |\n|**windows11-x86_64/asan**| | |1| | | |\n|**windows11-x86_64/debug**| | |3| | | |\n|**windows11-x86_64/opt**| |1|6| | | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-12-08&endday=2025-12-14&tree=all",
+      "bug_id": 1928537,
+      "reactions": {}
+    },
+    {
+      "creation_time": "2025-12-22T06:36:36Z",
+      "tags": [],
+      "attachment_id": null,
+      "id": 17818725,
+      "raw_text": "18 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 11\n* try: 4\n* mozilla-beta: 2\n* mozilla-central: 1\n\n## Table\n| |**msix**|**no_variant**|\n|---|:-:|:-:|\n|**macosx1015-x86_64/debug**| |2|\n|**macosx1015-x86_64/opt**| |1|\n|**windows11-x86/debug**| |2|\n|**windows11-x86_64/asan**| |2|\n|**windows11-x86_64/opt**|7|4|\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-12-15&endday=2025-12-21&tree=all",
+      "is_private": false,
+      "author": "orangefactor@bots.tld",
+      "count": 66,
+      "time": "2025-12-22T06:36:36Z",
+      "reactions": {},
+      "bug_id": 1928537,
+      "creator": "orangefactor@bots.tld",
+      "text": "18 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 11\n* try: 4\n* mozilla-beta: 2\n* mozilla-central: 1\n\n## Table\n| |**msix**|**no_variant**|\n|---|:-:|:-:|\n|**macosx1015-x86_64/debug**| |2|\n|**macosx1015-x86_64/opt**| |1|\n|**windows11-x86/debug**| |2|\n|**windows11-x86_64/asan**| |2|\n|**windows11-x86_64/opt**|7|4|\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-12-15&endday=2025-12-21&tree=all"
+    },
+    {
+      "time": "2025-12-29T06:28:26Z",
+      "raw_text": "8 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* mozilla-central: 2\n* autoland: 2\n* mozilla-beta: 3\n* try: 1\n\n## Table\n| |**msix**|**no_variant**|\n|---|:-:|:-:|\n|**macosx1015-x86_64/debug**| |2|\n|**macosx1015-x86_64/opt**| |1|\n|**windows11-x86_64/debug**|1| |\n|**windows11-x86_64/opt**|3|1|\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-12-22&endday=2025-12-28&tree=all",
+      "count": 67,
+      "author": "orangefactor@bots.tld",
+      "is_private": false,
+      "id": 17823477,
+      "attachment_id": null,
+      "tags": [],
+      "creation_time": "2025-12-29T06:28:26Z",
+      "text": "8 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* mozilla-central: 2\n* autoland: 2\n* mozilla-beta: 3\n* try: 1\n\n## Table\n| |**msix**|**no_variant**|\n|---|:-:|:-:|\n|**macosx1015-x86_64/debug**| |2|\n|**macosx1015-x86_64/opt**| |1|\n|**windows11-x86_64/debug**|1| |\n|**windows11-x86_64/opt**|3|1|\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-12-22&endday=2025-12-28&tree=all",
+      "creator": "orangefactor@bots.tld",
+      "reactions": {},
+      "bug_id": 1928537
+    },
+    {
+      "tags": [],
+      "creation_time": "2026-01-05T06:16:48Z",
+      "author": "orangefactor@bots.tld",
+      "is_private": false,
+      "count": 68,
+      "raw_text": "8 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 3\n* mozilla-beta: 2\n* try: 1\n* mozilla-central: 2\n\n## Table\n| |**a11y-checks-swr**|**a11y_checks+swgl**|**msix**|**no_variant**|**swgl**|\n|---|:-:|:-:|:-:|:-:|:-:|\n|**linux2404-x86_64/opt**|1| | | | |\n|**windows11-x86/debug**| | | |2| |\n|**windows11-x86/opt**| | | |1| |\n|**windows11-x86_64/debug**| | |1| | |\n|**windows11-x86_64/opt**| | |1|2| |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-12-29&endday=2026-01-04&tree=all",
+      "time": "2026-01-05T06:16:48Z",
+      "attachment_id": null,
+      "id": 17827468,
+      "bug_id": 1928537,
+      "reactions": {},
+      "text": "8 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 3\n* mozilla-beta: 2\n* try: 1\n* mozilla-central: 2\n\n## Table\n| |**a11y-checks-swr**|**a11y_checks+swgl**|**msix**|**no_variant**|**swgl**|\n|---|:-:|:-:|:-:|:-:|:-:|\n|**linux2404-x86_64/opt**|1| | | | |\n|**windows11-x86/debug**| | | |2| |\n|**windows11-x86/opt**| | | |1| |\n|**windows11-x86_64/debug**| | |1| | |\n|**windows11-x86_64/opt**| | |1|2| |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2025-12-29&endday=2026-01-04&tree=all",
+      "creator": "orangefactor@bots.tld"
+    },
+    {
+      "creation_time": "2026-01-08T09:15:03Z",
+      "tags": [],
+      "attachment_id": 9536305,
+      "id": 17833186,
+      "author": "valentin.gosu@gmail.com",
+      "count": 69,
+      "is_private": false,
+      "raw_text": "\nBug 1986649 changed the test to also check the statuspanellabel for the\nexpected string, however that value is not always synchronized with\nthe onStatusChange event, leading to intermittent failures.\n\nThis change fixes it so that we allow both \"Looking up ...\" and\n\"Transferring data from ...\" status strings.\nIt is still possible that the test would be racy (other status panel\nvalues are possible), but all current failures have one of these two strings.",
+      "time": "2026-01-08T09:15:03Z",
+      "bug_id": 1928537,
+      "reactions": {},
+      "creator": "valentin.gosu@gmail.com",
+      "text": "Created attachment 9536305\nBug 1928537 - Fix raciness in browser_necko_l10n.js r=#necko\n\n\nBug 1986649 changed the test to also check the statuspanellabel for the\nexpected string, however that value is not always synchronized with\nthe onStatusChange event, leading to intermittent failures.\n\nThis change fixes it so that we allow both \"Looking up ...\" and\n\"Transferring data from ...\" status strings.\nIt is still possible that the test would be racy (other status panel\nvalues are possible), but all current failures have one of these two strings."
+    },
+    {
+      "time": "2026-01-08T10:52:18Z",
+      "raw_text": "Pushed by valentin.gosu@gmail.com:\nhttps://github.com/mozilla-firefox/firefox/commit/b264ffe5c8db\nhttps://hg.mozilla.org/integration/autoland/rev/e07664913820\nFix raciness in browser_necko_l10n.js r=necko-reviewers,sunil",
+      "author": "pulsebot@bmo.tld",
+      "is_private": false,
+      "count": 70,
+      "id": 17833325,
+      "attachment_id": null,
+      "tags": [],
+      "creation_time": "2026-01-08T10:52:18Z",
+      "text": "Pushed by valentin.gosu@gmail.com:\nhttps://github.com/mozilla-firefox/firefox/commit/b264ffe5c8db\nhttps://hg.mozilla.org/integration/autoland/rev/e07664913820\nFix raciness in browser_necko_l10n.js r=necko-reviewers,sunil",
+      "creator": "pulsebot@bmo.tld",
+      "reactions": {},
+      "bug_id": 1928537
+    },
+    {
+      "time": "2026-01-08T17:02:29Z",
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/e07664913820",
+      "is_private": false,
+      "count": 71,
+      "author": "csabou@mozilla.com",
+      "id": 17833871,
+      "attachment_id": null,
+      "tags": [
+        "bugherder"
+      ],
+      "creation_time": "2026-01-08T17:02:29Z",
+      "text": "https://hg.mozilla.org/mozilla-central/rev/e07664913820",
+      "creator": "csabou@mozilla.com",
+      "reactions": {},
+      "bug_id": 1928537
+    },
+    {
+      "creator": "sstanca@mozilla.com",
+      "text": "This is still failing as it can be seen [here](https://treeherder.mozilla.org/jobs?repo=mozilla-central&group_state=expanded&resultStatus=pending%2Crunning%2Csuccess%2Ctestfailed%2Cbusted%2Cexception&searchStr=windows%2C11%2C24h2%2Cshippable%2Copt%2Cmochitests%2Cfrom%2Cmsix%2Cpackages%2Ctest-windows11-64-24h2-shippable%2Fopt-mochitest-browser-chrome-msix%2Cbc4&revision=9af669f3df03dc5a7705771033460066ea358aa1&selectedTaskRun=MckOrCFARsOOLHxrd2IcUQ.0).",
+      "reactions": {},
+      "bug_id": 1928537,
+      "attachment_id": null,
+      "id": 17834385,
+      "raw_text": "This is still failing as it can be seen [here](https://treeherder.mozilla.org/jobs?repo=mozilla-central&group_state=expanded&resultStatus=pending%2Crunning%2Csuccess%2Ctestfailed%2Cbusted%2Cexception&searchStr=windows%2C11%2C24h2%2Cshippable%2Copt%2Cmochitests%2Cfrom%2Cmsix%2Cpackages%2Ctest-windows11-64-24h2-shippable%2Fopt-mochitest-browser-chrome-msix%2Cbc4&revision=9af669f3df03dc5a7705771033460066ea358aa1&selectedTaskRun=MckOrCFARsOOLHxrd2IcUQ.0).",
+      "count": 72,
+      "is_private": false,
+      "author": "sstanca@mozilla.com",
+      "time": "2026-01-08T22:11:43Z",
+      "creation_time": "2026-01-08T22:11:43Z",
+      "tags": []
+    },
+    {
+      "text": "18 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 13\n* mozilla-central: 2\n* mozilla-beta: 1\n* try: 2\n\n## Table\n| |**a11y-checks-swr**|**a11y_checks+swgl**|**msix**|**no_variant**|**swgl**|**swr**|\n|---|:-:|:-:|:-:|:-:|:-:|:-:|\n|**linux2404-x86_64/asan**| | | | | |3|\n|**linux2404-x86_64/opt**|1| | | | | |\n|**macosx1015-x86_64/debug**| | | |3| | |\n|**windows11-x86/opt**| | | |1| | |\n|**windows11-x86_64/asan**| | | |2| | |\n|**windows11-x86_64/debug**| | |1|1| | |\n|**windows11-x86_64/opt**| | |3|3| | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2026-01-05&endday=2026-01-11&tree=all",
+      "creator": "orangefactor@bots.tld",
+      "bug_id": 1928537,
+      "reactions": {},
+      "count": 73,
+      "author": "orangefactor@bots.tld",
+      "is_private": false,
+      "raw_text": "18 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 13\n* mozilla-central: 2\n* mozilla-beta: 1\n* try: 2\n\n## Table\n| |**a11y-checks-swr**|**a11y_checks+swgl**|**msix**|**no_variant**|**swgl**|**swr**|\n|---|:-:|:-:|:-:|:-:|:-:|:-:|\n|**linux2404-x86_64/asan**| | | | | |3|\n|**linux2404-x86_64/opt**|1| | | | | |\n|**macosx1015-x86_64/debug**| | | |3| | |\n|**windows11-x86/opt**| | | |1| | |\n|**windows11-x86_64/asan**| | | |2| | |\n|**windows11-x86_64/debug**| | |1|1| | |\n|**windows11-x86_64/opt**| | |3|3| | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2026-01-05&endday=2026-01-11&tree=all",
+      "time": "2026-01-12T06:19:20Z",
+      "attachment_id": null,
+      "id": 17837142,
+      "tags": [],
+      "creation_time": "2026-01-12T06:19:20Z"
+    },
+    {
+      "text": "13 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 8\n* mozilla-beta: 3\n* try: 2\n\n## Table\n| |**a11y_checks+swgl**|**msix**|**no_variant**|**swgl**|**swr**|\n|---|:-:|:-:|:-:|:-:|:-:|\n|**linux2404-x86_64/debug**| | | | |1|\n|**macosx1015-x86_64/debug**| | |1| | |\n|**windows11-x86/debug**| | |1| | |\n|**windows11-x86/opt**| | |1| | |\n|**windows11-x86_64/debug**| |1|1| | |\n|**windows11-x86_64/opt**| |4|3| | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2026-01-12&endday=2026-01-18&tree=all",
+      "creator": "orangefactor@bots.tld",
+      "reactions": {},
+      "bug_id": 1928537,
+      "time": "2026-01-19T06:17:56Z",
+      "raw_text": "13 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 8\n* mozilla-beta: 3\n* try: 2\n\n## Table\n| |**a11y_checks+swgl**|**msix**|**no_variant**|**swgl**|**swr**|\n|---|:-:|:-:|:-:|:-:|:-:|\n|**linux2404-x86_64/debug**| | | | |1|\n|**macosx1015-x86_64/debug**| | |1| | |\n|**windows11-x86/debug**| | |1| | |\n|**windows11-x86/opt**| | |1| | |\n|**windows11-x86_64/debug**| |1|1| | |\n|**windows11-x86_64/opt**| |4|3| | |\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2026-01-12&endday=2026-01-18&tree=all",
+      "author": "orangefactor@bots.tld",
+      "count": 74,
+      "is_private": false,
+      "id": 17848123,
+      "attachment_id": null,
+      "tags": [],
+      "creation_time": "2026-01-19T06:17:56Z"
+    },
+    {
+      "reactions": {},
+      "bug_id": 1928537,
+      "creator": "valentin.gosu@gmail.com",
+      "text": "Created attachment 9538470\nBug 1928537 - Fix intermittent browser_necko_l10n.js r=#necko",
+      "creation_time": "2026-01-19T09:46:10Z",
+      "tags": [],
+      "attachment_id": 9538470,
+      "id": 17849285,
+      "raw_text": "",
+      "is_private": false,
+      "author": "valentin.gosu@gmail.com",
+      "count": 75,
+      "time": "2026-01-19T09:46:10Z"
+    },
+    {
+      "bug_id": 1928537,
+      "reactions": {},
+      "text": "Pushed by valentin.gosu@gmail.com:\nhttps://github.com/mozilla-firefox/firefox/commit/61ea4f937367\nhttps://hg.mozilla.org/integration/autoland/rev/932dad89f9b1\nFix intermittent browser_necko_l10n.js r=necko-reviewers,kershaw",
+      "creator": "pulsebot@bmo.tld",
+      "tags": [],
+      "creation_time": "2026-01-19T15:22:05Z",
+      "count": 76,
+      "author": "pulsebot@bmo.tld",
+      "is_private": false,
+      "raw_text": "Pushed by valentin.gosu@gmail.com:\nhttps://github.com/mozilla-firefox/firefox/commit/61ea4f937367\nhttps://hg.mozilla.org/integration/autoland/rev/932dad89f9b1\nFix intermittent browser_necko_l10n.js r=necko-reviewers,kershaw",
+      "time": "2026-01-19T15:22:05Z",
+      "attachment_id": null,
+      "id": 17849839
+    },
+    {
+      "id": 17850547,
+      "attachment_id": null,
+      "time": "2026-01-20T05:21:29Z",
+      "is_private": false,
+      "author": "imoraru@mozilla.com",
+      "count": 77,
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/932dad89f9b1",
+      "creation_time": "2026-01-20T05:21:29Z",
+      "tags": [
+        "bugherder"
+      ],
+      "creator": "imoraru@mozilla.com",
+      "text": "https://hg.mozilla.org/mozilla-central/rev/932dad89f9b1",
+      "bug_id": 1928537,
+      "reactions": {}
+    },
+    {
+      "creation_time": "2026-01-22T03:51:25Z",
+      "tags": [
+        "uplift"
+      ],
+      "attachment_id": null,
+      "id": 17853974,
+      "time": "2026-01-22T03:51:25Z",
+      "count": 78,
+      "is_private": false,
+      "author": "pulsebot@bmo.tld",
+      "raw_text": "https://github.com/mozilla-firefox/firefox/commit/a17ce5597868\nhttps://hg.mozilla.org/releases/mozilla-beta/rev/484ada7b1f7c",
+      "bug_id": 1928537,
+      "reactions": {},
+      "creator": "pulsebot@bmo.tld",
+      "text": "https://github.com/mozilla-firefox/firefox/commit/a17ce5597868\nhttps://hg.mozilla.org/releases/mozilla-beta/rev/484ada7b1f7c"
+    },
+    {
+      "creator": "orangefactor@bots.tld",
+      "text": "5 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 2\n* mozilla-beta: 3\n\n## Table\n| |**no_variant**|\n|---|:-:|\n|**windows11-x86/debug**|1|\n|**windows11-x86_64/debug**|1|\n|**windows11-x86_64/opt**|3|\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2026-01-19&endday=2026-01-25&tree=all",
+      "reactions": {},
+      "bug_id": 1928537,
+      "attachment_id": null,
+      "id": 17859044,
+      "time": "2026-01-26T06:46:05Z",
+      "raw_text": "5 failures were associated with this bug in the last 7 days.\n\n## Repository breakdown:\n* autoland: 2\n* mozilla-beta: 3\n\n## Table\n| |**no_variant**|\n|---|:-:|\n|**windows11-x86/debug**|1|\n|**windows11-x86_64/debug**|1|\n|**windows11-x86_64/opt**|3|\n\n## For more details, see:\nhttps://treeherder.mozilla.org/intermittent-failures/bugdetails?bug=1928537&startday=2026-01-19&endday=2026-01-25&tree=all",
+      "is_private": false,
+      "count": 79,
+      "author": "orangefactor@bots.tld",
+      "creation_time": "2026-01-26T06:46:05Z",
+      "tags": []
+    }
+  ],
+  "votes": 0,
+  "cf_size_estimate": "---",
+  "depends_on": [
+    1950166
+  ],
+  "cc": [
+    "kershaw@mozilla.com",
+    "ryanvm@gmail.com",
+    "sean.skim21@gmail.com",
+    "valentin.gosu@gmail.com"
+  ],
+  "description": "**Filed by:** smolnar [at] mozilla.com\n**Parsed log:** https://treeherder.mozilla.org/logviewer?job_id=480661817&repo=autoland\n**Full log:** https://firefox-ci-tc.services.mozilla.com/api/queue/v1/task/cV0SnnsCQ6q-lhYoRN1sVg/runs/0/artifacts/public/logs/live_backing.log\n\n---\n```\nTEST-START | netwerk/test/browser/browser_necko_l10n.js\n[task 2024-10-31T21:38:42.117Z] 21:38:42     INFO - GECKO(21752) | ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmphl5ud7r1.mozrunner/runtests_leaks_tab_pid27520.log\n[task 2024-10-31T21:38:42.181Z] 21:38:42     INFO - GECKO(21752) | ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmphl5ud7r1.mozrunner/runtests_leaks_tab_pid27539.log\n[task 2024-10-31T21:39:27.079Z] 21:39:27     INFO - TEST-INFO | started process screentopng\n[task 2024-10-31T21:39:27.218Z] 21:39:27     INFO - TEST-INFO | screentopng: exit 0\n[task 2024-10-31T21:39:27.223Z] 21:39:27     INFO - Buffered messages logged at 21:38:42\n[task 2024-10-31T21:39:27.224Z] 21:39:27     INFO - Entering test bound test_domain_change\n[task 2024-10-31T21:39:27.224Z] 21:39:27     INFO - Console message: [JavaScript Warning: \"This page is in Quirks Mode. Page layout may be impacted. For Standards Mode use \u201c<!DOCTYPE html>\u201d.\" {file: \"http://example.com:38240/\" line: 0}]\n[task 2024-10-31T21:39:27.224Z] 21:39:27     INFO - Buffered messages finished\n[task 2024-10-31T21:39:27.224Z] 21:39:27     INFO - TEST-UNEXPECTED-FAIL | netwerk/test/browser/browser_necko_l10n.js | Test timed out - \n[task 2024-10-31T21:39:27.224Z] 21:39:27     INFO - GECKO(21752) | Completed ShutdownLeaks collections in process 21752\n[task 2024-10-31T21:39:27.224Z] 21:39:27     INFO - TEST-START | Shutdown\n```",
+  "cf_fx_points": "---",
+  "is_creator_accessible": true,
+  "creator": "intermittent-bug-filer@mozilla.bugs",
+  "cf_webcompat_score": "---",
+  "cf_qa_whiteboard": "",
+  "url": "",
+  "cf_tracking_firefox_esr115": "---",
+  "cf_status_firefox149": "fixed",
+  "cf_status_firefox148": "fixed",
+  "assigned_to": "valentin.gosu@gmail.com",
+  "summary": "Intermittent netwerk/test/browser/browser_necko_l10n.js | single tracking bug",
+  "id": 1928537,
+  "component": "Networking",
+  "cf_fx_iteration": "---",
+  "creation_time": "2024-10-31T22:18:49Z",
+  "resolution": "FIXED",
+  "creator_detail": {
+    "id": 573381,
+    "real_name": "Treeherder Bug Filer",
+    "name": "intermittent-bug-filer@mozilla.bugs",
+    "email": "intermittent-bug-filer@mozilla.bugs",
+    "nick": "intermittent-bug-filer"
+  },
+  "status": "RESOLVED",
+  "blocks": [],
+  "cf_has_str": "---"
+}

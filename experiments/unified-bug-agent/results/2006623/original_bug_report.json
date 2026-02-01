@@ -1,0 +1,494 @@
+{
+  "type": "task",
+  "comment_count": 9,
+  "is_confirmed": true,
+  "history": [
+    {
+      "who": "jira-integration@bots.tld",
+      "when": "2025-12-17T13:54:26Z",
+      "changes": [
+        {
+          "added": "https://mozilla-hub.atlassian.net/browse/SNG-3173",
+          "removed": "",
+          "field_name": "see_also"
+        }
+      ]
+    },
+    {
+      "when": "2025-12-17T15:41:33Z",
+      "who": "dong@mozilla.com",
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "cc",
+          "added": "dong@mozilla.com"
+        }
+      ]
+    },
+    {
+      "who": "mak@mozilla.com",
+      "when": "2025-12-18T09:31:31Z",
+      "changes": [
+        {
+          "field_name": "cc",
+          "removed": "",
+          "added": "mak@mozilla.com"
+        },
+        {
+          "added": "needinfo?(dong@mozilla.com)",
+          "field_name": "flagtypes.name",
+          "removed": ""
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "added": "contact@dannycolin.com",
+          "field_name": "cc",
+          "removed": ""
+        },
+        {
+          "added": "needinfo?(mak@mozilla.com)",
+          "removed": "",
+          "field_name": "flagtypes.name"
+        }
+      ],
+      "when": "2025-12-29T01:46:20Z",
+      "who": "contact@dannycolin.com"
+    },
+    {
+      "changes": [
+        {
+          "field_name": "blocks",
+          "removed": "",
+          "added": "2007881"
+        }
+      ],
+      "who": "mak@mozilla.com",
+      "when": "2025-12-29T09:33:08Z"
+    },
+    {
+      "when": "2025-12-29T09:33:50Z",
+      "who": "mak@mozilla.com",
+      "changes": [
+        {
+          "removed": "needinfo?(mak@mozilla.com)",
+          "field_name": "flagtypes.name",
+          "added": ""
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "field_name": "assigned_to",
+          "removed": "nobody@mozilla.org",
+          "added": "dong@mozilla.com"
+        },
+        {
+          "added": "ASSIGNED",
+          "field_name": "status",
+          "removed": "NEW"
+        }
+      ],
+      "when": "2026-01-07T19:21:42Z",
+      "who": "phab-bot@bmo.tld"
+    },
+    {
+      "changes": [
+        {
+          "added": "",
+          "field_name": "flagtypes.name",
+          "removed": "needinfo?(dong@mozilla.com)"
+        }
+      ],
+      "when": "2026-01-07T19:54:56Z",
+      "who": "dong@mozilla.com"
+    },
+    {
+      "when": "2026-01-16T05:05:54Z",
+      "who": "csabou@mozilla.com",
+      "changes": [
+        {
+          "removed": "ASSIGNED",
+          "field_name": "status",
+          "added": "RESOLVED"
+        },
+        {
+          "field_name": "resolution",
+          "removed": "",
+          "added": "FIXED"
+        },
+        {
+          "removed": "---",
+          "field_name": "target_milestone",
+          "added": "149 Branch"
+        },
+        {
+          "added": "2026-01-16T05:05:54Z",
+          "removed": "",
+          "field_name": "cf_last_resolved"
+        },
+        {
+          "removed": "---",
+          "field_name": "cf_status_firefox149",
+          "added": "fixed"
+        },
+        {
+          "comment_count": 7,
+          "comment_id": 17845104,
+          "added": "bugherder",
+          "removed": "",
+          "field_name": "comment_tag"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "added": "oardelean@mozilla.com",
+          "removed": "",
+          "field_name": "qa_contact"
+        },
+        {
+          "added": "oardelean@mozilla.com",
+          "removed": "",
+          "field_name": "cc"
+        },
+        {
+          "field_name": "status",
+          "removed": "RESOLVED",
+          "added": "VERIFIED"
+        },
+        {
+          "added": "[search] [qa-triage-done-c149/b148] [qa-ver-done-c149/b148]",
+          "field_name": "cf_qa_whiteboard",
+          "removed": ""
+        },
+        {
+          "added": "verified",
+          "field_name": "cf_status_firefox149",
+          "removed": "fixed"
+        }
+      ],
+      "who": "oardelean@mozilla.com",
+      "when": "2026-01-28T09:18:56Z"
+    }
+  ],
+  "is_cc_accessible": true,
+  "is_creator_accessible": true,
+  "cf_tracking_firefox_esr115": "---",
+  "summary": "Remove \"browser.urlbar.switchTabs.searchAllContainers\" pref",
+  "status": "VERIFIED",
+  "flags": [],
+  "cf_fx_iteration": "---",
+  "cf_webcompat_score": "---",
+  "priority": "P3",
+  "resolution": "FIXED",
+  "cf_rank": null,
+  "cf_tracking_firefox147": "---",
+  "triage_owner": "jteow@mozilla.com",
+  "cf_status_firefox148": "---",
+  "component": "Address Bar",
+  "cf_performance_impact": "---",
+  "keywords": [],
+  "regressions": [],
+  "cf_has_str": "---",
+  "cf_status_firefox_esr115": "---",
+  "assigned_to_detail": {
+    "real_name": "dong",
+    "email": "dong@mozilla.com",
+    "nick": "dong",
+    "name": "dong@mozilla.com",
+    "id": 772254
+  },
+  "cc": [
+    "contact@dannycolin.com",
+    "dong@mozilla.com",
+    "mak@mozilla.com",
+    "oardelean@mozilla.com"
+  ],
+  "cf_webcompat_priority": "---",
+  "duplicates": [],
+  "version": "unspecified",
+  "groups": [],
+  "creator_detail": {
+    "name": "mak@mozilla.com",
+    "id": 240353,
+    "email": "mak@mozilla.com",
+    "real_name": "Marco Bonardo [:mak]",
+    "nick": "mak"
+  },
+  "mentors": [],
+  "creation_time": "2025-12-17T13:53:52Z",
+  "cf_tracking_firefox148": "---",
+  "cf_tracking_firefox_relnote": "---",
+  "mentors_detail": [],
+  "cf_a11y_review_project_flag": "---",
+  "cf_user_story": "",
+  "cf_fx_points": "---",
+  "severity": "S3",
+  "votes": 0,
+  "last_change_time": "2026-01-28T09:18:56Z",
+  "cc_detail": [
+    {
+      "name": "contact@dannycolin.com",
+      "id": 598568,
+      "real_name": "Danny Colin [:sdk]",
+      "email": "contact@dannycolin.com",
+      "nick": "sdk"
+    },
+    {
+      "name": "dong@mozilla.com",
+      "id": 772254,
+      "email": "dong@mozilla.com",
+      "real_name": "dong",
+      "nick": "dong"
+    },
+    {
+      "id": 240353,
+      "name": "mak@mozilla.com",
+      "real_name": "Marco Bonardo [:mak]",
+      "email": "mak@mozilla.com",
+      "nick": "mak"
+    },
+    {
+      "name": "oardelean@mozilla.com",
+      "id": 700963,
+      "email": "oardelean@mozilla.com",
+      "real_name": "Ardelean Oana, Desktop Test Engineering [:oardelean]",
+      "nick": "oardelean"
+    }
+  ],
+  "creator": "mak@mozilla.com",
+  "cf_crash_signature": "",
+  "classification": "Client Software",
+  "cf_cab_review": "---",
+  "whiteboard": "[sng]",
+  "url": "",
+  "qa_contact_detail": {
+    "id": 700963,
+    "name": "oardelean@mozilla.com",
+    "nick": "oardelean",
+    "email": "oardelean@mozilla.com",
+    "real_name": "Ardelean Oana, Desktop Test Engineering [:oardelean]"
+  },
+  "target_milestone": "149 Branch",
+  "dupe_of": null,
+  "assigned_to": "dong@mozilla.com",
+  "attachments": [
+    {
+      "creator_detail": {
+        "nick": "dong",
+        "email": "dong@mozilla.com",
+        "real_name": "dong",
+        "id": 772254,
+        "name": "dong@mozilla.com"
+      },
+      "description": "Bug 2006623 - Remove searchAllContainers pref. r=mak",
+      "size": 48,
+      "is_private": 0,
+      "is_patch": 0,
+      "creation_time": "2026-01-07T19:21:42Z",
+      "attacher": "dong@mozilla.com",
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjc4MTc2",
+      "last_change_time": "2026-01-07T19:21:42Z",
+      "bug_id": 2006623,
+      "file_name": "phabricator-D278176-url.txt",
+      "creator": "dong@mozilla.com",
+      "content_type": "text/x-phabricator-request",
+      "is_obsolete": 0,
+      "flags": [],
+      "id": 9536202,
+      "summary": "Bug 2006623 - Remove searchAllContainers pref. r=mak"
+    }
+  ],
+  "blocks": [
+    2007881
+  ],
+  "cf_status_firefox_esr140": "---",
+  "cf_qa_whiteboard": "[search] [qa-triage-done-c149/b148] [qa-ver-done-c149/b148]",
+  "platform": "Unspecified",
+  "product": "Firefox",
+  "comments": [
+    {
+      "is_private": false,
+      "count": 0,
+      "time": "2025-12-17T13:53:52Z",
+      "id": 17813039,
+      "creator": "mak@mozilla.com",
+      "bug_id": 2006623,
+      "author": "mak@mozilla.com",
+      "tags": [],
+      "attachment_id": null,
+      "text": "This pref is adding significant maintanance costs, from our telemetry measurements it has been barely used, less then 0.01% of users set it to false.\nWe feel like the default functionality is pretty good, and if there's the need to search specific containers, I think we should implement it in the unified search button (things like searching specific container, specific group, specific device...) as a search mode.",
+      "raw_text": "This pref is adding significant maintanance costs, from our telemetry measurements it has been barely used, less then 0.01% of users set it to false.\nWe feel like the default functionality is pretty good, and if there's the need to search specific containers, I think we should implement it in the unified search button (things like searching specific container, specific group, specific device...) as a search mode.",
+      "reactions": {},
+      "creation_time": "2025-12-17T13:53:52Z"
+    },
+    {
+      "text": "Hey Marco, I just landed [Bug 2005392](https://bugzilla.mozilla.org/show_bug.cgi?id=2005392) which removes the pref as well. I think we can resolve this bug as fixed as well.",
+      "reactions": {},
+      "raw_text": "Hey Marco, I just landed [Bug 2005392](https://bugzilla.mozilla.org/show_bug.cgi?id=2005392) which removes the pref as well. I think we can resolve this bug as fixed as well.",
+      "creation_time": "2025-12-17T15:41:33Z",
+      "time": "2025-12-17T15:41:33Z",
+      "id": 17813223,
+      "creator": "dong@mozilla.com",
+      "bug_id": 2006623,
+      "attachment_id": null,
+      "tags": [],
+      "author": "dong@mozilla.com",
+      "count": 1,
+      "is_private": false
+    },
+    {
+      "time": "2025-12-18T09:31:31Z",
+      "is_private": false,
+      "id": 17814410,
+      "creator": "mak@mozilla.com",
+      "bug_id": 2006623,
+      "attachment_id": null,
+      "tags": [],
+      "author": "mak@mozilla.com",
+      "text": "The patch removes the telemetry probe, not the pref and the code using it. https://searchfox.org/firefox-main/search?q=switchTabs.searchAllContainers",
+      "count": 2,
+      "reactions": {
+        "+1": 1
+      },
+      "raw_text": "The patch removes the telemetry probe, not the pref and the code using it. https://searchfox.org/firefox-main/search?q=switchTabs.searchAllContainers",
+      "creation_time": "2025-12-18T09:31:31Z"
+    },
+    {
+      "creation_time": "2025-12-29T01:46:20Z",
+      "raw_text": "> This pref is adding significant maintanance costs, from our telemetry measurements it has been barely used, less then 0.01% of users set it to false.\n\nJust a FYI, it was never exposed in the UI which could explain it. See [bug 1882391](https://bugzilla.mozilla.org/show_bug.cgi?id=1882391) (which funnily I just rediscovered we were both involved in).\n\n> I think we should implement it in the unified search button (things like searching specific container, specific group, specific device...) as a search mode.\n\nGood point. :mak do you mind filing a bug report blocking [bug 1191418](https://bugzilla.mozilla.org/show_bug.cgi?id=1191418) so it's documented.",
+      "reactions": {},
+      "count": 3,
+      "text": "> This pref is adding significant maintanance costs, from our telemetry measurements it has been barely used, less then 0.01% of users set it to false.\n\nJust a FYI, it was never exposed in the UI which could explain it. See [bug 1882391](https://bugzilla.mozilla.org/show_bug.cgi?id=1882391) (which funnily I just rediscovered we were both involved in).\n\n> I think we should implement it in the unified search button (things like searching specific container, specific group, specific device...) as a search mode.\n\nGood point. :mak do you mind filing a bug report blocking [bug 1191418](https://bugzilla.mozilla.org/show_bug.cgi?id=1191418) so it's documented.",
+      "author": "contact@dannycolin.com",
+      "tags": [],
+      "attachment_id": null,
+      "bug_id": 2006623,
+      "creator": "contact@dannycolin.com",
+      "id": 17822681,
+      "is_private": false,
+      "time": "2025-12-29T01:46:20Z"
+    },
+    {
+      "creator": "mak@mozilla.com",
+      "bug_id": 2006623,
+      "attachment_id": null,
+      "tags": [],
+      "author": "mak@mozilla.com",
+      "time": "2025-12-29T09:33:50Z",
+      "is_private": false,
+      "id": 17824072,
+      "raw_text": "(In reply to Danny Colin [:sdk] from comment #3)\n> Just a FYI, it was never exposed in the UI which could explain it. See [bug 1882391](https://bugzilla.mozilla.org/show_bug.cgi?id=1882391) (which funnily I just rediscovered we were both involved in).\n\nYep, as I said there we'd have to take a decision, and based on most current discussions, the decision is to wontfix that and remove the pref (for now). I agree that not showing a pref will reduce its use, but it was not shown exactly because we already doubted about the approach.\n\n> > I think we should implement it in the unified search button (things like searching specific container, specific group, specific device...) as a search mode.\n> \n> Good point. :mak do you mind filing a bug report blocking [bug 1191418](https://bugzilla.mozilla.org/show_bug.cgi?id=1191418) so it's documented.\n\nSure, I filed bug 2007881.",
+      "reactions": {},
+      "creation_time": "2025-12-29T09:33:50Z",
+      "text": "(In reply to Danny Colin [:sdk] from comment #3)\n> Just a FYI, it was never exposed in the UI which could explain it. See [bug 1882391](https://bugzilla.mozilla.org/show_bug.cgi?id=1882391) (which funnily I just rediscovered we were both involved in).\n\nYep, as I said there we'd have to take a decision, and based on most current discussions, the decision is to wontfix that and remove the pref (for now). I agree that not showing a pref will reduce its use, but it was not shown exactly because we already doubted about the approach.\n\n> > I think we should implement it in the unified search button (things like searching specific container, specific group, specific device...) as a search mode.\n> \n> Good point. :mak do you mind filing a bug report blocking [bug 1191418](https://bugzilla.mozilla.org/show_bug.cgi?id=1191418) so it's documented.\n\nSure, I filed bug 2007881.",
+      "count": 4
+    },
+    {
+      "creation_time": "2026-01-07T19:21:42Z",
+      "raw_text": "",
+      "reactions": {},
+      "count": 5,
+      "text": "Created attachment 9536202\nBug 2006623 - Remove searchAllContainers pref. r=mak",
+      "tags": [],
+      "author": "dong@mozilla.com",
+      "attachment_id": 9536202,
+      "bug_id": 2006623,
+      "creator": "dong@mozilla.com",
+      "id": 17832562,
+      "is_private": false,
+      "time": "2026-01-07T19:21:42Z"
+    },
+    {
+      "bug_id": 2006623,
+      "tags": [],
+      "attachment_id": null,
+      "author": "pulsebot@bmo.tld",
+      "creator": "pulsebot@bmo.tld",
+      "is_private": false,
+      "id": 17844486,
+      "time": "2026-01-15T19:01:16Z",
+      "creation_time": "2026-01-15T19:01:16Z",
+      "raw_text": "Pushed by dong@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/217febc965db\nhttps://hg.mozilla.org/integration/autoland/rev/b0d4d8cc1b64\nRemove searchAllContainers pref. r=mak,urlbar-reviewers",
+      "reactions": {},
+      "text": "Pushed by dong@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/217febc965db\nhttps://hg.mozilla.org/integration/autoland/rev/b0d4d8cc1b64\nRemove searchAllContainers pref. r=mak,urlbar-reviewers",
+      "count": 6
+    },
+    {
+      "is_private": false,
+      "count": 7,
+      "id": 17845104,
+      "time": "2026-01-16T05:05:54Z",
+      "bug_id": 2006623,
+      "tags": [
+        "bugherder"
+      ],
+      "attachment_id": null,
+      "author": "csabou@mozilla.com",
+      "creator": "csabou@mozilla.com",
+      "text": "https://hg.mozilla.org/mozilla-central/rev/b0d4d8cc1b64",
+      "creation_time": "2026-01-16T05:05:54Z",
+      "reactions": {},
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/b0d4d8cc1b64"
+    },
+    {
+      "text": "Verified as fixed on Firefox Nightly 149.0a1 on Windows 10, macOS 15 and Ubuntu 22.",
+      "count": 8,
+      "raw_text": "Verified as fixed on Firefox Nightly 149.0a1 on Windows 10, macOS 15 and Ubuntu 22.",
+      "reactions": {},
+      "creation_time": "2026-01-28T09:18:56Z",
+      "time": "2026-01-28T09:18:56Z",
+      "is_private": false,
+      "id": 17862869,
+      "creator": "oardelean@mozilla.com",
+      "bug_id": 2006623,
+      "attachment_id": null,
+      "tags": [],
+      "author": "oardelean@mozilla.com"
+    }
+  ],
+  "last_change_time_non_bot": "2026-01-28T09:18:56Z",
+  "cf_status_firefox149": "verified",
+  "cf_last_resolved": "2026-01-16T05:05:54Z",
+  "qa_contact": "oardelean@mozilla.com",
+  "cf_status_firefox147": "---",
+  "cf_tracking_firefox149": "---",
+  "counts": {
+    "cc": 4,
+    "regressed_by": 0,
+    "duplicates": 0,
+    "blocks": 1,
+    "comments": 9,
+    "keywords": 0,
+    "attachments": 1,
+    "depends_on": 1,
+    "regressions": 0
+  },
+  "id": 2006623,
+  "cf_tracking_firefox_esr140": "---",
+  "filed_via": "standard_form",
+  "cf_accessibility_severity": "---",
+  "is_open": false,
+  "see_also": [
+    "https://mozilla-hub.atlassian.net/browse/SNG-3173"
+  ],
+  "depends_on": [
+    2005392
+  ],
+  "op_sys": "Unspecified",
+  "description": "This pref is adding significant maintanance costs, from our telemetry measurements it has been barely used, less then 0.01% of users set it to false.\nWe feel like the default functionality is pretty good, and if there's the need to search specific containers, I think we should implement it in the unified search button (things like searching specific container, specific group, specific device...) as a search mode.",
+  "alias": null,
+  "regressed_by": [],
+  "triage_owner_detail": {
+    "id": 701257,
+    "name": "jteow@mozilla.com",
+    "email": "jteow@mozilla.com",
+    "real_name": "James Teow [:jteow]",
+    "nick": "jteow"
+  }
+}

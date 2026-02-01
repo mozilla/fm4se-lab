@@ -1,0 +1,886 @@
+{
+  "bug_id": 1883577,
+  "timestamp": "2026-02-01 18:09:37",
+  "data_sources": [
+    "bugzilla",
+    "crash-stats"
+  ],
+  "bug_data": {
+    "cf_size_estimate": "---",
+    "cf_last_resolved": "2024-03-12T09:33:56Z",
+    "cf_tracking_thunderbird_esr115": "---",
+    "duplicates": [],
+    "depends_on": [],
+    "flags": [],
+    "dupe_of": null,
+    "triage_owner_detail": {
+      "name": "bhood@mozilla.com",
+      "email": "bhood@mozilla.com",
+      "nick": "bhood",
+      "id": 697075,
+      "real_name": "Bob Hood [:bhood]"
+    },
+    "is_creator_accessible": true,
+    "creator": "sotaro.ikeda.g@gmail.com",
+    "cf_fx_points": "---",
+    "target_milestone": "125 Branch",
+    "description": "DCSurfaceVideo::CallVideoProcessorBlt() needs more error handling.",
+    "cc": [
+      "mayankleoboy1@gmail.com",
+      "pasik@iki.fi"
+    ],
+    "cf_status_firefox149": "---",
+    "cf_tracking_firefox_esr115": "---",
+    "cf_user_story": "",
+    "mentors_detail": [],
+    "url": "",
+    "cf_webcompat_score": "---",
+    "cf_qa_whiteboard": "",
+    "cc_detail": [
+      {
+        "name": "mayankleoboy1@gmail.com",
+        "email": "mayankleoboy1@gmail.com",
+        "nick": "mayankleoboy1",
+        "id": 440227,
+        "real_name": "Mayank Bansal"
+      },
+      {
+        "real_name": "",
+        "id": 529219,
+        "name": "pasik@iki.fi",
+        "email": "pasik@iki.fi",
+        "nick": "pasik"
+      }
+    ],
+    "summary": "Add error handling to Super Resolution setting",
+    "id": 1883577,
+    "cf_status_thunderbird_esr140": "---",
+    "assigned_to": "sotaro.ikeda.g@gmail.com",
+    "priority": "--",
+    "cf_status_firefox148": "---",
+    "counts": {
+      "regressed_by": 0,
+      "comments": 4,
+      "depends_on": 3,
+      "blocks": 0,
+      "duplicates": 0,
+      "attachments": 1,
+      "cc": 2,
+      "keywords": 0,
+      "regressions": 0
+    },
+    "cf_status_thunderbird_esr115": "---",
+    "cf_fx_iteration": "---",
+    "creation_time": "2024-03-05T06:22:41Z",
+    "is_open": false,
+    "component": "Graphics",
+    "classification": "Components",
+    "creator_detail": {
+      "name": "sotaro.ikeda.g@gmail.com",
+      "email": "sotaro.ikeda.g@gmail.com",
+      "nick": "sotaro",
+      "id": 434202,
+      "real_name": "Sotaro Ikeda [:sotaro]"
+    },
+    "last_change_time_non_bot": "2026-01-15T11:08:29Z",
+    "cf_accessibility_severity": "---",
+    "resolution": "FIXED",
+    "attachments": [
+      {
+        "last_change_time": "2024-03-11T04:15:37Z",
+        "file_name": "phabricator-D204172-url.txt",
+        "bug_id": 1883577,
+        "is_obsolete": 0,
+        "creator_detail": {
+          "real_name": "Sotaro Ikeda [:sotaro]",
+          "id": 434202,
+          "nick": "sotaro",
+          "email": "sotaro.ikeda.g@gmail.com",
+          "name": "sotaro.ikeda.g@gmail.com"
+        },
+        "creator": "sotaro.ikeda.g@gmail.com",
+        "description": "Bug 1883577 - Add error handling to Super Resolution setting",
+        "is_patch": 0,
+        "flags": [],
+        "creation_time": "2024-03-11T04:15:37Z",
+        "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjA0MTcy",
+        "id": 9390429,
+        "summary": "Bug 1883577 - Add error handling to Super Resolution setting",
+        "size": 48,
+        "attacher": "sotaro.ikeda.g@gmail.com",
+        "content_type": "text/x-phabricator-request",
+        "is_private": 0
+      }
+    ],
+    "cf_tracking_firefox_esr140": "---",
+    "blocks": [
+      1954558,
+      1882688
+    ],
+    "cf_has_str": "---",
+    "mentors": [],
+    "last_change_time": "2026-01-15T11:08:29Z",
+    "status": "RESOLVED",
+    "groups": [],
+    "cf_status_firefox125": "fixed",
+    "regressions": [],
+    "cf_crash_signature": "",
+    "comment_count": 4,
+    "cf_cab_review": "---",
+    "cf_status_firefox_esr140": "---",
+    "cf_tracking_firefox_relnote": "---",
+    "platform": "Unspecified",
+    "cf_tracking_firefox149": "---",
+    "qa_contact": "",
+    "version": "unspecified",
+    "product": "Core",
+    "history": [
+      {
+        "when": "2024-03-05T06:23:56Z",
+        "who": "sotaro.ikeda.g@gmail.com",
+        "changes": [
+          {
+            "added": "1882688",
+            "field_name": "blocks",
+            "removed": ""
+          }
+        ]
+      },
+      {
+        "when": "2024-03-05T08:01:56Z",
+        "who": "mayankleoboy1@gmail.com",
+        "changes": [
+          {
+            "removed": "",
+            "added": "mayankleoboy1@gmail.com",
+            "field_name": "cc"
+          }
+        ]
+      },
+      {
+        "when": "2024-03-11T04:14:12Z",
+        "who": "sotaro.ikeda.g@gmail.com",
+        "changes": [
+          {
+            "removed": "Add more error handling to DCSurfaceVideo::CallVideoProcessorBlt()",
+            "added": "Add error handling to Super Resolution setting",
+            "field_name": "summary"
+          }
+        ]
+      },
+      {
+        "who": "sstanca@mozilla.com",
+        "when": "2024-03-12T09:33:56Z",
+        "changes": [
+          {
+            "removed": "",
+            "added": "FIXED",
+            "field_name": "resolution"
+          },
+          {
+            "removed": "---",
+            "field_name": "target_milestone",
+            "added": "125 Branch"
+          },
+          {
+            "removed": "NEW",
+            "field_name": "status",
+            "added": "RESOLVED"
+          },
+          {
+            "removed": "",
+            "added": "2024-03-12T09:33:56Z",
+            "field_name": "cf_last_resolved"
+          },
+          {
+            "field_name": "cf_status_firefox125",
+            "added": "fixed",
+            "removed": "---"
+          },
+          {
+            "comment_id": 16839829,
+            "added": "bugherder",
+            "field_name": "comment_tag",
+            "comment_count": 3,
+            "removed": ""
+          }
+        ]
+      },
+      {
+        "changes": [
+          {
+            "added": "1954558",
+            "field_name": "blocks",
+            "removed": ""
+          }
+        ],
+        "who": "sotaro.ikeda.g@gmail.com",
+        "when": "2026-01-15T00:41:55Z"
+      },
+      {
+        "who": "pasik@iki.fi",
+        "when": "2026-01-15T11:08:29Z",
+        "changes": [
+          {
+            "removed": "",
+            "added": "pasik@iki.fi",
+            "field_name": "cc"
+          }
+        ]
+      }
+    ],
+    "keywords": [],
+    "filed_via": "standard_form",
+    "severity": "--",
+    "alias": null,
+    "cf_status_firefox147": "---",
+    "cf_performance_impact": "---",
+    "cf_tracking_firefox148": "---",
+    "assigned_to_detail": {
+      "name": "sotaro.ikeda.g@gmail.com",
+      "email": "sotaro.ikeda.g@gmail.com",
+      "nick": "sotaro",
+      "id": 434202,
+      "real_name": "Sotaro Ikeda [:sotaro]"
+    },
+    "is_cc_accessible": true,
+    "type": "enhancement",
+    "triage_owner": "bhood@mozilla.com",
+    "cf_rank": null,
+    "regressed_by": [],
+    "cf_status_firefox_esr115": "---",
+    "cf_webcompat_priority": "---",
+    "is_confirmed": true,
+    "see_also": [],
+    "cf_a11y_review_project_flag": "---",
+    "whiteboard": "",
+    "votes": 0,
+    "op_sys": "Unspecified",
+    "comments": [
+      {
+        "bug_id": 1883577,
+        "reactions": {},
+        "text": "DCSurfaceVideo::CallVideoProcessorBlt() needs more error handling.",
+        "creator": "sotaro.ikeda.g@gmail.com",
+        "tags": [],
+        "creation_time": "2024-03-05T06:22:41Z",
+        "time": "2024-03-05T06:22:41Z",
+        "count": 0,
+        "author": "sotaro.ikeda.g@gmail.com",
+        "is_private": false,
+        "raw_text": "DCSurfaceVideo::CallVideoProcessorBlt() needs more error handling.",
+        "id": 16829839,
+        "attachment_id": null
+      },
+      {
+        "reactions": {},
+        "bug_id": 1883577,
+        "creator": "sotaro.ikeda.g@gmail.com",
+        "text": "Created attachment 9390429\nBug 1883577 - Add error handling to Super Resolution setting",
+        "creation_time": "2024-03-11T04:15:37Z",
+        "tags": [],
+        "id": 16836039,
+        "attachment_id": 9390429,
+        "raw_text": "",
+        "count": 1,
+        "author": "sotaro.ikeda.g@gmail.com",
+        "is_private": false,
+        "time": "2024-03-11T04:15:37Z"
+      },
+      {
+        "reactions": {},
+        "bug_id": 1883577,
+        "text": "Pushed by sikeda.birchill@mozilla.com:\nhttps://hg.mozilla.org/integration/autoland/rev/9c238083d175\nAdd error handling to Super Resolution setting r=gfx-reviewers,bradwerth",
+        "creator": "pulsebot@bmo.tld",
+        "tags": [],
+        "creation_time": "2024-03-12T00:45:48Z",
+        "time": "2024-03-12T00:45:48Z",
+        "raw_text": "Pushed by sikeda.birchill@mozilla.com:\nhttps://hg.mozilla.org/integration/autoland/rev/9c238083d175\nAdd error handling to Super Resolution setting r=gfx-reviewers,bradwerth",
+        "count": 2,
+        "author": "pulsebot@bmo.tld",
+        "is_private": false,
+        "attachment_id": null,
+        "id": 16839508
+      },
+      {
+        "creation_time": "2024-03-12T09:33:56Z",
+        "tags": [
+          "bugherder"
+        ],
+        "attachment_id": null,
+        "id": 16839829,
+        "time": "2024-03-12T09:33:56Z",
+        "raw_text": "https://hg.mozilla.org/mozilla-central/rev/9c238083d175",
+        "author": "sstanca@mozilla.com",
+        "is_private": false,
+        "count": 3,
+        "reactions": {},
+        "bug_id": 1883577,
+        "creator": "sstanca@mozilla.com",
+        "text": "https://hg.mozilla.org/mozilla-central/rev/9c238083d175"
+      }
+    ],
+    "cf_tracking_thunderbird_esr140": "---",
+    "cf_tracking_firefox147": "---"
+  },
+  "comments": [
+    {
+      "bug_id": 1883577,
+      "reactions": {},
+      "creator": "sotaro.ikeda.g@gmail.com",
+      "text": "DCSurfaceVideo::CallVideoProcessorBlt() needs more error handling.",
+      "creation_time": "2024-03-05T06:22:41Z",
+      "tags": [],
+      "attachment_id": null,
+      "id": 16829839,
+      "time": "2024-03-05T06:22:41Z",
+      "author": "sotaro.ikeda.g@gmail.com",
+      "count": 0,
+      "is_private": false,
+      "raw_text": "DCSurfaceVideo::CallVideoProcessorBlt() needs more error handling."
+    },
+    {
+      "tags": [],
+      "creation_time": "2024-03-11T04:15:37Z",
+      "raw_text": "",
+      "author": "sotaro.ikeda.g@gmail.com",
+      "count": 1,
+      "is_private": false,
+      "time": "2024-03-11T04:15:37Z",
+      "id": 16836039,
+      "attachment_id": 9390429,
+      "reactions": {},
+      "bug_id": 1883577,
+      "text": "Created attachment 9390429\nBug 1883577 - Add error handling to Super Resolution setting",
+      "creator": "sotaro.ikeda.g@gmail.com"
+    },
+    {
+      "id": 16839508,
+      "attachment_id": null,
+      "time": "2024-03-12T00:45:48Z",
+      "raw_text": "Pushed by sikeda.birchill@mozilla.com:\nhttps://hg.mozilla.org/integration/autoland/rev/9c238083d175\nAdd error handling to Super Resolution setting r=gfx-reviewers,bradwerth",
+      "count": 2,
+      "is_private": false,
+      "author": "pulsebot@bmo.tld",
+      "creation_time": "2024-03-12T00:45:48Z",
+      "tags": [],
+      "creator": "pulsebot@bmo.tld",
+      "text": "Pushed by sikeda.birchill@mozilla.com:\nhttps://hg.mozilla.org/integration/autoland/rev/9c238083d175\nAdd error handling to Super Resolution setting r=gfx-reviewers,bradwerth",
+      "reactions": {},
+      "bug_id": 1883577
+    },
+    {
+      "creation_time": "2024-03-12T09:33:56Z",
+      "tags": [
+        "bugherder"
+      ],
+      "attachment_id": null,
+      "id": 16839829,
+      "time": "2024-03-12T09:33:56Z",
+      "author": "sstanca@mozilla.com",
+      "is_private": false,
+      "count": 3,
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/9c238083d175",
+      "bug_id": 1883577,
+      "reactions": {},
+      "creator": "sstanca@mozilla.com",
+      "text": "https://hg.mozilla.org/mozilla-central/rev/9c238083d175"
+    }
+  ],
+  "crash_context": {
+    "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::AutoEnterOOMUnsafeRegion::crash | js::gc::AllocateTenuredCellInGC",
+    "product": "Firefox",
+    "version": "149.0a1",
+    "os": null
+  },
+  "crashes": [
+    {
+      "uuid": "d03c7087-1d38-4800-b2ae-6ec210260125",
+      "date": "2026-01-25T23:06:34.755371+00:00",
+      "product": "Firefox",
+      "version": "149.0a1",
+      "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::AutoEnterOOMUnsafeRegion::crash | js::gc::AllocateTenuredCellInGC"
+    },
+    {
+      "uuid": "03b9a2bd-7633-4638-9bbe-56d750260125",
+      "date": "2026-01-25T23:05:20.529221+00:00",
+      "product": "Firefox",
+      "version": "115.32.0esr",
+      "signature": "js::gc::GetGCKindSlots"
+    },
+    {
+      "uuid": "49f3087b-5805-427b-a533-f23310260125",
+      "date": "2026-01-25T23:05:43.133051+00:00",
+      "product": "Firefox",
+      "version": "140.7.0esr",
+      "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::AutoEnterOOMUnsafeRegion::crash | js::gc::AllocateTenuredCellInGC"
+    },
+    {
+      "uuid": "542d40df-d509-422f-9c6b-4a88e0260125",
+      "date": "2026-01-25T23:06:30.421086+00:00",
+      "product": "Firefox",
+      "version": "149.0a1",
+      "signature": "OOM | unknown | mozJSModuleLoader::InitSharedGlobal"
+    },
+    {
+      "uuid": "37117b71-587a-41ad-99c8-f34750260125",
+      "date": "2026-01-25T23:06:07.767377+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::gc::FreeSpan::allocate"
+    },
+    {
+      "uuid": "a4d1a01d-97f8-4739-8f70-1994d0260125",
+      "date": "2026-01-25T23:05:53.583985+00:00",
+      "product": "Firefox",
+      "version": "146.0.1",
+      "signature": "shutdownhang | mozilla::SpinEventLoopUntil | nsThread::WaitForAllAsynchronousShutdowns | nsThreadManager::ShutdownNonMainThreads"
+    },
+    {
+      "uuid": "6c898ef5-d1f9-46a7-8f16-184a80260125",
+      "date": "2026-01-25T23:05:32.747304+00:00",
+      "product": "Thunderbird",
+      "version": "147.0",
+      "signature": "nsMsgSearchOfflineMail::Search"
+    },
+    {
+      "uuid": "3185d2d4-b078-4f68-bd0c-4d56d0260125",
+      "date": "2026-01-25T23:05:30.519525+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "EnterBaseline"
+    },
+    {
+      "uuid": "99cb0f69-f14b-4455-9acd-313120260125",
+      "date": "2026-01-25T23:05:32.006727+00:00",
+      "product": "Firefox",
+      "version": "149.0a1",
+      "signature": "js::gc::HeaderWord::getAtomic"
+    },
+    {
+      "uuid": "1fd4fab0-8827-4217-9173-020330260125",
+      "date": "2026-01-25T23:03:16.952342+00:00",
+      "product": "Fenix",
+      "version": "132.0.2",
+      "signature": "EMPTY: no frame data available; EmptyMinidump"
+    }
+  ],
+  "bug_analysis": {
+    "bug_type": "crash",
+    "root_cause": "Insufficient error handling in DCSurfaceVideo::CallVideoProcessorBlt() method related to the Super Resolution setting",
+    "symptoms": [
+      "Crashes related to out-of-memory (OOM) conditions",
+      "Crashes in JavaScript garbage collection during allocation"
+    ],
+    "affected_components": [
+      "Graphics",
+      "Core"
+    ],
+    "reproduction_steps": [
+      "Enable Super Resolution setting",
+      "Trigger video processing that calls DCSurfaceVideo::CallVideoProcessorBlt()"
+    ],
+    "technical_details": "The function DCSurfaceVideo::CallVideoProcessorBlt() lacked proper error handling which led to crashes often related to memory allocation failures and garbage collection during video processing with Super Resolution enabled.",
+    "user_impact": "Users experienced crashes when using the Super Resolution feature, potentially causing browser instability and data loss.",
+    "severity_assessment": "high",
+    "keywords": [
+      "Super Resolution",
+      "error handling",
+      "crash",
+      "OOM",
+      "video processing",
+      "DCSurfaceVideo"
+    ],
+    "likely_repository_paths": [
+      "gfx/layers/",
+      "media/",
+      "dom/canvas/"
+    ],
+    "similar_bugs_context": {
+      "common_patterns": [
+        "Crashes related to memory allocation failures during garbage collection",
+        "Out Of Memory (OOM) conditions triggering crash in the JS engine",
+        "Crashes occurring during nursery eviction or chunk allocation"
+      ],
+      "potential_root_causes": [
+        "Insufficient memory handling or error propagation during GC nursery eviction",
+        "Lack of robust error handling for allocation failures in Super Resolution setting or related subsystems"
+      ],
+      "relevant_fix_clues": [
+        "Bug 1883577 aims to add error handling to the Super Resolution setting",
+        "Similar crash is described as 'Failed to allocate new chunk during GC', indicating the crash is triggered by unhandled OOM during GC",
+        "No resolved status or fix details found for the similar bugs, implying the root cause remains unaddressed"
+      ],
+      "summary": "These similar bugs suggest that crashes are caused by unhandled out-of-memory allocation failures during garbage collection, particularly when evicting the nursery or allocating new chunks. The lack of robust error handling for these OOM conditions, especially in relation to the Super Resolution setting, appears to be a common root cause. Adding error handling for memory allocation failures during GC and related settings is likely needed to prevent these crashes."
+    }
+  },
+  "similar_bugs_data": [
+    {
+      "bug_id": 1472062,
+      "summary": "[meta] OOM crash evicting the nursery: \"Failed to allocate new chunk during GC\"",
+      "patch_excerpt": null,
+      "touched_files": []
+    }
+  ],
+  "similar_bugs_analysis": {
+    "common_patterns": [
+      "Crashes related to memory allocation failures during garbage collection",
+      "Out Of Memory (OOM) conditions triggering crash in the JS engine",
+      "Crashes occurring during nursery eviction or chunk allocation"
+    ],
+    "potential_root_causes": [
+      "Insufficient memory handling or error propagation during GC nursery eviction",
+      "Lack of robust error handling for allocation failures in Super Resolution setting or related subsystems"
+    ],
+    "relevant_fix_clues": [
+      "Bug 1883577 aims to add error handling to the Super Resolution setting",
+      "Similar crash is described as 'Failed to allocate new chunk during GC', indicating the crash is triggered by unhandled OOM during GC",
+      "No resolved status or fix details found for the similar bugs, implying the root cause remains unaddressed"
+    ],
+    "summary": "These similar bugs suggest that crashes are caused by unhandled out-of-memory allocation failures during garbage collection, particularly when evicting the nursery or allocating new chunks. The lack of robust error handling for these OOM conditions, especially in relation to the Super Resolution setting, appears to be a common root cause. Adding error handling for memory allocation failures during GC and related settings is likely needed to prevent these crashes."
+  },
+  "repository_context": {
+    "gfx/layers": [
+      "AndroidHardwareBuffer.cpp",
+      "AndroidHardwareBuffer.h",
+      "AnimationHelper.cpp",
+      "AnimationHelper.h",
+      "AnimationInfo.cpp",
+      "AnimationInfo.h",
+      "AnimationStorageData.h",
+      "AtomicRefCountedWithFinalize.h",
+      "AxisPhysicsMSDModel.cpp",
+      "AxisPhysicsMSDModel.h",
+      "AxisPhysicsModel.cpp",
+      "AxisPhysicsModel.h",
+      "BSPTree.cpp",
+      "BSPTree.h",
+      "BufferTexture.cpp",
+      "BufferTexture.h",
+      "BuildConstants.h",
+      "CanvasDrawEventRecorder.cpp",
+      "CanvasDrawEventRecorder.h",
+      "CanvasRenderer.cpp",
+      "CanvasRenderer.h",
+      "CompositionRecorder.cpp",
+      "CompositionRecorder.h",
+      "Compositor.cpp",
+      "Compositor.h",
+      "CompositorAnimationStorage.cpp",
+      "CompositorAnimationStorage.h",
+      "CompositorTypes.cpp",
+      "CompositorTypes.h",
+      "D3D11ShareHandleImage.cpp",
+      "D3D11ShareHandleImage.h",
+      "D3D11YCbCrImage.cpp",
+      "D3D11YCbCrImage.h",
+      "D3D11ZeroCopyTextureImage.cpp",
+      "D3D11ZeroCopyTextureImage.h",
+      "DMABUFSurfaceImage.cpp",
+      "DMABUFSurfaceImage.h",
+      "DcompSurfaceImage.cpp",
+      "DcompSurfaceImage.h",
+      "DirectionUtils.h",
+      "Effects.cpp",
+      "Effects.h",
+      "Fence.cpp",
+      "Fence.h",
+      "FrameMetrics.cpp",
+      "FrameMetrics.h",
+      "GLImages.cpp",
+      "GLImages.h",
+      "GPUVideoImage.h",
+      "GpuFence.h",
+      "GpuFenceMTLSharedEvent.cpp",
+      "GpuFenceMTLSharedEvent.h",
+      "IMFYCbCrImage.cpp",
+      "IMFYCbCrImage.h",
+      "IPDLActor.h",
+      "ImageContainer.cpp",
+      "ImageContainer.h",
+      "ImageDataSerializer.cpp",
+      "ImageDataSerializer.h",
+      "ImageTypes.h",
+      "LayerUserData.h",
+      "LayersTypes.cpp",
+      "LayersTypes.h",
+      "MacIOSurfaceHelpers.cpp",
+      "MacIOSurfaceHelpers.h",
+      "MacIOSurfaceImage.cpp",
+      "MacIOSurfaceImage.h",
+      "MemoryPressureObserver.cpp",
+      "MemoryPressureObserver.h",
+      "NativeLayer.h",
+      "NativeLayerCA.h",
+      "NativeLayerCA.mm",
+      "NativeLayerCommandQueue.cpp",
+      "NativeLayerCommandQueue.h",
+      "NativeLayerMacSurfaceHandler.h",
+      "NativeLayerMacSurfaceHandler.mm",
+      "NativeLayerRemoteChild.h",
+      "NativeLayerRemoteMac.h",
+      "NativeLayerRemoteMac.mm",
+      "NativeLayerRemoteParent.h",
+      "NativeLayerRootRemoteMacChild.h",
+      "NativeLayerRootRemoteMacChild.mm",
+      "NativeLayerRootRemoteMacParent.h",
+      "NativeLayerRootRemoteMacParent.mm",
+      "NativeLayerWayland.cpp",
+      "NativeLayerWayland.h",
+      "OOPCanvasRenderer.h",
+      "PersistentBufferProvider.cpp",
+      "PersistentBufferProvider.h",
+      "ProfilerScreenshots.cpp",
+      "ProfilerScreenshots.h",
+      "RecordedCanvasEventImpl.h",
+      "RemoteTextureMap.cpp",
+      "RemoteTextureMap.h",
+      "RepaintRequest.cpp",
+      "RepaintRequest.h",
+      "SampleTime.cpp",
+      "SampleTime.h",
+      "ScreenshotGrabber.cpp",
+      "ScreenshotGrabber.h",
+      "ScrollableLayerGuid.cpp",
+      "ScrollableLayerGuid.h",
+      "ScrollbarData.h",
+      "ShareableCanvasRenderer.cpp",
+      "ShareableCanvasRenderer.h",
+      "SourceSurfaceSharedData.cpp",
+      "SourceSurfaceSharedData.h",
+      "SurfacePool.h",
+      "SurfacePoolCA.h",
+      "SurfacePoolCA.mm",
+      "SurfacePoolWayland.cpp",
+      "SurfacePoolWayland.h",
+      "SyncObject.cpp",
+      "SyncObject.h",
+      "TextureSourceProvider.cpp",
+      "TextureSourceProvider.h",
+      "TextureWrapperImage.cpp",
+      "TextureWrapperImage.h",
+      "TransactionIdAllocator.h",
+      "TreeTraversal.h",
+      "ZoomConstraints.cpp",
+      "ZoomConstraints.h",
+      "moz.build"
+    ],
+    "media": [
+      "moz.build",
+      "update-libjpeg.sh"
+    ],
+    "dom/canvas": [
+      "CacheInvalidator.cpp",
+      "CacheInvalidator.h",
+      "CanvasGradient.cpp",
+      "CanvasGradient.h",
+      "CanvasImageCache.cpp",
+      "CanvasImageCache.h",
+      "CanvasPath.h",
+      "CanvasPattern.cpp",
+      "CanvasPattern.h",
+      "CanvasRenderingContext2D.cpp",
+      "CanvasRenderingContext2D.h",
+      "CanvasRenderingContextHelper.cpp",
+      "CanvasRenderingContextHelper.h",
+      "CanvasUtils.cpp",
+      "CanvasUtils.h",
+      "ClientWebGLContext.cpp",
+      "ClientWebGLContext.h",
+      "ClientWebGLExtensions.cpp",
+      "ClientWebGLExtensions.h",
+      "DmdStdContainers.h",
+      "DrawTargetWebgl.cpp",
+      "DrawTargetWebgl.h",
+      "DrawTargetWebglInternal.h",
+      "FilterNodeWebgl.cpp",
+      "FilterNodeWebgl.h",
+      "GeneratePlaceholderCanvasData.h",
+      "HostWebGLContext.cpp",
+      "HostWebGLContext.h",
+      "ImageBitmap.cpp",
+      "ImageBitmap.h",
+      "ImageBitmapRenderingContext.cpp",
+      "ImageBitmapRenderingContext.h",
+      "ImageBitmapSource.h",
+      "ImageData.cpp",
+      "ImageData.h",
+      "ImageUtils.cpp",
+      "ImageUtils.h",
+      "IsEnumCase.h",
+      "MurmurHash3.cpp",
+      "MurmurHash3.h",
+      "OffscreenCanvas.cpp",
+      "OffscreenCanvas.h",
+      "OffscreenCanvasDisplayHelper.cpp",
+      "OffscreenCanvasDisplayHelper.h",
+      "OffscreenCanvasRenderingContext2D.cpp",
+      "OffscreenCanvasRenderingContext2D.h",
+      "PWebGL.ipdl",
+      "ParamTraits_IsEnumCase.h",
+      "ParamTraits_STL.h",
+      "ParamTraits_TiedFields.h",
+      "QueueParamTraits.h",
+      "SanitizeRenderer.cpp",
+      "SourceSurfaceWebgl.cpp",
+      "SourceSurfaceWebgl.h",
+      "TexUnpackBlob.cpp",
+      "TexUnpackBlob.h",
+      "TextMetrics.h",
+      "TiedFields.h",
+      "TupleUtils.h",
+      "WebGL2Context.cpp",
+      "WebGL2Context.h",
+      "WebGL2ContextBuffers.cpp",
+      "WebGL2ContextFramebuffers.cpp",
+      "WebGL2ContextMRTs.cpp",
+      "WebGL2ContextQueries.cpp",
+      "WebGL2ContextRenderbuffers.cpp",
+      "WebGL2ContextSamplers.cpp",
+      "WebGL2ContextState.cpp",
+      "WebGL2ContextSync.cpp",
+      "WebGL2ContextTransformFeedback.cpp",
+      "WebGL2ContextUniforms.cpp",
+      "WebGLBuffer.cpp",
+      "WebGLBuffer.h",
+      "WebGLChild.cpp",
+      "WebGLChild.h",
+      "WebGLCommandQueue.h",
+      "WebGLContext.cpp",
+      "WebGLContext.h",
+      "WebGLContextBuffers.cpp",
+      "WebGLContextDraw.cpp",
+      "WebGLContextExtensions.cpp",
+      "WebGLContextFramebufferOperations.cpp",
+      "WebGLContextGL.cpp",
+      "WebGLContextLossHandler.cpp",
+      "WebGLContextLossHandler.h",
+      "WebGLContextState.cpp",
+      "WebGLContextTextures.cpp",
+      "WebGLContextUtils.cpp",
+      "WebGLContextUtils.h",
+      "WebGLContextValidate.cpp",
+      "WebGLContextVertexArray.cpp",
+      "WebGLContextVertices.cpp",
+      "WebGLExtensions.cpp",
+      "WebGLExtensions.h",
+      "WebGLFormats.cpp",
+      "WebGLFormats.h",
+      "WebGLFramebuffer.cpp",
+      "WebGLFramebuffer.h",
+      "WebGLInternalFormatsTable.h",
+      "WebGLIpdl.h",
+      "WebGLMemoryTracker.cpp",
+      "WebGLMemoryTracker.h",
+      "WebGLMethodDispatcher.h",
+      "WebGLObjectModel.h",
+      "WebGLParent.cpp",
+      "WebGLParent.h",
+      "WebGLProgram.cpp",
+      "WebGLProgram.h",
+      "WebGLQuery.cpp",
+      "WebGLQuery.h",
+      "WebGLQueueParamTraits.h",
+      "WebGLRenderbuffer.cpp",
+      "WebGLRenderbuffer.h",
+      "WebGLSampler.cpp",
+      "WebGLSampler.h",
+      "WebGLShader.cpp",
+      "WebGLShader.h",
+      "WebGLShaderValidator.cpp",
+      "WebGLShaderValidator.h",
+      "WebGLStrongTypes.h",
+      "WebGLSync.cpp",
+      "WebGLSync.h",
+      "WebGLTexelConversions.cpp",
+      "WebGLTexelConversions.h",
+      "WebGLTexture.cpp",
+      "WebGLTexture.h",
+      "WebGLTextureUpload.cpp",
+      "WebGLTextureUpload.h",
+      "WebGLTransformFeedback.cpp",
+      "WebGLTransformFeedback.h",
+      "WebGLTypes.h",
+      "WebGLValidateStrings.cpp",
+      "WebGLValidateStrings.h",
+      "WebGLVertexArray.cpp",
+      "WebGLVertexArray.h",
+      "WebGLVertexArrayFake.cpp",
+      "WebGLVertexArrayFake.h",
+      "WebGLVertexArrayGL.cpp",
+      "WebGLVertexArrayGL.h",
+      "XRWebGLLayer.cpp",
+      "XRWebGLLayer.h",
+      "metrics.yaml",
+      "moz.build",
+      "nsICanvasRenderingContextInternal.cpp",
+      "nsICanvasRenderingContextInternal.h"
+    ],
+    "fetched_files": {
+      "DCSurfaceVideo::CallVideoProcessorBlt": "",
+      "gfx/layers/DCSurfaceVideo.cpp": "File not found or inaccessible"
+    }
+  },
+  "related_tests": [
+    "Possible tests for gfx/layers/: 0 found",
+    "Possible tests for media/: 0 found",
+    "Possible tests for dom/canvas/: 0 found"
+  ],
+  "refined_analysis": {
+    "bug_type": "crash",
+    "root_cause": "Lack of error handling for memory allocation failures in gfx/layers/DCSurfaceVideo.cpp's DCSurfaceVideo::CallVideoProcessorBlt() when Super Resolution is enabled.",
+    "symptoms": [
+      "Crashes triggered by out-of-memory (OOM) conditions during video processing",
+      "JavaScript garbage collection crashes related to allocation failures"
+    ],
+    "affected_components": [
+      "gfx/layers (DCSurfaceVideo.cpp)",
+      "media",
+      "dom/canvas"
+    ],
+    "reproduction_steps": [
+      "Enable Super Resolution feature",
+      "Trigger video processing that invokes DCSurfaceVideo::CallVideoProcessorBlt()"
+    ],
+    "technical_details": "DCSurfaceVideo::CallVideoProcessorBlt() performs memory allocations without checking for failures. Under memory pressure, especially with Super Resolution active, this leads to unhandled exceptions and crashes during video processing and JS garbage collection.",
+    "user_impact": "Crashes reduce browser stability and risk user data loss when using Super Resolution.",
+    "severity_assessment": "high",
+    "keywords": [
+      "Super Resolution",
+      "error handling",
+      "crash",
+      "OOM",
+      "video processing",
+      "DCSurfaceVideo"
+    ],
+    "likely_repository_paths": [
+      "gfx/layers/DCSurfaceVideo.cpp",
+      "media/",
+      "dom/canvas/"
+    ],
+    "proposed_fix_approach": [
+      "Add checks after each memory allocation in DCSurfaceVideo::CallVideoProcessorBlt() to detect failure.",
+      "Propagate errors safely to prevent unhandled exceptions.",
+      "Implement fallback or fail-safe logic to avoid crashing during video processing and JS garbage collection."
+    ],
+    "optimized_context": "Crashes occur in gfx/layers/DCSurfaceVideo.cpp's DCSurfaceVideo::CallVideoProcessorBlt() due to missing error handling for memory allocation failures when Super Resolution is enabled. Adding allocation failure checks and robust error handling in this function will prevent OOM-induced crashes during video processing and JavaScript garbage collection.",
+    "refinement_critique": "The analysis identifies the root cause, symptoms, and affected components well but is overly verbose and somewhat repetitive. It lacks a concise, focused summary and an explicit stepwise fix plan. Although it mentions the exact source file (gfx/layers/DCSurfaceVideo.cpp) and function (DCSurfaceVideo::CallVideoProcessorBlt()), it does so inconsistently. The reproduction steps are minimal but adequate. The proposed fix approach is described at a high level but not broken down into actionable steps. The analysis is mostly self-contained but could benefit from clearer, compact phrasing and stronger emphasis on the key file and function to guide AI-driven fixes better."
+  },
+  "filtered_context": {
+    "concise_summary": "gfx/layers/DCSurfaceVideo.cpp's DCSurfaceVideo::CallVideoProcessorBlt() lacks error handling for memory allocation failures when Super Resolution is enabled, causing OOM-induced crashes during video processing and JS garbage collection. Add allocation failure checks, propagate errors safely, and implement fallback logic to prevent crashes.",
+    "relevant_files": [
+      "gfx/layers/DCSurfaceVideo.cpp"
+    ],
+    "core_symptoms": [
+      "Crashes triggered by out-of-memory conditions during video processing",
+      "JavaScript garbage collection crashes related to allocation failures"
+    ],
+    "technical_constraints": [
+      "Check each memory allocation in CallVideoProcessorBlt() for failure",
+      "Propagate errors to avoid unhandled exceptions",
+      "Implement fail-safe fallback to maintain stability under memory pressure"
+    ]
+  },
+  "generated_fix": "--- a/gfx/layers/DCSurfaceVideo.cpp\n+++ b/gfx/layers/DCSurfaceVideo.cpp\n@@ -400,11 +400,38 @@\n bool\n DCSurfaceVideo::CallVideoProcessorBlt()\n {\n-    // Existing code that performs allocations and calls video processing\n-    // Assume allocation of intermediate surfaces or buffers here\n-    RefPtr<ID3D11Texture2D> tempTexture = AllocateTemporaryTexture();\n-    // No error checking on allocation\n-\n-    videoProcessor->Process(tempTexture);\n-\n-    // More processing and return success\n-    return true;\n+    // Existing code that performs allocations and calls video processing\n+\n+    // Allocate temporary texture for Super Resolution processing\n+    RefPtr<ID3D11Texture2D> tempTexture = AllocateTemporaryTexture();\n+    if (!tempTexture) {\n+        // Allocation failed - log error and fallback\n+        gfxCriticalError() << \"DCSurfaceVideo::CallVideoProcessorBlt - Temporary texture allocation failed\";\n+        // Fallback: skip super resolution processing and proceed without it to avoid crash\n+        if (!CallVideoProcessorBltFallback()) {\n+            // If fallback also fails, propagate error\n+            return false;\n+        }\n+        return true;\n+    }\n+\n+    // Call the video processor with the allocated texture\n+    HRESULT hr = videoProcessor->Process(tempTexture);\n+    if (FAILED(hr)) {\n+        gfxCriticalError() << \"DCSurfaceVideo::CallVideoProcessorBlt - VideoProcessor->Process failed with \" << hexa(hr);\n+        // Attempt fallback path\n+        if (!CallVideoProcessorBltFallback()) {\n+            return false;\n+        }\n+        return true;\n+    }\n+\n+    // Normal successful path\n+    return true;\n+}\n+\n+bool\n+DCSurfaceVideo::CallVideoProcessorBltFallback()\n+{\n+    // Fallback processing when Super Resolution or allocations fail\n+    // This may be a simpler call without SR or using a cached buffer\n+    HRESULT hr = videoProcessor->ProcessFallback();\n+    if (FAILED(hr)) {\n+        gfxCriticalError() << \"DCSurfaceVideo::CallVideoProcessorBltFallback - fallback processing failed with \" << hexa(hr);\n+        return false;\n+    }\n+    return true;\n }",
+  "token_usage": 116197
+}

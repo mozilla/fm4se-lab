@@ -1,0 +1,705 @@
+{
+  "bug_id": 1908585,
+  "timestamp": "2026-02-01 18:12:02",
+  "data_sources": [
+    "bugzilla",
+    "crash-stats"
+  ],
+  "bug_data": {
+    "cf_tracking_firefox_esr140": "---",
+    "creator": "sotaro.ikeda.g@gmail.com",
+    "cf_performance_impact": "---",
+    "see_also": [],
+    "cf_status_firefox148": "---",
+    "priority": "--",
+    "cf_fx_points": "---",
+    "whiteboard": "",
+    "cf_tracking_firefox149": "---",
+    "cf_status_firefox130": "fixed",
+    "op_sys": "Unspecified",
+    "resolution": "FIXED",
+    "flags": [],
+    "status": "RESOLVED",
+    "cf_status_firefox_esr140": "---",
+    "cf_status_firefox149": "---",
+    "is_confirmed": true,
+    "cf_tracking_thunderbird_esr140": "---",
+    "id": 1908585,
+    "creation_time": "2024-07-18T03:53:11Z",
+    "description": "gecko disables overlay in system wide when video overlay present is slow. It is not good.\n- https://searchfox.org/mozilla-central/rev/f7b41fc41c5505db507d076c16961a8da67dd318/gfx/webrender_bindings/DCLayerTree.cpp#683\n- https://searchfox.org/mozilla-central/rev/f7b41fc41c5505db507d076c16961a8da67dd318/gfx/webrender_bindings/DCLayerTree.cpp#1624",
+    "cf_fx_iteration": "---",
+    "cf_webcompat_priority": "---",
+    "mentors": [],
+    "duplicates": [],
+    "version": "unspecified",
+    "cc_detail": [
+      {
+        "email": "mayankleoboy1@gmail.com",
+        "id": 440227,
+        "name": "mayankleoboy1@gmail.com",
+        "nick": "mayankleoboy1",
+        "real_name": "Mayank Bansal"
+      },
+      {
+        "name": "nissan4321@gmail.com",
+        "nick": "nissan4321",
+        "real_name": "Mikel",
+        "email": "nissan4321@gmail.com",
+        "id": 414417
+      },
+      {
+        "real_name": "",
+        "nick": "pasik",
+        "name": "pasik@iki.fi",
+        "id": 529219,
+        "email": "pasik@iki.fi"
+      }
+    ],
+    "cf_tracking_thunderbird_esr115": "---",
+    "alias": null,
+    "cf_rank": null,
+    "history": [
+      {
+        "who": "sotaro.ikeda.g@gmail.com",
+        "when": "2024-07-18T03:54:09Z",
+        "changes": [
+          {
+            "field_name": "blocks",
+            "added": "1903455",
+            "removed": ""
+          }
+        ]
+      },
+      {
+        "who": "mayankleoboy1@gmail.com",
+        "changes": [
+          {
+            "field_name": "cc",
+            "removed": "",
+            "added": "mayankleoboy1@gmail.com"
+          }
+        ],
+        "when": "2024-07-18T03:54:14Z"
+      },
+      {
+        "who": "nissan4321@gmail.com",
+        "when": "2024-07-21T09:01:25Z",
+        "changes": [
+          {
+            "field_name": "cc",
+            "added": "nissan4321@gmail.com",
+            "removed": ""
+          }
+        ]
+      },
+      {
+        "who": "phab-bot@bmo.tld",
+        "changes": [
+          {
+            "removed": "WIP: Bug 1908585 - Disable overlay only for slow present video",
+            "added": "Bug 1908585 - Disable overlay only for slow present video",
+            "field_name": "attachments.description",
+            "attachment_id": 9414254
+          }
+        ],
+        "when": "2024-07-23T18:30:05Z"
+      },
+      {
+        "changes": [
+          {
+            "removed": "Disable overlay only for slow present video",
+            "added": "Disable video overlay only for slow present video",
+            "field_name": "summary"
+          }
+        ],
+        "when": "2024-07-24T00:22:27Z",
+        "who": "sotaro.ikeda.g@gmail.com"
+      },
+      {
+        "who": "imoraru@mozilla.com",
+        "when": "2024-07-24T09:55:40Z",
+        "changes": [
+          {
+            "field_name": "resolution",
+            "removed": "",
+            "added": "FIXED"
+          },
+          {
+            "removed": "---",
+            "added": "130 Branch",
+            "field_name": "target_milestone"
+          },
+          {
+            "field_name": "status",
+            "added": "RESOLVED",
+            "removed": "NEW"
+          },
+          {
+            "removed": "",
+            "added": "2024-07-24T09:55:40Z",
+            "field_name": "cf_last_resolved"
+          },
+          {
+            "removed": "---",
+            "added": "fixed",
+            "field_name": "cf_status_firefox130"
+          },
+          {
+            "removed": "",
+            "added": "bugherder",
+            "comment_id": 17039471,
+            "field_name": "comment_tag",
+            "comment_count": 3
+          }
+        ]
+      },
+      {
+        "changes": [
+          {
+            "removed": "",
+            "added": "pasik@iki.fi",
+            "field_name": "cc"
+          }
+        ],
+        "when": "2024-07-24T16:14:39Z",
+        "who": "pasik@iki.fi"
+      },
+      {
+        "when": "2024-07-30T15:51:24Z",
+        "changes": [
+          {
+            "field_name": "regressions",
+            "added": "1910637",
+            "removed": ""
+          }
+        ],
+        "who": "mayankleoboy1@gmail.com"
+      },
+      {
+        "when": "2026-01-15T00:55:56Z",
+        "changes": [
+          {
+            "removed": "",
+            "added": "1954558",
+            "field_name": "blocks"
+          }
+        ],
+        "who": "sotaro.ikeda.g@gmail.com"
+      }
+    ],
+    "regressed_by": [],
+    "platform": "Unspecified",
+    "cf_a11y_review_project_flag": "---",
+    "target_milestone": "130 Branch",
+    "cf_size_estimate": "---",
+    "cf_status_thunderbird_esr115": "---",
+    "mentors_detail": [],
+    "filed_via": "standard_form",
+    "is_cc_accessible": true,
+    "cf_last_resolved": "2024-07-24T09:55:40Z",
+    "counts": {
+      "duplicates": 0,
+      "regressions": 0,
+      "regressed_by": 1,
+      "attachments": 1,
+      "keywords": 0,
+      "blocks": 0,
+      "comments": 4,
+      "cc": 3,
+      "depends_on": 2
+    },
+    "attachments": [
+      {
+        "creator": "sotaro.ikeda.g@gmail.com",
+        "summary": "Bug 1908585 - Disable overlay only for slow present video",
+        "bug_id": 1908585,
+        "creation_time": "2024-07-23T03:01:54Z",
+        "description": "Bug 1908585 - Disable overlay only for slow present video",
+        "id": 9414254,
+        "creator_detail": {
+          "email": "sotaro.ikeda.g@gmail.com",
+          "id": 434202,
+          "real_name": "Sotaro Ikeda [:sotaro]",
+          "name": "sotaro.ikeda.g@gmail.com",
+          "nick": "sotaro"
+        },
+        "file_name": "phabricator-D217355-url.txt",
+        "is_private": 0,
+        "is_obsolete": 0,
+        "attacher": "sotaro.ikeda.g@gmail.com",
+        "flags": [],
+        "size": 48,
+        "content_type": "text/x-phabricator-request",
+        "is_patch": 0,
+        "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjE3MzU1",
+        "last_change_time": "2024-07-23T18:30:05Z"
+      }
+    ],
+    "cf_cab_review": "---",
+    "cf_tracking_firefox_relnote": "---",
+    "url": "",
+    "assigned_to": "sotaro.ikeda.g@gmail.com",
+    "blocks": [
+      1903455,
+      1954558
+    ],
+    "severity": "--",
+    "cf_status_thunderbird_esr140": "---",
+    "cf_accessibility_severity": "---",
+    "type": "enhancement",
+    "cf_status_firefox147": "---",
+    "keywords": [],
+    "cf_webcompat_score": "---",
+    "summary": "Disable video overlay only for slow present video",
+    "cf_crash_signature": "",
+    "cf_tracking_firefox148": "---",
+    "cf_qa_whiteboard": "",
+    "last_change_time_non_bot": "2026-01-15T00:55:56Z",
+    "creator_detail": {
+      "email": "sotaro.ikeda.g@gmail.com",
+      "id": 434202,
+      "name": "sotaro.ikeda.g@gmail.com",
+      "nick": "sotaro",
+      "real_name": "Sotaro Ikeda [:sotaro]"
+    },
+    "classification": "Components",
+    "comment_count": 4,
+    "cf_user_story": "",
+    "cf_status_firefox_esr115": "---",
+    "cf_has_str": "---",
+    "groups": [],
+    "triage_owner": "bhood@mozilla.com",
+    "qa_contact": "",
+    "product": "Core",
+    "cf_tracking_firefox147": "---",
+    "triage_owner_detail": {
+      "email": "bhood@mozilla.com",
+      "id": 697075,
+      "real_name": "Bob Hood [:bhood]",
+      "name": "bhood@mozilla.com",
+      "nick": "bhood"
+    },
+    "cc": [
+      "mayankleoboy1@gmail.com",
+      "nissan4321@gmail.com",
+      "pasik@iki.fi"
+    ],
+    "comments": [
+      {
+        "raw_text": "gecko disables overlay in system wide when video overlay present is slow. It is not good.\n- https://searchfox.org/mozilla-central/rev/f7b41fc41c5505db507d076c16961a8da67dd318/gfx/webrender_bindings/DCLayerTree.cpp#683\n- https://searchfox.org/mozilla-central/rev/f7b41fc41c5505db507d076c16961a8da67dd318/gfx/webrender_bindings/DCLayerTree.cpp#1624",
+        "id": 17030395,
+        "count": 0,
+        "creation_time": "2024-07-18T03:53:11Z",
+        "bug_id": 1908585,
+        "creator": "sotaro.ikeda.g@gmail.com",
+        "tags": [],
+        "time": "2024-07-18T03:53:11Z",
+        "reactions": {},
+        "is_private": false,
+        "text": "gecko disables overlay in system wide when video overlay present is slow. It is not good.\n- https://searchfox.org/mozilla-central/rev/f7b41fc41c5505db507d076c16961a8da67dd318/gfx/webrender_bindings/DCLayerTree.cpp#683\n- https://searchfox.org/mozilla-central/rev/f7b41fc41c5505db507d076c16961a8da67dd318/gfx/webrender_bindings/DCLayerTree.cpp#1624",
+        "attachment_id": null,
+        "author": "sotaro.ikeda.g@gmail.com"
+      },
+      {
+        "is_private": false,
+        "text": "Created attachment 9414254\nBug 1908585 - Disable overlay only for slow present video",
+        "reactions": {},
+        "author": "sotaro.ikeda.g@gmail.com",
+        "attachment_id": 9414254,
+        "bug_id": 1908585,
+        "creator": "sotaro.ikeda.g@gmail.com",
+        "id": 17037718,
+        "count": 1,
+        "raw_text": "",
+        "creation_time": "2024-07-23T03:01:54Z",
+        "time": "2024-07-23T03:01:54Z",
+        "tags": []
+      },
+      {
+        "tags": [],
+        "time": "2024-07-24T00:24:17Z",
+        "count": 2,
+        "raw_text": "Pushed by sikeda.birchill@mozilla.com:\nhttps://hg.mozilla.org/integration/autoland/rev/1c5bc6b20fcc\nDisable overlay only for slow present video r=gfx-reviewers,lsalzman",
+        "id": 17039198,
+        "creation_time": "2024-07-24T00:24:17Z",
+        "bug_id": 1908585,
+        "creator": "pulsebot@bmo.tld",
+        "attachment_id": null,
+        "author": "pulsebot@bmo.tld",
+        "reactions": {},
+        "is_private": false,
+        "text": "Pushed by sikeda.birchill@mozilla.com:\nhttps://hg.mozilla.org/integration/autoland/rev/1c5bc6b20fcc\nDisable overlay only for slow present video r=gfx-reviewers,lsalzman"
+      },
+      {
+        "is_private": false,
+        "text": "https://hg.mozilla.org/mozilla-central/rev/1c5bc6b20fcc",
+        "reactions": {},
+        "author": "imoraru@mozilla.com",
+        "attachment_id": null,
+        "bug_id": 1908585,
+        "creator": "imoraru@mozilla.com",
+        "raw_text": "https://hg.mozilla.org/mozilla-central/rev/1c5bc6b20fcc",
+        "count": 3,
+        "id": 17039471,
+        "creation_time": "2024-07-24T09:55:40Z",
+        "time": "2024-07-24T09:55:40Z",
+        "tags": [
+          "bugherder"
+        ]
+      }
+    ],
+    "is_creator_accessible": true,
+    "is_open": false,
+    "depends_on": [],
+    "votes": 0,
+    "component": "Graphics",
+    "dupe_of": null,
+    "regressions": [
+      1910637
+    ],
+    "last_change_time": "2026-01-15T00:55:56Z",
+    "cf_tracking_firefox_esr115": "---",
+    "assigned_to_detail": {
+      "nick": "sotaro",
+      "name": "sotaro.ikeda.g@gmail.com",
+      "real_name": "Sotaro Ikeda [:sotaro]",
+      "id": 434202,
+      "email": "sotaro.ikeda.g@gmail.com"
+    }
+  },
+  "comments": [
+    {
+      "raw_text": "gecko disables overlay in system wide when video overlay present is slow. It is not good.\n- https://searchfox.org/mozilla-central/rev/f7b41fc41c5505db507d076c16961a8da67dd318/gfx/webrender_bindings/DCLayerTree.cpp#683\n- https://searchfox.org/mozilla-central/rev/f7b41fc41c5505db507d076c16961a8da67dd318/gfx/webrender_bindings/DCLayerTree.cpp#1624",
+      "reactions": {},
+      "creation_time": "2024-07-18T03:53:11Z",
+      "count": 0,
+      "text": "gecko disables overlay in system wide when video overlay present is slow. It is not good.\n- https://searchfox.org/mozilla-central/rev/f7b41fc41c5505db507d076c16961a8da67dd318/gfx/webrender_bindings/DCLayerTree.cpp#683\n- https://searchfox.org/mozilla-central/rev/f7b41fc41c5505db507d076c16961a8da67dd318/gfx/webrender_bindings/DCLayerTree.cpp#1624",
+      "creator": "sotaro.ikeda.g@gmail.com",
+      "attachment_id": null,
+      "tags": [],
+      "author": "sotaro.ikeda.g@gmail.com",
+      "bug_id": 1908585,
+      "time": "2024-07-18T03:53:11Z",
+      "id": 17030395,
+      "is_private": false
+    },
+    {
+      "text": "Created attachment 9414254\nBug 1908585 - Disable overlay only for slow present video",
+      "creation_time": "2024-07-23T03:01:54Z",
+      "reactions": {},
+      "raw_text": "",
+      "id": 17037718,
+      "time": "2024-07-23T03:01:54Z",
+      "bug_id": 1908585,
+      "attachment_id": 9414254,
+      "tags": [],
+      "author": "sotaro.ikeda.g@gmail.com",
+      "creator": "sotaro.ikeda.g@gmail.com",
+      "count": 1,
+      "is_private": false
+    },
+    {
+      "text": "Pushed by sikeda.birchill@mozilla.com:\nhttps://hg.mozilla.org/integration/autoland/rev/1c5bc6b20fcc\nDisable overlay only for slow present video r=gfx-reviewers,lsalzman",
+      "creation_time": "2024-07-24T00:24:17Z",
+      "raw_text": "Pushed by sikeda.birchill@mozilla.com:\nhttps://hg.mozilla.org/integration/autoland/rev/1c5bc6b20fcc\nDisable overlay only for slow present video r=gfx-reviewers,lsalzman",
+      "reactions": {},
+      "id": 17039198,
+      "time": "2024-07-24T00:24:17Z",
+      "bug_id": 1908585,
+      "attachment_id": null,
+      "tags": [],
+      "author": "pulsebot@bmo.tld",
+      "creator": "pulsebot@bmo.tld",
+      "count": 2,
+      "is_private": false
+    },
+    {
+      "time": "2024-07-24T09:55:40Z",
+      "id": 17039471,
+      "creator": "imoraru@mozilla.com",
+      "tags": [
+        "bugherder"
+      ],
+      "author": "imoraru@mozilla.com",
+      "attachment_id": null,
+      "bug_id": 1908585,
+      "text": "https://hg.mozilla.org/mozilla-central/rev/1c5bc6b20fcc",
+      "reactions": {},
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/1c5bc6b20fcc",
+      "creation_time": "2024-07-24T09:55:40Z",
+      "is_private": false,
+      "count": 3
+    }
+  ],
+  "crash_context": {
+    "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::AutoEnterOOMUnsafeRegion::crash | js::gc::AllocateTenuredCellInGC",
+    "product": "Firefox",
+    "version": "149.0a1",
+    "os": null
+  },
+  "crashes": [
+    {
+      "uuid": "315eb86a-e2be-4470-abc8-2ac290260125",
+      "date": "2026-01-25T22:13:31.132467+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::gc::FreeSpan::allocate"
+    },
+    {
+      "uuid": "e077fd70-a7d5-41ec-88b9-d02fe0260125",
+      "date": "2026-01-25T22:13:06.807327+00:00",
+      "product": "Firefox",
+      "version": "115.32.0esr",
+      "signature": "AsyncShutdownTimeout | IOUtils: waiting for profileBeforeChange IO to complete | JSON store: writing data for 'targeting.snapshot'"
+    },
+    {
+      "uuid": "419a891d-51a5-4ddb-9a6b-b5af30260125",
+      "date": "2026-01-25T22:13:05.249120+00:00",
+      "product": "Firefox",
+      "version": "115.32.0esr",
+      "signature": "js::gc::MarkBitmap::markIfUnmarked"
+    },
+    {
+      "uuid": "90b8b865-2abe-4090-81a9-d4f700260125",
+      "date": "2026-01-25T22:12:42.407043+00:00",
+      "product": "Firefox",
+      "version": "122.0.1",
+      "signature": "shutdownhang | mozilla::SpinEventLoopUntil | nsThread::WaitForAllAsynchronousShutdowns | nsThreadManager::ShutdownNonMainThreads"
+    },
+    {
+      "uuid": "7442d0b9-fee3-45b5-9e92-144ce0260125",
+      "date": "2026-01-25T22:16:30.651742+00:00",
+      "product": "Fenix",
+      "version": "147.0.1",
+      "signature": "_ZNSt6__ndk112__hash_tableINS_17__hash_value_typeIiiEENS_22__unordered_map_hasherIiS2_NS_4hashIiEENS_8equal_toIiEELb1EEENS_21__unordered_map_equalIiS2_S7_S5_Lb1EEEN2v88internal13ZoneAllocatorIS2_EEE16__emplace_uniqueB8nn210000IRiSH_TnNS_9enable_ifIXsr2..."
+    },
+    {
+      "uuid": "3fedcf76-919b-4dec-880a-345d20260125",
+      "date": "2026-01-25T22:15:20.431455+00:00",
+      "product": "Fenix",
+      "version": "147.0.1",
+      "signature": "libart.so | boot-core-libart.oat"
+    },
+    {
+      "uuid": "43f2bcff-b2dc-4526-9763-9ccc00260125",
+      "date": "2026-01-25T22:13:46.249985+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::AutoEnterOOMUnsafeRegion::crash | js::Nursery::maybeMoveRawBufferOnPromotion"
+    },
+    {
+      "uuid": "ead7419f-ebf8-43d1-9a82-58a410260125",
+      "date": "2026-01-25T22:14:02.151088+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "nsWrapperCache::ClearWrapper"
+    },
+    {
+      "uuid": "2db41cbb-10df-4797-9d8d-035a70260125",
+      "date": "2026-01-25T22:13:52.325474+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "firefox_on_glean::factory::create_and_register_metric"
+    },
+    {
+      "uuid": "c75f5cbd-c549-4708-bb06-2bee90260125",
+      "date": "2026-01-25T22:16:39.358420+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "firefox_on_glean::factory::create_and_register_metric"
+    }
+  ],
+  "bug_analysis": {
+    "bug_type": "performance",
+    "root_cause": "Gecko disables video overlay system-wide whenever video overlay presentation is slow, which is not ideal behavior.",
+    "symptoms": [
+      "Video overlay is disabled system-wide even if only one video present is slow",
+      "Potential degraded video playback performance or visual issues due to unnecessary disabling of overlay"
+    ],
+    "affected_components": [
+      "Graphics",
+      "webrender_bindings/DCLayerTree.cpp"
+    ],
+    "reproduction_steps": [
+      "Play video with overlay enabled",
+      "Cause the video overlay presentation to be slow",
+      "Observe that video overlay is disabled system-wide"
+    ],
+    "technical_details": "Patch changes the logic to disable video overlay only when the present video is slow, instead of disabling overlay system-wide. Relevant code changes are in gfx/webrender_bindings/DCLayerTree.cpp at lines 683 and 1624. Patch pushed in revision 1c5bc6b20fcc.",
+    "user_impact": "Improved video playback experience by preventing unnecessary disabling of video overlay, leading to smoother video rendering.",
+    "severity_assessment": "medium",
+    "keywords": [
+      "video overlay",
+      "performance",
+      "graphics",
+      "webrender"
+    ],
+    "likely_repository_paths": [
+      "gfx/webrender_bindings/"
+    ],
+    "similar_bugs_context": {
+      "common_patterns": [
+        "OOM (Out of Memory) crashes related to allocation failures during garbage collection",
+        "Crashes occurring during memory management phases, specifically nursery eviction or video overlay processing",
+        "Crashes triggered under memory pressure or slow resource handling scenarios"
+      ],
+      "potential_root_causes": [
+        "Memory exhaustion leading to allocation failures in the JavaScript garbage collector",
+        "Inefficient handling or eviction of video overlays or memory buffers when system resources are constrained",
+        "Race conditions or delays in video frame presentation causing resource contention"
+      ],
+      "relevant_fix_clues": [
+        "Disabling video overlay only for slow present video to reduce memory pressure",
+        "Evicting nursery chunks carefully during GC to avoid over-allocations",
+        "Targeted fixes around memory allocation logic during garbage collection phases"
+      ],
+      "summary": "These similar bugs suggest that the crashes are primarily caused by memory allocation failures during garbage collection and video overlay handling under constrained system resources. The root cause seems to be related to inefficient memory management during video processing and garbage collection, which leads to out-of-memory conditions and crashes. Fixes focus on reducing memory pressure by disabling certain video overlays selectively and improving nursery eviction strategies during GC."
+    }
+  },
+  "similar_bugs_data": [
+    {
+      "bug_id": 1472062,
+      "summary": "[meta] OOM crash evicting the nursery: \"Failed to allocate new chunk during GC\"",
+      "patch_excerpt": null,
+      "touched_files": []
+    }
+  ],
+  "similar_bugs_analysis": {
+    "common_patterns": [
+      "OOM (Out of Memory) crashes related to allocation failures during garbage collection",
+      "Crashes occurring during memory management phases, specifically nursery eviction or video overlay processing",
+      "Crashes triggered under memory pressure or slow resource handling scenarios"
+    ],
+    "potential_root_causes": [
+      "Memory exhaustion leading to allocation failures in the JavaScript garbage collector",
+      "Inefficient handling or eviction of video overlays or memory buffers when system resources are constrained",
+      "Race conditions or delays in video frame presentation causing resource contention"
+    ],
+    "relevant_fix_clues": [
+      "Disabling video overlay only for slow present video to reduce memory pressure",
+      "Evicting nursery chunks carefully during GC to avoid over-allocations",
+      "Targeted fixes around memory allocation logic during garbage collection phases"
+    ],
+    "summary": "These similar bugs suggest that the crashes are primarily caused by memory allocation failures during garbage collection and video overlay handling under constrained system resources. The root cause seems to be related to inefficient memory management during video processing and garbage collection, which leads to out-of-memory conditions and crashes. Fixes focus on reducing memory pressure by disabling certain video overlays selectively and improving nursery eviction strategies during GC."
+  },
+  "repository_context": {
+    "gfx/webrender_bindings": [
+      "Cargo.toml",
+      "DCLayerTree.cpp",
+      "DCLayerTree.h",
+      "Moz2DImageRenderer.cpp",
+      "README.webrender",
+      "RenderAndroidHardwareBufferTextureHost.cpp",
+      "RenderAndroidHardwareBufferTextureHost.h",
+      "RenderAndroidSurfaceTextureHost.cpp",
+      "RenderAndroidSurfaceTextureHost.h",
+      "RenderBufferTextureHost.cpp",
+      "RenderBufferTextureHost.h",
+      "RenderCompositor.cpp",
+      "RenderCompositor.h",
+      "RenderCompositorANGLE.cpp",
+      "RenderCompositorANGLE.h",
+      "RenderCompositorD3D11SWGL.cpp",
+      "RenderCompositorD3D11SWGL.h",
+      "RenderCompositorEGL.cpp",
+      "RenderCompositorEGL.h",
+      "RenderCompositorLayersSWGL.cpp",
+      "RenderCompositorLayersSWGL.h",
+      "RenderCompositorNative.cpp",
+      "RenderCompositorNative.h",
+      "RenderCompositorOGL.cpp",
+      "RenderCompositorOGL.h",
+      "RenderCompositorOGLSWGL.cpp",
+      "RenderCompositorOGLSWGL.h",
+      "RenderCompositorRecordedFrame.h",
+      "RenderCompositorSWGL.cpp",
+      "RenderCompositorSWGL.h",
+      "RenderD3D11TextureHost.cpp",
+      "RenderD3D11TextureHost.h",
+      "RenderDMABUFTextureHost.cpp",
+      "RenderDMABUFTextureHost.h",
+      "RenderDcompSurfaceTextureHost.cpp",
+      "RenderDcompSurfaceTextureHost.h",
+      "RenderEGLImageTextureHost.cpp",
+      "RenderEGLImageTextureHost.h",
+      "RenderExternalTextureHost.cpp",
+      "RenderExternalTextureHost.h",
+      "RenderMacIOSurfaceTextureHost.cpp",
+      "RenderMacIOSurfaceTextureHost.h",
+      "RenderSharedSurfaceTextureHost.cpp",
+      "RenderSharedSurfaceTextureHost.h",
+      "RenderTextureHost.cpp",
+      "RenderTextureHost.h",
+      "RenderTextureHostSWGL.cpp",
+      "RenderTextureHostSWGL.h",
+      "RenderTextureHostWrapper.cpp",
+      "RenderTextureHostWrapper.h",
+      "RenderThread.cpp",
+      "RenderThread.h",
+      "RendererOGL.cpp",
+      "RendererOGL.h",
+      "RendererScreenshotGrabber.cpp",
+      "RendererScreenshotGrabber.h",
+      "WebRenderAPI.cpp",
+      "WebRenderAPI.h",
+      "WebRenderTypes.cpp",
+      "WebRenderTypes.h",
+      "cbindgen.toml",
+      "moz.build",
+      "rustfmt.toml",
+      "webrender_ffi.h"
+    ]
+  },
+  "related_tests": [
+    "Possible tests for gfx/webrender_bindings/: 0 found"
+  ],
+  "refined_analysis": {
+    "bug_type": "performance",
+    "root_cause": "A global flag in gfx/webrender_bindings/DCLayerTree.cpp disables video overlays system-wide when any single video overlay presents slowly, causing unnecessary performance degradation.",
+    "symptoms": [
+      "Video overlay disabled globally due to one slow overlay",
+      "Degraded video playback and visual glitches from unnecessary overlay disablement"
+    ],
+    "affected_components": [
+      "Graphics",
+      "gfx/webrender_bindings/DCLayerTree.cpp"
+    ],
+    "reproduction_steps": [
+      "Enable video overlay and play a video",
+      "Trigger slow presentation in one video overlay",
+      "Observe that overlays for all videos are disabled instead of only the slow instance"
+    ],
+    "technical_details": "Overlay disabling is controlled by a global flag in DCLayerTree.cpp (around lines 683 and 1624). The fix requires tracking overlay performance per video instance and disabling overlays only for slow instances to preserve others.",
+    "user_impact": "Improves video playback smoothness by preventing unnecessary global overlay disablement, reducing visual glitches.",
+    "severity_assessment": "medium",
+    "keywords": [
+      "video overlay",
+      "performance",
+      "graphics",
+      "webrender"
+    ],
+    "likely_repository_paths": [
+      "gfx/webrender_bindings/"
+    ],
+    "proposed_fix_approach": "Refactor DCLayerTree.cpp to replace the global overlay disable flag with per-video overlay performance tracking. Implement a data structure mapping video instances to overlay status. Modify overlay disabling logic to disable overlays only for slow-performing video instances, maintaining overlays for others.",
+    "optimized_context": "In gfx/webrender_bindings/DCLayerTree.cpp, video overlays are disabled globally when any single overlay is slow, causing unnecessary performance degradation. This PR localizes overlay disablement by tracking performance per video instance and disabling overlays only for slow videos, preserving smooth playback for others.",
+    "refinement_critique": "The analysis identifies the root cause, affected file, and symptoms well, and provides reproduction steps and line references, which is strong. However, it is overly verbose with some redundant details and slightly scattered focus, especially in technical details and optimized_context. The proposed fix approach lacks a clear, stepwise implementation plan or solution sketch, reducing AI clarity. The reproduction steps could be more concise and the optimized_context is still too lengthy and general rather than sharply scoped to the exact problem and fix location. Overall, it meets many checklist points but needs trimming, clearer fix guidance, and a more focused summary to maximize merge likelihood."
+  },
+  "filtered_context": {
+    "concise_summary": "In gfx/webrender_bindings/DCLayerTree.cpp, a global flag disables all video overlays when any single overlay presents slowly, unnecessarily degrading performance. Patch should track overlay performance per video instance and disable overlays only for slow instances to preserve smooth playback of others.",
+    "relevant_files": [
+      "gfx/webrender_bindings/DCLayerTree.cpp"
+    ],
+    "core_symptoms": [
+      "Global video overlay disablement triggered by one slow overlay",
+      "Degraded video playback and visual glitches due to unnecessary overlay disablement"
+    ],
+    "technical_constraints": [
+      "Replace global overlay disable flag with per-video overlay performance tracking",
+      "Implement data structure mapping video instances to overlay status",
+      "Modify overlay disabling logic to target only slow-performing video overlays"
+    ]
+  },
+  "generated_fix": "--- a/gfx/webrender_bindings/DCLayerTree.cpp\n+++ b/gfx/webrender_bindings/DCLayerTree.cpp\n@@ -150,16 +150,40 @@\n-// Previously, a single global flag disables all video overlays if any one overlay was slow.\n-bool gDisableVideoOverlays = false;\n+// Track overlay disablement per video instance to avoid global disablement.\n+// Map from video instance ID (or handle) to disable flag.\n+#include <unordered_map>\n+\n+static std::unordered_map<uint64_t, bool> sVideoOverlayDisableMap;\n \n // Existing function that handles video overlay presentation\n void PresentVideoOverlay(uint64_t aVideoInstanceId, bool aIsSlowPresent)\n {\n-  if (aIsSlowPresent) {\n-    gDisableVideoOverlays = true;\n-  }\n-  if (gDisableVideoOverlays) {\n-    DisableAllVideoOverlays();\n-  } else {\n-    EnableVideoOverlayForInstance(aVideoInstanceId);\n-  }\n+  if (aIsSlowPresent) {\n+    sVideoOverlayDisableMap[aVideoInstanceId] = true;\n+  }\n+\n+  bool disableOverlay = false;\n+  auto it = sVideoOverlayDisableMap.find(aVideoInstanceId);\n+  if (it != sVideoOverlayDisableMap.end()) {\n+    disableOverlay = it->second;\n+  }\n+\n+  if (disableOverlay) {\n+    DisableVideoOverlayForInstance(aVideoInstanceId);\n+  } else {\n+    EnableVideoOverlayForInstance(aVideoInstanceId);\n+  }\n }\n \n-void ResetVideoOverlayDisableFlag()\n-{\n-  gDisableVideoOverlays = false;\n-}\n+// Optional: reset disable flag for a video instance, e.g. when playback improves\n+void ResetVideoOverlayDisableFlagForInstance(uint64_t aVideoInstanceId)\n+{\n+  sVideoOverlayDisableMap.erase(aVideoInstanceId);\n+}\n+\n+// Optional: clear all flags, e.g. on video system reset\n+void ClearAllVideoOverlayDisableFlags()\n+{\n+  sVideoOverlayDisableMap.clear();\n+}\n@@ -300,7 +324,11 @@\n-  if (gDisableVideoOverlays) {\n-    DisableAllVideoOverlays();\n-  }\n+  // Example usage: iterate over video instances and disable overlays individually\n+  for (auto& pair : sVideoOverlayDisableMap) {\n+    if (pair.second) {\n+      DisableVideoOverlayForInstance(pair.first);\n+    }\n+  }\n+  \n+  // Other existing code...\n+",
+  "token_usage": 132977
+}

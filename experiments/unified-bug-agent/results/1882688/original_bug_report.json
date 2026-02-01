@@ -1,0 +1,330 @@
+{
+  "cf_tracking_firefox_esr115": "---",
+  "cf_status_firefox126": "fixed",
+  "is_creator_accessible": true,
+  "is_cc_accessible": true,
+  "cf_tracking_thunderbird_esr115": "---",
+  "status": "RESOLVED",
+  "flags": [],
+  "summary": "Enable NVIDIA RTX Video Super Resolution in Nightly",
+  "type": "task",
+  "is_confirmed": true,
+  "history": [
+    {
+      "changes": [
+        {
+          "added": "1851736",
+          "removed": "",
+          "field_name": "depends_on"
+        },
+        {
+          "field_name": "assigned_to",
+          "removed": "nobody@mozilla.org",
+          "added": "sotaro.ikeda.g@gmail.com"
+        }
+      ],
+      "who": "sotaro.ikeda.g@gmail.com",
+      "when": "2024-02-29T05:35:22Z"
+    },
+    {
+      "who": "sotaro.ikeda.g@gmail.com",
+      "when": "2024-03-05T06:23:56Z",
+      "changes": [
+        {
+          "added": "1883577",
+          "removed": "",
+          "field_name": "depends_on"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "added": "1884600",
+          "field_name": "depends_on",
+          "removed": ""
+        }
+      ],
+      "who": "sotaro.ikeda.g@gmail.com",
+      "when": "2024-03-11T00:32:52Z"
+    },
+    {
+      "changes": [
+        {
+          "removed": "---",
+          "field_name": "target_milestone",
+          "added": "126 Branch"
+        },
+        {
+          "removed": "",
+          "field_name": "resolution",
+          "added": "FIXED"
+        },
+        {
+          "added": "RESOLVED",
+          "field_name": "status",
+          "removed": "NEW"
+        },
+        {
+          "field_name": "cf_last_resolved",
+          "removed": "",
+          "added": "2024-03-22T05:14:37Z"
+        },
+        {
+          "removed": "---",
+          "field_name": "cf_status_firefox126",
+          "added": "fixed"
+        },
+        {
+          "comment_count": 3,
+          "comment_id": 16855584,
+          "added": "bugherder",
+          "field_name": "comment_tag",
+          "removed": ""
+        }
+      ],
+      "when": "2024-03-22T05:14:37Z",
+      "who": "smolnar@mozilla.com"
+    },
+    {
+      "who": "glob@mozilla.com",
+      "when": "2024-04-22T15:28:45Z",
+      "changes": [
+        {
+          "added": "1823135",
+          "field_name": "depends_on",
+          "removed": ""
+        }
+      ]
+    },
+    {
+      "who": "sotaro.ikeda.g@gmail.com",
+      "when": "2026-01-15T00:42:06Z",
+      "changes": [
+        {
+          "field_name": "blocks",
+          "removed": "",
+          "added": "1954558"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "cc",
+          "added": "pasik@iki.fi"
+        }
+      ],
+      "who": "pasik@iki.fi",
+      "when": "2026-01-15T11:08:35Z"
+    }
+  ],
+  "comment_count": 4,
+  "triage_owner": "bhood@mozilla.com",
+  "cf_tracking_firefox147": "---",
+  "cf_rank": null,
+  "component": "Graphics",
+  "cf_status_firefox148": "---",
+  "cf_status_thunderbird_esr140": "---",
+  "resolution": "FIXED",
+  "priority": "--",
+  "cf_webcompat_score": "---",
+  "cf_fx_iteration": "---",
+  "cf_webcompat_priority": "---",
+  "cc": [
+    "pasik@iki.fi"
+  ],
+  "cf_status_firefox_esr115": "---",
+  "assigned_to_detail": {
+    "email": "sotaro.ikeda.g@gmail.com",
+    "real_name": "Sotaro Ikeda [:sotaro]",
+    "nick": "sotaro",
+    "id": 434202,
+    "name": "sotaro.ikeda.g@gmail.com"
+  },
+  "cf_tracking_thunderbird_esr140": "---",
+  "duplicates": [],
+  "cf_performance_impact": "---",
+  "keywords": [],
+  "cf_has_str": "---",
+  "regressions": [],
+  "mentors": [],
+  "cf_size_estimate": "---",
+  "version": "unspecified",
+  "creator_detail": {
+    "name": "sotaro.ikeda.g@gmail.com",
+    "id": 434202,
+    "email": "sotaro.ikeda.g@gmail.com",
+    "real_name": "Sotaro Ikeda [:sotaro]",
+    "nick": "sotaro"
+  },
+  "groups": [],
+  "creator": "sotaro.ikeda.g@gmail.com",
+  "classification": "Components",
+  "cf_cab_review": "---",
+  "cf_crash_signature": "",
+  "cc_detail": [
+    {
+      "email": "pasik@iki.fi",
+      "real_name": "",
+      "nick": "pasik",
+      "id": 529219,
+      "name": "pasik@iki.fi"
+    }
+  ],
+  "severity": "--",
+  "votes": 0,
+  "last_change_time": "2026-01-15T11:08:35Z",
+  "dupe_of": null,
+  "target_milestone": "126 Branch",
+  "whiteboard": "",
+  "url": "",
+  "cf_a11y_review_project_flag": "---",
+  "mentors_detail": [],
+  "cf_tracking_firefox_relnote": "---",
+  "creation_time": "2024-02-29T05:33:37Z",
+  "cf_tracking_firefox148": "---",
+  "cf_fx_points": "---",
+  "cf_user_story": "",
+  "cf_status_thunderbird_esr115": "---",
+  "cf_qa_whiteboard": "",
+  "blocks": [
+    1954558
+  ],
+  "assigned_to": "sotaro.ikeda.g@gmail.com",
+  "attachments": [
+    {
+      "description": "Bug 1882688 - Enable NVIDIA RTX Video Super Resolution in Nightly",
+      "creator_detail": {
+        "nick": "sotaro",
+        "email": "sotaro.ikeda.g@gmail.com",
+        "real_name": "Sotaro Ikeda [:sotaro]",
+        "name": "sotaro.ikeda.g@gmail.com",
+        "id": 434202
+      },
+      "is_private": 0,
+      "is_patch": 0,
+      "size": 48,
+      "attacher": "sotaro.ikeda.g@gmail.com",
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjA1MDI0",
+      "creation_time": "2024-03-19T06:01:18Z",
+      "summary": "Bug 1882688 - Enable NVIDIA RTX Video Super Resolution in Nightly",
+      "id": 9391937,
+      "flags": [],
+      "file_name": "phabricator-D205024-url.txt",
+      "bug_id": 1882688,
+      "last_change_time": "2024-03-19T06:01:18Z",
+      "content_type": "text/x-phabricator-request",
+      "is_obsolete": 0,
+      "creator": "sotaro.ikeda.g@gmail.com"
+    }
+  ],
+  "cf_status_firefox_esr140": "---",
+  "cf_tracking_firefox149": "---",
+  "qa_contact": "",
+  "cf_status_firefox147": "---",
+  "cf_last_resolved": "2024-03-22T05:14:37Z",
+  "cf_tracking_firefox_esr140": "---",
+  "counts": {
+    "keywords": 0,
+    "attachments": 1,
+    "comments": 4,
+    "blocks": 4,
+    "regressions": 0,
+    "depends_on": 2,
+    "regressed_by": 0,
+    "cc": 1,
+    "duplicates": 0
+  },
+  "id": 1882688,
+  "comments": [
+    {
+      "count": 0,
+      "is_private": false,
+      "text": "",
+      "reactions": {},
+      "raw_text": "",
+      "creation_time": "2024-02-29T05:33:37Z",
+      "time": "2024-02-29T05:33:37Z",
+      "id": 16822134,
+      "creator": "sotaro.ikeda.g@gmail.com",
+      "author": "sotaro.ikeda.g@gmail.com",
+      "attachment_id": null,
+      "tags": [],
+      "bug_id": 1882688
+    },
+    {
+      "reactions": {},
+      "raw_text": "",
+      "creation_time": "2024-03-19T06:01:18Z",
+      "text": "Created attachment 9391937\nBug 1882688 - Enable NVIDIA RTX Video Super Resolution in Nightly",
+      "count": 1,
+      "creator": "sotaro.ikeda.g@gmail.com",
+      "bug_id": 1882688,
+      "author": "sotaro.ikeda.g@gmail.com",
+      "tags": [],
+      "attachment_id": 9391937,
+      "time": "2024-03-19T06:01:18Z",
+      "is_private": false,
+      "id": 16850605
+    },
+    {
+      "count": 2,
+      "is_private": false,
+      "creation_time": "2024-03-22T00:30:40Z",
+      "raw_text": "Pushed by sikeda.birchill@mozilla.com:\nhttps://hg.mozilla.org/integration/autoland/rev/ebc783049ebe\nEnable NVIDIA RTX Video Super Resolution in Nightly r=gfx-reviewers,nical",
+      "reactions": {},
+      "text": "Pushed by sikeda.birchill@mozilla.com:\nhttps://hg.mozilla.org/integration/autoland/rev/ebc783049ebe\nEnable NVIDIA RTX Video Super Resolution in Nightly r=gfx-reviewers,nical",
+      "author": "pulsebot@bmo.tld",
+      "attachment_id": null,
+      "tags": [],
+      "bug_id": 1882688,
+      "creator": "pulsebot@bmo.tld",
+      "id": 16855466,
+      "time": "2024-03-22T00:30:40Z"
+    },
+    {
+      "count": 3,
+      "is_private": false,
+      "creation_time": "2024-03-22T05:14:37Z",
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/ebc783049ebe",
+      "reactions": {},
+      "text": "https://hg.mozilla.org/mozilla-central/rev/ebc783049ebe",
+      "attachment_id": null,
+      "tags": [
+        "bugherder"
+      ],
+      "author": "smolnar@mozilla.com",
+      "bug_id": 1882688,
+      "creator": "smolnar@mozilla.com",
+      "id": 16855584,
+      "time": "2024-03-22T05:14:37Z"
+    }
+  ],
+  "product": "Core",
+  "platform": "Unspecified",
+  "cf_status_firefox149": "---",
+  "last_change_time_non_bot": "2026-01-15T11:08:35Z",
+  "regressed_by": [],
+  "triage_owner_detail": {
+    "id": 697075,
+    "name": "bhood@mozilla.com",
+    "email": "bhood@mozilla.com",
+    "real_name": "Bob Hood [:bhood]",
+    "nick": "bhood"
+  },
+  "cf_accessibility_severity": "---",
+  "filed_via": "standard_form",
+  "depends_on": [
+    1823135,
+    1851736,
+    1883577,
+    1884600
+  ],
+  "op_sys": "Unspecified",
+  "alias": null,
+  "description": "",
+  "see_also": [],
+  "is_open": false
+}

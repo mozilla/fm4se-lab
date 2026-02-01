@@ -1,0 +1,129 @@
+--- a/netwerk/protocol/http/nsDocumentOpenInfo.cpp
++++ b/netwerk/protocol/http/nsDocumentOpenInfo.cpp
+@@ -770,10 +770,38 @@
+ nsresult
+ nsDocumentOpenInfo::OnDataFinished(nsresult aStatus)
+ {
+-  // Existing code that QIs and AddRefs the listener, possibly off main thread
+-  nsCOMPtr<nsIThreadRetargetableStreamListener> trsl = do_QueryInterface(mListener);
+-  if (trsl) {
+-    // Retargeting logic here
+-  }
++  // Ensure QI and AddRef on JS listeners happen only on main thread to avoid XPConnect crashes
++
++  // Check if we're on main thread; if not, dispatch a runnable to main thread to safely QI/AddRef and continue
++  if (!NS_IsMainThread()) {
++    nsCOMPtr<nsIEventTarget> mainThread = do_GetMainThread();
++    if (mainThread) {
++      nsRefPtr<nsRunnable> runnable = NS_NewRunnableFunction(
++        "nsDocumentOpenInfo::OnDataFinished_mainThread",
++        [self = RefPtr<nsDocumentOpenInfo>(this), aStatus]() {
++          self->OnDataFinished(aStatus);
++        });
++      mainThread->Dispatch(runnable, NS_DISPATCH_NORMAL);
++      return NS_OK;
++    }
++  }
++
++  // Now on main thread, safe to QI/AddRef JS listeners
++  nsCOMPtr<nsIThreadRetargetableStreamListener> trsl = do_QueryInterface(mListener);
++  if (trsl) {
++    // Validate or re-target listener back to main thread if needed
++    // (Optional: add checks or asserts here to prevent off-main-thread retargeting)
++  }
++
++  // Proceed with existing OnDataFinished logic below
++  // (Original code continues here)
++
++  // ... rest of OnDataFinished code ...
++
++  return NS_OK;
+ }
+ 
+--- a/parser/html/nsHtml5StreamParser.cpp
++++ b/parser/html/nsHtml5StreamParser.cpp
+@@ -510,10 +510,22 @@
+ void
+ nsHtml5StreamParser::OnStartRequest(nsIRequest* aRequest)
+ {
+-  // Existing code that retargets the listener off main thread
+-  nsCOMPtr<nsIThreadRetargetableStreamListener> trsl = do_QueryInterface(mListener);
+-  if (trsl) {
+-    trsl->CheckThread();
+-    mListener = do_QueryInterface(trsl);
+-  }
++  // Prevent retargeting JS nsIThreadRetargetableStreamListener off main thread to avoid XPConnect violations
++  nsCOMPtr<nsIThreadRetargetableStreamListener> trsl = do_QueryInterface(mListener);
++  if (trsl) {
++    // Only retarget if on main thread or listener is not JS-implemented
++    if (NS_IsMainThread()) {
++      trsl->CheckThread();
++      mListener = do_QueryInterface(trsl);
++    } else {
++      // Avoid retargeting off main thread for JS listeners
++      // Possibly add a MOZ_ASSERT or warning here
++    }
++  }
++
++  // Rest of OnStartRequest code continues as before
+ }
++
+--- a/js/xpconnect/src/XPCWrappedJS.cpp
++++ b/js/xpconnect/src/XPCWrappedJS.cpp
+@@ -1200,10 +1200,20 @@
+ nsXPCWrappedJS::AddRef()
+ {
+-  MOZ_RELEASE_ASSERT(NS_IsMainThread());
+-  ++mRefCnt;
+-  return mRefCnt;
++  // Enforce AddRef only on main thread for JS wrappers
++  if (!NS_IsMainThread()) {
++    nsCOMPtr<nsIRunnable> runnable = NS_NewRunnableFunction(
++      "nsXPCWrappedJS::AddRef_mainThread",
++      [self = this]() {
++        self->AddRef();
++      });
++    NS_DispatchToMainThread(runnable);
++    // Return dummy refcount; actual AddRef deferred on main thread
++    return mRefCnt;
++  }
++
++  ++mRefCnt;
++  return mRefCnt;
+ }
+ 
+ nsXPCWrappedJS::QueryInterface(REFNSIID aIID, void** aInstancePtr)
+ {
+-  MOZ_RELEASE_ASSERT(NS_IsMainThread());
+-  if (aIID.Equals(NS_GET_IID(nsIInterface))) {
+-    *aInstancePtr = static_cast<nsIInterface*>(this);
+-  } else if (aIID.Equals(NS_GET_IID(nsISupports))) {
+-    *aInstancePtr = static_cast<nsISupports*>(this);
+-  } else {
+-    *aInstancePtr = nullptr;
+-    return NS_NOINTERFACE;
+-  }
+-  AddRef();
+-  return NS_OK;
++  // Enforce QI only on main thread for JS wrappers
++  if (!NS_IsMainThread()) {
++    nsCOMPtr<nsIRunnable> runnable = NS_NewRunnableFunction(
++      "nsXPCWrappedJS::QueryInterface_mainThread",
++      [self = this, aIID, aInstancePtr]() {
++        self->QueryInterface(aIID, aInstancePtr);
++      });
++    NS_DispatchToMainThread(runnable);
++    return NS_ERROR_FAILURE;
++  }
++
++  if (aIID.Equals(NS_GET_IID(nsIInterface))) {
++    *aInstancePtr = static_cast<nsIInterface*>(this);
++  } else if (aIID.Equals(NS_GET_IID(nsISupports))) {
++    *aInstancePtr = static_cast<nsISupports*>(this);
++  } else {
++    *aInstancePtr = nullptr;
++    return NS_NOINTERFACE;
++  }
++  AddRef();
++  return NS_OK;
+ }

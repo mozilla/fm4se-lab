@@ -79,9 +79,17 @@ def fetch_bugs(count: int, output_file: str):
             
     # Append to file
     if new_bugs:
-        with open(output_file, 'a') as f:
+        # Use binary mode to check/append newline safely
+        with open(output_file, 'ab+') as f:
+            f.seek(0, 2) # Go to end
+            if f.tell() > 0:
+                f.seek(-1, 2)
+                if f.read(1) != b'\n':
+                    f.write(b'\n')
+            
             for bid in new_bugs:
-                f.write(f"{bid}\n")
+                f.write(f"{bid}\n".encode('utf-8'))
+                
         print(f"Appended {len(new_bugs)} new unique bug IDs to {output_file}.")
     else:
         print("No new unique bugs found.")

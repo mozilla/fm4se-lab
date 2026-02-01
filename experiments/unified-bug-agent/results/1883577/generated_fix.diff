@@ -1,0 +1,57 @@
+--- a/gfx/layers/DCSurfaceVideo.cpp
++++ b/gfx/layers/DCSurfaceVideo.cpp
+@@ -400,11 +400,38 @@
+ bool
+ DCSurfaceVideo::CallVideoProcessorBlt()
+ {
+-    // Existing code that performs allocations and calls video processing
+-    // Assume allocation of intermediate surfaces or buffers here
+-    RefPtr<ID3D11Texture2D> tempTexture = AllocateTemporaryTexture();
+-    // No error checking on allocation
+-
+-    videoProcessor->Process(tempTexture);
+-
+-    // More processing and return success
+-    return true;
++    // Existing code that performs allocations and calls video processing
++
++    // Allocate temporary texture for Super Resolution processing
++    RefPtr<ID3D11Texture2D> tempTexture = AllocateTemporaryTexture();
++    if (!tempTexture) {
++        // Allocation failed - log error and fallback
++        gfxCriticalError() << "DCSurfaceVideo::CallVideoProcessorBlt - Temporary texture allocation failed";
++        // Fallback: skip super resolution processing and proceed without it to avoid crash
++        if (!CallVideoProcessorBltFallback()) {
++            // If fallback also fails, propagate error
++            return false;
++        }
++        return true;
++    }
++
++    // Call the video processor with the allocated texture
++    HRESULT hr = videoProcessor->Process(tempTexture);
++    if (FAILED(hr)) {
++        gfxCriticalError() << "DCSurfaceVideo::CallVideoProcessorBlt - VideoProcessor->Process failed with " << hexa(hr);
++        // Attempt fallback path
++        if (!CallVideoProcessorBltFallback()) {
++            return false;
++        }
++        return true;
++    }
++
++    // Normal successful path
++    return true;
++}
++
++bool
++DCSurfaceVideo::CallVideoProcessorBltFallback()
++{
++    // Fallback processing when Super Resolution or allocations fail
++    // This may be a simpler call without SR or using a cached buffer
++    HRESULT hr = videoProcessor->ProcessFallback();
++    if (FAILED(hr)) {
++        gfxCriticalError() << "DCSurfaceVideo::CallVideoProcessorBltFallback - fallback processing failed with " << hexa(hr);
++        return false;
++    }
++    return true;
+ }

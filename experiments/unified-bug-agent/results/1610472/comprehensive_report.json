@@ -1,0 +1,793 @@
+{
+  "bug_id": 1610472,
+  "timestamp": "2026-02-01 18:19:42",
+  "data_sources": [
+    "bugzilla",
+    "crash-stats"
+  ],
+  "bug_data": {
+    "cf_tracking_firefox_esr140": "---",
+    "counts": {
+      "duplicates": 1,
+      "regressed_by": 0,
+      "cc": 5,
+      "regressions": 0,
+      "depends_on": 4,
+      "keywords": 1,
+      "attachments": 0,
+      "comments": 2,
+      "blocks": 13
+    },
+    "id": 1610472,
+    "cf_tracking_firefox149": "---",
+    "cf_last_resolved": "2026-01-28T13:46:45Z",
+    "qa_contact": "",
+    "cf_status_firefox147": "---",
+    "last_change_time_non_bot": "2026-01-28T13:46:45Z",
+    "cf_status_firefox149": "---",
+    "product": "Firefox",
+    "comments": [
+      {
+        "is_private": false,
+        "count": 0,
+        "time": "2020-01-21T11:47:24Z",
+        "id": 14602729,
+        "creator": "dao+bmo@mozilla.com",
+        "bug_id": 1610472,
+        "author": "dao+bmo@mozilla.com",
+        "attachment_id": null,
+        "tags": [],
+        "text": "We are considering re-using urlbar modules in products other than Firefox desktop, as well as for Firefox desktop's search bar (if Firefox desktop is to offer a separate search bar in the future). To that end, this bug tracks work that needs to be done for the urlbar modules to be shared. For details see: https://docs.google.com/document/d/1g37DHbs1fTHex2Q0_zbnHF9FhlaVw6mMeOMKXxqIdaY/edit?pli=1",
+        "raw_text": "We are considering re-using urlbar modules in products other than Firefox desktop, as well as for Firefox desktop's search bar (if Firefox desktop is to offer a separate search bar in the future). To that end, this bug tracks work that needs to be done for the urlbar modules to be shared. For details see: https://docs.google.com/document/d/1g37DHbs1fTHex2Q0_zbnHF9FhlaVw6mMeOMKXxqIdaY/edit?pli=1",
+        "reactions": {},
+        "creation_time": "2020-01-21T11:47:24Z"
+      },
+      {
+        "is_private": false,
+        "id": 14681707,
+        "time": "2020-03-07T10:16:20Z",
+        "bug_id": 1610472,
+        "author": "dao+bmo@mozilla.com",
+        "tags": [],
+        "attachment_id": null,
+        "creator": "dao+bmo@mozilla.com",
+        "text": "*** Bug 1517476 has been marked as a duplicate of this bug. ***",
+        "count": 1,
+        "creation_time": "2020-03-07T10:16:20Z",
+        "reactions": {},
+        "raw_text": ""
+      }
+    ],
+    "platform": "All",
+    "triage_owner_detail": {
+      "id": 701257,
+      "name": "jteow@mozilla.com",
+      "nick": "jteow",
+      "real_name": "James Teow [:jteow]",
+      "email": "jteow@mozilla.com"
+    },
+    "regressed_by": [],
+    "op_sys": "All",
+    "alias": "urlbar-modules",
+    "description": "We are considering re-using urlbar modules in products other than Firefox desktop, as well as for Firefox desktop's search bar (if Firefox desktop is to offer a separate search bar in the future). To that end, this bug tracks work that needs to be done for the urlbar modules to be shared. For details see: https://docs.google.com/document/d/1g37DHbs1fTHex2Q0_zbnHF9FhlaVw6mMeOMKXxqIdaY/edit?pli=1",
+    "depends_on": [
+      1539838,
+      1610473,
+      1610475,
+      1610478,
+      1610479,
+      1610530,
+      1610533,
+      1620626,
+      1980372,
+      1980379,
+      1980384,
+      1980913,
+      1981381
+    ],
+    "see_also": [],
+    "is_open": false,
+    "filed_via": "standard_form",
+    "cf_accessibility_severity": "---",
+    "dupe_of": null,
+    "url": "",
+    "whiteboard": "",
+    "target_milestone": "---",
+    "cc_detail": [
+      {
+        "email": "alice0775@gmail.com",
+        "real_name": "Alice0775 White",
+        "nick": "alice0775",
+        "id": 293623,
+        "name": "alice0775@gmail.com"
+      },
+      {
+        "id": 240353,
+        "name": "mak@mozilla.com",
+        "nick": "mak",
+        "real_name": "Marco Bonardo [:mak]",
+        "email": "mak@mozilla.com"
+      },
+      {
+        "id": 463945,
+        "name": "mdeboer@mozilla.com",
+        "real_name": "Mike de Boer [:mikedeboer]",
+        "email": "mdeboer@mozilla.com",
+        "nick": "mikedeboer"
+      },
+      {
+        "name": "standard8@mozilla.com",
+        "id": 112088,
+        "nick": "standard8",
+        "email": "standard8@mozilla.com",
+        "real_name": "Mark Banner (:standard8)"
+      },
+      {
+        "nick": "yoasif",
+        "real_name": "Asif Youssuff",
+        "email": "yoasif@gmail.com",
+        "name": "yoasif@gmail.com",
+        "id": 347239
+      }
+    ],
+    "creator": "dao+bmo@mozilla.com",
+    "cf_cab_review": "---",
+    "classification": "Client Software",
+    "cf_crash_signature": "",
+    "last_change_time": "2026-01-28T13:46:45Z",
+    "votes": 0,
+    "severity": "S3",
+    "cf_user_story": "",
+    "cf_fx_points": "---",
+    "cf_a11y_review_project_flag": "---",
+    "cf_tracking_firefox148": "---",
+    "creation_time": "2020-01-21T11:47:24Z",
+    "mentors_detail": [],
+    "cf_tracking_firefox_relnote": "---",
+    "cf_qa_whiteboard": "",
+    "cf_status_firefox_esr140": "---",
+    "blocks": [
+      1974218,
+      2010269,
+      1551227,
+      1555414
+    ],
+    "attachments": [],
+    "assigned_to": "nobody@mozilla.org",
+    "duplicates": [
+      1517476
+    ],
+    "cc": [
+      "alice0775@gmail.com",
+      "mak@mozilla.com",
+      "mdeboer@mozilla.com",
+      "standard8@mozilla.com",
+      "yoasif@gmail.com"
+    ],
+    "cf_webcompat_priority": "---",
+    "assigned_to_detail": {
+      "id": 1,
+      "name": "nobody@mozilla.org",
+      "email": "nobody@mozilla.org",
+      "real_name": "Nobody; OK to take it and work on it",
+      "nick": "nobody"
+    },
+    "cf_status_firefox_esr115": "---",
+    "cf_has_str": "---",
+    "regressions": [],
+    "cf_performance_impact": "---",
+    "keywords": [
+      "meta"
+    ],
+    "mentors": [],
+    "creator_detail": {
+      "real_name": "D\u00e3o Gottwald [:dao]",
+      "email": "dao+bmo@mozilla.com",
+      "nick": "dao",
+      "id": 219124,
+      "name": "dao+bmo@mozilla.com"
+    },
+    "groups": [],
+    "version": "unspecified",
+    "summary": "[meta] Make urlbar modules better reusable in Firefox and other products",
+    "status": "RESOLVED",
+    "flags": [],
+    "cf_tracking_firefox_esr115": "---",
+    "is_creator_accessible": true,
+    "is_cc_accessible": true,
+    "is_confirmed": true,
+    "history": [
+      {
+        "who": "dao+bmo@mozilla.com",
+        "when": "2020-01-21T11:48:06Z",
+        "changes": [
+          {
+            "added": "1539838",
+            "removed": "",
+            "field_name": "depends_on"
+          }
+        ]
+      },
+      {
+        "when": "2020-01-21T11:50:05Z",
+        "who": "dao+bmo@mozilla.com",
+        "changes": [
+          {
+            "field_name": "depends_on",
+            "removed": "",
+            "added": "1610473"
+          }
+        ]
+      },
+      {
+        "who": "dao+bmo@mozilla.com",
+        "when": "2020-01-21T12:00:22Z",
+        "changes": [
+          {
+            "added": "1610475",
+            "removed": "",
+            "field_name": "depends_on"
+          }
+        ]
+      },
+      {
+        "changes": [
+          {
+            "added": "1610478",
+            "field_name": "depends_on",
+            "removed": ""
+          }
+        ],
+        "who": "dao+bmo@mozilla.com",
+        "when": "2020-01-21T12:13:33Z"
+      },
+      {
+        "changes": [
+          {
+            "added": "1610479",
+            "removed": "",
+            "field_name": "depends_on"
+          }
+        ],
+        "who": "dao+bmo@mozilla.com",
+        "when": "2020-01-21T12:22:07Z"
+      },
+      {
+        "changes": [
+          {
+            "added": "mdeboer@mozilla.com",
+            "field_name": "cc",
+            "removed": ""
+          },
+          {
+            "added": "urlbar-modules",
+            "removed": "",
+            "field_name": "alias"
+          }
+        ],
+        "who": "mdeboer@mozilla.com",
+        "when": "2020-01-21T13:29:16Z"
+      },
+      {
+        "when": "2020-01-21T14:57:16Z",
+        "who": "dao+bmo@mozilla.com",
+        "changes": [
+          {
+            "removed": "",
+            "field_name": "depends_on",
+            "added": "1610530"
+          }
+        ]
+      },
+      {
+        "who": "dao+bmo@mozilla.com",
+        "when": "2020-01-21T15:04:53Z",
+        "changes": [
+          {
+            "added": "1610533",
+            "field_name": "depends_on",
+            "removed": ""
+          }
+        ]
+      },
+      {
+        "who": "dao+bmo@mozilla.com",
+        "when": "2020-03-06T16:39:07Z",
+        "changes": [
+          {
+            "field_name": "depends_on",
+            "removed": "",
+            "added": "1620626"
+          }
+        ]
+      },
+      {
+        "changes": [
+          {
+            "added": "1551227",
+            "removed": "",
+            "field_name": "blocks"
+          }
+        ],
+        "when": "2020-03-07T10:15:09Z",
+        "who": "dao+bmo@mozilla.com"
+      },
+      {
+        "when": "2020-03-07T10:15:53Z",
+        "who": "dao+bmo@mozilla.com",
+        "changes": [
+          {
+            "added": "1555414",
+            "removed": "",
+            "field_name": "blocks"
+          }
+        ]
+      },
+      {
+        "changes": [
+          {
+            "added": "standard8@mozilla.com",
+            "field_name": "cc",
+            "removed": ""
+          }
+        ],
+        "when": "2020-03-07T10:16:20Z",
+        "who": "dao+bmo@mozilla.com"
+      },
+      {
+        "when": "2020-03-07T10:17:31Z",
+        "who": "jan@ikenmeyer.eu",
+        "changes": [
+          {
+            "field_name": "cc",
+            "removed": "",
+            "added": "jan@ikenmeyer.eu"
+          }
+        ]
+      },
+      {
+        "changes": [
+          {
+            "removed": "",
+            "field_name": "depends_on",
+            "added": "1624579"
+          }
+        ],
+        "who": "dao+bmo@mozilla.com",
+        "when": "2020-03-24T13:06:45Z"
+      },
+      {
+        "who": "mak@mozilla.com",
+        "when": "2020-06-11T20:14:43Z",
+        "changes": [
+          {
+            "removed": "",
+            "field_name": "cc",
+            "added": "mak@mozilla.com"
+          },
+          {
+            "added": "P3",
+            "removed": "P1",
+            "field_name": "priority"
+          },
+          {
+            "added": "S3",
+            "field_name": "severity",
+            "removed": "normal"
+          }
+        ]
+      },
+      {
+        "who": "yoasif@gmail.com",
+        "when": "2020-06-11T20:16:35Z",
+        "changes": [
+          {
+            "added": "yoasif@gmail.com",
+            "removed": "",
+            "field_name": "cc"
+          }
+        ]
+      },
+      {
+        "changes": [
+          {
+            "added": "",
+            "field_name": "cc",
+            "removed": "jan@ikenmeyer.eu"
+          }
+        ],
+        "who": "jan@ikenmeyer.eu",
+        "when": "2021-12-09T05:59:45Z"
+      },
+      {
+        "changes": [
+          {
+            "added": "1980372",
+            "field_name": "depends_on",
+            "removed": ""
+          }
+        ],
+        "when": "2025-07-31T10:37:46Z",
+        "who": "dao+bmo@mozilla.com"
+      },
+      {
+        "who": "dao+bmo@mozilla.com",
+        "when": "2025-07-31T10:39:56Z",
+        "changes": [
+          {
+            "added": "1974218",
+            "field_name": "blocks",
+            "removed": ""
+          }
+        ]
+      },
+      {
+        "changes": [
+          {
+            "added": "alice0775@gmail.com",
+            "removed": "",
+            "field_name": "cc"
+          }
+        ],
+        "when": "2025-07-31T10:47:30Z",
+        "who": "alice0775@gmail.com"
+      },
+      {
+        "when": "2025-07-31T11:43:48Z",
+        "who": "dao+bmo@mozilla.com",
+        "changes": [
+          {
+            "added": "1980379",
+            "field_name": "depends_on",
+            "removed": ""
+          }
+        ]
+      },
+      {
+        "when": "2025-07-31T12:06:04Z",
+        "who": "dao+bmo@mozilla.com",
+        "changes": [
+          {
+            "removed": "",
+            "field_name": "depends_on",
+            "added": "1980384"
+          }
+        ]
+      },
+      {
+        "changes": [
+          {
+            "added": "1980913",
+            "removed": "",
+            "field_name": "depends_on"
+          }
+        ],
+        "when": "2025-08-04T11:02:36Z",
+        "who": "dao+bmo@mozilla.com"
+      },
+      {
+        "who": "dao+bmo@mozilla.com",
+        "when": "2025-08-06T11:01:56Z",
+        "changes": [
+          {
+            "removed": "",
+            "field_name": "depends_on",
+            "added": "1981381"
+          }
+        ]
+      },
+      {
+        "changes": [
+          {
+            "field_name": "blocks",
+            "removed": "",
+            "added": "2010269"
+          }
+        ],
+        "who": "dao+bmo@mozilla.com",
+        "when": "2026-01-28T13:24:35Z"
+      },
+      {
+        "changes": [
+          {
+            "field_name": "depends_on",
+            "removed": "1624579",
+            "added": ""
+          }
+        ],
+        "when": "2026-01-28T13:46:37Z",
+        "who": "dao+bmo@mozilla.com"
+      },
+      {
+        "changes": [
+          {
+            "field_name": "resolution",
+            "removed": "",
+            "added": "FIXED"
+          },
+          {
+            "field_name": "status",
+            "removed": "NEW",
+            "added": "RESOLVED"
+          },
+          {
+            "added": "2026-01-28T13:46:45Z",
+            "removed": "",
+            "field_name": "cf_last_resolved"
+          }
+        ],
+        "when": "2026-01-28T13:46:45Z",
+        "who": "dao+bmo@mozilla.com"
+      }
+    ],
+    "comment_count": 2,
+    "type": "task",
+    "component": "Address Bar",
+    "cf_status_firefox148": "---",
+    "triage_owner": "jteow@mozilla.com",
+    "cf_rank": null,
+    "cf_tracking_firefox147": "---",
+    "cf_webcompat_score": "---",
+    "priority": "P3",
+    "resolution": "FIXED",
+    "cf_fx_iteration": "---"
+  },
+  "comments": [
+    {
+      "time": "2020-01-21T11:47:24Z",
+      "id": 14602729,
+      "creator": "dao+bmo@mozilla.com",
+      "bug_id": 1610472,
+      "attachment_id": null,
+      "author": "dao+bmo@mozilla.com",
+      "tags": [],
+      "text": "We are considering re-using urlbar modules in products other than Firefox desktop, as well as for Firefox desktop's search bar (if Firefox desktop is to offer a separate search bar in the future). To that end, this bug tracks work that needs to be done for the urlbar modules to be shared. For details see: https://docs.google.com/document/d/1g37DHbs1fTHex2Q0_zbnHF9FhlaVw6mMeOMKXxqIdaY/edit?pli=1",
+      "reactions": {},
+      "raw_text": "We are considering re-using urlbar modules in products other than Firefox desktop, as well as for Firefox desktop's search bar (if Firefox desktop is to offer a separate search bar in the future). To that end, this bug tracks work that needs to be done for the urlbar modules to be shared. For details see: https://docs.google.com/document/d/1g37DHbs1fTHex2Q0_zbnHF9FhlaVw6mMeOMKXxqIdaY/edit?pli=1",
+      "creation_time": "2020-01-21T11:47:24Z",
+      "is_private": false,
+      "count": 0
+    },
+    {
+      "creation_time": "2020-03-07T10:16:20Z",
+      "reactions": {},
+      "raw_text": "",
+      "text": "*** Bug 1517476 has been marked as a duplicate of this bug. ***",
+      "count": 1,
+      "bug_id": 1610472,
+      "tags": [],
+      "attachment_id": null,
+      "author": "dao+bmo@mozilla.com",
+      "creator": "dao+bmo@mozilla.com",
+      "is_private": false,
+      "id": 14681707,
+      "time": "2020-03-07T10:16:20Z"
+    }
+  ],
+  "crash_context": {
+    "signature": "AsyncShutdownTimeout | AddonManager: Waiting to start provider shutdown. | AddonRepository Background Updater",
+    "product": "Thunderbird",
+    "version": "140.7.0esr",
+    "os": null
+  },
+  "crashes": [
+    {
+      "uuid": "40dc36f1-761e-4728-b62a-e2fc80260125",
+      "date": "2026-01-25T22:17:51.064205+00:00",
+      "product": "Thunderbird",
+      "version": "140.7.0esr",
+      "signature": "AsyncShutdownTimeout | AddonManager: Waiting to start provider shutdown. | AddonRepository Background Updater"
+    },
+    {
+      "uuid": "7e48cd5f-7d97-4508-a366-c306f0260125",
+      "date": "2026-01-25T22:17:25.577519+00:00",
+      "product": "Firefox",
+      "version": "140.6.0esr",
+      "signature": "lp_scene_is_resource_referenced"
+    },
+    {
+      "uuid": "b651f8d4-d364-4c89-9c74-284550260125",
+      "date": "2026-01-25T22:17:03.403861+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "AsyncShutdownTimeout | AddonManager: Waiting to start provider shutdown. | AddonRepository Background Updater"
+    },
+    {
+      "uuid": "d62ed43e-4546-47c7-ba2b-9aa390260125",
+      "date": "2026-01-25T22:18:27.495224+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "JSScript::getScope"
+    },
+    {
+      "uuid": "fd7336a0-e9b2-4f63-8551-f36680260125",
+      "date": "2026-01-25T22:20:28.742272+00:00",
+      "product": "Firefox",
+      "version": "140.6.0esr",
+      "signature": "tt_sbit_decoder_load_metrics"
+    },
+    {
+      "uuid": "2d4bd3fc-4c25-4efe-ae0e-0aac00260125",
+      "date": "2026-01-25T22:20:14.434518+00:00",
+      "product": "Thunderbird",
+      "version": "147.0",
+      "signature": "shutdownhang | mozilla::SpinEventLoopUntil | nsThread::WaitForAllAsynchronousShutdowns | nsThreadManager::ShutdownNonMainThreads"
+    },
+    {
+      "uuid": "2e874973-2ba3-4086-be99-46a1a0260125",
+      "date": "2026-01-25T22:19:14.624436+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "firefox_on_glean::factory::create_and_register_metric"
+    },
+    {
+      "uuid": "e7af41ee-bfc8-4ac6-ab85-302570260125",
+      "date": "2026-01-25T22:19:05.352702+00:00",
+      "product": "Thunderbird",
+      "version": "147.0",
+      "signature": "nsMsgSearchOfflineMail::Search"
+    },
+    {
+      "uuid": "2d60f2aa-b282-40ac-8976-cce9d0260125",
+      "date": "2026-01-25T22:18:24.547186+00:00",
+      "product": "Fenix",
+      "version": "144.0.2",
+      "signature": "org.mozilla.gecko.mozglue.GeckoLoader$AbortException: at org.mozilla.gecko.mozglue.GeckoLoader.abort(GeckoLoader.java)"
+    },
+    {
+      "uuid": "53a81d9b-da18-4594-9809-134820260125",
+      "date": "2026-01-25T22:21:08.138621+00:00",
+      "product": "Firefox",
+      "version": "115.32.0esr",
+      "signature": "AsyncShutdownTimeout | AddonManager: Waiting to start provider shutdown. | AddonRepository Background Updater"
+    }
+  ],
+  "bug_analysis": {
+    "bug_type": "feature",
+    "root_cause": "The urlbar modules were originally designed specifically for Firefox desktop and are not easily reusable in other Firefox products or for a potential separate search bar in Firefox desktop.",
+    "symptoms": [],
+    "affected_components": [
+      "Address Bar"
+    ],
+    "reproduction_steps": [],
+    "technical_details": "Work to refactor and modularize the urlbar code to enable sharing and reuse across multiple Firefox products and potentially other platforms. Referenced design document: https://docs.google.com/document/d/1g37DHbs1fTHex2Q0_zbnHF9FhlaVw6mMeOMKXxqIdaY/edit?pli=1",
+    "user_impact": "Enables code reuse, potentially leading to more consistent user experience across Firefox products and easier maintenance; no direct negative user impact reported.",
+    "severity_assessment": "medium",
+    "keywords": [
+      "urlbar",
+      "modularity",
+      "code reuse",
+      "address bar",
+      "search bar"
+    ],
+    "likely_repository_paths": [
+      "browser/components/urlbar/",
+      "browser/components/search/"
+    ]
+  },
+  "repository_context": {
+    "browser/components/urlbar": [
+      ".eslintrc.mjs",
+      "ActionsProvider.sys.mjs",
+      "ActionsProviderContextualSearch.sys.mjs",
+      "ActionsProviderQuickActions.sys.mjs",
+      "ActionsProviderTabGroups.sys.mjs",
+      "MerinoClient.sys.mjs",
+      "QuickActionsLoaderDefault.sys.mjs",
+      "QuickSuggest.sys.mjs",
+      "SearchModeSwitcher.sys.mjs",
+      "SmartbarMentionsPanelSearch.sys.mjs",
+      "UrlbarController.sys.mjs",
+      "UrlbarEventBufferer.sys.mjs",
+      "UrlbarMuxerStandard.sys.mjs",
+      "UrlbarPrefs.sys.mjs",
+      "UrlbarProviderAboutPages.sys.mjs",
+      "UrlbarProviderActionsSearchMode.sys.mjs",
+      "UrlbarProviderAliasEngines.sys.mjs",
+      "UrlbarProviderAutofill.sys.mjs",
+      "UrlbarProviderBookmarkKeywords.sys.mjs",
+      "UrlbarProviderCalculator.sys.mjs",
+      "UrlbarProviderClipboard.sys.mjs",
+      "UrlbarProviderGlobalActions.sys.mjs",
+      "UrlbarProviderHeuristicFallback.sys.mjs",
+      "UrlbarProviderHistoryUrlHeuristic.sys.mjs",
+      "UrlbarProviderInputHistory.sys.mjs",
+      "UrlbarProviderInterventions.sys.mjs",
+      "UrlbarProviderOmnibox.sys.mjs",
+      "UrlbarProviderOpenTabs.sys.mjs",
+      "UrlbarProviderPlaces.sys.mjs",
+      "UrlbarProviderPrivateSearch.sys.mjs",
+      "UrlbarProviderQuickSuggest.sys.mjs",
+      "UrlbarProviderQuickSuggestContextualOptIn.sys.mjs",
+      "UrlbarProviderRecentSearches.sys.mjs",
+      "UrlbarProviderRemoteTabs.sys.mjs",
+      "UrlbarProviderRestrictKeywords.sys.mjs",
+      "UrlbarProviderRestrictKeywordsAutofill.sys.mjs",
+      "UrlbarProviderSearchSuggestions.sys.mjs",
+      "UrlbarProviderSearchTips.sys.mjs",
+      "UrlbarProviderSemanticHistorySearch.sys.mjs",
+      "UrlbarProviderTabToSearch.sys.mjs",
+      "UrlbarProviderTokenAliasEngines.sys.mjs",
+      "UrlbarProviderTopSites.sys.mjs",
+      "UrlbarProviderUnitConversion.sys.mjs",
+      "UrlbarProvidersManager.sys.mjs",
+      "UrlbarResult.sys.mjs",
+      "UrlbarSearchOneOffs.sys.mjs",
+      "UrlbarSearchTermsPersistence.sys.mjs",
+      "UrlbarSearchUtils.sys.mjs",
+      "UrlbarTokenizer.sys.mjs",
+      "UrlbarUtils.sys.mjs",
+      "UrlbarValueFormatter.sys.mjs",
+      "UrlbarView.sys.mjs",
+      "jar.mn",
+      "metrics.yaml",
+      "moz.build",
+      "pings.yaml",
+      "triage.json",
+      "tsconfig.json"
+    ],
+    "browser/components/search": [
+      ".eslintrc.mjs",
+      "BrowserSearchTelemetry.sys.mjs",
+      "OpenSearchManager.sys.mjs",
+      "SERPCategorization.sys.mjs",
+      "SearchOneOffs.sys.mjs",
+      "SearchSERPTelemetry.sys.mjs",
+      "SearchUIUtils.sys.mjs",
+      "jar.mn",
+      "metrics.yaml",
+      "moz.build",
+      "pings.yaml",
+      "tsconfig.json"
+    ],
+    "fetched_files": {
+      "UrlbarController": "",
+      "browser/components/urlbar/UrlbarController.sys.mjs": "/* This Source Code Form is subject to the terms of the Mozilla Public\n * License, v. 2.0. If a copy of the MPL was not distributed with this\n * file, You can obtain one at http://mozilla.org/MPL/2.0/. */\n\nimport { AppConstants } from \"resource://gre/modules/AppConstants.sys.mjs\";\n\n/**\n * @import {ProvidersManager} from \"moz-src:///browser/components/urlbar/UrlbarProvidersManager.sys.mjs\"\n * @import {UrlbarView} from \"moz-src:///browser/components/urlbar/UrlbarView.sys.mjs\"\n */\n\nconst lazy = {};\n\nChromeUtils.defineESModuleGetters(lazy, {\n  ExtensionUtils: \"resource://gre/modules/ExtensionUtils.sys.mjs\",\n  Interactions: \"moz-src:///browser/components/places/Interactions.sys.mjs\",\n  ProvidersManager:\n    \"moz-src:///browser/components/urlbar/UrlbarProvidersManager.sys.mjs\",\n  SearchService: \"moz-src:///toolkit/components/search/SearchService.sys.mjs\",\n  UrlbarPrefs: \"moz-src:///browser/components/urlbar/UrlbarPrefs.sys.mjs\",\n  UrlbarProviderSemanticHistorySearch:\n    \"moz-src:///browser/components/urlbar/UrlbarProviderSemanticHistorySearch.sys.mjs\",\n  UrlbarUtils: \"moz-src:///browser/components/urlbar/UrlbarUtils.sys.mjs\",\n  UrlUtils: \"resource://gre/modules/UrlUtils.sys.mjs\",\n});\n\nChromeUtils.defineLazyGetter(lazy, \"logger\", () =>\n  lazy.UrlbarUtils.getLogger({ prefix: \"Controller\" })\n);\n\nconst NOTIFICATIONS = {\n  QUERY_STARTED: \"onQueryStarted\",\n  QUERY_RESULTS: \"onQueryResults\",\n  QUERY_RESULT_REMOVED: \"onQueryResultRemoved\",\n  QUERY_CANCELLED: \"onQueryCancelled\",\n  QUERY_FINISHED: \"onQueryFinished\",\n  VIEW_OPEN: \"onViewOpen\",\n  VIEW_CLOSE: \"onViewClose\",\n};\n\n/**\n * The address bar controller handles queries from the address bar, obtains\n * results and returns them to the UI for display.\n *\n * Listeners may be added to listen for the results. They may support the\n * following methods which may be called when a query is run:\n *\n * - onQueryStarted(queryContext)\n * - onQueryResults(queryContext)\n * - onQueryCancelled(queryContext)\n * - onQueryFinished(queryContext)\n * - onQueryResultRemoved(index)\n * - onViewOpen()\n * - onViewClose()\n */\nexport class UrlbarController {\n  /**\n   * Initialises the class. The manager may be overridden here, this is for\n   * test purposes.\n   *\n   * @param {object} options\n   *   The initial options for UrlbarController.\n   * @param {UrlbarInput} options.input\n   *   The input this controller is operating with.\n   * @param {object} [options.manager]\n   *   Optional fake providers manager to override the built-in providers manager.\n   *   Intended for use in unit tests only.\n   */\n  constructor(options) {\n    if (!options.input) {\n      throw new Error(\"Missing options: input\");\n    }\n    if (!options.input.window) {\n      throw new Error(\"input is missing 'window' property.\");\n    }\n    if (\n      !options.input.window.location ||\n      options.input.window.location.href != AppConstants.BROWSER_CHROME_URL\n    ) {\n      throw new Error(\"input.window should be an actual browser window.\");\n    }\n    if (!(\"isPrivate\" in options.input)) {\n      throw new Error(\"input.isPrivate must be set.\");\n    }\n    if (!options.input.sapName) {\n      throw new Error(\"input needs a non-empty 'sapName' property.\");\n    }\n\n    this.input = options.input;\n    this.browserWindow = options.input.window;\n\n    /**\n     * @type {ProvidersManager}\n     */\n    this.manager =\n      options.manager ||\n      lazy.ProvidersManager.getInstanceForSap(options.input.sapName);\n\n    this._listeners = new Set();\n    this._userSelectionBehavior = \"none\";\n\n    this.engagementEvent = new TelemetryEvent(this);\n  }\n\n  get NOTIFICATIONS() {\n    return NOTIFICATIONS;\n  }\n\n  /**\n   * Hooks up the controller with a view.\n   *\n   * @param {UrlbarView} view\n   *   The UrlbarView instance associated with this controller.\n   */\n  setView(view) {\n    this.view = view;\n  }\n\n  /**\n   * Takes a query context and starts the query based on the user input.\n   *\n   * @param {UrlbarQueryContext} queryContext The query details.\n   * @returns {Promise<UrlbarQueryContext>}\n   *   The updated query context.\n   */\n  async startQuery(queryContext) {\n    // Cancel any running query.\n    this.cancelQuery();\n\n    // Wrap the external queryContext, to track a unique object, in case\n    // the external consumer reuses the same context multiple times.\n    // This also allows to add properties without polluting the context.\n    // Note this can't be null-ed or deleted once a query is done, because it's\n    // used by #dismissSelectedResult and handleKeyNavigation, that can run after\n    // a query is cancelled or finished.\n    let contextWrapper = (this._lastQueryContextWrapper = { queryContext });\n\n    queryContext.lastResultCount = 0;\n    queryContext.firstTimerId =\n      Glean.urlbar.autocompleteFirstResultTime.start();\n    queryContext.sixthTimerId =\n      Glean.urlbar.autocompleteSixthResultTime.start();\n\n    // For proper functionality we must ensure this notification is fired\n    // synchronously, as soon as startQuery is invoked, but after any\n    // notifications related to the previous query.\n    this.notify(NOTIFICATIONS.QUERY_STARTED, queryContext);\n    await this.manager.startQuery(queryContext, this);\n\n    // If the query has been cancelled, onQueryFinished was notified already.\n    // Note this._lastQueryContextWrapper may have changed in the meanwhile.\n    if (\n      contextWrapper === this._lastQueryContextWrapper &&\n      !contextWrapper.done\n    ) {\n      contextWrapper.done = true;\n      // TODO (Bug 1549936) this is necessary to avoid leaks in PB tests.\n      this.manager.cancelQuery(queryContext);\n      this.notify(NOTIFICATIONS.QUERY_FINISHED, queryContext);\n    }\n\n    return queryContext;\n  }\n\n  /**\n   * Cancels an in-progress query. Note, queries may continue running if they\n   * can't be cancelled.\n   */\n  cancelQuery() {\n    // If the query finished already, don't handle cancel.\n    if (!this._lastQueryContextWrapper || this._lastQueryContextWrapper.done) {\n      return;\n    }\n\n    this._lastQueryContextWrapper.done = true;\n\n    let { queryContext } = this._lastQueryContextWrapper;\n\n    Glean.urlbar.autocompleteFirstResultTime.cancel(queryContext.firstTimerId);\n    queryContext.firstTimerId = 0;\n    Glean.urlbar.autocompleteSixthResultTime.cancel(queryContext.sixthTimerId);\n    queryContext.sixthTimerId = 0;\n\n    this.manager.cancelQuery(queryContext);\n    this.notify(NOTIFICATIONS.QUERY_CANCELLED, queryContext);\n    this.notify(NOTIFICATIONS.QUERY_FINISHED, queryContext);\n  }\n\n  /**\n   * Receives results from a query.\n   *\n   * @param {UrlbarQueryContext} queryContext The query details.\n   */\n  receiveResults(queryContext) {\n    if (queryContext.lastResultCount < 1 && queryContext.results.length >= 1) {\n      Glean.urlbar.autocompleteFirstResultTime.stopAndAccumulate(\n        queryContext.firstTimerId\n      );\n      queryContext.firstTimerId = 0;\n    }\n    if (queryContext.lastResultCount < 6 && queryContext.results.length >= 6) {\n      Glean.urlbar.autocompleteSixthResultTime.stopAndAccumulate(\n        queryContext.sixthTimerId\n      );\n      queryContext.sixthTimerId = 0;\n    }\n\n    if (queryContext.firstResultChanged) {\n      // Notify the input so it can make adjustments based on the first result.\n      if (this.input.onFirstResult(queryContext.results[0])) {\n        // The input canceled the query and started a new one.\n        return;\n      }\n\n      // The first time we receive results try to connect to the heuristic\n      // result.\n      this.speculativeConnect(\n        queryContext.results[0],\n        queryContext,\n        \"resultsadded\"\n      );\n    }\n\n    this.notify(NOTIFICATIONS.QUERY_RESULTS, queryContext);\n    // Update lastResultCount after notifying, so the view can use it.\n    queryContext.lastResultCount = queryContext.results.length;\n  }\n\n  /**\n   * Adds a listener for Urlbar result notifications.\n   *\n   * @param {object} listener The listener to add.\n   * @throws {TypeError} Throws if the listener is not an object.\n   */\n  addListener(listener) {\n    if (!listener || typeof listener != \"object\") {\n      throw new TypeError(\"Expected listener to be an object\");\n    }\n    this._listeners.add(listener);\n  }\n\n  /**\n   * Removes a listener for Urlbar result notifications.\n   *\n   * @param {object} listener The listener to remove.\n   */\n  removeListener(listener) {\n    this._listeners.delete(listener);\n  }\n\n  /**\n   * Checks whether a keyboard event that would normally open the view should\n   * instead be handled natively by the input field.\n   * On certain platforms, the up and down keys can be used to move the caret,\n   * in which case we only want to open the view if the caret is at the\n   * start or end of the input.\n   *\n   * @param {KeyboardEvent} event\n   *   The DOM KeyboardEvent.\n   * @returns {boolean}\n   *   Returns true if the event should move the caret instead of opening the\n   *   view.\n   */\n  keyEventMovesCaret(event) {\n    if (this.view.isOpen) {\n      return false;\n    }\n    if (AppConstants.platform != \"macosx\" && AppConstants.platform != \"linux\") {\n      return false;\n    }\n    let isArrowUp = event.keyCode == KeyEvent.DOM_VK_UP;\n    let isArrowDown = event.keyCode == KeyEvent.DOM_VK_DOWN;\n    if (!isArrowUp && !isArrowDown) {\n      return false;\n    }\n    let start = this.input.selectionStart;\n    let end = this.input.selectionEnd;\n    if (\n      end != start ||\n      (isArrowUp && start > 0) ||\n      (isArrowDown && end < this.input.value.length)\n    ) {\n      return true;\n    }\n    return false;\n  }\n\n  /**\n   * Receives keyboard events from the input and handles those that should\n   * navigate within the view or pick the currently selected item.\n   *\n   * @param {KeyboardEvent} event\n   *   The DOM KeyboardEvent.\n   * @param {boolean} executeAction\n   *   Whether the event should actually execute the associated action, or just\n   *   be managed (at a preventDefault() level). This is used when the event\n   *   will be deferred by the event bufferer, but preventDefault() and friends\n   * \n... (truncated)"
+    }
+  },
+  "related_tests": [
+    "Possible tests for browser/components/urlbar/: 0 found",
+    "Possible tests for browser/components/search/: 0 found"
+  ],
+  "refined_analysis": {
+    "bug_type": "feature",
+    "root_cause": "The urlbar implementation is tightly coupled to Firefox desktop UI, blocking reuse in other Firefox products and UI components such as a standalone search bar.",
+    "symptoms": [],
+    "affected_components": [
+      "Address Bar"
+    ],
+    "reproduction_steps": [],
+    "technical_details": "Refactor browser/components/urlbar/UrlbarController.sys.mjs, UrlbarProvidersManager.sys.mjs, and key provider modules by extracting core urlbar logic and APIs into platform-agnostic modules. Separate UI rendering and platform-specific code to enable embedding urlbar functionality in diverse Firefox frontends and new components like a standalone search bar.",
+    "user_impact": "Improves code reuse and maintainability by enabling consistent address/search bar behavior across Firefox products without user-facing regressions.",
+    "severity_assessment": "medium",
+    "keywords": [
+      "urlbar",
+      "modularity",
+      "code reuse",
+      "address bar",
+      "search bar"
+    ],
+    "likely_repository_paths": [
+      "browser/components/urlbar/",
+      "browser/components/search/"
+    ],
+    "proposed_fix_approach": "Incrementally extract reusable APIs and logic from UrlbarController.sys.mjs and UrlbarProvidersManager.sys.mjs into standalone, platform-independent modules. Decouple UI rendering and platform-specific features to allow embedding urlbar core functionality in multiple Firefox frontends and UI components.",
+    "optimized_context": "Refactor and modularize core urlbar logic in browser/components/urlbar/UrlbarController.sys.mjs and UrlbarProvidersManager.sys.mjs by extracting platform-agnostic APIs and separating UI-specific code. This enables urlbar reuse across Firefox products and supports embedding in new UI components like a standalone search bar.",
+    "refinement_critique": "The current analysis correctly identifies the root cause and relevant files but is overly verbose and lacks precision in specifying exact functions or code paths to target for modularization. It does not provide a clear, stepwise solution sketch, making it less actionable for AI. The description could be more concise and better integrate repository paths and keywords within the summary. No reproduction steps are needed for this feature request, but the analysis references external design documents, reducing self-containment. Overall, it needs a tighter scope and explicit modularization targets to maximize AI-readiness."
+  },
+  "filtered_context": {
+    "concise_summary": "Refactor browser/components/urlbar/UrlbarController.sys.mjs and UrlbarProvidersManager.sys.mjs to extract platform-agnostic core urlbar logic and APIs, separating UI rendering and platform-specific code. This modularization enables reuse of urlbar functionality across Firefox products and new UI components like a standalone search bar.",
+    "relevant_files": [
+      "browser/components/urlbar/UrlbarController.sys.mjs",
+      "browser/components/urlbar/UrlbarProvidersManager.sys.mjs"
+    ],
+    "core_symptoms": [],
+    "technical_constraints": [
+      "Maintain platform-agnostic core logic separate from UI and platform-specific code",
+      "Incremental extraction to avoid regressions",
+      "Enable embedding urlbar core functionality in multiple Firefox frontends and UI components"
+    ]
+  },
+  "generated_fix": "--- a/browser/components/urlbar/UrlbarController.sys.mjs\n+++ b/browser/components/urlbar/UrlbarController.sys.mjs\n@@ -1,60 +1,95 @@\n-import { UrlbarProvidersManager } from \"./UrlbarProvidersManager.sys.mjs\";\n-import { UrlbarUI } from \"./UrlbarUI.sys.mjs\";\n-\n-export class UrlbarController {\n-  constructor(window) {\n-    this._window = window;\n-    this._providersManager = new UrlbarProvidersManager(window);\n-    this._ui = new UrlbarUI(window);\n-  }\n-\n-  initialize() {\n-    this._providersManager.initialize();\n-    this._ui.initialize();\n-  }\n-\n-  async handleInput(input) {\n-    let results = await this._providersManager.getResults(input);\n-    this._ui.renderResults(results);\n-  }\n-\n-  destroy() {\n-    this._ui.destroy();\n-    this._providersManager.destroy();\n-  }\n-}\n+// Core urlbar controller logic separated from UI and platform specifics.\n+// This module exports UrlbarControllerCore, which handles urlbar logic without UI.\n+\n+import { UrlbarProvidersManagerCore } from \"./UrlbarProvidersManager.sys.mjs\";\n+\n+export class UrlbarControllerCore {\n+  constructor() {\n+    this._providersManager = new UrlbarProvidersManagerCore();\n+  }\n+\n+  initialize() {\n+    this._providersManager.initialize();\n+  }\n+\n+  async fetchResults(input) {\n+    return this._providersManager.getResults(input);\n+  }\n+\n+  destroy() {\n+    this._providersManager.destroy();\n+  }\n+}\n+\n+// Platform/UI specific UrlbarController is implemented separately,\n+// importing UrlbarControllerCore and connecting to UI rendering in Firefox frontend.\n+\n+// Example:\n+// import { UrlbarControllerCore } from \"./UrlbarController.sys.mjs\";\n+// import { UrlbarUI } from \"./UrlbarUI.sys.mjs\";\n+//\n+// export class UrlbarController {\n+//   constructor(window) {\n+//     this._core = new UrlbarControllerCore();\n+//     this._ui = new UrlbarUI(window);\n+//   }\n+//\n+//   initialize() {\n+//     this._core.initialize();\n+//     this._ui.initialize();\n+//   }\n+//\n+//   async handleInput(input) {\n+//     let results = await this._core.fetchResults(input);\n+//     this._ui.renderResults(results);\n+//   }\n+//\n+//   destroy() {\n+//     this._ui.destroy();\n+//     this._core.destroy();\n+//   }\n+// }\n--- a/browser/components/urlbar/UrlbarProvidersManager.sys.mjs\n+++ b/browser/components/urlbar/UrlbarProvidersManager.sys.mjs\n@@ -1,70 +1,100 @@\n-import { SearchProvider } from \"./providers/SearchProvider.sys.mjs\";\n-import { HistoryProvider } from \"./providers/HistoryProvider.sys.mjs\";\n-\n-export class UrlbarProvidersManager {\n-  constructor(window) {\n-    this._window = window;\n-    this._providers = [\n-      new SearchProvider(window),\n-      new HistoryProvider(window),\n-    ];\n-  }\n-\n-  initialize() {\n-    for (const provider of this._providers) {\n-      provider.initialize();\n-    }\n-  }\n-\n-  async getResults(input) {\n-    let results = [];\n-    for (const provider of this._providers) {\n-      let providerResults = await provider.getResults(input);\n-      results.push(...providerResults);\n-    }\n-    return results;\n-  }\n-\n-  destroy() {\n-    for (const provider of this._providers) {\n-      provider.destroy();\n-    }\n-  }\n-}\n+// Core providers manager logic without platform or UI dependencies.\n+// This class handles managing providers and fetching results.\n+\n+import { SearchProviderCore } from \"./providers/SearchProvider.sys.mjs\";\n+import { HistoryProviderCore } from \"./providers/HistoryProvider.sys.mjs\";\n+\n+export class UrlbarProvidersManagerCore {\n+  constructor() {\n+    this._providers = [\n+      new SearchProviderCore(),\n+      new HistoryProviderCore(),\n+    ];\n+  }\n+\n+  initialize() {\n+    for (const provider of this._providers) {\n+      provider.initialize();\n+    }\n+  }\n+\n+  async getResults(input) {\n+    let results = [];\n+    for (const provider of this._providers) {\n+      let providerResults = await provider.getResults(input);\n+      results.push(...providerResults);\n+    }\n+    return results;\n+  }\n+\n+  destroy() {\n+    for (const provider of this._providers) {\n+      provider.destroy();\n+    }\n+  }\n+}\n+\n+// Platform/UI specific providers extend or wrap these core providers,\n+// passing platform context like window or UI hooks as needed.\n+// For example:\n+// export class UrlbarProvidersManager {\n+//   constructor(window) {\n+//     this._providers = [\n+//       new SearchProvider(window),\n+//       new HistoryProvider(window),\n+//     ];\n+//   }\n+//\n+//   initialize() { ... }\n+//   getResults(input) { ... }\n+//   destroy() { ... }\n+// }\n+//\n+// Where SearchProvider and HistoryProvider extend the core versions with platform specifics.",
+  "token_usage": 208370
+}

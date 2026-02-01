@@ -1,0 +1,97 @@
+--- a/layout/html/HTMLContentSniffer.cpp
++++ b/layout/html/HTMLContentSniffer.cpp
+@@ -1,6 +1,11 @@
++#include "mozilla/Preferences.h"
++
+ #include "HTMLContentSniffer.h"
+ #include "mozilla/ArrayUtils.h"
+ #include "nsString.h"
++#include "mozilla/StaticPrefs_layout.h"
+ 
+ namespace mozilla {
+ namespace net {
+@@ -200,10 +205,30 @@
+-  // Check for the sequence "<!--" followed by space or '>'
+-  if (aData.Length() >= 4 && StringBeginsWith(aData, NS_LITERAL_STRING("<!--"))) {
+-    if (aData.Length() == 4 || aData[4] == ' ' || aData[4] == '>') {
+-      return eHTML;
+-    }
+-  }
++  static bool sniffHTMLCommentsLikeChrome =
++    mozilla::StaticPrefs::layout_html_sniffHTMLCommentsLikeChrome();
++
++  if (aData.Length() >= 4 && StringBeginsWith(aData, NS_LITERAL_STRING("<!--"))) {
++    if (sniffHTMLCommentsLikeChrome) {
++      // Chrome treats any '<!--' as HTML regardless of the character after it.
++      return eHTML;
++    } else {
++      // Legacy Firefox behavior: only treat as HTML if next char is space or '>'
++      if (aData.Length() == 4 || aData[4] == ' ' || aData[4] == '>') {
++        return eHTML;
++      }
++    }
++  }
+--- a/layout/html/HTMLContentSniffer.h
++++ b/layout/html/HTMLContentSniffer.h
+@@ -20,6 +20,7 @@
+ 
+-#include "mozilla/ArrayUtils.h"
++#include "mozilla/Preferences.h"
++
++namespace mozilla { namespace StaticPrefs { namespace layout {
++bool sniffHTMLCommentsLikeChrome();
++}}}
+--- a/layout/html/StaticPrefs.layout.ini
++++ b/layout/html/StaticPrefs.layout.ini
+@@ -1,4 +1,7 @@
++[Layout]
++layout.html.sniffHTMLCommentsLikeChrome = false
++
+--- a/testing/web-platform/tests/wpt/mimesniff/html-comments.html
++++ b/testing/web-platform/tests/wpt/mimesniff/html-comments.html
+@@ -0,0 +1,40 @@
++<!DOCTYPE html>
++<html>
++<head>
++  <meta charset="utf-8">
++  <title>HTML comment sniffing test</title>
++</head>
++<body>
++  <script>
++    async function fetchBlob(content) {
++      return new Blob([content], {type: "application/octet-stream"});
++    }
++
++    async function sniffHTML(content) {
++      let blob = await fetchBlob(content);
++      let response = await fetch(URL.createObjectURL(blob));
++      let text = await response.text();
++      return text;
++    }
++
++    function isHTML(content) {
++      // If the content is parsed/rendered as HTML, the body will have child nodes.
++      let parser = new DOMParser();
++      let doc = parser.parseFromString(content, "text/html");
++      return doc.body.childNodes.length > 0;
++    }
++
++    async function test() {
++      // Test strings starting with <!-- followed by various characters
++      let tests = [
++        "<!--",
++        "<!-- ",
++        "<!-->",
++        "<!--x",
++        "<!-->",
++        "<!--!",
++      ];
++      for (let t of tests) {
++        let parsedAsHTML = isHTML(t);
++        console.log(`Content: ${JSON.stringify(t)} parsed as HTML: ${parsedAsHTML}`);
++      }
++    }
++    test();
++  </script>
++</body>
++</html>
