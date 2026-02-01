@@ -1,0 +1,768 @@
+{
+  "cf_has_str": "---",
+  "cc_detail": [
+    {
+      "real_name": "Georg Fritzsche [:gfritzsche]",
+      "email": "gfritzsche@mozilla.com",
+      "id": 439671,
+      "name": "gfritzsche@mozilla.com",
+      "nick": "gfritzsche"
+    },
+    {
+      "real_name": "Honza Bambas (:mayhemer)",
+      "nick": "mayhemer",
+      "name": "honzab.moz@firemni.cz",
+      "id": 269762,
+      "email": "honzab.moz@firemni.cz"
+    },
+    {
+      "real_name": "Jason Duell",
+      "email": "jduell.mcbugs@gmail.com",
+      "id": 334931,
+      "name": "jduell.mcbugs@gmail.com",
+      "nick": "jduell.mcbugs"
+    },
+    {
+      "real_name": "Michal Novotny [:michal]",
+      "id": 268625,
+      "email": "michal.novotny@gmail.com",
+      "name": "michal.novotny@gmail.com",
+      "nick": "michal"
+    },
+    {
+      "real_name": "Charlotte Wilson [:cswilson252]",
+      "email": "tqpcharlie@proton.me",
+      "id": 782910,
+      "nick": "cswilson252",
+      "name": "tqpcharlie@proton.me"
+    },
+    {
+      "id": 415378,
+      "email": "valentin.gosu@gmail.com",
+      "name": "valentin.gosu@gmail.com",
+      "nick": "valentin",
+      "real_name": "Valentin Gosu [:valentin] (he/him)"
+    }
+  ],
+  "cf_a11y_review_project_flag": "---",
+  "cf_status_firefox149": "fixed",
+  "cf_status_firefox148": "---",
+  "summary": "Delete expired Necko histograms & accumulation code",
+  "groups": [],
+  "op_sys": "Unspecified",
+  "resolution": "FIXED",
+  "cf_rank": null,
+  "cf_status_thunderbird_esr140": "---",
+  "see_also": [],
+  "cf_tracking_firefox148": "---",
+  "mentors_detail": [],
+  "priority": "P3",
+  "cf_tracking_firefox_esr140": "---",
+  "assigned_to": "tqpcharlie@proton.me",
+  "last_change_time_non_bot": "2026-01-29T09:50:39Z",
+  "attachments": [
+    {
+      "is_obsolete": 0,
+      "content_type": "text/x-phabricator-request",
+      "is_patch": 0,
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjc3NTc5",
+      "size": 48,
+      "creator_detail": {
+        "id": 782910,
+        "email": "tqpcharlie@proton.me",
+        "nick": "cswilson252",
+        "name": "tqpcharlie@proton.me",
+        "real_name": "Charlotte Wilson [:cswilson252]"
+      },
+      "attacher": "tqpcharlie@proton.me",
+      "summary": "Bug 1186210 - Delete expired Necko and LocalStorage histograms r=#necko-reviewers,toolkit-telemetry-reviewers,dom-storage-reviewers!",
+      "id": 9535020,
+      "is_private": 0,
+      "last_change_time": "2026-01-23T02:49:54Z",
+      "file_name": "phabricator-D277579-url.txt",
+      "bug_id": 1186210,
+      "flags": [],
+      "description": "Bug 1186210 - Delete expired Necko and LocalStorage histograms r=#necko-reviewers,toolkit-telemetry-reviewers,dom-storage-reviewers!",
+      "creator": "tqpcharlie@proton.me",
+      "creation_time": "2025-12-29T03:42:36Z"
+    }
+  ],
+  "creator_detail": {
+    "nick": "vladan",
+    "name": "vladan.bugzilla@gmail.com",
+    "id": 423812,
+    "email": "vladan.bugzilla@gmail.com",
+    "real_name": "Vladan Djeric (:vladan)"
+  },
+  "regressed_by": [],
+  "cf_tracking_thunderbird_esr115": "---",
+  "depends_on": [],
+  "flags": [],
+  "triage_owner": "valentin.gosu@gmail.com",
+  "creation_time": "2015-07-21T21:36:28Z",
+  "dupe_of": null,
+  "type": "task",
+  "cf_webcompat_priority": "---",
+  "cf_tracking_firefox147": "---",
+  "last_change_time": "2026-01-29T09:50:39Z",
+  "whiteboard": "[necko-triaged]",
+  "cf_status_firefox147": "---",
+  "url": "",
+  "duplicates": [],
+  "cf_status_firefox_esr115": "---",
+  "cf_size_estimate": "---",
+  "alias": null,
+  "cf_tracking_firefox_relnote": "---",
+  "cf_user_story": "",
+  "cf_fx_points": "---",
+  "history": [
+    {
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "flagtypes.name",
+          "added": "needinfo?(jduell.mcbugs@gmail.com)"
+        }
+      ],
+      "when": "2015-07-21T21:36:28Z",
+      "who": "vladan.bugzilla@gmail.com"
+    },
+    {
+      "who": "jduell.mcbugs@gmail.com",
+      "changes": [
+        {
+          "removed": "needinfo?(jduell.mcbugs@gmail.com)",
+          "added": "needinfo?(honzab.moz@firemni.cz)",
+          "field_name": "flagtypes.name"
+        }
+      ],
+      "when": "2015-07-23T11:28:34Z"
+    },
+    {
+      "changes": [
+        {
+          "removed": "",
+          "added": "michal.novotny@gmail.com",
+          "field_name": "cc"
+        },
+        {
+          "removed": "",
+          "field_name": "flagtypes.name",
+          "added": "needinfo?(michal.novotny@gmail.com)"
+        }
+      ],
+      "when": "2015-07-23T11:28:46Z",
+      "who": "jduell.mcbugs@gmail.com"
+    },
+    {
+      "when": "2015-07-27T14:32:23Z",
+      "changes": [
+        {
+          "added": "",
+          "removed": "needinfo?(honzab.moz@firemni.cz)",
+          "field_name": "flagtypes.name"
+        }
+      ],
+      "who": "honzab.moz@firemni.cz"
+    },
+    {
+      "who": "valentin.gosu@gmail.com",
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "blocks",
+          "added": "1160903"
+        }
+      ],
+      "when": "2015-08-03T22:47:07Z"
+    },
+    {
+      "who": "michal.novotny@gmail.com",
+      "when": "2015-08-13T22:03:44Z",
+      "changes": [
+        {
+          "added": "",
+          "removed": "needinfo?(michal.novotny@gmail.com)",
+          "field_name": "flagtypes.name"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "cc",
+          "added": "gfritzsche@mozilla.com"
+        },
+        {
+          "removed": "Telemetry",
+          "added": "Networking",
+          "field_name": "component"
+        },
+        {
+          "removed": "Toolkit",
+          "field_name": "product",
+          "added": "Core"
+        }
+      ],
+      "when": "2018-06-18T07:05:49Z",
+      "who": "gfritzsche@mozilla.com"
+    },
+    {
+      "who": "u408661@disabled.tld",
+      "when": "2018-06-21T17:09:13Z",
+      "changes": [
+        {
+          "field_name": "priority",
+          "added": "P3",
+          "removed": "--"
+        }
+      ]
+    },
+    {
+      "who": "u408661@disabled.tld",
+      "when": "2018-06-21T17:40:17Z",
+      "changes": [
+        {
+          "field_name": "whiteboard",
+          "removed": "",
+          "added": "[necko-triaged]"
+        }
+      ]
+    },
+    {
+      "when": "2022-10-11T17:29:53Z",
+      "changes": [
+        {
+          "added": "S3",
+          "removed": "normal",
+          "field_name": "severity"
+        }
+      ],
+      "who": "automation@bmo.tld"
+    },
+    {
+      "who": "phab-bot@bmo.tld",
+      "when": "2025-12-29T03:42:36Z",
+      "changes": [
+        {
+          "added": "tqpcharlie@proton.me",
+          "removed": "nobody@mozilla.org",
+          "field_name": "assigned_to"
+        },
+        {
+          "added": "ASSIGNED",
+          "removed": "NEW",
+          "field_name": "status"
+        }
+      ]
+    },
+    {
+      "who": "phab-bot@bmo.tld",
+      "when": "2025-12-29T03:43:46Z",
+      "changes": [
+        {
+          "attachment_id": 9535020,
+          "removed": "Bug 1186210 - Delete remaining expired Necko histograms r=#necko-reviewers",
+          "field_name": "attachments.description",
+          "added": "Bug 1186210 - Delete remaining expired Necko histograms r=#necko-reviewers,toolkit-telemetry-reviewers!"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "attachment_id": 9535020,
+          "added": "Bug 1186210 - Delete remaining expired Necko histograms r=#necko-reviewers,toolkit-telemetry-reviewers,dom-storage-reviewers!",
+          "removed": "Bug 1186210 - Delete remaining expired Necko histograms r=#necko-reviewers,toolkit-telemetry-reviewers!",
+          "field_name": "attachments.description"
+        }
+      ],
+      "when": "2026-01-02T14:45:56Z",
+      "who": "phab-bot@bmo.tld"
+    },
+    {
+      "who": "tqpcharlie@proton.me",
+      "changes": [
+        {
+          "field_name": "type",
+          "added": "task",
+          "removed": "defect"
+        }
+      ],
+      "when": "2026-01-08T06:03:03Z"
+    },
+    {
+      "who": "nfay@mozilla.com",
+      "when": "2026-01-16T23:51:39Z",
+      "changes": [
+        {
+          "added": "tqpcharlie@proton.me",
+          "removed": "",
+          "field_name": "cc"
+        },
+        {
+          "field_name": "flagtypes.name",
+          "removed": "",
+          "added": "needinfo?(tqpcharlie@proton.me)"
+        }
+      ]
+    },
+    {
+      "who": "tqpcharlie@proton.me",
+      "when": "2026-01-17T01:28:00Z",
+      "changes": [
+        {
+          "field_name": "flagtypes.name",
+          "added": "",
+          "removed": "needinfo?(tqpcharlie@proton.me)"
+        }
+      ]
+    },
+    {
+      "who": "tqpcharlie@proton.me",
+      "when": "2026-01-20T22:21:51Z",
+      "changes": [
+        {
+          "removed": "",
+          "added": "valentin.gosu@gmail.com",
+          "field_name": "cc"
+        },
+        {
+          "added": "needinfo?(valentin.gosu@gmail.com)",
+          "removed": "",
+          "field_name": "flagtypes.name"
+        }
+      ]
+    },
+    {
+      "who": "valentin.gosu@gmail.com",
+      "changes": [
+        {
+          "field_name": "flagtypes.name",
+          "removed": "needinfo?(valentin.gosu@gmail.com)",
+          "added": ""
+        }
+      ],
+      "when": "2026-01-21T11:51:14Z"
+    },
+    {
+      "who": "phab-bot@bmo.tld",
+      "changes": [
+        {
+          "attachment_id": 9535020,
+          "removed": "Bug 1186210 - Delete remaining expired Necko histograms r=#necko-reviewers,toolkit-telemetry-reviewers,dom-storage-reviewers!",
+          "added": "Bug 1186210 - Delete expired Necko and LocalStorage histograms r=#necko-reviewers,toolkit-telemetry-reviewers,dom-storage-reviewers!",
+          "field_name": "attachments.description"
+        }
+      ],
+      "when": "2026-01-23T02:49:54Z"
+    },
+    {
+      "who": "agoloman@mozilla.com",
+      "when": "2026-01-23T10:09:17Z",
+      "changes": [
+        {
+          "added": "needinfo?(tqpcharlie@proton.me)",
+          "removed": "",
+          "field_name": "flagtypes.name"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "removed": "needinfo?(tqpcharlie@proton.me)",
+          "added": "",
+          "field_name": "flagtypes.name"
+        }
+      ],
+      "when": "2026-01-23T19:14:31Z",
+      "who": "tqpcharlie@proton.me"
+    },
+    {
+      "when": "2026-01-29T09:50:39Z",
+      "changes": [
+        {
+          "field_name": "status",
+          "removed": "ASSIGNED",
+          "added": "RESOLVED"
+        },
+        {
+          "removed": "",
+          "field_name": "resolution",
+          "added": "FIXED"
+        },
+        {
+          "added": "149 Branch",
+          "field_name": "target_milestone",
+          "removed": "---"
+        },
+        {
+          "added": "2026-01-29T09:50:39Z",
+          "field_name": "cf_last_resolved",
+          "removed": ""
+        },
+        {
+          "field_name": "cf_status_firefox149",
+          "added": "fixed",
+          "removed": "---"
+        },
+        {
+          "comment_count": 17,
+          "added": "bugherder",
+          "removed": "",
+          "field_name": "comment_tag",
+          "comment_id": 17864547
+        }
+      ],
+      "who": "chorotan@mozilla.com"
+    }
+  ],
+  "counts": {
+    "regressed_by": 0,
+    "blocks": 0,
+    "depends_on": 1,
+    "cc": 6,
+    "comments": 18,
+    "regressions": 0,
+    "keywords": 0,
+    "duplicates": 0,
+    "attachments": 1
+  },
+  "classification": "Components",
+  "cf_tracking_firefox_esr115": "---",
+  "description": "A lot of Necko histograms have expired and need to be removed from the codebase along with their accumulation code.\n\nFull list of expired histograms:\nhttps://groups.google.com/forum/#!topic/mozilla.dev.telemetry-alerts/Uw9svhVTrXk\n\nThere are about a dozen expired Necko histograms in the list above:\n\nUDP_SOCKET_PARALLEL_CLOSE_COUNT\nDISK_CACHE_\nLOCALDOMSTORAGE_\nSESSIONDOMSTORAGE_",
+  "creator": "vladan.bugzilla@gmail.com",
+  "votes": 0,
+  "cf_status_firefox42": "affected",
+  "is_open": false,
+  "version": "Trunk",
+  "cc": [
+    "gfritzsche@mozilla.com",
+    "honzab.moz@firemni.cz",
+    "jduell.mcbugs@gmail.com",
+    "michal.novotny@gmail.com",
+    "tqpcharlie@proton.me",
+    "valentin.gosu@gmail.com"
+  ],
+  "is_confirmed": true,
+  "is_creator_accessible": true,
+  "cf_accessibility_severity": "---",
+  "qa_contact": "",
+  "severity": "S3",
+  "regressions": [],
+  "cf_cab_review": "---",
+  "cf_fx_iteration": "---",
+  "cf_status_thunderbird_esr115": "---",
+  "assigned_to_detail": {
+    "nick": "cswilson252",
+    "name": "tqpcharlie@proton.me",
+    "email": "tqpcharlie@proton.me",
+    "id": 782910,
+    "real_name": "Charlotte Wilson [:cswilson252]"
+  },
+  "component": "Networking",
+  "mentors": [],
+  "cf_last_resolved": "2026-01-29T09:50:39Z",
+  "cf_performance_impact": "---",
+  "filed_via": "unknown",
+  "blocks": [
+    1160903
+  ],
+  "triage_owner_detail": {
+    "real_name": "Valentin Gosu [:valentin] (he/him)",
+    "email": "valentin.gosu@gmail.com",
+    "id": 415378,
+    "name": "valentin.gosu@gmail.com",
+    "nick": "valentin"
+  },
+  "target_milestone": "149 Branch",
+  "id": 1186210,
+  "cf_crash_signature": "",
+  "platform": "Unspecified",
+  "is_cc_accessible": true,
+  "keywords": [],
+  "cf_tracking_thunderbird_esr140": "---",
+  "comments": [
+    {
+      "creation_time": "2015-07-21T21:36:28Z",
+      "creator": "vladan.bugzilla@gmail.com",
+      "raw_text": "A lot of Necko histograms have expired and need to be removed from the codebase along with their accumulation code.\n\nFull list of expired histograms:\nhttps://groups.google.com/forum/#!topic/mozilla.dev.telemetry-alerts/Uw9svhVTrXk\n\nThere are about a dozen expired Necko histograms in the list above:\n\nUDP_SOCKET_PARALLEL_CLOSE_COUNT\nDISK_CACHE_\nLOCALDOMSTORAGE_\nSESSIONDOMSTORAGE_",
+      "is_private": false,
+      "reactions": {},
+      "id": 10521370,
+      "bug_id": 1186210,
+      "text": "A lot of Necko histograms have expired and need to be removed from the codebase along with their accumulation code.\n\nFull list of expired histograms:\nhttps://groups.google.com/forum/#!topic/mozilla.dev.telemetry-alerts/Uw9svhVTrXk\n\nThere are about a dozen expired Necko histograms in the list above:\n\nUDP_SOCKET_PARALLEL_CLOSE_COUNT\nDISK_CACHE_\nLOCALDOMSTORAGE_\nSESSIONDOMSTORAGE_",
+      "author": "vladan.bugzilla@gmail.com",
+      "attachment_id": null,
+      "time": "2015-07-21T21:36:28Z",
+      "tags": [],
+      "count": 0
+    },
+    {
+      "creation_time": "2015-07-23T11:28:34Z",
+      "creator": "jduell.mcbugs@gmail.com",
+      "attachment_id": null,
+      "author": "jduell.mcbugs@gmail.com",
+      "raw_text": "Honza/Michal: the majority of these probes are from the cache/localstorage.  Can you verify that we're fine removing them all?",
+      "time": "2015-07-23T11:28:34Z",
+      "is_private": false,
+      "id": 10528941,
+      "reactions": {},
+      "count": 1,
+      "text": "Honza/Michal: the majority of these probes are from the cache/localstorage.  Can you verify that we're fine removing them all?",
+      "bug_id": 1186210,
+      "tags": []
+    },
+    {
+      "raw_text": "Michal should decide on these:\nNETWORK_CACHE_FS_TYPE\nNETWORK_CACHE_SIZE_FULL_FAT\n\nOn these I vote to remove:\nCACHE_SERVICE_LOCK*\nNETWORK_DISK_CACHE_*\nDISK_CACHE_*\nLOCALDOMSTORAGE_* since our localStorage impl is far best of all browsers and I don't want to invest time in more optimizations any time sooner.  we can introduce the probes again if needed ; I'll do the removal on these\nSESSIONDOMSTORAGE_*",
+      "creator": "honzab.moz@firemni.cz",
+      "creation_time": "2015-07-27T14:32:23Z",
+      "bug_id": 1186210,
+      "text": "Michal should decide on these:\nNETWORK_CACHE_FS_TYPE\nNETWORK_CACHE_SIZE_FULL_FAT\n\nOn these I vote to remove:\nCACHE_SERVICE_LOCK*\nNETWORK_DISK_CACHE_*\nDISK_CACHE_*\nLOCALDOMSTORAGE_* since our localStorage impl is far best of all browsers and I don't want to invest time in more optimizations any time sooner.  we can introduce the probes again if needed ; I'll do the removal on these\nSESSIONDOMSTORAGE_*",
+      "reactions": {},
+      "id": 10540467,
+      "is_private": false,
+      "attachment_id": null,
+      "author": "honzab.moz@firemni.cz",
+      "tags": [],
+      "count": 2,
+      "time": "2015-07-27T14:32:23Z"
+    },
+    {
+      "is_private": false,
+      "reactions": {},
+      "id": 10616650,
+      "text": "(In reply to Honza Bambas (not reviewing) (:mayhemer) from comment #2)\n> Michal should decide on these:\n> NETWORK_CACHE_FS_TYPE\n> NETWORK_CACHE_SIZE_FULL_FAT\n\nThese can be removed. The amount of data we've collected is enough.",
+      "bug_id": 1186210,
+      "creation_time": "2015-08-13T22:03:44Z",
+      "creator": "michal.novotny@gmail.com",
+      "raw_text": "(In reply to Honza Bambas (not reviewing) (:mayhemer) from comment #2)\n> Michal should decide on these:\n> NETWORK_CACHE_FS_TYPE\n> NETWORK_CACHE_SIZE_FULL_FAT\n\nThese can be removed. The amount of data we've collected is enough.",
+      "time": "2015-08-13T22:03:44Z",
+      "count": 3,
+      "tags": [],
+      "attachment_id": null,
+      "author": "michal.novotny@gmail.com"
+    },
+    {
+      "bug_id": 1186210,
+      "text": "Created attachment 9535020\nBug 1186210 - Delete expired Necko and LocalStorage histograms r=#necko-reviewers,toolkit-telemetry-reviewers,dom-storage-reviewers!",
+      "is_private": false,
+      "reactions": {},
+      "id": 17822701,
+      "raw_text": "",
+      "creation_time": "2025-12-29T03:42:36Z",
+      "creator": "tqpcharlie@proton.me",
+      "tags": [],
+      "count": 4,
+      "time": "2025-12-29T03:42:36Z",
+      "author": "tqpcharlie@proton.me",
+      "attachment_id": 9535020
+    },
+    {
+      "raw_text": "Pushed by kjang@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/c65f78036bc1\nhttps://hg.mozilla.org/integration/autoland/rev/bceec188eaa6\nDelete remaining expired Necko histograms r=necko-reviewers,toolkit-telemetry-reviewers,kershaw,dom-storage-reviewers,jesup",
+      "creator": "pulsebot@bmo.tld",
+      "creation_time": "2026-01-16T23:13:39Z",
+      "text": "Pushed by kjang@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/c65f78036bc1\nhttps://hg.mozilla.org/integration/autoland/rev/bceec188eaa6\nDelete remaining expired Necko histograms r=necko-reviewers,toolkit-telemetry-reviewers,kershaw,dom-storage-reviewers,jesup",
+      "bug_id": 1186210,
+      "id": 17846727,
+      "reactions": {},
+      "is_private": false,
+      "attachment_id": null,
+      "author": "pulsebot@bmo.tld",
+      "count": 5,
+      "tags": [],
+      "time": "2026-01-16T23:13:39Z"
+    },
+    {
+      "text": "Pushed by nfay@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/7fc83e3f7e11\nhttps://hg.mozilla.org/integration/autoland/rev/8f5b6abe842f\nRevert \"Bug 1186210 - Delete remaining expired Necko histograms r=necko-reviewers,toolkit-telemetry-reviewers,kershaw,dom-storage-reviewers,jesup\" for causing bustages @ LocalStorageCache.cpp",
+      "bug_id": 1186210,
+      "is_private": false,
+      "reactions": {},
+      "id": 17846747,
+      "raw_text": "Pushed by nfay@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/7fc83e3f7e11\nhttps://hg.mozilla.org/integration/autoland/rev/8f5b6abe842f\nRevert \"Bug 1186210 - Delete remaining expired Necko histograms r=necko-reviewers,toolkit-telemetry-reviewers,kershaw,dom-storage-reviewers,jesup\" for causing bustages @ LocalStorageCache.cpp",
+      "creation_time": "2026-01-16T23:46:38Z",
+      "creator": "pulsebot@bmo.tld",
+      "count": 6,
+      "tags": [],
+      "time": "2026-01-16T23:46:38Z",
+      "attachment_id": null,
+      "author": "pulsebot@bmo.tld"
+    },
+    {
+      "count": 7,
+      "tags": [],
+      "time": "2026-01-16T23:51:39Z",
+      "author": "nfay@mozilla.com",
+      "attachment_id": null,
+      "text": "Backed out for causing bustages @ LocalStorageCache.cpp\n\n[Backout link](https://hg.mozilla.org/integration/autoland/rev/8f5b6abe842f018204c497c7731dc660e4d4d10a)\n\n[Push with failures](https://treeherder.mozilla.org/jobs?repo=autoland&group_state=expanded&resultStatus=testfailed%2Cbusted%2Cexception&revision=bceec188eaa60ee161a195ab73f202a4417708cd&searchStr=build&selectedTaskRun=TjBEdBj0THKIdHF6pPxqsQ.0)\n\n[Failure log](https://treeherder.mozilla.org/logviewer?job_id=544059043&repo=autoland&task=TjBEdBj0THKIdHF6pPxqsQ.0&lineNumber=24075)",
+      "bug_id": 1186210,
+      "id": 17846752,
+      "reactions": {},
+      "is_private": false,
+      "raw_text": "Backed out for causing bustages @ LocalStorageCache.cpp\n\n[Backout link](https://hg.mozilla.org/integration/autoland/rev/8f5b6abe842f018204c497c7731dc660e4d4d10a)\n\n[Push with failures](https://treeherder.mozilla.org/jobs?repo=autoland&group_state=expanded&resultStatus=testfailed%2Cbusted%2Cexception&revision=bceec188eaa60ee161a195ab73f202a4417708cd&searchStr=build&selectedTaskRun=TjBEdBj0THKIdHF6pPxqsQ.0)\n\n[Failure log](https://treeherder.mozilla.org/logviewer?job_id=544059043&repo=autoland&task=TjBEdBj0THKIdHF6pPxqsQ.0&lineNumber=24075)",
+      "creator": "nfay@mozilla.com",
+      "creation_time": "2026-01-16T23:51:39Z"
+    },
+    {
+      "is_private": false,
+      "reactions": {},
+      "id": 17846854,
+      "bug_id": 1186210,
+      "text": "Added back base `metrics.yaml` for header compatibility.",
+      "creation_time": "2026-01-17T01:28:00Z",
+      "creator": "tqpcharlie@proton.me",
+      "raw_text": "Added back base `metrics.yaml` for header compatibility.",
+      "time": "2026-01-17T01:28:00Z",
+      "tags": [],
+      "count": 8,
+      "attachment_id": null,
+      "author": "tqpcharlie@proton.me"
+    },
+    {
+      "attachment_id": null,
+      "author": "tqpcharlie@proton.me",
+      "time": "2026-01-17T03:17:29Z",
+      "count": 9,
+      "tags": [],
+      "creation_time": "2026-01-17T03:17:29Z",
+      "creator": "tqpcharlie@proton.me",
+      "raw_text": "breakage is caused by https://searchfox.org/firefox-main/source/dom/storage/LocalStorageCache.cpp#238",
+      "is_private": false,
+      "id": 17846922,
+      "reactions": {},
+      "text": "breakage is caused by https://searchfox.org/firefox-main/source/dom/storage/LocalStorageCache.cpp#238",
+      "bug_id": 1186210
+    },
+    {
+      "author": "tqpcharlie@proton.me",
+      "attachment_id": null,
+      "time": "2026-01-20T22:21:51Z",
+      "tags": [],
+      "count": 10,
+      "creator": "tqpcharlie@proton.me",
+      "creation_time": "2026-01-20T22:21:51Z",
+      "raw_text": "Wondering if any of these histograms [are still needed/used](https://phabricator.services.mozilla.com/D277579#9690825), as many are set to `expires: never`.",
+      "id": 17851958,
+      "reactions": {},
+      "is_private": false,
+      "bug_id": 1186210,
+      "text": "Wondering if any of these histograms [are still needed/used](https://phabricator.services.mozilla.com/D277579#9690825), as many are set to `expires: never`."
+    },
+    {
+      "time": "2026-01-21T11:51:14Z",
+      "tags": [],
+      "count": 11,
+      "attachment_id": null,
+      "author": "valentin.gosu@gmail.com",
+      "id": 17852720,
+      "reactions": {},
+      "is_private": false,
+      "bug_id": 1186210,
+      "text": "I can only speak for the networking one:\nhttps://glam.telemetry.mozilla.org/fog/probe/network_disk_cache_shutdown_v2/explore?visiblePercentiles=%5B99.9%2C99%2C95%2C75%2C50%2C25%2C5%5D\n\nWe don't check it often. It's mostly there to track whether the Cache thread shuts down in reasonable time.\nIt might still be useful, but given that we haven't looked at it in a while, and there are no current shutdown hang issues, I'm OK with removing it.",
+      "creator": "valentin.gosu@gmail.com",
+      "creation_time": "2026-01-21T11:51:14Z",
+      "raw_text": "I can only speak for the networking one:\nhttps://glam.telemetry.mozilla.org/fog/probe/network_disk_cache_shutdown_v2/explore?visiblePercentiles=%5B99.9%2C99%2C95%2C75%2C50%2C25%2C5%5D\n\nWe don't check it often. It's mostly there to track whether the Cache thread shuts down in reasonable time.\nIt might still be useful, but given that we haven't looked at it in a while, and there are no current shutdown hang issues, I'm OK with removing it."
+    },
+    {
+      "count": 12,
+      "tags": [],
+      "time": "2026-01-23T08:30:13Z",
+      "author": "pulsebot@bmo.tld",
+      "attachment_id": null,
+      "text": "Pushed by valentin.gosu@gmail.com:\nhttps://github.com/mozilla-firefox/firefox/commit/245f8ca52ddd\nhttps://hg.mozilla.org/integration/autoland/rev/5f9814a3049e\nDelete expired Necko and LocalStorage histograms r=necko-reviewers,toolkit-telemetry-reviewers,kershaw,dom-storage-reviewers,jesup,janv",
+      "bug_id": 1186210,
+      "is_private": false,
+      "id": 17855700,
+      "reactions": {},
+      "raw_text": "Pushed by valentin.gosu@gmail.com:\nhttps://github.com/mozilla-firefox/firefox/commit/245f8ca52ddd\nhttps://hg.mozilla.org/integration/autoland/rev/5f9814a3049e\nDelete expired Necko and LocalStorage histograms r=necko-reviewers,toolkit-telemetry-reviewers,kershaw,dom-storage-reviewers,jesup,janv",
+      "creation_time": "2026-01-23T08:30:13Z",
+      "creator": "pulsebot@bmo.tld"
+    },
+    {
+      "time": "2026-01-23T09:04:53Z",
+      "count": 13,
+      "tags": [],
+      "author": "pulsebot@bmo.tld",
+      "attachment_id": null,
+      "is_private": false,
+      "reactions": {},
+      "id": 17855731,
+      "text": "Pushed by agoloman@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/9cf0cdca48f4\nhttps://hg.mozilla.org/integration/autoland/rev/0e7780173c75\nRevert \"Bug 1186210 - Delete expired Necko and LocalStorage histograms r=necko-reviewers,toolkit-telemetry-reviewers,kershaw,dom-storage-reviewers,jesup,janv\" for causing build bustages @LocalStorageCache.",
+      "bug_id": 1186210,
+      "creation_time": "2026-01-23T09:04:53Z",
+      "creator": "pulsebot@bmo.tld",
+      "raw_text": "Pushed by agoloman@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/9cf0cdca48f4\nhttps://hg.mozilla.org/integration/autoland/rev/0e7780173c75\nRevert \"Bug 1186210 - Delete expired Necko and LocalStorage histograms r=necko-reviewers,toolkit-telemetry-reviewers,kershaw,dom-storage-reviewers,jesup,janv\" for causing build bustages @LocalStorageCache."
+    },
+    {
+      "tags": [],
+      "bug_id": 1186210,
+      "count": 14,
+      "text": "Backed out for causing build bustages @LocalStorageCache.\n* [Backout link](https://hg.mozilla.org/integration/autoland/rev/0e7780173c75)\n* [Push with failures](https://treeherder.mozilla.org/jobs?repo=autoland&group_state=expanded&resultStatus=testfailed%2Cbusted%2Cexception%2Crunnable&revision=5f9814a3049e7a41fc32f1d0854b65db9d491a34) \n* [Failure Log](https://treeherder.mozilla.org/logviewer?job_id=545066220&repo=autoland&task=S_N-YPEjRfWD7O4YaQ-8lw.0)",
+      "is_private": false,
+      "id": 17855881,
+      "reactions": {},
+      "time": "2026-01-23T10:09:17Z",
+      "author": "agoloman@mozilla.com",
+      "attachment_id": null,
+      "raw_text": "Backed out for causing build bustages @LocalStorageCache.\n* [Backout link](https://hg.mozilla.org/integration/autoland/rev/0e7780173c75)\n* [Push with failures](https://treeherder.mozilla.org/jobs?repo=autoland&group_state=expanded&resultStatus=testfailed%2Cbusted%2Cexception%2Crunnable&revision=5f9814a3049e7a41fc32f1d0854b65db9d491a34) \n* [Failure Log](https://treeherder.mozilla.org/logviewer?job_id=545066220&repo=autoland&task=S_N-YPEjRfWD7O4YaQ-8lw.0)",
+      "creation_time": "2026-01-23T10:09:17Z",
+      "creator": "agoloman@mozilla.com"
+    },
+    {
+      "author": "tqpcharlie@proton.me",
+      "attachment_id": null,
+      "raw_text": "Pushed fix (header removal) up to Phabricator.",
+      "creation_time": "2026-01-23T19:14:31Z",
+      "creator": "tqpcharlie@proton.me",
+      "tags": [],
+      "bug_id": 1186210,
+      "count": 15,
+      "text": "Pushed fix (header removal) up to Phabricator.",
+      "is_private": false,
+      "id": 17856652,
+      "reactions": {},
+      "time": "2026-01-23T19:14:31Z"
+    },
+    {
+      "author": "pulsebot@bmo.tld",
+      "attachment_id": null,
+      "time": "2026-01-28T19:34:59Z",
+      "tags": [],
+      "count": 16,
+      "creator": "pulsebot@bmo.tld",
+      "creation_time": "2026-01-28T19:34:59Z",
+      "raw_text": "Pushed by jan.varga@gmail.com:\nhttps://github.com/mozilla-firefox/firefox/commit/6974eb7ab8ce\nhttps://hg.mozilla.org/integration/autoland/rev/37d35c3e2afa\nDelete expired Necko and LocalStorage histograms r=necko-reviewers,toolkit-telemetry-reviewers,kershaw,dom-storage-reviewers,jesup,janv",
+      "reactions": {},
+      "id": 17863787,
+      "is_private": false,
+      "bug_id": 1186210,
+      "text": "Pushed by jan.varga@gmail.com:\nhttps://github.com/mozilla-firefox/firefox/commit/6974eb7ab8ce\nhttps://hg.mozilla.org/integration/autoland/rev/37d35c3e2afa\nDelete expired Necko and LocalStorage histograms r=necko-reviewers,toolkit-telemetry-reviewers,kershaw,dom-storage-reviewers,jesup,janv"
+    },
+    {
+      "reactions": {},
+      "id": 17864547,
+      "is_private": false,
+      "bug_id": 1186210,
+      "text": "https://hg.mozilla.org/mozilla-central/rev/37d35c3e2afa",
+      "creator": "chorotan@mozilla.com",
+      "creation_time": "2026-01-29T09:50:39Z",
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/37d35c3e2afa",
+      "time": "2026-01-29T09:50:39Z",
+      "tags": [
+        "bugherder"
+      ],
+      "count": 17,
+      "attachment_id": null,
+      "author": "chorotan@mozilla.com"
+    }
+  ],
+  "cf_status_firefox_esr140": "---",
+  "cf_webcompat_score": "---",
+  "product": "Core",
+  "cf_qa_whiteboard": "",
+  "comment_count": 18,
+  "status": "RESOLVED",
+  "cf_tracking_firefox149": "---"
+}

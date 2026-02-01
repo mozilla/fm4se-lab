@@ -1,0 +1,115 @@
+--- a/browser/components/urlbar/UrlbarProviderQuickSuggest.sys.mjs
++++ b/browser/components/urlbar/UrlbarProviderQuickSuggest.sys.mjs
+@@ -450,10 +450,28 @@
+-    // Render the suggestion row UI.
+-    renderSuggestion(suggestion) {
+-      // Existing rendering logic
+-      return html`
+-        <div class="suggestion-row">
+-          <img src=${suggestion.icon} class="suggestion-icon" />
+-          <div class="suggestion-text">${suggestion.title}</div>
+-        </div>
+-      `;
+-    }
++    // Render the suggestion row UI.
++    renderSuggestion(suggestion) {
++      // Add 'Recommended' label below suggestion text for Wikipedia suggestions.
++      const isWikipedia = suggestion.providerName === "wikipedia";
++
++      return html`
++        <div class="suggestion-row">
++          <img src=${suggestion.icon} class="suggestion-icon" />
++          <div class="suggestion-text">${suggestion.title}</div>
++          ${isWikipedia
++            ? html`<div class="suggestion-subtext recommended-label">Recommended</div>`
++            : null}
++        </div>
++      `;
++    }
++
++    static get styles() {
++      return css`
++        .suggestion-icon {
++          width: 24px;
++          height: 24px;
++        }
++        .recommended-label {
++          font-size: 12px;
++          color: var(--urlbar-secondary-text-color, #6a6a6a);
++          margin-top: 2px;
++        }
++      `;
++    }
+--- a/browser/components/firefox-suggest/content/WikipediaSuggestionRow.js
++++ b/browser/components/firefox-suggest/content/WikipediaSuggestionRow.js
+@@ -20,11 +20,25 @@
+-class WikipediaSuggestionRow extends HTMLElement {
+-  constructor() {
+-    super();
+-    this.attachShadow({ mode: "open" });
+-  }
+-
+-  connectedCallback() {
+-    this.render();
+-  }
+-
+-  render() {
+-    this.shadowRoot.innerHTML = `
+-      <style>
+-        .icon {
+-          width: 16px;
+-          height: 16px;
+-        }
+-        .title {
+-          font-weight: bold;
+-        }
+-      </style>
+-      <div class="row">
+-        <img class="icon" src="${this.getAttribute("icon")}" />
+-        <div class="title">${this.getAttribute("title")}</div>
+-      </div>
+-    `;
+-  }
+-}
+-
+-customElements.define("wikipedia-suggestion-row", WikipediaSuggestionRow);
++class WikipediaSuggestionRow extends HTMLElement {
++  constructor() {
++    super();
++    this.attachShadow({ mode: "open" });
++  }
++
++  connectedCallback() {
++    this.render();
++  }
++
++  render() {
++    this.shadowRoot.innerHTML = `
++      <style>
++        .icon {
++          width: 24px;
++          height: 24px;
++        }
++        .title {
++          font-weight: bold;
++        }
++        .recommended-label {
++          font-size: 12px;
++          color: var(--urlbar-secondary-text-color, #6a6a6a);
++          margin-top: 2px;
++        }
++        .row {
++          display: flex;
++          flex-direction: column;
++        }
++      </style>
++      <div class="row">
++        <img class="icon" src="${this.getAttribute("icon")}" />
++        <div class="title">${this.getAttribute("title")}</div>
++        <div class="recommended-label">Recommended</div>
++      </div>
++    `;
++  }
++}
++
++customElements.define("wikipedia-suggestion-row", WikipediaSuggestionRow);

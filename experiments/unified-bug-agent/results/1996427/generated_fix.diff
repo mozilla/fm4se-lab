@@ -1,0 +1,142 @@
+--- a/netwerk/dns/DNS.cpp
++++ b/netwerk/dns/DNS.cpp
+@@ -1500,6 +1500,34 @@
+ bool
+ DNSRequest::IsLocalOrPrivateAddress(const nsACString& aHost) {
++  // Resolve the host to IP(s) and check if any is local/private
++  nsCOMPtr<nsIDNSService> dns = do_GetService(NS_DNSSERVICE_CONTRACTID);
++  if (!dns) {
++    return false;
++  }
++
++  nsTArray<net::NetAddr> addrs;
++  nsresult rv = dns->GetNetAddrByName(aHost, addrs);
++  if (NS_FAILED(rv)) {
++    return false;
++  }
++
++  for (const auto& addr : addrs) {
++    if (addr.inet.family == AF_INET) {
++      uint32_t ip = ntohl(addr.inet.ip);
++      // 10.0.0.0/8
++      if ((ip & 0xff000000) == 0x0a000000) {
++        return true;
++      }
++      // 172.16.0.0/12
++      if ((ip & 0xfff00000) == 0xac100000) {
++        return true;
++      }
++      // 192.168.0.0/16
++      if ((ip & 0xffff0000) == 0xc0a80000) {
++        return true;
++      }
++      // 127.0.0.0/8 loopback
++      if ((ip & 0xff000000) == 0x7f000000) {
++        return true;
++      }
++    } else if (addr.inet.family == AF_INET6) {
++      // Check IPv6 localhost ::1
++      static const uint8_t localhost6[16] = {0};
++      if (memcmp(addr.inet.ipv6, localhost6, 15) == 0 &&
++          addr.inet.ipv6[15] == 1) {
++        return true;
++      }
++      // Check IPv6 unique local addresses fc00::/7
++      if ((addr.inet.ipv6[0] & 0xfe) == 0xfc) {
++        return true;
++      }
++    }
++  }
++  return false;
++}
++
++// Add a method to mark the host as bypassing ECH
++void
++DNSRequest::SetBypassECH(bool bypass) {
++  mBypassECH = bypass;
++}
++
++bool
++DNSRequest::GetBypassECH() const {
++  return mBypassECH;
++}
+@@ -1510,6 +1538,12 @@
+ void
+ DNSRequest::Start(...) {
++  // Determine if host resolves to local/private IP and mark bypass ECH accordingly
++  if (Preferences::GetBool("network.dns.ech.bypass_internal", true)) {
++    if (IsLocalOrPrivateAddress(mHost)) {
++      SetBypassECH(true);
++    }
++  }
++
+   // existing start logic...
+ }
+--- a/netwerk/protocol/http/TlsHandshaker.cpp
++++ b/netwerk/protocol/http/TlsHandshaker.cpp
+@@ -200,6 +200,20 @@
+ void
+ TlsHandshaker::StartHandshake() {
++  // Check if DNS request indicates to bypass ECH for this host
++  bool bypassECH = false;
++  if (mDNSRequest) {
++    bypassECH = mDNSRequest->GetBypassECH();
++  }
++
++  if (bypassECH) {
++    // Disable ECH for this handshake to avoid internal_error alert
++    mTlsSocketControl->SetECHEnabled(false);
++  }
++
++  // Proceed with handshake as usual
++  mTlsSocketControl->StartHandshake();
+ }
+--- a/security/manager/ssl/nsSSLSocketProvider.cpp
++++ b/security/manager/ssl/nsSSLSocketProvider.cpp
+@@ -500,6 +500,15 @@
+ nsresult
+ nsSSLSocketProvider::CreateSocket(...) {
++  // Intercept creation to pass ECH bypass flag if applicable
++  nsCOMPtr<nsISupports> securityInfo;
++  // Assume we have access to DNSRequest or equivalent to check bypassECH
++  bool bypassECH = false;
++  if (mDNSRequest) {
++    bypassECH = mDNSRequest->GetBypassECH();
++  }
++
++  if (bypassECH) {
++    // Pass flag down to socket control to disable ECH
++    socketControl->SetECHEnabled(false);
++  }
++
+   // Existing socket creation logic...
+ }
+--- a/security/manager/ssl/nsNSSSocketControl.cpp
++++ b/security/manager/ssl/nsNSSSocketControl.cpp
+@@ -1200,6 +1200,21 @@
+ void
+ nsNSSSocketControl::SetECHEnabled(bool aEnabled) {
++  mECHEnabled = aEnabled;
++}
++
++bool
++nsNSSSocketControl::GetECHEnabled() const {
++  return mECHEnabled;
++}
++
++void
++nsNSSSocketControl::Init() {
++  // Default to true unless overridden
++  mECHEnabled = true;
++}
++
++// In handshake code, check mECHEnabled before attempting ECH
++// Example:
++// if (mECHEnabled) { attempt ECH } else { skip ECH }
+--- a/modules/libpref/init/all.js
++++ b/modules/libpref/init/all.js
+@@ -1000,6 +1000,8 @@
+ // Network preferences
+ pref("network.dns.ech.bypass_internal", true);
++  
++// New pref to bypass ECH for internal/local IPs

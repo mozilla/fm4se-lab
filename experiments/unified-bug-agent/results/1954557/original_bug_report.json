@@ -1,0 +1,561 @@
+{
+  "type": "task",
+  "cf_status_firefox147": "---",
+  "cf_webcompat_score": "---",
+  "keywords": [],
+  "assigned_to": "lgreco@mozilla.com",
+  "url": "",
+  "blocks": [
+    1938445
+  ],
+  "severity": "N/A",
+  "cf_accessibility_severity": "---",
+  "cf_status_thunderbird_esr140": "---",
+  "cf_last_resolved": "2025-05-24T09:15:21Z",
+  "counts": {
+    "blocks": 0,
+    "regressed_by": 0,
+    "regressions": 0,
+    "duplicates": 0,
+    "comments": 8,
+    "cc": 3,
+    "depends_on": 1,
+    "attachments": 3,
+    "keywords": 0
+  },
+  "attachments": [
+    {
+      "file_name": "phabricator-D242343-url.txt",
+      "is_private": 0,
+      "creator": "mconley@mozilla.com",
+      "bug_id": 1954557,
+      "summary": "Bug 1954557 - Do not allow version downgrades for built-in addons. r?rpl!",
+      "creation_time": "2025-03-20T14:54:34Z",
+      "description": "Bug 1954557 - Do not allow version downgrades for built-in addons. r?rpl!",
+      "id": 9473340,
+      "creator_detail": {
+        "email": "mconley@mozilla.com",
+        "id": 403756,
+        "real_name": "Mike Conley (:mconley) (:\u2699\ufe0f)",
+        "name": "mconley@mozilla.com",
+        "nick": "mconley"
+      },
+      "is_patch": 0,
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjQyMzQz",
+      "last_change_time": "2025-03-24T18:18:30Z",
+      "is_obsolete": 1,
+      "attacher": "mconley@mozilla.com",
+      "size": 48,
+      "flags": [],
+      "content_type": "text/x-phabricator-request"
+    },
+    {
+      "is_patch": 0,
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjQ3MDY5",
+      "last_change_time": "2025-04-30T12:22:38Z",
+      "is_obsolete": 0,
+      "attacher": "lgreco@mozilla.com",
+      "content_type": "text/x-phabricator-request",
+      "size": 48,
+      "flags": [],
+      "is_private": 0,
+      "file_name": "phabricator-D247069-url.txt",
+      "summary": "Bug 1954557 - Keep system-signed upgrades to builtin add-on version on app version upgrades, reset system-signed set on app version downgrades. r?willdurand!,baku",
+      "bug_id": 1954557,
+      "creator": "lgreco@mozilla.com",
+      "id": 9484240,
+      "description": "Bug 1954557 - Keep system-signed upgrades to builtin add-on version on app version upgrades, reset system-signed set on app version downgrades. r?willdurand!,baku",
+      "creation_time": "2025-04-29T14:05:08Z",
+      "creator_detail": {
+        "name": "lgreco@mozilla.com",
+        "nick": "rpl",
+        "real_name": "Luca Greco [:rpl] [:luca] [:lgreco]",
+        "email": "lgreco@mozilla.com",
+        "id": 339062
+      }
+    },
+    {
+      "size": 48,
+      "flags": [],
+      "content_type": "text/x-phabricator-request",
+      "is_obsolete": 0,
+      "attacher": "lgreco@mozilla.com",
+      "last_change_time": "2025-04-30T12:22:41Z",
+      "is_patch": 0,
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjQ3MDcw",
+      "creator_detail": {
+        "real_name": "Luca Greco [:rpl] [:luca] [:lgreco]",
+        "name": "lgreco@mozilla.com",
+        "nick": "rpl",
+        "email": "lgreco@mozilla.com",
+        "id": 339062
+      },
+      "creator": "lgreco@mozilla.com",
+      "summary": "Bug 1954557 - Hide invalid addons in system-addons location selectively. r?willdurand!,baku",
+      "bug_id": 1954557,
+      "description": "Bug 1954557 - Hide invalid addons in system-addons location selectively. r?willdurand!,baku",
+      "creation_time": "2025-04-29T14:05:11Z",
+      "id": 9484241,
+      "file_name": "phabricator-D247070-url.txt",
+      "is_private": 0
+    }
+  ],
+  "cf_cab_review": "---",
+  "cf_tracking_firefox_relnote": "---",
+  "mentors_detail": [],
+  "cf_status_thunderbird_esr115": "---",
+  "filed_via": "standard_form",
+  "is_cc_accessible": true,
+  "dupe_of": null,
+  "component": "Add-ons Manager",
+  "votes": 0,
+  "regressions": [],
+  "last_change_time": "2026-01-26T23:26:20Z",
+  "assigned_to_detail": {
+    "email": "lgreco@mozilla.com",
+    "id": 339062,
+    "name": "lgreco@mozilla.com",
+    "nick": "rpl",
+    "real_name": "Luca Greco [:rpl] [:luca] [:lgreco]"
+  },
+  "cf_tracking_firefox_esr115": "---",
+  "comments": [
+    {
+      "creation_time": "2025-03-17T18:25:34Z",
+      "count": 0,
+      "raw_text": "When [packaged as a built-in addon](https://bugzilla.mozilla.org/show_bug.cgi?id=1938448), one of the invariants for the addon is that it should not be restarted at runtime. Instead, when an update is made available, [it will only be applied after a restart](https://searchfox.org/mozilla-central/rev/a8a00d67c6c7118f0b95cffa26740202c3b9e6f3/browser/extensions/newtab/webext-glue/background.js#9-18).\n\nLet us consider the following scenario:\n\n1. Firefox 138 is on the Release Channel, Firefox 139 is on Beta and Nightly is on version 140.\n2. We \"train-hop\" New Tab version 140.1.0 to the Firefox 138 Release channel. So now Firefox 138 Release users now have New Tab 140.1.0 running.\n3. Then, the trains leave the station, and we ship Firefox 139 to the Release channel.\n\nAccording to baku, with the way the Addon Manager currently works, after applying the Firefox browser upgrade from 138 to 139, when the browser starts up, New Tab version 140.1.0 would be _uninstalled_ and the built-in version of New Tab (138.0.0) would be installed and enabled instead. This would be a _downgrade_ of the addon. Also, only _after_ Balrog has re-sent the instruction to install 140.1.0 to the client would it be downloaded, and only _after_ the next restart would it be manifested.\n\nThis breaks the train-hopping model in a few ways:\n\n1. New Tab currently stores some state in some local data stores. These data stores _might_ be migrated forward if their schema changes. We are not prepared to migrate _back_ in the event of a version downgrade. This could then mean that older versions of New Tab would be running with newer versions of the data stores, which could result in undefined behaviour.\n2. Since we don't apply updates of the New Tab addon until restart, this would mean that after an upgrade, any features or bugfixes released in the train-hop would disappear or regress until the next browser restart.\n\nWhat would be ideal is if, regardless of the location of the addon (browser.jar, in the profile directory), the one with the higher version number always \"wins\". How possible is this?",
+      "id": 17398292,
+      "creator": "mconley@mozilla.com",
+      "bug_id": 1954557,
+      "tags": [],
+      "time": "2025-03-17T18:25:34Z",
+      "reactions": {},
+      "text": "When [packaged as a built-in addon](https://bugzilla.mozilla.org/show_bug.cgi?id=1938448), one of the invariants for the addon is that it should not be restarted at runtime. Instead, when an update is made available, [it will only be applied after a restart](https://searchfox.org/mozilla-central/rev/a8a00d67c6c7118f0b95cffa26740202c3b9e6f3/browser/extensions/newtab/webext-glue/background.js#9-18).\n\nLet us consider the following scenario:\n\n1. Firefox 138 is on the Release Channel, Firefox 139 is on Beta and Nightly is on version 140.\n2. We \"train-hop\" New Tab version 140.1.0 to the Firefox 138 Release channel. So now Firefox 138 Release users now have New Tab 140.1.0 running.\n3. Then, the trains leave the station, and we ship Firefox 139 to the Release channel.\n\nAccording to baku, with the way the Addon Manager currently works, after applying the Firefox browser upgrade from 138 to 139, when the browser starts up, New Tab version 140.1.0 would be _uninstalled_ and the built-in version of New Tab (138.0.0) would be installed and enabled instead. This would be a _downgrade_ of the addon. Also, only _after_ Balrog has re-sent the instruction to install 140.1.0 to the client would it be downloaded, and only _after_ the next restart would it be manifested.\n\nThis breaks the train-hopping model in a few ways:\n\n1. New Tab currently stores some state in some local data stores. These data stores _might_ be migrated forward if their schema changes. We are not prepared to migrate _back_ in the event of a version downgrade. This could then mean that older versions of New Tab would be running with newer versions of the data stores, which could result in undefined behaviour.\n2. Since we don't apply updates of the New Tab addon until restart, this would mean that after an upgrade, any features or bugfixes released in the train-hop would disappear or regress until the next browser restart.\n\nWhat would be ideal is if, regardless of the location of the addon (browser.jar, in the profile directory), the one with the higher version number always \"wins\". How possible is this?",
+      "is_private": false,
+      "attachment_id": null,
+      "author": "mconley@mozilla.com"
+    },
+    {
+      "attachment_id": 9473340,
+      "author": "mconley@mozilla.com",
+      "reactions": {},
+      "is_private": false,
+      "text": "Created attachment 9473340\nBug 1954557 - Do not allow version downgrades for built-in addons. r?rpl!",
+      "tags": [],
+      "time": "2025-03-20T14:54:34Z",
+      "count": 1,
+      "raw_text": "",
+      "id": 17403360,
+      "creation_time": "2025-03-20T14:54:34Z",
+      "bug_id": 1954557,
+      "creator": "mconley@mozilla.com"
+    },
+    {
+      "attachment_id": 9484240,
+      "author": "lgreco@mozilla.com",
+      "reactions": {},
+      "is_private": false,
+      "text": "Created attachment 9484240\nBug 1954557 - Keep system-signed upgrades to builtin add-on version on app version upgrades, reset system-signed set on app version downgrades. r?willdurand!,baku",
+      "tags": [],
+      "time": "2025-04-29T14:05:08Z",
+      "id": 17465930,
+      "count": 2,
+      "raw_text": "",
+      "creation_time": "2025-04-29T14:05:08Z",
+      "bug_id": 1954557,
+      "creator": "lgreco@mozilla.com"
+    },
+    {
+      "attachment_id": 9484241,
+      "author": "lgreco@mozilla.com",
+      "reactions": {},
+      "text": "Created attachment 9484241\nBug 1954557 - Hide invalid addons in system-addons location selectively. r?willdurand!,baku",
+      "is_private": false,
+      "tags": [],
+      "time": "2025-04-29T14:05:11Z",
+      "creation_time": "2025-04-29T14:05:11Z",
+      "raw_text": "",
+      "id": 17465931,
+      "count": 3,
+      "creator": "lgreco@mozilla.com",
+      "bug_id": 1954557
+    },
+    {
+      "reactions": {},
+      "is_private": false,
+      "text": "Pushed by luca.greco@alcacoop.it:\nhttps://hg.mozilla.org/integration/autoland/rev/35ed50c347b9\nKeep system-signed upgrades to builtin add-on version on app version upgrades, reset system-signed set on app version downgrades. r=willdurand\nhttps://hg.mozilla.org/integration/autoland/rev/9e67346b54c5\nHide invalid addons in system-addons location selectively. r=willdurand",
+      "attachment_id": null,
+      "author": "pulsebot@bmo.tld",
+      "raw_text": "Pushed by luca.greco@alcacoop.it:\nhttps://hg.mozilla.org/integration/autoland/rev/35ed50c347b9\nKeep system-signed upgrades to builtin add-on version on app version upgrades, reset system-signed set on app version downgrades. r=willdurand\nhttps://hg.mozilla.org/integration/autoland/rev/9e67346b54c5\nHide invalid addons in system-addons location selectively. r=willdurand",
+      "count": 4,
+      "id": 17505765,
+      "creation_time": "2025-05-23T13:27:05Z",
+      "bug_id": 1954557,
+      "creator": "pulsebot@bmo.tld",
+      "tags": [],
+      "time": "2025-05-23T13:27:05Z"
+    },
+    {
+      "creation_time": "2025-05-23T22:41:11Z",
+      "raw_text": "Pushed by sstanca@mozilla.com:\nhttps://hg.mozilla.org/integration/autoland/rev/b37c7dc2db34\nRevert \"Bug 1954557 - Hide invalid addons in system-addons location selectively. r=willdurand\" for causing wpt failures in prefetch-transfer-size-executor.html.",
+      "id": 17506707,
+      "count": 5,
+      "creator": "pulsebot@bmo.tld",
+      "bug_id": 1954557,
+      "tags": [],
+      "time": "2025-05-23T22:41:11Z",
+      "reactions": {},
+      "text": "Pushed by sstanca@mozilla.com:\nhttps://hg.mozilla.org/integration/autoland/rev/b37c7dc2db34\nRevert \"Bug 1954557 - Hide invalid addons in system-addons location selectively. r=willdurand\" for causing wpt failures in prefetch-transfer-size-executor.html.",
+      "is_private": false,
+      "attachment_id": null,
+      "author": "pulsebot@bmo.tld"
+    },
+    {
+      "bug_id": 1954557,
+      "creator": "pulsebot@bmo.tld",
+      "id": 17506799,
+      "count": 6,
+      "raw_text": "Pushed by sstanca@mozilla.com:\nhttps://hg.mozilla.org/integration/autoland/rev/2ccfa88032e1\nKeep system-signed upgrades to builtin add-on version on app version upgrades, reset system-signed set on app version downgrades. r=willdurand\nhttps://hg.mozilla.org/integration/autoland/rev/3d1af0906ca8\nHide invalid addons in system-addons location selectively. r=willdurand",
+      "creation_time": "2025-05-24T01:54:58Z",
+      "time": "2025-05-24T01:54:58Z",
+      "tags": [],
+      "is_private": false,
+      "text": "Pushed by sstanca@mozilla.com:\nhttps://hg.mozilla.org/integration/autoland/rev/2ccfa88032e1\nKeep system-signed upgrades to builtin add-on version on app version upgrades, reset system-signed set on app version downgrades. r=willdurand\nhttps://hg.mozilla.org/integration/autoland/rev/3d1af0906ca8\nHide invalid addons in system-addons location selectively. r=willdurand",
+      "reactions": {},
+      "author": "pulsebot@bmo.tld",
+      "attachment_id": null
+    },
+    {
+      "is_private": false,
+      "text": "https://hg.mozilla.org/mozilla-central/rev/2ccfa88032e1\nhttps://hg.mozilla.org/mozilla-central/rev/3d1af0906ca8",
+      "reactions": {},
+      "author": "chorotan@mozilla.com",
+      "attachment_id": null,
+      "bug_id": 1954557,
+      "creator": "chorotan@mozilla.com",
+      "count": 7,
+      "id": 17506884,
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/2ccfa88032e1\nhttps://hg.mozilla.org/mozilla-central/rev/3d1af0906ca8",
+      "creation_time": "2025-05-24T09:15:21Z",
+      "time": "2025-05-24T09:15:21Z",
+      "tags": [
+        "bugherder"
+      ]
+    }
+  ],
+  "cc": [
+    "amarchesini@mozilla.com",
+    "lgreco@mozilla.com",
+    "pdahiya@mozilla.com"
+  ],
+  "is_open": false,
+  "is_creator_accessible": true,
+  "depends_on": [],
+  "cf_has_str": "---",
+  "cf_status_firefox_esr115": "---",
+  "qa_contact": "",
+  "groups": [],
+  "triage_owner": "lgreco@mozilla.com",
+  "triage_owner_detail": {
+    "email": "lgreco@mozilla.com",
+    "id": 339062,
+    "real_name": "Luca Greco [:rpl] [:luca] [:lgreco]",
+    "name": "lgreco@mozilla.com",
+    "nick": "rpl"
+  },
+  "product": "Toolkit",
+  "cf_tracking_firefox147": "---",
+  "cf_crash_signature": "",
+  "summary": "Do not allow downgrades of built-in addons, always preferring the option with the highest version number",
+  "cf_qa_whiteboard": "",
+  "last_change_time_non_bot": "2026-01-26T23:26:20Z",
+  "cf_tracking_firefox148": "---",
+  "creator_detail": {
+    "email": "mconley@mozilla.com",
+    "id": 403756,
+    "real_name": "Mike Conley (:mconley) (:\u2699\ufe0f)",
+    "name": "mconley@mozilla.com",
+    "nick": "mconley"
+  },
+  "comment_count": 8,
+  "cf_user_story": "",
+  "classification": "Components",
+  "status": "RESOLVED",
+  "cf_status_firefox_esr140": "---",
+  "cf_status_firefox149": "---",
+  "op_sys": "Unspecified",
+  "flags": [],
+  "resolution": "FIXED",
+  "cf_fx_points": "---",
+  "whiteboard": "[hnt-trainhop-project][addons-jira]",
+  "cf_tracking_firefox149": "---",
+  "creator": "mconley@mozilla.com",
+  "cf_tracking_firefox_esr140": "---",
+  "see_also": [
+    "https://mozilla-hub.atlassian.net/browse/HNTENG-410",
+    "https://mozilla-hub.atlassian.net/browse/WEBEXT-2181",
+    "https://bugzilla.mozilla.org/show_bug.cgi?id=1966736",
+    "https://mozilla-hub.atlassian.net/browse/HNT-1572"
+  ],
+  "cf_performance_impact": "---",
+  "cf_status_firefox148": "---",
+  "priority": "P2",
+  "regressed_by": [],
+  "platform": "Unspecified",
+  "target_milestone": "140 Branch",
+  "cf_a11y_review_project_flag": "---",
+  "cf_tracking_thunderbird_esr115": "---",
+  "alias": null,
+  "cf_rank": null,
+  "history": [
+    {
+      "who": "mconley@mozilla.com",
+      "changes": [
+        {
+          "removed": "",
+          "added": "amarchesini@mozilla.com, lgreco@mozilla.com",
+          "field_name": "cc"
+        }
+      ],
+      "when": "2025-03-17T18:25:47Z"
+    },
+    {
+      "who": "mconley@mozilla.com",
+      "changes": [
+        {
+          "added": "1938445",
+          "removed": "",
+          "field_name": "blocks"
+        },
+        {
+          "removed": "",
+          "added": "[hnt-trainhop]",
+          "field_name": "whiteboard"
+        }
+      ],
+      "when": "2025-03-17T18:26:29Z"
+    },
+    {
+      "when": "2025-03-17T18:26:34Z",
+      "changes": [
+        {
+          "field_name": "see_also",
+          "removed": "",
+          "added": "https://mozilla-hub.atlassian.net/browse/HNTENG-410"
+        }
+      ],
+      "who": "jira-integration@bots.tld"
+    },
+    {
+      "when": "2025-03-18T12:59:32Z",
+      "changes": [
+        {
+          "field_name": "severity",
+          "added": "N/A",
+          "removed": "--"
+        },
+        {
+          "field_name": "priority",
+          "removed": "--",
+          "added": "P2"
+        },
+        {
+          "removed": "[hnt-trainhop]",
+          "added": "[hnt-trainhop][addons-jira]",
+          "field_name": "whiteboard"
+        }
+      ],
+      "who": "lgreco@mozilla.com"
+    },
+    {
+      "changes": [
+        {
+          "field_name": "status",
+          "removed": "NEW",
+          "added": "ASSIGNED"
+        },
+        {
+          "removed": "nobody@mozilla.org",
+          "added": "mconley@mozilla.com",
+          "field_name": "assigned_to"
+        }
+      ],
+      "when": "2025-03-20T14:54:34Z",
+      "who": "phab-bot@bmo.tld"
+    },
+    {
+      "who": "lgreco@mozilla.com",
+      "changes": [
+        {
+          "removed": "mconley@mozilla.com",
+          "added": "lgreco@mozilla.com",
+          "field_name": "assigned_to"
+        },
+        {
+          "field_name": "see_also",
+          "added": "https://mozilla-hub.atlassian.net/browse/WEBEXT-2181",
+          "removed": ""
+        }
+      ],
+      "when": "2025-03-24T16:35:39Z"
+    },
+    {
+      "who": "phab-bot@bmo.tld",
+      "when": "2025-03-24T18:18:30Z",
+      "changes": [
+        {
+          "added": "1",
+          "removed": "0",
+          "attachment_id": 9473340,
+          "field_name": "attachments.isobsolete"
+        }
+      ]
+    },
+    {
+      "who": "mconley@mozilla.com",
+      "when": "2025-04-02T19:44:50Z",
+      "changes": [
+        {
+          "removed": "",
+          "added": "pdahiya@mozilla.com",
+          "field_name": "cc"
+        }
+      ]
+    },
+    {
+      "who": "phab-bot@bmo.tld",
+      "changes": [
+        {
+          "added": "Bug 1954557 - Keep system-signed upgrades to builtin add-on version on app version upgrades, reset system-signed set on app version downgrades. r?willdurand!,baku",
+          "removed": "WIP: Bug 1954557 - Reset system-signed addons set on app downgrades or app upgrades when builtin version is more recent.",
+          "field_name": "attachments.description",
+          "attachment_id": 9484240
+        }
+      ],
+      "when": "2025-04-30T12:22:38Z"
+    },
+    {
+      "when": "2025-04-30T12:22:41Z",
+      "changes": [
+        {
+          "attachment_id": 9484241,
+          "field_name": "attachments.description",
+          "added": "Bug 1954557 - Hide invalid addons in system-addons location selectively. r?willdurand!,baku",
+          "removed": "WIP: Bug 1954557 - Hide invalid addons in system-addons location selectively."
+        }
+      ],
+      "who": "phab-bot@bmo.tld"
+    },
+    {
+      "who": "lgreco@mozilla.com",
+      "when": "2025-05-15T17:43:16Z",
+      "changes": [
+        {
+          "added": "https://bugzilla.mozilla.org/show_bug.cgi?id=1966736",
+          "removed": "",
+          "field_name": "see_also"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "field_name": "status",
+          "removed": "ASSIGNED",
+          "added": "RESOLVED"
+        },
+        {
+          "field_name": "target_milestone",
+          "removed": "---",
+          "added": "140 Branch"
+        },
+        {
+          "field_name": "resolution",
+          "added": "FIXED",
+          "removed": ""
+        },
+        {
+          "field_name": "cf_last_resolved",
+          "removed": "",
+          "added": "2025-05-24T09:15:21Z"
+        },
+        {
+          "field_name": "cf_status_firefox140",
+          "added": "fixed",
+          "removed": "---"
+        }
+      ],
+      "when": "2025-05-24T09:15:21Z",
+      "who": "chorotan@mozilla.com"
+    },
+    {
+      "who": "chorotan@mozilla.com",
+      "when": "2025-05-24T09:15:22Z",
+      "changes": [
+        {
+          "field_name": "comment_tag",
+          "comment_count": 7,
+          "added": "bugherder",
+          "removed": "",
+          "comment_id": 17506884
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "field_name": "whiteboard",
+          "added": "[hnt-trainhop-project][addons-jira]",
+          "removed": "[hnt-trainhop][addons-jira]"
+        }
+      ],
+      "when": "2026-01-26T17:16:39Z",
+      "who": "mconley@mozilla.com"
+    },
+    {
+      "who": "jira-integration@bots.tld",
+      "when": "2026-01-26T23:26:20Z",
+      "changes": [
+        {
+          "field_name": "see_also",
+          "added": "https://mozilla-hub.atlassian.net/browse/HNT-1572",
+          "removed": ""
+        }
+      ]
+    }
+  ],
+  "cf_status_firefox140": "fixed",
+  "version": "unspecified",
+  "duplicates": [],
+  "cc_detail": [
+    {
+      "id": 446257,
+      "email": "amarchesini@mozilla.com",
+      "nick": "baku",
+      "name": "amarchesini@mozilla.com",
+      "real_name": "Andrea Marchesini [:baku]"
+    },
+    {
+      "real_name": "Luca Greco [:rpl] [:luca] [:lgreco]",
+      "name": "lgreco@mozilla.com",
+      "nick": "rpl",
+      "email": "lgreco@mozilla.com",
+      "id": 339062
+    },
+    {
+      "email": "pdahiya@mozilla.com",
+      "id": 471708,
+      "real_name": "Punam Dahiya [:pdahiya]",
+      "name": "pdahiya@mozilla.com",
+      "nick": "pdahiya"
+    }
+  ],
+  "cf_tracking_thunderbird_esr140": "---",
+  "is_confirmed": true,
+  "creation_time": "2025-03-17T18:25:34Z",
+  "description": "When [packaged as a built-in addon](https://bugzilla.mozilla.org/show_bug.cgi?id=1938448), one of the invariants for the addon is that it should not be restarted at runtime. Instead, when an update is made available, [it will only be applied after a restart](https://searchfox.org/mozilla-central/rev/a8a00d67c6c7118f0b95cffa26740202c3b9e6f3/browser/extensions/newtab/webext-glue/background.js#9-18).\n\nLet us consider the following scenario:\n\n1. Firefox 138 is on the Release Channel, Firefox 139 is on Beta and Nightly is on version 140.\n2. We \"train-hop\" New Tab version 140.1.0 to the Firefox 138 Release channel. So now Firefox 138 Release users now have New Tab 140.1.0 running.\n3. Then, the trains leave the station, and we ship Firefox 139 to the Release channel.\n\nAccording to baku, with the way the Addon Manager currently works, after applying the Firefox browser upgrade from 138 to 139, when the browser starts up, New Tab version 140.1.0 would be _uninstalled_ and the built-in version of New Tab (138.0.0) would be installed and enabled instead. This would be a _downgrade_ of the addon. Also, only _after_ Balrog has re-sent the instruction to install 140.1.0 to the client would it be downloaded, and only _after_ the next restart would it be manifested.\n\nThis breaks the train-hopping model in a few ways:\n\n1. New Tab currently stores some state in some local data stores. These data stores _might_ be migrated forward if their schema changes. We are not prepared to migrate _back_ in the event of a version downgrade. This could then mean that older versions of New Tab would be running with newer versions of the data stores, which could result in undefined behaviour.\n2. Since we don't apply updates of the New Tab addon until restart, this would mean that after an upgrade, any features or bugfixes released in the train-hop would disappear or regress until the next browser restart.\n\nWhat would be ideal is if, regardless of the location of the addon (browser.jar, in the profile directory), the one with the higher version number always \"wins\". How possible is this?",
+  "id": 1954557,
+  "cf_webcompat_priority": "---",
+  "mentors": [],
+  "cf_fx_iteration": "---"
+}

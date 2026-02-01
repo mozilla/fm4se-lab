@@ -1,0 +1,667 @@
+{
+  "bug_id": 2011767,
+  "timestamp": "2026-02-01 17:44:44",
+  "data_sources": [
+    "bugzilla",
+    "crash-stats"
+  ],
+  "bug_data": {
+    "cf_fx_points": "---",
+    "whiteboard": "[necko-triaged]",
+    "cf_tracking_firefox149": "---",
+    "cf_performance_impact": "---",
+    "see_also": [],
+    "priority": "P2",
+    "cf_status_firefox148": "---",
+    "cf_tracking_firefox_esr140": "---",
+    "creator": "edgul@mozilla.com",
+    "cf_status_firefox_esr140": "---",
+    "cf_status_firefox149": "fixed",
+    "status": "RESOLVED",
+    "resolution": "FIXED",
+    "flags": [],
+    "op_sys": "Unspecified",
+    "cc_detail": [],
+    "duplicates": [],
+    "version": "unspecified",
+    "cf_fx_iteration": "---",
+    "mentors": [],
+    "cf_webcompat_priority": "---",
+    "is_confirmed": true,
+    "cf_tracking_thunderbird_esr140": "---",
+    "id": 2011767,
+    "description": "0.5.2 has some necessary fixes to get past MSRV 1.87.0, which is still in use in CI.\nIt also has some performance fixes to make URLPattern use faster.",
+    "creation_time": "2026-01-21T21:28:38Z",
+    "cf_a11y_review_project_flag": "---",
+    "target_milestone": "149 Branch",
+    "cf_size_estimate": "---",
+    "platform": "Unspecified",
+    "regressed_by": [],
+    "alias": null,
+    "cf_tracking_thunderbird_esr115": "---",
+    "cf_rank": null,
+    "history": [
+      {
+        "who": "edgul@mozilla.com",
+        "changes": [
+          {
+            "added": "edgul@mozilla.com",
+            "removed": "nobody@mozilla.org",
+            "field_name": "assigned_to"
+          }
+        ],
+        "when": "2026-01-21T21:28:47Z"
+      },
+      {
+        "changes": [
+          {
+            "field_name": "summary",
+            "removed": "urlpatter crate version bump 0.5.2",
+            "added": "urlpattern crate version bump 0.5.2"
+          }
+        ],
+        "when": "2026-01-21T21:28:55Z",
+        "who": "edgul@mozilla.com"
+      },
+      {
+        "when": "2026-01-21T21:41:04Z",
+        "changes": [
+          {
+            "field_name": "attachments.description",
+            "attachment_id": 9539219,
+            "removed": "Bug 2011767 - urlpattern crate version bump to fix CI bustage and some perf fixes r?#necko-reviewers",
+            "added": "Bug 2011767 - urlpattern crate version bump 0.5.2 to fix CI bustage and some perf fixes r?#necko-reviewers"
+          }
+        ],
+        "who": "phab-bot@bmo.tld"
+      },
+      {
+        "changes": [
+          {
+            "attachment_id": 9539219,
+            "field_name": "attachments.description",
+            "removed": "Bug 2011767 - urlpattern crate version bump 0.5.2 to fix CI bustage and some perf fixes r?#necko-reviewers",
+            "added": "Bug 2011767 - urlpattern crate version bump to fix CI bustage and some perf fixes r?#necko-reviewers"
+          }
+        ],
+        "when": "2026-01-22T14:49:07Z",
+        "who": "phab-bot@bmo.tld"
+      },
+      {
+        "who": "abutkovits@mozilla.com",
+        "when": "2026-01-22T20:53:24Z",
+        "changes": [
+          {
+            "removed": "",
+            "added": "needinfo?(edgul@mozilla.com)",
+            "field_name": "flagtypes.name"
+          }
+        ]
+      },
+      {
+        "who": "chorotan@mozilla.com",
+        "when": "2026-01-29T16:09:14Z",
+        "changes": [
+          {
+            "added": "FIXED",
+            "removed": "",
+            "field_name": "resolution"
+          },
+          {
+            "removed": "---",
+            "added": "149 Branch",
+            "field_name": "target_milestone"
+          },
+          {
+            "field_name": "status",
+            "added": "RESOLVED",
+            "removed": "NEW"
+          },
+          {
+            "added": "2026-01-29T16:09:14Z",
+            "removed": "",
+            "field_name": "cf_last_resolved"
+          },
+          {
+            "removed": "---",
+            "added": "fixed",
+            "field_name": "cf_status_firefox149"
+          },
+          {
+            "added": "bugherder",
+            "removed": "",
+            "comment_id": 17865359,
+            "field_name": "comment_tag",
+            "comment_count": 5
+          }
+        ]
+      },
+      {
+        "who": "edgul@mozilla.com",
+        "changes": [
+          {
+            "field_name": "flagtypes.name",
+            "added": "",
+            "removed": "needinfo?(edgul@mozilla.com)"
+          }
+        ],
+        "when": "2026-01-30T17:00:55Z"
+      }
+    ],
+    "attachments": [
+      {
+        "creator_detail": {
+          "nick": "edgul",
+          "name": "edgul@mozilla.com",
+          "real_name": "edgul",
+          "id": 701256,
+          "email": "edgul@mozilla.com"
+        },
+        "creator": "edgul@mozilla.com",
+        "bug_id": 2011767,
+        "summary": "Bug 2011767 - urlpattern crate version bump to fix CI bustage and some perf fixes r?#necko-reviewers",
+        "creation_time": "2026-01-21T21:36:14Z",
+        "description": "Bug 2011767 - urlpattern crate version bump to fix CI bustage and some perf fixes r?#necko-reviewers",
+        "id": 9539219,
+        "file_name": "phabricator-D279942-url.txt",
+        "is_private": 0,
+        "size": 48,
+        "flags": [],
+        "content_type": "text/x-phabricator-request",
+        "is_obsolete": 0,
+        "attacher": "edgul@mozilla.com",
+        "last_change_time": "2026-01-22T14:49:07Z",
+        "is_patch": 0,
+        "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjc5OTQy"
+      }
+    ],
+    "cf_tracking_firefox_relnote": "---",
+    "cf_cab_review": "---",
+    "cf_last_resolved": "2026-01-29T16:09:14Z",
+    "counts": {
+      "blocks": 0,
+      "regressions": 0,
+      "duplicates": 0,
+      "regressed_by": 0,
+      "comments": 6,
+      "cc": 0,
+      "depends_on": 0,
+      "attachments": 1,
+      "keywords": 0
+    },
+    "filed_via": "standard_form",
+    "is_cc_accessible": true,
+    "cf_status_thunderbird_esr115": "---",
+    "mentors_detail": [],
+    "keywords": [],
+    "cf_webcompat_score": "---",
+    "type": "task",
+    "cf_status_firefox147": "---",
+    "severity": "N/A",
+    "cf_status_thunderbird_esr140": "---",
+    "cf_accessibility_severity": "---",
+    "url": "",
+    "assigned_to": "edgul@mozilla.com",
+    "blocks": [],
+    "groups": [],
+    "qa_contact": "",
+    "triage_owner": "valentin.gosu@gmail.com",
+    "product": "Core",
+    "cf_tracking_firefox147": "---",
+    "triage_owner_detail": {
+      "real_name": "Valentin Gosu [:valentin] (he/him)",
+      "name": "valentin.gosu@gmail.com",
+      "nick": "valentin",
+      "email": "valentin.gosu@gmail.com",
+      "id": 415378
+    },
+    "cf_status_firefox_esr115": "---",
+    "cf_has_str": "---",
+    "creator_detail": {
+      "name": "edgul@mozilla.com",
+      "nick": "edgul",
+      "real_name": "edgul",
+      "email": "edgul@mozilla.com",
+      "id": 701256
+    },
+    "classification": "Components",
+    "cf_user_story": "",
+    "comment_count": 6,
+    "summary": "urlpattern crate version bump 0.5.2",
+    "cf_crash_signature": "",
+    "last_change_time_non_bot": "2026-01-30T17:00:55Z",
+    "cf_tracking_firefox148": "---",
+    "cf_qa_whiteboard": "",
+    "last_change_time": "2026-01-30T17:00:55Z",
+    "cf_tracking_firefox_esr115": "---",
+    "assigned_to_detail": {
+      "email": "edgul@mozilla.com",
+      "id": 701256,
+      "name": "edgul@mozilla.com",
+      "nick": "edgul",
+      "real_name": "edgul"
+    },
+    "votes": 0,
+    "component": "Networking",
+    "dupe_of": null,
+    "regressions": [],
+    "depends_on": [],
+    "cc": [],
+    "comments": [
+      {
+        "author": "edgul@mozilla.com",
+        "attachment_id": null,
+        "text": "0.5.2 has some necessary fixes to get past MSRV 1.87.0, which is still in use in CI.\nIt also has some performance fixes to make URLPattern use faster.",
+        "is_private": false,
+        "reactions": {},
+        "time": "2026-01-21T21:28:38Z",
+        "tags": [],
+        "creator": "edgul@mozilla.com",
+        "bug_id": 2011767,
+        "creation_time": "2026-01-21T21:28:38Z",
+        "count": 0,
+        "id": 17853718,
+        "raw_text": "0.5.2 has some necessary fixes to get past MSRV 1.87.0, which is still in use in CI.\nIt also has some performance fixes to make URLPattern use faster."
+      },
+      {
+        "reactions": {},
+        "is_private": false,
+        "text": "Created attachment 9539219\nBug 2011767 - urlpattern crate version bump to fix CI bustage and some perf fixes r?#necko-reviewers",
+        "attachment_id": 9539219,
+        "author": "edgul@mozilla.com",
+        "count": 1,
+        "id": 17853726,
+        "raw_text": "",
+        "creation_time": "2026-01-21T21:36:14Z",
+        "bug_id": 2011767,
+        "creator": "edgul@mozilla.com",
+        "tags": [],
+        "time": "2026-01-21T21:36:14Z"
+      },
+      {
+        "tags": [],
+        "time": "2026-01-22T14:56:37Z",
+        "count": 2,
+        "id": 17854684,
+        "raw_text": "Pushed by eguloien@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/34fe02635a9c\nhttps://hg.mozilla.org/integration/autoland/rev/3990b9b51414\nurlpattern crate version bump to fix CI bustage and some perf fixes r=necko-reviewers,supply-chain-reviewers,kershaw",
+        "creation_time": "2026-01-22T14:56:37Z",
+        "bug_id": 2011767,
+        "creator": "pulsebot@bmo.tld",
+        "attachment_id": null,
+        "author": "pulsebot@bmo.tld",
+        "reactions": {},
+        "is_private": false,
+        "text": "Pushed by eguloien@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/34fe02635a9c\nhttps://hg.mozilla.org/integration/autoland/rev/3990b9b51414\nurlpattern crate version bump to fix CI bustage and some perf fixes r=necko-reviewers,supply-chain-reviewers,kershaw"
+      },
+      {
+        "attachment_id": null,
+        "author": "abutkovits@mozilla.com",
+        "reactions": {},
+        "text": "Backed out for causing failures complaining about regexResult.\n\nBackout link: https://hg-edge.mozilla.org/integration/autoland/rev/d8594f11efadec8cbad9c477e149b65e4444d330\n\nPush where failures started: https://treeherder.mozilla.org/jobs?repo=autoland&selectedTaskRun=P7sPJKPyThSZ5Pa3n272Tg.0&resultStatus=testfailed%2Cbusted%2Cexception%2Cretry%2Cusercancel&revision=9a8624999ab9dfd0e34d53f4fd6dfe90bfadc9c6\n\nFailure log: https://treeherder.mozilla.org/logviewer?job_id=544954988&repo=autoland&task=P7sPJKPyThSZ5Pa3n272Tg.0&lineNumber=4836",
+        "is_private": false,
+        "tags": [],
+        "time": "2026-01-22T20:53:24Z",
+        "creation_time": "2026-01-22T20:53:24Z",
+        "id": 17855179,
+        "raw_text": "Backed out for causing failures complaining about regexResult.\n\nBackout link: https://hg-edge.mozilla.org/integration/autoland/rev/d8594f11efadec8cbad9c477e149b65e4444d330\n\nPush where failures started: https://treeherder.mozilla.org/jobs?repo=autoland&selectedTaskRun=P7sPJKPyThSZ5Pa3n272Tg.0&resultStatus=testfailed%2Cbusted%2Cexception%2Cretry%2Cusercancel&revision=9a8624999ab9dfd0e34d53f4fd6dfe90bfadc9c6\n\nFailure log: https://treeherder.mozilla.org/logviewer?job_id=544954988&repo=autoland&task=P7sPJKPyThSZ5Pa3n272Tg.0&lineNumber=4836",
+        "count": 3,
+        "creator": "abutkovits@mozilla.com",
+        "bug_id": 2011767
+      },
+      {
+        "id": 17864171,
+        "count": 4,
+        "raw_text": "Pushed by eguloien@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/7136228db444\nhttps://hg.mozilla.org/integration/autoland/rev/da8a6e62bfdb\nurlpattern crate version bump to fix CI bustage and some perf fixes r=necko-reviewers,supply-chain-reviewers,kershaw",
+        "creation_time": "2026-01-29T00:59:11Z",
+        "bug_id": 2011767,
+        "creator": "pulsebot@bmo.tld",
+        "tags": [],
+        "time": "2026-01-29T00:59:11Z",
+        "reactions": {},
+        "is_private": false,
+        "text": "Pushed by eguloien@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/7136228db444\nhttps://hg.mozilla.org/integration/autoland/rev/da8a6e62bfdb\nurlpattern crate version bump to fix CI bustage and some perf fixes r=necko-reviewers,supply-chain-reviewers,kershaw",
+        "attachment_id": null,
+        "author": "pulsebot@bmo.tld"
+      },
+      {
+        "creation_time": "2026-01-29T16:09:14Z",
+        "id": 17865359,
+        "raw_text": "https://hg.mozilla.org/mozilla-central/rev/da8a6e62bfdb",
+        "count": 5,
+        "creator": "chorotan@mozilla.com",
+        "bug_id": 2011767,
+        "tags": [
+          "bugherder"
+        ],
+        "time": "2026-01-29T16:09:14Z",
+        "reactions": {},
+        "text": "https://hg.mozilla.org/mozilla-central/rev/da8a6e62bfdb",
+        "is_private": false,
+        "attachment_id": null,
+        "author": "chorotan@mozilla.com"
+      }
+    ],
+    "is_creator_accessible": true,
+    "is_open": false
+  },
+  "comments": [
+    {
+      "raw_text": "0.5.2 has some necessary fixes to get past MSRV 1.87.0, which is still in use in CI.\nIt also has some performance fixes to make URLPattern use faster.",
+      "creator": "edgul@mozilla.com",
+      "creation_time": "2026-01-21T21:28:38Z",
+      "bug_id": 2011767,
+      "text": "0.5.2 has some necessary fixes to get past MSRV 1.87.0, which is still in use in CI.\nIt also has some performance fixes to make URLPattern use faster.",
+      "reactions": {},
+      "id": 17853718,
+      "is_private": false,
+      "attachment_id": null,
+      "author": "edgul@mozilla.com",
+      "tags": [],
+      "count": 0,
+      "time": "2026-01-21T21:28:38Z"
+    },
+    {
+      "creation_time": "2026-01-21T21:36:14Z",
+      "creator": "edgul@mozilla.com",
+      "raw_text": "",
+      "is_private": false,
+      "id": 17853726,
+      "reactions": {},
+      "bug_id": 2011767,
+      "text": "Created attachment 9539219\nBug 2011767 - urlpattern crate version bump to fix CI bustage and some perf fixes r?#necko-reviewers",
+      "attachment_id": 9539219,
+      "author": "edgul@mozilla.com",
+      "time": "2026-01-21T21:36:14Z",
+      "tags": [],
+      "count": 1
+    },
+    {
+      "raw_text": "Pushed by eguloien@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/34fe02635a9c\nhttps://hg.mozilla.org/integration/autoland/rev/3990b9b51414\nurlpattern crate version bump to fix CI bustage and some perf fixes r=necko-reviewers,supply-chain-reviewers,kershaw",
+      "creation_time": "2026-01-22T14:56:37Z",
+      "creator": "pulsebot@bmo.tld",
+      "bug_id": 2011767,
+      "text": "Pushed by eguloien@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/34fe02635a9c\nhttps://hg.mozilla.org/integration/autoland/rev/3990b9b51414\nurlpattern crate version bump to fix CI bustage and some perf fixes r=necko-reviewers,supply-chain-reviewers,kershaw",
+      "is_private": false,
+      "id": 17854684,
+      "reactions": {},
+      "author": "pulsebot@bmo.tld",
+      "attachment_id": null,
+      "tags": [],
+      "count": 2,
+      "time": "2026-01-22T14:56:37Z"
+    },
+    {
+      "attachment_id": null,
+      "author": "abutkovits@mozilla.com",
+      "time": "2026-01-22T20:53:24Z",
+      "tags": [],
+      "count": 3,
+      "creator": "abutkovits@mozilla.com",
+      "creation_time": "2026-01-22T20:53:24Z",
+      "raw_text": "Backed out for causing failures complaining about regexResult.\n\nBackout link: https://hg-edge.mozilla.org/integration/autoland/rev/d8594f11efadec8cbad9c477e149b65e4444d330\n\nPush where failures started: https://treeherder.mozilla.org/jobs?repo=autoland&selectedTaskRun=P7sPJKPyThSZ5Pa3n272Tg.0&resultStatus=testfailed%2Cbusted%2Cexception%2Cretry%2Cusercancel&revision=9a8624999ab9dfd0e34d53f4fd6dfe90bfadc9c6\n\nFailure log: https://treeherder.mozilla.org/logviewer?job_id=544954988&repo=autoland&task=P7sPJKPyThSZ5Pa3n272Tg.0&lineNumber=4836",
+      "id": 17855179,
+      "reactions": {},
+      "is_private": false,
+      "bug_id": 2011767,
+      "text": "Backed out for causing failures complaining about regexResult.\n\nBackout link: https://hg-edge.mozilla.org/integration/autoland/rev/d8594f11efadec8cbad9c477e149b65e4444d330\n\nPush where failures started: https://treeherder.mozilla.org/jobs?repo=autoland&selectedTaskRun=P7sPJKPyThSZ5Pa3n272Tg.0&resultStatus=testfailed%2Cbusted%2Cexception%2Cretry%2Cusercancel&revision=9a8624999ab9dfd0e34d53f4fd6dfe90bfadc9c6\n\nFailure log: https://treeherder.mozilla.org/logviewer?job_id=544954988&repo=autoland&task=P7sPJKPyThSZ5Pa3n272Tg.0&lineNumber=4836"
+    },
+    {
+      "tags": [],
+      "count": 4,
+      "time": "2026-01-29T00:59:11Z",
+      "author": "pulsebot@bmo.tld",
+      "attachment_id": null,
+      "bug_id": 2011767,
+      "text": "Pushed by eguloien@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/7136228db444\nhttps://hg.mozilla.org/integration/autoland/rev/da8a6e62bfdb\nurlpattern crate version bump to fix CI bustage and some perf fixes r=necko-reviewers,supply-chain-reviewers,kershaw",
+      "id": 17864171,
+      "reactions": {},
+      "is_private": false,
+      "raw_text": "Pushed by eguloien@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/7136228db444\nhttps://hg.mozilla.org/integration/autoland/rev/da8a6e62bfdb\nurlpattern crate version bump to fix CI bustage and some perf fixes r=necko-reviewers,supply-chain-reviewers,kershaw",
+      "creator": "pulsebot@bmo.tld",
+      "creation_time": "2026-01-29T00:59:11Z"
+    },
+    {
+      "author": "chorotan@mozilla.com",
+      "attachment_id": null,
+      "time": "2026-01-29T16:09:14Z",
+      "tags": [
+        "bugherder"
+      ],
+      "count": 5,
+      "creator": "chorotan@mozilla.com",
+      "creation_time": "2026-01-29T16:09:14Z",
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/da8a6e62bfdb",
+      "id": 17865359,
+      "reactions": {},
+      "is_private": false,
+      "bug_id": 2011767,
+      "text": "https://hg.mozilla.org/mozilla-central/rev/da8a6e62bfdb"
+    }
+  ],
+  "crash_context": {
+    "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::AutoEnterOOMUnsafeRegion::crash | js::gc::AllocateTenuredCellInGC",
+    "product": "Firefox",
+    "version": "149.0a1",
+    "os": null
+  },
+  "crashes": [
+    {
+      "uuid": "d03c7087-1d38-4800-b2ae-6ec210260125",
+      "date": "2026-01-25T23:06:34.755371+00:00",
+      "product": "Firefox",
+      "version": "149.0a1",
+      "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::AutoEnterOOMUnsafeRegion::crash | js::gc::AllocateTenuredCellInGC"
+    },
+    {
+      "uuid": "03b9a2bd-7633-4638-9bbe-56d750260125",
+      "date": "2026-01-25T23:05:20.529221+00:00",
+      "product": "Firefox",
+      "version": "115.32.0esr",
+      "signature": "js::gc::GetGCKindSlots"
+    },
+    {
+      "uuid": "49f3087b-5805-427b-a533-f23310260125",
+      "date": "2026-01-25T23:05:43.133051+00:00",
+      "product": "Firefox",
+      "version": "140.7.0esr",
+      "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::AutoEnterOOMUnsafeRegion::crash | js::gc::AllocateTenuredCellInGC"
+    },
+    {
+      "uuid": "542d40df-d509-422f-9c6b-4a88e0260125",
+      "date": "2026-01-25T23:06:30.421086+00:00",
+      "product": "Firefox",
+      "version": "149.0a1",
+      "signature": "OOM | unknown | mozJSModuleLoader::InitSharedGlobal"
+    },
+    {
+      "uuid": "37117b71-587a-41ad-99c8-f34750260125",
+      "date": "2026-01-25T23:06:07.767377+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::gc::FreeSpan::allocate"
+    },
+    {
+      "uuid": "a4d1a01d-97f8-4739-8f70-1994d0260125",
+      "date": "2026-01-25T23:05:53.583985+00:00",
+      "product": "Firefox",
+      "version": "146.0.1",
+      "signature": "shutdownhang | mozilla::SpinEventLoopUntil | nsThread::WaitForAllAsynchronousShutdowns | nsThreadManager::ShutdownNonMainThreads"
+    },
+    {
+      "uuid": "6c898ef5-d1f9-46a7-8f16-184a80260125",
+      "date": "2026-01-25T23:05:32.747304+00:00",
+      "product": "Thunderbird",
+      "version": "147.0",
+      "signature": "nsMsgSearchOfflineMail::Search"
+    },
+    {
+      "uuid": "3185d2d4-b078-4f68-bd0c-4d56d0260125",
+      "date": "2026-01-25T23:05:30.519525+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "EnterBaseline"
+    },
+    {
+      "uuid": "99cb0f69-f14b-4455-9acd-313120260125",
+      "date": "2026-01-25T23:05:32.006727+00:00",
+      "product": "Firefox",
+      "version": "149.0a1",
+      "signature": "js::gc::HeaderWord::getAtomic"
+    },
+    {
+      "uuid": "1fd4fab0-8827-4217-9173-020330260125",
+      "date": "2026-01-25T23:03:16.952342+00:00",
+      "product": "Fenix",
+      "version": "132.0.2",
+      "signature": "EMPTY: no frame data available; EmptyMinidump"
+    }
+  ],
+  "bug_analysis": {
+    "bug_type": "performance",
+    "root_cause": "Outdated urlpattern crate version (prior to 0.5.2) causing CI failures due to incompatibility with MSRV 1.87.0 and suboptimal performance in URLPattern usage.",
+    "symptoms": [
+      "CI test failures",
+      "Performance issues with URLPattern usage"
+    ],
+    "affected_components": [
+      "Networking"
+    ],
+    "reproduction_steps": [
+      "Run CI using MSRV 1.87.0 with urlpattern crate version prior to 0.5.2",
+      "Observe test failures related to urlpattern",
+      "Notice slower performance in URLPattern operations"
+    ],
+    "technical_details": "The urlpattern crate was bumped to version 0.5.2 which contains fixes to pass MSRV 1.87.0 used in CI and includes performance improvements for URLPattern. Initial push caused regexResult related failures and was backed out. Subsequent push fixed these issues and was accepted.",
+    "user_impact": "No direct user-visible impact reported; mainly CI stability and improved performance in URLPattern usage internally.",
+    "severity_assessment": "medium",
+    "keywords": [
+      "urlpattern",
+      "crate version bump",
+      "MSRV 1.87.0",
+      "performance",
+      "CI failures"
+    ],
+    "likely_repository_paths": [
+      "netwerk/",
+      "third_party/rust/urlpattern/"
+    ],
+    "similar_bugs_context": {
+      "common_patterns": [
+        "OOM (Out Of Memory) crashes occurring during garbage collection",
+        "Failures to allocate memory chunks for the JS nursery",
+        "Crashes triggered by memory pressure or allocation failures in the JS engine"
+      ],
+      "potential_root_causes": [
+        "Insufficient memory available to allocate new nursery chunks during GC",
+        "Memory fragmentation or leaks causing allocation failures",
+        "Inefficient memory management or regression in the urlpattern crate bump impacting memory usage"
+      ],
+      "relevant_fix_clues": [
+        "No explicit resolution or status updates provided for the similar bugs",
+        "The crash signature points to allocation failures in the GC nursery, possibly resolved by improving memory allocation strategies or fixing leaks"
+      ],
+      "summary": "These similar bugs suggest that the crashes are caused by out-of-memory conditions during garbage collection in the JavaScript engine's nursery. The urlpattern crate version bump may have introduced increased memory pressure or triggered regressions affecting memory allocation. Without resolved statuses, the root cause likely involves memory allocation failures under pressure, indicating a need to investigate memory handling in the affected components."
+    }
+  },
+  "similar_bugs_data": [
+    {
+      "bug_id": 1472062,
+      "summary": "[meta] OOM crash evicting the nursery: \"Failed to allocate new chunk during GC\"",
+      "patch_excerpt": null,
+      "touched_files": []
+    }
+  ],
+  "similar_bugs_analysis": {
+    "common_patterns": [
+      "OOM (Out Of Memory) crashes occurring during garbage collection",
+      "Failures to allocate memory chunks for the JS nursery",
+      "Crashes triggered by memory pressure or allocation failures in the JS engine"
+    ],
+    "potential_root_causes": [
+      "Insufficient memory available to allocate new nursery chunks during GC",
+      "Memory fragmentation or leaks causing allocation failures",
+      "Inefficient memory management or regression in the urlpattern crate bump impacting memory usage"
+    ],
+    "relevant_fix_clues": [
+      "No explicit resolution or status updates provided for the similar bugs",
+      "The crash signature points to allocation failures in the GC nursery, possibly resolved by improving memory allocation strategies or fixing leaks"
+    ],
+    "summary": "These similar bugs suggest that the crashes are caused by out-of-memory conditions during garbage collection in the JavaScript engine's nursery. The urlpattern crate version bump may have introduced increased memory pressure or triggered regressions affecting memory allocation. Without resolved statuses, the root cause likely involves memory allocation failures under pressure, indicating a need to investigate memory handling in the affected components."
+  },
+  "repository_context": {
+    "netwerk": [
+      "metrics.yaml",
+      "moz.build",
+      "pings.yaml"
+    ],
+    "third_party/rust/urlpattern": [
+      ".cargo-checksum.json",
+      ".cargo_vcs_info.json",
+      ".rustfmt.toml",
+      "Cargo.lock",
+      "Cargo.toml",
+      "Cargo.toml.orig",
+      "LICENSE",
+      "README.md",
+      "rust-toolchain.toml"
+    ],
+    "fetched_files": {
+      "urlpattern": "",
+      "third_party/rust/urlpattern/Cargo.toml": "# THIS FILE IS AUTOMATICALLY GENERATED BY CARGO\n#\n# When uploading crates to the registry Cargo will automatically\n# \"normalize\" Cargo.toml files for maximal compatibility\n# with all versions of Cargo and also rewrite `path` dependencies\n# to registry (e.g., crates.io) dependencies.\n#\n# If you are reading this file be aware that the original Cargo.toml\n# will likely look very different (and much more reasonable).\n# See Cargo.toml.orig for the original contents.\n\n[package]\nedition = \"2024\"\nname = \"urlpattern\"\nversion = \"0.5.2\"\nauthors = [\n    \"the Deno authors\",\n    \"crowlKats <crowlkats@toaxl.com>\",\n]\nbuild = false\nautolib = false\nautobins = false\nautoexamples = false\nautotests = false\nautobenches = false\ndescription = \"rust-urlpattern is a Rust implementation of the URLPattern standard\"\nreadme = \"README.md\"\nlicense = \"MIT\"\nrepository = \"https://github.com/denoland/rust-urlpattern\"\n\n[lib]\nname = \"urlpattern\"\npath = \"src/lib.rs\"\n\n[[bench]]\nname = \"parse_patterns\"\npath = \"benches/parse_patterns.rs\"\nharness = false\n\n[dependencies.icu_properties]\nversion = \"2\"\n\n[dependencies.regex]\nversion = \"1.10.5\"\n\n[dependencies.serde]\nversion = \"1.0.127\"\nfeatures = [\"derive\"]\n\n[dependencies.url]\nversion = \"2.5.6\"\n\n[dev-dependencies.criterion]\nversion = \"0.5\"\n\n[dev-dependencies.serde_json]\nversion = \"1.0.66\"\n"
+    }
+  },
+  "related_tests": [
+    "Possible tests for netwerk/: 0 found",
+    "Possible tests for third_party/rust/urlpattern/: 0 found"
+  ],
+  "refined_analysis": {
+    "bug_type": "performance",
+    "root_cause": "Using urlpattern crate version prior to 0.5.2 causes CI failures on MSRV 1.87.0 and degrades URLPattern performance.",
+    "symptoms": [
+      "CI test failures referencing urlpattern on MSRV 1.87.0",
+      "Slower URLPattern operations in netwerk/ networking code"
+    ],
+    "affected_components": [
+      "Networking module (netwerk/)",
+      "URLPattern crate (third_party/rust/urlpattern/)"
+    ],
+    "reproduction_steps": [
+      "Run CI with MSRV set to 1.87.0 and urlpattern crate version older than 0.5.2",
+      "Observe CI failures related to urlpattern and degraded URLPattern benchmarks under netwerk/"
+    ],
+    "technical_details": "urlpattern crate version 0.5.2 fixes MSRV 1.87.0 compatibility issues and improves performance. Initial upgrade attempts caused regexResult failures, resolved in a subsequent patch.",
+    "user_impact": "No direct user-facing issues; affects internal CI stability and networking performance.",
+    "severity_assessment": "medium",
+    "keywords": [
+      "urlpattern",
+      "crate version bump",
+      "MSRV 1.87.0",
+      "performance",
+      "CI failures"
+    ],
+    "likely_repository_paths": [
+      "third_party/rust/urlpattern/Cargo.toml",
+      "netwerk/"
+    ],
+    "proposed_fix_approach": "Update urlpattern crate version to 0.5.2 in third_party/rust/urlpattern/Cargo.toml. Run CI with MSRV 1.87.0 to confirm absence of failures. Benchmark URLPattern operations in netwerk/ to verify performance improvements.",
+    "optimized_context": "Update urlpattern crate version to 0.5.2 in third_party/rust/urlpattern/Cargo.toml to fix CI failures and improve performance on MSRV 1.87.0. Verify fix by running CI and benchmarking URLPattern usage in netwerk/.",
+    "refinement_critique": "The current analysis correctly identifies the root cause and affected components but is verbose and contains redundant information. It lacks explicit pointers to specific files where the urlpattern crate version is specified (e.g., third_party/rust/urlpattern/Cargo.toml) and where URLPattern is used or benchmarked within the netwerk/ module. The reproduction steps could be more concise, and the proposed fix approach should be clearer and actionable by specifying exact file edits and verification steps. The analysis assumes familiarity with MSRV and crate versioning without self-contained explanations or references, reducing accessibility."
+  },
+  "filtered_context": {
+    "concise_summary": "Update urlpattern crate to version 0.5.2 in third_party/rust/urlpattern/Cargo.toml to fix CI failures and improve URLPattern performance on MSRV 1.87.0. Verify by running CI with MSRV 1.87.0 and benchmarking URLPattern usage in netwerk/.",
+    "relevant_files": [
+      "third_party/rust/urlpattern/Cargo.toml",
+      "netwerk/"
+    ],
+    "core_symptoms": [
+      "CI failures related to urlpattern on MSRV 1.87.0",
+      "Degraded URLPattern performance in netwerk/"
+    ],
+    "technical_constraints": [
+      "Must use urlpattern crate version 0.5.2 to ensure compatibility with MSRV 1.87.0",
+      "Performance improvements depend on crate version bump"
+    ]
+  },
+  "generated_fix": "--- a/third_party/rust/urlpattern/Cargo.toml\n+++ b/third_party/rust/urlpattern/Cargo.toml\n@@ -1,7 +1,7 @@\n [package]\n name = \"urlpattern\"\n-version = \"0.5.1\"\n+version = \"0.5.2\"\n edition = \"2021\"\n \n [dependencies]\n-urlpattern = \"0.5.1\"\n+urlpattern = \"0.5.2\"",
+  "token_usage": 257814
+}

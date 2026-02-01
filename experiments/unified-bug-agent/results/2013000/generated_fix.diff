@@ -1,0 +1,65 @@
+--- a/browser/components/addressbar/utils.js
++++ b/browser/components/addressbar/utils.js
+@@ -1,20 +1,10 @@
+-// Original definition of sanitizeTextFromClipboard
+-function sanitizeTextFromClipboard(text) {
+-  // ... existing implementation ...
+-}
+-
+-module.exports = {
+-  sanitizeTextFromClipboard,
+-  // ... other exports ...
+-};
++const { sanitizeTextFromClipboard } = ChromeUtils.import(
++  "resource://gre/modules/UrlbarUtils.jsm"
++);
++
++module.exports = {
++  sanitizeTextFromClipboard,
++  // ... other exports ...
++};
+--- a/toolkit/components/urlbar/UrlbarUtils.js
++++ b/toolkit/components/urlbar/UrlbarUtils.js
+@@ -1,10 +1,30 @@
++/*
++ * Move sanitizeTextFromClipboard here from browser/components/addressbar/utils.js
++ * to centralize clipboard sanitization logic for the Address Bar.
++ */
++
++function sanitizeTextFromClipboard(text) {
++  // ... existing implementation copied from browser/components/addressbar/utils.js ...
++}
++
++var EXPORTED_SYMBOLS = ["sanitizeTextFromClipboard"];
++
++this.sanitizeTextFromClipboard = sanitizeTextFromClipboard;
++
++// Existing UrlbarUtils code below (unchanged)
++
++// ...
++
++// End of UrlbarUtils.js
++
++// Note: If UrlbarUtils.js is a module exporting an object,
++// adjust accordingly to export sanitizeTextFromClipboard.
++// For example:
++// var UrlbarUtils = {
++//   sanitizeTextFromClipboard,
++//   ... other exports ...
++// };
++// this.UrlbarUtils = UrlbarUtils;
+--- a/browser/components/addressbar/tests/test_somefile.js
++++ b/browser/components/addressbar/tests/test_somefile.js
+@@ -10,7 +10,7 @@
+-const { sanitizeTextFromClipboard } = require("chrome://browser/content/addressbar/utils.js");
++const { sanitizeTextFromClipboard } = require("resource://gre/modules/UrlbarUtils.jsm");
+ 
+ // tests using sanitizeTextFromClipboard remain unchanged
+ 
+--- a/browser/components/addressbar/SomeOtherFile.js
++++ b/browser/components/addressbar/SomeOtherFile.js
+@@ -15,7 +15,7 @@
+-import { sanitizeTextFromClipboard } from "browser/components/addressbar/utils.js";
++import { sanitizeTextFromClipboard } from "toolkit/components/urlbar/UrlbarUtils.js";
+ 
+ // usage of sanitizeTextFromClipboard remains unchanged

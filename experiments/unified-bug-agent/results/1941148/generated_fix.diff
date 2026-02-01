@@ -1,0 +1,61 @@
+--- a/toolkit/content/aboutNetErrorHelpers.mjs
++++ b/toolkit/content/aboutNetErrorHelpers.mjs
+@@ -1,6 +1,7 @@
++import { URL } from "resource://gre/modules/URL.jsm";
+ 
+-function parseFailedURI(uriString) {
+-  // Manual URL parsing logic here
+-  let scheme = null;
+-  let host = null;
+-  try {
+-    let schemeEnd = uriString.indexOf(":");
+-    if (schemeEnd !== -1) {
+-      scheme = uriString.substring(0, schemeEnd);
+-    }
+-    let hostStart = uriString.indexOf("//");
+-    if (hostStart !== -1) {
+-      let hostEnd = uriString.indexOf("/", hostStart + 2);
+-      if (hostEnd === -1) {
+-        hostEnd = uriString.length;
+-      }
+-      host = uriString.substring(hostStart + 2, hostEnd);
+-    }
+-  } catch (e) {
+-    // fallback to nulls
+-  }
+-  return { scheme, host };
+-}
++function parseFailedURI(uriString) {
++  try {
++    let url = URL.fromURI(uriString);
++    return { scheme: url.scheme, host: url.host };
++  } catch (e) {
++    return { scheme: null, host: null };
++  }
++}
+ 
+-function getFailedURIHost(uriString) {
+-  // Manual parsing to extract host
+-  let host = null;
+-  try {
+-    let hostStart = uriString.indexOf("//");
+-    if (hostStart !== -1) {
+-      let hostEnd = uriString.indexOf("/", hostStart + 2);
+-      if (hostEnd === -1) {
+-        hostEnd = uriString.length;
+-      }
+-      host = uriString.substring(hostStart + 2, hostEnd);
+-    }
+-  } catch (e) {
+-    // fallback to null
+-  }
+-  return host;
+-}
++function getFailedURIHost(uriString) {
++  try {
++    let url = URL.fromURI(uriString);
++    return url.host;
++  } catch (e) {
++    return null;
++  }
++}

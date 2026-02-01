@@ -1,0 +1,103 @@
+--- a/toolkit/components/extensions/ExtensionPolicyService.cpp
++++ b/toolkit/components/extensions/ExtensionPolicyService.cpp
+@@ -450,11 +450,22 @@
+ // Existing function that compares two extensions to decide which one to use.
+ // Hypothetical function signature and logic:
+-static bool
+-CompareExtensions(const ExtensionPolicy* a, const ExtensionPolicy* b)
++static bool
++CompareExtensions(const ExtensionPolicy* a, const ExtensionPolicy* b)
+ {
+-  // Prioritize installation location over version number, causing downgrades.
+-  if (a->Location() != b->Location()) {
+-    return a->Location() < b->Location();
+-  }
+-  return a->Version() < b->Version();
++  // Fix: Always prefer highest version for built-in addons regardless of location.
++
++  bool aIsBuiltIn = a->IsBuiltIn();
++  bool bIsBuiltIn = b->IsBuiltIn();
++
++  if (aIsBuiltIn && bIsBuiltIn) {
++    // Both built-in: prefer higher version
++    return CompareVersions(a->Version(), b->Version()) < 0;
++  }
++
++  // If only one is built-in, prefer built-in addon with highest version
++  if (aIsBuiltIn && !bIsBuiltIn) {
++    return CompareVersions(a->Version(), b->Version()) < 0;
++  }
++  if (!aIsBuiltIn && bIsBuiltIn) {
++    return CompareVersions(a->Version(), b->Version()) < 0;
++  }
++
++  // Neither built-in: fallback to previous logic (location priority)
++  if (a->Location() != b->Location()) {
++    return a->Location() < b->Location();
++  }
++  return CompareVersions(a->Version(), b->Version()) < 0;
+ }
+ 
+--- a/toolkit/components/extensions/ExtensionUtils.sys.mjs
++++ b/toolkit/components/extensions/ExtensionUtils.sys.mjs
+@@ -150,10 +150,22 @@
+-// Existing function for selecting best extension among candidates
+-export function selectBestExtension(extensions) {
+-  // Prioritize by location first, then version
+-  return extensions.sort((a, b) => {
+-    if (a.location !== b.location) {
+-      return a.location - b.location;
+-    }
+-    return compareVersions(a.version, b.version);
+-  })[0];
+-}
++// Modified function: always prefer highest version for built-in addons regardless of location
++export function selectBestExtension(extensions) {
++  return extensions.sort((a, b) => {
++    const aBuiltIn = a.isBuiltIn;
++    const bBuiltIn = b.isBuiltIn;
++
++    if (aBuiltIn && bBuiltIn) {
++      // Both built-in: highest version wins
++      return compareVersions(a.version, b.version);
++    }
++
++    if (aBuiltIn && !bBuiltIn) {
++      // Prefer built-in with higher version
++      return compareVersions(a.version, b.version);
++    }
++    if (!aBuiltIn && bBuiltIn) {
++      return compareVersions(a.version, b.version);
++    }
++
++    // Neither built-in: fallback to location priority then version
++    if (a.location !== b.location) {
++      return a.location - b.location;
++    }
++    return compareVersions(a.version, b.version);
++  })[0];
++}
+ 
+--- a/toolkit/components/extensions/ExtensionPreferencesManager.sys.mjs
++++ b/toolkit/components/extensions/ExtensionPreferencesManager.sys.mjs
+@@ -300,12 +300,28 @@
+-// When upgrading system-signed addons, older versions may overwrite newer ones
+-function maybeUpgradeSystemAddon(addon) {
+-  // Existing logic blindly overwrites preferences with new addon info
+-  setAddonPreferences(addon.id, addon);
+-}
++// Fix to prevent overwriting newer built-in addon versions with older ones during upgrade
++function maybeUpgradeSystemAddon(addon) {
++  const existing = getAddonPreferences(addon.id);
++  if (existing) {
++    // Only overwrite if new addon version is greater than existing version
++    if (isBuiltIn(addon) && isBuiltIn(existing)) {
++      if (compareVersions(addon.version, existing.version) <= 0) {
++        // New version is older or equal, do not overwrite
++        return;
++      }
++    }
++  }
++  setAddonPreferences(addon.id, addon);
++}
++

@@ -1,0 +1,170 @@
+--- a/gfx/layers/AndroidHardwareBuffer.cpp
++++ b/gfx/layers/AndroidHardwareBuffer.cpp
+@@ -50,10 +50,48 @@
+-// Constructor requires registration with AndroidHardwareBufferManager.
+-AndroidHardwareBuffer::AndroidHardwareBuffer(const AndroidHardwareBufferHandle& aHandle)
+-  : mHandle(aHandle)
+-{
+-  MOZ_ASSERT(AndroidHardwareBufferManager::Get());
+-  AndroidHardwareBufferManager::Get()->Register(this);
+-}
++AndroidHardwareBuffer::AndroidHardwareBuffer(const AndroidHardwareBufferHandle& aHandle)
++  : mHandle(aHandle)
++  , mMonitor("AndroidHardwareBuffer::Monitor")
++  , mRegistered(false)
++{
++  // Only register if the manager exists in this process
++  if (AndroidHardwareBufferManager::Get()) {
++    AndroidHardwareBufferManager::Get()->Register(this);
++    mRegistered = true;
++  }
++}
++
++AndroidHardwareBuffer::~AndroidHardwareBuffer()
++{
++  if (mRegistered && AndroidHardwareBufferManager::Get()) {
++    AndroidHardwareBufferManager::Get()->Unregister(this);
++  }
++}
++
++// Fence synchronization only for same-process buffers
++bool
++AndroidHardwareBuffer::WaitForFenceIfNeeded()
++{
++  if (!mHandle.fenceFd) {
++    return true;
++  }
++  if (!mRegistered) {
++    // Can't synchronize fences across processes
++    return true;
++  }
++  // Perform fence wait as usual
++  return WaitOnFenceFd(mHandle.fenceFd);
++}
++
++// Add method to support constructing without registration
++AndroidHardwareBuffer::AndroidHardwareBuffer()
++  : mMonitor("AndroidHardwareBuffer::Monitor")
++  , mRegistered(false)
++{
++}
++
++void
++AndroidHardwareBuffer::InitWithHandle(const AndroidHardwareBufferHandle& aHandle)
++{
++  mHandle = aHandle;
++}
+--- a/gfx/layers/AndroidHardwareBuffer.h
++++ b/gfx/layers/AndroidHardwareBuffer.h
+@@ -35,11 +35,19 @@
+ class AndroidHardwareBuffer
+ {
+ public:
+-  explicit AndroidHardwareBuffer(const AndroidHardwareBufferHandle& aHandle);
+-  ~AndroidHardwareBuffer();
+-
+-  bool WaitForFenceIfNeeded();
++  explicit AndroidHardwareBuffer(const AndroidHardwareBufferHandle& aHandle);
++  AndroidHardwareBuffer();
++  ~AndroidHardwareBuffer();
++
++  void InitWithHandle(const AndroidHardwareBufferHandle& aHandle);
++
++  bool WaitForFenceIfNeeded();
+ 
+ private:
+-  AndroidHardwareBufferHandle mHandle;
+-  // Monitor and registration for synchronization and lifetime management
+-  Monitor mMonitor;
+-  bool mRegistered;
++  AndroidHardwareBufferHandle mHandle;
++  // Monitor and registration for synchronization and lifetime management
++  Monitor mMonitor;
++  bool mRegistered;
++};
+--- a/ipc/glue/AndroidHardwareBufferIPC.cpp
++++ b/ipc/glue/AndroidHardwareBufferIPC.cpp
+@@ -1,5 +1,65 @@
+-// Previously removed cross-process serialization of AndroidHardwareBuffer.
++// Re-enable cross-process serialization of AndroidHardwareBuffer by passing native handles via file descriptors.
++
++#include "AndroidHardwareBufferIPC.h"
++#include "mozilla/ipc/UnixSocket.h"
++#include "mozilla/ipc/PAndroidHardwareBufferParent.h"
++#include "mozilla/ipc/PAndroidHardwareBufferChild.h"
++#include "gfx/layers/AndroidHardwareBuffer.h"
++
++namespace mozilla {
++namespace ipc {
++
++bool
++SerializeAndroidHardwareBuffer(IPC::Message* aMsg, const AndroidHardwareBuffer& aBuffer)
++{
++  const AndroidHardwareBufferHandle& handle = aBuffer.GetHandle();
++  // Validate handle
++  if (!handle.IsValid()) {
++    return false;
++  }
++
++  // Send number of fds
++  aMsg->WriteInt32(handle.fds.size());
++  for (int fd : handle.fds) {
++    aMsg->WriteFileDescriptor(fd);
++  }
++  // Serialize other handle data excluding fds
++  aMsg->Write(handle.metadata);
++  return true;
++}
++
++bool
++DeserializeAndroidHardwareBuffer(IPC::Message* aMsg, AndroidHardwareBuffer* aBuffer)
++{
++  int32_t numFds = 0;
++  if (!aMsg->ReadInt32(&numFds) || numFds < 0) {
++    return false;
++  }
++  AndroidHardwareBufferHandle handle;
++  for (int i = 0; i < numFds; i++) {
++    int fd;
++    if (!aMsg->ReadFileDescriptor(&fd)) {
++      return false;
++    }
++    handle.fds.push_back(fd);
++  }
++  if (!aMsg->Read(&handle.metadata)) {
++    return false;
++  }
++  aBuffer->InitWithHandle(handle);
++  return true;
++}
++
++} // namespace ipc
++} // namespace mozilla
+--- a/ipc/glue/IPCMessageUtils.cpp
++++ b/ipc/glue/IPCMessageUtils.cpp
+@@ -500,6 +500,22 @@
++// AndroidHardwareBuffer (de)serialization support for cross-process transfer
++bool
++ParamTraits<mozilla::gfx::AndroidHardwareBuffer>::Write(IPC::Message* aMsg,
++                                                       IProtocol* aActor,
++                                                       const mozilla::gfx::AndroidHardwareBuffer& aParam)
++{
++  return mozilla::ipc::SerializeAndroidHardwareBuffer(aMsg, aParam);
++}
++
++bool
++ParamTraits<mozilla::gfx::AndroidHardwareBuffer>::Read(const IPC::Message* aMsg,
++                                                      PickleIterator* aIter,
++                                                      IProtocol* aActor,
++                                                      mozilla::gfx::AndroidHardwareBuffer* aResult)
++{
++  return mozilla::ipc::DeserializeAndroidHardwareBuffer(const_cast<IPC::Message*>(aMsg), aResult);
++}
++
++void
++ParamTraits<mozilla::gfx::AndroidHardwareBuffer>::Log(const mozilla::gfx::AndroidHardwareBuffer& aParam,
++                                                    std::wstring* aLog)
++{
++  aLog->append(L"AndroidHardwareBuffer");
++}
++

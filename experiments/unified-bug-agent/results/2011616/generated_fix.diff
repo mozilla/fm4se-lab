@@ -1,0 +1,38 @@
+--- a/gfx/moz.build
++++ b/gfx/moz.build
+@@ -1,7 +1,6 @@
+ # gfx/moz.build
+
+ # Sources for gfx
+-SOURCES += [
+-    "AndroidHardwareBufferApi.cpp",
+-    ...
+-]
++SOURCES += [
++    ...
++]
+--- a/mobile/android/moz.build
++++ b/mobile/android/moz.build
+@@ -1,7 +1,6 @@
+ # mobile/android/moz.build
+
+ # Sources for mobile/android
+-SOURCES += [
+-    "AndroidHardwareBufferApiWrapper.cpp",
+-    ...
+-]
++SOURCES += [
++    ...
++]
+--- a/gfx/AndroidHardwareBufferApi.cpp
++++ /dev/null
+@@ -1,XXX +0,0 @@
+-<contents of AndroidHardwareBufferApi.cpp>
+--- a/gfx/AndroidHardwareBufferApi.h
++++ /dev/null
+@@ -1,XXX +0,0 @@
+-<contents of AndroidHardwareBufferApi.h>
+--- a/mobile/android/AndroidHardwareBufferApiWrapper.cpp
++++ /dev/null
+@@ -1,XXX +0,0 @@
+-<contents of AndroidHardwareBufferApiWrapper.cpp>

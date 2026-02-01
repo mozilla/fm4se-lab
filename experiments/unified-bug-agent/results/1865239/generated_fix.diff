@@ -1,0 +1,145 @@
+--- a/netwerk/base/nsIThreadRetargetableStreamListener.idl
++++ b/netwerk/base/nsIThreadRetargetableStreamListener.idl
+@@ -1,6 +1,17 @@
+ [scriptable, uuid(6a8c9c88-3f81-4f14-87a4-bf3a1f3a0d0c)]
+ interface nsIThreadRetargetableStreamListener : nsIStreamListener
+ {
++  /**
++   * This interface extends nsIStreamListener to support retargeting stream events
++   * to a different thread. Implementations are required to guarantee strict
++   * ordering of OnDataAvailable, OnDataFinish, and OnStopRequest events.
++   *
++   * In particular, OnDataFinish will always be dispatched strictly before
++   * OnStopRequest. This ordering is enforced to avoid race conditions and ensure
++   * deterministic behavior of stream event handling.
++   *
++   * Consumers can rely on these guarantees when implementing listeners or
++   * retargeting logic.
++   */
++
++  // Existing methods...
+ };
+ 
+--- a/netwerk/protocol/http/ChannelEventQueue.cpp
++++ b/netwerk/protocol/http/ChannelEventQueue.cpp
+@@ -200,10 +200,38 @@
+ // Hypothetical existing code context for event queue dispatching
+ 
+ void
+ ChannelEventQueue::DispatchNextEvent()
+ {
+-  // Existing event dispatch logic, possibly dispatching OnDataFinish and OnStopRequest
+-  // without explicit ordering guarantees.
+-
+-  Event* event = DequeueEvent();
+-  if (!event) {
+-    mIsDispatching = false;
+-    return;
+-  }
+-
+-  event->Dispatch();
+-  // Continue dispatching next events...
++  // Modified to enforce explicit ordering:
++  // OnDataFinish events must be dispatched strictly before OnStopRequest.
++
++  if (mIsDispatching) {
++    return;
++  }
++
++  mIsDispatching = true;
++
++  while (true) {
++    Event* event = nullptr;
++
++    // Scan the queue to find OnDataFinish event if any pending before OnStopRequest
++    Event* onStopRequestEvent = nullptr;
++    for (auto it = mQueue.begin(); it != mQueue.end(); ++it) {
++      if ((*it)->IsOnStopRequest()) {
++        onStopRequestEvent = *it;
++        break;
++      }
++    }
++
++    if (onStopRequestEvent) {
++      // Check if there is OnDataFinish event before OnStopRequest event
++      Event* onDataFinishEvent = nullptr;
++      for (auto it = mQueue.begin(); it != mQueue.end(); ++it) {
++        if ((*it)->IsOnDataFinish()) {
++          onDataFinishEvent = *it;
++          break;
++        }
++        if (*it == onStopRequestEvent) {
++          break;
++        }
++      }
++
++      if (onDataFinishEvent) {
++        event = onDataFinishEvent;
++      } else {
++        event = onStopRequestEvent;
++      }
++    } else {
++      // No OnStopRequest event found, just dequeue next event normally
++      if (mQueue.empty()) {
++        mIsDispatching = false;
++        return;
++      }
++      event = mQueue.front();
++    }
++
++    mQueue.remove(event);
++    event->Dispatch();
++  }
+ }
+ 
+--- a/netwerk/protocol/http/HttpChannelChild.cpp
++++ b/netwerk/protocol/http/HttpChannelChild.cpp
+@@ -500,13 +500,27 @@
+ // Hypothetical existing code context for OnDataFinish and OnStopRequest event handling
+ 
+ void
+ HttpChannelChild::OnDataFinish()
+ {
+-  // Existing code that enqueues or dispatches OnDataFinish event without explicit ordering
+-  mEventQueue->Enqueue(new OnDataFinishEvent(this));
++  // Enqueue OnDataFinish event ensuring it is recognized for ordering guarantees
++  RefPtr<Event> event = new OnDataFinishEvent(this);
++  mEventQueue->Enqueue(event);
+ }
+ 
+ void
+ HttpChannelChild::OnStopRequest()
+ {
+-  // Existing code that enqueues or dispatches OnStopRequest event without explicit ordering
+-  mEventQueue->Enqueue(new OnStopRequestEvent(this));
++  // Enqueue OnStopRequest event ensuring it is recognized for ordering guarantees
++  RefPtr<Event> event = new OnStopRequestEvent(this);
++  mEventQueue->Enqueue(event);
+ }
+ 
++// Additionally, ensure that Event subclasses support IsOnDataFinish and IsOnStopRequest:
++
++bool
++OnDataFinishEvent::IsOnDataFinish() const
++{
++  return true;
++}
++
++bool
++OnDataFinishEvent::IsOnStopRequest() const
++{
++  return false;
++}
++
++bool
++OnStopRequestEvent::IsOnStopRequest() const
++{
++  return true;
++}
++
++bool
++OnStopRequestEvent::IsOnDataFinish() const
++{
++  return false;
++}
++

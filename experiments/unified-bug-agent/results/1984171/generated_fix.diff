@@ -1,0 +1,89 @@
+--- a/toolkit/components/urlpattern/URLPattern.cpp
++++ b/toolkit/components/urlpattern/URLPattern.cpp
+@@ -50,10 +50,20 @@
+-// Example snippet showing RegExp creation without rooting (simplified)
+-JSObject* regexObj = JS::CreateRegExp(cx, patternChars, patternLength, flags);
+-
+-// Use regexObj directly without rooting, leading to possible premature GC.
++// Add rooting for the RegExp object to prevent premature GC.
++JS::RootedObject regexObj(cx, JS::CreateRegExp(cx, patternChars, patternLength, flags));
++
++if (!regexObj) {
++  // Handle failure to create RegExp
++  return nullptr;
++}
++
++// Use regexObj rooted for lifetime of usage to avoid use-after-free
++// e.g. store it in JS::RootedObject or JS::PersistentRootedObject members as needed.
++
++// existing usage of regexObj below...
+--- a/js/regex/RegExp.cpp
++++ b/js/regex/RegExp.cpp
+@@ -120,10 +120,18 @@
+-static void
+-RegExpFinalize(JSFreeOp* fop, JSObject* obj)
+-{
+-    RegExpShared* shared = GetRegExpShared(obj);
+-    if (shared) {
+-        shared->release();
+-    }
+-}
++static void
++RegExpFinalize(JSFreeOp* fop, JSObject* obj)
++{
++    RegExpShared* shared = GetRegExpShared(obj);
++    if (shared) {
++        // Properly release the RegExpShared to avoid leaks and use-after-free
++        shared->release();
++    }
++
++    // Clear any private data or reserved slots if needed to avoid dangling pointers
++    obj->setPrivate(nullptr);
++}
+@@ -135,7 +143,9 @@
+-static const JSClassOps RegExpClassOps = {
+-    nullptr, /* addProperty */
+-    nullptr, /* delProperty */
+-    nullptr, /* enumerate */
+-    nullptr, /* newEnumerate */
+-    nullptr, /* resolve */
+-    nullptr, /* mayResolve */
+-    RegExpFinalize,
+-    nullptr, /* call */
+-    nullptr, /* hasInstance */
+-    nullptr, /* construct */
+-    nullptr, /* trace */
+-};
++static const JSClassOps RegExpClassOps = {
++    nullptr, /* addProperty */
++    nullptr, /* delProperty */
++    nullptr, /* enumerate */
++    nullptr, /* newEnumerate */
++    nullptr, /* resolve */
++    nullptr, /* mayResolve */
++    RegExpFinalize,
++    nullptr, /* call */
++    nullptr, /* hasInstance */
++    nullptr, /* construct */
++    nullptr, /* trace */
++};
+--- a/dom/networking/URLPatternIntegration.cpp
++++ b/dom/networking/URLPatternIntegration.cpp
+@@ -85,7 +85,12 @@
+-  JSObject* regexObj = CreateRegExp(cx, pattern, flags);
+-  if (!regexObj) {
+-    return nullptr;
+-  }
++  // Root the RegExp object created via Rust C-API binding to prevent GC issues
++  JS::RootedObject regexObj(cx, CreateRegExp(cx, pattern, flags));
++  if (!regexObj) {
++    return nullptr;
++  }
++
++  // Store or use regexObj rooted for the lifetime of the URLPattern object
++  // to ensure it is not collected prematurely.
++  
++  // Return rooted regexObj or wrap it as needed.
++  
++  return regexObj;
++

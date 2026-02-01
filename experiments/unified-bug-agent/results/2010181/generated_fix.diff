@@ -1,0 +1,128 @@
+--- a/browser/components/quickSuggest/browser_quicksuggest_mdn.js
++++ b/browser/components/quickSuggest/browser_quicksuggest_mdn.js
+@@ -1,44 +1,58 @@
+-// Previous imports and constants
++// Updated imports and constants
++import { BlueMIcon } from "resource://branding/branding-icons.jsm";
+ 
+-function createMdnSuggestionRow(suggestion) {
+-  let row = document.createElement("div");
+-  row.className = "mdn-suggestion-row";
+-
+-  // Icon container with white "M"
+-  let icon = document.createElement("img");
+-  icon.src = "chrome://browser/skin/mdn-white-m.svg";
+-  icon.className = "mdn-icon";
+-  row.appendChild(icon);
+-
+-  // Title with old formatting
+-  let title = document.createElement("div");
+-  title.className = "mdn-title";
+-  title.textContent = suggestion.title;
+-  row.appendChild(title);
+-
+-  // URL always visible
+-  let url = document.createElement("div");
+-  url.className = "mdn-url";
+-  url.textContent = suggestion.url;
+-  row.appendChild(url);
+-
+-  // Feedback label (obsolete)
+-  let feedback = document.createElement("div");
+-  feedback.className = "mdn-feedback";
+-  feedback.textContent = "Feedback";
+-  row.appendChild(feedback);
+-
+-  return row;
+-}
++function createMdnSuggestionRow(suggestion) {
++  const row = document.createElement("div");
++  row.className = "mdn-suggestion-row";
++
++  // Icon container with new blue "M"
++  const icon = document.createElement("img");
++  icon.src = "chrome://branding/content/mdn-blue-m.svg";
++  icon.className = "mdn-icon";
++  row.appendChild(icon);
++
++  // Title with corrected formatting - use a span with appropriate classes
++  const title = document.createElement("div");
++  title.className = "mdn-title";
++  // Assuming title might contain emphasized parts, normalize spacing and capitalization
++  title.textContent = suggestion.title.trim();
++  row.appendChild(title);
++
++  // URL container - hidden by default, shown on hover or selection
++  const url = document.createElement("div");
++  url.className = "mdn-url";
++  url.textContent = suggestion.url;
++  // Hide URL by default
++  url.style.visibility = "hidden";
++  row.appendChild(url);
++
++  // Show URL on hover or when row has "selected" class
++  row.addEventListener("mouseenter", () => {
++    url.style.visibility = "visible";
++  });
++  row.addEventListener("mouseleave", () => {
++    if (!row.classList.contains("selected")) {
++      url.style.visibility = "hidden";
++    }
++  });
++  // Observe selection state changes externally; if used internally:
++  // For example, a mutation observer or external code toggling "selected" class:
++  // When selected class is added/removed, update url visibility accordingly.
++
++  // Remove obsolete labels like "Feedback"
++
++  return row;
++}
+--- a/browser/components/urlbar/UrlbarProviderQuickSuggest.sys.mjs
++++ b/browser/components/urlbar/UrlbarProviderQuickSuggest.sys.mjs
+@@ -200,14 +200,26 @@
+-// Old icon import or constant
+-const MDN_ICON_WHITE = "chrome://browser/skin/mdn-white-m.svg";
+-
+-class MdnSuggestion {
+-  constructor(suggestion) {
+-    this.suggestion = suggestion;
+-  }
+-
+-  render() {
+-    return `
+-      <div class="mdn-suggestion-row">
+-        <img class="mdn-icon" src="${MDN_ICON_WHITE}" />
+-        <div class="mdn-title">${this.suggestion.title}</div>
+-        <div class="mdn-url">${this.suggestion.url}</div>
+-        <div class="mdn-feedback">Feedback</div>
+-      </div>
+-    `;
+-  }
+-}
++// Updated icon path for blue "M"
++const MDN_ICON_BLUE = "chrome://branding/content/mdn-blue-m.svg";
++
++class MdnSuggestion {
++  constructor(suggestion) {
++    this.suggestion = suggestion;
++  }
++
++  render() {
++    // Title formatting corrected: trim and normalize spacing
++    const title = this.suggestion.title.trim();
++
++    // URL hidden by default, shown on hover or selection - controlled by CSS classes
++    return `
++      <div class="mdn-suggestion-row">
++        <img class="mdn-icon" src="${MDN_ICON_BLUE}" alt="MDN" />
++        <div class="mdn-title">${title}</div>
++        <div class="mdn-url">${this.suggestion.url}</div>
++      </div>
++    `;
++  }
++}
++
++// CSS or JS controlling URL visibility on hover/selection will be elsewhere, but ensure class names conform to design.
++// Remove obsolete "Feedback" label.
++export { MdnSuggestion };
++

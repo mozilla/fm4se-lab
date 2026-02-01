@@ -1,0 +1,453 @@
+{
+  "target_milestone": "147 Branch",
+  "cc": [
+    "francesco.lodolo@gmail.com",
+    "gijskruitbosch+bugs@gmail.com",
+    "valentin.gosu@gmail.com"
+  ],
+  "description": "User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:134.0) Gecko/20100101 Firefox/134.0\n\n\n\nActual results:\n\nURL.fromURI will be faster than parsing the url again.",
+  "creator": "kernp25@gmail.com",
+  "is_creator_accessible": true,
+  "cf_fx_points": "---",
+  "url": "",
+  "cc_detail": [
+    {
+      "nick": "flod",
+      "email": "francesco.lodolo@gmail.com",
+      "name": "francesco.lodolo@gmail.com",
+      "real_name": "Francesco Lodolo [:flod]",
+      "id": 130462
+    },
+    {
+      "nick": "Gijs",
+      "email": "gijskruitbosch+bugs@gmail.com",
+      "name": "gijskruitbosch+bugs@gmail.com",
+      "id": 159069,
+      "real_name": ":Gijs (he/him)"
+    },
+    {
+      "nick": "valentin",
+      "name": "valentin.gosu@gmail.com",
+      "email": "valentin.gosu@gmail.com",
+      "real_name": "Valentin Gosu [:valentin] (he/him)",
+      "id": 415378
+    }
+  ],
+  "cf_qa_whiteboard": "[qa-triage-done-c148/b147]",
+  "cf_webcompat_score": "---",
+  "cf_user_story": "",
+  "cf_tracking_firefox_esr115": "---",
+  "cf_status_firefox149": "---",
+  "mentors_detail": [],
+  "cf_tracking_thunderbird_esr115": "---",
+  "duplicates": [],
+  "cf_size_estimate": "---",
+  "cf_last_resolved": "2025-12-05T04:49:02Z",
+  "triage_owner_detail": {
+    "nick": "valentin",
+    "email": "valentin.gosu@gmail.com",
+    "name": "valentin.gosu@gmail.com",
+    "real_name": "Valentin Gosu [:valentin] (he/him)",
+    "id": 415378
+  },
+  "dupe_of": null,
+  "depends_on": [],
+  "flags": [],
+  "resolution": "FIXED",
+  "attachments": [
+    {
+      "summary": "Bug 1941148 - Use URL.fromURI in toolkit/content/aboutNetErrorHelpers.mjs. r?Gijs",
+      "id": 9458989,
+      "size": 48,
+      "attacher": "kernp25@gmail.com",
+      "is_private": 0,
+      "content_type": "text/x-phabricator-request",
+      "creation_time": "2025-01-11T23:14:08Z",
+      "is_patch": 0,
+      "flags": [],
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjMzOTc4",
+      "creator_detail": {
+        "name": "kernp25@gmail.com",
+        "email": "kernp25@gmail.com",
+        "nick": "kernp25",
+        "real_name": "",
+        "id": 436361
+      },
+      "creator": "kernp25@gmail.com",
+      "is_obsolete": 0,
+      "description": "Bug 1941148 - Use URL.fromURI in toolkit/content/aboutNetErrorHelpers.mjs. r?Gijs",
+      "file_name": "phabricator-D233978-url.txt",
+      "last_change_time": "2025-01-11T23:14:08Z",
+      "bug_id": 1941148
+    },
+    {
+      "is_obsolete": 0,
+      "creator": "gijskruitbosch+bugs@gmail.com",
+      "creator_detail": {
+        "nick": "Gijs",
+        "email": "gijskruitbosch+bugs@gmail.com",
+        "name": "gijskruitbosch+bugs@gmail.com",
+        "real_name": ":Gijs (he/him)",
+        "id": 159069
+      },
+      "description": "Bug 1941148 - improve URI handling in aboutNetErrorHelpers.mjs and NetErrorChild, r?emz",
+      "last_change_time": "2025-11-27T14:54:32Z",
+      "file_name": "phabricator-D274293-url.txt",
+      "bug_id": 1941148,
+      "size": 48,
+      "summary": "Bug 1941148 - improve URI handling in aboutNetErrorHelpers.mjs and NetErrorChild, r?emz",
+      "id": 9529559,
+      "content_type": "text/x-phabricator-request",
+      "is_private": 0,
+      "attacher": "gijskruitbosch+bugs@gmail.com",
+      "flags": [],
+      "is_patch": 0,
+      "creation_time": "2025-11-27T14:54:32Z",
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjc0Mjkz"
+    }
+  ],
+  "creator_detail": {
+    "nick": "kernp25",
+    "name": "kernp25@gmail.com",
+    "email": "kernp25@gmail.com",
+    "real_name": "",
+    "id": 436361
+  },
+  "classification": "Components",
+  "cf_accessibility_severity": "---",
+  "last_change_time_non_bot": "2026-01-27T17:41:12Z",
+  "groups": [],
+  "status": "RESOLVED",
+  "cf_has_str": "---",
+  "cf_tracking_firefox_esr140": "---",
+  "blocks": [],
+  "mentors": [],
+  "last_change_time": "2026-01-27T17:41:12Z",
+  "assigned_to": "gijskruitbosch+bugs@gmail.com",
+  "cf_status_thunderbird_esr140": "---",
+  "priority": "P2",
+  "cf_status_firefox148": "---",
+  "id": 1941148,
+  "summary": "toolkit/content/aboutNetErrorHelpers.mjs shouldn't be re-parsing URLs",
+  "is_open": false,
+  "creation_time": "2025-01-11T18:40:11Z",
+  "cf_fx_iteration": "---",
+  "cf_status_thunderbird_esr115": "---",
+  "counts": {
+    "depends_on": 1,
+    "blocks": 0,
+    "comments": 6,
+    "regressed_by": 2,
+    "regressions": 0,
+    "keywords": 0,
+    "duplicates": 0,
+    "attachments": 2,
+    "cc": 3
+  },
+  "component": "Networking",
+  "history": [
+    {
+      "changes": [
+        {
+          "removed": "UNCONFIRMED",
+          "added": "ASSIGNED",
+          "field_name": "status"
+        },
+        {
+          "removed": "0",
+          "added": "1",
+          "field_name": "is_confirmed"
+        },
+        {
+          "added": "kernp25@gmail.com",
+          "field_name": "assigned_to",
+          "removed": "nobody@mozilla.org"
+        }
+      ],
+      "when": "2025-01-11T23:14:08Z",
+      "who": "phab-bot@bmo.tld"
+    },
+    {
+      "changes": [
+        {
+          "removed": "Firefox",
+          "added": "Core",
+          "field_name": "product"
+        },
+        {
+          "field_name": "component",
+          "added": "Networking",
+          "removed": "Untriaged"
+        },
+        {
+          "field_name": "cc",
+          "added": "francesco.lodolo@gmail.com",
+          "removed": ""
+        }
+      ],
+      "when": "2025-01-12T07:29:05Z",
+      "who": "francesco.lodolo@gmail.com"
+    },
+    {
+      "when": "2025-01-13T08:47:31Z",
+      "who": "valentin.gosu@gmail.com",
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "whiteboard",
+          "added": "[necko-triaged]"
+        },
+        {
+          "field_name": "cc",
+          "added": "valentin.gosu@gmail.com",
+          "removed": ""
+        },
+        {
+          "field_name": "severity",
+          "added": "S4",
+          "removed": "--"
+        },
+        {
+          "added": "P2",
+          "field_name": "priority",
+          "removed": "--"
+        }
+      ]
+    },
+    {
+      "who": "gijskruitbosch+bugs@gmail.com",
+      "when": "2025-11-27T14:54:55Z",
+      "changes": [
+        {
+          "removed": "kernp25@gmail.com",
+          "added": "gijskruitbosch+bugs@gmail.com",
+          "field_name": "assigned_to"
+        },
+        {
+          "removed": "",
+          "field_name": "cc",
+          "added": "gijskruitbosch+bugs@gmail.com"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "added": "toolkit/content/aboutNetErrorHelpers.mjs shouldn't be re-parsing URLs",
+          "field_name": "summary",
+          "removed": "Use URL.fromURI in toolkit/content/aboutNetErrorHelpers.mjs"
+        }
+      ],
+      "who": "gijskruitbosch+bugs@gmail.com",
+      "when": "2025-11-27T14:55:12Z"
+    },
+    {
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "resolution",
+          "added": "FIXED"
+        },
+        {
+          "removed": "ASSIGNED",
+          "field_name": "status",
+          "added": "RESOLVED"
+        },
+        {
+          "added": "147 Branch",
+          "field_name": "target_milestone",
+          "removed": "---"
+        },
+        {
+          "added": "2025-12-05T04:49:02Z",
+          "field_name": "cf_last_resolved",
+          "removed": ""
+        },
+        {
+          "field_name": "cf_status_firefox147",
+          "added": "fixed",
+          "removed": "---"
+        },
+        {
+          "removed": "",
+          "field_name": "comment_tag",
+          "added": "bugherder",
+          "comment_id": 17794066,
+          "comment_count": 5
+        }
+      ],
+      "who": "sstanca@mozilla.com",
+      "when": "2025-12-05T04:49:02Z"
+    },
+    {
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "cf_qa_whiteboard",
+          "added": "[qa-triage-done-c148/b147]"
+        }
+      ],
+      "who": "mboldan@mozilla.com",
+      "when": "2025-12-10T15:50:52Z"
+    },
+    {
+      "when": "2026-01-21T13:42:20Z",
+      "who": "gijskruitbosch+bugs@gmail.com",
+      "changes": [
+        {
+          "removed": "",
+          "added": "2008464",
+          "field_name": "regressions"
+        }
+      ]
+    },
+    {
+      "who": "manuel@mozilla.com",
+      "when": "2026-01-27T17:41:12Z",
+      "changes": [
+        {
+          "field_name": "regressions",
+          "added": "2012755",
+          "removed": ""
+        }
+      ]
+    }
+  ],
+  "keywords": [],
+  "product": "Core",
+  "severity": "S4",
+  "filed_via": "guided_form",
+  "comment_count": 6,
+  "cf_cab_review": "---",
+  "cf_status_firefox_esr140": "---",
+  "cf_crash_signature": "",
+  "regressions": [
+    2008464,
+    2012755
+  ],
+  "qa_contact": "",
+  "version": "unspecified",
+  "cf_tracking_firefox149": "---",
+  "cf_tracking_firefox_relnote": "---",
+  "platform": "Unspecified",
+  "cf_a11y_review_project_flag": "---",
+  "see_also": [],
+  "op_sys": "Unspecified",
+  "comments": [
+    {
+      "creation_time": "2025-01-11T18:40:11Z",
+      "tags": [],
+      "id": 17292531,
+      "attachment_id": null,
+      "raw_text": "User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:134.0) Gecko/20100101 Firefox/134.0\n\n\n\nActual results:\n\nURL.fromURI will be faster than parsing the url again.",
+      "is_private": false,
+      "count": 0,
+      "author": "kernp25@gmail.com",
+      "time": "2025-01-11T18:40:11Z",
+      "reactions": {},
+      "bug_id": 1941148,
+      "creator": "kernp25@gmail.com",
+      "text": "User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:134.0) Gecko/20100101 Firefox/134.0\n\n\n\nActual results:\n\nURL.fromURI will be faster than parsing the url again."
+    },
+    {
+      "text": "Created attachment 9458989\nBug 1941148 - Use URL.fromURI in toolkit/content/aboutNetErrorHelpers.mjs. r?Gijs",
+      "creator": "kernp25@gmail.com",
+      "bug_id": 1941148,
+      "reactions": {},
+      "time": "2025-01-11T23:14:08Z",
+      "count": 1,
+      "is_private": false,
+      "author": "kernp25@gmail.com",
+      "raw_text": "",
+      "id": 17292626,
+      "attachment_id": 9458989,
+      "tags": [],
+      "creation_time": "2025-01-11T23:14:08Z"
+    },
+    {
+      "raw_text": "",
+      "is_private": false,
+      "author": "gijskruitbosch+bugs@gmail.com",
+      "count": 2,
+      "time": "2025-11-27T14:54:32Z",
+      "attachment_id": 9529559,
+      "id": 17783575,
+      "tags": [],
+      "creation_time": "2025-11-27T14:54:32Z",
+      "text": "Created attachment 9529559\nBug 1941148 - improve URI handling in aboutNetErrorHelpers.mjs and NetErrorChild, r?emz",
+      "creator": "gijskruitbosch+bugs@gmail.com",
+      "reactions": {},
+      "bug_id": 1941148
+    },
+    {
+      "bug_id": 1941148,
+      "reactions": {},
+      "creator": "gijskruitbosch+bugs@gmail.com",
+      "text": "Stealing this, having just happened across it again when searching for something else...",
+      "creation_time": "2025-11-27T14:54:55Z",
+      "tags": [],
+      "attachment_id": null,
+      "id": 17783576,
+      "is_private": false,
+      "author": "gijskruitbosch+bugs@gmail.com",
+      "count": 3,
+      "raw_text": "Stealing this, having just happened across it again when searching for something else...",
+      "time": "2025-11-27T14:54:55Z"
+    },
+    {
+      "id": 17793139,
+      "attachment_id": null,
+      "time": "2025-12-04T13:48:14Z",
+      "raw_text": "Pushed by gijskruitbosch@gmail.com:\nhttps://github.com/mozilla-firefox/firefox/commit/0dcb946b8e1a\nhttps://hg.mozilla.org/integration/autoland/rev/d93e390864ce\nimprove URI handling in aboutNetErrorHelpers.mjs and NetErrorChild, r=emz,frontend-codestyle-reviewers",
+      "is_private": false,
+      "author": "pulsebot@bmo.tld",
+      "count": 4,
+      "creation_time": "2025-12-04T13:48:14Z",
+      "tags": [],
+      "creator": "pulsebot@bmo.tld",
+      "text": "Pushed by gijskruitbosch@gmail.com:\nhttps://github.com/mozilla-firefox/firefox/commit/0dcb946b8e1a\nhttps://hg.mozilla.org/integration/autoland/rev/d93e390864ce\nimprove URI handling in aboutNetErrorHelpers.mjs and NetErrorChild, r=emz,frontend-codestyle-reviewers",
+      "reactions": {},
+      "bug_id": 1941148
+    },
+    {
+      "creator": "sstanca@mozilla.com",
+      "text": "https://hg.mozilla.org/mozilla-central/rev/d93e390864ce",
+      "bug_id": 1941148,
+      "reactions": {},
+      "attachment_id": null,
+      "id": 17794066,
+      "count": 5,
+      "author": "sstanca@mozilla.com",
+      "is_private": false,
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/d93e390864ce",
+      "time": "2025-12-05T04:49:02Z",
+      "creation_time": "2025-12-05T04:49:02Z",
+      "tags": [
+        "bugherder"
+      ]
+    }
+  ],
+  "cf_tracking_thunderbird_esr140": "---",
+  "cf_tracking_firefox147": "---",
+  "whiteboard": "[necko-triaged]",
+  "votes": 0,
+  "type": "enhancement",
+  "is_cc_accessible": true,
+  "assigned_to_detail": {
+    "real_name": ":Gijs (he/him)",
+    "id": 159069,
+    "name": "gijskruitbosch+bugs@gmail.com",
+    "email": "gijskruitbosch+bugs@gmail.com",
+    "nick": "Gijs"
+  },
+  "alias": null,
+  "cf_status_firefox147": "fixed",
+  "cf_tracking_firefox148": "---",
+  "cf_performance_impact": "---",
+  "regressed_by": [],
+  "is_confirmed": true,
+  "cf_webcompat_priority": "---",
+  "cf_status_firefox_esr115": "---",
+  "triage_owner": "valentin.gosu@gmail.com",
+  "cf_rank": null
+}

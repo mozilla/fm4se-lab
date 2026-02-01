@@ -1,0 +1,587 @@
+{
+  "cf_status_firefox_esr140": "---",
+  "assigned_to": "rob@robwu.nl",
+  "attachments": [
+    {
+      "creation_time": "2025-12-17T15:57:14Z",
+      "attacher": "rob@robwu.nl",
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjc2ODU2",
+      "file_name": "phabricator-D276856-url.txt",
+      "last_change_time": "2025-12-17T15:57:14Z",
+      "bug_id": 2006489,
+      "is_obsolete": 0,
+      "content_type": "text/x-phabricator-request",
+      "creator": "rob@robwu.nl",
+      "summary": "Bug 2006489 - Keep staged langpack despite other installation",
+      "id": 9533682,
+      "flags": [],
+      "description": "Bug 2006489 - Keep staged langpack despite other installation",
+      "creator_detail": {
+        "id": 447061,
+        "name": "rob@robwu.nl",
+        "email": "rob@robwu.nl",
+        "real_name": "Rob Wu [:robwu]",
+        "nick": "robwu"
+      },
+      "size": 48,
+      "is_private": 0,
+      "is_patch": 0
+    },
+    {
+      "file_name": "phabricator-D277803-url.txt",
+      "last_change_time": "2026-01-15T21:59:28Z",
+      "bug_id": 2006489,
+      "is_obsolete": 0,
+      "content_type": "text/x-phabricator-request",
+      "creator": "rob@robwu.nl",
+      "id": 9535460,
+      "summary": "Bug 2006489 - Keep staged langpack despite other installation",
+      "flags": [
+        {
+          "setter": "phab-bot@bmo.tld",
+          "type_id": 737,
+          "creation_date": "2026-01-03T15:59:25Z",
+          "name": "approval-mozilla-release",
+          "status": "+",
+          "id": 2323527,
+          "modification_date": "2026-01-15T21:59:28Z"
+        }
+      ],
+      "creation_time": "2026-01-03T15:59:25Z",
+      "attacher": "rob@robwu.nl",
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjc3ODAz",
+      "size": 48,
+      "is_private": 0,
+      "is_patch": 0,
+      "description": "Bug 2006489 - Keep staged langpack despite other installation",
+      "creator_detail": {
+        "name": "rob@robwu.nl",
+        "id": 447061,
+        "real_name": "Rob Wu [:robwu]",
+        "email": "rob@robwu.nl",
+        "nick": "robwu"
+      }
+    }
+  ],
+  "blocks": [],
+  "cf_qa_whiteboard": "[qa-triage-done-c149/b148]",
+  "cf_status_thunderbird_esr115": "---",
+  "cf_user_story": "",
+  "cf_fx_points": "---",
+  "cf_tracking_firefox148": "---",
+  "creation_time": "2025-12-16T23:13:13Z",
+  "mentors_detail": [],
+  "cf_tracking_firefox_relnote": "?",
+  "cf_a11y_review_project_flag": "---",
+  "url": "",
+  "whiteboard": "[addons-jira]",
+  "target_milestone": "148 Branch",
+  "dupe_of": null,
+  "severity": "S3",
+  "votes": 0,
+  "last_change_time": "2026-01-15T22:08:53Z",
+  "cc_detail": [
+    {
+      "name": "dmeehan@mozilla.com",
+      "id": 695136,
+      "real_name": "Donal Meehan [:dmeehan]",
+      "email": "dmeehan@mozilla.com",
+      "nick": "dmeehan"
+    },
+    {
+      "nick": "eemeli",
+      "email": "earo@mozilla.com",
+      "real_name": "Eemeli Aro [:eemeli]",
+      "id": 318883,
+      "name": "earo@mozilla.com"
+    },
+    {
+      "name": "emilio@crisal.io",
+      "id": 546716,
+      "nick": "emilio",
+      "real_name": "Emilio Cobos \u00c1lvarez [:emilio]",
+      "email": "emilio@crisal.io"
+    },
+    {
+      "nick": "flod",
+      "email": "francesco.lodolo@gmail.com",
+      "real_name": "Francesco Lodolo [:flod]",
+      "name": "francesco.lodolo@gmail.com",
+      "id": 130462
+    },
+    {
+      "id": 75935,
+      "name": "ryanvm@gmail.com",
+      "email": "ryanvm@gmail.com",
+      "real_name": "Ryan VanderMeulen [:RyanVM]",
+      "nick": "RyanVM"
+    },
+    {
+      "id": 603050,
+      "name": "wdurand@mozilla.com",
+      "real_name": "William Durand [:willdurand]",
+      "email": "wdurand@mozilla.com",
+      "nick": "willdurand"
+    }
+  ],
+  "cf_cab_review": "---",
+  "classification": "Components",
+  "cf_crash_signature": "",
+  "creator": "rob@robwu.nl",
+  "is_open": false,
+  "see_also": [
+    "https://bugzilla.mozilla.org/show_bug.cgi?id=1724360",
+    "https://bugzilla.mozilla.org/show_bug.cgi?id=1995824",
+    "https://mozilla-hub.atlassian.net/browse/WEBEXT-2542",
+    "https://bugzilla.mozilla.org/show_bug.cgi?id=2006512",
+    "https://bugzilla.mozilla.org/show_bug.cgi?id=2007749",
+    "https://bugzilla.mozilla.org/show_bug.cgi?id=2010271"
+  ],
+  "op_sys": "Unspecified",
+  "depends_on": [],
+  "alias": null,
+  "description": "There have been [multiple reports in the past few releases](https://bugzilla.mozilla.org/show_bug.cgi?id=1724360#c25) of langpacks getting disabled after a Firefox update. I found one possible reason today: if the add-on updater check runs after the browser+langpack update was staged, it may update the langpack for the currently running Firefox version, which triggers the removal of the staged langpack. Consequently, when Firefox finally updates, it does not have a compatible langpack, so the langpack is disabled (because we do not check for compatible langpacks on startup - bug 1995824).\n\nA user updated from Firefox 145 to 146 on macOS, but langpacks were not updated to 146, thus disabled.\nTo debug this, I requested the following diagnostics information to build a timeline of events:\n\n- In `about:support`, click on \"Show Update History\" to see the update history. I also asked for the contents of the \"Update Folder\" shown at `about:support`, specifically `last-update.log` and `backup-update.log` to get more details on update behavior.\n   - This showed that the update happened today at 13:00.\n- In the macOS terminal, run `log show --predicate 'eventMessage contains \"firefox\"' --last 8h` to get the system logs of the last 8 hours, including the time of the update. In these logs, I searched for lines containing \"Successfully spawned firefox\" to see when Firefox was actually (re)started.\n  - This showed two times: the time of the first Firefox startup, and the time of the Firefox startup after the update.\n- I asked for the `extensions.json` file in the profile directory (directory can be found in `about:support`, \"Profile Folder\")\n  - I looked for the `updateDate` field of the langpack of interest (timestamp in ms).\n- I asked to visit `about:config` and look for the `app.update.lastUpdateTime.addon-background-update-timer` preference value.\n  - This is the timestamp in seconds of the most recent add-on update check.\n\nThe result is as follows (ordered chronologically):\n\n|time|data/message|data source|description|\n|-|-|-|-|\n|2025-12-16 13:00:34.312058+0200 | Successfully spawned firefox[87025] | macOS log | startup of Firefox 145 |\n|2025-12-16 13:00:45+0200 | Performing a staged update | last-update.log or backup-update.log | download Firefox 146 update |\n|2025-12-16 13:01:07+0200 | 1765882867 | about:config | value of addon-background-update-timer |\n|2025-12-16 13:01:07.743+0200 | `\"updateDate\": 1765882867743` | extensions.json prettified | langpack updated for version 145 |\n|2025-12-16 13:07:15.219541+0200 | Successfully spawned firefox[87122] | macOS log| startup of Firefox 146 |\n\nThis shows that between the staging of the Firefox update (which includes the staging of the langpack for that version, 146), the add-on background updater ran, which updated the langpack for the currently running version (145). This action results in the loss of the staged langpack, which manifests itself at the next browser restart as the langpack getting disabled (for it being incompatible).",
+  "cf_accessibility_severity": "---",
+  "filed_via": "standard_form",
+  "triage_owner_detail": {
+    "real_name": "Luca Greco [:rpl] [:luca] [:lgreco]",
+    "email": "lgreco@mozilla.com",
+    "nick": "rpl",
+    "name": "lgreco@mozilla.com",
+    "id": 339062
+  },
+  "regressed_by": [],
+  "last_change_time_non_bot": "2026-01-15T22:08:53Z",
+  "cf_status_firefox149": "---",
+  "platform": "Unspecified",
+  "product": "Toolkit",
+  "comments": [
+    {
+      "creation_time": "2025-12-16T23:13:13Z",
+      "raw_text": "There have been [multiple reports in the past few releases](https://bugzilla.mozilla.org/show_bug.cgi?id=1724360#c25) of langpacks getting disabled after a Firefox update. I found one possible reason today: if the add-on updater check runs after the browser+langpack update was staged, it may update the langpack for the currently running Firefox version, which triggers the removal of the staged langpack. Consequently, when Firefox finally updates, it does not have a compatible langpack, so the langpack is disabled (because we do not check for compatible langpacks on startup - bug 1995824).\n\nA user updated from Firefox 145 to 146 on macOS, but langpacks were not updated to 146, thus disabled.\nTo debug this, I requested the following diagnostics information to build a timeline of events:\n\n- In `about:support`, click on \"Show Update History\" to see the update history. I also asked for the contents of the \"Update Folder\" shown at `about:support`, specifically `last-update.log` and `backup-update.log` to get more details on update behavior.\n   - This showed that the update happened today at 13:00.\n- In the macOS terminal, run `log show --predicate 'eventMessage contains \"firefox\"' --last 8h` to get the system logs of the last 8 hours, including the time of the update. In these logs, I searched for lines containing \"Successfully spawned firefox\" to see when Firefox was actually (re)started.\n  - This showed two times: the time of the first Firefox startup, and the time of the Firefox startup after the update.\n- I asked for the `extensions.json` file in the profile directory (directory can be found in `about:support`, \"Profile Folder\")\n  - I looked for the `updateDate` field of the langpack of interest (timestamp in ms).\n- I asked to visit `about:config` and look for the `app.update.lastUpdateTime.addon-background-update-timer` preference value.\n  - This is the timestamp in seconds of the most recent add-on update check.\n\nThe result is as follows (ordered chronologically):\n\n|time|data/message|data source|description|\n|-|-|-|-|\n|2025-12-16 13:00:34.312058+0200 | Successfully spawned firefox[87025] | macOS log | startup of Firefox 145 |\n|2025-12-16 13:00:45+0200 | Performing a staged update | last-update.log or backup-update.log | download Firefox 146 update |\n|2025-12-16 13:01:07+0200 | 1765882867 | about:config | value of addon-background-update-timer |\n|2025-12-16 13:01:07.743+0200 | `\"updateDate\": 1765882867743` | extensions.json prettified | langpack updated for version 145 |\n|2025-12-16 13:07:15.219541+0200 | Successfully spawned firefox[87122] | macOS log| startup of Firefox 146 |\n\nThis shows that between the staging of the Firefox update (which includes the staging of the langpack for that version, 146), the add-on background updater ran, which updated the langpack for the currently running version (145). This action results in the loss of the staged langpack, which manifests itself at the next browser restart as the langpack getting disabled (for it being incompatible).",
+      "reactions": {},
+      "text": "There have been [multiple reports in the past few releases](https://bugzilla.mozilla.org/show_bug.cgi?id=1724360#c25) of langpacks getting disabled after a Firefox update. I found one possible reason today: if the add-on updater check runs after the browser+langpack update was staged, it may update the langpack for the currently running Firefox version, which triggers the removal of the staged langpack. Consequently, when Firefox finally updates, it does not have a compatible langpack, so the langpack is disabled (because we do not check for compatible langpacks on startup - bug 1995824).\n\nA user updated from Firefox 145 to 146 on macOS, but langpacks were not updated to 146, thus disabled.\nTo debug this, I requested the following diagnostics information to build a timeline of events:\n\n- In `about:support`, click on \"Show Update History\" to see the update history. I also asked for the contents of the \"Update Folder\" shown at `about:support`, specifically `last-update.log` and `backup-update.log` to get more details on update behavior.\n   - This showed that the update happened today at 13:00.\n- In the macOS terminal, run `log show --predicate 'eventMessage contains \"firefox\"' --last 8h` to get the system logs of the last 8 hours, including the time of the update. In these logs, I searched for lines containing \"Successfully spawned firefox\" to see when Firefox was actually (re)started.\n  - This showed two times: the time of the first Firefox startup, and the time of the Firefox startup after the update.\n- I asked for the `extensions.json` file in the profile directory (directory can be found in `about:support`, \"Profile Folder\")\n  - I looked for the `updateDate` field of the langpack of interest (timestamp in ms).\n- I asked to visit `about:config` and look for the `app.update.lastUpdateTime.addon-background-update-timer` preference value.\n  - This is the timestamp in seconds of the most recent add-on update check.\n\nThe result is as follows (ordered chronologically):\n\n|time|data/message|data source|description|\n|-|-|-|-|\n|2025-12-16 13:00:34.312058+0200 | Successfully spawned firefox[87025] | macOS log | startup of Firefox 145 |\n|2025-12-16 13:00:45+0200 | Performing a staged update | last-update.log or backup-update.log | download Firefox 146 update |\n|2025-12-16 13:01:07+0200 | 1765882867 | about:config | value of addon-background-update-timer |\n|2025-12-16 13:01:07.743+0200 | `\"updateDate\": 1765882867743` | extensions.json prettified | langpack updated for version 145 |\n|2025-12-16 13:07:15.219541+0200 | Successfully spawned firefox[87122] | macOS log| startup of Firefox 146 |\n\nThis shows that between the staging of the Firefox update (which includes the staging of the langpack for that version, 146), the add-on background updater ran, which updated the langpack for the currently running version (145). This action results in the loss of the staged langpack, which manifests itself at the next browser restart as the langpack getting disabled (for it being incompatible).",
+      "count": 0,
+      "bug_id": 2006489,
+      "attachment_id": null,
+      "tags": [],
+      "author": "rob@robwu.nl",
+      "creator": "rob@robwu.nl",
+      "is_private": false,
+      "id": 17812139,
+      "time": "2025-12-16T23:13:13Z"
+    },
+    {
+      "creator": "rob@robwu.nl",
+      "bug_id": 2006489,
+      "attachment_id": null,
+      "author": "rob@robwu.nl",
+      "tags": [],
+      "time": "2025-12-17T00:12:38Z",
+      "is_private": false,
+      "id": 17812195,
+      "raw_text": "The race condition occurs between the following two uses of a langpack in the \"staged\" directory:\n- Regular add-on installation: https://searchfox.org/firefox-main/rev/911b3eec6c5e58a9a49e23aa105e49aa76e00f9c/toolkit/mozapps/extensions/internal/XPIInstall.sys.mjs#1923-1930,2031-2033\n  * (if postponed, which I believe we don't do for langpacks: https://searchfox.org/firefox-main/rev/911b3eec6c5e58a9a49e23aa105e49aa76e00f9c/toolkit/mozapps/extensions/internal/XPIInstall.sys.mjs#2130-2135 )\n- Langpack staging ahead of updates: https://searchfox.org/firefox-main/rev/911b3eec6c5e58a9a49e23aa105e49aa76e00f9c/toolkit/mozapps/update/UpdateService.sys.mjs#6262\n\nThe race observed in this bug is that \"Langpack staging\" and \"Regular add-on installation\" happens after each other.\nIn theory, it is also possible for these two events to happen concurrently. This would be a relatively rare race condition, but also cause bad failures.\n\nA potential approach to resolve this is to detect whether langpack staging has happened, and if so, prevent updates to langpacks in this session. The downside of that is that if the current session already had broken langpacks that would be fixed by an update, that these langpacks would not install. It would also be challenging to account for the \"relatively rare race condition\" mentioned above.\n\nAnother approach would be to use separate staging directories (or file names) to avoid conflicts between the two. The downside to this is architectural and implementation complexity; staging does not only involve files, but also additional metadata in the add-on database.\n\nYet another approach is to keep a copy of the (small) metadata in memory, and temporarily rename the staged langpack xpi file before a new version of the current langpack is updated, then rename it back after.",
+      "reactions": {},
+      "creation_time": "2025-12-17T00:12:38Z",
+      "text": "The race condition occurs between the following two uses of a langpack in the \"staged\" directory:\n- Regular add-on installation: https://searchfox.org/firefox-main/rev/911b3eec6c5e58a9a49e23aa105e49aa76e00f9c/toolkit/mozapps/extensions/internal/XPIInstall.sys.mjs#1923-1930,2031-2033\n  * (if postponed, which I believe we don't do for langpacks: https://searchfox.org/firefox-main/rev/911b3eec6c5e58a9a49e23aa105e49aa76e00f9c/toolkit/mozapps/extensions/internal/XPIInstall.sys.mjs#2130-2135 )\n- Langpack staging ahead of updates: https://searchfox.org/firefox-main/rev/911b3eec6c5e58a9a49e23aa105e49aa76e00f9c/toolkit/mozapps/update/UpdateService.sys.mjs#6262\n\nThe race observed in this bug is that \"Langpack staging\" and \"Regular add-on installation\" happens after each other.\nIn theory, it is also possible for these two events to happen concurrently. This would be a relatively rare race condition, but also cause bad failures.\n\nA potential approach to resolve this is to detect whether langpack staging has happened, and if so, prevent updates to langpacks in this session. The downside of that is that if the current session already had broken langpacks that would be fixed by an update, that these langpacks would not install. It would also be challenging to account for the \"relatively rare race condition\" mentioned above.\n\nAnother approach would be to use separate staging directories (or file names) to avoid conflicts between the two. The downside to this is architectural and implementation complexity; staging does not only involve files, but also additional metadata in the add-on database.\n\nYet another approach is to keep a copy of the (small) metadata in memory, and temporarily rename the staged langpack xpi file before a new version of the current langpack is updated, then rename it back after.",
+      "count": 1
+    },
+    {
+      "count": 2,
+      "text": "Created attachment 9533682\nBug 2006489 - Keep staged langpack despite other installation",
+      "raw_text": "",
+      "reactions": {},
+      "creation_time": "2025-12-17T15:57:14Z",
+      "time": "2025-12-17T15:57:14Z",
+      "id": 17813257,
+      "is_private": false,
+      "creator": "rob@robwu.nl",
+      "attachment_id": 9533682,
+      "author": "rob@robwu.nl",
+      "tags": [],
+      "bug_id": 2006489
+    },
+    {
+      "text": "Pushed by rob@robwu.nl:\nhttps://github.com/mozilla-firefox/firefox/commit/ced62a04f4ed\nhttps://hg.mozilla.org/integration/autoland/rev/d26678c79bf1\nKeep staged langpack despite other installation r=zombie",
+      "count": 3,
+      "reactions": {},
+      "raw_text": "Pushed by rob@robwu.nl:\nhttps://github.com/mozilla-firefox/firefox/commit/ced62a04f4ed\nhttps://hg.mozilla.org/integration/autoland/rev/d26678c79bf1\nKeep staged langpack despite other installation r=zombie",
+      "creation_time": "2026-01-02T16:01:30Z",
+      "time": "2026-01-02T16:01:30Z",
+      "is_private": false,
+      "id": 17826407,
+      "creator": "pulsebot@bmo.tld",
+      "bug_id": 2006489,
+      "author": "pulsebot@bmo.tld",
+      "attachment_id": null,
+      "tags": []
+    },
+    {
+      "reactions": {},
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/d26678c79bf1",
+      "creation_time": "2026-01-03T08:54:34Z",
+      "text": "https://hg.mozilla.org/mozilla-central/rev/d26678c79bf1",
+      "creator": "csabou@mozilla.com",
+      "bug_id": 2006489,
+      "attachment_id": null,
+      "author": "csabou@mozilla.com",
+      "tags": [
+        "bugherder"
+      ],
+      "time": "2026-01-03T08:54:34Z",
+      "id": 17826652,
+      "count": 4,
+      "is_private": false
+    },
+    {
+      "creator": "rob@robwu.nl",
+      "tags": [],
+      "author": "rob@robwu.nl",
+      "attachment_id": 9535460,
+      "bug_id": 2006489,
+      "time": "2026-01-03T15:59:25Z",
+      "id": 17826752,
+      "is_private": false,
+      "reactions": {},
+      "raw_text": "\nOriginal Revision: https://phabricator.services.mozilla.com/D276856",
+      "creation_time": "2026-01-03T15:59:25Z",
+      "count": 5,
+      "text": "Created attachment 9535460\nBug 2006489 - Keep staged langpack despite other installation\n\n\nOriginal Revision: https://phabricator.services.mozilla.com/D276856"
+    },
+    {
+      "time": "2026-01-03T15:59:39Z",
+      "id": 17826753,
+      "creator": "phab-bot@bmo.tld",
+      "tags": [],
+      "author": "phab-bot@bmo.tld",
+      "attachment_id": null,
+      "bug_id": 2006489,
+      "text": "### firefox-release Uplift Approval Request\n- **User impact if declined**: This patch ensures that the browser is correctly localized after a major browser update. Previously it was possible for the langpack to be lost, resulting in a poor user experience. Due to the bug, the version receiving the fix can still encounter the bug, it is future major version updates that benefit from the fix.\n\nThe patch has landed in Nightly 148, which means that users will stop experiencing the issue in 149+.\n\nThis upift targets 147 release, to make sure that users performing a major update to 148 won't encounter this bug.\n\nIt is too late for the 146 release, so version 147 will still be affected by this bug.\n- **Code covered by automated testing**: yes\n- **Fix verified in Nightly**: no\n- **Needs manual QE test**: no\n- **Steps to reproduce for manual QE testing**: \n- **Risk associated with taking this patch**: low\n- **Explanation of risk level**: The problem is very well understood and covered by unit tests. This patch is designed to have minimal risk, only activating for langpacks staged during the application update process. It does not affect other operations and in the event of an unexpected interruption (e.g. browser crash), the failure mode is the same as before (old langpack still installed, and disabled if user updates to a new major version). Moreover the implementation explicitly allows langpacks for the current version to be installed.\n- **String changes made/needed**: None\n- **Is Android affected?**: no",
+      "raw_text": "### firefox-release Uplift Approval Request\n- **User impact if declined**: This patch ensures that the browser is correctly localized after a major browser update. Previously it was possible for the langpack to be lost, resulting in a poor user experience. Due to the bug, the version receiving the fix can still encounter the bug, it is future major version updates that benefit from the fix.\n\nThe patch has landed in Nightly 148, which means that users will stop experiencing the issue in 149+.\n\nThis upift targets 147 release, to make sure that users performing a major update to 148 won't encounter this bug.\n\nIt is too late for the 146 release, so version 147 will still be affected by this bug.\n- **Code covered by automated testing**: yes\n- **Fix verified in Nightly**: no\n- **Needs manual QE test**: no\n- **Steps to reproduce for manual QE testing**: \n- **Risk associated with taking this patch**: low\n- **Explanation of risk level**: The problem is very well understood and covered by unit tests. This patch is designed to have minimal risk, only activating for langpacks staged during the application update process. It does not affect other operations and in the event of an unexpected interruption (e.g. browser crash), the failure mode is the same as before (old langpack still installed, and disabled if user updates to a new major version). Moreover the implementation explicitly allows langpacks for the current version to be installed.\n- **String changes made/needed**: None\n- **Is Android affected?**: no",
+      "reactions": {},
+      "creation_time": "2026-01-03T15:59:39Z",
+      "is_private": false,
+      "count": 6
+    },
+    {
+      "time": "2026-01-15T21:58:42Z",
+      "id": 17844803,
+      "creator": "pulsebot@bmo.tld",
+      "bug_id": 2006489,
+      "attachment_id": null,
+      "tags": [
+        "uplift"
+      ],
+      "author": "pulsebot@bmo.tld",
+      "text": "https://github.com/mozilla-firefox/firefox/commit/48623886e1b4\nhttps://hg.mozilla.org/releases/mozilla-release/rev/7248e3bb1024",
+      "reactions": {},
+      "raw_text": "https://github.com/mozilla-firefox/firefox/commit/48623886e1b4\nhttps://hg.mozilla.org/releases/mozilla-release/rev/7248e3bb1024",
+      "creation_time": "2026-01-15T21:58:42Z",
+      "is_private": false,
+      "count": 7
+    },
+    {
+      "is_private": false,
+      "count": 8,
+      "creator": "ryanvm@gmail.com",
+      "attachment_id": null,
+      "author": "ryanvm@gmail.com",
+      "tags": [],
+      "bug_id": 2006489,
+      "time": "2026-01-15T21:59:47Z",
+      "id": 17844807,
+      "reactions": {},
+      "raw_text": "We're fixing this in a 147 dot release, but it'd be better to relnote it in 148 as that'll be the first release where users will actually see the affect of this patch.",
+      "creation_time": "2026-01-15T21:59:47Z",
+      "text": "We're fixing this in a 147 dot release, but it'd be better to relnote it in 148 as that'll be the first release where users will actually see the affect of this patch."
+    },
+    {
+      "time": "2026-01-15T22:08:53Z",
+      "is_private": false,
+      "id": 17844825,
+      "creator": "rob@robwu.nl",
+      "bug_id": 2006489,
+      "attachment_id": null,
+      "author": "rob@robwu.nl",
+      "tags": [],
+      "text": "(In reply to Ryan VanderMeulen [:RyanVM] from comment #8)\n> We're fixing this in a 147 dot release, but it'd be better to relnote it in 148 as that'll be the first release where users will actually see the affect of this patch.\n\nThis issue can still happen if the user upgrades from a version before the fix to a major version regardless of the fix. E.g. 147.0 to 148, or even something like 146 to 148.\n\nBut with the many weeks between the first dot release and the next major release, the expectation is that most users who would be facing this bug will be saved by the fix here.",
+      "count": 9,
+      "raw_text": "(In reply to Ryan VanderMeulen [:RyanVM] from comment #8)\n> We're fixing this in a 147 dot release, but it'd be better to relnote it in 148 as that'll be the first release where users will actually see the affect of this patch.\n\nThis issue can still happen if the user upgrades from a version before the fix to a major version regardless of the fix. E.g. 147.0 to 148, or even something like 146 to 148.\n\nBut with the many weeks between the first dot release and the next major release, the expectation is that most users who would be facing this bug will be saved by the fix here.",
+      "reactions": {},
+      "creation_time": "2026-01-15T22:08:53Z"
+    }
+  ],
+  "counts": {
+    "duplicates": 0,
+    "cc": 6,
+    "regressed_by": 0,
+    "depends_on": 0,
+    "regressions": 0,
+    "blocks": 0,
+    "comments": 10,
+    "keywords": 0,
+    "attachments": 2
+  },
+  "id": 2006489,
+  "cf_tracking_firefox_esr140": "---",
+  "cf_last_resolved": "2026-01-03T08:54:34Z",
+  "cf_status_firefox147": "fixed",
+  "qa_contact": "",
+  "cf_tracking_firefox149": "---",
+  "cf_fx_iteration": "---",
+  "priority": "P1",
+  "cf_webcompat_score": "---",
+  "resolution": "FIXED",
+  "cf_status_thunderbird_esr140": "---",
+  "cf_status_firefox148": "fixed",
+  "component": "Add-ons Manager",
+  "cf_rank": null,
+  "cf_tracking_firefox147": "---",
+  "triage_owner": "lgreco@mozilla.com",
+  "comment_count": 10,
+  "is_confirmed": true,
+  "history": [
+    {
+      "who": "jira-integration@bots.tld",
+      "when": "2025-12-16T23:13:23Z",
+      "changes": [
+        {
+          "field_name": "see_also",
+          "removed": "",
+          "added": "https://mozilla-hub.atlassian.net/browse/WEBEXT-2542"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "field_name": "cc",
+          "removed": "",
+          "added": "earo@mozilla.com"
+        }
+      ],
+      "when": "2025-12-17T05:52:18Z",
+      "who": "earo@mozilla.com"
+    },
+    {
+      "who": "francesco.lodolo@gmail.com",
+      "when": "2025-12-17T05:54:32Z",
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "cc",
+          "added": "francesco.lodolo@gmail.com"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "added": "https://bugzilla.mozilla.org/show_bug.cgi?id=2006512",
+          "field_name": "see_also",
+          "removed": ""
+        }
+      ],
+      "when": "2025-12-17T13:59:01Z",
+      "who": "rob@robwu.nl"
+    },
+    {
+      "changes": [
+        {
+          "field_name": "cc",
+          "removed": "",
+          "added": "emilio@crisal.io"
+        }
+      ],
+      "who": "emilio@crisal.io",
+      "when": "2025-12-18T09:27:59Z"
+    },
+    {
+      "changes": [
+        {
+          "added": "wdurand@mozilla.com",
+          "removed": "",
+          "field_name": "cc"
+        }
+      ],
+      "who": "wdurand@mozilla.com",
+      "when": "2025-12-19T10:35:33Z"
+    },
+    {
+      "when": "2025-12-25T19:04:49Z",
+      "who": "rob@robwu.nl",
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "see_also",
+          "added": "https://bugzilla.mozilla.org/show_bug.cgi?id=2007749"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "added": "RESOLVED",
+          "field_name": "status",
+          "removed": "NEW"
+        },
+        {
+          "added": "148 Branch",
+          "field_name": "target_milestone",
+          "removed": "---"
+        },
+        {
+          "added": "FIXED",
+          "field_name": "resolution",
+          "removed": ""
+        },
+        {
+          "field_name": "cf_last_resolved",
+          "removed": "",
+          "added": "2026-01-03T08:54:34Z"
+        },
+        {
+          "added": "fixed",
+          "removed": "---",
+          "field_name": "cf_status_firefox148"
+        },
+        {
+          "removed": "",
+          "field_name": "comment_tag",
+          "added": "bugherder",
+          "comment_id": 17826652,
+          "comment_count": 4
+        }
+      ],
+      "when": "2026-01-03T08:54:34Z",
+      "who": "csabou@mozilla.com"
+    },
+    {
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "flagtypes.name",
+          "attachment_id": 9535460,
+          "added": "approval-mozilla-release?"
+        }
+      ],
+      "when": "2026-01-03T15:59:25Z",
+      "who": "phab-bot@bmo.tld"
+    },
+    {
+      "changes": [
+        {
+          "field_name": "cf_qa_whiteboard",
+          "removed": "",
+          "added": "[qa-triage-done-c149/b148]"
+        }
+      ],
+      "when": "2026-01-13T16:21:35Z",
+      "who": "btot@mozilla.com"
+    },
+    {
+      "when": "2026-01-14T14:03:20Z",
+      "who": "rob@robwu.nl",
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "see_also",
+          "added": "https://bugzilla.mozilla.org/show_bug.cgi?id=2010271"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "added": "fixed",
+          "removed": "---",
+          "field_name": "cf_status_firefox147"
+        }
+      ],
+      "who": "lobot@bmo.tld",
+      "when": "2026-01-15T21:57:42Z"
+    },
+    {
+      "changes": [
+        {
+          "comment_id": 17844803,
+          "added": "uplift",
+          "removed": "",
+          "field_name": "comment_tag",
+          "comment_count": 7
+        }
+      ],
+      "who": "pulsebot@bmo.tld",
+      "when": "2026-01-15T21:58:42Z"
+    },
+    {
+      "who": "phab-bot@bmo.tld",
+      "when": "2026-01-15T21:59:28Z",
+      "changes": [
+        {
+          "field_name": "flagtypes.name",
+          "removed": "approval-mozilla-release?",
+          "attachment_id": 9535460,
+          "added": "approval-mozilla-release+"
+        }
+      ]
+    },
+    {
+      "when": "2026-01-15T21:59:47Z",
+      "who": "ryanvm@gmail.com",
+      "changes": [
+        {
+          "added": "dmeehan@mozilla.com, ryanvm@gmail.com",
+          "removed": "",
+          "field_name": "cc"
+        },
+        {
+          "removed": "---",
+          "field_name": "cf_tracking_firefox_relnote",
+          "added": "?"
+        }
+      ]
+    }
+  ],
+  "type": "defect",
+  "summary": "Langpack can be disabled after a Firefox update, if the current langpack was updated between staging of the update+langpack and restarting",
+  "status": "RESOLVED",
+  "flags": [],
+  "cf_tracking_thunderbird_esr115": "---",
+  "is_creator_accessible": true,
+  "is_cc_accessible": true,
+  "cf_tracking_firefox_esr115": "---",
+  "groups": [],
+  "creator_detail": {
+    "id": 447061,
+    "name": "rob@robwu.nl",
+    "email": "rob@robwu.nl",
+    "real_name": "Rob Wu [:robwu]",
+    "nick": "robwu"
+  },
+  "version": "unspecified",
+  "mentors": [],
+  "regressions": [],
+  "cf_has_str": "---",
+  "cf_performance_impact": "---",
+  "keywords": [],
+  "duplicates": [],
+  "cf_tracking_thunderbird_esr140": "---",
+  "assigned_to_detail": {
+    "id": 447061,
+    "name": "rob@robwu.nl",
+    "email": "rob@robwu.nl",
+    "real_name": "Rob Wu [:robwu]",
+    "nick": "robwu"
+  },
+  "cf_status_firefox_esr115": "---",
+  "cc": [
+    "dmeehan@mozilla.com",
+    "earo@mozilla.com",
+    "emilio@crisal.io",
+    "francesco.lodolo@gmail.com",
+    "ryanvm@gmail.com",
+    "wdurand@mozilla.com"
+  ],
+  "cf_webcompat_priority": "---"
+}

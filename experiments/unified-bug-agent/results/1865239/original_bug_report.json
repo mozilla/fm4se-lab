@@ -1,0 +1,425 @@
+{
+  "cf_fx_iteration": "---",
+  "resolution": "FIXED",
+  "priority": "P3",
+  "cf_webcompat_score": "---",
+  "cf_status_thunderbird_esr140": "---",
+  "cf_status_firefox148": "---",
+  "component": "Networking",
+  "cf_tracking_firefox147": "---",
+  "cf_rank": null,
+  "triage_owner": "valentin.gosu@gmail.com",
+  "comment_count": 8,
+  "cf_status_firefox122": "fixed",
+  "is_confirmed": true,
+  "history": [
+    {
+      "changes": [
+        {
+          "added": "mayankleoboy1@gmail.com",
+          "field_name": "cc",
+          "removed": ""
+        }
+      ],
+      "when": "2023-11-17T02:11:44Z",
+      "who": "mayankleoboy1@gmail.com"
+    },
+    {
+      "who": "smayya@mozilla.com",
+      "when": "2023-11-17T14:22:44Z",
+      "changes": [
+        {
+          "removed": "nobody@mozilla.org",
+          "field_name": "assigned_to",
+          "added": "smayya@mozilla.com"
+        }
+      ]
+    },
+    {
+      "when": "2023-11-17T14:23:17Z",
+      "who": "smayya@mozilla.com",
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "whiteboard",
+          "added": "[necko-triaged]"
+        },
+        {
+          "removed": "--",
+          "field_name": "priority",
+          "added": "P3"
+        },
+        {
+          "added": "N/A",
+          "field_name": "severity",
+          "removed": "--"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "added": "122 Branch",
+          "removed": "---",
+          "field_name": "target_milestone"
+        },
+        {
+          "added": "RESOLVED",
+          "removed": "NEW",
+          "field_name": "status"
+        },
+        {
+          "added": "FIXED",
+          "removed": "",
+          "field_name": "resolution"
+        },
+        {
+          "removed": "",
+          "field_name": "cf_last_resolved",
+          "added": "2023-11-22T03:51:55Z"
+        },
+        {
+          "field_name": "cf_status_firefox122",
+          "removed": "---",
+          "added": "fixed"
+        },
+        {
+          "comment_id": 16677843,
+          "added": "bugherder",
+          "field_name": "comment_tag",
+          "removed": "",
+          "comment_count": 3
+        }
+      ],
+      "when": "2023-11-22T03:51:55Z",
+      "who": "ctuns@mozilla.com"
+    },
+    {
+      "changes": [
+        {
+          "removed": "WIP: Bug 1865239 - feat(login-ui): instrument breach alert interactions on about:logins",
+          "field_name": "attachments.description",
+          "added": "Bug 1865239 - feat(login-ui): instrument breach alert interactions on about:logins",
+          "attachment_id": 9540172
+        }
+      ],
+      "when": "2026-01-26T20:52:46Z",
+      "who": "phab-bot@bmo.tld"
+    },
+    {
+      "changes": [
+        {
+          "comment_count": 7,
+          "field_name": "comment_tag",
+          "removed": "",
+          "comment_id": 17867853,
+          "added": "bugherder"
+        }
+      ],
+      "when": "2026-01-30T21:16:24Z",
+      "who": "agoloman@mozilla.com"
+    }
+  ],
+  "type": "task",
+  "flags": [],
+  "status": "RESOLVED",
+  "summary": "Try to provide a way for OnDataFinish to be done strictly before OnStopRequest.",
+  "cf_tracking_thunderbird_esr115": "---",
+  "is_cc_accessible": true,
+  "is_creator_accessible": true,
+  "cf_tracking_firefox_esr115": "---",
+  "groups": [],
+  "creator_detail": {
+    "name": "emilio@crisal.io",
+    "id": 546716,
+    "real_name": "Emilio Cobos \u00c1lvarez [:emilio]",
+    "email": "emilio@crisal.io",
+    "nick": "emilio"
+  },
+  "version": "unspecified",
+  "cf_size_estimate": "---",
+  "mentors": [],
+  "regressions": [],
+  "cf_has_str": "---",
+  "cf_performance_impact": "---",
+  "keywords": [],
+  "duplicates": [],
+  "assigned_to_detail": {
+    "real_name": "Sunil Mayya",
+    "email": "smayya@mozilla.com",
+    "nick": "smayya",
+    "name": "smayya@mozilla.com",
+    "id": 711499
+  },
+  "cf_status_firefox_esr115": "---",
+  "cf_tracking_thunderbird_esr140": "---",
+  "cf_webcompat_priority": "---",
+  "cc": [
+    "mayankleoboy1@gmail.com",
+    "rjesup@jesup.org",
+    "smayya@mozilla.com"
+  ],
+  "cf_status_firefox_esr140": "---",
+  "assigned_to": "smayya@mozilla.com",
+  "attachments": [
+    {
+      "summary": "Bug 1865239 - update ChannelEventQueue and nsIThreadRetargetableStreamListener documentation. r=#necko,emilio",
+      "id": 9364605,
+      "flags": [],
+      "file_name": "phabricator-D194155-url.txt",
+      "bug_id": 1865239,
+      "last_change_time": "2023-11-20T21:43:31Z",
+      "is_obsolete": 0,
+      "content_type": "text/x-phabricator-request",
+      "creator": "smayya@mozilla.com",
+      "attacher": "smayya@mozilla.com",
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMTk0MTU1",
+      "creation_time": "2023-11-20T21:43:31Z",
+      "is_private": 0,
+      "is_patch": 0,
+      "size": 48,
+      "description": "Bug 1865239 - update ChannelEventQueue and nsIThreadRetargetableStreamListener documentation. r=#necko,emilio",
+      "creator_detail": {
+        "name": "smayya@mozilla.com",
+        "id": 711499,
+        "nick": "smayya",
+        "email": "smayya@mozilla.com",
+        "real_name": "Sunil Mayya"
+      }
+    },
+    {
+      "creator_detail": {
+        "real_name": "vprema@mozilla.com",
+        "email": "vprema@mozilla.com",
+        "nick": "vprema",
+        "name": "vprema@mozilla.com",
+        "id": 769853
+      },
+      "description": "Bug 1865239 - feat(login-ui): instrument breach alert interactions on about:logins",
+      "is_private": 0,
+      "is_patch": 0,
+      "size": 48,
+      "attacher": "vprema@mozilla.com",
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjgwNDky",
+      "creation_time": "2026-01-26T20:52:20Z",
+      "flags": [],
+      "summary": "Bug 1865239 - feat(login-ui): instrument breach alert interactions on about:logins",
+      "id": 9540172,
+      "bug_id": 1865239,
+      "last_change_time": "2026-01-26T20:52:46Z",
+      "file_name": "phabricator-D280492-url.txt",
+      "creator": "vprema@mozilla.com",
+      "is_obsolete": 0,
+      "content_type": "text/x-phabricator-request"
+    }
+  ],
+  "blocks": [
+    1864817
+  ],
+  "cf_qa_whiteboard": "",
+  "cf_status_thunderbird_esr115": "---",
+  "cf_fx_points": "---",
+  "cf_user_story": "",
+  "mentors_detail": [],
+  "cf_tracking_firefox_relnote": "---",
+  "cf_tracking_firefox148": "---",
+  "creation_time": "2023-11-17T01:15:04Z",
+  "cf_a11y_review_project_flag": "---",
+  "target_milestone": "122 Branch",
+  "url": "",
+  "whiteboard": "[necko-triaged]",
+  "dupe_of": null,
+  "votes": 0,
+  "last_change_time": "2026-01-30T21:16:24Z",
+  "severity": "N/A",
+  "creator": "emilio@crisal.io",
+  "cf_cab_review": "---",
+  "classification": "Components",
+  "cf_crash_signature": "",
+  "cc_detail": [
+    {
+      "name": "mayankleoboy1@gmail.com",
+      "id": 440227,
+      "real_name": "Mayank Bansal",
+      "email": "mayankleoboy1@gmail.com",
+      "nick": "mayankleoboy1"
+    },
+    {
+      "nick": "jesup",
+      "email": "rjesup@jesup.org",
+      "real_name": "Randell Jesup [:jesup] (needinfo me)",
+      "name": "rjesup@jesup.org",
+      "id": 11539
+    },
+    {
+      "id": 711499,
+      "name": "smayya@mozilla.com",
+      "email": "smayya@mozilla.com",
+      "real_name": "Sunil Mayya",
+      "nick": "smayya"
+    }
+  ],
+  "see_also": [],
+  "is_open": false,
+  "alias": null,
+  "depends_on": [],
+  "op_sys": "Unspecified",
+  "description": "Being able to rely on that would simplify the implementation of bug 1864817 quite a bit.\n\nIt seems that, if I'm reading [this code](https://searchfox.org/mozilla-central/rev/766a338d53cd29e9851107f9e6a62d333c7d2c51/netwerk/protocol/http/HttpChannelChild.cpp#899-932) correctly, there is no race if either:\n\n  * The ODA/ODF event target is the same as the OnStopRequest target (because in that case ODA is guaranteed to be enqueued first).\n  * The ODA/ODF event target is the socket thread (which is true of the CSS loader, and a bunch of others, IIUC, that's what code like [this](https://searchfox.org/mozilla-central/rev/766a338d53cd29e9851107f9e6a62d333c7d2c51/dom/workers/loader/CacheLoadHandler.cpp#478-482) tries to do). Because in that case the task is executed sync and ODA/ODF is done before OnStopRequest is enqueued.\n\nIf that's correct, it'd be good to have that more explicitly documented at least, so that it's not so sketchy to rely on that. Maybe even worth having a more explicit API to make that even clearer.\n\nAt least for the CSS loader, it'd be nice to be able to rely on that, since that means we could make ODF do something like taking care of the happy path in ODF, and set a flag to nerf OnStopRequest",
+  "cf_accessibility_severity": "---",
+  "filed_via": "standard_form",
+  "triage_owner_detail": {
+    "name": "valentin.gosu@gmail.com",
+    "id": 415378,
+    "nick": "valentin",
+    "real_name": "Valentin Gosu [:valentin] (he/him)",
+    "email": "valentin.gosu@gmail.com"
+  },
+  "regressed_by": [],
+  "cf_status_firefox149": "---",
+  "last_change_time_non_bot": "2026-01-30T21:16:24Z",
+  "platform": "Unspecified",
+  "comments": [
+    {
+      "text": "Being able to rely on that would simplify the implementation of bug 1864817 quite a bit.\n\nIt seems that, if I'm reading [this code](https://searchfox.org/mozilla-central/rev/766a338d53cd29e9851107f9e6a62d333c7d2c51/netwerk/protocol/http/HttpChannelChild.cpp#899-932) correctly, there is no race if either:\n\n  * The ODA/ODF event target is the same as the OnStopRequest target (because in that case ODA is guaranteed to be enqueued first).\n  * The ODA/ODF event target is the socket thread (which is true of the CSS loader, and a bunch of others, IIUC, that's what code like [this](https://searchfox.org/mozilla-central/rev/766a338d53cd29e9851107f9e6a62d333c7d2c51/dom/workers/loader/CacheLoadHandler.cpp#478-482) tries to do). Because in that case the task is executed sync and ODA/ODF is done before OnStopRequest is enqueued.\n\nIf that's correct, it'd be good to have that more explicitly documented at least, so that it's not so sketchy to rely on that. Maybe even worth having a more explicit API to make that even clearer.\n\nAt least for the CSS loader, it'd be nice to be able to rely on that, since that means we could make ODF do something like taking care of the happy path in ODF, and set a flag to nerf OnStopRequest",
+      "creation_time": "2023-11-17T01:15:04Z",
+      "raw_text": "Being able to rely on that would simplify the implementation of bug 1864817 quite a bit.\n\nIt seems that, if I'm reading [this code](https://searchfox.org/mozilla-central/rev/766a338d53cd29e9851107f9e6a62d333c7d2c51/netwerk/protocol/http/HttpChannelChild.cpp#899-932) correctly, there is no race if either:\n\n  * The ODA/ODF event target is the same as the OnStopRequest target (because in that case ODA is guaranteed to be enqueued first).\n  * The ODA/ODF event target is the socket thread (which is true of the CSS loader, and a bunch of others, IIUC, that's what code like [this](https://searchfox.org/mozilla-central/rev/766a338d53cd29e9851107f9e6a62d333c7d2c51/dom/workers/loader/CacheLoadHandler.cpp#478-482) tries to do). Because in that case the task is executed sync and ODA/ODF is done before OnStopRequest is enqueued.\n\nIf that's correct, it'd be good to have that more explicitly documented at least, so that it's not so sketchy to rely on that. Maybe even worth having a more explicit API to make that even clearer.\n\nAt least for the CSS loader, it'd be nice to be able to rely on that, since that means we could make ODF do something like taking care of the happy path in ODF, and set a flag to nerf OnStopRequest",
+      "reactions": {},
+      "id": 16671048,
+      "time": "2023-11-17T01:15:04Z",
+      "tags": [],
+      "attachment_id": null,
+      "author": "emilio@crisal.io",
+      "bug_id": 1865239,
+      "creator": "emilio@crisal.io",
+      "count": 0,
+      "is_private": false
+    },
+    {
+      "creator": "smayya@mozilla.com",
+      "bug_id": 1865239,
+      "tags": [],
+      "author": "smayya@mozilla.com",
+      "attachment_id": 9364605,
+      "time": "2023-11-20T21:43:31Z",
+      "id": 16676094,
+      "reactions": {},
+      "raw_text": "",
+      "creation_time": "2023-11-20T21:43:31Z",
+      "text": "Created attachment 9364605\nBug 1865239 - update ChannelEventQueue and nsIThreadRetargetableStreamListener documentation. r=#necko,emilio",
+      "is_private": false,
+      "count": 1
+    },
+    {
+      "creation_time": "2023-11-21T16:12:07Z",
+      "reactions": {},
+      "raw_text": "Pushed by smayya@mozilla.com:\nhttps://hg.mozilla.org/integration/autoland/rev/eb4ff33091f5\nupdate ChannelEventQueue and nsIThreadRetargetableStreamListener documentation. r=necko-reviewers,jesup DONTBUILD",
+      "text": "Pushed by smayya@mozilla.com:\nhttps://hg.mozilla.org/integration/autoland/rev/eb4ff33091f5\nupdate ChannelEventQueue and nsIThreadRetargetableStreamListener documentation. r=necko-reviewers,jesup DONTBUILD",
+      "count": 2,
+      "bug_id": 1865239,
+      "tags": [],
+      "author": "pulsebot@bmo.tld",
+      "attachment_id": null,
+      "creator": "pulsebot@bmo.tld",
+      "is_private": false,
+      "id": 16677186,
+      "time": "2023-11-21T16:12:07Z"
+    },
+    {
+      "tags": [
+        "bugherder"
+      ],
+      "attachment_id": null,
+      "author": "ctuns@mozilla.com",
+      "bug_id": 1865239,
+      "creator": "ctuns@mozilla.com",
+      "id": 16677843,
+      "time": "2023-11-22T03:51:55Z",
+      "creation_time": "2023-11-22T03:51:55Z",
+      "reactions": {},
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/eb4ff33091f5",
+      "text": "https://hg.mozilla.org/mozilla-central/rev/eb4ff33091f5",
+      "is_private": false,
+      "count": 3
+    },
+    {
+      "text": "Created attachment 9540172\nBug 1865239 - feat(login-ui): instrument breach alert interactions on about:logins",
+      "count": 4,
+      "creation_time": "2026-01-26T20:52:20Z",
+      "raw_text": "",
+      "reactions": {},
+      "is_private": false,
+      "id": 17860542,
+      "time": "2026-01-26T20:52:20Z",
+      "bug_id": 1865239,
+      "author": "vprema@mozilla.com",
+      "tags": [],
+      "attachment_id": 9540172,
+      "creator": "vprema@mozilla.com"
+    },
+    {
+      "count": 5,
+      "is_private": false,
+      "creation_time": "2026-01-27T12:08:48Z",
+      "raw_text": "A patch has been attached on this bug, which was already closed. Filing a separate bug will ensure better tracking. If this was not by mistake and further action is needed, please alert the appropriate party. (Or: if the patch doesn't change behavior -- e.g. landing a test case, or fixing a typo -- then feel free to disregard this message)",
+      "reactions": {},
+      "text": "A patch has been attached on this bug, which was already closed. Filing a separate bug will ensure better tracking. If this was not by mistake and further action is needed, please alert the appropriate party. (Or: if the patch doesn't change behavior -- e.g. landing a test case, or fixing a typo -- then feel free to disregard this message)",
+      "bug_id": 1865239,
+      "tags": [],
+      "attachment_id": null,
+      "author": "release-mgmt-account-bot@mozilla.tld",
+      "creator": "release-mgmt-account-bot@mozilla.tld",
+      "id": 17861420,
+      "time": "2026-01-27T12:08:48Z"
+    },
+    {
+      "raw_text": "Pushed by mtigley@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/43d7056d5a07\nhttps://hg.mozilla.org/integration/autoland/rev/95ac227ccaf2\nfeat(login-ui): instrument breach alert interactions on about:logins r=mtigley,credential-management-reviewers",
+      "reactions": {},
+      "creation_time": "2026-01-30T16:43:47Z",
+      "text": "Pushed by mtigley@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/43d7056d5a07\nhttps://hg.mozilla.org/integration/autoland/rev/95ac227ccaf2\nfeat(login-ui): instrument breach alert interactions on about:logins r=mtigley,credential-management-reviewers",
+      "creator": "pulsebot@bmo.tld",
+      "bug_id": 1865239,
+      "author": "pulsebot@bmo.tld",
+      "tags": [],
+      "attachment_id": null,
+      "time": "2026-01-30T16:43:47Z",
+      "id": 17867399,
+      "count": 6,
+      "is_private": false
+    },
+    {
+      "attachment_id": null,
+      "author": "agoloman@mozilla.com",
+      "tags": [
+        "bugherder"
+      ],
+      "bug_id": 1865239,
+      "creator": "agoloman@mozilla.com",
+      "id": 17867853,
+      "is_private": false,
+      "time": "2026-01-30T21:16:24Z",
+      "creation_time": "2026-01-30T21:16:24Z",
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/95ac227ccaf2",
+      "reactions": {},
+      "count": 7,
+      "text": "https://hg.mozilla.org/mozilla-central/rev/95ac227ccaf2"
+    }
+  ],
+  "product": "Core",
+  "id": 1865239,
+  "counts": {
+    "keywords": 0,
+    "attachments": 2,
+    "blocks": 0,
+    "comments": 8,
+    "regressions": 0,
+    "depends_on": 1,
+    "regressed_by": 0,
+    "cc": 3,
+    "duplicates": 0
+  },
+  "cf_tracking_firefox_esr140": "---",
+  "qa_contact": "",
+  "cf_status_firefox147": "---",
+  "cf_last_resolved": "2023-11-22T03:51:55Z",
+  "cf_tracking_firefox149": "---"
+}

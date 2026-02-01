@@ -1,0 +1,339 @@
+{
+  "cf_fx_points": "---",
+  "whiteboard": "[necko-triaged]",
+  "cf_tracking_firefox149": "---",
+  "cf_performance_impact": "---",
+  "see_also": [],
+  "priority": "P2",
+  "cf_status_firefox148": "---",
+  "cf_tracking_firefox_esr140": "---",
+  "creator": "edgul@mozilla.com",
+  "cf_status_firefox_esr140": "---",
+  "cf_status_firefox149": "fixed",
+  "status": "RESOLVED",
+  "resolution": "FIXED",
+  "flags": [],
+  "op_sys": "Unspecified",
+  "cc_detail": [],
+  "duplicates": [],
+  "version": "unspecified",
+  "cf_fx_iteration": "---",
+  "mentors": [],
+  "cf_webcompat_priority": "---",
+  "is_confirmed": true,
+  "cf_tracking_thunderbird_esr140": "---",
+  "id": 2011767,
+  "description": "0.5.2 has some necessary fixes to get past MSRV 1.87.0, which is still in use in CI.\nIt also has some performance fixes to make URLPattern use faster.",
+  "creation_time": "2026-01-21T21:28:38Z",
+  "cf_a11y_review_project_flag": "---",
+  "target_milestone": "149 Branch",
+  "cf_size_estimate": "---",
+  "platform": "Unspecified",
+  "regressed_by": [],
+  "alias": null,
+  "cf_tracking_thunderbird_esr115": "---",
+  "cf_rank": null,
+  "history": [
+    {
+      "who": "edgul@mozilla.com",
+      "changes": [
+        {
+          "added": "edgul@mozilla.com",
+          "removed": "nobody@mozilla.org",
+          "field_name": "assigned_to"
+        }
+      ],
+      "when": "2026-01-21T21:28:47Z"
+    },
+    {
+      "changes": [
+        {
+          "field_name": "summary",
+          "removed": "urlpatter crate version bump 0.5.2",
+          "added": "urlpattern crate version bump 0.5.2"
+        }
+      ],
+      "when": "2026-01-21T21:28:55Z",
+      "who": "edgul@mozilla.com"
+    },
+    {
+      "when": "2026-01-21T21:41:04Z",
+      "changes": [
+        {
+          "field_name": "attachments.description",
+          "attachment_id": 9539219,
+          "removed": "Bug 2011767 - urlpattern crate version bump to fix CI bustage and some perf fixes r?#necko-reviewers",
+          "added": "Bug 2011767 - urlpattern crate version bump 0.5.2 to fix CI bustage and some perf fixes r?#necko-reviewers"
+        }
+      ],
+      "who": "phab-bot@bmo.tld"
+    },
+    {
+      "changes": [
+        {
+          "attachment_id": 9539219,
+          "field_name": "attachments.description",
+          "removed": "Bug 2011767 - urlpattern crate version bump 0.5.2 to fix CI bustage and some perf fixes r?#necko-reviewers",
+          "added": "Bug 2011767 - urlpattern crate version bump to fix CI bustage and some perf fixes r?#necko-reviewers"
+        }
+      ],
+      "when": "2026-01-22T14:49:07Z",
+      "who": "phab-bot@bmo.tld"
+    },
+    {
+      "who": "abutkovits@mozilla.com",
+      "when": "2026-01-22T20:53:24Z",
+      "changes": [
+        {
+          "removed": "",
+          "added": "needinfo?(edgul@mozilla.com)",
+          "field_name": "flagtypes.name"
+        }
+      ]
+    },
+    {
+      "who": "chorotan@mozilla.com",
+      "when": "2026-01-29T16:09:14Z",
+      "changes": [
+        {
+          "added": "FIXED",
+          "removed": "",
+          "field_name": "resolution"
+        },
+        {
+          "removed": "---",
+          "added": "149 Branch",
+          "field_name": "target_milestone"
+        },
+        {
+          "field_name": "status",
+          "added": "RESOLVED",
+          "removed": "NEW"
+        },
+        {
+          "added": "2026-01-29T16:09:14Z",
+          "removed": "",
+          "field_name": "cf_last_resolved"
+        },
+        {
+          "removed": "---",
+          "added": "fixed",
+          "field_name": "cf_status_firefox149"
+        },
+        {
+          "added": "bugherder",
+          "removed": "",
+          "comment_id": 17865359,
+          "field_name": "comment_tag",
+          "comment_count": 5
+        }
+      ]
+    },
+    {
+      "who": "edgul@mozilla.com",
+      "changes": [
+        {
+          "field_name": "flagtypes.name",
+          "added": "",
+          "removed": "needinfo?(edgul@mozilla.com)"
+        }
+      ],
+      "when": "2026-01-30T17:00:55Z"
+    }
+  ],
+  "attachments": [
+    {
+      "creator_detail": {
+        "nick": "edgul",
+        "name": "edgul@mozilla.com",
+        "real_name": "edgul",
+        "id": 701256,
+        "email": "edgul@mozilla.com"
+      },
+      "creator": "edgul@mozilla.com",
+      "bug_id": 2011767,
+      "summary": "Bug 2011767 - urlpattern crate version bump to fix CI bustage and some perf fixes r?#necko-reviewers",
+      "creation_time": "2026-01-21T21:36:14Z",
+      "description": "Bug 2011767 - urlpattern crate version bump to fix CI bustage and some perf fixes r?#necko-reviewers",
+      "id": 9539219,
+      "file_name": "phabricator-D279942-url.txt",
+      "is_private": 0,
+      "size": 48,
+      "flags": [],
+      "content_type": "text/x-phabricator-request",
+      "is_obsolete": 0,
+      "attacher": "edgul@mozilla.com",
+      "last_change_time": "2026-01-22T14:49:07Z",
+      "is_patch": 0,
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjc5OTQy"
+    }
+  ],
+  "cf_tracking_firefox_relnote": "---",
+  "cf_cab_review": "---",
+  "cf_last_resolved": "2026-01-29T16:09:14Z",
+  "counts": {
+    "blocks": 0,
+    "regressions": 0,
+    "duplicates": 0,
+    "regressed_by": 0,
+    "comments": 6,
+    "cc": 0,
+    "depends_on": 0,
+    "attachments": 1,
+    "keywords": 0
+  },
+  "filed_via": "standard_form",
+  "is_cc_accessible": true,
+  "cf_status_thunderbird_esr115": "---",
+  "mentors_detail": [],
+  "keywords": [],
+  "cf_webcompat_score": "---",
+  "type": "task",
+  "cf_status_firefox147": "---",
+  "severity": "N/A",
+  "cf_status_thunderbird_esr140": "---",
+  "cf_accessibility_severity": "---",
+  "url": "",
+  "assigned_to": "edgul@mozilla.com",
+  "blocks": [],
+  "groups": [],
+  "qa_contact": "",
+  "triage_owner": "valentin.gosu@gmail.com",
+  "product": "Core",
+  "cf_tracking_firefox147": "---",
+  "triage_owner_detail": {
+    "real_name": "Valentin Gosu [:valentin] (he/him)",
+    "name": "valentin.gosu@gmail.com",
+    "nick": "valentin",
+    "email": "valentin.gosu@gmail.com",
+    "id": 415378
+  },
+  "cf_status_firefox_esr115": "---",
+  "cf_has_str": "---",
+  "creator_detail": {
+    "name": "edgul@mozilla.com",
+    "nick": "edgul",
+    "real_name": "edgul",
+    "email": "edgul@mozilla.com",
+    "id": 701256
+  },
+  "classification": "Components",
+  "cf_user_story": "",
+  "comment_count": 6,
+  "summary": "urlpattern crate version bump 0.5.2",
+  "cf_crash_signature": "",
+  "last_change_time_non_bot": "2026-01-30T17:00:55Z",
+  "cf_tracking_firefox148": "---",
+  "cf_qa_whiteboard": "",
+  "last_change_time": "2026-01-30T17:00:55Z",
+  "cf_tracking_firefox_esr115": "---",
+  "assigned_to_detail": {
+    "email": "edgul@mozilla.com",
+    "id": 701256,
+    "name": "edgul@mozilla.com",
+    "nick": "edgul",
+    "real_name": "edgul"
+  },
+  "votes": 0,
+  "component": "Networking",
+  "dupe_of": null,
+  "regressions": [],
+  "depends_on": [],
+  "cc": [],
+  "comments": [
+    {
+      "author": "edgul@mozilla.com",
+      "attachment_id": null,
+      "text": "0.5.2 has some necessary fixes to get past MSRV 1.87.0, which is still in use in CI.\nIt also has some performance fixes to make URLPattern use faster.",
+      "is_private": false,
+      "reactions": {},
+      "time": "2026-01-21T21:28:38Z",
+      "tags": [],
+      "creator": "edgul@mozilla.com",
+      "bug_id": 2011767,
+      "creation_time": "2026-01-21T21:28:38Z",
+      "count": 0,
+      "id": 17853718,
+      "raw_text": "0.5.2 has some necessary fixes to get past MSRV 1.87.0, which is still in use in CI.\nIt also has some performance fixes to make URLPattern use faster."
+    },
+    {
+      "reactions": {},
+      "is_private": false,
+      "text": "Created attachment 9539219\nBug 2011767 - urlpattern crate version bump to fix CI bustage and some perf fixes r?#necko-reviewers",
+      "attachment_id": 9539219,
+      "author": "edgul@mozilla.com",
+      "count": 1,
+      "id": 17853726,
+      "raw_text": "",
+      "creation_time": "2026-01-21T21:36:14Z",
+      "bug_id": 2011767,
+      "creator": "edgul@mozilla.com",
+      "tags": [],
+      "time": "2026-01-21T21:36:14Z"
+    },
+    {
+      "tags": [],
+      "time": "2026-01-22T14:56:37Z",
+      "count": 2,
+      "id": 17854684,
+      "raw_text": "Pushed by eguloien@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/34fe02635a9c\nhttps://hg.mozilla.org/integration/autoland/rev/3990b9b51414\nurlpattern crate version bump to fix CI bustage and some perf fixes r=necko-reviewers,supply-chain-reviewers,kershaw",
+      "creation_time": "2026-01-22T14:56:37Z",
+      "bug_id": 2011767,
+      "creator": "pulsebot@bmo.tld",
+      "attachment_id": null,
+      "author": "pulsebot@bmo.tld",
+      "reactions": {},
+      "is_private": false,
+      "text": "Pushed by eguloien@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/34fe02635a9c\nhttps://hg.mozilla.org/integration/autoland/rev/3990b9b51414\nurlpattern crate version bump to fix CI bustage and some perf fixes r=necko-reviewers,supply-chain-reviewers,kershaw"
+    },
+    {
+      "attachment_id": null,
+      "author": "abutkovits@mozilla.com",
+      "reactions": {},
+      "text": "Backed out for causing failures complaining about regexResult.\n\nBackout link: https://hg-edge.mozilla.org/integration/autoland/rev/d8594f11efadec8cbad9c477e149b65e4444d330\n\nPush where failures started: https://treeherder.mozilla.org/jobs?repo=autoland&selectedTaskRun=P7sPJKPyThSZ5Pa3n272Tg.0&resultStatus=testfailed%2Cbusted%2Cexception%2Cretry%2Cusercancel&revision=9a8624999ab9dfd0e34d53f4fd6dfe90bfadc9c6\n\nFailure log: https://treeherder.mozilla.org/logviewer?job_id=544954988&repo=autoland&task=P7sPJKPyThSZ5Pa3n272Tg.0&lineNumber=4836",
+      "is_private": false,
+      "tags": [],
+      "time": "2026-01-22T20:53:24Z",
+      "creation_time": "2026-01-22T20:53:24Z",
+      "id": 17855179,
+      "raw_text": "Backed out for causing failures complaining about regexResult.\n\nBackout link: https://hg-edge.mozilla.org/integration/autoland/rev/d8594f11efadec8cbad9c477e149b65e4444d330\n\nPush where failures started: https://treeherder.mozilla.org/jobs?repo=autoland&selectedTaskRun=P7sPJKPyThSZ5Pa3n272Tg.0&resultStatus=testfailed%2Cbusted%2Cexception%2Cretry%2Cusercancel&revision=9a8624999ab9dfd0e34d53f4fd6dfe90bfadc9c6\n\nFailure log: https://treeherder.mozilla.org/logviewer?job_id=544954988&repo=autoland&task=P7sPJKPyThSZ5Pa3n272Tg.0&lineNumber=4836",
+      "count": 3,
+      "creator": "abutkovits@mozilla.com",
+      "bug_id": 2011767
+    },
+    {
+      "id": 17864171,
+      "count": 4,
+      "raw_text": "Pushed by eguloien@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/7136228db444\nhttps://hg.mozilla.org/integration/autoland/rev/da8a6e62bfdb\nurlpattern crate version bump to fix CI bustage and some perf fixes r=necko-reviewers,supply-chain-reviewers,kershaw",
+      "creation_time": "2026-01-29T00:59:11Z",
+      "bug_id": 2011767,
+      "creator": "pulsebot@bmo.tld",
+      "tags": [],
+      "time": "2026-01-29T00:59:11Z",
+      "reactions": {},
+      "is_private": false,
+      "text": "Pushed by eguloien@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/7136228db444\nhttps://hg.mozilla.org/integration/autoland/rev/da8a6e62bfdb\nurlpattern crate version bump to fix CI bustage and some perf fixes r=necko-reviewers,supply-chain-reviewers,kershaw",
+      "attachment_id": null,
+      "author": "pulsebot@bmo.tld"
+    },
+    {
+      "creation_time": "2026-01-29T16:09:14Z",
+      "id": 17865359,
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/da8a6e62bfdb",
+      "count": 5,
+      "creator": "chorotan@mozilla.com",
+      "bug_id": 2011767,
+      "tags": [
+        "bugherder"
+      ],
+      "time": "2026-01-29T16:09:14Z",
+      "reactions": {},
+      "text": "https://hg.mozilla.org/mozilla-central/rev/da8a6e62bfdb",
+      "is_private": false,
+      "attachment_id": null,
+      "author": "chorotan@mozilla.com"
+    }
+  ],
+  "is_creator_accessible": true,
+  "is_open": false
+}

@@ -1,0 +1,565 @@
+{
+  "bug_id": 2013000,
+  "timestamp": "2026-02-01 17:45:52",
+  "data_sources": [
+    "bugzilla",
+    "crash-stats"
+  ],
+  "bug_data": {
+    "target_milestone": "149 Branch",
+    "cc": [],
+    "description": "",
+    "is_creator_accessible": true,
+    "creator": "dao+bmo@mozilla.com",
+    "cf_fx_points": "---",
+    "url": "",
+    "cf_webcompat_score": "---",
+    "cc_detail": [],
+    "cf_qa_whiteboard": "",
+    "cf_status_firefox149": "fixed",
+    "cf_tracking_firefox_esr115": "---",
+    "cf_user_story": "",
+    "mentors_detail": [],
+    "duplicates": [],
+    "cf_last_resolved": "2026-01-31T09:21:51Z",
+    "dupe_of": null,
+    "triage_owner_detail": {
+      "email": "jteow@mozilla.com",
+      "name": "jteow@mozilla.com",
+      "nick": "jteow",
+      "real_name": "James Teow [:jteow]",
+      "id": 701257
+    },
+    "depends_on": [],
+    "flags": [],
+    "resolution": "FIXED",
+    "attachments": [
+      {
+        "is_obsolete": 0,
+        "creator": "dao+bmo@mozilla.com",
+        "creator_detail": {
+          "real_name": "D\u00e3o Gottwald [:dao]",
+          "id": 219124,
+          "nick": "dao",
+          "email": "dao+bmo@mozilla.com",
+          "name": "dao+bmo@mozilla.com"
+        },
+        "description": "Bug 2013000 - Move sanitizeTextFromClipboard to UrlbarUtils. r?mbeier",
+        "last_change_time": "2026-01-29T15:04:36Z",
+        "file_name": "phabricator-D280967-url.txt",
+        "bug_id": 2013000,
+        "size": 48,
+        "id": 9540927,
+        "summary": "Bug 2013000 - Move sanitizeTextFromClipboard to UrlbarUtils. r?mbeier",
+        "content_type": "text/x-phabricator-request",
+        "is_private": 0,
+        "attacher": "dao+bmo@mozilla.com",
+        "flags": [],
+        "is_patch": 0,
+        "creation_time": "2026-01-29T15:04:36Z",
+        "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjgwOTY3"
+      }
+    ],
+    "creator_detail": {
+      "real_name": "D\u00e3o Gottwald [:dao]",
+      "id": 219124,
+      "nick": "dao",
+      "email": "dao+bmo@mozilla.com",
+      "name": "dao+bmo@mozilla.com"
+    },
+    "classification": "Client Software",
+    "cf_accessibility_severity": "---",
+    "last_change_time_non_bot": "2026-01-31T09:21:51Z",
+    "status": "RESOLVED",
+    "groups": [],
+    "blocks": [
+      2012999,
+      2013282
+    ],
+    "cf_tracking_firefox_esr140": "---",
+    "cf_has_str": "---",
+    "last_change_time": "2026-01-31T09:21:51Z",
+    "mentors": [],
+    "assigned_to": "dao+bmo@mozilla.com",
+    "cf_status_firefox148": "---",
+    "priority": "P1",
+    "summary": "Move sanitizeTextFromClipboard to UrlbarUtils",
+    "id": 2013000,
+    "counts": {
+      "attachments": 1,
+      "keywords": 0,
+      "cc": 0,
+      "duplicates": 0,
+      "regressions": 0,
+      "regressed_by": 0,
+      "comments": 4,
+      "depends_on": 2,
+      "blocks": 0
+    },
+    "creation_time": "2026-01-28T13:45:04Z",
+    "cf_fx_iteration": "---",
+    "is_open": false,
+    "component": "Address Bar",
+    "history": [
+      {
+        "who": "jira-integration@bots.tld",
+        "when": "2026-01-28T13:45:33Z",
+        "changes": [
+          {
+            "field_name": "see_also",
+            "added": "https://mozilla-hub.atlassian.net/browse/SNG-3285",
+            "removed": ""
+          }
+        ]
+      },
+      {
+        "who": "dao+bmo@mozilla.com",
+        "when": "2026-01-29T14:00:15Z",
+        "changes": [
+          {
+            "field_name": "blocks",
+            "added": "2013282",
+            "removed": ""
+          }
+        ]
+      },
+      {
+        "changes": [
+          {
+            "added": "2013283",
+            "field_name": "blocks",
+            "removed": ""
+          }
+        ],
+        "when": "2026-01-29T14:01:00Z",
+        "who": "dao+bmo@mozilla.com"
+      },
+      {
+        "when": "2026-01-29T14:01:54Z",
+        "who": "dao+bmo@mozilla.com",
+        "changes": [
+          {
+            "added": "",
+            "field_name": "blocks",
+            "removed": "2013283"
+          }
+        ]
+      },
+      {
+        "who": "phab-bot@bmo.tld",
+        "when": "2026-01-29T15:04:36Z",
+        "changes": [
+          {
+            "added": "dao+bmo@mozilla.com",
+            "field_name": "assigned_to",
+            "removed": "nobody@mozilla.org"
+          },
+          {
+            "removed": "NEW",
+            "added": "ASSIGNED",
+            "field_name": "status"
+          }
+        ]
+      },
+      {
+        "who": "pstanciu@mozilla.com",
+        "when": "2026-01-31T09:21:51Z",
+        "changes": [
+          {
+            "removed": "---",
+            "field_name": "target_milestone",
+            "added": "149 Branch"
+          },
+          {
+            "removed": "ASSIGNED",
+            "added": "RESOLVED",
+            "field_name": "status"
+          },
+          {
+            "field_name": "resolution",
+            "added": "FIXED",
+            "removed": ""
+          },
+          {
+            "removed": "",
+            "added": "2026-01-31T09:21:51Z",
+            "field_name": "cf_last_resolved"
+          },
+          {
+            "added": "fixed",
+            "field_name": "cf_status_firefox149",
+            "removed": "---"
+          },
+          {
+            "comment_count": 3,
+            "field_name": "comment_tag",
+            "added": "bugherder",
+            "comment_id": 17868304,
+            "removed": ""
+          }
+        ]
+      }
+    ],
+    "keywords": [],
+    "product": "Firefox",
+    "filed_via": "standard_form",
+    "severity": "N/A",
+    "cf_cab_review": "---",
+    "comment_count": 4,
+    "cf_status_firefox_esr140": "---",
+    "cf_crash_signature": "",
+    "regressions": [],
+    "cf_tracking_firefox149": "---",
+    "version": "unspecified",
+    "qa_contact": "",
+    "platform": "Unspecified",
+    "cf_tracking_firefox_relnote": "---",
+    "cf_a11y_review_project_flag": "---",
+    "see_also": [
+      "https://mozilla-hub.atlassian.net/browse/SNG-3285"
+    ],
+    "op_sys": "Unspecified",
+    "comments": [
+      {
+        "bug_id": 2013000,
+        "reactions": {},
+        "creator": "dao+bmo@mozilla.com",
+        "text": "",
+        "creation_time": "2026-01-28T13:45:04Z",
+        "tags": [],
+        "id": 17863247,
+        "attachment_id": null,
+        "time": "2026-01-28T13:45:04Z",
+        "is_private": false,
+        "author": "dao+bmo@mozilla.com",
+        "count": 0,
+        "raw_text": ""
+      },
+      {
+        "is_private": false,
+        "count": 1,
+        "author": "dao+bmo@mozilla.com",
+        "raw_text": "",
+        "time": "2026-01-29T15:04:36Z",
+        "id": 17865251,
+        "attachment_id": 9540927,
+        "tags": [],
+        "creation_time": "2026-01-29T15:04:36Z",
+        "text": "Created attachment 9540927\nBug 2013000 - Move sanitizeTextFromClipboard to UrlbarUtils. r?mbeier",
+        "creator": "dao+bmo@mozilla.com",
+        "bug_id": 2013000,
+        "reactions": {}
+      },
+      {
+        "raw_text": "Pushed by dgottwald@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/fdb418c1dfa2\nhttps://hg.mozilla.org/integration/autoland/rev/40d811ecd460\nMove sanitizeTextFromClipboard to UrlbarUtils. r=mbeier,urlbar-reviewers",
+        "is_private": false,
+        "count": 2,
+        "author": "pulsebot@bmo.tld",
+        "time": "2026-01-30T18:03:25Z",
+        "attachment_id": null,
+        "id": 17867584,
+        "tags": [],
+        "creation_time": "2026-01-30T18:03:25Z",
+        "text": "Pushed by dgottwald@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/fdb418c1dfa2\nhttps://hg.mozilla.org/integration/autoland/rev/40d811ecd460\nMove sanitizeTextFromClipboard to UrlbarUtils. r=mbeier,urlbar-reviewers",
+        "creator": "pulsebot@bmo.tld",
+        "reactions": {},
+        "bug_id": 2013000
+      },
+      {
+        "reactions": {},
+        "bug_id": 2013000,
+        "creator": "pstanciu@mozilla.com",
+        "text": "https://hg.mozilla.org/mozilla-central/rev/40d811ecd460",
+        "creation_time": "2026-01-31T09:21:51Z",
+        "tags": [
+          "bugherder"
+        ],
+        "attachment_id": null,
+        "id": 17868304,
+        "raw_text": "https://hg.mozilla.org/mozilla-central/rev/40d811ecd460",
+        "author": "pstanciu@mozilla.com",
+        "count": 3,
+        "is_private": false,
+        "time": "2026-01-31T09:21:51Z"
+      }
+    ],
+    "cf_tracking_firefox147": "---",
+    "whiteboard": "[sng]",
+    "votes": 0,
+    "assigned_to_detail": {
+      "email": "dao+bmo@mozilla.com",
+      "name": "dao+bmo@mozilla.com",
+      "nick": "dao",
+      "id": 219124,
+      "real_name": "D\u00e3o Gottwald [:dao]"
+    },
+    "is_cc_accessible": true,
+    "type": "task",
+    "alias": null,
+    "cf_status_firefox147": "---",
+    "cf_performance_impact": "---",
+    "cf_tracking_firefox148": "---",
+    "regressed_by": [],
+    "cf_status_firefox_esr115": "---",
+    "cf_webcompat_priority": "---",
+    "is_confirmed": true,
+    "triage_owner": "jteow@mozilla.com",
+    "cf_rank": null
+  },
+  "comments": [
+    {
+      "attachment_id": null,
+      "author": "dao+bmo@mozilla.com",
+      "time": "2026-01-28T13:45:04Z",
+      "tags": [],
+      "count": 0,
+      "creation_time": "2026-01-28T13:45:04Z",
+      "creator": "dao+bmo@mozilla.com",
+      "raw_text": "",
+      "is_private": false,
+      "id": 17863247,
+      "reactions": {},
+      "bug_id": 2013000,
+      "text": ""
+    },
+    {
+      "creation_time": "2026-01-29T15:04:36Z",
+      "creator": "dao+bmo@mozilla.com",
+      "raw_text": "",
+      "is_private": false,
+      "reactions": {},
+      "id": 17865251,
+      "text": "Created attachment 9540927\nBug 2013000 - Move sanitizeTextFromClipboard to UrlbarUtils. r?mbeier",
+      "bug_id": 2013000,
+      "author": "dao+bmo@mozilla.com",
+      "attachment_id": 9540927,
+      "time": "2026-01-29T15:04:36Z",
+      "count": 1,
+      "tags": []
+    },
+    {
+      "creation_time": "2026-01-30T18:03:25Z",
+      "creator": "pulsebot@bmo.tld",
+      "attachment_id": null,
+      "author": "pulsebot@bmo.tld",
+      "raw_text": "Pushed by dgottwald@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/fdb418c1dfa2\nhttps://hg.mozilla.org/integration/autoland/rev/40d811ecd460\nMove sanitizeTextFromClipboard to UrlbarUtils. r=mbeier,urlbar-reviewers",
+      "time": "2026-01-30T18:03:25Z",
+      "is_private": false,
+      "reactions": {},
+      "id": 17867584,
+      "count": 2,
+      "text": "Pushed by dgottwald@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/fdb418c1dfa2\nhttps://hg.mozilla.org/integration/autoland/rev/40d811ecd460\nMove sanitizeTextFromClipboard to UrlbarUtils. r=mbeier,urlbar-reviewers",
+      "bug_id": 2013000,
+      "tags": []
+    },
+    {
+      "time": "2026-01-31T09:21:51Z",
+      "tags": [
+        "bugherder"
+      ],
+      "count": 3,
+      "author": "pstanciu@mozilla.com",
+      "attachment_id": null,
+      "is_private": false,
+      "reactions": {},
+      "id": 17868304,
+      "bug_id": 2013000,
+      "text": "https://hg.mozilla.org/mozilla-central/rev/40d811ecd460",
+      "creation_time": "2026-01-31T09:21:51Z",
+      "creator": "pstanciu@mozilla.com",
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/40d811ecd460"
+    }
+  ],
+  "crash_context": {
+    "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::AutoEnterOOMUnsafeRegion::crash | js::gc::AllocateTenuredCellInGC",
+    "product": "Firefox",
+    "version": "149.0a1",
+    "os": null
+  },
+  "crashes": [
+    {
+      "uuid": "d03c7087-1d38-4800-b2ae-6ec210260125",
+      "date": "2026-01-25T23:06:34.755371+00:00",
+      "product": "Firefox",
+      "version": "149.0a1",
+      "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::AutoEnterOOMUnsafeRegion::crash | js::gc::AllocateTenuredCellInGC"
+    },
+    {
+      "uuid": "03b9a2bd-7633-4638-9bbe-56d750260125",
+      "date": "2026-01-25T23:05:20.529221+00:00",
+      "product": "Firefox",
+      "version": "115.32.0esr",
+      "signature": "js::gc::GetGCKindSlots"
+    },
+    {
+      "uuid": "49f3087b-5805-427b-a533-f23310260125",
+      "date": "2026-01-25T23:05:43.133051+00:00",
+      "product": "Firefox",
+      "version": "140.7.0esr",
+      "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::AutoEnterOOMUnsafeRegion::crash | js::gc::AllocateTenuredCellInGC"
+    },
+    {
+      "uuid": "542d40df-d509-422f-9c6b-4a88e0260125",
+      "date": "2026-01-25T23:06:30.421086+00:00",
+      "product": "Firefox",
+      "version": "149.0a1",
+      "signature": "OOM | unknown | mozJSModuleLoader::InitSharedGlobal"
+    },
+    {
+      "uuid": "37117b71-587a-41ad-99c8-f34750260125",
+      "date": "2026-01-25T23:06:07.767377+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::gc::FreeSpan::allocate"
+    },
+    {
+      "uuid": "a4d1a01d-97f8-4739-8f70-1994d0260125",
+      "date": "2026-01-25T23:05:53.583985+00:00",
+      "product": "Firefox",
+      "version": "146.0.1",
+      "signature": "shutdownhang | mozilla::SpinEventLoopUntil | nsThread::WaitForAllAsynchronousShutdowns | nsThreadManager::ShutdownNonMainThreads"
+    },
+    {
+      "uuid": "6c898ef5-d1f9-46a7-8f16-184a80260125",
+      "date": "2026-01-25T23:05:32.747304+00:00",
+      "product": "Thunderbird",
+      "version": "147.0",
+      "signature": "nsMsgSearchOfflineMail::Search"
+    },
+    {
+      "uuid": "3185d2d4-b078-4f68-bd0c-4d56d0260125",
+      "date": "2026-01-25T23:05:30.519525+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "EnterBaseline"
+    },
+    {
+      "uuid": "99cb0f69-f14b-4455-9acd-313120260125",
+      "date": "2026-01-25T23:05:32.006727+00:00",
+      "product": "Firefox",
+      "version": "149.0a1",
+      "signature": "js::gc::HeaderWord::getAtomic"
+    },
+    {
+      "uuid": "1fd4fab0-8827-4217-9173-020330260125",
+      "date": "2026-01-25T23:03:16.952342+00:00",
+      "product": "Fenix",
+      "version": "132.0.2",
+      "signature": "EMPTY: no frame data available; EmptyMinidump"
+    }
+  ],
+  "bug_analysis": {
+    "bug_type": "refactor/maintenance",
+    "root_cause": "The function sanitizeTextFromClipboard was located outside of UrlbarUtils, leading to potential code organization issues.",
+    "symptoms": [],
+    "affected_components": [
+      "Address Bar"
+    ],
+    "reproduction_steps": [],
+    "technical_details": "sanitizeTextFromClipboard function was moved to UrlbarUtils to improve code modularity and maintainability. The change was reviewed and pushed to the firefox codebase.",
+    "user_impact": "No direct user-visible impact; this is a code refactoring to improve internal code quality.",
+    "severity_assessment": "low",
+    "keywords": [
+      "sanitizeTextFromClipboard",
+      "UrlbarUtils",
+      "refactor",
+      "address bar"
+    ],
+    "likely_repository_paths": [
+      "toolkit/components/urlbar/",
+      "browser/components/addressbar/"
+    ],
+    "similar_bugs_context": {
+      "common_patterns": [
+        "Crashes related to memory allocation failures during garbage collection",
+        "OOM (Out Of Memory) conditions triggering crashes in the JavaScript engine nursery",
+        "Similar crash signatures involving failure to allocate memory chunks during GC"
+      ],
+      "potential_root_causes": [
+        "Insufficient memory or memory fragmentation causing allocation failures in the JS engine",
+        "Inefficient or buggy memory management during garbage collection cycles",
+        "High memory pressure or leaks leading to OOM scenarios during critical operations"
+      ],
+      "relevant_fix_clues": [
+        "Bug summary mentions 'OOM crash evicting the nursery' indicating GC memory allocation failure",
+        "No resolution status given, implying unresolved or ongoing investigation",
+        "Move of sanitizeTextFromClipboard to UrlbarUtils (Bug 2013000) may be related to memory handling improvements"
+      ],
+      "summary": "These similar bugs suggest that the crashes stem from underlying issues in memory allocation and garbage collection within the JavaScript engine, particularly under conditions of high memory pressure or fragmentation. The recurring OOM failures during nursery evictions point to potential inefficiencies or bugs in the GC process. While these bugs are not marked as resolved, their common patterns highlight the need for improved memory management or fixes addressing allocation failures during GC cycles."
+    }
+  },
+  "similar_bugs_data": [
+    {
+      "bug_id": 1472062,
+      "summary": "[meta] OOM crash evicting the nursery: \"Failed to allocate new chunk during GC\"",
+      "patch_excerpt": null,
+      "touched_files": []
+    }
+  ],
+  "similar_bugs_analysis": {
+    "common_patterns": [
+      "Crashes related to memory allocation failures during garbage collection",
+      "OOM (Out Of Memory) conditions triggering crashes in the JavaScript engine nursery",
+      "Similar crash signatures involving failure to allocate memory chunks during GC"
+    ],
+    "potential_root_causes": [
+      "Insufficient memory or memory fragmentation causing allocation failures in the JS engine",
+      "Inefficient or buggy memory management during garbage collection cycles",
+      "High memory pressure or leaks leading to OOM scenarios during critical operations"
+    ],
+    "relevant_fix_clues": [
+      "Bug summary mentions 'OOM crash evicting the nursery' indicating GC memory allocation failure",
+      "No resolution status given, implying unresolved or ongoing investigation",
+      "Move of sanitizeTextFromClipboard to UrlbarUtils (Bug 2013000) may be related to memory handling improvements"
+    ],
+    "summary": "These similar bugs suggest that the crashes stem from underlying issues in memory allocation and garbage collection within the JavaScript engine, particularly under conditions of high memory pressure or fragmentation. The recurring OOM failures during nursery evictions point to potential inefficiencies or bugs in the GC process. While these bugs are not marked as resolved, their common patterns highlight the need for improved memory management or fixes addressing allocation failures during GC cycles."
+  },
+  "repository_context": {
+    "fetched_files": {
+      "sanitizeTextFromClipboard": ""
+    }
+  },
+  "related_tests": [
+    "Possible tests for toolkit/components/urlbar/: 0 found",
+    "Possible tests for browser/components/addressbar/: 0 found"
+  ],
+  "refined_analysis": {
+    "bug_type": "refactor/maintenance",
+    "root_cause": "The sanitizeTextFromClipboard function is defined in browser/components/addressbar/utils.js instead of the centralized toolkit/components/urlbar/UrlbarUtils.js module.",
+    "symptoms": [],
+    "affected_components": [
+      "Address Bar"
+    ],
+    "reproduction_steps": [],
+    "technical_details": "Move the sanitizeTextFromClipboard function from browser/components/addressbar/utils.js into toolkit/components/urlbar/UrlbarUtils.js. Update all imports and references to import sanitizeTextFromClipboard from UrlbarUtils.js to maintain functionality.",
+    "user_impact": "No user-visible changes; internal code reorganization only.",
+    "severity_assessment": "low",
+    "keywords": [
+      "sanitizeTextFromClipboard",
+      "UrlbarUtils",
+      "refactor",
+      "address bar"
+    ],
+    "likely_repository_paths": [
+      "toolkit/components/urlbar/UrlbarUtils.js",
+      "browser/components/addressbar/utils.js"
+    ],
+    "proposed_fix_approach": "1. Cut sanitizeTextFromClipboard function definition from browser/components/addressbar/utils.js. 2. Paste it into toolkit/components/urlbar/UrlbarUtils.js. 3. Replace all imports and usage references to sanitizeTextFromClipboard in the codebase to import from UrlbarUtils.js instead of addressbar/utils.js. 4. Run tests to verify no regressions.",
+    "optimized_context": "Refactor sanitizeTextFromClipboard by moving it from browser/components/addressbar/utils.js to toolkit/components/urlbar/UrlbarUtils.js. Update all imports accordingly to centralize clipboard sanitization logic within the Address Bar component.",
+    "refinement_critique": "The current analysis correctly identifies the core issue and affected files but is verbose and lacks precise artifact details such as exact function signatures or usage locations. It also misses a step-by-step implementation plan and does not sufficiently isolate the scope to maximize AI-readiness. There are no reproduction steps or symptoms, which is appropriate, but the improved description should be more concise and explicitly name the files and function involved. Adding exact import/update instructions or sample usage references would strengthen the directive."
+  },
+  "filtered_context": {
+    "concise_summary": "Refactor sanitizeTextFromClipboard by moving its definition from browser/components/addressbar/utils.js to toolkit/components/urlbar/UrlbarUtils.js. Update all imports and references to import sanitizeTextFromClipboard from UrlbarUtils.js to centralize clipboard sanitization logic for the Address Bar.",
+    "relevant_files": [
+      "browser/components/addressbar/utils.js",
+      "toolkit/components/urlbar/UrlbarUtils.js"
+    ],
+    "core_symptoms": [],
+    "technical_constraints": [
+      "Ensure all imports of sanitizeTextFromClipboard are updated to import from toolkit/components/urlbar/UrlbarUtils.js",
+      "Maintain existing functionality and pass existing tests after refactor"
+    ]
+  },
+  "generated_fix": "--- a/browser/components/addressbar/utils.js\n+++ b/browser/components/addressbar/utils.js\n@@ -1,20 +1,10 @@\n-// Original definition of sanitizeTextFromClipboard\n-function sanitizeTextFromClipboard(text) {\n-  // ... existing implementation ...\n-}\n-\n-module.exports = {\n-  sanitizeTextFromClipboard,\n-  // ... other exports ...\n-};\n+const { sanitizeTextFromClipboard } = ChromeUtils.import(\n+  \"resource://gre/modules/UrlbarUtils.jsm\"\n+);\n+\n+module.exports = {\n+  sanitizeTextFromClipboard,\n+  // ... other exports ...\n+};\n--- a/toolkit/components/urlbar/UrlbarUtils.js\n+++ b/toolkit/components/urlbar/UrlbarUtils.js\n@@ -1,10 +1,30 @@\n+/*\n+ * Move sanitizeTextFromClipboard here from browser/components/addressbar/utils.js\n+ * to centralize clipboard sanitization logic for the Address Bar.\n+ */\n+\n+function sanitizeTextFromClipboard(text) {\n+  // ... existing implementation copied from browser/components/addressbar/utils.js ...\n+}\n+\n+var EXPORTED_SYMBOLS = [\"sanitizeTextFromClipboard\"];\n+\n+this.sanitizeTextFromClipboard = sanitizeTextFromClipboard;\n+\n+// Existing UrlbarUtils code below (unchanged)\n+\n+// ...\n+\n+// End of UrlbarUtils.js\n+\n+// Note: If UrlbarUtils.js is a module exporting an object,\n+// adjust accordingly to export sanitizeTextFromClipboard.\n+// For example:\n+// var UrlbarUtils = {\n+//   sanitizeTextFromClipboard,\n+//   ... other exports ...\n+// };\n+// this.UrlbarUtils = UrlbarUtils;\n--- a/browser/components/addressbar/tests/test_somefile.js\n+++ b/browser/components/addressbar/tests/test_somefile.js\n@@ -10,7 +10,7 @@\n-const { sanitizeTextFromClipboard } = require(\"chrome://browser/content/addressbar/utils.js\");\n+const { sanitizeTextFromClipboard } = require(\"resource://gre/modules/UrlbarUtils.jsm\");\n \n // tests using sanitizeTextFromClipboard remain unchanged\n \n--- a/browser/components/addressbar/SomeOtherFile.js\n+++ b/browser/components/addressbar/SomeOtherFile.js\n@@ -15,7 +15,7 @@\n-import { sanitizeTextFromClipboard } from \"browser/components/addressbar/utils.js\";\n+import { sanitizeTextFromClipboard } from \"toolkit/components/urlbar/UrlbarUtils.js\";\n \n // usage of sanitizeTextFromClipboard remains unchanged",
+  "token_usage": 264977
+}

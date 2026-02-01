@@ -17,7 +17,7 @@ LLM_PROVIDER = os.environ.get("LLM_PROVIDER", "gemini")
 
 DEFAULT_MODELS = {
     "gemini": "gemini-2.5-flash",
-    "openai": "gpt-4o",
+    "openai": "gpt-4.1-mini",
     "claude": "claude-3-5-sonnet-20241022",
     "deepseek": "deepseek-chat"
 }

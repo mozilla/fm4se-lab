@@ -1,0 +1,29 @@
+--- a/toolkit/mozapps/extensions/internal/AddonUpdateChecker.sys.mjs
++++ b/toolkit/mozapps/extensions/internal/AddonUpdateChecker.sys.mjs
+@@ -1,6 +1,17 @@
++/* This patch adds a guard to skip langpack updates if a Firefox update is staged,
++   to prevent overwriting staged langpacks and disabling them after restart. */
++
+ import { ExtensionUpdateChecker } from "resource://gre/modules/ExtensionUpdateChecker.sys.mjs";
+ import { AddonManager } from "resource://gre/modules/AddonManager.jsm";
+ 
++import { UpdateUtils } from "resource://gre/modules/UpdateUtils.jsm";
++
++
+ class AddonUpdateChecker {
+-  async updateLangpack(addon) {
++  async updateLangpack(addon) {
++    // If a Firefox update is currently staged, skip langpack updates
++    if (UpdateUtils.isPendingUpdate) {
++      // Log or silently skip to avoid overwriting staged langpack
++      return;
++    }
++
+     // Original langpack update logic follows...
+     // ...
+   }
+ 
+-  // other methods...
+-}
++  // other methods...
++}

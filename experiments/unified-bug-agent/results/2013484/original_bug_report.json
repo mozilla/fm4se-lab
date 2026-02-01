@@ -1,0 +1,304 @@
+{
+  "attachments": [
+    {
+      "file_name": "phabricator-D281164-url.txt",
+      "content_type": "text/x-phabricator-request",
+      "is_obsolete": 0,
+      "creator": "jnicol@mozilla.com",
+      "last_change_time": "2026-01-30T12:20:36Z",
+      "is_patch": 0,
+      "id": 9541215,
+      "attacher": "jnicol@mozilla.com",
+      "flags": [],
+      "size": 48,
+      "summary": "Bug 2013484 - Allow using AndroidHarwareBuffer without AndroidHardwareBufferManager. r?#gfx-reviewers",
+      "creation_time": "2026-01-30T12:20:36Z",
+      "description": "Bug 2013484 - Allow using AndroidHarwareBuffer without AndroidHardwareBufferManager. r?#gfx-reviewers",
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjgxMTY0",
+      "is_private": 0,
+      "creator_detail": {
+        "nick": "jnicol",
+        "real_name": "Jamie Nicol [:jnicol]",
+        "email": "jnicol@mozilla.com",
+        "id": 541747,
+        "name": "jnicol@mozilla.com"
+      },
+      "bug_id": 2013484
+    },
+    {
+      "is_obsolete": 0,
+      "file_name": "phabricator-D281165-url.txt",
+      "content_type": "text/x-phabricator-request",
+      "flags": [],
+      "attacher": "jnicol@mozilla.com",
+      "id": 9541216,
+      "is_patch": 0,
+      "last_change_time": "2026-01-30T12:20:43Z",
+      "creator": "jnicol@mozilla.com",
+      "summary": "Bug 2013484 - Allow (de)serializing AndroidHardwareBuffer to/from file descriptor. r?#gfx-reviewers",
+      "size": 48,
+      "bug_id": 2013484,
+      "creator_detail": {
+        "nick": "jnicol",
+        "real_name": "Jamie Nicol [:jnicol]",
+        "email": "jnicol@mozilla.com",
+        "id": 541747,
+        "name": "jnicol@mozilla.com"
+      },
+      "is_private": 0,
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjgxMTY1",
+      "description": "Bug 2013484 - Allow (de)serializing AndroidHardwareBuffer to/from file descriptor. r?#gfx-reviewers",
+      "creation_time": "2026-01-30T12:20:43Z"
+    }
+  ],
+  "alias": null,
+  "cf_size_estimate": "---",
+  "platform": "Unspecified",
+  "cf_performance_impact": "---",
+  "cf_tracking_firefox147": "---",
+  "mentors_detail": [],
+  "last_change_time_non_bot": "2026-01-31T09:22:40Z",
+  "history": [
+    {
+      "changes": [
+        {
+          "field_name": "cc",
+          "added": "mstange.moz@gmail.com",
+          "removed": ""
+        }
+      ],
+      "who": "mstange.moz@gmail.com",
+      "when": "2026-01-30T12:52:06Z"
+    },
+    {
+      "when": "2026-01-31T09:22:40Z",
+      "who": "pstanciu@mozilla.com",
+      "changes": [
+        {
+          "removed": "---",
+          "added": "149 Branch",
+          "field_name": "target_milestone"
+        },
+        {
+          "field_name": "status",
+          "removed": "NEW",
+          "added": "RESOLVED"
+        },
+        {
+          "field_name": "resolution",
+          "removed": "",
+          "added": "FIXED"
+        },
+        {
+          "field_name": "cf_last_resolved",
+          "removed": "",
+          "added": "2026-01-31T09:22:40Z"
+        },
+        {
+          "field_name": "cf_status_firefox149",
+          "added": "fixed",
+          "removed": "---"
+        },
+        {
+          "added": "bugherder",
+          "comment_count": 4,
+          "removed": "",
+          "field_name": "comment_tag",
+          "comment_id": 17868318
+        }
+      ]
+    }
+  ],
+  "priority": "--",
+  "cf_accessibility_severity": "---",
+  "filed_via": "standard_form",
+  "summary": "Allow (de)serializing AndroidHardwareBuffer across processes",
+  "cf_status_firefox148": "---",
+  "is_open": false,
+  "see_also": [],
+  "cf_tracking_thunderbird_esr115": "---",
+  "cc": [
+    "mstange.moz@gmail.com"
+  ],
+  "cf_fx_iteration": "---",
+  "mentors": [],
+  "component": "Graphics",
+  "cf_qa_whiteboard": "",
+  "target_milestone": "149 Branch",
+  "cf_tracking_firefox_esr140": "---",
+  "cf_status_firefox147": "---",
+  "status": "RESOLVED",
+  "severity": "--",
+  "last_change_time": "2026-01-31T09:22:40Z",
+  "triage_owner_detail": {
+    "nick": "bhood",
+    "real_name": "Bob Hood [:bhood]",
+    "email": "bhood@mozilla.com",
+    "id": 697075,
+    "name": "bhood@mozilla.com"
+  },
+  "cf_last_resolved": "2026-01-31T09:22:40Z",
+  "is_cc_accessible": true,
+  "id": 2013484,
+  "cf_a11y_review_project_flag": "---",
+  "cf_tracking_thunderbird_esr140": "---",
+  "cf_status_thunderbird_esr115": "---",
+  "cc_detail": [
+    {
+      "nick": "mstange",
+      "name": "mstange.moz@gmail.com",
+      "real_name": "Markus Stange [:mstange]",
+      "email": "mstange.moz@gmail.com",
+      "id": 293943
+    }
+  ],
+  "cf_tracking_firefox149": "---",
+  "keywords": [],
+  "classification": "Components",
+  "is_creator_accessible": true,
+  "triage_owner": "bhood@mozilla.com",
+  "duplicates": [],
+  "regressions": [],
+  "cf_status_firefox149": "fixed",
+  "votes": 0,
+  "dupe_of": null,
+  "groups": [],
+  "qa_contact": "",
+  "cf_status_firefox_esr115": "---",
+  "comment_count": 5,
+  "description": "We used to support this, but it was removed in bug 1810097 to make fence delivery simpler (by only supporting same-process)\n\nI want to restore the (de)serialization via file descriptor allowing us to send them cross process. This will *not* be the default method of (de)serializing hardware buffers. Hardware buffer `TextureClient`s/`TextureHost`s will still only be supported over same-process bridges when `AndroidHardwareBufferManager` is initialized: we'll keep just using an ID in `SurfaceDescriptorAndroidHardwareBuffer`  from which the host end can look up the buffer in `AndroidHardwareBufferManager`. Fences will continue to work in this case as the client and host ends will use the same instance of `AndroidHardwareBuffer`.\n\nBut in cases we don't need to keep passing fences around (e.g. we want to send a buffer to another process for a single use) this will make that possible.\n\nTo achieve this we'll need to ensure that we can use `AndroidHardwareBuffer` when `AndroidHardwareBufferManager` is *not* initialized. This means only attempting to register the buffer if the manager is initialized, and making `AndroidHardwareBuffer` use its own `Monitor` rather than `AndroidHardwareBufferManager::GetMonitor()`",
+  "assigned_to_detail": {
+    "nick": "jnicol",
+    "real_name": "Jamie Nicol [:jnicol]",
+    "id": 541747,
+    "email": "jnicol@mozilla.com",
+    "name": "jnicol@mozilla.com"
+  },
+  "cf_has_str": "---",
+  "blocks": [
+    1661106
+  ],
+  "type": "task",
+  "counts": {
+    "attachments": 2,
+    "keywords": 0,
+    "blocks": 0,
+    "comments": 5,
+    "duplicates": 0,
+    "cc": 1,
+    "regressed_by": 0,
+    "depends_on": 1,
+    "regressions": 0
+  },
+  "version": "unspecified",
+  "depends_on": [],
+  "cf_status_thunderbird_esr140": "---",
+  "creator": "jnicol@mozilla.com",
+  "cf_cab_review": "---",
+  "cf_tracking_firefox148": "---",
+  "whiteboard": "",
+  "flags": [],
+  "assigned_to": "jnicol@mozilla.com",
+  "url": "",
+  "cf_user_story": "",
+  "product": "Core",
+  "cf_fx_points": "---",
+  "cf_tracking_firefox_relnote": "---",
+  "is_confirmed": true,
+  "cf_crash_signature": "",
+  "regressed_by": [],
+  "cf_tracking_firefox_esr115": "---",
+  "resolution": "FIXED",
+  "creation_time": "2026-01-30T11:26:21Z",
+  "op_sys": "Unspecified",
+  "cf_webcompat_score": "---",
+  "cf_rank": null,
+  "comments": [
+    {
+      "time": "2026-01-30T11:26:21Z",
+      "text": "We used to support this, but it was removed in bug 1810097 to make fence delivery simpler (by only supporting same-process)\n\nI want to restore the (de)serialization via file descriptor allowing us to send them cross process. This will *not* be the default method of (de)serializing hardware buffers. Hardware buffer `TextureClient`s/`TextureHost`s will still only be supported over same-process bridges when `AndroidHardwareBufferManager` is initialized: we'll keep just using an ID in `SurfaceDescriptorAndroidHardwareBuffer`  from which the host end can look up the buffer in `AndroidHardwareBufferManager`. Fences will continue to work in this case as the client and host ends will use the same instance of `AndroidHardwareBuffer`.\n\nBut in cases we don't need to keep passing fences around (e.g. we want to send a buffer to another process for a single use) this will make that possible.\n\nTo achieve this we'll need to ensure that we can use `AndroidHardwareBuffer` when `AndroidHardwareBufferManager` is *not* initialized. This means only attempting to register the buffer if the manager is initialized, and making `AndroidHardwareBuffer` use its own `Monitor` rather than `AndroidHardwareBufferManager::GetMonitor()`",
+      "count": 0,
+      "id": 17866663,
+      "creator": "jnicol@mozilla.com",
+      "tags": [],
+      "author": "jnicol@mozilla.com",
+      "attachment_id": null,
+      "bug_id": 2013484,
+      "is_private": false,
+      "reactions": {},
+      "raw_text": "We used to support this, but it was removed in bug 1810097 to make fence delivery simpler (by only supporting same-process)\n\nI want to restore the (de)serialization via file descriptor allowing us to send them cross process. This will *not* be the default method of (de)serializing hardware buffers. Hardware buffer `TextureClient`s/`TextureHost`s will still only be supported over same-process bridges when `AndroidHardwareBufferManager` is initialized: we'll keep just using an ID in `SurfaceDescriptorAndroidHardwareBuffer`  from which the host end can look up the buffer in `AndroidHardwareBufferManager`. Fences will continue to work in this case as the client and host ends will use the same instance of `AndroidHardwareBuffer`.\n\nBut in cases we don't need to keep passing fences around (e.g. we want to send a buffer to another process for a single use) this will make that possible.\n\nTo achieve this we'll need to ensure that we can use `AndroidHardwareBuffer` when `AndroidHardwareBufferManager` is *not* initialized. This means only attempting to register the buffer if the manager is initialized, and making `AndroidHardwareBuffer` use its own `Monitor` rather than `AndroidHardwareBufferManager::GetMonitor()`",
+      "creation_time": "2026-01-30T11:26:21Z"
+    },
+    {
+      "tags": [],
+      "attachment_id": 9541215,
+      "author": "jnicol@mozilla.com",
+      "bug_id": 2013484,
+      "raw_text": "\nAndroidHardwareBufferManager is used to look up AndroidHardwareBuffers\nvia an ID. This allows, for example, the host side of a same-process\nIPDL bridge to create an AndroidHardwareBufferTextureHost from a\nSurfaceDescriptorAndroidHardwareBuffer. We currently initialize this\nonly in the GPU process, when the (off by default) pref\n\"webgl.out-of-process.enable-ahardwarebuffer\" has been enabled.\n\nThis patch makes it possible to create and use instances of the\nAndroidHardwareBuffer class when AndroidHardwareBufferManager is not\ninitialized. These buffers may *not* be (de)serialized via\nSurfaceDescriptorAndroidHardwareBuffer, but may be used in other ways.\n\nThis involves only registering a created buffer with the manager if\nthe manager is initialized, and making AndroidHardwareBuffer use its\nown Monitor rather than the manager's. We additionally add missing\nthread safety annotations to the monitors, and mark the monitors as\nmutable thereby allowing some member functions to be const.",
+      "creation_time": "2026-01-30T12:20:36Z",
+      "is_private": false,
+      "reactions": {},
+      "text": "Created attachment 9541215\nBug 2013484 - Allow using AndroidHarwareBuffer without AndroidHardwareBufferManager. r?#gfx-reviewers\n\n\nAndroidHardwareBufferManager is used to look up AndroidHardwareBuffers\nvia an ID. This allows, for example, the host side of a same-process\nIPDL bridge to create an AndroidHardwareBufferTextureHost from a\nSurfaceDescriptorAndroidHardwareBuffer. We currently initialize this\nonly in the GPU process, when the (off by default) pref\n\"webgl.out-of-process.enable-ahardwarebuffer\" has been enabled.\n\nThis patch makes it possible to create and use instances of the\nAndroidHardwareBuffer class when AndroidHardwareBufferManager is not\ninitialized. These buffers may *not* be (de)serialized via\nSurfaceDescriptorAndroidHardwareBuffer, but may be used in other ways.\n\nThis involves only registering a created buffer with the manager if\nthe manager is initialized, and making AndroidHardwareBuffer use its\nown Monitor rather than the manager's. We additionally add missing\nthread safety annotations to the monitors, and mark the monitors as\nmutable thereby allowing some member functions to be const.",
+      "time": "2026-01-30T12:20:36Z",
+      "count": 1,
+      "id": 17866801,
+      "creator": "jnicol@mozilla.com"
+    },
+    {
+      "count": 2,
+      "text": "Created attachment 9541216\nBug 2013484 - Allow (de)serializing AndroidHardwareBuffer to/from file descriptor. r?#gfx-reviewers\n\n\nThis used to be supported but was removed in bug 1810097 to ensure\nfence delivery remained simple for out-of-process webgl, which was the\nonly use of AndroidHardwareBuffer.\n\nThis patch reinstates the ability to serialize/deserialize\nAndroidHardwareBuffers to/from file descriptors, which can be sent\ncross-process. However, it comes with the caveat that fences will not\nbe delivered between the two AndroidHardwareBuffer instances. This is\ntherefore opt-in rather than the default method of (de)serializing\nhardware buffers.\n\nNormal usage via TextureClient/TextureHost continues to use\nSurfaceDescriptorAndroidHardwareBuffer for (de)serialization, which\ncan only be used over same-process bridges when\nAndroidHardwareBufferManager is enabled (in which case fences are\ndelivered as expected).\n\nSince code may attempt to lock and subsequently read or write from the\nbuffer, when deserializing we populate the size, stride, and format\nfrom the description obtained by AHardwareBuffer_describe() to ensure\ntheir values are trusted. If the format is not recognized then we fail\nto create the buffer.",
+      "time": "2026-01-30T12:20:43Z",
+      "creator": "jnicol@mozilla.com",
+      "id": 17866802,
+      "author": "jnicol@mozilla.com",
+      "attachment_id": 9541216,
+      "tags": [],
+      "creation_time": "2026-01-30T12:20:43Z",
+      "raw_text": "\nThis used to be supported but was removed in bug 1810097 to ensure\nfence delivery remained simple for out-of-process webgl, which was the\nonly use of AndroidHardwareBuffer.\n\nThis patch reinstates the ability to serialize/deserialize\nAndroidHardwareBuffers to/from file descriptors, which can be sent\ncross-process. However, it comes with the caveat that fences will not\nbe delivered between the two AndroidHardwareBuffer instances. This is\ntherefore opt-in rather than the default method of (de)serializing\nhardware buffers.\n\nNormal usage via TextureClient/TextureHost continues to use\nSurfaceDescriptorAndroidHardwareBuffer for (de)serialization, which\ncan only be used over same-process bridges when\nAndroidHardwareBufferManager is enabled (in which case fences are\ndelivered as expected).\n\nSince code may attempt to lock and subsequently read or write from the\nbuffer, when deserializing we populate the size, stride, and format\nfrom the description obtained by AHardwareBuffer_describe() to ensure\ntheir values are trusted. If the format is not recognized then we fail\nto create the buffer.",
+      "reactions": {},
+      "is_private": false,
+      "bug_id": 2013484
+    },
+    {
+      "attachment_id": null,
+      "author": "pulsebot@bmo.tld",
+      "tags": [],
+      "is_private": false,
+      "reactions": {},
+      "raw_text": "Pushed by jnicol@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/9ef79690b167\nhttps://hg.mozilla.org/integration/autoland/rev/9f0fcfca2a32\nAllow using AndroidHarwareBuffer without AndroidHardwareBufferManager. r=gfx-reviewers,lsalzman\nhttps://github.com/mozilla-firefox/firefox/commit/69acaed852c3\nhttps://hg.mozilla.org/integration/autoland/rev/4bcf1f4a30b2\nAllow (de)serializing AndroidHardwareBuffer to/from file descriptor. r=gfx-reviewers,lsalzman",
+      "creation_time": "2026-01-30T21:56:40Z",
+      "bug_id": 2013484,
+      "count": 3,
+      "time": "2026-01-30T21:56:40Z",
+      "text": "Pushed by jnicol@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/9ef79690b167\nhttps://hg.mozilla.org/integration/autoland/rev/9f0fcfca2a32\nAllow using AndroidHarwareBuffer without AndroidHardwareBufferManager. r=gfx-reviewers,lsalzman\nhttps://github.com/mozilla-firefox/firefox/commit/69acaed852c3\nhttps://hg.mozilla.org/integration/autoland/rev/4bcf1f4a30b2\nAllow (de)serializing AndroidHardwareBuffer to/from file descriptor. r=gfx-reviewers,lsalzman",
+      "creator": "pulsebot@bmo.tld",
+      "id": 17867964
+    },
+    {
+      "count": 4,
+      "time": "2026-01-31T09:22:40Z",
+      "text": "https://hg.mozilla.org/mozilla-central/rev/9f0fcfca2a32\nhttps://hg.mozilla.org/mozilla-central/rev/4bcf1f4a30b2",
+      "creator": "pstanciu@mozilla.com",
+      "id": 17868318,
+      "author": "pstanciu@mozilla.com",
+      "attachment_id": null,
+      "tags": [
+        "bugherder"
+      ],
+      "reactions": {},
+      "is_private": false,
+      "creation_time": "2026-01-31T09:22:40Z",
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/9f0fcfca2a32\nhttps://hg.mozilla.org/mozilla-central/rev/4bcf1f4a30b2",
+      "bug_id": 2013484
+    }
+  ],
+  "cf_status_firefox_esr140": "---",
+  "creator_detail": {
+    "nick": "jnicol",
+    "name": "jnicol@mozilla.com",
+    "real_name": "Jamie Nicol [:jnicol]",
+    "email": "jnicol@mozilla.com",
+    "id": 541747
+  },
+  "cf_webcompat_priority": "---"
+}

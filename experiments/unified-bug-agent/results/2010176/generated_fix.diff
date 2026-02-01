@@ -1,0 +1,26 @@
+--- a/browser/components/addressbar/TopPickView.js
++++ b/browser/components/addressbar/TopPickView.js
+@@ -10,7 +10,7 @@
+-const ICON_SIZE = 52;
++const ICON_SIZE = 62;
+ 
+ // ... rest of the file using ICON_SIZE for icon dimensions
+ 
+--- a/browser/components/addressbar/TopPickView.css
++++ b/browser/components/addressbar/TopPickView.css
+@@ -20,7 +20,7 @@
+-.top-pick-icon {
+-  width: 52px;
+-  height: 52px;
++ .top-pick-icon {
++   width: 62px;
++   height: 62px;
+ }
+ 
+--- a/toolkit/components/Icons.js
++++ b/toolkit/components/Icons.js
+@@ -100,7 +100,7 @@
+-const ALLOWED_ICON_SIZES = [16, 24, 32, 40, 52];
++const ALLOWED_ICON_SIZES = [16, 24, 32, 40, 52, 62];
+ 
+ // ... code that validates or uses ALLOWED_ICON_SIZES for icon rendering

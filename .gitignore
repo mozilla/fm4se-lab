@@ -1,0 +1,13 @@
+mozilla_bug_dataset
+output.json
+*.log
+
+# Environment variables
+.env
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.DS_Store
+*.txt

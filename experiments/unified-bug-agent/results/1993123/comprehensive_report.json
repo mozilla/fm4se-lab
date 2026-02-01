@@ -1,0 +1,780 @@
+{
+  "bug_id": 1993123,
+  "timestamp": "2026-02-01 17:34:56",
+  "data_sources": [
+    "bugzilla",
+    "crash-stats"
+  ],
+  "bug_data": {
+    "version": "unspecified",
+    "is_creator_accessible": true,
+    "cc": [
+      "dsmith@mozilla.com",
+      "mstange.moz@gmail.com",
+      "pascalc@gmail.com",
+      "pasik@iki.fi",
+      "smichaud@pobox.com",
+      "thorin@torproject.org"
+    ],
+    "is_confirmed": true,
+    "cf_accessibility_severity": "---",
+    "counts": {
+      "regressed_by": 0,
+      "cc": 6,
+      "blocks": 4,
+      "depends_on": 1,
+      "regressions": 0,
+      "comments": 6,
+      "duplicates": 0,
+      "keywords": 0,
+      "attachments": 1
+    },
+    "classification": "Components",
+    "cf_tracking_firefox_esr115": "---",
+    "description": "Set the pref `layers.gpu-process.enabled` to true for all builds.",
+    "creator": "bwerth@mozilla.com",
+    "votes": 0,
+    "is_open": false,
+    "cf_status_firefox146": "fixed",
+    "component": "Graphics",
+    "mentors": [],
+    "cf_last_resolved": "2025-10-24T04:27:11Z",
+    "cf_performance_impact": "---",
+    "filed_via": "standard_form",
+    "blocks": [
+      1992447
+    ],
+    "severity": "--",
+    "qa_contact": "",
+    "regressions": [],
+    "cf_fx_iteration": "---",
+    "cf_cab_review": "---",
+    "cf_status_thunderbird_esr115": "---",
+    "assigned_to_detail": {
+      "nick": "bradwerth",
+      "name": "bwerth@mozilla.com",
+      "id": 571010,
+      "email": "bwerth@mozilla.com",
+      "real_name": "Brad Werth [:bradwerth]"
+    },
+    "target_milestone": "146 Branch",
+    "id": 1993123,
+    "cf_crash_signature": "",
+    "platform": "Unspecified",
+    "is_cc_accessible": true,
+    "triage_owner_detail": {
+      "real_name": "Bob Hood [:bhood]",
+      "name": "bhood@mozilla.com",
+      "nick": "bhood",
+      "id": 697075,
+      "email": "bhood@mozilla.com"
+    },
+    "cf_webcompat_score": "---",
+    "product": "Core",
+    "cf_qa_whiteboard": "[qa-triage-done-c147/b146]",
+    "comment_count": 6,
+    "cf_tracking_firefox149": "---",
+    "status": "RESOLVED",
+    "keywords": [],
+    "cf_tracking_thunderbird_esr140": "---",
+    "comments": [
+      {
+        "raw_text": "Set the pref `layers.gpu-process.enabled` to true for all builds.",
+        "creation_time": "2025-10-07T21:06:17Z",
+        "creator": "bwerth@mozilla.com",
+        "bug_id": 1993123,
+        "text": "Set the pref `layers.gpu-process.enabled` to true for all builds.",
+        "is_private": false,
+        "reactions": {},
+        "id": 17707156,
+        "author": "bwerth@mozilla.com",
+        "attachment_id": null,
+        "tags": [],
+        "count": 0,
+        "time": "2025-10-07T21:06:17Z"
+      },
+      {
+        "time": "2025-10-21T21:16:16Z",
+        "count": 1,
+        "tags": [],
+        "author": "bwerth@mozilla.com",
+        "attachment_id": 9521508,
+        "id": 17727282,
+        "reactions": {},
+        "is_private": false,
+        "text": "Created attachment 9521508\nBug 1993123: Set macOS gpu process on-by-default.",
+        "bug_id": 1993123,
+        "creator": "bwerth@mozilla.com",
+        "creation_time": "2025-10-21T21:16:16Z",
+        "raw_text": ""
+      },
+      {
+        "raw_text": "Pushed by bwerth@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/1691f1db3571\nhttps://hg.mozilla.org/integration/autoland/rev/a208fa704e5a\nSet macOS gpu process on-by-default. r=mac-reviewers,gfx-reviewers,jnicol,mstange",
+        "creation_time": "2025-10-23T21:12:25Z",
+        "creator": "pulsebot@bmo.tld",
+        "bug_id": 1993123,
+        "text": "Pushed by bwerth@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/1691f1db3571\nhttps://hg.mozilla.org/integration/autoland/rev/a208fa704e5a\nSet macOS gpu process on-by-default. r=mac-reviewers,gfx-reviewers,jnicol,mstange",
+        "is_private": false,
+        "id": 17730613,
+        "reactions": {},
+        "attachment_id": null,
+        "author": "pulsebot@bmo.tld",
+        "tags": [],
+        "count": 2,
+        "time": "2025-10-23T21:12:25Z"
+      },
+      {
+        "creation_time": "2025-10-24T04:27:11Z",
+        "creator": "nfay@mozilla.com",
+        "attachment_id": null,
+        "author": "nfay@mozilla.com",
+        "raw_text": "https://hg.mozilla.org/mozilla-central/rev/a208fa704e5a",
+        "time": "2025-10-24T04:27:11Z",
+        "is_private": false,
+        "reactions": {},
+        "id": 17730875,
+        "count": 3,
+        "text": "https://hg.mozilla.org/mozilla-central/rev/a208fa704e5a",
+        "tags": [
+          "bugherder"
+        ],
+        "bug_id": 1993123
+      },
+      {
+        "creator": "jmathies@mozilla.com",
+        "creation_time": "2025-11-04T16:51:16Z",
+        "raw_text": "\\o/ Woot!",
+        "author": "jmathies@mozilla.com",
+        "attachment_id": null,
+        "time": "2025-11-04T16:51:16Z",
+        "id": 17748091,
+        "reactions": {},
+        "is_private": false,
+        "text": "\\o/ Woot!",
+        "count": 4,
+        "tags": [],
+        "bug_id": 1993123
+      },
+      {
+        "attachment_id": null,
+        "author": "smichaud@pobox.com",
+        "tags": [],
+        "count": 5,
+        "time": "2026-01-29T17:19:26Z",
+        "raw_text": "Even after the macOS GPU process landed on release (in FF 146), crashes continue to happen in the parent process in threads whose name includes \"Renderer\". Does this surprise anyone?\n\nhttps://crash-stats.mozilla.org/search/?crashing_thread_name=~Renderer&process_type=parent&process_type=parent&version=146&version=146.0.1&version=147&version=147.0.1&version=147.0.2&version=148&version=149&platform=Mac%20OS%20X&date=%3E%3D2025-10-29T17%3A25%3A00.000Z&date=%3C2026-01-29T17%3A25%3A00.000Z&_facets=signature&_facets=version&_facets=crashing_thread_name&_sort=-date&_columns=date&_columns=signature&_columns=product&_columns=version&_columns=build_id&_columns=platform#facet-signature\n\nDumb question, I'm sure. But I'm probably not the only one puzzled.",
+        "creator": "smichaud@pobox.com",
+        "creation_time": "2026-01-29T17:19:26Z",
+        "bug_id": 1993123,
+        "text": "Even after the macOS GPU process landed on release (in FF 146), crashes continue to happen in the parent process in threads whose name includes \"Renderer\". Does this surprise anyone?\n\nhttps://crash-stats.mozilla.org/search/?crashing_thread_name=~Renderer&process_type=parent&process_type=parent&version=146&version=146.0.1&version=147&version=147.0.1&version=147.0.2&version=148&version=149&platform=Mac%20OS%20X&date=%3E%3D2025-10-29T17%3A25%3A00.000Z&date=%3C2026-01-29T17%3A25%3A00.000Z&_facets=signature&_facets=version&_facets=crashing_thread_name&_sort=-date&_columns=date&_columns=signature&_columns=product&_columns=version&_columns=build_id&_columns=platform#facet-signature\n\nDumb question, I'm sure. But I'm probably not the only one puzzled.",
+        "reactions": {},
+        "id": 17865477,
+        "is_private": false
+      }
+    ],
+    "cf_status_firefox_esr140": "---",
+    "op_sys": "Unspecified",
+    "summary": "Let macOS GPU process on-by-default ride the trains",
+    "groups": [],
+    "resolution": "FIXED",
+    "cf_status_thunderbird_esr140": "---",
+    "cf_rank": null,
+    "see_also": [],
+    "mentors_detail": [],
+    "cf_tracking_firefox148": "---",
+    "cf_has_str": "---",
+    "cc_detail": [
+      {
+        "email": "dsmith@mozilla.com",
+        "id": 690067,
+        "name": "dsmith@mozilla.com",
+        "nick": "diannaS",
+        "real_name": "Dianna Smith [:diannaS]"
+      },
+      {
+        "name": "mstange.moz@gmail.com",
+        "nick": "mstange",
+        "email": "mstange.moz@gmail.com",
+        "id": 293943,
+        "real_name": "Markus Stange [:mstange]"
+      },
+      {
+        "nick": "pascalc",
+        "name": "pascalc@gmail.com",
+        "email": "pascalc@gmail.com",
+        "id": 24572,
+        "real_name": "Pascal Chevrel:pascalc"
+      },
+      {
+        "email": "pasik@iki.fi",
+        "id": 529219,
+        "nick": "pasik",
+        "name": "pasik@iki.fi",
+        "real_name": ""
+      },
+      {
+        "email": "smichaud@pobox.com",
+        "id": 67806,
+        "name": "smichaud@pobox.com",
+        "nick": "smichaud",
+        "real_name": "Steven Michaud [:smichaud] (Retired)"
+      },
+      {
+        "real_name": "Thorin [:thorin]",
+        "nick": "thorin",
+        "name": "thorin@torproject.org",
+        "id": 587136,
+        "email": "thorin@torproject.org"
+      }
+    ],
+    "cf_a11y_review_project_flag": "---",
+    "cf_status_firefox149": "---",
+    "cf_status_firefox148": "---",
+    "regressed_by": [],
+    "cf_tracking_thunderbird_esr115": "---",
+    "depends_on": [
+      1985082,
+      1992279,
+      1993137,
+      1993321
+    ],
+    "priority": "--",
+    "cf_tracking_firefox_esr140": "---",
+    "assigned_to": "bwerth@mozilla.com",
+    "last_change_time_non_bot": "2026-01-29T17:29:22Z",
+    "attachments": [
+      {
+        "size": 48,
+        "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjY5NDc5",
+        "creator_detail": {
+          "name": "bwerth@mozilla.com",
+          "nick": "bradwerth",
+          "id": 571010,
+          "email": "bwerth@mozilla.com",
+          "real_name": "Brad Werth [:bradwerth]"
+        },
+        "attacher": "bwerth@mozilla.com",
+        "is_patch": 0,
+        "is_obsolete": 0,
+        "content_type": "text/x-phabricator-request",
+        "flags": [],
+        "description": "Bug 1993123: Set macOS gpu process on-by-default.",
+        "creator": "bwerth@mozilla.com",
+        "creation_time": "2025-10-21T21:16:16Z",
+        "file_name": "phabricator-D269479-url.txt",
+        "bug_id": 1993123,
+        "summary": "Bug 1993123: Set macOS gpu process on-by-default.",
+        "id": 9521508,
+        "is_private": 0,
+        "last_change_time": "2025-10-21T21:16:16Z"
+      }
+    ],
+    "creator_detail": {
+      "id": 571010,
+      "email": "bwerth@mozilla.com",
+      "nick": "bradwerth",
+      "name": "bwerth@mozilla.com",
+      "real_name": "Brad Werth [:bradwerth]"
+    },
+    "cf_webcompat_priority": "---",
+    "cf_tracking_firefox147": "---",
+    "last_change_time": "2026-01-29T17:29:22Z",
+    "whiteboard": "",
+    "cf_status_firefox147": "---",
+    "url": "",
+    "flags": [
+      {
+        "modification_date": "2026-01-29T17:29:22Z",
+        "creation_date": "2026-01-29T17:29:22Z",
+        "type_id": 800,
+        "setter": "smichaud@pobox.com",
+        "name": "needinfo",
+        "requestee": "bwerth@mozilla.com",
+        "id": 2328599,
+        "status": "?"
+      }
+    ],
+    "triage_owner": "bhood@mozilla.com",
+    "creation_time": "2025-10-07T21:06:17Z",
+    "dupe_of": null,
+    "type": "enhancement",
+    "cf_tracking_firefox_relnote": "146+",
+    "cf_user_story": "",
+    "history": [
+      {
+        "when": "2025-10-08T17:53:47Z",
+        "changes": [
+          {
+            "removed": "Enable macOS gpu process on-by-default for all users/trains",
+            "added": "Let macOS GPU process on-by-default ride the trains",
+            "field_name": "summary"
+          },
+          {
+            "removed": "",
+            "field_name": "cc",
+            "added": "mstange.moz@gmail.com"
+          }
+        ],
+        "who": "mstange.moz@gmail.com"
+      },
+      {
+        "who": "mstange.moz@gmail.com",
+        "changes": [
+          {
+            "removed": "",
+            "field_name": "depends_on",
+            "added": "1993137"
+          }
+        ],
+        "when": "2025-10-08T17:54:08Z"
+      },
+      {
+        "when": "2025-10-08T17:55:17Z",
+        "changes": [
+          {
+            "field_name": "depends_on",
+            "removed": "",
+            "added": "1993321"
+          }
+        ],
+        "who": "mstange.moz@gmail.com"
+      },
+      {
+        "changes": [
+          {
+            "added": "1992447",
+            "field_name": "blocks",
+            "removed": ""
+          }
+        ],
+        "when": "2025-10-08T18:36:14Z",
+        "who": "mstange.moz@gmail.com"
+      },
+      {
+        "changes": [
+          {
+            "removed": "",
+            "added": "1992279",
+            "field_name": "depends_on"
+          }
+        ],
+        "when": "2025-10-08T18:37:36Z",
+        "who": "mstange.moz@gmail.com"
+      },
+      {
+        "who": "pasik@iki.fi",
+        "when": "2025-10-10T12:15:27Z",
+        "changes": [
+          {
+            "added": "pasik@iki.fi",
+            "removed": "",
+            "field_name": "cc"
+          }
+        ]
+      },
+      {
+        "changes": [
+          {
+            "removed": "",
+            "added": "smichaud@pobox.com",
+            "field_name": "cc"
+          }
+        ],
+        "when": "2025-10-13T15:22:30Z",
+        "who": "smichaud@pobox.com"
+      },
+      {
+        "changes": [
+          {
+            "field_name": "resolution",
+            "added": "FIXED",
+            "removed": ""
+          },
+          {
+            "field_name": "target_milestone",
+            "removed": "---",
+            "added": "146 Branch"
+          },
+          {
+            "field_name": "status",
+            "removed": "NEW",
+            "added": "RESOLVED"
+          },
+          {
+            "removed": "",
+            "field_name": "cf_last_resolved",
+            "added": "2025-10-24T04:27:11Z"
+          },
+          {
+            "field_name": "cf_status_firefox146",
+            "added": "fixed",
+            "removed": "---"
+          }
+        ],
+        "when": "2025-10-24T04:27:11Z",
+        "who": "nfay@mozilla.com"
+      },
+      {
+        "changes": [
+          {
+            "comment_id": 17730875,
+            "field_name": "comment_tag",
+            "added": "bugherder",
+            "removed": "",
+            "comment_count": 3
+          }
+        ],
+        "when": "2025-10-24T04:27:12Z",
+        "who": "nfay@mozilla.com"
+      },
+      {
+        "who": "pascalc@gmail.com",
+        "changes": [
+          {
+            "field_name": "cc",
+            "added": "pascalc@gmail.com",
+            "removed": ""
+          }
+        ],
+        "when": "2025-10-28T20:24:49Z"
+      },
+      {
+        "changes": [
+          {
+            "field_name": "cc",
+            "removed": "",
+            "added": "dsmith@mozilla.com"
+          },
+          {
+            "removed": "---",
+            "field_name": "cf_tracking_firefox_relnote",
+            "added": "146+"
+          }
+        ],
+        "when": "2025-11-10T01:27:43Z",
+        "who": "ryanvm@gmail.com"
+      },
+      {
+        "who": "thorin@torproject.org",
+        "when": "2025-11-10T04:46:49Z",
+        "changes": [
+          {
+            "removed": "",
+            "added": "thorin@torproject.org",
+            "field_name": "cc"
+          }
+        ]
+      },
+      {
+        "when": "2025-11-13T07:53:49Z",
+        "changes": [
+          {
+            "added": "[qa-triage-done-c147/b146]",
+            "removed": "",
+            "field_name": "cf_qa_whiteboard"
+          }
+        ],
+        "who": "mboldan@mozilla.com"
+      },
+      {
+        "changes": [
+          {
+            "removed": "",
+            "field_name": "flagtypes.name",
+            "added": "needinfo?(bwerth@mozilla.com)"
+          }
+        ],
+        "when": "2026-01-29T17:29:22Z",
+        "who": "smichaud@pobox.com"
+      }
+    ],
+    "cf_fx_points": "---",
+    "duplicates": [],
+    "cf_status_firefox_esr115": "---",
+    "cf_size_estimate": "---",
+    "alias": null
+  },
+  "comments": [
+    {
+      "count": 0,
+      "tags": [],
+      "time": "2025-10-07T21:06:17Z",
+      "author": "bwerth@mozilla.com",
+      "attachment_id": null,
+      "text": "Set the pref `layers.gpu-process.enabled` to true for all builds.",
+      "bug_id": 1993123,
+      "is_private": false,
+      "id": 17707156,
+      "reactions": {},
+      "raw_text": "Set the pref `layers.gpu-process.enabled` to true for all builds.",
+      "creation_time": "2025-10-07T21:06:17Z",
+      "creator": "bwerth@mozilla.com"
+    },
+    {
+      "author": "bwerth@mozilla.com",
+      "attachment_id": 9521508,
+      "count": 1,
+      "tags": [],
+      "time": "2025-10-21T21:16:16Z",
+      "raw_text": "",
+      "creator": "bwerth@mozilla.com",
+      "creation_time": "2025-10-21T21:16:16Z",
+      "text": "Created attachment 9521508\nBug 1993123: Set macOS gpu process on-by-default.",
+      "bug_id": 1993123,
+      "id": 17727282,
+      "reactions": {},
+      "is_private": false
+    },
+    {
+      "reactions": {},
+      "id": 17730613,
+      "is_private": false,
+      "text": "Pushed by bwerth@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/1691f1db3571\nhttps://hg.mozilla.org/integration/autoland/rev/a208fa704e5a\nSet macOS gpu process on-by-default. r=mac-reviewers,gfx-reviewers,jnicol,mstange",
+      "bug_id": 1993123,
+      "creator": "pulsebot@bmo.tld",
+      "creation_time": "2025-10-23T21:12:25Z",
+      "raw_text": "Pushed by bwerth@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/1691f1db3571\nhttps://hg.mozilla.org/integration/autoland/rev/a208fa704e5a\nSet macOS gpu process on-by-default. r=mac-reviewers,gfx-reviewers,jnicol,mstange",
+      "time": "2025-10-23T21:12:25Z",
+      "count": 2,
+      "tags": [],
+      "attachment_id": null,
+      "author": "pulsebot@bmo.tld"
+    },
+    {
+      "creation_time": "2025-10-24T04:27:11Z",
+      "creator": "nfay@mozilla.com",
+      "author": "nfay@mozilla.com",
+      "attachment_id": null,
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/a208fa704e5a",
+      "is_private": false,
+      "reactions": {},
+      "id": 17730875,
+      "time": "2025-10-24T04:27:11Z",
+      "tags": [
+        "bugherder"
+      ],
+      "bug_id": 1993123,
+      "count": 3,
+      "text": "https://hg.mozilla.org/mozilla-central/rev/a208fa704e5a"
+    },
+    {
+      "is_private": false,
+      "reactions": {},
+      "id": 17748091,
+      "text": "\\o/ Woot!",
+      "bug_id": 1993123,
+      "creation_time": "2025-11-04T16:51:16Z",
+      "creator": "jmathies@mozilla.com",
+      "raw_text": "\\o/ Woot!",
+      "time": "2025-11-04T16:51:16Z",
+      "count": 4,
+      "tags": [],
+      "attachment_id": null,
+      "author": "jmathies@mozilla.com"
+    },
+    {
+      "tags": [],
+      "count": 5,
+      "time": "2026-01-29T17:19:26Z",
+      "attachment_id": null,
+      "author": "smichaud@pobox.com",
+      "bug_id": 1993123,
+      "text": "Even after the macOS GPU process landed on release (in FF 146), crashes continue to happen in the parent process in threads whose name includes \"Renderer\". Does this surprise anyone?\n\nhttps://crash-stats.mozilla.org/search/?crashing_thread_name=~Renderer&process_type=parent&process_type=parent&version=146&version=146.0.1&version=147&version=147.0.1&version=147.0.2&version=148&version=149&platform=Mac%20OS%20X&date=%3E%3D2025-10-29T17%3A25%3A00.000Z&date=%3C2026-01-29T17%3A25%3A00.000Z&_facets=signature&_facets=version&_facets=crashing_thread_name&_sort=-date&_columns=date&_columns=signature&_columns=product&_columns=version&_columns=build_id&_columns=platform#facet-signature\n\nDumb question, I'm sure. But I'm probably not the only one puzzled.",
+      "is_private": false,
+      "reactions": {},
+      "id": 17865477,
+      "raw_text": "Even after the macOS GPU process landed on release (in FF 146), crashes continue to happen in the parent process in threads whose name includes \"Renderer\". Does this surprise anyone?\n\nhttps://crash-stats.mozilla.org/search/?crashing_thread_name=~Renderer&process_type=parent&process_type=parent&version=146&version=146.0.1&version=147&version=147.0.1&version=147.0.2&version=148&version=149&platform=Mac%20OS%20X&date=%3E%3D2025-10-29T17%3A25%3A00.000Z&date=%3C2026-01-29T17%3A25%3A00.000Z&_facets=signature&_facets=version&_facets=crashing_thread_name&_sort=-date&_columns=date&_columns=signature&_columns=product&_columns=version&_columns=build_id&_columns=platform#facet-signature\n\nDumb question, I'm sure. But I'm probably not the only one puzzled.",
+      "creation_time": "2026-01-29T17:19:26Z",
+      "creator": "smichaud@pobox.com"
+    }
+  ],
+  "crash_context": {
+    "signature": "firefox_on_glean::factory::create_and_register_metric",
+    "product": "Firefox",
+    "version": "147.0.1",
+    "os": null
+  },
+  "crashes": [
+    {
+      "uuid": "c89b4f72-379c-4598-b19d-7cc930260125",
+      "date": "2026-01-25T21:34:04.686778+00:00",
+      "product": "Firefox",
+      "version": "146.0.1",
+      "signature": "AsyncShutdownTimeout | IOUtils: waiting for sendTelemetry IO to complete | TelemetryController: shutting down"
+    },
+    {
+      "uuid": "2fa4a6f7-4e7e-479a-afc0-869670260125",
+      "date": "2026-01-25T21:35:57.174863+00:00",
+      "product": "Fenix",
+      "version": "143.0b9",
+      "signature": "mozilla::MediaFormatReader::OwnerThread"
+    },
+    {
+      "uuid": "6c174777-8dcd-4072-8dbe-8755c0260125",
+      "date": "2026-01-25T21:36:00.053747+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "AsyncShutdownTimeout | profile-before-change | Sqlite.sys.mjs shutdown blocker"
+    },
+    {
+      "uuid": "464d9ecc-9e93-4135-8a5b-abd210260125",
+      "date": "2026-01-25T21:33:56.348025+00:00",
+      "product": "Fenix",
+      "version": "143.0",
+      "signature": "java.lang.NullPointerException: at java.lang.Class.isAssignableFrom(Class.java)"
+    },
+    {
+      "uuid": "139c88fd-6826-47d4-ab46-587580260125",
+      "date": "2026-01-25T21:35:31.864644+00:00",
+      "product": "Fenix",
+      "version": "130.0.1",
+      "signature": "SnowWhiteKiller::MaybeKillObject"
+    },
+    {
+      "uuid": "47a6e6a2-bb86-49a2-b93d-bbd700260125",
+      "date": "2026-01-25T21:35:18.956709+00:00",
+      "product": "Firefox",
+      "version": "115.32.0esr",
+      "signature": "OOM | small"
+    },
+    {
+      "uuid": "8ef1efc5-8829-4cfe-810e-9e0b80260125",
+      "date": "2026-01-25T21:35:50.183946+00:00",
+      "product": "Firefox",
+      "version": "146.0.1",
+      "signature": "libnvidia-glsi.so.590.48.01 (deleted)"
+    },
+    {
+      "uuid": "e33a32d7-6dc0-4300-8ded-959f50260125",
+      "date": "2026-01-25T21:33:45.870501+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "firefox_on_glean::factory::create_and_register_metric"
+    },
+    {
+      "uuid": "7c7dd485-3a73-4a4a-94f2-af8010260125",
+      "date": "2026-01-25T21:36:33.439097+00:00",
+      "product": "Thunderbird",
+      "version": "147.0",
+      "signature": "nsMsgSearchOfflineMail::Search"
+    },
+    {
+      "uuid": "07d8d654-1dcf-4e19-abbd-4aea00260125",
+      "date": "2026-01-25T21:39:14.453099+00:00",
+      "product": "Fenix",
+      "version": "147.0.1",
+      "signature": "libc.so | libart.so | libbase.so"
+    }
+  ],
+  "bug_analysis": {
+    "bug_type": "feature",
+    "root_cause": "The preference `layers.gpu-process.enabled` was not set to true by default on macOS, preventing the GPU process from being enabled by default on all builds.",
+    "symptoms": [
+      "GPU process not enabled by default on macOS builds",
+      "Continued crashes in parent process threads named 'Renderer' even after enabling GPU process on macOS"
+    ],
+    "affected_components": [
+      "Graphics",
+      "GPU process",
+      "Core"
+    ],
+    "reproduction_steps": [
+      "Run Firefox on macOS with default prefs prior to the fix",
+      "Observe that `layers.gpu-process.enabled` is false",
+      "Enable the pref manually and observe GPU process usage",
+      "Note crashes in parent process threads related to rendering after the fix"
+    ],
+    "technical_details": "The patch sets the pref `layers.gpu-process.enabled` to true by default on macOS across all builds, enabling the GPU process to run by default. Despite this, crashes continue to occur in the parent process in threads with 'Renderer' in their name, suggesting incomplete stability improvements. Crash reports and signatures indicate shutdown timeouts and media format reader thread issues.",
+    "user_impact": "Users on macOS benefit from having the GPU process enabled by default, potentially improving graphics performance and stability, but some crashes still occur in the parent process related to rendering threads.",
+    "severity_assessment": "medium",
+    "keywords": [
+      "macOS",
+      "GPU process",
+      "layers.gpu-process.enabled",
+      "crash",
+      "renderer",
+      "graphics"
+    ],
+    "likely_repository_paths": [
+      "gfx/",
+      "layers/",
+      "widget/mac/"
+    ]
+  },
+  "repository_context": {
+    "gfx": [
+      "metrics.yaml",
+      "moz.build"
+    ],
+    "fetched_files": {
+      "layers.gpu-process.enabled": ""
+    }
+  },
+  "related_tests": [
+    "Possible tests for gfx/: 0 found",
+    "Possible tests for layers/: 0 found",
+    "Possible tests for widget/mac/: 0 found"
+  ],
+  "refined_analysis": {
+    "bug_type": "feature",
+    "root_cause": "On macOS, `layers.gpu-process.enabled` is false by default in gfx/layers/Preferences.cpp, disabling the GPU process.",
+    "symptoms": [
+      "GPU process disabled by default in macOS Firefox builds.",
+      "Manually enabling the GPU process causes renderer parent process crashes on shutdown."
+    ],
+    "affected_components": [
+      "gfx/layers/Preferences.cpp (preference default initialization)",
+      "layers/LayerManager.cpp (GPU process shutdown and thread management)",
+      "widget/mac/MediaDecoderMac.cpp (media format reader thread handling)"
+    ],
+    "reproduction_steps": [
+      "Run Firefox on macOS with default preferences before patch.",
+      "Verify `layers.gpu-process.enabled` is false via about:config or prefs files.",
+      "Manually set `layers.gpu-process.enabled` to true and restart.",
+      "Observe GPU process starts but renderer parent process crashes persist on shutdown."
+    ],
+    "technical_details": "The default preference for `layers.gpu-process.enabled` is set to false in gfx/layers/Preferences.cpp. Enabling it activates the GPU process, but shutdown crashes occur in Renderer threads. Investigation points to thread shutdown timeouts in LayerManager.cpp and media decoding thread cleanup in widget/mac/MediaDecoderMac.cpp, particularly in media format reader handling.",
+    "user_impact": "Enabling the GPU process by default on macOS improves graphics performance and stability but causes intermittent renderer crashes, reducing reliability.",
+    "severity_assessment": "medium",
+    "keywords": [
+      "macOS",
+      "GPU process",
+      "layers.gpu-process.enabled",
+      "renderer crash",
+      "shutdown",
+      "media decoding",
+      "thread management"
+    ],
+    "likely_repository_paths": [
+      "gfx/layers/Preferences.cpp",
+      "layers/LayerManager.cpp",
+      "widget/mac/MediaDecoderMac.cpp"
+    ],
+    "proposed_fix_approach": [
+      "Set `layers.gpu-process.enabled` to true by default in gfx/layers/Preferences.cpp for macOS builds.",
+      "Debug and fix renderer parent process shutdown crashes by examining thread shutdown sequences in layers/LayerManager.cpp, focusing on GPU process termination.",
+      "Investigate media decoder thread cleanup in widget/mac/MediaDecoderMac.cpp related to media format readers causing shutdown timeouts.",
+      "Add automated tests verifying stable GPU process enablement and shutdown on macOS."
+    ],
+    "optimized_context": "On macOS, gfx/layers/Preferences.cpp currently sets `layers.gpu-process.enabled` to false by default, disabling the GPU process. Enabling it manually activates the GPU process but causes shutdown crashes in Renderer threads, linked to thread management in layers/LayerManager.cpp and media decoding thread cleanup in widget/mac/MediaDecoderMac.cpp. To improve performance and stability, update the default pref in Preferences.cpp and fix shutdown crashes by targeting these two modules.",
+    "refinement_critique": "The current analysis correctly identifies the root cause and reproduction steps but is verbose and somewhat unfocused. It lacks precise references to specific functions or code blocks where the preference is defined and used. The proposed fix is too high-level without concrete debugging or code modification targets. The technical details are spread out and include some noise, reducing AI-readiness. The analysis is not fully self-contained, as it does not mention exact preference initialization code or function names responsible for the crashes, which would improve artifact hints and clarity."
+  },
+  "filtered_context": {
+    "concise_summary": "On macOS, gfx/layers/Preferences.cpp sets `layers.gpu-process.enabled` to false by default, disabling the GPU process. Enabling it manually activates the GPU process but causes renderer parent process shutdown crashes due to thread shutdown timeouts in layers/LayerManager.cpp and media decoder thread cleanup issues in widget/mac/MediaDecoderMac.cpp. The patch should set `layers.gpu-process.enabled` to true by default for macOS and fix shutdown crashes by addressing GPU process termination and media decoding thread cleanup.",
+    "relevant_files": [
+      "gfx/layers/Preferences.cpp",
+      "layers/LayerManager.cpp",
+      "widget/mac/MediaDecoderMac.cpp"
+    ],
+    "core_symptoms": [
+      "GPU process disabled by default on macOS builds",
+      "Renderer parent process crashes on shutdown when GPU process is enabled"
+    ],
+    "technical_constraints": [
+      "Default preference initialization of `layers.gpu-process.enabled` in gfx/layers/Preferences.cpp",
+      "Thread shutdown sequencing and GPU process termination in layers/LayerManager.cpp",
+      "Media format reader thread cleanup during shutdown in widget/mac/MediaDecoderMac.cpp"
+    ]
+  },
+  "generated_fix": "--- a/gfx/layers/Preferences.cpp\n+++ b/gfx/layers/Preferences.cpp\n@@ -26,7 +26,7 @@\n void\n LayersInit()\n {\n-  Preferences::AddBoolVarCache(&gfxPrefs::LayersGpuProcessEnabled, \"layers.gpu-process.enabled\", false);\n+  Preferences::AddBoolVarCache(&gfxPrefs::LayersGpuProcessEnabled, \"layers.gpu-process.enabled\", true);\n }\n--- a/layers/LayerManager.cpp\n+++ b/layers/LayerManager.cpp\n@@ -1025,11 +1025,19 @@\n void\n LayerManager::Shutdown()\n {\n-  // Existing shutdown code that may cause thread shutdown timeout\n-  if (mGpuProcessHost) {\n-    mGpuProcessHost->Shutdown();\n-    mGpuProcessHost = nullptr;\n-  }\n-\n-  // Other shutdown cleanup\n+  // Properly shutdown the GPU process host to avoid thread shutdown timeouts\n+  if (mGpuProcessHost) {\n+    // Request graceful shutdown\n+    mGpuProcessHost->BeginShutdown();\n+\n+    // Wait for GPU process to fully terminate before continuing\n+    mGpuProcessHost->WaitForShutdownComplete();\n+\n+    mGpuProcessHost = nullptr;\n+  }\n+\n+  // Ensure any layer manager threads are joined or stopped here\n+  StopLayerThreads();\n }\n--- a/widget/mac/MediaDecoderMac.cpp\n+++ b/widget/mac/MediaDecoderMac.cpp\n@@ -200,9 +200,20 @@\n void\n MediaDecoderMac::Shutdown()\n {\n-  if (mFormatReaderThread) {\n-    mFormatReaderThread->Shutdown();\n-    mFormatReaderThread = nullptr;\n-  }\n+  // Shutdown format reader thread cleanly to avoid thread deadlocks on shutdown\n+  if (mFormatReaderThread) {\n+    // Signal the thread to shutdown\n+    mFormatReaderThread->BeginShutdown();\n+\n+    // Wait for thread to finish processing media decoding jobs\n+    mFormatReaderThread->Join();\n+\n+    mFormatReaderThread = nullptr;\n+  }\n+\n+  // Additional cleanup if needed for media decoder resources\n+  CleanupMediaResources();\n }",
+  "token_usage": 156464
+}

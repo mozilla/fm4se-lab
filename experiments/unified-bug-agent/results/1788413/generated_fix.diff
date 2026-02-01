@@ -1,0 +1,68 @@
+--- a/gfx/layers/NativeLayer.cpp
++++ b/gfx/layers/NativeLayer.cpp
+@@ -10,6 +10,9 @@
+ #include "mozilla/layers/NativeLayer.h"
+ #include "mozilla/layers/Compositor.h"
++#include "mozilla/Mutex.h"
+ 
+ namespace mozilla {
+ namespace layers {
++
++static Mutex sNativeLayerMutex("NativeLayer::Mutex");
+ 
+ NativeLayer::NativeLayer()
+-  : mNativeSurface(nullptr)
++  : mNativeSurface(nullptr)
+ {
+ }
+ 
+@@ -45,10 +48,23 @@
+ void
+-NativeLayer::Finalize()
++NativeLayer::Finalize()
+ {
+-  if (mNativeSurface) {
+-    DestroyNativeSurface();
+-  }
++  // Lock to synchronize with rendering threads and avoid race with JSClass finalization
++  MutexAutoLock lock(sNativeLayerMutex);
++
++  if (mNativeSurface) {
++    DestroyNativeSurface();
++  }
+ }
+ 
+ void
+ NativeLayer::DestroyNativeSurface()
+ {
+-  // platform-specific destruction of mNativeSurface
+-  // ...
+-  mNativeSurface = nullptr;
++  MutexAutoLock lock(sNativeLayerMutex);
++
++  if (!mNativeSurface) {
++    return;
++  }
++
++  // platform-specific destruction of mNativeSurface
++  // ...
++  mNativeSurface = nullptr;
+ }
+@@ -100,6 +116,12 @@
+ void
+ NativeLayer::RenderMaskLayerTransform()
+ {
+-  // Rendering code that uses mNativeSurface
+-  // ...
++  MutexAutoLock lock(sNativeLayerMutex);
++
++  if (!mNativeSurface) {
++    return;
++  }
++
++  // Rendering code that uses mNativeSurface
++  // ...
+ }
+ 
+ } // namespace layers
+ } // namespace mozilla

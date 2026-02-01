@@ -1,0 +1,1153 @@
+{
+  "status": "RESOLVED",
+  "cf_status_firefox_esr140": "---",
+  "cf_status_firefox149": "fixed",
+  "op_sys": "Unspecified",
+  "resolution": "FIXED",
+  "flags": [],
+  "whiteboard": "[necko-triaged][necko-priority-queue]",
+  "cf_fx_points": "---",
+  "cf_tracking_firefox149": "---",
+  "cf_tracking_firefox_esr140": "---",
+  "creator": "edgul@mozilla.com",
+  "see_also": [
+    "https://bugzilla.mozilla.org/show_bug.cgi?id=1998871"
+  ],
+  "cf_performance_impact": "---",
+  "cf_status_firefox148": "---",
+  "priority": "P2",
+  "regressed_by": [],
+  "platform": "Unspecified",
+  "cf_size_estimate": "---",
+  "cf_a11y_review_project_flag": "---",
+  "target_milestone": "149 Branch",
+  "cf_tracking_thunderbird_esr115": "---",
+  "alias": null,
+  "cf_rank": null,
+  "history": [
+    {
+      "changes": [
+        {
+          "added": "https://bugzilla.mozilla.org/show_bug.cgi?id=1974216",
+          "removed": "",
+          "field_name": "see_also"
+        }
+      ],
+      "when": "2025-08-20T19:39:47Z",
+      "who": "edgul@mozilla.com"
+    },
+    {
+      "when": "2025-08-21T00:50:04Z",
+      "changes": [
+        {
+          "removed": "",
+          "added": "mayankleoboy1@gmail.com",
+          "field_name": "cc"
+        }
+      ],
+      "who": "mayankleoboy1@gmail.com"
+    },
+    {
+      "who": "phab-bot@bmo.tld",
+      "changes": [
+        {
+          "field_name": "status",
+          "added": "ASSIGNED",
+          "removed": "NEW"
+        },
+        {
+          "added": "edgul@mozilla.com",
+          "removed": "nobody@mozilla.org",
+          "field_name": "assigned_to"
+        }
+      ],
+      "when": "2025-10-16T21:46:20Z"
+    },
+    {
+      "who": "valentin.gosu@gmail.com",
+      "when": "2025-10-21T12:13:28Z",
+      "changes": [
+        {
+          "removed": "",
+          "added": "needinfo?(valentin.gosu@gmail.com)",
+          "field_name": "flagtypes.name"
+        },
+        {
+          "field_name": "cc",
+          "removed": "",
+          "added": "valentin.gosu@gmail.com"
+        }
+      ]
+    },
+    {
+      "when": "2025-11-10T06:06:03Z",
+      "changes": [
+        {
+          "added": "https://bugzilla.mozilla.org/show_bug.cgi?id=1998871",
+          "removed": "",
+          "field_name": "see_also"
+        }
+      ],
+      "who": "edgul@mozilla.com"
+    },
+    {
+      "who": "brian@birchill.co.jp",
+      "when": "2025-11-18T00:30:47Z",
+      "changes": [
+        {
+          "added": "brian@birchill.co.jp",
+          "removed": "",
+          "field_name": "cc"
+        }
+      ]
+    },
+    {
+      "when": "2025-12-08T14:40:09Z",
+      "changes": [
+        {
+          "field_name": "flagtypes.name",
+          "removed": "needinfo?(valentin.gosu@gmail.com)",
+          "added": ""
+        }
+      ],
+      "who": "valentin.gosu@gmail.com"
+    },
+    {
+      "who": "edgul@mozilla.com",
+      "when": "2025-12-09T20:01:18Z",
+      "changes": [
+        {
+          "added": "[necko-triaged][necko-priority-queue]",
+          "removed": "[necko-triaged]",
+          "field_name": "whiteboard"
+        }
+      ]
+    },
+    {
+      "who": "edgul@mozilla.com",
+      "when": "2025-12-09T20:04:07Z",
+      "changes": [
+        {
+          "field_name": "cc",
+          "added": "tschuster@mozilla.com",
+          "removed": ""
+        },
+        {
+          "field_name": "duplicates",
+          "removed": "",
+          "added": "1974216"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "removed": "",
+          "added": "2005047",
+          "field_name": "blocks"
+        }
+      ],
+      "when": "2025-12-09T20:12:07Z",
+      "who": "edgul@mozilla.com"
+    },
+    {
+      "who": "phab-bot@bmo.tld",
+      "when": "2026-01-09T21:55:25Z",
+      "changes": [
+        {
+          "removed": "0",
+          "added": "1",
+          "attachment_id": 9536491,
+          "field_name": "attachments.isobsolete"
+        }
+      ]
+    },
+    {
+      "when": "2026-01-09T21:55:29Z",
+      "changes": [
+        {
+          "removed": "0",
+          "added": "1",
+          "attachment_id": 9536490,
+          "field_name": "attachments.isobsolete"
+        }
+      ],
+      "who": "phab-bot@bmo.tld"
+    },
+    {
+      "when": "2026-01-09T21:55:33Z",
+      "changes": [
+        {
+          "added": "1",
+          "removed": "0",
+          "field_name": "attachments.isobsolete",
+          "attachment_id": 9536240
+        }
+      ],
+      "who": "phab-bot@bmo.tld"
+    },
+    {
+      "when": "2026-01-09T21:55:39Z",
+      "changes": [
+        {
+          "attachment_id": 9536007,
+          "field_name": "attachments.isobsolete",
+          "removed": "0",
+          "added": "1"
+        }
+      ],
+      "who": "phab-bot@bmo.tld"
+    },
+    {
+      "changes": [
+        {
+          "removed": "0",
+          "added": "1",
+          "field_name": "attachments.isobsolete",
+          "attachment_id": 9536006
+        }
+      ],
+      "when": "2026-01-09T21:55:44Z",
+      "who": "phab-bot@bmo.tld"
+    },
+    {
+      "who": "phab-bot@bmo.tld",
+      "changes": [
+        {
+          "attachment_id": 9536005,
+          "field_name": "attachments.isobsolete",
+          "added": "1",
+          "removed": "0"
+        }
+      ],
+      "when": "2026-01-09T21:56:18Z"
+    },
+    {
+      "changes": [
+        {
+          "added": "1",
+          "removed": "0",
+          "attachment_id": 9520308,
+          "field_name": "attachments.isobsolete"
+        }
+      ],
+      "when": "2026-01-09T21:58:35Z",
+      "who": "phab-bot@bmo.tld"
+    },
+    {
+      "who": "phab-bot@bmo.tld",
+      "changes": [
+        {
+          "added": "Bug 1984171 - Vendor in urlpattern 0.5.0 crate r?#necko-reviewers",
+          "removed": "WIP: Bug 1984171 - Vendor in urlpattern 0.5.0 crate r?#necko-reviewers",
+          "field_name": "attachments.description",
+          "attachment_id": 9537244
+        }
+      ],
+      "when": "2026-01-13T21:42:11Z"
+    },
+    {
+      "who": "phab-bot@bmo.tld",
+      "when": "2026-01-13T21:42:16Z",
+      "changes": [
+        {
+          "removed": "WIP: Bug 1984171 - Added spidermonkey regex into URLPattern by integrating with urlpattern crate",
+          "added": "Bug 1984171 - Added spidermonkey regex into URLPattern by integrating with urlpattern crate r?#necko-reviewers",
+          "attachment_id": 9536741,
+          "field_name": "attachments.description"
+        }
+      ]
+    },
+    {
+      "who": "phab-bot@bmo.tld",
+      "changes": [
+        {
+          "attachment_id": 9522271,
+          "field_name": "attachments.isobsolete",
+          "removed": "0",
+          "added": "1"
+        }
+      ],
+      "when": "2026-01-14T18:59:36Z"
+    },
+    {
+      "changes": [
+        {
+          "field_name": "attachments.isobsolete",
+          "attachment_id": 9538010,
+          "added": "1",
+          "removed": "0"
+        }
+      ],
+      "when": "2026-01-20T20:32:30Z",
+      "who": "phab-bot@bmo.tld"
+    },
+    {
+      "who": "chorotan@mozilla.com",
+      "when": "2026-01-20T22:16:28Z",
+      "changes": [
+        {
+          "field_name": "flagtypes.name",
+          "removed": "",
+          "added": "needinfo?(edgul@mozilla.com)"
+        },
+        {
+          "field_name": "cc",
+          "removed": "",
+          "added": "chorotan@mozilla.com"
+        }
+      ]
+    },
+    {
+      "who": "phab-bot@bmo.tld",
+      "when": "2026-01-21T21:41:18Z",
+      "changes": [
+        {
+          "added": "1",
+          "removed": "0",
+          "attachment_id": 9537244,
+          "field_name": "attachments.isobsolete"
+        }
+      ]
+    },
+    {
+      "when": "2026-01-29T16:08:26Z",
+      "changes": [
+        {
+          "added": "RESOLVED",
+          "removed": "ASSIGNED",
+          "field_name": "status"
+        },
+        {
+          "removed": "---",
+          "added": "149 Branch",
+          "field_name": "target_milestone"
+        },
+        {
+          "field_name": "resolution",
+          "added": "FIXED",
+          "removed": ""
+        },
+        {
+          "added": "2026-01-29T16:08:26Z",
+          "removed": "",
+          "field_name": "cf_last_resolved"
+        },
+        {
+          "field_name": "cf_status_firefox149",
+          "removed": "---",
+          "added": "fixed"
+        }
+      ],
+      "who": "chorotan@mozilla.com"
+    },
+    {
+      "who": "chorotan@mozilla.com",
+      "changes": [
+        {
+          "added": "bugherder",
+          "removed": "",
+          "comment_id": 17865345,
+          "comment_count": 23,
+          "field_name": "comment_tag"
+        }
+      ],
+      "when": "2026-01-29T16:08:27Z"
+    },
+    {
+      "when": "2026-01-30T17:01:06Z",
+      "changes": [
+        {
+          "field_name": "flagtypes.name",
+          "removed": "needinfo?(edgul@mozilla.com)",
+          "added": ""
+        }
+      ],
+      "who": "edgul@mozilla.com"
+    },
+    {
+      "who": "mathew.hodson@gmail.com",
+      "changes": [
+        {
+          "field_name": "see_also",
+          "added": "",
+          "removed": "https://bugzilla.mozilla.org/show_bug.cgi?id=1974216"
+        }
+      ],
+      "when": "2026-02-01T01:28:37Z"
+    }
+  ],
+  "duplicates": [
+    1974216
+  ],
+  "version": "unspecified",
+  "cc_detail": [
+    {
+      "email": "brian@birchill.co.jp",
+      "id": 165012,
+      "name": "brian@birchill.co.jp",
+      "nick": "birtles",
+      "real_name": "Brian Birtles (:birtles)"
+    },
+    {
+      "email": "chorotan@mozilla.com",
+      "id": 721399,
+      "real_name": "Cristina Horotan [:chorotan]",
+      "name": "chorotan@mozilla.com",
+      "nick": "chorotan"
+    },
+    {
+      "real_name": "Mayank Bansal",
+      "nick": "mayankleoboy1",
+      "name": "mayankleoboy1@gmail.com",
+      "id": 440227,
+      "email": "mayankleoboy1@gmail.com"
+    },
+    {
+      "email": "tschuster@mozilla.com",
+      "id": 703078,
+      "real_name": "Tom Schuster",
+      "name": "tschuster@mozilla.com",
+      "nick": "tschuster"
+    },
+    {
+      "email": "valentin.gosu@gmail.com",
+      "id": 415378,
+      "real_name": "Valentin Gosu [:valentin] (he/him)",
+      "name": "valentin.gosu@gmail.com",
+      "nick": "valentin"
+    }
+  ],
+  "is_confirmed": true,
+  "cf_tracking_thunderbird_esr140": "---",
+  "id": 1984171,
+  "creation_time": "2025-08-20T19:14:29Z",
+  "description": "There is at least one WPT failure that should be addressed by supplying the SpiderMonkey regex to the URLPattern crate:\n`Pattern: [{\"pathname\":\"*{}**?\"}] Inputs: [{\"pathname\":\"foobar\"}]`\n\nLet's fix this as a followup to the URLPattern interop 2025 project.",
+  "cf_fx_iteration": "---",
+  "cf_webcompat_priority": "---",
+  "mentors": [],
+  "type": "defect",
+  "cf_status_firefox147": "---",
+  "keywords": [],
+  "cf_webcompat_score": "---",
+  "url": "",
+  "assigned_to": "edgul@mozilla.com",
+  "blocks": [
+    2005047,
+    1974277
+  ],
+  "severity": "S3",
+  "cf_accessibility_severity": "---",
+  "cf_status_thunderbird_esr140": "---",
+  "cf_last_resolved": "2026-01-29T16:08:26Z",
+  "counts": {
+    "keywords": 0,
+    "attachments": 11,
+    "regressed_by": 0,
+    "duplicates": 1,
+    "regressions": 0,
+    "depends_on": 2,
+    "cc": 5,
+    "comments": 24,
+    "blocks": 0
+  },
+  "attachments": [
+    {
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjY4Nzcx",
+      "is_patch": 0,
+      "last_change_time": "2026-01-09T21:58:35Z",
+      "attacher": "edgul@mozilla.com",
+      "is_obsolete": 1,
+      "size": 48,
+      "flags": [],
+      "content_type": "text/x-phabricator-request",
+      "file_name": "phabricator-D268771-url.txt",
+      "is_private": 0,
+      "description": "WIP: Bug 1984171 - feed spidermonkey regex into urlpattern crate for matching",
+      "creation_time": "2025-10-15T22:02:38Z",
+      "id": 9520308,
+      "creator": "edgul@mozilla.com",
+      "bug_id": 1984171,
+      "summary": "WIP: Bug 1984171 - feed spidermonkey regex into urlpattern crate for matching",
+      "creator_detail": {
+        "id": 701256,
+        "email": "edgul@mozilla.com",
+        "nick": "edgul",
+        "name": "edgul@mozilla.com",
+        "real_name": "edgul"
+      }
+    },
+    {
+      "creator_detail": {
+        "name": "valentin.gosu@gmail.com",
+        "nick": "valentin",
+        "real_name": "Valentin Gosu [:valentin] (he/him)",
+        "email": "valentin.gosu@gmail.com",
+        "id": 415378
+      },
+      "id": 9522271,
+      "creation_time": "2025-10-24T14:02:28Z",
+      "description": "WIP: Bug 1984171 - temp local vendor of urlpattern + ed's changes",
+      "bug_id": 1984171,
+      "summary": "WIP: Bug 1984171 - temp local vendor of urlpattern + ed's changes",
+      "creator": "valentin.gosu@gmail.com",
+      "file_name": "phabricator-D269962-url.txt",
+      "is_private": 0,
+      "content_type": "text/x-phabricator-request",
+      "size": 48,
+      "flags": [],
+      "attacher": "valentin.gosu@gmail.com",
+      "is_obsolete": 1,
+      "last_change_time": "2026-01-14T18:59:36Z",
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjY5OTYy",
+      "is_patch": 0
+    },
+    {
+      "content_type": "text/x-phabricator-request",
+      "size": 48,
+      "flags": [],
+      "is_obsolete": 1,
+      "attacher": "edgul@mozilla.com",
+      "last_change_time": "2026-01-09T21:56:18Z",
+      "is_patch": 0,
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjc4MDUx",
+      "creator_detail": {
+        "id": 701256,
+        "email": "edgul@mozilla.com",
+        "real_name": "edgul",
+        "nick": "edgul",
+        "name": "edgul@mozilla.com"
+      },
+      "summary": "WIP: Bug 1984171 - Adding spidermonkey regex without using urlpattern crate",
+      "bug_id": 1984171,
+      "creator": "edgul@mozilla.com",
+      "id": 9536005,
+      "creation_time": "2026-01-06T21:51:27Z",
+      "description": "WIP: Bug 1984171 - Adding spidermonkey regex without using urlpattern crate",
+      "file_name": "phabricator-D278051-url.txt",
+      "is_private": 0
+    },
+    {
+      "is_private": 0,
+      "file_name": "phabricator-D278052-url.txt",
+      "creation_time": "2026-01-06T21:51:37Z",
+      "description": "WIP: Bug 1984171 - fixed the crashes and re-added the tests",
+      "id": 9536006,
+      "creator": "edgul@mozilla.com",
+      "bug_id": 1984171,
+      "summary": "WIP: Bug 1984171 - fixed the crashes and re-added the tests",
+      "creator_detail": {
+        "email": "edgul@mozilla.com",
+        "id": 701256,
+        "real_name": "edgul",
+        "name": "edgul@mozilla.com",
+        "nick": "edgul"
+      },
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjc4MDUy",
+      "is_patch": 0,
+      "last_change_time": "2026-01-09T21:55:44Z",
+      "attacher": "edgul@mozilla.com",
+      "is_obsolete": 1,
+      "flags": [],
+      "size": 48,
+      "content_type": "text/x-phabricator-request"
+    },
+    {
+      "is_private": 0,
+      "file_name": "phabricator-D278053-url.txt",
+      "creator_detail": {
+        "real_name": "edgul",
+        "name": "edgul@mozilla.com",
+        "nick": "edgul",
+        "email": "edgul@mozilla.com",
+        "id": 701256
+      },
+      "id": 9536007,
+      "description": "WIP: Bug Bug 1984171 - fixed a few tests",
+      "creation_time": "2026-01-06T21:51:47Z",
+      "bug_id": 1984171,
+      "summary": "WIP: Bug Bug 1984171 - fixed a few tests",
+      "creator": "edgul@mozilla.com",
+      "last_change_time": "2026-01-09T21:55:39Z",
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjc4MDUz",
+      "is_patch": 0,
+      "content_type": "text/x-phabricator-request",
+      "flags": [],
+      "size": 48,
+      "attacher": "edgul@mozilla.com",
+      "is_obsolete": 1
+    },
+    {
+      "flags": [],
+      "size": 48,
+      "content_type": "text/x-phabricator-request",
+      "is_obsolete": 1,
+      "attacher": "edgul@mozilla.com",
+      "last_change_time": "2026-01-09T21:55:33Z",
+      "is_patch": 0,
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjc4MjA5",
+      "creator_detail": {
+        "real_name": "edgul",
+        "name": "edgul@mozilla.com",
+        "nick": "edgul",
+        "email": "edgul@mozilla.com",
+        "id": 701256
+      },
+      "creator": "edgul@mozilla.com",
+      "bug_id": 1984171,
+      "summary": "WIP: Bug 1984171 - quick and dirty get compiling with spidermonkey regex pass around",
+      "creation_time": "2026-01-07T22:35:36Z",
+      "description": "WIP: Bug 1984171 - quick and dirty get compiling with spidermonkey regex pass around",
+      "id": 9536240,
+      "is_private": 0,
+      "file_name": "phabricator-D278209-url.txt"
+    },
+    {
+      "content_type": "text/x-phabricator-request",
+      "flags": [],
+      "size": 48,
+      "attacher": "edgul@mozilla.com",
+      "is_obsolete": 1,
+      "last_change_time": "2026-01-09T21:55:29Z",
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjc4Mzc2",
+      "is_patch": 0,
+      "creator_detail": {
+        "email": "edgul@mozilla.com",
+        "id": 701256,
+        "real_name": "edgul",
+        "name": "edgul@mozilla.com",
+        "nick": "edgul"
+      },
+      "id": 9536490,
+      "description": "WIP: Bug 1984171 - Fixed spidermonkey_matches to return None on failure",
+      "creation_time": "2026-01-08T23:07:57Z",
+      "summary": "WIP: Bug 1984171 - Fixed spidermonkey_matches to return None on failure",
+      "bug_id": 1984171,
+      "creator": "edgul@mozilla.com",
+      "file_name": "phabricator-D278376-url.txt",
+      "is_private": 0
+    },
+    {
+      "is_obsolete": 1,
+      "attacher": "edgul@mozilla.com",
+      "content_type": "text/x-phabricator-request",
+      "flags": [],
+      "size": 48,
+      "is_patch": 0,
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjc4Mzc3",
+      "last_change_time": "2026-01-09T21:55:25Z",
+      "summary": "WIP: Bug 1984171 - Fixed encoding test failues",
+      "bug_id": 1984171,
+      "creator": "edgul@mozilla.com",
+      "id": 9536491,
+      "creation_time": "2026-01-08T23:08:02Z",
+      "description": "WIP: Bug 1984171 - Fixed encoding test failues",
+      "creator_detail": {
+        "email": "edgul@mozilla.com",
+        "id": 701256,
+        "name": "edgul@mozilla.com",
+        "nick": "edgul",
+        "real_name": "edgul"
+      },
+      "file_name": "phabricator-D278377-url.txt",
+      "is_private": 0
+    },
+    {
+      "attacher": "edgul@mozilla.com",
+      "is_obsolete": 0,
+      "flags": [],
+      "size": 48,
+      "content_type": "text/x-phabricator-request",
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjc4NTQ4",
+      "is_patch": 0,
+      "last_change_time": "2026-01-13T21:42:16Z",
+      "creation_time": "2026-01-09T21:50:59Z",
+      "description": "Bug 1984171 - Added spidermonkey regex into URLPattern by integrating with urlpattern crate r?#necko-reviewers",
+      "id": 9536741,
+      "creator": "edgul@mozilla.com",
+      "summary": "Bug 1984171 - Added spidermonkey regex into URLPattern by integrating with urlpattern crate r?#necko-reviewers",
+      "bug_id": 1984171,
+      "creator_detail": {
+        "id": 701256,
+        "email": "edgul@mozilla.com",
+        "real_name": "edgul",
+        "nick": "edgul",
+        "name": "edgul@mozilla.com"
+      },
+      "is_private": 0,
+      "file_name": "phabricator-D278548-url.txt"
+    },
+    {
+      "file_name": "phabricator-D278828-url.txt",
+      "is_private": 0,
+      "creator_detail": {
+        "email": "edgul@mozilla.com",
+        "id": 701256,
+        "name": "edgul@mozilla.com",
+        "nick": "edgul",
+        "real_name": "edgul"
+      },
+      "creator": "edgul@mozilla.com",
+      "bug_id": 1984171,
+      "summary": "Bug 1984171 - Vendor in urlpattern 0.5.0 crate r?#necko-reviewers",
+      "description": "Bug 1984171 - Vendor in urlpattern 0.5.0 crate r?#necko-reviewers",
+      "creation_time": "2026-01-13T16:47:29Z",
+      "id": 9537244,
+      "last_change_time": "2026-01-21T21:41:18Z",
+      "is_patch": 0,
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjc4ODI4",
+      "flags": [],
+      "size": 48,
+      "content_type": "text/x-phabricator-request",
+      "is_obsolete": 1,
+      "attacher": "edgul@mozilla.com"
+    },
+    {
+      "creator_detail": {
+        "nick": "edgul",
+        "name": "edgul@mozilla.com",
+        "real_name": "edgul",
+        "id": 701256,
+        "email": "edgul@mozilla.com"
+      },
+      "creator": "edgul@mozilla.com",
+      "summary": "Bug 1984171 - Add URLPattern GC incremental slicing for spidermonkey regexp obj r?iain,smaug",
+      "bug_id": 1984171,
+      "description": "Bug 1984171 - Add URLPattern GC incremental slicing for spidermonkey regexp obj r?iain,smaug",
+      "creation_time": "2026-01-15T22:14:02Z",
+      "id": 9538010,
+      "file_name": "phabricator-D279222-url.txt",
+      "is_private": 0,
+      "size": 48,
+      "flags": [],
+      "content_type": "text/x-phabricator-request",
+      "is_obsolete": 1,
+      "attacher": "edgul@mozilla.com",
+      "last_change_time": "2026-01-20T20:32:30Z",
+      "is_patch": 0,
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjc5MjIy"
+    }
+  ],
+  "cf_cab_review": "---",
+  "cf_tracking_firefox_relnote": "---",
+  "cf_status_thunderbird_esr115": "---",
+  "mentors_detail": [],
+  "filed_via": "standard_form",
+  "is_cc_accessible": true,
+  "component": "Networking",
+  "votes": 0,
+  "dupe_of": null,
+  "regressions": [],
+  "last_change_time": "2026-02-01T01:28:37Z",
+  "cf_tracking_firefox_esr115": "---",
+  "assigned_to_detail": {
+    "id": 701256,
+    "email": "edgul@mozilla.com",
+    "nick": "edgul",
+    "name": "edgul@mozilla.com",
+    "real_name": "edgul"
+  },
+  "cc": [
+    "brian@birchill.co.jp",
+    "chorotan@mozilla.com",
+    "mayankleoboy1@gmail.com",
+    "tschuster@mozilla.com",
+    "valentin.gosu@gmail.com"
+  ],
+  "comments": [
+    {
+      "author": "edgul@mozilla.com",
+      "attachment_id": null,
+      "is_private": false,
+      "text": "There is at least one WPT failure that should be addressed by supplying the SpiderMonkey regex to the URLPattern crate:\n`Pattern: [{\"pathname\":\"*{}**?\"}] Inputs: [{\"pathname\":\"foobar\"}]`\n\nLet's fix this as a followup to the URLPattern interop 2025 project.",
+      "reactions": {},
+      "time": "2025-08-20T19:14:29Z",
+      "tags": [],
+      "bug_id": 1984171,
+      "creator": "edgul@mozilla.com",
+      "raw_text": "There is at least one WPT failure that should be addressed by supplying the SpiderMonkey regex to the URLPattern crate:\n`Pattern: [{\"pathname\":\"*{}**?\"}] Inputs: [{\"pathname\":\"foobar\"}]`\n\nLet's fix this as a followup to the URLPattern interop 2025 project.",
+      "count": 0,
+      "id": 17633578,
+      "creation_time": "2025-08-20T19:14:29Z"
+    },
+    {
+      "text": "Created attachment 9520308\nWIP: Bug 1984171 - feed spidermonkey regex into urlpattern crate for matching",
+      "is_private": false,
+      "reactions": {},
+      "author": "edgul@mozilla.com",
+      "attachment_id": 9520308,
+      "creator": "edgul@mozilla.com",
+      "bug_id": 1984171,
+      "creation_time": "2025-10-15T22:02:38Z",
+      "count": 1,
+      "id": 17718257,
+      "raw_text": "",
+      "time": "2025-10-15T22:02:38Z",
+      "tags": []
+    },
+    {
+      "attachment_id": null,
+      "author": "edgul@mozilla.com",
+      "reactions": {},
+      "is_private": false,
+      "text": "Quick status update for anyone following:\n\nThe above patch contains an almost working prototype where we provide a rust implementation of Spidermonkey Regex functionality to the urlpattern crate. We create C-API for the necessary SM calls and invoke from rust. Note that the current approach is one that creates the SM RegExp object on demand rather than handling any GC problems created by passing SM GC-controlled objects through rust. This has obvious performance issues that hopefully we can resolve after we get the POC working. \n\nNote that the above patch depends on upstreaming a small amount of changes to the urlpattern crate. So far the necessary changes are shown here: https://github.com/denoland/rust-urlpattern/compare/main...edgul:rust-urlpattern:tmp",
+      "tags": [],
+      "time": "2025-10-17T15:54:17Z",
+      "count": 2,
+      "id": 17720896,
+      "raw_text": "Quick status update for anyone following:\n\nThe above patch contains an almost working prototype where we provide a rust implementation of Spidermonkey Regex functionality to the urlpattern crate. We create C-API for the necessary SM calls and invoke from rust. Note that the current approach is one that creates the SM RegExp object on demand rather than handling any GC problems created by passing SM GC-controlled objects through rust. This has obvious performance issues that hopefully we can resolve after we get the POC working. \n\nNote that the above patch depends on upstreaming a small amount of changes to the urlpattern crate. So far the necessary changes are shown here: https://github.com/denoland/rust-urlpattern/compare/main...edgul:rust-urlpattern:tmp",
+      "creation_time": "2025-10-17T15:54:17Z",
+      "bug_id": 1984171,
+      "creator": "edgul@mozilla.com"
+    },
+    {
+      "author": "valentin.gosu@gmail.com",
+      "attachment_id": 9522271,
+      "text": "Created attachment 9522271\nWIP: Bug 1984171 - temp local vendor of urlpattern + ed's changes",
+      "is_private": false,
+      "reactions": {},
+      "time": "2025-10-24T14:02:28Z",
+      "tags": [],
+      "creator": "valentin.gosu@gmail.com",
+      "bug_id": 1984171,
+      "creation_time": "2025-10-24T14:02:28Z",
+      "id": 17731610,
+      "count": 3,
+      "raw_text": ""
+    },
+    {
+      "attachment_id": null,
+      "author": "edgul@mozilla.com",
+      "reactions": {},
+      "text": "The interop aspect of this project is closing, moving this into queue to be handled as maintenance",
+      "is_private": false,
+      "tags": [],
+      "time": "2025-12-09T20:01:18Z",
+      "creation_time": "2025-12-09T20:01:18Z",
+      "id": 17800655,
+      "count": 4,
+      "raw_text": "The interop aspect of this project is closing, moving this into queue to be handled as maintenance",
+      "creator": "edgul@mozilla.com",
+      "bug_id": 1984171
+    },
+    {
+      "attachment_id": null,
+      "author": "edgul@mozilla.com",
+      "reactions": {},
+      "is_private": false,
+      "text": "*** Bug 1974216 has been marked as a duplicate of this bug. ***",
+      "tags": [],
+      "time": "2025-12-09T20:04:07Z",
+      "raw_text": "",
+      "count": 5,
+      "id": 17800658,
+      "creation_time": "2025-12-09T20:04:07Z",
+      "bug_id": 1984171,
+      "creator": "edgul@mozilla.com"
+    },
+    {
+      "text": "Created attachment 9536005\nWIP: Bug 1984171 - Adding spidermonkey regex without using urlpattern crate",
+      "is_private": false,
+      "reactions": {},
+      "author": "edgul@mozilla.com",
+      "attachment_id": 9536005,
+      "creator": "edgul@mozilla.com",
+      "bug_id": 1984171,
+      "creation_time": "2026-01-06T21:51:27Z",
+      "raw_text": "",
+      "count": 6,
+      "id": 17831319,
+      "time": "2026-01-06T21:51:27Z",
+      "tags": []
+    },
+    {
+      "author": "edgul@mozilla.com",
+      "attachment_id": 9536006,
+      "text": "Created attachment 9536006\nWIP: Bug 1984171 - fixed the crashes and re-added the tests",
+      "is_private": false,
+      "reactions": {},
+      "time": "2026-01-06T21:51:37Z",
+      "tags": [],
+      "creator": "edgul@mozilla.com",
+      "bug_id": 1984171,
+      "creation_time": "2026-01-06T21:51:37Z",
+      "raw_text": "",
+      "count": 7,
+      "id": 17831320
+    },
+    {
+      "author": "edgul@mozilla.com",
+      "attachment_id": 9536007,
+      "text": "Created attachment 9536007\nWIP: Bug Bug 1984171 - fixed a few tests",
+      "is_private": false,
+      "reactions": {},
+      "time": "2026-01-06T21:51:47Z",
+      "tags": [],
+      "creator": "edgul@mozilla.com",
+      "bug_id": 1984171,
+      "creation_time": "2026-01-06T21:51:47Z",
+      "count": 8,
+      "raw_text": "",
+      "id": 17831321
+    },
+    {
+      "tags": [],
+      "time": "2026-01-07T22:35:36Z",
+      "creation_time": "2026-01-07T22:35:36Z",
+      "count": 9,
+      "id": 17832785,
+      "raw_text": "",
+      "creator": "edgul@mozilla.com",
+      "bug_id": 1984171,
+      "attachment_id": 9536240,
+      "author": "edgul@mozilla.com",
+      "reactions": {},
+      "text": "Created attachment 9536240\nWIP: Bug 1984171 - quick and dirty get compiling with spidermonkey regex pass around",
+      "is_private": false
+    },
+    {
+      "author": "edgul@mozilla.com",
+      "attachment_id": 9536490,
+      "text": "Created attachment 9536490\nWIP: Bug 1984171 - Fixed spidermonkey_matches to return None on failure",
+      "is_private": false,
+      "reactions": {},
+      "time": "2026-01-08T23:07:57Z",
+      "tags": [],
+      "creator": "edgul@mozilla.com",
+      "bug_id": 1984171,
+      "creation_time": "2026-01-08T23:07:57Z",
+      "id": 17834431,
+      "raw_text": "",
+      "count": 10
+    },
+    {
+      "reactions": {},
+      "text": "Created attachment 9536491\nWIP: Bug 1984171 - Fixed encoding test failues",
+      "is_private": false,
+      "attachment_id": 9536491,
+      "author": "edgul@mozilla.com",
+      "creation_time": "2026-01-08T23:08:02Z",
+      "id": 17834432,
+      "raw_text": "",
+      "count": 11,
+      "creator": "edgul@mozilla.com",
+      "bug_id": 1984171,
+      "tags": [],
+      "time": "2026-01-08T23:08:02Z"
+    },
+    {
+      "bug_id": 1984171,
+      "creator": "edgul@mozilla.com",
+      "raw_text": "",
+      "count": 12,
+      "id": 17835830,
+      "creation_time": "2026-01-09T21:50:59Z",
+      "time": "2026-01-09T21:50:59Z",
+      "tags": [],
+      "is_private": false,
+      "text": "Created attachment 9536741\nBug 1984171 - Added spidermonkey regex into URLPattern by integrating with urlpattern crate r?#necko-reviewers",
+      "reactions": {},
+      "author": "edgul@mozilla.com",
+      "attachment_id": 9536741
+    },
+    {
+      "text": "Created attachment 9537244\nBug 1984171 - Vendor in urlpattern 0.5.0 crate r?#necko-reviewers",
+      "is_private": false,
+      "reactions": {},
+      "author": "edgul@mozilla.com",
+      "attachment_id": 9537244,
+      "creator": "edgul@mozilla.com",
+      "bug_id": 1984171,
+      "creation_time": "2026-01-13T16:47:29Z",
+      "raw_text": "",
+      "id": 17840797,
+      "count": 13,
+      "time": "2026-01-13T16:47:29Z",
+      "tags": []
+    },
+    {
+      "reactions": {},
+      "is_private": false,
+      "text": "Created attachment 9538010\nBug 1984171 - Add URLPattern GC incremental slicing for spidermonkey regexp obj r?iain,smaug\n\n\nThis patch adds Trace functions so that when incremental GC happens we can Trace down to the spidermonkey regexp obj that is stored in the urlpattern::component. It's seems a bit complicated because of having to pass through the ffi boundary.",
+      "attachment_id": 9538010,
+      "author": "edgul@mozilla.com",
+      "id": 17844841,
+      "raw_text": "\nThis patch adds Trace functions so that when incremental GC happens we can Trace down to the spidermonkey regexp obj that is stored in the urlpattern::component. It's seems a bit complicated because of having to pass through the ffi boundary.",
+      "count": 14,
+      "creation_time": "2026-01-15T22:14:02Z",
+      "bug_id": 1984171,
+      "creator": "edgul@mozilla.com",
+      "tags": [],
+      "time": "2026-01-15T22:14:02Z"
+    },
+    {
+      "author": "pulsebot@bmo.tld",
+      "attachment_id": null,
+      "is_private": false,
+      "text": "Pushed by eguloien@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/35fa66706d19\nhttps://hg.mozilla.org/integration/autoland/rev/dc5e3332bf3d\nVendor in urlpattern 0.5.0 crate r=necko-reviewers,supply-chain-reviewers,valentin\nhttps://github.com/mozilla-firefox/firefox/commit/ed54d1409d54\nhttps://hg.mozilla.org/integration/autoland/rev/937cfcb68de4\nAdded spidermonkey regex into URLPattern by integrating with urlpattern crate r=necko-reviewers,valentin,iain,smaug",
+      "reactions": {},
+      "time": "2026-01-20T20:17:16Z",
+      "tags": [],
+      "bug_id": 1984171,
+      "creator": "pulsebot@bmo.tld",
+      "count": 15,
+      "id": 17851745,
+      "raw_text": "Pushed by eguloien@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/35fa66706d19\nhttps://hg.mozilla.org/integration/autoland/rev/dc5e3332bf3d\nVendor in urlpattern 0.5.0 crate r=necko-reviewers,supply-chain-reviewers,valentin\nhttps://github.com/mozilla-firefox/firefox/commit/ed54d1409d54\nhttps://hg.mozilla.org/integration/autoland/rev/937cfcb68de4\nAdded spidermonkey regex into URLPattern by integrating with urlpattern crate r=necko-reviewers,valentin,iain,smaug",
+      "creation_time": "2026-01-20T20:17:16Z"
+    },
+    {
+      "creation_time": "2026-01-20T20:32:30Z",
+      "raw_text": "Revision D279222 was moved to bug 2011529. Setting attachment 9538010 to obsolete.",
+      "count": 16,
+      "id": 17851762,
+      "creator": "phab-bot@bmo.tld",
+      "bug_id": 1984171,
+      "tags": [],
+      "time": "2026-01-20T20:32:30Z",
+      "reactions": {},
+      "text": "Comment on attachment 9538010\nBug 1984171 - Add URLPattern GC incremental slicing for spidermonkey regexp obj r?iain,smaug\n\nRevision D279222 was moved to bug 2011529. Setting attachment 9538010 to obsolete.",
+      "is_private": false,
+      "attachment_id": 9538010,
+      "author": "phab-bot@bmo.tld"
+    },
+    {
+      "author": "pulsebot@bmo.tld",
+      "attachment_id": null,
+      "is_private": false,
+      "text": "Pushed by chorotan@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/d5adac594cec\nhttps://hg.mozilla.org/integration/autoland/rev/24c00baf33d0\nRevert \"Bug 1984171 - Added spidermonkey regex into URLPattern by integrating with urlpattern crate r=necko-reviewers,valentin,iain,smaug\" for causing build bustages",
+      "reactions": {},
+      "time": "2026-01-20T22:15:39Z",
+      "tags": [],
+      "bug_id": 1984171,
+      "creator": "pulsebot@bmo.tld",
+      "raw_text": "Pushed by chorotan@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/d5adac594cec\nhttps://hg.mozilla.org/integration/autoland/rev/24c00baf33d0\nRevert \"Bug 1984171 - Added spidermonkey regex into URLPattern by integrating with urlpattern crate r=necko-reviewers,valentin,iain,smaug\" for causing build bustages",
+      "id": 17851948,
+      "count": 17,
+      "creation_time": "2026-01-20T22:15:39Z"
+    },
+    {
+      "creation_time": "2026-01-20T22:16:28Z",
+      "raw_text": "Backed out for causing build bustages\n\n[Backout link](https://hg.mozilla.org/integration/autoland/rev/24c00baf33d0)\n\n[Push with failures](https://treeherder.mozilla.org/jobs?repo=autoland&resultStatus=testfailed%2Cbusted%2Cexception%2Cretry%2Cusercancel&revision=937cfcb68de4409e82fa05871c272d85c4618819)\n\n[Failure log](https://treeherder.mozilla.org/logviewer?job_id=544548632&repo=autoland&task=TZtCmUX-R_GPN-09AXnHBg.0&lineNumber=51059)",
+      "id": 17851949,
+      "count": 18,
+      "creator": "chorotan@mozilla.com",
+      "bug_id": 1984171,
+      "tags": [],
+      "time": "2026-01-20T22:16:28Z",
+      "reactions": {},
+      "text": "Backed out for causing build bustages\n\n[Backout link](https://hg.mozilla.org/integration/autoland/rev/24c00baf33d0)\n\n[Push with failures](https://treeherder.mozilla.org/jobs?repo=autoland&resultStatus=testfailed%2Cbusted%2Cexception%2Cretry%2Cusercancel&revision=937cfcb68de4409e82fa05871c272d85c4618819)\n\n[Failure log](https://treeherder.mozilla.org/logviewer?job_id=544548632&repo=autoland&task=TZtCmUX-R_GPN-09AXnHBg.0&lineNumber=51059)",
+      "is_private": false,
+      "attachment_id": null,
+      "author": "chorotan@mozilla.com"
+    },
+    {
+      "author": "pulsebot@bmo.tld",
+      "attachment_id": null,
+      "is_private": false,
+      "text": "Pushed by eguloien@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/3fe7170728cb\nhttps://hg.mozilla.org/integration/autoland/rev/52ecd38c69f1\nAdded spidermonkey regex into URLPattern by integrating with urlpattern crate r=necko-reviewers,valentin,iain,smaug",
+      "reactions": {},
+      "time": "2026-01-22T14:56:39Z",
+      "tags": [],
+      "bug_id": 1984171,
+      "creator": "pulsebot@bmo.tld",
+      "count": 19,
+      "id": 17854685,
+      "raw_text": "Pushed by eguloien@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/3fe7170728cb\nhttps://hg.mozilla.org/integration/autoland/rev/52ecd38c69f1\nAdded spidermonkey regex into URLPattern by integrating with urlpattern crate r=necko-reviewers,valentin,iain,smaug",
+      "creation_time": "2026-01-22T14:56:39Z"
+    },
+    {
+      "time": "2026-01-22T20:50:17Z",
+      "tags": [],
+      "creator": "pulsebot@bmo.tld",
+      "bug_id": 1984171,
+      "creation_time": "2026-01-22T20:50:17Z",
+      "count": 20,
+      "id": 17855174,
+      "raw_text": "Pushed by abutkovits@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/a47d3d742256\nhttps://hg.mozilla.org/integration/autoland/rev/d8594f11efad\nRevert \"Bug 1984171, Bug 2011767 - Added spidermonkey regex into URLPattern by integrating with urlpattern crate r=necko-reviewers,valentin,iain,smaug\" for causing failures complaining about regexResult.",
+      "author": "pulsebot@bmo.tld",
+      "attachment_id": null,
+      "text": "Pushed by abutkovits@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/a47d3d742256\nhttps://hg.mozilla.org/integration/autoland/rev/d8594f11efad\nRevert \"Bug 1984171, Bug 2011767 - Added spidermonkey regex into URLPattern by integrating with urlpattern crate r=necko-reviewers,valentin,iain,smaug\" for causing failures complaining about regexResult.",
+      "is_private": false,
+      "reactions": {}
+    },
+    {
+      "creator": "abutkovits@mozilla.com",
+      "bug_id": 1984171,
+      "creation_time": "2026-01-22T20:53:06Z",
+      "raw_text": "Backed out for causing failures complaining about regexResult.\n\nBackout link: https://hg-edge.mozilla.org/integration/autoland/rev/d8594f11efadec8cbad9c477e149b65e4444d330\n\nPush where failures started: https://treeherder.mozilla.org/jobs?repo=autoland&selectedTaskRun=P7sPJKPyThSZ5Pa3n272Tg.0&resultStatus=testfailed%2Cbusted%2Cexception%2Cretry%2Cusercancel&revision=9a8624999ab9dfd0e34d53f4fd6dfe90bfadc9c6\n\nFailure log: https://treeherder.mozilla.org/logviewer?job_id=544954988&repo=autoland&task=P7sPJKPyThSZ5Pa3n272Tg.0&lineNumber=4836",
+      "id": 17855178,
+      "count": 21,
+      "time": "2026-01-22T20:53:06Z",
+      "tags": [],
+      "text": "Backed out for causing failures complaining about regexResult.\n\nBackout link: https://hg-edge.mozilla.org/integration/autoland/rev/d8594f11efadec8cbad9c477e149b65e4444d330\n\nPush where failures started: https://treeherder.mozilla.org/jobs?repo=autoland&selectedTaskRun=P7sPJKPyThSZ5Pa3n272Tg.0&resultStatus=testfailed%2Cbusted%2Cexception%2Cretry%2Cusercancel&revision=9a8624999ab9dfd0e34d53f4fd6dfe90bfadc9c6\n\nFailure log: https://treeherder.mozilla.org/logviewer?job_id=544954988&repo=autoland&task=P7sPJKPyThSZ5Pa3n272Tg.0&lineNumber=4836",
+      "is_private": false,
+      "reactions": {},
+      "author": "abutkovits@mozilla.com",
+      "attachment_id": null
+    },
+    {
+      "attachment_id": null,
+      "author": "pulsebot@bmo.tld",
+      "reactions": {},
+      "is_private": false,
+      "text": "Pushed by eguloien@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/bb8fd8d7fbbc\nhttps://hg.mozilla.org/integration/autoland/rev/d676f790d29c\nAdded spidermonkey regex into URLPattern by integrating with urlpattern crate r=necko-reviewers,valentin,iain,smaug",
+      "tags": [],
+      "time": "2026-01-29T00:59:13Z",
+      "count": 22,
+      "id": 17864172,
+      "raw_text": "Pushed by eguloien@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/bb8fd8d7fbbc\nhttps://hg.mozilla.org/integration/autoland/rev/d676f790d29c\nAdded spidermonkey regex into URLPattern by integrating with urlpattern crate r=necko-reviewers,valentin,iain,smaug",
+      "creation_time": "2026-01-29T00:59:13Z",
+      "bug_id": 1984171,
+      "creator": "pulsebot@bmo.tld"
+    },
+    {
+      "attachment_id": null,
+      "author": "chorotan@mozilla.com",
+      "reactions": {},
+      "is_private": false,
+      "text": "https://hg.mozilla.org/mozilla-central/rev/d676f790d29c",
+      "tags": [
+        "bugherder"
+      ],
+      "time": "2026-01-29T16:08:26Z",
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/d676f790d29c",
+      "id": 17865345,
+      "count": 23,
+      "creation_time": "2026-01-29T16:08:26Z",
+      "bug_id": 1984171,
+      "creator": "chorotan@mozilla.com"
+    }
+  ],
+  "is_creator_accessible": true,
+  "is_open": false,
+  "depends_on": [],
+  "cf_status_firefox_esr115": "---",
+  "cf_has_str": "---",
+  "qa_contact": "",
+  "triage_owner": "valentin.gosu@gmail.com",
+  "groups": [],
+  "product": "Core",
+  "cf_tracking_firefox147": "---",
+  "triage_owner_detail": {
+    "real_name": "Valentin Gosu [:valentin] (he/him)",
+    "nick": "valentin",
+    "name": "valentin.gosu@gmail.com",
+    "id": 415378,
+    "email": "valentin.gosu@gmail.com"
+  },
+  "summary": "Use spidermonkey regex in URLPattern",
+  "cf_crash_signature": "",
+  "cf_tracking_firefox148": "---",
+  "last_change_time_non_bot": "2026-02-01T01:28:37Z",
+  "cf_qa_whiteboard": "",
+  "creator_detail": {
+    "real_name": "edgul",
+    "name": "edgul@mozilla.com",
+    "nick": "edgul",
+    "email": "edgul@mozilla.com",
+    "id": 701256
+  },
+  "classification": "Components",
+  "cf_user_story": "",
+  "comment_count": 24
+}

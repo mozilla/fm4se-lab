@@ -1,0 +1,318 @@
+{
+  "cf_accessibility_severity": "---",
+  "cc": [],
+  "is_confirmed": true,
+  "is_creator_accessible": true,
+  "version": "unspecified",
+  "is_open": false,
+  "cf_tracking_firefox_esr115": "---",
+  "description": "Use 62px as the icon size for all top pick suggestions, as shown in [the Figma spec](https://www.figma.com/design/HlHYKdDVCszbbpjuovBDjg/Carrots---S-S-Online-Explorations?node-id=6584-5018&t=Xg06pmlLPj9lmpCj-0).",
+  "counts": {
+    "cc": 0,
+    "blocks": 0,
+    "depends_on": 1,
+    "regressed_by": 0,
+    "attachments": 1,
+    "regressions": 0,
+    "comments": 6,
+    "duplicates": 0,
+    "keywords": 0
+  },
+  "classification": "Client Software",
+  "votes": 0,
+  "creator": "adw@mozilla.com",
+  "cf_performance_impact": "---",
+  "filed_via": "standard_form",
+  "blocks": [
+    2010175
+  ],
+  "mentors": [],
+  "cf_last_resolved": "2026-01-30T17:34:12Z",
+  "component": "Address Bar",
+  "cf_fx_iteration": "---",
+  "cf_cab_review": "---",
+  "assigned_to_detail": {
+    "id": 334927,
+    "email": "adw@mozilla.com",
+    "nick": "adw",
+    "name": "adw@mozilla.com",
+    "real_name": "Drew Willcoxon :adw"
+  },
+  "qa_contact": "",
+  "severity": "N/A",
+  "regressions": [],
+  "platform": "Unspecified",
+  "is_cc_accessible": true,
+  "target_milestone": "149 Branch",
+  "cf_crash_signature": "",
+  "id": 2010176,
+  "triage_owner_detail": {
+    "nick": "jteow",
+    "name": "jteow@mozilla.com",
+    "id": 701257,
+    "email": "jteow@mozilla.com",
+    "real_name": "James Teow [:jteow]"
+  },
+  "product": "Firefox",
+  "cf_qa_whiteboard": "",
+  "comment_count": 6,
+  "cf_webcompat_score": "---",
+  "status": "RESOLVED",
+  "cf_tracking_firefox149": "---",
+  "cf_status_firefox_esr140": "---",
+  "keywords": [],
+  "comments": [
+    {
+      "text": "Use 62px as the icon size for all top pick suggestions, as shown in [the Figma spec](https://www.figma.com/design/HlHYKdDVCszbbpjuovBDjg/Carrots---S-S-Online-Explorations?node-id=6584-5018&t=Xg06pmlLPj9lmpCj-0).",
+      "count": 0,
+      "tags": [],
+      "bug_id": 2010176,
+      "time": "2026-01-14T00:58:52Z",
+      "reactions": {},
+      "id": 17841518,
+      "is_private": false,
+      "raw_text": "Use 62px as the icon size for all top pick suggestions, as shown in [the Figma spec](https://www.figma.com/design/HlHYKdDVCszbbpjuovBDjg/Carrots---S-S-Online-Explorations?node-id=6584-5018&t=Xg06pmlLPj9lmpCj-0).",
+      "attachment_id": null,
+      "author": "adw@mozilla.com",
+      "creator": "adw@mozilla.com",
+      "creation_time": "2026-01-14T00:58:52Z"
+    },
+    {
+      "bug_id": 2010176,
+      "text": "Including AMP higher placements.",
+      "reactions": {},
+      "id": 17841521,
+      "is_private": false,
+      "raw_text": "Including AMP higher placements.",
+      "creator": "adw@mozilla.com",
+      "creation_time": "2026-01-14T01:01:26Z",
+      "tags": [],
+      "count": 1,
+      "time": "2026-01-14T01:01:26Z",
+      "attachment_id": null,
+      "author": "adw@mozilla.com"
+    },
+    {
+      "creator": "adw@mozilla.com",
+      "creation_time": "2026-01-14T01:12:36Z",
+      "raw_text": "Not clear if this includes the weather icon. We need to check on that.",
+      "reactions": {},
+      "id": 17841534,
+      "is_private": false,
+      "text": "Not clear if this includes the weather icon. We need to check on that.",
+      "bug_id": 2010176,
+      "attachment_id": null,
+      "author": "adw@mozilla.com",
+      "time": "2026-01-14T01:12:36Z",
+      "count": 2,
+      "tags": []
+    },
+    {
+      "count": 3,
+      "tags": [],
+      "time": "2026-01-17T03:43:19Z",
+      "author": "adw@mozilla.com",
+      "attachment_id": 9538363,
+      "text": "Created attachment 9538363\nBug 2010176 - Use 62px icon size for all top pick suggestions.",
+      "bug_id": 2010176,
+      "is_private": false,
+      "reactions": {},
+      "id": 17846936,
+      "raw_text": "",
+      "creation_time": "2026-01-17T03:43:19Z",
+      "creator": "adw@mozilla.com"
+    },
+    {
+      "time": "2026-01-30T17:17:52Z",
+      "is_private": false,
+      "id": 17867495,
+      "reactions": {},
+      "count": 4,
+      "text": "Apparently we're going to stick with 52px for now.",
+      "bug_id": 2010176,
+      "tags": [],
+      "creation_time": "2026-01-30T17:17:52Z",
+      "creator": "adw@mozilla.com",
+      "attachment_id": null,
+      "author": "adw@mozilla.com",
+      "raw_text": "Apparently we're going to stick with 52px for now."
+    },
+    {
+      "raw_text": "With the other bugs we've fixed as part of bug 2010175, all top picks now use 52px, no further changes needed. There is some related cleanup we can do though. I'll file another bug for that.",
+      "creation_time": "2026-01-30T17:34:12Z",
+      "creator": "adw@mozilla.com",
+      "bug_id": 2010176,
+      "text": "With the other bugs we've fixed as part of bug 2010175, all top picks now use 52px, no further changes needed. There is some related cleanup we can do though. I'll file another bug for that.",
+      "is_private": false,
+      "reactions": {},
+      "id": 17867536,
+      "author": "adw@mozilla.com",
+      "attachment_id": null,
+      "tags": [],
+      "count": 5,
+      "time": "2026-01-30T17:34:12Z"
+    }
+  ],
+  "see_also": [
+    "https://mozilla-hub.atlassian.net/browse/SNG-3238",
+    "https://bugzilla.mozilla.org/show_bug.cgi?id=2013639"
+  ],
+  "resolution": "FIXED",
+  "cf_rank": null,
+  "cf_tracking_firefox148": "---",
+  "mentors_detail": [],
+  "groups": [],
+  "summary": "Use 52px icon size for all top pick suggestions",
+  "op_sys": "Unspecified",
+  "cf_a11y_review_project_flag": "---",
+  "cf_status_firefox148": "---",
+  "cf_status_firefox149": "---",
+  "cf_has_str": "---",
+  "cc_detail": [],
+  "depends_on": [],
+  "regressed_by": [],
+  "attachments": [
+    {
+      "bug_id": 2010176,
+      "file_name": "phabricator-D279453-url.txt",
+      "summary": "Bug 2010176 - Use 62px icon size for all top pick suggestions.",
+      "last_change_time": "2026-01-30T19:19:57Z",
+      "is_private": 0,
+      "id": 9538363,
+      "description": "Bug 2010176 - Use 62px icon size for all top pick suggestions.",
+      "flags": [],
+      "creation_time": "2026-01-17T03:43:19Z",
+      "creator": "adw@mozilla.com",
+      "content_type": "text/x-phabricator-request",
+      "is_obsolete": 1,
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjc5NDUz",
+      "size": 48,
+      "attacher": "adw@mozilla.com",
+      "creator_detail": {
+        "real_name": "Drew Willcoxon :adw",
+        "name": "adw@mozilla.com",
+        "nick": "adw",
+        "id": 334927,
+        "email": "adw@mozilla.com"
+      },
+      "is_patch": 0
+    }
+  ],
+  "creator_detail": {
+    "real_name": "Drew Willcoxon :adw",
+    "email": "adw@mozilla.com",
+    "id": 334927,
+    "name": "adw@mozilla.com",
+    "nick": "adw"
+  },
+  "cf_tracking_firefox_esr140": "---",
+  "priority": "P1",
+  "assigned_to": "adw@mozilla.com",
+  "last_change_time_non_bot": "2026-01-30T19:19:57Z",
+  "url": "",
+  "whiteboard": "[sng]",
+  "cf_status_firefox147": "---",
+  "cf_webcompat_priority": "---",
+  "cf_tracking_firefox147": "---",
+  "last_change_time": "2026-01-30T19:19:57Z",
+  "type": "task",
+  "dupe_of": null,
+  "flags": [],
+  "triage_owner": "jteow@mozilla.com",
+  "creation_time": "2026-01-14T00:58:52Z",
+  "cf_user_story": "",
+  "cf_tracking_firefox_relnote": "---",
+  "history": [
+    {
+      "who": "jira-integration@bots.tld",
+      "when": "2026-01-14T00:59:06Z",
+      "changes": [
+        {
+          "removed": "",
+          "added": "https://mozilla-hub.atlassian.net/browse/SNG-3238",
+          "field_name": "see_also"
+        }
+      ]
+    },
+    {
+      "when": "2026-01-15T01:39:39Z",
+      "changes": [
+        {
+          "removed": "NEW",
+          "field_name": "status",
+          "added": "ASSIGNED"
+        },
+        {
+          "field_name": "assigned_to",
+          "added": "adw@mozilla.com",
+          "removed": "nobody@mozilla.org"
+        }
+      ],
+      "who": "adw@mozilla.com"
+    },
+    {
+      "changes": [
+        {
+          "removed": "Use 62px icon size for all top pick suggestions",
+          "added": "Use 52px icon size for all top pick suggestions",
+          "field_name": "summary"
+        }
+      ],
+      "when": "2026-01-30T17:17:52Z",
+      "who": "adw@mozilla.com"
+    },
+    {
+      "when": "2026-01-30T17:34:12Z",
+      "changes": [
+        {
+          "added": "FIXED",
+          "removed": "",
+          "field_name": "resolution"
+        },
+        {
+          "added": "149 Branch",
+          "field_name": "target_milestone",
+          "removed": "---"
+        },
+        {
+          "added": "RESOLVED",
+          "removed": "ASSIGNED",
+          "field_name": "status"
+        },
+        {
+          "added": "2026-01-30T17:34:12Z",
+          "removed": "",
+          "field_name": "cf_last_resolved"
+        }
+      ],
+      "who": "adw@mozilla.com"
+    },
+    {
+      "who": "adw@mozilla.com",
+      "when": "2026-01-30T19:16:01Z",
+      "changes": [
+        {
+          "field_name": "see_also",
+          "added": "https://bugzilla.mozilla.org/show_bug.cgi?id=2013639",
+          "removed": ""
+        }
+      ]
+    },
+    {
+      "when": "2026-01-30T19:19:57Z",
+      "changes": [
+        {
+          "added": "1",
+          "removed": "0",
+          "field_name": "attachments.isobsolete",
+          "attachment_id": 9538363
+        }
+      ],
+      "who": "phab-bot@bmo.tld"
+    }
+  ],
+  "cf_fx_points": "---",
+  "cf_status_firefox_esr115": "---",
+  "duplicates": [],
+  "alias": null
+}

@@ -1,0 +1,38 @@
+--- a/browser/modules/AboutNewTab.sys.mjs
++++ b/browser/modules/AboutNewTab.sys.mjs
+@@ -300,10 +300,21 @@
+-  // Previously, about:newtab was treated as non-blank, so the unified search button was not initialized.
+-  // Attempts to treat about:newtab as blank caused premature finalization of JS objects, leading to crashes.
+-  // Fix: Adjust lifecycle management to enable unified search button safely in private windows.
+-  if (pageURL == "about:newtab" && isPrivateWindow) {
+-    // do not treat about:newtab as blank, but allow button initialization
+-    isBlankPage = false;
+-  }
+-
+-  if (isBlankPage) {
+-    // initialize unified search button
+-    this._initializeUnifiedSearchButton();
+-  } else {
+-    // skip button initialization
+-    this._destroyUnifiedSearchButton();
+-  }
++  // Fix: Treat about:newtab as blank only in private windows, but ensure proper lifecycle management to prevent premature finalization.
++  if (pageURL == "about:newtab" && isPrivateWindow) {
++    isBlankPage = true;
++  }
++
++  if (isBlankPage) {
++    // Initialize or re-initialize the unified search button safely
++    if (!this._unifiedSearchButtonInitialized) {
++      this._initializeUnifiedSearchButton();
++      this._unifiedSearchButtonInitialized = true;
++    }
++  } else {
++    if (this._unifiedSearchButtonInitialized) {
++      this._destroyUnifiedSearchButton();
++      this._unifiedSearchButtonInitialized = false;
++    }
++  }
++  
++  // Ensure proper finalization hooks prevent premature JSClass::doFinalize finalization
++  this._setupUnifiedSearchButtonFinalizationSafeguards?.();

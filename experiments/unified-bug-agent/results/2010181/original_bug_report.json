@@ -1,0 +1,361 @@
+{
+  "type": "task",
+  "is_cc_accessible": true,
+  "assigned_to_detail": {
+    "name": "daisuke@birchill.co.jp",
+    "email": "daisuke@birchill.co.jp",
+    "nick": "daisuke",
+    "id": 439222,
+    "real_name": "Daisuke Akatsuka (:daisuke)"
+  },
+  "alias": null,
+  "cf_status_firefox147": "---",
+  "cf_tracking_firefox148": "---",
+  "cf_performance_impact": "---",
+  "regressed_by": [],
+  "is_confirmed": true,
+  "cf_webcompat_priority": "---",
+  "cf_status_firefox_esr115": "---",
+  "triage_owner": "jteow@mozilla.com",
+  "cf_rank": null,
+  "cf_a11y_review_project_flag": "---",
+  "see_also": [
+    "https://mozilla-hub.atlassian.net/browse/SNG-3242"
+  ],
+  "op_sys": "Unspecified",
+  "comments": [
+    {
+      "creation_time": "2026-01-14T01:11:19Z",
+      "tags": [],
+      "attachment_id": null,
+      "id": 17841533,
+      "time": "2026-01-14T01:11:19Z",
+      "raw_text": "Update the MDN suggestions row UI. See [the Figma spec](https://www.figma.com/design/HlHYKdDVCszbbpjuovBDjg/Carrots---S-S-Online-Explorations?node-id=6584-5018&t=Xg06pmlLPj9lmpCj-0):\n\n* Look into using that blue \"M\" icon shown in the Figma -- where did it come from? Is it the current MDN icon? Right now MDN suggestions use a white \"M\" against a black background, see [this doc](https://docs.google.com/document/d/1nlWMosslcY47jbz0_ILJhaBHCTCjAHlGDnG8JiQM4a8/edit?usp=sharing).\n* Update the title as shown in the Figma, e.g.: \"Array \u2013 Javascript | MDN \u00b7 Mozilla Developer Network\"\n* Replace current bottom text with \"Recommended\"\n* Remove the \"Feedback\" label from the result menu button\n* Move the URL to the bottom and show it only on hover and selection\n* It's not clear yet how/whether the long description text should change, we'll need to check on that in later",
+      "author": "adw@mozilla.com",
+      "count": 0,
+      "is_private": false,
+      "reactions": {},
+      "bug_id": 2010181,
+      "creator": "adw@mozilla.com",
+      "text": "Update the MDN suggestions row UI. See [the Figma spec](https://www.figma.com/design/HlHYKdDVCszbbpjuovBDjg/Carrots---S-S-Online-Explorations?node-id=6584-5018&t=Xg06pmlLPj9lmpCj-0):\n\n* Look into using that blue \"M\" icon shown in the Figma -- where did it come from? Is it the current MDN icon? Right now MDN suggestions use a white \"M\" against a black background, see [this doc](https://docs.google.com/document/d/1nlWMosslcY47jbz0_ILJhaBHCTCjAHlGDnG8JiQM4a8/edit?usp=sharing).\n* Update the title as shown in the Figma, e.g.: \"Array \u2013 Javascript | MDN \u00b7 Mozilla Developer Network\"\n* Replace current bottom text with \"Recommended\"\n* Remove the \"Feedback\" label from the result menu button\n* Move the URL to the bottom and show it only on hover and selection\n* It's not clear yet how/whether the long description text should change, we'll need to check on that in later"
+    },
+    {
+      "reactions": {},
+      "bug_id": 2010181,
+      "creator": "daisuke@birchill.co.jp",
+      "text": "Created attachment 9539963\nBug 2010181: Standardize row UI for mdn suggestion",
+      "creation_time": "2026-01-25T22:38:53Z",
+      "tags": [],
+      "id": 17857725,
+      "attachment_id": 9539963,
+      "time": "2026-01-25T22:38:53Z",
+      "raw_text": "",
+      "is_private": false,
+      "count": 1,
+      "author": "daisuke@birchill.co.jp"
+    },
+    {
+      "tags": [],
+      "creation_time": "2026-01-29T21:28:50Z",
+      "time": "2026-01-29T21:28:50Z",
+      "count": 2,
+      "author": "pulsebot@bmo.tld",
+      "is_private": false,
+      "raw_text": "Pushed by dakatsuka.birchill@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/b225b220b73a\nhttps://hg.mozilla.org/integration/autoland/rev/379a8e578435\nStandardize row UI for mdn suggestion r=fluent-reviewers,adw,flod,mkennedy",
+      "id": 17865978,
+      "attachment_id": null,
+      "bug_id": 2010181,
+      "reactions": {},
+      "text": "Pushed by dakatsuka.birchill@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/b225b220b73a\nhttps://hg.mozilla.org/integration/autoland/rev/379a8e578435\nStandardize row UI for mdn suggestion r=fluent-reviewers,adw,flod,mkennedy",
+      "creator": "pulsebot@bmo.tld"
+    },
+    {
+      "id": 17866137,
+      "attachment_id": null,
+      "raw_text": "Pushed by smolnar@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/9e85c7d147e0\nhttps://hg.mozilla.org/integration/autoland/rev/4230699cd1ac\nRevert \"Bug 2010181: Standardize row UI for mdn suggestion r=fluent-reviewers,adw,flod,mkennedy\" for causing bc failures @ browser_quicksuggest_mdn.js",
+      "count": 3,
+      "is_private": false,
+      "author": "pulsebot@bmo.tld",
+      "time": "2026-01-29T23:17:21Z",
+      "creation_time": "2026-01-29T23:17:21Z",
+      "tags": [],
+      "creator": "pulsebot@bmo.tld",
+      "text": "Pushed by smolnar@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/9e85c7d147e0\nhttps://hg.mozilla.org/integration/autoland/rev/4230699cd1ac\nRevert \"Bug 2010181: Standardize row UI for mdn suggestion r=fluent-reviewers,adw,flod,mkennedy\" for causing bc failures @ browser_quicksuggest_mdn.js",
+      "reactions": {},
+      "bug_id": 2010181
+    },
+    {
+      "is_private": false,
+      "count": 4,
+      "author": "smolnar@mozilla.com",
+      "raw_text": "Backed out for causing bc failures @ browser_quicksuggest_mdn.js\n\nBackout link: https://hg-edge.mozilla.org/integration/autoland/rev/4230699cd1ac03e47228d3a94cea3a5c0e5b76f3\n\n[Push with failures](https://treeherder.mozilla.org/jobs?repo=autoland&group_state=expanded&resultStatus=testfailed%2Cbusted%2Cexception&classifiedState=unclassified&searchStr=linux%2C24.04%2Casan%2Copt%2Cmochitests%2Cwith%2Csoftware%2Cwebrender%2Cenabled%2Ctest-linux2404-64-asan%2Fopt-mochitest-browser-chrome-swr%2Cbc18&revision=9bf5dbfa17880304920e977f6e6596665ebab4a7&selectedTaskRun=UvYoBsx6QoyCDUHUr0Pl7w.0)\n\n[Failure log -> TEST-UNEXPECTED-FAIL | browser/components/urlbar/tests/quicksuggest/browser/browser_quicksuggest_mdn.js](https://treeherder.mozilla.org/logviewer?job_id=546191266&repo=autoland&task=UvYoBsx6QoyCDUHUr0Pl7w.0&lineNumber=6039)",
+      "time": "2026-01-29T23:18:08Z",
+      "id": 17866138,
+      "attachment_id": null,
+      "tags": [],
+      "creation_time": "2026-01-29T23:18:08Z",
+      "text": "Backed out for causing bc failures @ browser_quicksuggest_mdn.js\n\nBackout link: https://hg-edge.mozilla.org/integration/autoland/rev/4230699cd1ac03e47228d3a94cea3a5c0e5b76f3\n\n[Push with failures](https://treeherder.mozilla.org/jobs?repo=autoland&group_state=expanded&resultStatus=testfailed%2Cbusted%2Cexception&classifiedState=unclassified&searchStr=linux%2C24.04%2Casan%2Copt%2Cmochitests%2Cwith%2Csoftware%2Cwebrender%2Cenabled%2Ctest-linux2404-64-asan%2Fopt-mochitest-browser-chrome-swr%2Cbc18&revision=9bf5dbfa17880304920e977f6e6596665ebab4a7&selectedTaskRun=UvYoBsx6QoyCDUHUr0Pl7w.0)\n\n[Failure log -> TEST-UNEXPECTED-FAIL | browser/components/urlbar/tests/quicksuggest/browser/browser_quicksuggest_mdn.js](https://treeherder.mozilla.org/logviewer?job_id=546191266&repo=autoland&task=UvYoBsx6QoyCDUHUr0Pl7w.0&lineNumber=6039)",
+      "creator": "smolnar@mozilla.com",
+      "bug_id": 2010181,
+      "reactions": {}
+    },
+    {
+      "time": "2026-01-30T02:23:42Z",
+      "author": "pulsebot@bmo.tld",
+      "count": 5,
+      "is_private": false,
+      "raw_text": "Pushed by dakatsuka.birchill@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/7a06523ebb78\nhttps://hg.mozilla.org/integration/autoland/rev/8f3bf5302912\nStandardize row UI for mdn suggestion r=fluent-reviewers,adw,flod,mkennedy",
+      "id": 17866278,
+      "attachment_id": null,
+      "tags": [],
+      "creation_time": "2026-01-30T02:23:42Z",
+      "text": "Pushed by dakatsuka.birchill@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/7a06523ebb78\nhttps://hg.mozilla.org/integration/autoland/rev/8f3bf5302912\nStandardize row UI for mdn suggestion r=fluent-reviewers,adw,flod,mkennedy",
+      "creator": "pulsebot@bmo.tld",
+      "bug_id": 2010181,
+      "reactions": {}
+    },
+    {
+      "creator": "ctuns@mozilla.com",
+      "text": "https://hg.mozilla.org/mozilla-central/rev/8f3bf5302912",
+      "reactions": {},
+      "bug_id": 2010181,
+      "id": 17866522,
+      "attachment_id": null,
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/8f3bf5302912",
+      "author": "ctuns@mozilla.com",
+      "count": 6,
+      "is_private": false,
+      "time": "2026-01-30T09:30:04Z",
+      "creation_time": "2026-01-30T09:30:04Z",
+      "tags": [
+        "bugherder"
+      ]
+    }
+  ],
+  "cf_tracking_firefox147": "---",
+  "whiteboard": "[sng]",
+  "votes": 0,
+  "comment_count": 7,
+  "cf_cab_review": "---",
+  "cf_status_firefox_esr140": "---",
+  "regressions": [],
+  "cf_crash_signature": "",
+  "qa_contact": "",
+  "version": "unspecified",
+  "cf_tracking_firefox149": "---",
+  "cf_tracking_firefox_relnote": "---",
+  "platform": "Unspecified",
+  "history": [
+    {
+      "when": "2026-01-14T01:11:42Z",
+      "who": "jira-integration@bots.tld",
+      "changes": [
+        {
+          "added": "https://mozilla-hub.atlassian.net/browse/SNG-3242",
+          "field_name": "see_also",
+          "removed": ""
+        }
+      ]
+    },
+    {
+      "when": "2026-01-24T00:30:52Z",
+      "who": "adw@mozilla.com",
+      "changes": [
+        {
+          "removed": "NEW",
+          "added": "ASSIGNED",
+          "field_name": "status"
+        },
+        {
+          "removed": "nobody@mozilla.org",
+          "added": "daisuke@birchill.co.jp",
+          "field_name": "assigned_to"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "field_name": "attachments.description",
+          "added": "Bug 2010181: Standardize row UI for mdn suggestion",
+          "attachment_id": 9539963,
+          "removed": "WIP: Bug 2010181: Standardize row UI for mdn suggestion"
+        }
+      ],
+      "when": "2026-01-26T07:25:43Z",
+      "who": "phab-bot@bmo.tld"
+    },
+    {
+      "who": "smolnar@mozilla.com",
+      "when": "2026-01-29T23:18:08Z",
+      "changes": [
+        {
+          "field_name": "cc",
+          "added": "daisuke@birchill.co.jp",
+          "removed": ""
+        },
+        {
+          "field_name": "flagtypes.name",
+          "added": "needinfo?(daisuke@birchill.co.jp)",
+          "removed": ""
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "removed": "---",
+          "field_name": "target_milestone",
+          "added": "149 Branch"
+        },
+        {
+          "removed": "ASSIGNED",
+          "added": "RESOLVED",
+          "field_name": "status"
+        },
+        {
+          "added": "FIXED",
+          "field_name": "resolution",
+          "removed": ""
+        },
+        {
+          "removed": "",
+          "field_name": "cf_last_resolved",
+          "added": "2026-01-30T09:30:04Z"
+        },
+        {
+          "added": "fixed",
+          "field_name": "cf_status_firefox149",
+          "removed": "---"
+        },
+        {
+          "removed": "",
+          "comment_count": 6,
+          "field_name": "comment_tag",
+          "added": "bugherder",
+          "comment_id": 17866522
+        }
+      ],
+      "who": "ctuns@mozilla.com",
+      "when": "2026-01-30T09:30:04Z"
+    }
+  ],
+  "keywords": [],
+  "product": "Firefox",
+  "severity": "N/A",
+  "filed_via": "standard_form",
+  "assigned_to": "daisuke@birchill.co.jp",
+  "cf_status_firefox148": "---",
+  "priority": "P1",
+  "summary": "Update the MDN suggestions row UI",
+  "id": 2010181,
+  "creation_time": "2026-01-14T01:11:19Z",
+  "cf_fx_iteration": "---",
+  "is_open": false,
+  "counts": {
+    "attachments": 1,
+    "duplicates": 0,
+    "keywords": 0,
+    "cc": 1,
+    "regressions": 0,
+    "regressed_by": 0,
+    "comments": 7,
+    "depends_on": 1,
+    "blocks": 0
+  },
+  "component": "Address Bar",
+  "resolution": "FIXED",
+  "attachments": [
+    {
+      "creation_time": "2026-01-25T22:38:53Z",
+      "flags": [],
+      "is_patch": 0,
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjgwMzg2",
+      "size": 48,
+      "summary": "Bug 2010181: Standardize row UI for mdn suggestion",
+      "id": 9539963,
+      "content_type": "text/x-phabricator-request",
+      "is_private": 0,
+      "attacher": "daisuke@birchill.co.jp",
+      "file_name": "phabricator-D280386-url.txt",
+      "last_change_time": "2026-01-26T07:25:43Z",
+      "bug_id": 2010181,
+      "creator_detail": {
+        "nick": "daisuke",
+        "email": "daisuke@birchill.co.jp",
+        "name": "daisuke@birchill.co.jp",
+        "id": 439222,
+        "real_name": "Daisuke Akatsuka (:daisuke)"
+      },
+      "creator": "daisuke@birchill.co.jp",
+      "is_obsolete": 0,
+      "description": "Bug 2010181: Standardize row UI for mdn suggestion"
+    }
+  ],
+  "creator_detail": {
+    "real_name": "Drew Willcoxon :adw",
+    "id": 334927,
+    "email": "adw@mozilla.com",
+    "name": "adw@mozilla.com",
+    "nick": "adw"
+  },
+  "classification": "Client Software",
+  "cf_accessibility_severity": "---",
+  "last_change_time_non_bot": "2026-01-30T09:30:04Z",
+  "groups": [],
+  "status": "RESOLVED",
+  "cf_has_str": "---",
+  "blocks": [
+    2010175
+  ],
+  "cf_tracking_firefox_esr140": "---",
+  "mentors": [],
+  "last_change_time": "2026-01-30T09:30:04Z",
+  "duplicates": [],
+  "cf_last_resolved": "2026-01-30T09:30:04Z",
+  "triage_owner_detail": {
+    "real_name": "James Teow [:jteow]",
+    "id": 701257,
+    "nick": "jteow",
+    "name": "jteow@mozilla.com",
+    "email": "jteow@mozilla.com"
+  },
+  "dupe_of": null,
+  "depends_on": [],
+  "flags": [
+    {
+      "requestee": "daisuke@birchill.co.jp",
+      "name": "needinfo",
+      "id": 2328704,
+      "creation_date": "2026-01-29T23:18:08Z",
+      "modification_date": "2026-01-29T23:18:08Z",
+      "status": "?",
+      "type_id": 800,
+      "setter": "smolnar@mozilla.com"
+    }
+  ],
+  "target_milestone": "149 Branch",
+  "description": "Update the MDN suggestions row UI. See [the Figma spec](https://www.figma.com/design/HlHYKdDVCszbbpjuovBDjg/Carrots---S-S-Online-Explorations?node-id=6584-5018&t=Xg06pmlLPj9lmpCj-0):\n\n* Look into using that blue \"M\" icon shown in the Figma -- where did it come from? Is it the current MDN icon? Right now MDN suggestions use a white \"M\" against a black background, see [this doc](https://docs.google.com/document/d/1nlWMosslcY47jbz0_ILJhaBHCTCjAHlGDnG8JiQM4a8/edit?usp=sharing).\n* Update the title as shown in the Figma, e.g.: \"Array \u2013 Javascript | MDN \u00b7 Mozilla Developer Network\"\n* Replace current bottom text with \"Recommended\"\n* Remove the \"Feedback\" label from the result menu button\n* Move the URL to the bottom and show it only on hover and selection\n* It's not clear yet how/whether the long description text should change, we'll need to check on that in later",
+  "cc": [
+    "daisuke@birchill.co.jp"
+  ],
+  "creator": "adw@mozilla.com",
+  "is_creator_accessible": true,
+  "cf_fx_points": "---",
+  "url": "",
+  "cf_qa_whiteboard": "",
+  "cc_detail": [
+    {
+      "id": 439222,
+      "real_name": "Daisuke Akatsuka (:daisuke)",
+      "nick": "daisuke",
+      "name": "daisuke@birchill.co.jp",
+      "email": "daisuke@birchill.co.jp"
+    }
+  ],
+  "cf_webcompat_score": "---",
+  "cf_user_story": "",
+  "cf_tracking_firefox_esr115": "---",
+  "cf_status_firefox149": "fixed",
+  "mentors_detail": []
+}

@@ -1,0 +1,282 @@
+{
+  "cc_detail": [],
+  "version": "unspecified",
+  "duplicates": [],
+  "cf_webcompat_priority": "---",
+  "mentors": [],
+  "cf_fx_iteration": "---",
+  "creation_time": "2026-01-14T01:16:29Z",
+  "description": "Update the Wikipedia suggestions row UI. See [the Figma spec](https://www.figma.com/design/HlHYKdDVCszbbpjuovBDjg/Carrots---S-S-Online-Explorations?node-id=6584-5018&t=Xg06pmlLPj9lmpCj-0):\n\n* The title should be \"[article title] \u00b7 Wikipedia\", but offhand I'm not sure that's possible since the titles are defined in the RS and Merino data. We may have to ignore that part, at least for now, and do it as a follow-up.\n* Show \"Recommended\" as the bottom text\n* The icon size should *not* change now since that will be done later as part of Nova\n* Show URL at the bottom on hover/selection? Check with Paul et al. first since Wikipedia suggestions currently do not show URL",
+  "id": 2010183,
+  "is_confirmed": true,
+  "target_milestone": "149 Branch",
+  "cf_a11y_review_project_flag": "---",
+  "platform": "Unspecified",
+  "regressed_by": [],
+  "history": [
+    {
+      "changes": [
+        {
+          "field_name": "see_also",
+          "added": "https://mozilla-hub.atlassian.net/browse/SNG-3243",
+          "removed": ""
+        }
+      ],
+      "when": "2026-01-14T01:16:40Z",
+      "who": "jira-integration@bots.tld"
+    },
+    {
+      "who": "adw@mozilla.com",
+      "changes": [
+        {
+          "field_name": "status",
+          "removed": "NEW",
+          "added": "ASSIGNED"
+        },
+        {
+          "removed": "nobody@mozilla.org",
+          "added": "adw@mozilla.com",
+          "field_name": "assigned_to"
+        }
+      ],
+      "when": "2026-01-24T02:32:43Z"
+    },
+    {
+      "who": "agoloman@mozilla.com",
+      "changes": [
+        {
+          "field_name": "status",
+          "removed": "ASSIGNED",
+          "added": "RESOLVED"
+        },
+        {
+          "added": "FIXED",
+          "removed": "",
+          "field_name": "resolution"
+        },
+        {
+          "field_name": "target_milestone",
+          "removed": "---",
+          "added": "149 Branch"
+        },
+        {
+          "field_name": "cf_last_resolved",
+          "added": "2026-01-30T21:17:19Z",
+          "removed": ""
+        },
+        {
+          "field_name": "cf_status_firefox149",
+          "removed": "---",
+          "added": "fixed"
+        },
+        {
+          "comment_count": 4,
+          "field_name": "comment_tag",
+          "comment_id": 17867867,
+          "removed": "",
+          "added": "bugherder"
+        }
+      ],
+      "when": "2026-01-30T21:17:19Z"
+    }
+  ],
+  "cf_rank": null,
+  "alias": null,
+  "cf_tracking_firefox149": "---",
+  "whiteboard": "[sng]",
+  "cf_fx_points": "---",
+  "priority": "P1",
+  "cf_status_firefox148": "---",
+  "see_also": [
+    "https://mozilla-hub.atlassian.net/browse/SNG-3243"
+  ],
+  "cf_performance_impact": "---",
+  "cf_tracking_firefox_esr140": "---",
+  "creator": "adw@mozilla.com",
+  "cf_status_firefox149": "fixed",
+  "cf_status_firefox_esr140": "---",
+  "status": "RESOLVED",
+  "flags": [],
+  "resolution": "FIXED",
+  "op_sys": "Unspecified",
+  "triage_owner_detail": {
+    "id": 701257,
+    "email": "jteow@mozilla.com",
+    "nick": "jteow",
+    "name": "jteow@mozilla.com",
+    "real_name": "James Teow [:jteow]"
+  },
+  "cf_tracking_firefox147": "---",
+  "product": "Firefox",
+  "groups": [],
+  "triage_owner": "jteow@mozilla.com",
+  "qa_contact": "",
+  "cf_has_str": "---",
+  "cf_status_firefox_esr115": "---",
+  "comment_count": 5,
+  "cf_user_story": "",
+  "classification": "Client Software",
+  "creator_detail": {
+    "id": 334927,
+    "email": "adw@mozilla.com",
+    "real_name": "Drew Willcoxon :adw",
+    "nick": "adw",
+    "name": "adw@mozilla.com"
+  },
+  "last_change_time_non_bot": "2026-01-30T21:17:19Z",
+  "cf_qa_whiteboard": "",
+  "cf_tracking_firefox148": "---",
+  "cf_crash_signature": "",
+  "summary": "Update the Wikipedia suggestions row UI",
+  "assigned_to_detail": {
+    "nick": "adw",
+    "name": "adw@mozilla.com",
+    "real_name": "Drew Willcoxon :adw",
+    "id": 334927,
+    "email": "adw@mozilla.com"
+  },
+  "cf_tracking_firefox_esr115": "---",
+  "last_change_time": "2026-01-30T21:17:19Z",
+  "regressions": [],
+  "dupe_of": null,
+  "component": "Address Bar",
+  "votes": 0,
+  "depends_on": [],
+  "is_open": false,
+  "is_creator_accessible": true,
+  "comments": [
+    {
+      "attachment_id": null,
+      "author": "adw@mozilla.com",
+      "reactions": {},
+      "text": "Update the Wikipedia suggestions row UI. See [the Figma spec](https://www.figma.com/design/HlHYKdDVCszbbpjuovBDjg/Carrots---S-S-Online-Explorations?node-id=6584-5018&t=Xg06pmlLPj9lmpCj-0):\n\n* The title should be \"[article title] \u00b7 Wikipedia\", but offhand I'm not sure that's possible since the titles are defined in the RS and Merino data. We may have to ignore that part, at least for now, and do it as a follow-up.\n* Show \"Recommended\" as the bottom text\n* The icon size should *not* change now since that will be done later as part of Nova\n* Show URL at the bottom on hover/selection? Check with Paul et al. first since Wikipedia suggestions currently do not show URL",
+      "is_private": false,
+      "tags": [],
+      "time": "2026-01-14T01:16:29Z",
+      "creation_time": "2026-01-14T01:16:29Z",
+      "count": 0,
+      "id": 17841538,
+      "raw_text": "Update the Wikipedia suggestions row UI. See [the Figma spec](https://www.figma.com/design/HlHYKdDVCszbbpjuovBDjg/Carrots---S-S-Online-Explorations?node-id=6584-5018&t=Xg06pmlLPj9lmpCj-0):\n\n* The title should be \"[article title] \u00b7 Wikipedia\", but offhand I'm not sure that's possible since the titles are defined in the RS and Merino data. We may have to ignore that part, at least for now, and do it as a follow-up.\n* Show \"Recommended\" as the bottom text\n* The icon size should *not* change now since that will be done later as part of Nova\n* Show URL at the bottom on hover/selection? Check with Paul et al. first since Wikipedia suggestions currently do not show URL",
+      "creator": "adw@mozilla.com",
+      "bug_id": 2010183
+    },
+    {
+      "bug_id": 2010183,
+      "creator": "adw@mozilla.com",
+      "count": 1,
+      "id": 17841545,
+      "raw_text": "The Figma shows a higher-placement Wikipedia (top pick) but that's just to illustrate what an \"informational\" top pick would look like. Wikipedia should continue to be lower-placement.",
+      "creation_time": "2026-01-14T01:23:22Z",
+      "time": "2026-01-14T01:23:22Z",
+      "tags": [],
+      "is_private": false,
+      "text": "The Figma shows a higher-placement Wikipedia (top pick) but that's just to illustrate what an \"informational\" top pick would look like. Wikipedia should continue to be lower-placement.",
+      "reactions": {},
+      "author": "adw@mozilla.com",
+      "attachment_id": null
+    },
+    {
+      "bug_id": 2010183,
+      "creator": "adw@mozilla.com",
+      "raw_text": "Depends on D280386",
+      "id": 17865794,
+      "count": 2,
+      "creation_time": "2026-01-29T20:16:58Z",
+      "time": "2026-01-29T20:16:58Z",
+      "tags": [],
+      "is_private": false,
+      "text": "Created attachment 9541047\nBug 2010183 - Update the Firefox Suggest Wikipedia suggestions row UI.\n\nDepends on D280386",
+      "reactions": {},
+      "author": "adw@mozilla.com",
+      "attachment_id": 9541047
+    },
+    {
+      "tags": [],
+      "time": "2026-01-30T16:42:40Z",
+      "count": 3,
+      "id": 17867394,
+      "raw_text": "Pushed by dwillcoxon@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/e19e19a55758\nhttps://hg.mozilla.org/integration/autoland/rev/a526464d426c\nUpdate the Firefox Suggest Wikipedia suggestions row UI. r=daisuke",
+      "creation_time": "2026-01-30T16:42:40Z",
+      "bug_id": 2010183,
+      "creator": "pulsebot@bmo.tld",
+      "attachment_id": null,
+      "author": "pulsebot@bmo.tld",
+      "reactions": {},
+      "is_private": false,
+      "text": "Pushed by dwillcoxon@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/e19e19a55758\nhttps://hg.mozilla.org/integration/autoland/rev/a526464d426c\nUpdate the Firefox Suggest Wikipedia suggestions row UI. r=daisuke"
+    },
+    {
+      "author": "agoloman@mozilla.com",
+      "attachment_id": null,
+      "is_private": false,
+      "text": "https://hg.mozilla.org/mozilla-central/rev/a526464d426c",
+      "reactions": {},
+      "time": "2026-01-30T21:17:19Z",
+      "tags": [
+        "bugherder"
+      ],
+      "bug_id": 2010183,
+      "creator": "agoloman@mozilla.com",
+      "count": 4,
+      "id": 17867867,
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/a526464d426c",
+      "creation_time": "2026-01-30T21:17:19Z"
+    }
+  ],
+  "cc": [],
+  "cf_cab_review": "---",
+  "cf_tracking_firefox_relnote": "---",
+  "attachments": [
+    {
+      "flags": [],
+      "size": 48,
+      "content_type": "text/x-phabricator-request",
+      "attacher": "adw@mozilla.com",
+      "is_obsolete": 0,
+      "last_change_time": "2026-01-29T20:16:58Z",
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjgxMDY1",
+      "is_patch": 0,
+      "creator_detail": {
+        "real_name": "Drew Willcoxon :adw",
+        "nick": "adw",
+        "name": "adw@mozilla.com",
+        "id": 334927,
+        "email": "adw@mozilla.com"
+      },
+      "creation_time": "2026-01-29T20:16:58Z",
+      "description": "Bug 2010183 - Update the Firefox Suggest Wikipedia suggestions row UI.",
+      "id": 9541047,
+      "creator": "adw@mozilla.com",
+      "bug_id": 2010183,
+      "summary": "Bug 2010183 - Update the Firefox Suggest Wikipedia suggestions row UI.",
+      "file_name": "phabricator-D281065-url.txt",
+      "is_private": 0
+    }
+  ],
+  "counts": {
+    "depends_on": 1,
+    "keywords": 0,
+    "attachments": 1,
+    "regressed_by": 0,
+    "regressions": 0,
+    "duplicates": 0,
+    "blocks": 0,
+    "cc": 0,
+    "comments": 5
+  },
+  "cf_last_resolved": "2026-01-30T21:17:19Z",
+  "is_cc_accessible": true,
+  "filed_via": "standard_form",
+  "mentors_detail": [],
+  "cf_webcompat_score": "---",
+  "keywords": [],
+  "cf_status_firefox147": "---",
+  "type": "task",
+  "cf_accessibility_severity": "---",
+  "severity": "N/A",
+  "blocks": [
+    2010175
+  ],
+  "assigned_to": "adw@mozilla.com",
+  "url": ""
+}

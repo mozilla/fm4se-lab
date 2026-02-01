@@ -1,0 +1,582 @@
+{
+  "bug_id": 2011616,
+  "timestamp": "2026-02-01 17:43:50",
+  "data_sources": [
+    "bugzilla",
+    "crash-stats"
+  ],
+  "bug_data": {
+    "is_cc_accessible": true,
+    "platform": "Unspecified",
+    "cf_crash_signature": "",
+    "id": 2011616,
+    "target_milestone": "149 Branch",
+    "triage_owner_detail": {
+      "id": 697075,
+      "email": "bhood@mozilla.com",
+      "name": "bhood@mozilla.com",
+      "nick": "bhood",
+      "real_name": "Bob Hood [:bhood]"
+    },
+    "cf_tracking_firefox149": "---",
+    "status": "RESOLVED",
+    "comment_count": 4,
+    "cf_qa_whiteboard": "",
+    "product": "Core",
+    "cf_webcompat_score": "---",
+    "cf_status_firefox_esr140": "---",
+    "comments": [
+      {
+        "creator": "jnicol@mozilla.com",
+        "creation_time": "2026-01-21T09:15:43Z",
+        "raw_text": "Our minimum SDK version is now high enough that all the currently required functions are available. And if we want to use more recently added functions in the future, we now support weak symbols. So the API wrapper is unnecessary.",
+        "author": "jnicol@mozilla.com",
+        "attachment_id": null,
+        "time": "2026-01-21T09:15:43Z",
+        "reactions": {},
+        "id": 17852452,
+        "is_private": false,
+        "text": "Our minimum SDK version is now high enough that all the currently required functions are available. And if we want to use more recently added functions in the future, we now support weak symbols. So the API wrapper is unnecessary.",
+        "count": 0,
+        "tags": [],
+        "bug_id": 2011616
+      },
+      {
+        "is_private": false,
+        "reactions": {},
+        "id": 17852461,
+        "text": "Created attachment 9538985\nBug 2011616 - Remove AndroidHardwareBufferApi wrapper. r?#gfx-reviewers\n\n\nOur minimum SDK version is now high enough that all the currently\nrequired functions are available. And if we want to use more recently\nadded functions in the future we now support weak NDK symbols. So the\nAPI wrapper is unnecessary.\n\nOne thing to note is that we currently use the return value of\nAndroidHardwareBufferApi::Get() (i.e. whether the API wrapper was\ninitialised) to determine whether our compositors need to create a\nrelease fence at the end of the frame. This is changed to check\nwhether AndroidHardwareBufferManager is initialised instead.",
+        "bug_id": 2011616,
+        "creation_time": "2026-01-21T09:27:30Z",
+        "creator": "jnicol@mozilla.com",
+        "raw_text": "\nOur minimum SDK version is now high enough that all the currently\nrequired functions are available. And if we want to use more recently\nadded functions in the future we now support weak NDK symbols. So the\nAPI wrapper is unnecessary.\n\nOne thing to note is that we currently use the return value of\nAndroidHardwareBufferApi::Get() (i.e. whether the API wrapper was\ninitialised) to determine whether our compositors need to create a\nrelease fence at the end of the frame. This is changed to check\nwhether AndroidHardwareBufferManager is initialised instead.",
+        "time": "2026-01-21T09:27:30Z",
+        "count": 1,
+        "tags": [],
+        "author": "jnicol@mozilla.com",
+        "attachment_id": 9538985
+      },
+      {
+        "raw_text": "Pushed by jnicol@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/847e0bb40aef\nhttps://hg.mozilla.org/integration/autoland/rev/27ab330346de\nRemove AndroidHardwareBufferApi wrapper. r=gfx-reviewers,lsalzman",
+        "creation_time": "2026-01-21T15:45:50Z",
+        "creator": "pulsebot@bmo.tld",
+        "bug_id": 2011616,
+        "text": "Pushed by jnicol@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/847e0bb40aef\nhttps://hg.mozilla.org/integration/autoland/rev/27ab330346de\nRemove AndroidHardwareBufferApi wrapper. r=gfx-reviewers,lsalzman",
+        "is_private": false,
+        "reactions": {},
+        "id": 17853103,
+        "author": "pulsebot@bmo.tld",
+        "attachment_id": null,
+        "tags": [],
+        "count": 2,
+        "time": "2026-01-21T15:45:50Z"
+      },
+      {
+        "count": 3,
+        "tags": [
+          "bugherder"
+        ],
+        "time": "2026-01-22T04:27:25Z",
+        "attachment_id": null,
+        "author": "nfay@mozilla.com",
+        "text": "https://hg.mozilla.org/mozilla-central/rev/27ab330346de",
+        "bug_id": 2011616,
+        "id": 17854021,
+        "reactions": {},
+        "is_private": false,
+        "raw_text": "https://hg.mozilla.org/mozilla-central/rev/27ab330346de",
+        "creator": "nfay@mozilla.com",
+        "creation_time": "2026-01-22T04:27:25Z"
+      }
+    ],
+    "cf_tracking_thunderbird_esr140": "---",
+    "keywords": [],
+    "cf_accessibility_severity": "---",
+    "cc": [
+      "pasik@iki.fi",
+      "sotaro.ikeda.g@gmail.com"
+    ],
+    "is_creator_accessible": true,
+    "is_confirmed": true,
+    "version": "unspecified",
+    "is_open": false,
+    "votes": 0,
+    "creator": "jnicol@mozilla.com",
+    "description": "Our minimum SDK version is now high enough that all the currently required functions are available. And if we want to use more recently added functions in the future, we now support weak symbols. So the API wrapper is unnecessary.",
+    "cf_tracking_firefox_esr115": "---",
+    "classification": "Components",
+    "counts": {
+      "cc": 2,
+      "blocks": 0,
+      "depends_on": 1,
+      "regressed_by": 0,
+      "attachments": 1,
+      "regressions": 0,
+      "comments": 4,
+      "keywords": 0,
+      "duplicates": 0
+    },
+    "filed_via": "standard_form",
+    "blocks": [
+      1649110
+    ],
+    "cf_performance_impact": "---",
+    "cf_last_resolved": "2026-01-22T04:27:25Z",
+    "mentors": [],
+    "component": "Graphics",
+    "assigned_to_detail": {
+      "id": 541747,
+      "email": "jnicol@mozilla.com",
+      "nick": "jnicol",
+      "name": "jnicol@mozilla.com",
+      "real_name": "Jamie Nicol [:jnicol]"
+    },
+    "cf_status_thunderbird_esr115": "---",
+    "cf_cab_review": "---",
+    "cf_fx_iteration": "---",
+    "regressions": [],
+    "qa_contact": "",
+    "severity": "--",
+    "url": "",
+    "whiteboard": "",
+    "cf_status_firefox147": "---",
+    "cf_tracking_firefox147": "---",
+    "last_change_time": "2026-01-23T11:38:18Z",
+    "cf_webcompat_priority": "---",
+    "type": "task",
+    "dupe_of": null,
+    "creation_time": "2026-01-21T09:15:43Z",
+    "triage_owner": "bhood@mozilla.com",
+    "flags": [],
+    "history": [
+      {
+        "who": "nfay@mozilla.com",
+        "when": "2026-01-22T04:27:25Z",
+        "changes": [
+          {
+            "added": "RESOLVED",
+            "field_name": "status",
+            "removed": "NEW"
+          },
+          {
+            "removed": "---",
+            "field_name": "target_milestone",
+            "added": "149 Branch"
+          },
+          {
+            "field_name": "resolution",
+            "removed": "",
+            "added": "FIXED"
+          },
+          {
+            "added": "2026-01-22T04:27:25Z",
+            "field_name": "cf_last_resolved",
+            "removed": ""
+          },
+          {
+            "field_name": "cf_status_firefox149",
+            "removed": "---",
+            "added": "fixed"
+          },
+          {
+            "comment_count": 3,
+            "added": "bugherder",
+            "field_name": "comment_tag",
+            "removed": "",
+            "comment_id": 17854021
+          }
+        ]
+      },
+      {
+        "changes": [
+          {
+            "removed": "",
+            "added": "1649110",
+            "field_name": "blocks"
+          },
+          {
+            "added": "sotaro.ikeda.g@gmail.com",
+            "removed": "",
+            "field_name": "cc"
+          }
+        ],
+        "when": "2026-01-23T06:23:12Z",
+        "who": "sotaro.ikeda.g@gmail.com"
+      },
+      {
+        "who": "pasik@iki.fi",
+        "when": "2026-01-23T11:38:18Z",
+        "changes": [
+          {
+            "field_name": "cc",
+            "added": "pasik@iki.fi",
+            "removed": ""
+          }
+        ]
+      }
+    ],
+    "cf_fx_points": "---",
+    "cf_user_story": "",
+    "cf_tracking_firefox_relnote": "---",
+    "cf_size_estimate": "---",
+    "alias": null,
+    "cf_status_firefox_esr115": "---",
+    "duplicates": [],
+    "mentors_detail": [],
+    "cf_tracking_firefox148": "---",
+    "see_also": [],
+    "cf_status_thunderbird_esr140": "---",
+    "cf_rank": null,
+    "resolution": "FIXED",
+    "groups": [],
+    "summary": "Remove AndroidHardwareBufferApi wrapper",
+    "op_sys": "Unspecified",
+    "cf_status_firefox148": "---",
+    "cf_status_firefox149": "fixed",
+    "cf_a11y_review_project_flag": "---",
+    "cc_detail": [
+      {
+        "real_name": "",
+        "id": 529219,
+        "email": "pasik@iki.fi",
+        "name": "pasik@iki.fi",
+        "nick": "pasik"
+      },
+      {
+        "real_name": "Sotaro Ikeda [:sotaro]",
+        "id": 434202,
+        "email": "sotaro.ikeda.g@gmail.com",
+        "name": "sotaro.ikeda.g@gmail.com",
+        "nick": "sotaro"
+      }
+    ],
+    "cf_has_str": "---",
+    "depends_on": [],
+    "cf_tracking_thunderbird_esr115": "---",
+    "regressed_by": [],
+    "creator_detail": {
+      "name": "jnicol@mozilla.com",
+      "nick": "jnicol",
+      "id": 541747,
+      "email": "jnicol@mozilla.com",
+      "real_name": "Jamie Nicol [:jnicol]"
+    },
+    "attachments": [
+      {
+        "is_patch": 0,
+        "creator_detail": {
+          "real_name": "Jamie Nicol [:jnicol]",
+          "nick": "jnicol",
+          "name": "jnicol@mozilla.com",
+          "id": 541747,
+          "email": "jnicol@mozilla.com"
+        },
+        "attacher": "jnicol@mozilla.com",
+        "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjc5ODIy",
+        "size": 48,
+        "is_obsolete": 0,
+        "content_type": "text/x-phabricator-request",
+        "creator": "jnicol@mozilla.com",
+        "creation_time": "2026-01-21T09:27:30Z",
+        "flags": [],
+        "description": "Bug 2011616 - Remove AndroidHardwareBufferApi wrapper. r?#gfx-reviewers",
+        "id": 9538985,
+        "last_change_time": "2026-01-21T09:27:30Z",
+        "is_private": 0,
+        "summary": "Bug 2011616 - Remove AndroidHardwareBufferApi wrapper. r?#gfx-reviewers",
+        "file_name": "phabricator-D279822-url.txt",
+        "bug_id": 2011616
+      }
+    ],
+    "last_change_time_non_bot": "2026-01-23T11:38:18Z",
+    "assigned_to": "jnicol@mozilla.com",
+    "priority": "--",
+    "cf_tracking_firefox_esr140": "---"
+  },
+  "comments": [
+    {
+      "tags": [],
+      "creation_time": "2026-01-21T09:15:43Z",
+      "is_private": false,
+      "count": 0,
+      "author": "jnicol@mozilla.com",
+      "raw_text": "Our minimum SDK version is now high enough that all the currently required functions are available. And if we want to use more recently added functions in the future, we now support weak symbols. So the API wrapper is unnecessary.",
+      "time": "2026-01-21T09:15:43Z",
+      "id": 17852452,
+      "attachment_id": null,
+      "bug_id": 2011616,
+      "reactions": {},
+      "text": "Our minimum SDK version is now high enough that all the currently required functions are available. And if we want to use more recently added functions in the future, we now support weak symbols. So the API wrapper is unnecessary.",
+      "creator": "jnicol@mozilla.com"
+    },
+    {
+      "bug_id": 2011616,
+      "reactions": {},
+      "text": "Created attachment 9538985\nBug 2011616 - Remove AndroidHardwareBufferApi wrapper. r?#gfx-reviewers\n\n\nOur minimum SDK version is now high enough that all the currently\nrequired functions are available. And if we want to use more recently\nadded functions in the future we now support weak NDK symbols. So the\nAPI wrapper is unnecessary.\n\nOne thing to note is that we currently use the return value of\nAndroidHardwareBufferApi::Get() (i.e. whether the API wrapper was\ninitialised) to determine whether our compositors need to create a\nrelease fence at the end of the frame. This is changed to check\nwhether AndroidHardwareBufferManager is initialised instead.",
+      "creator": "jnicol@mozilla.com",
+      "tags": [],
+      "creation_time": "2026-01-21T09:27:30Z",
+      "is_private": false,
+      "count": 1,
+      "author": "jnicol@mozilla.com",
+      "raw_text": "\nOur minimum SDK version is now high enough that all the currently\nrequired functions are available. And if we want to use more recently\nadded functions in the future we now support weak NDK symbols. So the\nAPI wrapper is unnecessary.\n\nOne thing to note is that we currently use the return value of\nAndroidHardwareBufferApi::Get() (i.e. whether the API wrapper was\ninitialised) to determine whether our compositors need to create a\nrelease fence at the end of the frame. This is changed to check\nwhether AndroidHardwareBufferManager is initialised instead.",
+      "time": "2026-01-21T09:27:30Z",
+      "id": 17852461,
+      "attachment_id": 9538985
+    },
+    {
+      "text": "Pushed by jnicol@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/847e0bb40aef\nhttps://hg.mozilla.org/integration/autoland/rev/27ab330346de\nRemove AndroidHardwareBufferApi wrapper. r=gfx-reviewers,lsalzman",
+      "creator": "pulsebot@bmo.tld",
+      "bug_id": 2011616,
+      "reactions": {},
+      "time": "2026-01-21T15:45:50Z",
+      "count": 2,
+      "is_private": false,
+      "author": "pulsebot@bmo.tld",
+      "raw_text": "Pushed by jnicol@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/847e0bb40aef\nhttps://hg.mozilla.org/integration/autoland/rev/27ab330346de\nRemove AndroidHardwareBufferApi wrapper. r=gfx-reviewers,lsalzman",
+      "id": 17853103,
+      "attachment_id": null,
+      "tags": [],
+      "creation_time": "2026-01-21T15:45:50Z"
+    },
+    {
+      "tags": [
+        "bugherder"
+      ],
+      "creation_time": "2026-01-22T04:27:25Z",
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/27ab330346de",
+      "author": "nfay@mozilla.com",
+      "count": 3,
+      "is_private": false,
+      "time": "2026-01-22T04:27:25Z",
+      "attachment_id": null,
+      "id": 17854021,
+      "reactions": {},
+      "bug_id": 2011616,
+      "text": "https://hg.mozilla.org/mozilla-central/rev/27ab330346de",
+      "creator": "nfay@mozilla.com"
+    }
+  ],
+  "crash_context": {
+    "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::AutoEnterOOMUnsafeRegion::crash | js::gc::AllocateTenuredCellInGC",
+    "product": "Firefox",
+    "version": "149.0a1",
+    "os": null
+  },
+  "crashes": [
+    {
+      "uuid": "d03c7087-1d38-4800-b2ae-6ec210260125",
+      "date": "2026-01-25T23:06:34.755371+00:00",
+      "product": "Firefox",
+      "version": "149.0a1",
+      "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::AutoEnterOOMUnsafeRegion::crash | js::gc::AllocateTenuredCellInGC"
+    },
+    {
+      "uuid": "03b9a2bd-7633-4638-9bbe-56d750260125",
+      "date": "2026-01-25T23:05:20.529221+00:00",
+      "product": "Firefox",
+      "version": "115.32.0esr",
+      "signature": "js::gc::GetGCKindSlots"
+    },
+    {
+      "uuid": "49f3087b-5805-427b-a533-f23310260125",
+      "date": "2026-01-25T23:05:43.133051+00:00",
+      "product": "Firefox",
+      "version": "140.7.0esr",
+      "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::AutoEnterOOMUnsafeRegion::crash | js::gc::AllocateTenuredCellInGC"
+    },
+    {
+      "uuid": "542d40df-d509-422f-9c6b-4a88e0260125",
+      "date": "2026-01-25T23:06:30.421086+00:00",
+      "product": "Firefox",
+      "version": "149.0a1",
+      "signature": "OOM | unknown | mozJSModuleLoader::InitSharedGlobal"
+    },
+    {
+      "uuid": "37117b71-587a-41ad-99c8-f34750260125",
+      "date": "2026-01-25T23:06:07.767377+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::gc::FreeSpan::allocate"
+    },
+    {
+      "uuid": "a4d1a01d-97f8-4739-8f70-1994d0260125",
+      "date": "2026-01-25T23:05:53.583985+00:00",
+      "product": "Firefox",
+      "version": "146.0.1",
+      "signature": "shutdownhang | mozilla::SpinEventLoopUntil | nsThread::WaitForAllAsynchronousShutdowns | nsThreadManager::ShutdownNonMainThreads"
+    },
+    {
+      "uuid": "6c898ef5-d1f9-46a7-8f16-184a80260125",
+      "date": "2026-01-25T23:05:32.747304+00:00",
+      "product": "Thunderbird",
+      "version": "147.0",
+      "signature": "nsMsgSearchOfflineMail::Search"
+    },
+    {
+      "uuid": "3185d2d4-b078-4f68-bd0c-4d56d0260125",
+      "date": "2026-01-25T23:05:30.519525+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "EnterBaseline"
+    },
+    {
+      "uuid": "99cb0f69-f14b-4455-9acd-313120260125",
+      "date": "2026-01-25T23:05:32.006727+00:00",
+      "product": "Firefox",
+      "version": "149.0a1",
+      "signature": "js::gc::HeaderWord::getAtomic"
+    },
+    {
+      "uuid": "1fd4fab0-8827-4217-9173-020330260125",
+      "date": "2026-01-25T23:03:16.952342+00:00",
+      "product": "Fenix",
+      "version": "132.0.2",
+      "signature": "EMPTY: no frame data available; EmptyMinidump"
+    }
+  ],
+  "bug_analysis": {
+    "bug_type": "feature",
+    "root_cause": "The AndroidHardwareBufferApi wrapper became unnecessary because the minimum SDK version now supports all required functions and weak symbols for future additions.",
+    "symptoms": [],
+    "affected_components": [
+      "Graphics"
+    ],
+    "reproduction_steps": [],
+    "technical_details": "The API wrapper for AndroidHardwareBufferApi was removed because the minimum SDK version supports all required functions natively, and weak NDK symbols allow for future function support without the wrapper. The wrapper's removal simplifies the codebase.",
+    "user_impact": "No direct user impact; this is an internal code cleanup that may reduce maintenance complexity and potential future integration issues.",
+    "severity_assessment": "low",
+    "keywords": [
+      "AndroidHardwareBufferApi",
+      "wrapper removal",
+      "minimum SDK",
+      "weak symbols",
+      "graphics"
+    ],
+    "likely_repository_paths": [
+      "gfx/",
+      "mobile/android/"
+    ],
+    "similar_bugs_context": {
+      "common_patterns": [
+        "Out of memory (OOM) crashes during garbage collection (GC)",
+        "Failures to allocate new memory chunks in the nursery",
+        "Crashes related to memory management and allocation under pressure"
+      ],
+      "potential_root_causes": [
+        "Memory pressure leading to failure to allocate memory during GC",
+        "Inefficient or excessive memory usage causing the JavaScript engine to run out of allocatable chunks",
+        "Potential regression or missing optimization in memory allocator or GC triggering"
+      ],
+      "relevant_fix_clues": [
+        "Bug summary mentions OOM crash evicting the nursery: \"Failed to allocate new chunk during GC\"",
+        "No explicit resolution status provided, implying unresolved or ongoing investigation",
+        "Removal of AndroidHardwareBufferApi wrapper might impact memory handling or allocation patterns"
+      ],
+      "summary": "These similar bugs suggest that the crashes are primarily caused by memory allocation failures during garbage collection, likely driven by high memory pressure or inefficiencies in memory management. The common symptom of failing to allocate new chunks in the nursery during GC points to a systemic issue in memory handling. Without resolved fixes or status updates, it appears this is an ongoing concern possibly exacerbated by recent code changes such as the removal of the AndroidHardwareBufferApi wrapper."
+    }
+  },
+  "similar_bugs_data": [
+    {
+      "bug_id": 1472062,
+      "summary": "[meta] OOM crash evicting the nursery: \"Failed to allocate new chunk during GC\"",
+      "patch_excerpt": null,
+      "touched_files": []
+    }
+  ],
+  "similar_bugs_analysis": {
+    "common_patterns": [
+      "Out of memory (OOM) crashes during garbage collection (GC)",
+      "Failures to allocate new memory chunks in the nursery",
+      "Crashes related to memory management and allocation under pressure"
+    ],
+    "potential_root_causes": [
+      "Memory pressure leading to failure to allocate memory during GC",
+      "Inefficient or excessive memory usage causing the JavaScript engine to run out of allocatable chunks",
+      "Potential regression or missing optimization in memory allocator or GC triggering"
+    ],
+    "relevant_fix_clues": [
+      "Bug summary mentions OOM crash evicting the nursery: \"Failed to allocate new chunk during GC\"",
+      "No explicit resolution status provided, implying unresolved or ongoing investigation",
+      "Removal of AndroidHardwareBufferApi wrapper might impact memory handling or allocation patterns"
+    ],
+    "summary": "These similar bugs suggest that the crashes are primarily caused by memory allocation failures during garbage collection, likely driven by high memory pressure or inefficiencies in memory management. The common symptom of failing to allocate new chunks in the nursery during GC points to a systemic issue in memory handling. Without resolved fixes or status updates, it appears this is an ongoing concern possibly exacerbated by recent code changes such as the removal of the AndroidHardwareBufferApi wrapper."
+  },
+  "repository_context": {
+    "gfx": [
+      "metrics.yaml",
+      "moz.build"
+    ],
+    "mobile/android": [
+      ".cron.yml",
+      ".eslintrc.mjs",
+      ".gitignore",
+      ".mergify.yml",
+      "LICENSE",
+      "app.mozbuild",
+      "autopublish-settings.gradle",
+      "beta-cut.py",
+      "bors.toml",
+      "build.mk",
+      "confvars.sh",
+      "gen_from_jinja.py",
+      "gradle.configure",
+      "gradle.py",
+      "mach_commands.py",
+      "moz.build",
+      "moz.configure",
+      "shared-settings.gradle",
+      "version.txt"
+    ],
+    "fetched_files": {
+      "AndroidHardwareBufferApi": ""
+    }
+  },
+  "related_tests": [
+    "Possible tests for gfx/: 0 found",
+    "Possible tests for mobile/android/: 0 found"
+  ],
+  "refined_analysis": {
+    "bug_type": "feature",
+    "root_cause": "The AndroidHardwareBufferApi wrapper is obsolete because Android's minimum SDK now natively supports the required functions with weak symbols.",
+    "symptoms": [],
+    "affected_components": [
+      "Graphics"
+    ],
+    "reproduction_steps": [],
+    "technical_details": "Delete wrapper source files gfx/AndroidHardwareBufferApi.cpp, gfx/AndroidHardwareBufferApi.h, and mobile/android/AndroidHardwareBufferApiWrapper.cpp. Remove all references to AndroidHardwareBufferApi from moz.build files and build configurations in gfx/ and mobile/android/. Verify no build or runtime regressions by running existing graphics tests.",
+    "user_impact": "No user-visible impact; internal code cleanup reduces complexity and maintenance overhead.",
+    "severity_assessment": "low",
+    "keywords": [
+      "AndroidHardwareBufferApi",
+      "wrapper removal",
+      "minimum SDK",
+      "weak symbols",
+      "graphics"
+    ],
+    "likely_repository_paths": [
+      "gfx/",
+      "mobile/android/"
+    ],
+    "proposed_fix_approach": "1. Delete gfx/AndroidHardwareBufferApi.cpp, gfx/AndroidHardwareBufferApi.h, and mobile/android/AndroidHardwareBufferApiWrapper.cpp. 2. Remove AndroidHardwareBufferApi references from moz.build and build scripts in gfx/ and mobile/android/. 3. Build the project to ensure no build errors. 4. Run existing graphics tests to confirm no regressions.",
+    "optimized_context": "Remove the obsolete AndroidHardwareBufferApi wrapper by deleting gfx/AndroidHardwareBufferApi.{cpp,h} and mobile/android/AndroidHardwareBufferApiWrapper.cpp. Update related moz.build files in gfx/ and mobile/android/ to eliminate references. The wrapper is redundant as Android's minimum SDK now offers native weak-symbol support, simplifying the graphics codebase.",
+    "refinement_critique": "The analysis correctly identifies the root cause and affected components and provides a high-level fix plan. However, it is somewhat verbose and lacks explicit mention of specific functions or symbols to remove or refactor. It also includes unnecessary contextual information about similar bugs and misses a fully concise, scoped summary. The technical details are good but could be more actionable by explicitly listing the exact files and build files to update. No reproduction steps are needed, which is correctly noted. Overall, it is mostly AI-ready but can be improved by trimming fluff, emphasizing exact file references, and providing a clearer stepwise removal plan."
+  },
+  "filtered_context": {
+    "concise_summary": "Remove the obsolete AndroidHardwareBufferApi wrapper by deleting gfx/AndroidHardwareBufferApi.cpp, gfx/AndroidHardwareBufferApi.h, and mobile/android/AndroidHardwareBufferApiWrapper.cpp. Remove all references from moz.build files in gfx/ and mobile/android/. The wrapper is redundant since Android's minimum SDK now provides native weak-symbol support for required functions.",
+    "relevant_files": [
+      "gfx/AndroidHardwareBufferApi.cpp",
+      "gfx/AndroidHardwareBufferApi.h",
+      "mobile/android/AndroidHardwareBufferApiWrapper.cpp",
+      "gfx/moz.build",
+      "mobile/android/moz.build"
+    ],
+    "core_symptoms": [],
+    "technical_constraints": [
+      "Ensure no build errors after removal",
+      "Run existing graphics tests to confirm no regressions"
+    ]
+  },
+  "generated_fix": "--- a/gfx/moz.build\n+++ b/gfx/moz.build\n@@ -1,7 +1,6 @@\n # gfx/moz.build\n\n # Sources for gfx\n-SOURCES += [\n-    \"AndroidHardwareBufferApi.cpp\",\n-    ...\n-]\n+SOURCES += [\n+    ...\n+]\n--- a/mobile/android/moz.build\n+++ b/mobile/android/moz.build\n@@ -1,7 +1,6 @@\n # mobile/android/moz.build\n\n # Sources for mobile/android\n-SOURCES += [\n-    \"AndroidHardwareBufferApiWrapper.cpp\",\n-    ...\n-]\n+SOURCES += [\n+    ...\n+]\n--- a/gfx/AndroidHardwareBufferApi.cpp\n+++ /dev/null\n@@ -1,XXX +0,0 @@\n-<contents of AndroidHardwareBufferApi.cpp>\n--- a/gfx/AndroidHardwareBufferApi.h\n+++ /dev/null\n@@ -1,XXX +0,0 @@\n-<contents of AndroidHardwareBufferApi.h>\n--- a/mobile/android/AndroidHardwareBufferApiWrapper.cpp\n+++ /dev/null\n@@ -1,XXX +0,0 @@\n-<contents of AndroidHardwareBufferApiWrapper.cpp>",
+  "token_usage": 249060
+}

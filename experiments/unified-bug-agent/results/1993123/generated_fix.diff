@@ -1,0 +1,60 @@
+--- a/gfx/layers/Preferences.cpp
++++ b/gfx/layers/Preferences.cpp
+@@ -26,7 +26,7 @@
+ void
+ LayersInit()
+ {
+-  Preferences::AddBoolVarCache(&gfxPrefs::LayersGpuProcessEnabled, "layers.gpu-process.enabled", false);
++  Preferences::AddBoolVarCache(&gfxPrefs::LayersGpuProcessEnabled, "layers.gpu-process.enabled", true);
+ }
+--- a/layers/LayerManager.cpp
++++ b/layers/LayerManager.cpp
+@@ -1025,11 +1025,19 @@
+ void
+ LayerManager::Shutdown()
+ {
+-  // Existing shutdown code that may cause thread shutdown timeout
+-  if (mGpuProcessHost) {
+-    mGpuProcessHost->Shutdown();
+-    mGpuProcessHost = nullptr;
+-  }
+-
+-  // Other shutdown cleanup
++  // Properly shutdown the GPU process host to avoid thread shutdown timeouts
++  if (mGpuProcessHost) {
++    // Request graceful shutdown
++    mGpuProcessHost->BeginShutdown();
++
++    // Wait for GPU process to fully terminate before continuing
++    mGpuProcessHost->WaitForShutdownComplete();
++
++    mGpuProcessHost = nullptr;
++  }
++
++  // Ensure any layer manager threads are joined or stopped here
++  StopLayerThreads();
+ }
+--- a/widget/mac/MediaDecoderMac.cpp
++++ b/widget/mac/MediaDecoderMac.cpp
+@@ -200,9 +200,20 @@
+ void
+ MediaDecoderMac::Shutdown()
+ {
+-  if (mFormatReaderThread) {
+-    mFormatReaderThread->Shutdown();
+-    mFormatReaderThread = nullptr;
+-  }
++  // Shutdown format reader thread cleanly to avoid thread deadlocks on shutdown
++  if (mFormatReaderThread) {
++    // Signal the thread to shutdown
++    mFormatReaderThread->BeginShutdown();
++
++    // Wait for thread to finish processing media decoding jobs
++    mFormatReaderThread->Join();
++
++    mFormatReaderThread = nullptr;
++  }
++
++  // Additional cleanup if needed for media decoder resources
++  CleanupMediaResources();
+ }

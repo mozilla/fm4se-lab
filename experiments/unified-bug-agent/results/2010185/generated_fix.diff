@@ -1,0 +1,138 @@
+--- a/browser/components/urlbar/UrlbarResult.sys.mjs
++++ b/browser/components/urlbar/UrlbarResult.sys.mjs
+@@ -200,14 +200,34 @@
+-    // Example existing code that sets the title
+-    this.title = result.title;
++    // Append '[query] · Yelp' to Yelp suggestion titles
++    if (this.result.providerName === "Yelp") {
++      // Assuming result.query is available or can be extracted from result
++      const query = this.result.query || "";
++      this.title = `${this.result.title} [${query}] \u00b7 Yelp`;
++    } else {
++      this.title = this.result.title;
++    }
+ 
+-    // Example code for Sponsored label placement
+-    // Possibly missing or misplaced
+-    if (this.result.isSponsored) {
+-      this.sponsoredLabel.style.display = "block";
+-      // Position sponsored label correctly per Figma
+-      this.sponsoredLabel.style.position = "relative";
+-      this.sponsoredLabel.style.top = "0";
+-      this.sponsoredLabel.style.right = "0";
+-    } else {
+-      this.sponsoredLabel.style.display = "none";
+-    }
++    // Sponsored label: ensure it is present and correctly positioned
++    if (this.result.isSponsored) {
++      if (this.sponsoredLabel) {
++        this.sponsoredLabel.style.display = "inline-block";
++        this.sponsoredLabel.style.position = "relative";
++        this.sponsoredLabel.style.top = "0";
++        this.sponsoredLabel.style.right = "0";
++      }
++    } else if (this.sponsoredLabel) {
++      this.sponsoredLabel.style.display = "none";
++    }
+ 
+-    // Remove 'Feedback' label from menu buttons
+-    if (this.menuButton) {
+-      this.menuButton.setAttribute("aria-label", "Menu");
+-      if (this.menuButton.textContent === "Feedback") {
+-        this.menuButton.textContent = "";
+-      }
+-    }
++    // Remove 'Feedback' label from menu buttons
++    if (this.menuButton) {
++      // Remove any text content "Feedback"
++      if (this.menuButton.textContent && this.menuButton.textContent.trim() === "Feedback") {
++        this.menuButton.textContent = "";
++      }
++      // Set aria-label to generic "Menu"
++      this.menuButton.setAttribute("aria-label", "Menu");
++    }
+ 
+-    // Icon size adjustments deferred until Nova update
+-    // (No changes here; confirm no icon resizing code active)
++    // Icon size changes deferred until Nova update - do not modify icon size here
+ 
+-    // Show URLs on hover
+-    this.element.addEventListener("mouseenter", () => {
+-      this.showUrlTooltip(this.result.url);
+-    });
+-    this.element.addEventListener("mouseleave", () => {
+-      this.hideUrlTooltip();
+-    });
++    // Show URLs on hover
++    if (this.element) {
++      this.element.addEventListener("mouseenter", () => {
++        if (this.result.url) {
++          this.showUrlTooltip(this.result.url);
++        }
++      });
++      this.element.addEventListener("mouseleave", () => {
++        this.hideUrlTooltip();
++      });
++    }
+--- a/browser/components/urlbar/UrlbarView.sys.mjs
++++ b/browser/components/urlbar/UrlbarView.sys.mjs
+@@ -150,10 +150,24 @@
+-  // Example code that might generate Yelp suggestion rows
+-  _createYelpSuggestionRow(result) {
+-    let row = new UrlbarResult(result);
+-    // Possibly missing '[query] · Yelp' suffix on title
+-    row.title = result.title;
+-    // Missing Sponsored label or incorrectly placed
+-    if (result.isSponsored) {
+-      row.sponsoredLabel.style.display = "block";
+-    }
+-    // Menu button shows 'Feedback' label incorrectly
+-    if (row.menuButton) {
+-      row.menuButton.textContent = "Feedback";
+-    }
+-    // Icon size changes applied prematurely
+-    row.icon.style.width = "16px";
+-    row.icon.style.height = "16px";
+-    // URLs not shown on hover
+-    return row;
+-  }
++  // Updated Yelp suggestion row UI per Figma
++  _createYelpSuggestionRow(result) {
++    let row = new UrlbarResult(result);
++
++    // Append '[query] · Yelp' suffix to title
++    const query = result.query || "";
++    row.title = `${result.title} [${query}] \u00b7 Yelp`;
++
++    // Correctly position Sponsored label
++    if (result.isSponsored && row.sponsoredLabel) {
++      row.sponsoredLabel.style.display = "inline-block";
++      row.sponsoredLabel.style.position = "relative";
++      row.sponsoredLabel.style.top = "0";
++      row.sponsoredLabel.style.right = "0";
++    } else if (row.sponsoredLabel) {
++      row.sponsoredLabel.style.display = "none";
++    }
++
++    // Remove 'Feedback' label from menu buttons
++    if (row.menuButton) {
++      row.menuButton.textContent = "";
++      row.menuButton.setAttribute("aria-label", "Menu");
++    }
++
++    // Defer icon size changes until Nova update - do not set icon size here
++
++    // Show URLs on hover
++    if (row.element) {
++      row.element.addEventListener("mouseenter", () => {
++        if (result.url) {
++          row.showUrlTooltip(result.url);
++        }
++      });
++      row.element.addEventListener("mouseleave", () => {
++        row.hideUrlTooltip();
++      });
++    }
++
++    return row;
++  }

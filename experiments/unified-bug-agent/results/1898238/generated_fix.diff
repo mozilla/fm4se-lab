@@ -1,0 +1,233 @@
+--- a/gfx/gl/SharedSurfaceEGL.h
++++ b/gfx/gl/SharedSurfaceEGL.h
+@@ -30,10 +30,20 @@
+-#include "GLContext.h"
++#include "EGLDisplay.h"
+ 
+ namespace mozilla {
+ namespace gl {
+ 
+-class SharedSurface_EGLImage final : public SharedSurface {
+- public:
+-  static UniquePtr<SharedSurface_EGLImage> Create(GLContext* gl,
+-                                                 const gfx::IntSize& size);
+-
+- private:
+-  // Strong reference to GLContext causes stale context issues on Android.
+-  RefPtr<GLContext> mGL;
++class SharedSurface_EGLImage final : public SharedSurface {
++ public:
++  static UniquePtr<SharedSurface_EGLImage> Create(GLContext* gl,
++                                                 const gfx::IntSize& size);
++
++ private:
++  // Use a weak reference to EglDisplay to avoid stale GLContext references.
++  RefPtr<layers::EglDisplay> mEglDisplay;
++
++  SharedSurface_EGLImage(gl::GLContext* gl, layers::EglDisplay* eglDisplay,
++                        const gfx::IntSize& size);
+ 
+-  explicit SharedSurface_EGLImage(GLContext* gl, const gfx::IntSize& size);
++  ~SharedSurface_EGLImage() override;
++
++  // EGLImage handle and related members would be here.
+ };
+ 
+ }  // namespace gl
+--- a/gfx/gl/SharedSurfaceEGL.cpp
++++ b/gfx/gl/SharedSurfaceEGL.cpp
+@@ -20,15 +20,35 @@
+-#include "GLContext.h"
++#include "EGLDisplay.h"
+ #include "SharedSurfaceEGL.h"
+ 
+ namespace mozilla {
+ namespace gl {
+ 
+-UniquePtr<SharedSurface_EGLImage> SharedSurface_EGLImage::Create(GLContext* gl,
+-                                                                const gfx::IntSize& size) {
+-  return MakeUnique<SharedSurface_EGLImage>(gl, size);
+-}
+-
+-SharedSurface_EGLImage::SharedSurface_EGLImage(GLContext* gl, const gfx::IntSize& size)
+-    : SharedSurface(nullptr, AttachmentType::EGLImage, size, false), mGL(gl) {
+-  // Initialize EGLImage and related resources here.
+-}
+-
+-SharedSurface_EGLImage::~SharedSurface_EGLImage() {
+-  // Cleanup EGLImage and avoid GLContext use if lost.
++UniquePtr<SharedSurface_EGLImage> SharedSurface_EGLImage::Create(GLContext* gl,
++                                                                const gfx::IntSize& size) {
++  RefPtr<layers::EglDisplay> eglDisplay = layers::EglDisplay::GetFrom(gl);
++  if (!eglDisplay) {
++    return nullptr;
++  }
++  return UniquePtr<SharedSurface_EGLImage>(
++      new SharedSurface_EGLImage(gl, eglDisplay, size));
++}
++
++SharedSurface_EGLImage::SharedSurface_EGLImage(GLContext* gl,
++                                             layers::EglDisplay* eglDisplay,
++                                             const gfx::IntSize& size)
++    : SharedSurface(nullptr, AttachmentType::EGLImage, size, false),
++      mEglDisplay(eglDisplay) {
++  // Initialize EGLImage and related resources using mEglDisplay.
++}
++
++SharedSurface_EGLImage::~SharedSurface_EGLImage() {
++  // Cleanup EGLImage and avoid GLContext use if lost by using mEglDisplay.
+ }
+ 
+ }  // namespace gl
+ }  // namespace mozilla
+--- a/gfx/layers/RenderEGLImageTextureHost.h
++++ b/gfx/layers/RenderEGLImageTextureHost.h
+@@ -25,11 +25,21 @@
+-#include "GLContext.h"
++#include "EGLDisplay.h"
+ #include "RenderTextureHost.h"
+ 
+ namespace mozilla {
+ namespace layers {
+ 
+-class RenderEGLImageTextureHost final : public RenderTextureHost {
+- public:
+-  explicit RenderEGLImageTextureHost(const SurfaceDescriptorEGLImage& aDesc);
+-  ~RenderEGLImageTextureHost() override;
+-
+-  bool Lock() override;
+-  void Unlock() override;
+-  bool IsValid() override;
+-
+- private:
+-  RefPtr<GLContext> mGL;
+-  EGLImage mImage;
+-};
++class RenderEGLImageTextureHost final : public RenderTextureHost {
++ public:
++  explicit RenderEGLImageTextureHost(const SurfaceDescriptorEGLImage& aDesc);
++  ~RenderEGLImageTextureHost() override;
++
++  bool Lock() override;
++  void Unlock() override;
++  bool IsValid() override;
++
++ private:
++  // Use a weak reference to EglDisplay to avoid stale GLContext references.
++  RefPtr<EglDisplay> mEglDisplay;
++  EGLImage mImage;
++};
+ 
+ }  // namespace layers
+ }  // namespace mozilla
+--- a/gfx/layers/RenderEGLImageTextureHost.cpp
++++ b/gfx/layers/RenderEGLImageTextureHost.cpp
+@@ -15,23 +15,43 @@
+-#include "GLContext.h"
++#include "EGLDisplay.h"
+ #include "RenderEGLImageTextureHost.h"
+ 
+ namespace mozilla {
+ namespace layers {
+ 
+-RenderEGLImageTextureHost::RenderEGLImageTextureHost(
+-    const SurfaceDescriptorEGLImage& aDesc)
+-    : mGL(nullptr), mImage(aDesc.image()) {
+-  // Obtain GLContext from current context or compositor
+-}
+-
+-RenderEGLImageTextureHost::~RenderEGLImageTextureHost() {
+-  // Cleanup EGLImage and GL resources
+-}
+-
+-bool RenderEGLImageTextureHost::Lock() {
+-  if (!mGL) {
+-    return false;
+-  }
+-  // Bind and prepare texture
+-  return true;
+-}
+-
+-void RenderEGLImageTextureHost::Unlock() {
+-  // Unbind texture
+-}
+-
+-bool RenderEGLImageTextureHost::IsValid() {
+-  return mGL && mImage != EGL_NO_IMAGE_KHR;
++RenderEGLImageTextureHost::RenderEGLImageTextureHost(
++    const SurfaceDescriptorEGLImage& aDesc)
++    : mEglDisplay(nullptr), mImage(aDesc.image()) {
++  // Get EglDisplay from current GLContext or compositor GLContext if possible.
++  GLContext* gl = GLContext::GetCurrent();
++  if (gl) {
++    mEglDisplay = EglDisplay::GetFrom(gl);
++  }
++}
++
++RenderEGLImageTextureHost::~RenderEGLImageTextureHost() {
++  // Cleanup EGLImage using mEglDisplay, avoid use of GLContext directly.
++}
++
++bool RenderEGLImageTextureHost::Lock() {
++  if (!mEglDisplay) {
++    return false;
++  }
++  // Prepare texture binding using mEglDisplay and EGLImage.
++  return true;
++}
++
++void RenderEGLImageTextureHost::Unlock() {
++  // Unbind texture safely.
++}
++
++bool RenderEGLImageTextureHost::IsValid() {
++  return mEglDisplay && mImage != EGL_NO_IMAGE_KHR;
+ }
+ 
+ }  // namespace layers
+ }  // namespace mozilla
+--- a/browser/components/webgl/WebGLParent.cpp
++++ b/browser/components/webgl/WebGLParent.cpp
+@@ -10,6 +10,12 @@
+ #include "mozilla/Preferences.h"
+ 
++static bool sEnableEGLImage = false;
++
++static void InitEGLImagePref() {
++  sEnableEGLImage = Preferences::GetBool("webgl.enable-egl-image", false);
++}
++
++static bool IsEGLImageEnabled() {
++  return sEnableEGLImage;
++}
++
++// Call InitEGLImagePref() early on startup
+--- a/browser/components/webgl/WebGLParent.h
++++ b/browser/components/webgl/WebGLParent.h
+@@ -20,6 +20,8 @@
+ 
++bool IsEGLImageEnabled();
++void InitEGLImagePref();
+--- a/gfx/layers/TextureHostOGL.cpp
++++ b/gfx/layers/TextureHostOGL.cpp
+@@ -500,10 +500,16 @@
+-// Existing code for creating texture hosts
+-// ...
+-
+-// For EGLImage textures, create RenderEGLImageTextureHost if enabled
++// Added support for EGLImage texture hosts on Android with the pref enabled
++
++#include "RenderEGLImageTextureHost.h"
++#include "mozilla/Preferences.h"
++
++RefPtr<TextureHost> CreateTextureHostForDescriptor(const SurfaceDescriptor& aDesc) {
++  if (aDesc.type() == SurfaceDescriptor::TSurfaceDescriptorEGLImage) {
++    if (!mozilla::layers::IsEGLImageEnabled()) {
++      return nullptr;
++    }
++    return new RenderEGLImageTextureHost(aDesc.get_SurfaceDescriptorEGLImage());
++  }
++
++  // fallback to existing logic
++}
++

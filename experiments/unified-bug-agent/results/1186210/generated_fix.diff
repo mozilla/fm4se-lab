@@ -1,0 +1,41 @@
+--- a/dom/storage/LocalStorageCache.cpp
++++ b/dom/storage/LocalStorageCache.cpp
+@@ -85,14 +85,6 @@
+-// Telemetry histogram IDs related to expired Necko metrics removed.
+-// Remove references to those telemetry metrics.
+-
+-#include "mozilla/Telemetry.h"
+-
+-// Remove accumulation calls for expired telemetry histograms.
+-
+-// Example:
+-// Telemetry::Accumulate(Telemetry::LOCALSTORAGE_CACHE_AGE_MS, age);
+-
+-// Removed enums/constants and accumulation calls referencing deleted metrics.
++// Removed accumulation calls for expired telemetry histograms that no longer exist.
++// Updated to remove dependencies on deleted telemetry metrics.
+ 
+@@ -250,10 +242,6 @@
+-  // Accumulate telemetry for expired metrics removed.
+-  // Telemetry::Accumulate(Telemetry::LOCALSTORAGE_CACHE_AGE_MS, age);
+-  // Telemetry::Accumulate(Telemetry::LOCALSTORAGE_CACHE_EVICTIONS, evictionCount);
+-
+-  // Removed telemetry accumulation code for deleted histograms.
++  // Removed telemetry accumulation code corresponding to deleted histograms.
+ 
+--- a/dom/storage/LocalStorageCache.h
++++ b/dom/storage/LocalStorageCache.h
+@@ -45,12 +45,6 @@
+-// Telemetry enum entries corresponding to removed Necko histograms.
+-// Remove or comment out these enum entries.
+-
+-// Example:
+-// enum TelemetryHistogram {
+-//   LOCALSTORAGE_CACHE_AGE_MS,
+-//   LOCALSTORAGE_CACHE_EVICTIONS,
+-//   ...
+-// };
+-
+-// Ensure no references to deleted telemetry enums remain.
++// Removed telemetry enums related to expired Necko histograms to keep in sync with metrics.yaml removals.
++// Ensure no references to deleted telemetry enums remain.

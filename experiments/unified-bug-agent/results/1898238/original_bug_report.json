@@ -1,0 +1,591 @@
+{
+  "id": 1898238,
+  "summary": "Allow using SharedSurface_EGLImage for oop-webgl and accelerated canvas on Android",
+  "assigned_to": "jnicol@mozilla.com",
+  "cf_status_thunderbird_esr140": "---",
+  "cf_status_firefox148": "---",
+  "priority": "--",
+  "cf_fx_iteration": "---",
+  "creation_time": "2024-05-22T13:12:23Z",
+  "is_open": false,
+  "cf_status_thunderbird_esr115": "---",
+  "counts": {
+    "regressed_by": 2,
+    "comments": 10,
+    "depends_on": 1,
+    "blocks": 0,
+    "attachments": 5,
+    "duplicates": 0,
+    "cc": 5,
+    "keywords": 0,
+    "regressions": 0
+  },
+  "component": "Graphics",
+  "creator_detail": {
+    "nick": "jnicol",
+    "name": "jnicol@mozilla.com",
+    "email": "jnicol@mozilla.com",
+    "real_name": "Jamie Nicol [:jnicol]",
+    "id": 541747
+  },
+  "classification": "Components",
+  "last_change_time_non_bot": "2026-01-28T19:05:00Z",
+  "cf_accessibility_severity": "---",
+  "resolution": "FIXED",
+  "attachments": [
+    {
+      "description": "Bug 1898238 - Don't call TexTypeForWebgl when initializing offscreen canvas. r?aosmond,jgilbert",
+      "is_obsolete": 0,
+      "creator": "jnicol@mozilla.com",
+      "creator_detail": {
+        "real_name": "Jamie Nicol [:jnicol]",
+        "id": 541747,
+        "name": "jnicol@mozilla.com",
+        "email": "jnicol@mozilla.com",
+        "nick": "jnicol"
+      },
+      "bug_id": 1898238,
+      "last_change_time": "2024-05-22T20:19:53Z",
+      "file_name": "phabricator-D211289-url.txt",
+      "is_private": 0,
+      "content_type": "text/x-phabricator-request",
+      "attacher": "jnicol@mozilla.com",
+      "size": 48,
+      "summary": "Bug 1898238 - Don't call TexTypeForWebgl when initializing offscreen canvas. r?aosmond,jgilbert",
+      "id": 9403359,
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjExMjg5",
+      "flags": [],
+      "is_patch": 0,
+      "creation_time": "2024-05-22T20:19:53Z"
+    },
+    {
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjExMjkw",
+      "flags": [],
+      "is_patch": 0,
+      "creation_time": "2024-05-22T20:19:57Z",
+      "is_private": 0,
+      "content_type": "text/x-phabricator-request",
+      "attacher": "jnicol@mozilla.com",
+      "size": 48,
+      "id": 9403360,
+      "summary": "Bug 1898238 - Tidy up RenderCompositorOGLSWGL::HandleExternalImage. r?sotaro",
+      "bug_id": 1898238,
+      "last_change_time": "2024-05-22T20:19:57Z",
+      "file_name": "phabricator-D211290-url.txt",
+      "description": "Bug 1898238 - Tidy up RenderCompositorOGLSWGL::HandleExternalImage. r?sotaro",
+      "is_obsolete": 0,
+      "creator_detail": {
+        "email": "jnicol@mozilla.com",
+        "name": "jnicol@mozilla.com",
+        "nick": "jnicol",
+        "real_name": "Jamie Nicol [:jnicol]",
+        "id": 541747
+      },
+      "creator": "jnicol@mozilla.com"
+    },
+    {
+      "creation_time": "2024-05-22T20:20:00Z",
+      "flags": [],
+      "is_patch": 0,
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjExMjkx",
+      "size": 48,
+      "id": 9403361,
+      "summary": "Bug 1898238 - Make SharedSurface_EGLImage and (Render)EGLImageTextureHost work. r?sotaro",
+      "is_private": 0,
+      "content_type": "text/x-phabricator-request",
+      "attacher": "jnicol@mozilla.com",
+      "file_name": "phabricator-D211291-url.txt",
+      "last_change_time": "2024-05-22T20:20:00Z",
+      "bug_id": 1898238,
+      "creator_detail": {
+        "real_name": "Jamie Nicol [:jnicol]",
+        "id": 541747,
+        "email": "jnicol@mozilla.com",
+        "name": "jnicol@mozilla.com",
+        "nick": "jnicol"
+      },
+      "creator": "jnicol@mozilla.com",
+      "is_obsolete": 0,
+      "description": "Bug 1898238 - Make SharedSurface_EGLImage and (Render)EGLImageTextureHost work. r?sotaro"
+    },
+    {
+      "description": "Bug 1898238 - Keep SharedSurface_EGLImages alive but do not recycle them. r?sotaro",
+      "creator_detail": {
+        "id": 541747,
+        "real_name": "Jamie Nicol [:jnicol]",
+        "nick": "jnicol",
+        "name": "jnicol@mozilla.com",
+        "email": "jnicol@mozilla.com"
+      },
+      "creator": "jnicol@mozilla.com",
+      "is_obsolete": 0,
+      "bug_id": 1898238,
+      "file_name": "phabricator-D211292-url.txt",
+      "last_change_time": "2024-05-22T20:20:03Z",
+      "content_type": "text/x-phabricator-request",
+      "is_private": 0,
+      "attacher": "jnicol@mozilla.com",
+      "size": 48,
+      "id": 9403362,
+      "summary": "Bug 1898238 - Keep SharedSurface_EGLImages alive but do not recycle them. r?sotaro",
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjExMjky",
+      "creation_time": "2024-05-22T20:20:03Z",
+      "flags": [],
+      "is_patch": 0
+    },
+    {
+      "summary": "Bug 1898238 - Use SharedSurface_EGLImage for out-of-process webgl and accelerated canvas on Android. r?sotaro,jgilbert",
+      "id": 9403363,
+      "size": 48,
+      "attacher": "jnicol@mozilla.com",
+      "is_private": 0,
+      "content_type": "text/x-phabricator-request",
+      "creation_time": "2024-05-22T20:20:06Z",
+      "is_patch": 0,
+      "flags": [],
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjExMjkz",
+      "creator_detail": {
+        "real_name": "Jamie Nicol [:jnicol]",
+        "id": 541747,
+        "email": "jnicol@mozilla.com",
+        "name": "jnicol@mozilla.com",
+        "nick": "jnicol"
+      },
+      "creator": "jnicol@mozilla.com",
+      "is_obsolete": 0,
+      "description": "Bug 1898238 - Use SharedSurface_EGLImage for out-of-process webgl and accelerated canvas on Android. r?sotaro,jgilbert",
+      "file_name": "phabricator-D211293-url.txt",
+      "last_change_time": "2024-05-22T20:20:06Z",
+      "bug_id": 1898238
+    }
+  ],
+  "cf_has_str": "---",
+  "blocks": [
+    1892716
+  ],
+  "cf_tracking_firefox_esr140": "---",
+  "last_change_time": "2026-01-28T19:05:00Z",
+  "mentors": [],
+  "groups": [],
+  "status": "RESOLVED",
+  "cf_size_estimate": "---",
+  "cf_last_resolved": "2024-07-23T09:37:17Z",
+  "cf_tracking_thunderbird_esr115": "---",
+  "duplicates": [],
+  "depends_on": [],
+  "flags": [],
+  "dupe_of": null,
+  "triage_owner_detail": {
+    "nick": "bhood",
+    "name": "bhood@mozilla.com",
+    "email": "bhood@mozilla.com",
+    "id": 697075,
+    "real_name": "Bob Hood [:bhood]"
+  },
+  "creator": "jnicol@mozilla.com",
+  "is_creator_accessible": true,
+  "cf_fx_points": "---",
+  "target_milestone": "130 Branch",
+  "description": "We haven't used this in a while. (I'm guessing since e10s shipped, because EGL images cannot be sent cross-process.) But since accelerated canvas and webgl live in the GPU process nowadays, we can in theory use it again. It avoids the glitches in bug 1892716, for example.\n\nIt has bitrotted somewhat, so some work needs to be done to SharedSurface_EGLImage and (Render)EGLImageTextureHost to get it to work.",
+  "cc": [
+    "emanuellclaudiu@gmail.com",
+    "jan@ikenmeyer.eu",
+    "mayankleoboy1@gmail.com",
+    "mstange.moz@gmail.com",
+    "pasik@iki.fi"
+  ],
+  "cf_user_story": "",
+  "cf_status_firefox149": "---",
+  "cf_tracking_firefox_esr115": "---",
+  "mentors_detail": [],
+  "url": "",
+  "cf_qa_whiteboard": "",
+  "cc_detail": [
+    {
+      "nick": "emanuellclaudiu",
+      "name": "emanuellclaudiu@gmail.com",
+      "email": "emanuellclaudiu@gmail.com",
+      "real_name": "eclaudiu64",
+      "id": 721355
+    },
+    {
+      "id": 580271,
+      "real_name": "Darkspirit",
+      "nick": "jan",
+      "name": "jan@ikenmeyer.eu",
+      "email": "jan@ikenmeyer.eu"
+    },
+    {
+      "real_name": "Mayank Bansal",
+      "id": 440227,
+      "nick": "mayankleoboy1",
+      "email": "mayankleoboy1@gmail.com",
+      "name": "mayankleoboy1@gmail.com"
+    },
+    {
+      "name": "mstange.moz@gmail.com",
+      "email": "mstange.moz@gmail.com",
+      "nick": "mstange",
+      "id": 293943,
+      "real_name": "Markus Stange [:mstange]"
+    },
+    {
+      "name": "pasik@iki.fi",
+      "email": "pasik@iki.fi",
+      "nick": "pasik",
+      "real_name": "",
+      "id": 529219
+    }
+  ],
+  "cf_webcompat_score": "---",
+  "alias": null,
+  "cf_status_firefox147": "---",
+  "cf_tracking_firefox148": "---",
+  "cf_performance_impact": "---",
+  "type": "enhancement",
+  "is_cc_accessible": true,
+  "assigned_to_detail": {
+    "real_name": "Jamie Nicol [:jnicol]",
+    "id": 541747,
+    "name": "jnicol@mozilla.com",
+    "email": "jnicol@mozilla.com",
+    "nick": "jnicol"
+  },
+  "triage_owner": "bhood@mozilla.com",
+  "cf_rank": null,
+  "regressed_by": [],
+  "is_confirmed": true,
+  "cf_webcompat_priority": "---",
+  "cf_status_firefox_esr115": "---",
+  "see_also": [
+    "https://bugzilla.mozilla.org/show_bug.cgi?id=1810658"
+  ],
+  "cf_a11y_review_project_flag": "---",
+  "whiteboard": "",
+  "votes": 1,
+  "op_sys": "Unspecified",
+  "cf_tracking_firefox147": "---",
+  "comments": [
+    {
+      "text": "We haven't used this in a while. (I'm guessing since e10s shipped, because EGL images cannot be sent cross-process.) But since accelerated canvas and webgl live in the GPU process nowadays, we can in theory use it again. It avoids the glitches in bug 1892716, for example.\n\nIt has bitrotted somewhat, so some work needs to be done to SharedSurface_EGLImage and (Render)EGLImageTextureHost to get it to work.",
+      "creator": "jnicol@mozilla.com",
+      "reactions": {},
+      "bug_id": 1898238,
+      "time": "2024-05-22T13:12:23Z",
+      "raw_text": "We haven't used this in a while. (I'm guessing since e10s shipped, because EGL images cannot be sent cross-process.) But since accelerated canvas and webgl live in the GPU process nowadays, we can in theory use it again. It avoids the glitches in bug 1892716, for example.\n\nIt has bitrotted somewhat, so some work needs to be done to SharedSurface_EGLImage and (Render)EGLImageTextureHost to get it to work.",
+      "author": "jnicol@mozilla.com",
+      "count": 0,
+      "is_private": false,
+      "id": 16947600,
+      "attachment_id": null,
+      "tags": [],
+      "creation_time": "2024-05-22T13:12:23Z"
+    },
+    {
+      "reactions": {},
+      "bug_id": 1898238,
+      "text": "Created attachment 9403359\nBug 1898238 - Don't call TexTypeForWebgl when initializing offscreen canvas. r?aosmond,jgilbert\n\n\nThis is only used if the OffscreenCanvas has a webgl context, in which\ncase it forwards the tex type to WebGLContext::PresentFrontBuffer(). A\nlater patch in this series will make TexTypeForWebgl() return a\ndifferent value depending on whether the webgl context is in-process\nor remote, which is something that cannot be known when the\nOffscreenCanvas is initialized. This patch therefore removes the field\nfrom OffscreenCanvas and makes WebGLContext::PresentFrontBuffer() call\nTexTypeForWebgl() itself.",
+      "creator": "jnicol@mozilla.com",
+      "tags": [],
+      "creation_time": "2024-05-22T20:19:53Z",
+      "raw_text": "\nThis is only used if the OffscreenCanvas has a webgl context, in which\ncase it forwards the tex type to WebGLContext::PresentFrontBuffer(). A\nlater patch in this series will make TexTypeForWebgl() return a\ndifferent value depending on whether the webgl context is in-process\nor remote, which is something that cannot be known when the\nOffscreenCanvas is initialized. This patch therefore removes the field\nfrom OffscreenCanvas and makes WebGLContext::PresentFrontBuffer() call\nTexTypeForWebgl() itself.",
+      "count": 1,
+      "author": "jnicol@mozilla.com",
+      "is_private": false,
+      "time": "2024-05-22T20:19:53Z",
+      "attachment_id": 9403359,
+      "id": 16948362
+    },
+    {
+      "id": 16948363,
+      "attachment_id": 9403360,
+      "time": "2024-05-22T20:19:57Z",
+      "count": 2,
+      "author": "jnicol@mozilla.com",
+      "is_private": false,
+      "raw_text": "\nHandleExternalImage() has two nearly identical code paths for\nrendering either RenderAndroidSurfaceTextureHost or\nRenderAndroidHardwareBufferTextureHost using CompositorOGL. The next\npatch in this series will additionally add support for\nRenderEGLImageTextureHost. Rather than duplicate the code yet again,\nwe abstract the differences in to a new virtual function\nRenderTextureHost::CreateTextureSource() and use a single common code\npath in HandleExternalImage().",
+      "creation_time": "2024-05-22T20:19:57Z",
+      "tags": [],
+      "creator": "jnicol@mozilla.com",
+      "text": "Created attachment 9403360\nBug 1898238 - Tidy up RenderCompositorOGLSWGL::HandleExternalImage. r?sotaro\n\n\nHandleExternalImage() has two nearly identical code paths for\nrendering either RenderAndroidSurfaceTextureHost or\nRenderAndroidHardwareBufferTextureHost using CompositorOGL. The next\npatch in this series will additionally add support for\nRenderEGLImageTextureHost. Rather than duplicate the code yet again,\nwe abstract the differences in to a new virtual function\nRenderTextureHost::CreateTextureSource() and use a single common code\npath in HandleExternalImage().",
+      "bug_id": 1898238,
+      "reactions": {}
+    },
+    {
+      "text": "Created attachment 9403361\nBug 1898238 - Make SharedSurface_EGLImage and (Render)EGLImageTextureHost work. r?sotaro\n\n\nSharedSurface_EGLImage has mostly avoided bitrotting. However, it now\nsometimes gets destructed after the GLContext has been lost, resulting\nin a crash when attempting to clean up its resources. To avoid this,\nwe hold a weak reference to the EglDisplay, and use that to clean up\nrather than the GLContext.\n\nTo support rendering with SWGL, EGLImageTextureHost ensures the\ncorrect preferCompositorSurface, supportsExternalCompositing, and\nimageType values are sent to webrender. RenderEGLImageTextureHost now\nimplements RenderTextureHostSWGL, as well as the new\nCreateTextureSource() function, and EGLImageTextureSource is\ninitialized with a GL context reference so that it may actually work.\n\nAdditionally we use eglWaitSync() rather than eglClientWaitSync()\nwhere available for improved performance. And we ensure that we bind\nthe EGL images' textures to GL_TEXTURE_2D rather than\nGL_TEXTURE_EXTERNAL when running on the Android emulator to work\naround the buggy implementation in some emulator versions.",
+      "creator": "jnicol@mozilla.com",
+      "bug_id": 1898238,
+      "reactions": {},
+      "time": "2024-05-22T20:20:00Z",
+      "author": "jnicol@mozilla.com",
+      "count": 3,
+      "is_private": false,
+      "raw_text": "\nSharedSurface_EGLImage has mostly avoided bitrotting. However, it now\nsometimes gets destructed after the GLContext has been lost, resulting\nin a crash when attempting to clean up its resources. To avoid this,\nwe hold a weak reference to the EglDisplay, and use that to clean up\nrather than the GLContext.\n\nTo support rendering with SWGL, EGLImageTextureHost ensures the\ncorrect preferCompositorSurface, supportsExternalCompositing, and\nimageType values are sent to webrender. RenderEGLImageTextureHost now\nimplements RenderTextureHostSWGL, as well as the new\nCreateTextureSource() function, and EGLImageTextureSource is\ninitialized with a GL context reference so that it may actually work.\n\nAdditionally we use eglWaitSync() rather than eglClientWaitSync()\nwhere available for improved performance. And we ensure that we bind\nthe EGL images' textures to GL_TEXTURE_2D rather than\nGL_TEXTURE_EXTERNAL when running on the Android emulator to work\naround the buggy implementation in some emulator versions.",
+      "id": 16948364,
+      "attachment_id": 9403361,
+      "tags": [],
+      "creation_time": "2024-05-22T20:20:00Z"
+    },
+    {
+      "text": "Created attachment 9403362\nBug 1898238 - Keep SharedSurface_EGLImages alive but do not recycle them. r?sotaro\n\n\nWe must ensure that a SharedSurface_EGLImage outlives its\ncorresponding RenderEGLImageTextureHost, so that\nRenderEGLImageTextureHost does not attempt to wait on an EGLSync that\nhas been destroyed. This can be achieved by passing the surface to\nRemoteTextureOwnerClient::PushTexture(), ensuring the RemoteTextureMap\nkeeps it alive.\n\nHowever, we must be careful not to recycle the SharedSurface_EGLImage,\nas that is currently not supported. To achieve this, we make\nRemoteTextureMap::RecycleTexture() only recycle SharedSurfaces whose\nmDesc.canRecycle value is true.",
+      "creator": "jnicol@mozilla.com",
+      "bug_id": 1898238,
+      "reactions": {},
+      "time": "2024-05-22T20:20:03Z",
+      "author": "jnicol@mozilla.com",
+      "count": 4,
+      "is_private": false,
+      "raw_text": "\nWe must ensure that a SharedSurface_EGLImage outlives its\ncorresponding RenderEGLImageTextureHost, so that\nRenderEGLImageTextureHost does not attempt to wait on an EGLSync that\nhas been destroyed. This can be achieved by passing the surface to\nRemoteTextureOwnerClient::PushTexture(), ensuring the RemoteTextureMap\nkeeps it alive.\n\nHowever, we must be careful not to recycle the SharedSurface_EGLImage,\nas that is currently not supported. To achieve this, we make\nRemoteTextureMap::RecycleTexture() only recycle SharedSurfaces whose\nmDesc.canRecycle value is true.",
+      "attachment_id": 9403362,
+      "id": 16948365,
+      "tags": [],
+      "creation_time": "2024-05-22T20:20:03Z"
+    },
+    {
+      "tags": [],
+      "creation_time": "2024-05-22T20:20:06Z",
+      "time": "2024-05-22T20:20:06Z",
+      "raw_text": "\nAdds a pref wegb.enable-egl-image which is true by default. When\nenabled, we use EGL images as the preferred texture type for\nout-of-process webgl and accelerated canvas on Android. In-process\nwebgl will never attempt to use EGL images, regardless of the value of\nthe pref, as we are unable to send EGL images cross-process.",
+      "count": 5,
+      "is_private": false,
+      "author": "jnicol@mozilla.com",
+      "attachment_id": 9403363,
+      "id": 16948366,
+      "reactions": {},
+      "bug_id": 1898238,
+      "text": "Created attachment 9403363\nBug 1898238 - Use SharedSurface_EGLImage for out-of-process webgl and accelerated canvas on Android. r?sotaro,jgilbert\n\n\nAdds a pref wegb.enable-egl-image which is true by default. When\nenabled, we use EGL images as the preferred texture type for\nout-of-process webgl and accelerated canvas on Android. In-process\nwebgl will never attempt to use EGL images, regardless of the value of\nthe pref, as we are unable to send EGL images cross-process.",
+      "creator": "jnicol@mozilla.com"
+    },
+    {
+      "text": "Pushed by jnicol@mozilla.com:\nhttps://hg.mozilla.org/integration/autoland/rev/19fa8d4af66f\nDon't call TexTypeForWebgl when initializing offscreen canvas. r=aosmond,jgilbert\nhttps://hg.mozilla.org/integration/autoland/rev/332c668a15bc\nTidy up RenderCompositorOGLSWGL::HandleExternalImage. r=sotaro\nhttps://hg.mozilla.org/integration/autoland/rev/6359e558d765\nMake SharedSurface_EGLImage and (Render)EGLImageTextureHost work. r=sotaro,jgilbert\nhttps://hg.mozilla.org/integration/autoland/rev/549abd685d11\nKeep SharedSurface_EGLImages alive but do not recycle them. r=sotaro,jgilbert\nhttps://hg.mozilla.org/integration/autoland/rev/ae8e94c8f819\nUse SharedSurface_EGLImage for out-of-process webgl and accelerated canvas on Android. r=sotaro,jgilbert",
+      "creator": "pulsebot@bmo.tld",
+      "reactions": {},
+      "bug_id": 1898238,
+      "raw_text": "Pushed by jnicol@mozilla.com:\nhttps://hg.mozilla.org/integration/autoland/rev/19fa8d4af66f\nDon't call TexTypeForWebgl when initializing offscreen canvas. r=aosmond,jgilbert\nhttps://hg.mozilla.org/integration/autoland/rev/332c668a15bc\nTidy up RenderCompositorOGLSWGL::HandleExternalImage. r=sotaro\nhttps://hg.mozilla.org/integration/autoland/rev/6359e558d765\nMake SharedSurface_EGLImage and (Render)EGLImageTextureHost work. r=sotaro,jgilbert\nhttps://hg.mozilla.org/integration/autoland/rev/549abd685d11\nKeep SharedSurface_EGLImages alive but do not recycle them. r=sotaro,jgilbert\nhttps://hg.mozilla.org/integration/autoland/rev/ae8e94c8f819\nUse SharedSurface_EGLImage for out-of-process webgl and accelerated canvas on Android. r=sotaro,jgilbert",
+      "is_private": false,
+      "count": 6,
+      "author": "pulsebot@bmo.tld",
+      "time": "2024-07-22T16:06:01Z",
+      "id": 17037053,
+      "attachment_id": null,
+      "tags": [],
+      "creation_time": "2024-07-22T16:06:01Z"
+    },
+    {
+      "text": "Backed for causing non unified build bustages on RenderEGLImageTextureHost.cpp.\n\n- [Push with failures](https://treeherder.mozilla.org/jobs?repo=autoland&selectedTaskRun=W974CwdCSzmSwYpcoXQQCQ.0&group_state=expanded&resultStatus=testfailed%2Cbusted%2Cexception%2Crunnable&revision=ae8e94c8f819bd46c31b6fbee1f2cdb5580c9e1f)\n\n- [Failure log](https://treeherder.mozilla.org/logviewer?job_id=467390948&repo=autoland&lineNumber=82963)\n\n- [Backout link](https://hg.mozilla.org/integration/autoland/rev/ccd364648de53087f4da3ce5ff5fc83bd92bb3b2)\n```[task 2024-07-22T16:33:37.151Z] 16:33:37     INFO -  gmake[4]: Entering directory '/builds/worker/workspace/obj-build/gfx/webrender_bindings'\n[task 2024-07-22T16:33:37.156Z] 16:33:37     INFO -  /builds/worker/fetches/sccache/sccache /builds/worker/fetches/clang/bin/clang++ --sysroot /builds/worker/fetches/sysroot-x86_64-linux-gnu -o RenderEGLImageTextureHost.o -c  -I/builds/worker/workspace/obj-build/dist/stl_wrappers -I/builds/worker/workspace/obj-build/dist/system_wrappers -include /builds/worker/checkouts/gecko/config/gcc_hidden.h -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -fstack-protector-strong -fstack-clash-protection -DNDEBUG=1 -DTRIMMED=1 -DMOZ_HAS_MOZGLUE -DMOZILLA_INTERNAL_API -DIMPL_LIBXUL -DMOZ_SUPPORT_LEAKCHECKING -DSTATIC_EXPORTABLE_JS_API -I/builds/worker/checkouts/gecko/gfx/webrender_bindings -I/builds/worker/workspace/obj-build/gfx/webrender_bindings -I/builds/worker/workspace/obj-build/ipc/ipdl/_ipdlheaders -I/builds/worker/checkouts/gecko/ipc/chromium/src -I/builds/worker/checkouts/gecko/gfx/cairo/cairo/src -I/builds/worker/workspace/obj-build/dist/include -I/builds/worker/workspace/obj-build/dist/include/nspr -I/builds/worker/workspace/obj-build/dist/include/nss -DMOZILLA_CLIENT -include /builds/worker/workspace/obj-build/mozilla-config.h -D_GLIBCXX_USE_CXX11_ABI=0 -fno-rtti -pthread -fno-sized-deallocation -fno-aligned-new -ffunction-sections -fdata-sections -fno-math-errno -fno-exceptions -fPIC -fcrash-diagnostics-dir=/builds/worker/artifacts -gdwarf-4 -Xclang -load -Xclang /builds/worker/workspace/obj-build/build/clang-plugin/libclang-plugin.so -Xclang -add-plugin -Xclang moz-check -O2 -fno-omit-frame-pointer -funwind-tables -Werror -Wall -Wbitfield-enum-conversion -Wempty-body -Wformat-type-confusion -Wignored-qualifiers -Wpointer-arith -Wshadow-field-in-constructor-modified -Wsign-compare -Wtautological-constant-in-range-compare -Wtype-limits -Wno-error=tautological-type-limit-compare -Wunreachable-code -Wunreachable-code-return -Wunused-but-set-parameter -Wno-invalid-offsetof -Wclass-varargs -Wempty-init-stmt -Wfloat-overflow-conversion -Wfloat-zero-conversion -Wloop-analysis -Wno-range-loop-analysis -Wenum-compare-conditional -Wenum-float-conversion -Wno-deprecated-anon-enum-enum-conversion -Wno-deprecated-enum-enum-conversion -Wno-deprecated-this-capture -Wcomma -Wimplicit-fallthrough -Wstring-conversion -Wno-inline-new-delete -Wno-error=deprecated-declarations -Wno-error=array-bounds -Wno-error=free-nonheap-object -Wno-error=atomic-alignment -Wno-error=deprecated-builtins -Wformat -Wformat-security -Wno-psabi -Wthread-safety -Wno-error=builtin-macro-redefined -Wno-vla-cxx-extension -Wno-unknown-warning-option -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/freetype2 -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/freetype2 -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/gtk-3.0 -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/pango-1.0 -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/glib-2.0 -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/cairo -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/pixman-1 -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/freetype2 -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/libpng12 -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/gdk-pixbuf-2.0 -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/gio-unix-2.0/ -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/harfbuzz -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/atk-1.0 -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/at-spi2-atk/2.0 -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/at-spi-2.0 -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/dbus-1.0 -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/gtk-3.0/unix-print -pthread -Werror=switch -fno-strict-aliasing -ffp-contract=off  -MD -MP -MF .deps/RenderEGLImageTextureHost.o.pp   /builds/worker/checkouts/gecko/gfx/webrender_bindings/RenderEGLImageTextureHost.cpp\n[task 2024-07-22T16:33:37.157Z] 16:33:37    ERROR -  /builds/worker/checkouts/gecko/gfx/webrender_bindings/RenderEGLImageTextureHost.cpp:123:10: error: 'return' will never be executed [-Werror,-Wunreachable-code-return]\n[task 2024-07-22T16:33:37.158Z] 16:33:37     INFO -    123 |   return true;\n[task 2024-07-22T16:33:37.159Z] 16:33:37     INFO -        |          ^~~~\n[task 2024-07-22T16:33:37.159Z] 16:33:37     INFO -  1 error generated.\n[task 2024-07-22T16:33:37.160Z] 16:33:37    ERROR -  gmake[4]: *** [/builds/worker/checkouts/gecko/config/rules.mk:675: RenderEGLImageTextureHost.o] Error 1\n[task 2024-07-22T16:33:37.161Z] 16:33:37     INFO -  gmake[4]: Leaving directory '/builds/worker/workspace/obj-build/gfx/webrender_bindings'\n[task 2024-07-22T16:33:37.162Z] 16:33:37     INFO -  gmake[4]: Entering directory '/builds/worker/workspace/obj-build/gfx/webrender_bindings'\n[task 2024-07-22T16:33:37.163Z] 16:33:37     INFO -  gfx/webrender_bindings/RenderSharedSurfaceTextureHost.o\n[task 2024-07-22T16:33:37.164Z] 16:33:37     INFO -  gmake[4]: Leaving directory '/builds/worker/workspace/obj-build/gfx/webrender_bindings'\n[task 2024-07-22T16:33:37.258Z] 16:33:37     INFO -  gmake[4]: Entering directory '/builds/worker/workspace/obj-build/gfx/skia'\n[task 2024-07-22T16:33:37.263Z] 16:33:37     INFO -  /builds/worker/fetches/sccache/sccache /builds/worker/fetches/clang/bin/clang++ --sysroot /builds/worker/fetches/sysroot-x86_64-linux-gnu -o SkScan.o -c  -I/builds/worker/workspace/obj-build/dist/stl_wrappers -I/builds/worker/workspace/obj-build/dist/system_wrappers -include /builds/worker/checkouts/gecko/config/gcc_hidden.h -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -fstack-protector-strong -fstack-clash-protection -DNDEBUG=1 -DTRIMMED=1 -DMOZ_SKIA -DSKIA_IMPLEMENTATION=1 -DSK_PDF_USE_HARFBUZZ_SUBSETTING=1 -DMOZ_HAS_MOZGLUE -DMOZILLA_INTERNAL_API -DIMPL_LIBXUL -DMOZ_SUPPORT_LEAKCHECKING -DSTATIC_EXPORTABLE_JS_API -I/builds/worker/checkouts/gecko/gfx/skia -I/builds/worker/workspace/obj-build/gfx/skia -I/builds/worker/checkouts/gecko/gfx/skia/skia -I/builds/worker/checkouts/gecko/gfx/cairo/cairo/src -I/builds/worker/workspace/obj-build/dist/include -I/builds/worker/workspace/obj-build/dist/include/nspr -I/builds/worker/workspace/obj-build/dist/include/nss -DMOZILLA_CLIENT -include /builds/worker/workspace/obj-build/mozilla-config.h -D_GLIBCXX_USE_CXX11_ABI=0 -fno-rtti -pthread -fno-sized-deallocation -fno-aligned-new -ffunction-sections -fdata-sections -fno-math-errno -fno-exceptions -fPIC -fcrash-diagnostics-dir=/builds/worker/artifacts -gdwarf-4 -Xclang -load -Xclang /builds/worker/workspace/obj-build/build/clang-plugin/libclang-plugin.so -Xclang -add-plugin -Xclang moz-check -O2 -fno-omit-frame-pointer -funwind-tables -Wall -Wbitfield-enum-conversion -Wempty-body -Wformat-type-confusion -Wignored-qualifiers -Wpointer-arith -Wshadow-field-in-constructor-modified -Wsign-compare -Wtautological-constant-in-range-compare -Wtype-limits -Wno-error=tautological-type-limit-compare -Wunreachable-code -Wunreachable-code-return -Wunused-but-set-parameter -Wno-invalid-offsetof -Wclass-varargs -Wempty-init-stmt -Wfloat-overflow-conversion -Wfloat-zero-conversion -Wloop-analysis -Wno-range-loop-analysis -Wenum-compare-conditional -Wenum-float-conversion -Wno-deprecated-anon-enum-enum-conversion -Wno-deprecated-enum-enum-conversion -Wno-deprecated-this-capture -Wcomma -Wimplicit-fallthrough -Wstring-conversion -Wno-inline-new-delete -Wno-error=deprecated-declarations -Wno-error=array-bounds -Wno-error=free-nonheap-object -Wno-error=atomic-alignment -Wno-error=deprecated-builtins -Wformat -Wformat-security -Wno-psabi -Wthread-safety -Wno-error=builtin-macro-redefined -Wno-vla-cxx-extension -Wno-unknown-warning-option -Wno-deprecated-declarations -Wno-overloaded-virtual -Wno-sign-compare -Wno-unreachable-code -Wno-unused-function -Wno-implicit-fallthrough -Wno-inconsistent-missing-override -Wno-macro-redefined -Wno-unused-private-field -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/freetype2 -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/freetype2 -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/pango-1.0 -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/glib-2.0 -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include -pthread -fno-strict-aliasing -ffp-contract=off  -MD -MP -MF .deps/SkScan.o.pp   /builds/worker/checkouts/gecko/gfx/skia/skia/src/core/SkScan.cpp\n[task 2024-07-22T16:33:37.264Z] 16:33:37     INFO -  gmake[4]: Leaving directory '/builds/worker/workspace/obj-build/gfx/skia'\n```",
+      "creator": "imoraru@mozilla.com",
+      "bug_id": 1898238,
+      "reactions": {},
+      "count": 7,
+      "is_private": false,
+      "author": "imoraru@mozilla.com",
+      "raw_text": "Backed for causing non unified build bustages on RenderEGLImageTextureHost.cpp.\n\n- [Push with failures](https://treeherder.mozilla.org/jobs?repo=autoland&selectedTaskRun=W974CwdCSzmSwYpcoXQQCQ.0&group_state=expanded&resultStatus=testfailed%2Cbusted%2Cexception%2Crunnable&revision=ae8e94c8f819bd46c31b6fbee1f2cdb5580c9e1f)\n\n- [Failure log](https://treeherder.mozilla.org/logviewer?job_id=467390948&repo=autoland&lineNumber=82963)\n\n- [Backout link](https://hg.mozilla.org/integration/autoland/rev/ccd364648de53087f4da3ce5ff5fc83bd92bb3b2)\n```[task 2024-07-22T16:33:37.151Z] 16:33:37     INFO -  gmake[4]: Entering directory '/builds/worker/workspace/obj-build/gfx/webrender_bindings'\n[task 2024-07-22T16:33:37.156Z] 16:33:37     INFO -  /builds/worker/fetches/sccache/sccache /builds/worker/fetches/clang/bin/clang++ --sysroot /builds/worker/fetches/sysroot-x86_64-linux-gnu -o RenderEGLImageTextureHost.o -c  -I/builds/worker/workspace/obj-build/dist/stl_wrappers -I/builds/worker/workspace/obj-build/dist/system_wrappers -include /builds/worker/checkouts/gecko/config/gcc_hidden.h -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -fstack-protector-strong -fstack-clash-protection -DNDEBUG=1 -DTRIMMED=1 -DMOZ_HAS_MOZGLUE -DMOZILLA_INTERNAL_API -DIMPL_LIBXUL -DMOZ_SUPPORT_LEAKCHECKING -DSTATIC_EXPORTABLE_JS_API -I/builds/worker/checkouts/gecko/gfx/webrender_bindings -I/builds/worker/workspace/obj-build/gfx/webrender_bindings -I/builds/worker/workspace/obj-build/ipc/ipdl/_ipdlheaders -I/builds/worker/checkouts/gecko/ipc/chromium/src -I/builds/worker/checkouts/gecko/gfx/cairo/cairo/src -I/builds/worker/workspace/obj-build/dist/include -I/builds/worker/workspace/obj-build/dist/include/nspr -I/builds/worker/workspace/obj-build/dist/include/nss -DMOZILLA_CLIENT -include /builds/worker/workspace/obj-build/mozilla-config.h -D_GLIBCXX_USE_CXX11_ABI=0 -fno-rtti -pthread -fno-sized-deallocation -fno-aligned-new -ffunction-sections -fdata-sections -fno-math-errno -fno-exceptions -fPIC -fcrash-diagnostics-dir=/builds/worker/artifacts -gdwarf-4 -Xclang -load -Xclang /builds/worker/workspace/obj-build/build/clang-plugin/libclang-plugin.so -Xclang -add-plugin -Xclang moz-check -O2 -fno-omit-frame-pointer -funwind-tables -Werror -Wall -Wbitfield-enum-conversion -Wempty-body -Wformat-type-confusion -Wignored-qualifiers -Wpointer-arith -Wshadow-field-in-constructor-modified -Wsign-compare -Wtautological-constant-in-range-compare -Wtype-limits -Wno-error=tautological-type-limit-compare -Wunreachable-code -Wunreachable-code-return -Wunused-but-set-parameter -Wno-invalid-offsetof -Wclass-varargs -Wempty-init-stmt -Wfloat-overflow-conversion -Wfloat-zero-conversion -Wloop-analysis -Wno-range-loop-analysis -Wenum-compare-conditional -Wenum-float-conversion -Wno-deprecated-anon-enum-enum-conversion -Wno-deprecated-enum-enum-conversion -Wno-deprecated-this-capture -Wcomma -Wimplicit-fallthrough -Wstring-conversion -Wno-inline-new-delete -Wno-error=deprecated-declarations -Wno-error=array-bounds -Wno-error=free-nonheap-object -Wno-error=atomic-alignment -Wno-error=deprecated-builtins -Wformat -Wformat-security -Wno-psabi -Wthread-safety -Wno-error=builtin-macro-redefined -Wno-vla-cxx-extension -Wno-unknown-warning-option -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/freetype2 -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/freetype2 -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/gtk-3.0 -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/pango-1.0 -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/glib-2.0 -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/cairo -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/pixman-1 -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/freetype2 -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/libpng12 -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/gdk-pixbuf-2.0 -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/gio-unix-2.0/ -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/harfbuzz -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/atk-1.0 -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/at-spi2-atk/2.0 -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/at-spi-2.0 -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/dbus-1.0 -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/gtk-3.0/unix-print -pthread -Werror=switch -fno-strict-aliasing -ffp-contract=off  -MD -MP -MF .deps/RenderEGLImageTextureHost.o.pp   /builds/worker/checkouts/gecko/gfx/webrender_bindings/RenderEGLImageTextureHost.cpp\n[task 2024-07-22T16:33:37.157Z] 16:33:37    ERROR -  /builds/worker/checkouts/gecko/gfx/webrender_bindings/RenderEGLImageTextureHost.cpp:123:10: error: 'return' will never be executed [-Werror,-Wunreachable-code-return]\n[task 2024-07-22T16:33:37.158Z] 16:33:37     INFO -    123 |   return true;\n[task 2024-07-22T16:33:37.159Z] 16:33:37     INFO -        |          ^~~~\n[task 2024-07-22T16:33:37.159Z] 16:33:37     INFO -  1 error generated.\n[task 2024-07-22T16:33:37.160Z] 16:33:37    ERROR -  gmake[4]: *** [/builds/worker/checkouts/gecko/config/rules.mk:675: RenderEGLImageTextureHost.o] Error 1\n[task 2024-07-22T16:33:37.161Z] 16:33:37     INFO -  gmake[4]: Leaving directory '/builds/worker/workspace/obj-build/gfx/webrender_bindings'\n[task 2024-07-22T16:33:37.162Z] 16:33:37     INFO -  gmake[4]: Entering directory '/builds/worker/workspace/obj-build/gfx/webrender_bindings'\n[task 2024-07-22T16:33:37.163Z] 16:33:37     INFO -  gfx/webrender_bindings/RenderSharedSurfaceTextureHost.o\n[task 2024-07-22T16:33:37.164Z] 16:33:37     INFO -  gmake[4]: Leaving directory '/builds/worker/workspace/obj-build/gfx/webrender_bindings'\n[task 2024-07-22T16:33:37.258Z] 16:33:37     INFO -  gmake[4]: Entering directory '/builds/worker/workspace/obj-build/gfx/skia'\n[task 2024-07-22T16:33:37.263Z] 16:33:37     INFO -  /builds/worker/fetches/sccache/sccache /builds/worker/fetches/clang/bin/clang++ --sysroot /builds/worker/fetches/sysroot-x86_64-linux-gnu -o SkScan.o -c  -I/builds/worker/workspace/obj-build/dist/stl_wrappers -I/builds/worker/workspace/obj-build/dist/system_wrappers -include /builds/worker/checkouts/gecko/config/gcc_hidden.h -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -fstack-protector-strong -fstack-clash-protection -DNDEBUG=1 -DTRIMMED=1 -DMOZ_SKIA -DSKIA_IMPLEMENTATION=1 -DSK_PDF_USE_HARFBUZZ_SUBSETTING=1 -DMOZ_HAS_MOZGLUE -DMOZILLA_INTERNAL_API -DIMPL_LIBXUL -DMOZ_SUPPORT_LEAKCHECKING -DSTATIC_EXPORTABLE_JS_API -I/builds/worker/checkouts/gecko/gfx/skia -I/builds/worker/workspace/obj-build/gfx/skia -I/builds/worker/checkouts/gecko/gfx/skia/skia -I/builds/worker/checkouts/gecko/gfx/cairo/cairo/src -I/builds/worker/workspace/obj-build/dist/include -I/builds/worker/workspace/obj-build/dist/include/nspr -I/builds/worker/workspace/obj-build/dist/include/nss -DMOZILLA_CLIENT -include /builds/worker/workspace/obj-build/mozilla-config.h -D_GLIBCXX_USE_CXX11_ABI=0 -fno-rtti -pthread -fno-sized-deallocation -fno-aligned-new -ffunction-sections -fdata-sections -fno-math-errno -fno-exceptions -fPIC -fcrash-diagnostics-dir=/builds/worker/artifacts -gdwarf-4 -Xclang -load -Xclang /builds/worker/workspace/obj-build/build/clang-plugin/libclang-plugin.so -Xclang -add-plugin -Xclang moz-check -O2 -fno-omit-frame-pointer -funwind-tables -Wall -Wbitfield-enum-conversion -Wempty-body -Wformat-type-confusion -Wignored-qualifiers -Wpointer-arith -Wshadow-field-in-constructor-modified -Wsign-compare -Wtautological-constant-in-range-compare -Wtype-limits -Wno-error=tautological-type-limit-compare -Wunreachable-code -Wunreachable-code-return -Wunused-but-set-parameter -Wno-invalid-offsetof -Wclass-varargs -Wempty-init-stmt -Wfloat-overflow-conversion -Wfloat-zero-conversion -Wloop-analysis -Wno-range-loop-analysis -Wenum-compare-conditional -Wenum-float-conversion -Wno-deprecated-anon-enum-enum-conversion -Wno-deprecated-enum-enum-conversion -Wno-deprecated-this-capture -Wcomma -Wimplicit-fallthrough -Wstring-conversion -Wno-inline-new-delete -Wno-error=deprecated-declarations -Wno-error=array-bounds -Wno-error=free-nonheap-object -Wno-error=atomic-alignment -Wno-error=deprecated-builtins -Wformat -Wformat-security -Wno-psabi -Wthread-safety -Wno-error=builtin-macro-redefined -Wno-vla-cxx-extension -Wno-unknown-warning-option -Wno-deprecated-declarations -Wno-overloaded-virtual -Wno-sign-compare -Wno-unreachable-code -Wno-unused-function -Wno-implicit-fallthrough -Wno-inconsistent-missing-override -Wno-macro-redefined -Wno-unused-private-field -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/freetype2 -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/freetype2 -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/pango-1.0 -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include/glib-2.0 -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/builds/worker/fetches/sysroot-x86_64-linux-gnu/usr/include -pthread -fno-strict-aliasing -ffp-contract=off  -MD -MP -MF .deps/SkScan.o.pp   /builds/worker/checkouts/gecko/gfx/skia/skia/src/core/SkScan.cpp\n[task 2024-07-22T16:33:37.264Z] 16:33:37     INFO -  gmake[4]: Leaving directory '/builds/worker/workspace/obj-build/gfx/skia'\n```",
+      "time": "2024-07-22T17:31:20Z",
+      "id": 17037174,
+      "attachment_id": null,
+      "tags": [],
+      "creation_time": "2024-07-22T17:31:20Z"
+    },
+    {
+      "time": "2024-07-22T20:27:11Z",
+      "is_private": false,
+      "count": 8,
+      "author": "pulsebot@bmo.tld",
+      "raw_text": "Pushed by jnicol@mozilla.com:\nhttps://hg.mozilla.org/integration/autoland/rev/4b60c438e5d6\nDon't call TexTypeForWebgl when initializing offscreen canvas. r=aosmond,jgilbert\nhttps://hg.mozilla.org/integration/autoland/rev/1b2832c0fac8\nTidy up RenderCompositorOGLSWGL::HandleExternalImage. r=sotaro\nhttps://hg.mozilla.org/integration/autoland/rev/a2691ee38a5e\nMake SharedSurface_EGLImage and (Render)EGLImageTextureHost work. r=sotaro,jgilbert\nhttps://hg.mozilla.org/integration/autoland/rev/7e0171e88041\nKeep SharedSurface_EGLImages alive but do not recycle them. r=sotaro,jgilbert\nhttps://hg.mozilla.org/integration/autoland/rev/a4031c701928\nUse SharedSurface_EGLImage for out-of-process webgl and accelerated canvas on Android. r=sotaro,jgilbert",
+      "attachment_id": null,
+      "id": 17037380,
+      "tags": [],
+      "creation_time": "2024-07-22T20:27:11Z",
+      "text": "Pushed by jnicol@mozilla.com:\nhttps://hg.mozilla.org/integration/autoland/rev/4b60c438e5d6\nDon't call TexTypeForWebgl when initializing offscreen canvas. r=aosmond,jgilbert\nhttps://hg.mozilla.org/integration/autoland/rev/1b2832c0fac8\nTidy up RenderCompositorOGLSWGL::HandleExternalImage. r=sotaro\nhttps://hg.mozilla.org/integration/autoland/rev/a2691ee38a5e\nMake SharedSurface_EGLImage and (Render)EGLImageTextureHost work. r=sotaro,jgilbert\nhttps://hg.mozilla.org/integration/autoland/rev/7e0171e88041\nKeep SharedSurface_EGLImages alive but do not recycle them. r=sotaro,jgilbert\nhttps://hg.mozilla.org/integration/autoland/rev/a4031c701928\nUse SharedSurface_EGLImage for out-of-process webgl and accelerated canvas on Android. r=sotaro,jgilbert",
+      "creator": "pulsebot@bmo.tld",
+      "bug_id": 1898238,
+      "reactions": {}
+    },
+    {
+      "text": "https://hg.mozilla.org/mozilla-central/rev/4b60c438e5d6\nhttps://hg.mozilla.org/mozilla-central/rev/1b2832c0fac8\nhttps://hg.mozilla.org/mozilla-central/rev/a2691ee38a5e\nhttps://hg.mozilla.org/mozilla-central/rev/7e0171e88041\nhttps://hg.mozilla.org/mozilla-central/rev/a4031c701928",
+      "creator": "nfay@mozilla.com",
+      "bug_id": 1898238,
+      "reactions": {},
+      "time": "2024-07-23T09:37:17Z",
+      "author": "nfay@mozilla.com",
+      "count": 9,
+      "is_private": false,
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/4b60c438e5d6\nhttps://hg.mozilla.org/mozilla-central/rev/1b2832c0fac8\nhttps://hg.mozilla.org/mozilla-central/rev/a2691ee38a5e\nhttps://hg.mozilla.org/mozilla-central/rev/7e0171e88041\nhttps://hg.mozilla.org/mozilla-central/rev/a4031c701928",
+      "id": 17038003,
+      "attachment_id": null,
+      "tags": [
+        "bugherder"
+      ],
+      "creation_time": "2024-07-23T09:37:17Z"
+    }
+  ],
+  "cf_tracking_thunderbird_esr140": "---",
+  "regressions": [
+    1910516,
+    1914774
+  ],
+  "cf_crash_signature": "",
+  "comment_count": 10,
+  "cf_cab_review": "---",
+  "cf_status_firefox_esr140": "---",
+  "cf_tracking_firefox_relnote": "---",
+  "platform": "Unspecified",
+  "version": "unspecified",
+  "qa_contact": "",
+  "cf_tracking_firefox149": "---",
+  "product": "Core",
+  "history": [
+    {
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "cc",
+          "added": "mayankleoboy1@gmail.com"
+        }
+      ],
+      "who": "mayankleoboy1@gmail.com",
+      "when": "2024-05-22T13:43:44Z"
+    },
+    {
+      "changes": [
+        {
+          "added": "jan@ikenmeyer.eu",
+          "field_name": "cc",
+          "removed": ""
+        }
+      ],
+      "who": "jan@ikenmeyer.eu",
+      "when": "2024-05-22T15:18:40Z"
+    },
+    {
+      "changes": [
+        {
+          "added": "emanuellclaudiu@gmail.com",
+          "field_name": "cc",
+          "removed": ""
+        }
+      ],
+      "who": "emanuellclaudiu@gmail.com",
+      "when": "2024-05-26T23:32:40Z"
+    },
+    {
+      "who": "mstange.moz@gmail.com",
+      "when": "2024-07-22T15:02:42Z",
+      "changes": [
+        {
+          "added": "mstange.moz@gmail.com",
+          "field_name": "cc",
+          "removed": ""
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "field_name": "flagtypes.name",
+          "added": "needinfo?(jnicol@mozilla.com)",
+          "removed": ""
+        }
+      ],
+      "who": "imoraru@mozilla.com",
+      "when": "2024-07-22T17:31:20Z"
+    },
+    {
+      "changes": [
+        {
+          "field_name": "flagtypes.name",
+          "added": "",
+          "removed": "needinfo?(jnicol@mozilla.com)"
+        }
+      ],
+      "who": "jnicol@mozilla.com",
+      "when": "2024-07-22T19:17:28Z"
+    },
+    {
+      "changes": [
+        {
+          "field_name": "status",
+          "added": "RESOLVED",
+          "removed": "NEW"
+        },
+        {
+          "removed": "---",
+          "added": "130 Branch",
+          "field_name": "target_milestone"
+        },
+        {
+          "removed": "",
+          "added": "FIXED",
+          "field_name": "resolution"
+        },
+        {
+          "removed": "",
+          "added": "2024-07-23T09:37:17Z",
+          "field_name": "cf_last_resolved"
+        },
+        {
+          "field_name": "cf_status_firefox130",
+          "added": "fixed",
+          "removed": "---"
+        },
+        {
+          "added": "bugherder",
+          "field_name": "comment_tag",
+          "comment_id": 17038003,
+          "comment_count": 9,
+          "removed": ""
+        }
+      ],
+      "when": "2024-07-23T09:37:17Z",
+      "who": "nfay@mozilla.com"
+    },
+    {
+      "changes": [
+        {
+          "field_name": "regressions",
+          "added": "1910516",
+          "removed": ""
+        }
+      ],
+      "when": "2024-07-30T00:41:02Z",
+      "who": "release-mgmt-account-bot@mozilla.tld"
+    },
+    {
+      "who": "lsalzman@mozilla.com",
+      "when": "2024-10-23T06:07:15Z",
+      "changes": [
+        {
+          "field_name": "regressions",
+          "added": "1914774",
+          "removed": ""
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "field_name": "see_also",
+          "added": "https://bugzilla.mozilla.org/show_bug.cgi?id=1810658",
+          "removed": ""
+        }
+      ],
+      "when": "2026-01-28T00:41:55Z",
+      "who": "sotaro.ikeda.g@gmail.com"
+    },
+    {
+      "who": "pasik@iki.fi",
+      "when": "2026-01-28T19:05:00Z",
+      "changes": [
+        {
+          "removed": "",
+          "added": "pasik@iki.fi",
+          "field_name": "cc"
+        }
+      ]
+    }
+  ],
+  "cf_status_firefox130": "fixed",
+  "keywords": [],
+  "severity": "--",
+  "filed_via": "standard_form"
+}

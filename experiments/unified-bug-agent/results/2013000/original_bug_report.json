@@ -1,0 +1,301 @@
+{
+  "target_milestone": "149 Branch",
+  "cc": [],
+  "description": "",
+  "is_creator_accessible": true,
+  "creator": "dao+bmo@mozilla.com",
+  "cf_fx_points": "---",
+  "url": "",
+  "cf_webcompat_score": "---",
+  "cc_detail": [],
+  "cf_qa_whiteboard": "",
+  "cf_status_firefox149": "fixed",
+  "cf_tracking_firefox_esr115": "---",
+  "cf_user_story": "",
+  "mentors_detail": [],
+  "duplicates": [],
+  "cf_last_resolved": "2026-01-31T09:21:51Z",
+  "dupe_of": null,
+  "triage_owner_detail": {
+    "email": "jteow@mozilla.com",
+    "name": "jteow@mozilla.com",
+    "nick": "jteow",
+    "real_name": "James Teow [:jteow]",
+    "id": 701257
+  },
+  "depends_on": [],
+  "flags": [],
+  "resolution": "FIXED",
+  "attachments": [
+    {
+      "is_obsolete": 0,
+      "creator": "dao+bmo@mozilla.com",
+      "creator_detail": {
+        "real_name": "D\u00e3o Gottwald [:dao]",
+        "id": 219124,
+        "nick": "dao",
+        "email": "dao+bmo@mozilla.com",
+        "name": "dao+bmo@mozilla.com"
+      },
+      "description": "Bug 2013000 - Move sanitizeTextFromClipboard to UrlbarUtils. r?mbeier",
+      "last_change_time": "2026-01-29T15:04:36Z",
+      "file_name": "phabricator-D280967-url.txt",
+      "bug_id": 2013000,
+      "size": 48,
+      "id": 9540927,
+      "summary": "Bug 2013000 - Move sanitizeTextFromClipboard to UrlbarUtils. r?mbeier",
+      "content_type": "text/x-phabricator-request",
+      "is_private": 0,
+      "attacher": "dao+bmo@mozilla.com",
+      "flags": [],
+      "is_patch": 0,
+      "creation_time": "2026-01-29T15:04:36Z",
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjgwOTY3"
+    }
+  ],
+  "creator_detail": {
+    "real_name": "D\u00e3o Gottwald [:dao]",
+    "id": 219124,
+    "nick": "dao",
+    "email": "dao+bmo@mozilla.com",
+    "name": "dao+bmo@mozilla.com"
+  },
+  "classification": "Client Software",
+  "cf_accessibility_severity": "---",
+  "last_change_time_non_bot": "2026-01-31T09:21:51Z",
+  "status": "RESOLVED",
+  "groups": [],
+  "blocks": [
+    2012999,
+    2013282
+  ],
+  "cf_tracking_firefox_esr140": "---",
+  "cf_has_str": "---",
+  "last_change_time": "2026-01-31T09:21:51Z",
+  "mentors": [],
+  "assigned_to": "dao+bmo@mozilla.com",
+  "cf_status_firefox148": "---",
+  "priority": "P1",
+  "summary": "Move sanitizeTextFromClipboard to UrlbarUtils",
+  "id": 2013000,
+  "counts": {
+    "attachments": 1,
+    "keywords": 0,
+    "cc": 0,
+    "duplicates": 0,
+    "regressions": 0,
+    "regressed_by": 0,
+    "comments": 4,
+    "depends_on": 2,
+    "blocks": 0
+  },
+  "creation_time": "2026-01-28T13:45:04Z",
+  "cf_fx_iteration": "---",
+  "is_open": false,
+  "component": "Address Bar",
+  "history": [
+    {
+      "who": "jira-integration@bots.tld",
+      "when": "2026-01-28T13:45:33Z",
+      "changes": [
+        {
+          "field_name": "see_also",
+          "added": "https://mozilla-hub.atlassian.net/browse/SNG-3285",
+          "removed": ""
+        }
+      ]
+    },
+    {
+      "who": "dao+bmo@mozilla.com",
+      "when": "2026-01-29T14:00:15Z",
+      "changes": [
+        {
+          "field_name": "blocks",
+          "added": "2013282",
+          "removed": ""
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "added": "2013283",
+          "field_name": "blocks",
+          "removed": ""
+        }
+      ],
+      "when": "2026-01-29T14:01:00Z",
+      "who": "dao+bmo@mozilla.com"
+    },
+    {
+      "when": "2026-01-29T14:01:54Z",
+      "who": "dao+bmo@mozilla.com",
+      "changes": [
+        {
+          "added": "",
+          "field_name": "blocks",
+          "removed": "2013283"
+        }
+      ]
+    },
+    {
+      "who": "phab-bot@bmo.tld",
+      "when": "2026-01-29T15:04:36Z",
+      "changes": [
+        {
+          "added": "dao+bmo@mozilla.com",
+          "field_name": "assigned_to",
+          "removed": "nobody@mozilla.org"
+        },
+        {
+          "removed": "NEW",
+          "added": "ASSIGNED",
+          "field_name": "status"
+        }
+      ]
+    },
+    {
+      "who": "pstanciu@mozilla.com",
+      "when": "2026-01-31T09:21:51Z",
+      "changes": [
+        {
+          "removed": "---",
+          "field_name": "target_milestone",
+          "added": "149 Branch"
+        },
+        {
+          "removed": "ASSIGNED",
+          "added": "RESOLVED",
+          "field_name": "status"
+        },
+        {
+          "field_name": "resolution",
+          "added": "FIXED",
+          "removed": ""
+        },
+        {
+          "removed": "",
+          "added": "2026-01-31T09:21:51Z",
+          "field_name": "cf_last_resolved"
+        },
+        {
+          "added": "fixed",
+          "field_name": "cf_status_firefox149",
+          "removed": "---"
+        },
+        {
+          "comment_count": 3,
+          "field_name": "comment_tag",
+          "added": "bugherder",
+          "comment_id": 17868304,
+          "removed": ""
+        }
+      ]
+    }
+  ],
+  "keywords": [],
+  "product": "Firefox",
+  "filed_via": "standard_form",
+  "severity": "N/A",
+  "cf_cab_review": "---",
+  "comment_count": 4,
+  "cf_status_firefox_esr140": "---",
+  "cf_crash_signature": "",
+  "regressions": [],
+  "cf_tracking_firefox149": "---",
+  "version": "unspecified",
+  "qa_contact": "",
+  "platform": "Unspecified",
+  "cf_tracking_firefox_relnote": "---",
+  "cf_a11y_review_project_flag": "---",
+  "see_also": [
+    "https://mozilla-hub.atlassian.net/browse/SNG-3285"
+  ],
+  "op_sys": "Unspecified",
+  "comments": [
+    {
+      "bug_id": 2013000,
+      "reactions": {},
+      "creator": "dao+bmo@mozilla.com",
+      "text": "",
+      "creation_time": "2026-01-28T13:45:04Z",
+      "tags": [],
+      "id": 17863247,
+      "attachment_id": null,
+      "time": "2026-01-28T13:45:04Z",
+      "is_private": false,
+      "author": "dao+bmo@mozilla.com",
+      "count": 0,
+      "raw_text": ""
+    },
+    {
+      "is_private": false,
+      "count": 1,
+      "author": "dao+bmo@mozilla.com",
+      "raw_text": "",
+      "time": "2026-01-29T15:04:36Z",
+      "id": 17865251,
+      "attachment_id": 9540927,
+      "tags": [],
+      "creation_time": "2026-01-29T15:04:36Z",
+      "text": "Created attachment 9540927\nBug 2013000 - Move sanitizeTextFromClipboard to UrlbarUtils. r?mbeier",
+      "creator": "dao+bmo@mozilla.com",
+      "bug_id": 2013000,
+      "reactions": {}
+    },
+    {
+      "raw_text": "Pushed by dgottwald@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/fdb418c1dfa2\nhttps://hg.mozilla.org/integration/autoland/rev/40d811ecd460\nMove sanitizeTextFromClipboard to UrlbarUtils. r=mbeier,urlbar-reviewers",
+      "is_private": false,
+      "count": 2,
+      "author": "pulsebot@bmo.tld",
+      "time": "2026-01-30T18:03:25Z",
+      "attachment_id": null,
+      "id": 17867584,
+      "tags": [],
+      "creation_time": "2026-01-30T18:03:25Z",
+      "text": "Pushed by dgottwald@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/fdb418c1dfa2\nhttps://hg.mozilla.org/integration/autoland/rev/40d811ecd460\nMove sanitizeTextFromClipboard to UrlbarUtils. r=mbeier,urlbar-reviewers",
+      "creator": "pulsebot@bmo.tld",
+      "reactions": {},
+      "bug_id": 2013000
+    },
+    {
+      "reactions": {},
+      "bug_id": 2013000,
+      "creator": "pstanciu@mozilla.com",
+      "text": "https://hg.mozilla.org/mozilla-central/rev/40d811ecd460",
+      "creation_time": "2026-01-31T09:21:51Z",
+      "tags": [
+        "bugherder"
+      ],
+      "attachment_id": null,
+      "id": 17868304,
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/40d811ecd460",
+      "author": "pstanciu@mozilla.com",
+      "count": 3,
+      "is_private": false,
+      "time": "2026-01-31T09:21:51Z"
+    }
+  ],
+  "cf_tracking_firefox147": "---",
+  "whiteboard": "[sng]",
+  "votes": 0,
+  "assigned_to_detail": {
+    "email": "dao+bmo@mozilla.com",
+    "name": "dao+bmo@mozilla.com",
+    "nick": "dao",
+    "id": 219124,
+    "real_name": "D\u00e3o Gottwald [:dao]"
+  },
+  "is_cc_accessible": true,
+  "type": "task",
+  "alias": null,
+  "cf_status_firefox147": "---",
+  "cf_performance_impact": "---",
+  "cf_tracking_firefox148": "---",
+  "regressed_by": [],
+  "cf_status_firefox_esr115": "---",
+  "cf_webcompat_priority": "---",
+  "is_confirmed": true,
+  "triage_owner": "jteow@mozilla.com",
+  "cf_rank": null
+}

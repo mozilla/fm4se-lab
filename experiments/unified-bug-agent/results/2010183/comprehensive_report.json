@@ -1,0 +1,655 @@
+{
+  "bug_id": 2010183,
+  "timestamp": "2026-02-01 17:41:13",
+  "data_sources": [
+    "bugzilla",
+    "crash-stats"
+  ],
+  "bug_data": {
+    "cc_detail": [],
+    "version": "unspecified",
+    "duplicates": [],
+    "cf_webcompat_priority": "---",
+    "mentors": [],
+    "cf_fx_iteration": "---",
+    "creation_time": "2026-01-14T01:16:29Z",
+    "description": "Update the Wikipedia suggestions row UI. See [the Figma spec](https://www.figma.com/design/HlHYKdDVCszbbpjuovBDjg/Carrots---S-S-Online-Explorations?node-id=6584-5018&t=Xg06pmlLPj9lmpCj-0):\n\n* The title should be \"[article title] \u00b7 Wikipedia\", but offhand I'm not sure that's possible since the titles are defined in the RS and Merino data. We may have to ignore that part, at least for now, and do it as a follow-up.\n* Show \"Recommended\" as the bottom text\n* The icon size should *not* change now since that will be done later as part of Nova\n* Show URL at the bottom on hover/selection? Check with Paul et al. first since Wikipedia suggestions currently do not show URL",
+    "id": 2010183,
+    "is_confirmed": true,
+    "target_milestone": "149 Branch",
+    "cf_a11y_review_project_flag": "---",
+    "platform": "Unspecified",
+    "regressed_by": [],
+    "history": [
+      {
+        "changes": [
+          {
+            "field_name": "see_also",
+            "added": "https://mozilla-hub.atlassian.net/browse/SNG-3243",
+            "removed": ""
+          }
+        ],
+        "when": "2026-01-14T01:16:40Z",
+        "who": "jira-integration@bots.tld"
+      },
+      {
+        "who": "adw@mozilla.com",
+        "changes": [
+          {
+            "field_name": "status",
+            "removed": "NEW",
+            "added": "ASSIGNED"
+          },
+          {
+            "removed": "nobody@mozilla.org",
+            "added": "adw@mozilla.com",
+            "field_name": "assigned_to"
+          }
+        ],
+        "when": "2026-01-24T02:32:43Z"
+      },
+      {
+        "who": "agoloman@mozilla.com",
+        "changes": [
+          {
+            "field_name": "status",
+            "removed": "ASSIGNED",
+            "added": "RESOLVED"
+          },
+          {
+            "added": "FIXED",
+            "removed": "",
+            "field_name": "resolution"
+          },
+          {
+            "field_name": "target_milestone",
+            "removed": "---",
+            "added": "149 Branch"
+          },
+          {
+            "field_name": "cf_last_resolved",
+            "added": "2026-01-30T21:17:19Z",
+            "removed": ""
+          },
+          {
+            "field_name": "cf_status_firefox149",
+            "removed": "---",
+            "added": "fixed"
+          },
+          {
+            "comment_count": 4,
+            "field_name": "comment_tag",
+            "comment_id": 17867867,
+            "removed": "",
+            "added": "bugherder"
+          }
+        ],
+        "when": "2026-01-30T21:17:19Z"
+      }
+    ],
+    "cf_rank": null,
+    "alias": null,
+    "cf_tracking_firefox149": "---",
+    "whiteboard": "[sng]",
+    "cf_fx_points": "---",
+    "priority": "P1",
+    "cf_status_firefox148": "---",
+    "see_also": [
+      "https://mozilla-hub.atlassian.net/browse/SNG-3243"
+    ],
+    "cf_performance_impact": "---",
+    "cf_tracking_firefox_esr140": "---",
+    "creator": "adw@mozilla.com",
+    "cf_status_firefox149": "fixed",
+    "cf_status_firefox_esr140": "---",
+    "status": "RESOLVED",
+    "flags": [],
+    "resolution": "FIXED",
+    "op_sys": "Unspecified",
+    "triage_owner_detail": {
+      "id": 701257,
+      "email": "jteow@mozilla.com",
+      "nick": "jteow",
+      "name": "jteow@mozilla.com",
+      "real_name": "James Teow [:jteow]"
+    },
+    "cf_tracking_firefox147": "---",
+    "product": "Firefox",
+    "groups": [],
+    "triage_owner": "jteow@mozilla.com",
+    "qa_contact": "",
+    "cf_has_str": "---",
+    "cf_status_firefox_esr115": "---",
+    "comment_count": 5,
+    "cf_user_story": "",
+    "classification": "Client Software",
+    "creator_detail": {
+      "id": 334927,
+      "email": "adw@mozilla.com",
+      "real_name": "Drew Willcoxon :adw",
+      "nick": "adw",
+      "name": "adw@mozilla.com"
+    },
+    "last_change_time_non_bot": "2026-01-30T21:17:19Z",
+    "cf_qa_whiteboard": "",
+    "cf_tracking_firefox148": "---",
+    "cf_crash_signature": "",
+    "summary": "Update the Wikipedia suggestions row UI",
+    "assigned_to_detail": {
+      "nick": "adw",
+      "name": "adw@mozilla.com",
+      "real_name": "Drew Willcoxon :adw",
+      "id": 334927,
+      "email": "adw@mozilla.com"
+    },
+    "cf_tracking_firefox_esr115": "---",
+    "last_change_time": "2026-01-30T21:17:19Z",
+    "regressions": [],
+    "dupe_of": null,
+    "component": "Address Bar",
+    "votes": 0,
+    "depends_on": [],
+    "is_open": false,
+    "is_creator_accessible": true,
+    "comments": [
+      {
+        "attachment_id": null,
+        "author": "adw@mozilla.com",
+        "reactions": {},
+        "text": "Update the Wikipedia suggestions row UI. See [the Figma spec](https://www.figma.com/design/HlHYKdDVCszbbpjuovBDjg/Carrots---S-S-Online-Explorations?node-id=6584-5018&t=Xg06pmlLPj9lmpCj-0):\n\n* The title should be \"[article title] \u00b7 Wikipedia\", but offhand I'm not sure that's possible since the titles are defined in the RS and Merino data. We may have to ignore that part, at least for now, and do it as a follow-up.\n* Show \"Recommended\" as the bottom text\n* The icon size should *not* change now since that will be done later as part of Nova\n* Show URL at the bottom on hover/selection? Check with Paul et al. first since Wikipedia suggestions currently do not show URL",
+        "is_private": false,
+        "tags": [],
+        "time": "2026-01-14T01:16:29Z",
+        "creation_time": "2026-01-14T01:16:29Z",
+        "count": 0,
+        "id": 17841538,
+        "raw_text": "Update the Wikipedia suggestions row UI. See [the Figma spec](https://www.figma.com/design/HlHYKdDVCszbbpjuovBDjg/Carrots---S-S-Online-Explorations?node-id=6584-5018&t=Xg06pmlLPj9lmpCj-0):\n\n* The title should be \"[article title] \u00b7 Wikipedia\", but offhand I'm not sure that's possible since the titles are defined in the RS and Merino data. We may have to ignore that part, at least for now, and do it as a follow-up.\n* Show \"Recommended\" as the bottom text\n* The icon size should *not* change now since that will be done later as part of Nova\n* Show URL at the bottom on hover/selection? Check with Paul et al. first since Wikipedia suggestions currently do not show URL",
+        "creator": "adw@mozilla.com",
+        "bug_id": 2010183
+      },
+      {
+        "bug_id": 2010183,
+        "creator": "adw@mozilla.com",
+        "count": 1,
+        "id": 17841545,
+        "raw_text": "The Figma shows a higher-placement Wikipedia (top pick) but that's just to illustrate what an \"informational\" top pick would look like. Wikipedia should continue to be lower-placement.",
+        "creation_time": "2026-01-14T01:23:22Z",
+        "time": "2026-01-14T01:23:22Z",
+        "tags": [],
+        "is_private": false,
+        "text": "The Figma shows a higher-placement Wikipedia (top pick) but that's just to illustrate what an \"informational\" top pick would look like. Wikipedia should continue to be lower-placement.",
+        "reactions": {},
+        "author": "adw@mozilla.com",
+        "attachment_id": null
+      },
+      {
+        "bug_id": 2010183,
+        "creator": "adw@mozilla.com",
+        "raw_text": "Depends on D280386",
+        "id": 17865794,
+        "count": 2,
+        "creation_time": "2026-01-29T20:16:58Z",
+        "time": "2026-01-29T20:16:58Z",
+        "tags": [],
+        "is_private": false,
+        "text": "Created attachment 9541047\nBug 2010183 - Update the Firefox Suggest Wikipedia suggestions row UI.\n\nDepends on D280386",
+        "reactions": {},
+        "author": "adw@mozilla.com",
+        "attachment_id": 9541047
+      },
+      {
+        "tags": [],
+        "time": "2026-01-30T16:42:40Z",
+        "count": 3,
+        "id": 17867394,
+        "raw_text": "Pushed by dwillcoxon@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/e19e19a55758\nhttps://hg.mozilla.org/integration/autoland/rev/a526464d426c\nUpdate the Firefox Suggest Wikipedia suggestions row UI. r=daisuke",
+        "creation_time": "2026-01-30T16:42:40Z",
+        "bug_id": 2010183,
+        "creator": "pulsebot@bmo.tld",
+        "attachment_id": null,
+        "author": "pulsebot@bmo.tld",
+        "reactions": {},
+        "is_private": false,
+        "text": "Pushed by dwillcoxon@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/e19e19a55758\nhttps://hg.mozilla.org/integration/autoland/rev/a526464d426c\nUpdate the Firefox Suggest Wikipedia suggestions row UI. r=daisuke"
+      },
+      {
+        "author": "agoloman@mozilla.com",
+        "attachment_id": null,
+        "is_private": false,
+        "text": "https://hg.mozilla.org/mozilla-central/rev/a526464d426c",
+        "reactions": {},
+        "time": "2026-01-30T21:17:19Z",
+        "tags": [
+          "bugherder"
+        ],
+        "bug_id": 2010183,
+        "creator": "agoloman@mozilla.com",
+        "count": 4,
+        "id": 17867867,
+        "raw_text": "https://hg.mozilla.org/mozilla-central/rev/a526464d426c",
+        "creation_time": "2026-01-30T21:17:19Z"
+      }
+    ],
+    "cc": [],
+    "cf_cab_review": "---",
+    "cf_tracking_firefox_relnote": "---",
+    "attachments": [
+      {
+        "flags": [],
+        "size": 48,
+        "content_type": "text/x-phabricator-request",
+        "attacher": "adw@mozilla.com",
+        "is_obsolete": 0,
+        "last_change_time": "2026-01-29T20:16:58Z",
+        "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjgxMDY1",
+        "is_patch": 0,
+        "creator_detail": {
+          "real_name": "Drew Willcoxon :adw",
+          "nick": "adw",
+          "name": "adw@mozilla.com",
+          "id": 334927,
+          "email": "adw@mozilla.com"
+        },
+        "creation_time": "2026-01-29T20:16:58Z",
+        "description": "Bug 2010183 - Update the Firefox Suggest Wikipedia suggestions row UI.",
+        "id": 9541047,
+        "creator": "adw@mozilla.com",
+        "bug_id": 2010183,
+        "summary": "Bug 2010183 - Update the Firefox Suggest Wikipedia suggestions row UI.",
+        "file_name": "phabricator-D281065-url.txt",
+        "is_private": 0
+      }
+    ],
+    "counts": {
+      "depends_on": 1,
+      "keywords": 0,
+      "attachments": 1,
+      "regressed_by": 0,
+      "regressions": 0,
+      "duplicates": 0,
+      "blocks": 0,
+      "cc": 0,
+      "comments": 5
+    },
+    "cf_last_resolved": "2026-01-30T21:17:19Z",
+    "is_cc_accessible": true,
+    "filed_via": "standard_form",
+    "mentors_detail": [],
+    "cf_webcompat_score": "---",
+    "keywords": [],
+    "cf_status_firefox147": "---",
+    "type": "task",
+    "cf_accessibility_severity": "---",
+    "severity": "N/A",
+    "blocks": [
+      2010175
+    ],
+    "assigned_to": "adw@mozilla.com",
+    "url": ""
+  },
+  "comments": [
+    {
+      "author": "adw@mozilla.com",
+      "attachment_id": null,
+      "tags": [],
+      "count": 0,
+      "time": "2026-01-14T01:16:29Z",
+      "raw_text": "Update the Wikipedia suggestions row UI. See [the Figma spec](https://www.figma.com/design/HlHYKdDVCszbbpjuovBDjg/Carrots---S-S-Online-Explorations?node-id=6584-5018&t=Xg06pmlLPj9lmpCj-0):\n\n* The title should be \"[article title] \u00b7 Wikipedia\", but offhand I'm not sure that's possible since the titles are defined in the RS and Merino data. We may have to ignore that part, at least for now, and do it as a follow-up.\n* Show \"Recommended\" as the bottom text\n* The icon size should *not* change now since that will be done later as part of Nova\n* Show URL at the bottom on hover/selection? Check with Paul et al. first since Wikipedia suggestions currently do not show URL",
+      "creation_time": "2026-01-14T01:16:29Z",
+      "creator": "adw@mozilla.com",
+      "bug_id": 2010183,
+      "text": "Update the Wikipedia suggestions row UI. See [the Figma spec](https://www.figma.com/design/HlHYKdDVCszbbpjuovBDjg/Carrots---S-S-Online-Explorations?node-id=6584-5018&t=Xg06pmlLPj9lmpCj-0):\n\n* The title should be \"[article title] \u00b7 Wikipedia\", but offhand I'm not sure that's possible since the titles are defined in the RS and Merino data. We may have to ignore that part, at least for now, and do it as a follow-up.\n* Show \"Recommended\" as the bottom text\n* The icon size should *not* change now since that will be done later as part of Nova\n* Show URL at the bottom on hover/selection? Check with Paul et al. first since Wikipedia suggestions currently do not show URL",
+      "is_private": false,
+      "id": 17841538,
+      "reactions": {}
+    },
+    {
+      "raw_text": "The Figma shows a higher-placement Wikipedia (top pick) but that's just to illustrate what an \"informational\" top pick would look like. Wikipedia should continue to be lower-placement.",
+      "creation_time": "2026-01-14T01:23:22Z",
+      "creator": "adw@mozilla.com",
+      "text": "The Figma shows a higher-placement Wikipedia (top pick) but that's just to illustrate what an \"informational\" top pick would look like. Wikipedia should continue to be lower-placement.",
+      "bug_id": 2010183,
+      "is_private": false,
+      "reactions": {},
+      "id": 17841545,
+      "author": "adw@mozilla.com",
+      "attachment_id": null,
+      "count": 1,
+      "tags": [],
+      "time": "2026-01-14T01:23:22Z"
+    },
+    {
+      "id": 17865794,
+      "reactions": {},
+      "is_private": false,
+      "text": "Created attachment 9541047\nBug 2010183 - Update the Firefox Suggest Wikipedia suggestions row UI.\n\nDepends on D280386",
+      "bug_id": 2010183,
+      "creator": "adw@mozilla.com",
+      "creation_time": "2026-01-29T20:16:58Z",
+      "raw_text": "Depends on D280386",
+      "time": "2026-01-29T20:16:58Z",
+      "count": 2,
+      "tags": [],
+      "author": "adw@mozilla.com",
+      "attachment_id": 9541047
+    },
+    {
+      "raw_text": "Pushed by dwillcoxon@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/e19e19a55758\nhttps://hg.mozilla.org/integration/autoland/rev/a526464d426c\nUpdate the Firefox Suggest Wikipedia suggestions row UI. r=daisuke",
+      "author": "pulsebot@bmo.tld",
+      "attachment_id": null,
+      "creator": "pulsebot@bmo.tld",
+      "creation_time": "2026-01-30T16:42:40Z",
+      "tags": [],
+      "bug_id": 2010183,
+      "text": "Pushed by dwillcoxon@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/e19e19a55758\nhttps://hg.mozilla.org/integration/autoland/rev/a526464d426c\nUpdate the Firefox Suggest Wikipedia suggestions row UI. r=daisuke",
+      "count": 3,
+      "reactions": {},
+      "id": 17867394,
+      "is_private": false,
+      "time": "2026-01-30T16:42:40Z"
+    },
+    {
+      "creation_time": "2026-01-30T21:17:19Z",
+      "creator": "agoloman@mozilla.com",
+      "attachment_id": null,
+      "author": "agoloman@mozilla.com",
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/a526464d426c",
+      "is_private": false,
+      "id": 17867867,
+      "reactions": {},
+      "time": "2026-01-30T21:17:19Z",
+      "tags": [
+        "bugherder"
+      ],
+      "bug_id": 2010183,
+      "count": 4,
+      "text": "https://hg.mozilla.org/mozilla-central/rev/a526464d426c"
+    }
+  ],
+  "crash_context": {
+    "signature": "libc.so | libart.so | libbase.so",
+    "product": "Fenix",
+    "version": "147.0.1",
+    "os": null
+  },
+  "crashes": [
+    {
+      "uuid": "07d8d654-1dcf-4e19-abbd-4aea00260125",
+      "date": "2026-01-25T21:39:14.453099+00:00",
+      "product": "Fenix",
+      "version": "147.0.1",
+      "signature": "libc.so | libart.so | libbase.so"
+    },
+    {
+      "uuid": "b4a8f3c7-2a8d-41b8-86bc-b9b5b0260125",
+      "date": "2026-01-25T21:40:52.480315+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "mozilla::dom::quota::QuotaManager::Shutdown::<T>::operator()"
+    },
+    {
+      "uuid": "2c10a5d2-6cf0-4878-b651-f9fe80260125",
+      "date": "2026-01-25T21:40:43.757520+00:00",
+      "product": "Fenix",
+      "version": "132.0",
+      "signature": "libunwind.so"
+    },
+    {
+      "uuid": "65b22414-9062-43a6-aeb4-aadbe0260125",
+      "date": "2026-01-25T21:39:09.044338+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "firefox_on_glean::factory::create_and_register_metric"
+    },
+    {
+      "uuid": "540d21fe-6800-4962-b408-b225e0260125",
+      "date": "2026-01-25T21:41:25.833669+00:00",
+      "product": "Fenix",
+      "version": "143.0.4",
+      "signature": "java.lang.RuntimeException: at org.mozilla.gecko.crashhelper.CrashHelper$1CrashHelperConnection.onServiceConnected(CrashHelper.java)"
+    },
+    {
+      "uuid": "d03c7087-1d38-4800-b2ae-6ec210260125",
+      "date": "2026-01-25T23:06:34.755371+00:00",
+      "product": "Firefox",
+      "version": "149.0a1",
+      "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::AutoEnterOOMUnsafeRegion::crash | js::gc::AllocateTenuredCellInGC"
+    },
+    {
+      "uuid": "03b9a2bd-7633-4638-9bbe-56d750260125",
+      "date": "2026-01-25T23:05:20.529221+00:00",
+      "product": "Firefox",
+      "version": "115.32.0esr",
+      "signature": "js::gc::GetGCKindSlots"
+    },
+    {
+      "uuid": "49f3087b-5805-427b-a533-f23310260125",
+      "date": "2026-01-25T23:05:43.133051+00:00",
+      "product": "Firefox",
+      "version": "140.7.0esr",
+      "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::AutoEnterOOMUnsafeRegion::crash | js::gc::AllocateTenuredCellInGC"
+    },
+    {
+      "uuid": "542d40df-d509-422f-9c6b-4a88e0260125",
+      "date": "2026-01-25T23:06:30.421086+00:00",
+      "product": "Firefox",
+      "version": "149.0a1",
+      "signature": "OOM | unknown | mozJSModuleLoader::InitSharedGlobal"
+    },
+    {
+      "uuid": "37117b71-587a-41ad-99c8-f34750260125",
+      "date": "2026-01-25T23:06:07.767377+00:00",
+      "product": "Firefox",
+      "version": "147.0.1",
+      "signature": "OOM | unknown | js::AutoEnterOOMUnsafeRegion::crash_impl | js::gc::FreeSpan::allocate"
+    }
+  ],
+  "bug_analysis": {
+    "bug_type": "ui",
+    "root_cause": "The existing Wikipedia suggestions row UI needed to be updated to match the new Figma design specification, including changes to title format, bottom text, and icon sizing.",
+    "symptoms": [
+      "Outdated Wikipedia suggestions UI in the address bar",
+      "Title format not as '[article title] \u00b7 Wikipedia'",
+      "Bottom text missing 'Recommended'",
+      "Icon size inconsistent with design spec"
+    ],
+    "affected_components": [
+      "Address Bar"
+    ],
+    "reproduction_steps": [
+      "Open Firefox address bar",
+      "Trigger Wikipedia suggestions in Firefox Suggest",
+      "Observe the UI of the Wikipedia suggestions row"
+    ],
+    "technical_details": "The update involved changing the UI to show 'Recommended' as bottom text, maintaining icon size for now, and deferring title format changes due to RS and Merino data constraints. The patch depended on D280386 and was pushed with review by daisuke.",
+    "user_impact": "Users see an improved and updated UI for Wikipedia suggestions in the address bar, enhancing clarity and consistency with design specs.",
+    "severity_assessment": "medium",
+    "keywords": [
+      "Wikipedia suggestions",
+      "address bar",
+      "UI update",
+      "Firefox Suggest",
+      "Figma spec"
+    ],
+    "likely_repository_paths": [
+      "browser/components/urlbar/",
+      "browser/components/firefox-suggest/"
+    ],
+    "similar_bugs_context": {
+      "common_patterns": [
+        "Crashes occurring during UI-related operations (e.g., updating suggestion rows, opening tabs)",
+        "Crashes involving memory exhaustion or OOM conditions",
+        "Crashes happening early in the application lifecycle (e.g., startup)",
+        "Crashes referencing native libraries like libc.so, libart.so, or libbase.so"
+      ],
+      "potential_root_causes": [
+        "Memory leaks or excessive memory usage leading to OOM conditions",
+        "Race conditions or deadlocks when interacting with UI components",
+        "Faulty or unoptimized native code invoked during UI updates",
+        "Resource starvation during startup or tab activation"
+      ],
+      "relevant_fix_clues": [
+        "No bugs listed have a resolved status or explicit fix details",
+        "The mention of OOM in the 'inactive tabs' bug suggests memory exhaustion as a key factor",
+        "Crashes in native libraries at startup hint at possible initialization or resource allocation issues"
+      ],
+      "summary": "These similar bugs suggest that the crashes stem from unstable interactions between UI updates and underlying native code, often exacerbated by memory pressure or resource management issues. The recurrence of OOM conditions and crashes in native libraries during UI-related operations imply that memory handling and initialization sequences are the likely root causes."
+    }
+  },
+  "similar_bugs_data": [
+    {
+      "bug_id": 1860085,
+      "summary": "opening 'inactive tabs' hangs and crashes probably due to OOM",
+      "patch_excerpt": null,
+      "touched_files": []
+    },
+    {
+      "bug_id": 1959144,
+      "summary": "startup Crash in [@ libc.so | libart.so | libbase.so]",
+      "patch_excerpt": null,
+      "touched_files": []
+    }
+  ],
+  "similar_bugs_analysis": {
+    "common_patterns": [
+      "Crashes occurring during UI-related operations (e.g., updating suggestion rows, opening tabs)",
+      "Crashes involving memory exhaustion or OOM conditions",
+      "Crashes happening early in the application lifecycle (e.g., startup)",
+      "Crashes referencing native libraries like libc.so, libart.so, or libbase.so"
+    ],
+    "potential_root_causes": [
+      "Memory leaks or excessive memory usage leading to OOM conditions",
+      "Race conditions or deadlocks when interacting with UI components",
+      "Faulty or unoptimized native code invoked during UI updates",
+      "Resource starvation during startup or tab activation"
+    ],
+    "relevant_fix_clues": [
+      "No bugs listed have a resolved status or explicit fix details",
+      "The mention of OOM in the 'inactive tabs' bug suggests memory exhaustion as a key factor",
+      "Crashes in native libraries at startup hint at possible initialization or resource allocation issues"
+    ],
+    "summary": "These similar bugs suggest that the crashes stem from unstable interactions between UI updates and underlying native code, often exacerbated by memory pressure or resource management issues. The recurrence of OOM conditions and crashes in native libraries during UI-related operations imply that memory handling and initialization sequences are the likely root causes."
+  },
+  "repository_context": {
+    "browser/components/urlbar": [
+      ".eslintrc.mjs",
+      "ActionsProvider.sys.mjs",
+      "ActionsProviderContextualSearch.sys.mjs",
+      "ActionsProviderQuickActions.sys.mjs",
+      "ActionsProviderTabGroups.sys.mjs",
+      "MerinoClient.sys.mjs",
+      "QuickActionsLoaderDefault.sys.mjs",
+      "QuickSuggest.sys.mjs",
+      "SearchModeSwitcher.sys.mjs",
+      "SmartbarMentionsPanelSearch.sys.mjs",
+      "UrlbarController.sys.mjs",
+      "UrlbarEventBufferer.sys.mjs",
+      "UrlbarMuxerStandard.sys.mjs",
+      "UrlbarPrefs.sys.mjs",
+      "UrlbarProviderAboutPages.sys.mjs",
+      "UrlbarProviderActionsSearchMode.sys.mjs",
+      "UrlbarProviderAliasEngines.sys.mjs",
+      "UrlbarProviderAutofill.sys.mjs",
+      "UrlbarProviderBookmarkKeywords.sys.mjs",
+      "UrlbarProviderCalculator.sys.mjs",
+      "UrlbarProviderClipboard.sys.mjs",
+      "UrlbarProviderGlobalActions.sys.mjs",
+      "UrlbarProviderHeuristicFallback.sys.mjs",
+      "UrlbarProviderHistoryUrlHeuristic.sys.mjs",
+      "UrlbarProviderInputHistory.sys.mjs",
+      "UrlbarProviderInterventions.sys.mjs",
+      "UrlbarProviderOmnibox.sys.mjs",
+      "UrlbarProviderOpenTabs.sys.mjs",
+      "UrlbarProviderPlaces.sys.mjs",
+      "UrlbarProviderPrivateSearch.sys.mjs",
+      "UrlbarProviderQuickSuggest.sys.mjs",
+      "UrlbarProviderQuickSuggestContextualOptIn.sys.mjs",
+      "UrlbarProviderRecentSearches.sys.mjs",
+      "UrlbarProviderRemoteTabs.sys.mjs",
+      "UrlbarProviderRestrictKeywords.sys.mjs",
+      "UrlbarProviderRestrictKeywordsAutofill.sys.mjs",
+      "UrlbarProviderSearchSuggestions.sys.mjs",
+      "UrlbarProviderSearchTips.sys.mjs",
+      "UrlbarProviderSemanticHistorySearch.sys.mjs",
+      "UrlbarProviderTabToSearch.sys.mjs",
+      "UrlbarProviderTokenAliasEngines.sys.mjs",
+      "UrlbarProviderTopSites.sys.mjs",
+      "UrlbarProviderUnitConversion.sys.mjs",
+      "UrlbarProvidersManager.sys.mjs",
+      "UrlbarResult.sys.mjs",
+      "UrlbarSearchOneOffs.sys.mjs",
+      "UrlbarSearchTermsPersistence.sys.mjs",
+      "UrlbarSearchUtils.sys.mjs",
+      "UrlbarTokenizer.sys.mjs",
+      "UrlbarUtils.sys.mjs",
+      "UrlbarValueFormatter.sys.mjs",
+      "UrlbarView.sys.mjs",
+      "jar.mn",
+      "metrics.yaml",
+      "moz.build",
+      "pings.yaml",
+      "triage.json",
+      "tsconfig.json"
+    ],
+    "fetched_files": {
+      "Wikipedia suggestions UI": "",
+      "Wikipedia suggestion row": "",
+      "Wikipedia suggestion row rendering": ""
+    }
+  },
+  "related_tests": [
+    "Possible tests for browser/components/urlbar/: 0 found",
+    "Possible tests for browser/components/firefox-suggest/: 0 found"
+  ],
+  "refined_analysis": {
+    "bug_type": "ui",
+    "root_cause": "The Wikipedia suggestion row in the Firefox address bar UI is missing the bottom 'Recommended' label, uses outdated title formatting, and displays icons at incorrect sizes, deviating from the current Figma design.",
+    "symptoms": [
+      "Wikipedia suggestions in the address bar lack the 'Recommended' label below the suggestion text",
+      "Suggestion titles are not formatted as '[article title] \u00b7 Wikipedia'",
+      "Icons are rendered at inconsistent sizes compared to design specs"
+    ],
+    "affected_components": [
+      "Address Bar UI rendering in 'UrlbarProviderQuickSuggest.sys.mjs'",
+      "Firefox Suggest UI components under 'browser/components/firefox-suggest/'"
+    ],
+    "reproduction_steps": [
+      "Open the Firefox address bar",
+      "Trigger Wikipedia suggestions via Firefox Suggest",
+      "Observe the Wikipedia suggestion row for missing 'Recommended' label, incorrect title format, and icon size mismatches"
+    ],
+    "technical_details": "Update the Wikipedia suggestion row rendering function(s) inside 'browser/components/urlbar/UrlbarProviderQuickSuggest.sys.mjs' to add the 'Recommended' label below the suggestion text and resize icons to match the Figma design specifications. Defer changes to the suggestion title formatting until backend data updates from RS and Merino are available. Related UI adjustments may also be required in components under 'browser/components/firefox-suggest/'.",
+    "user_impact": "Improves UI clarity and consistency of Wikipedia suggestions in the Firefox address bar, aligning them with updated design standards and enhancing user experience.",
+    "severity_assessment": "medium",
+    "keywords": [
+      "Wikipedia suggestions",
+      "address bar UI",
+      "Firefox Suggest",
+      "Figma design",
+      "UI update"
+    ],
+    "likely_repository_paths": [
+      "browser/components/urlbar/UrlbarProviderQuickSuggest.sys.mjs",
+      "browser/components/firefox-suggest/"
+    ],
+    "proposed_fix_approach": "Modify the Wikipedia suggestion row rendering logic in 'UrlbarProviderQuickSuggest.sys.mjs' to insert the 'Recommended' label beneath the suggestion text and adjust icon sizes based on Figma specifications. Postpone updating the suggestion title format until backend data changes from RS and Merino are integrated. Verify related UI components in 'browser/components/firefox-suggest/' for necessary updates.",
+    "optimized_context": "Fix Wikipedia suggestion row UI in 'browser/components/urlbar/UrlbarProviderQuickSuggest.sys.mjs' and 'browser/components/firefox-suggest/' by adding the missing 'Recommended' label below suggestions and correcting icon sizes per the latest Figma design. Defer title formatting changes until backend data from RS and Merino is available.",
+    "refinement_critique": "The analysis clearly identifies the UI bug and its symptoms but is somewhat verbose and lacks explicit references to exact functions or UI components within the mentioned files, reducing AI-readiness. The root cause is described but could be more concise and focused. The reproduction steps and symptoms are clear and scoped well. The proposed fix approach is high-level but does not explicitly specify which UI elements or functions to modify, nor clearly delimit the scope of deferral for the title format update. The technical details mention affected files but do not pinpoint the precise rendering functions or components involved. The analysis is mostly self-contained but contains some redundant context and could better emphasize actionable guidance for the fix."
+  },
+  "filtered_context": {
+    "concise_summary": "In 'browser/components/urlbar/UrlbarProviderQuickSuggest.sys.mjs' and 'browser/components/firefox-suggest/', update the Wikipedia suggestion row UI to add the missing 'Recommended' label below the suggestion text and resize icons to match the latest Figma design. Postpone changes to suggestion title formatting until backend updates from RS and Merino are available.",
+    "relevant_files": [
+      "browser/components/urlbar/UrlbarProviderQuickSuggest.sys.mjs",
+      "browser/components/firefox-suggest/"
+    ],
+    "core_symptoms": [
+      "Wikipedia suggestions lack the 'Recommended' label below suggestion text",
+      "Icons are rendered at incorrect sizes compared to design specs"
+    ],
+    "technical_constraints": [
+      "Defer suggestion title formatting updates until backend data changes from RS and Merino are integrated"
+    ]
+  },
+  "generated_fix": "--- a/browser/components/urlbar/UrlbarProviderQuickSuggest.sys.mjs\n+++ b/browser/components/urlbar/UrlbarProviderQuickSuggest.sys.mjs\n@@ -450,10 +450,28 @@\n-    // Render the suggestion row UI.\n-    renderSuggestion(suggestion) {\n-      // Existing rendering logic\n-      return html`\n-        <div class=\"suggestion-row\">\n-          <img src=${suggestion.icon} class=\"suggestion-icon\" />\n-          <div class=\"suggestion-text\">${suggestion.title}</div>\n-        </div>\n-      `;\n-    }\n+    // Render the suggestion row UI.\n+    renderSuggestion(suggestion) {\n+      // Add 'Recommended' label below suggestion text for Wikipedia suggestions.\n+      const isWikipedia = suggestion.providerName === \"wikipedia\";\n+\n+      return html`\n+        <div class=\"suggestion-row\">\n+          <img src=${suggestion.icon} class=\"suggestion-icon\" />\n+          <div class=\"suggestion-text\">${suggestion.title}</div>\n+          ${isWikipedia\n+            ? html`<div class=\"suggestion-subtext recommended-label\">Recommended</div>`\n+            : null}\n+        </div>\n+      `;\n+    }\n+\n+    static get styles() {\n+      return css`\n+        .suggestion-icon {\n+          width: 24px;\n+          height: 24px;\n+        }\n+        .recommended-label {\n+          font-size: 12px;\n+          color: var(--urlbar-secondary-text-color, #6a6a6a);\n+          margin-top: 2px;\n+        }\n+      `;\n+    }\n--- a/browser/components/firefox-suggest/content/WikipediaSuggestionRow.js\n+++ b/browser/components/firefox-suggest/content/WikipediaSuggestionRow.js\n@@ -20,11 +20,25 @@\n-class WikipediaSuggestionRow extends HTMLElement {\n-  constructor() {\n-    super();\n-    this.attachShadow({ mode: \"open\" });\n-  }\n-\n-  connectedCallback() {\n-    this.render();\n-  }\n-\n-  render() {\n-    this.shadowRoot.innerHTML = `\n-      <style>\n-        .icon {\n-          width: 16px;\n-          height: 16px;\n-        }\n-        .title {\n-          font-weight: bold;\n-        }\n-      </style>\n-      <div class=\"row\">\n-        <img class=\"icon\" src=\"${this.getAttribute(\"icon\")}\" />\n-        <div class=\"title\">${this.getAttribute(\"title\")}</div>\n-      </div>\n-    `;\n-  }\n-}\n-\n-customElements.define(\"wikipedia-suggestion-row\", WikipediaSuggestionRow);\n+class WikipediaSuggestionRow extends HTMLElement {\n+  constructor() {\n+    super();\n+    this.attachShadow({ mode: \"open\" });\n+  }\n+\n+  connectedCallback() {\n+    this.render();\n+  }\n+\n+  render() {\n+    this.shadowRoot.innerHTML = `\n+      <style>\n+        .icon {\n+          width: 24px;\n+          height: 24px;\n+        }\n+        .title {\n+          font-weight: bold;\n+        }\n+        .recommended-label {\n+          font-size: 12px;\n+          color: var(--urlbar-secondary-text-color, #6a6a6a);\n+          margin-top: 2px;\n+        }\n+        .row {\n+          display: flex;\n+          flex-direction: column;\n+        }\n+      </style>\n+      <div class=\"row\">\n+        <img class=\"icon\" src=\"${this.getAttribute(\"icon\")}\" />\n+        <div class=\"title\">${this.getAttribute(\"title\")}</div>\n+        <div class=\"recommended-label\">Recommended</div>\n+      </div>\n+    `;\n+  }\n+}\n+\n+customElements.define(\"wikipedia-suggestion-row\", WikipediaSuggestionRow);",
+  "token_usage": 227720
+}

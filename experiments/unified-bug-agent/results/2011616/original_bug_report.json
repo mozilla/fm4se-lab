@@ -1,0 +1,288 @@
+{
+  "is_cc_accessible": true,
+  "platform": "Unspecified",
+  "cf_crash_signature": "",
+  "id": 2011616,
+  "target_milestone": "149 Branch",
+  "triage_owner_detail": {
+    "id": 697075,
+    "email": "bhood@mozilla.com",
+    "name": "bhood@mozilla.com",
+    "nick": "bhood",
+    "real_name": "Bob Hood [:bhood]"
+  },
+  "cf_tracking_firefox149": "---",
+  "status": "RESOLVED",
+  "comment_count": 4,
+  "cf_qa_whiteboard": "",
+  "product": "Core",
+  "cf_webcompat_score": "---",
+  "cf_status_firefox_esr140": "---",
+  "comments": [
+    {
+      "creator": "jnicol@mozilla.com",
+      "creation_time": "2026-01-21T09:15:43Z",
+      "raw_text": "Our minimum SDK version is now high enough that all the currently required functions are available. And if we want to use more recently added functions in the future, we now support weak symbols. So the API wrapper is unnecessary.",
+      "author": "jnicol@mozilla.com",
+      "attachment_id": null,
+      "time": "2026-01-21T09:15:43Z",
+      "reactions": {},
+      "id": 17852452,
+      "is_private": false,
+      "text": "Our minimum SDK version is now high enough that all the currently required functions are available. And if we want to use more recently added functions in the future, we now support weak symbols. So the API wrapper is unnecessary.",
+      "count": 0,
+      "tags": [],
+      "bug_id": 2011616
+    },
+    {
+      "is_private": false,
+      "reactions": {},
+      "id": 17852461,
+      "text": "Created attachment 9538985\nBug 2011616 - Remove AndroidHardwareBufferApi wrapper. r?#gfx-reviewers\n\n\nOur minimum SDK version is now high enough that all the currently\nrequired functions are available. And if we want to use more recently\nadded functions in the future we now support weak NDK symbols. So the\nAPI wrapper is unnecessary.\n\nOne thing to note is that we currently use the return value of\nAndroidHardwareBufferApi::Get() (i.e. whether the API wrapper was\ninitialised) to determine whether our compositors need to create a\nrelease fence at the end of the frame. This is changed to check\nwhether AndroidHardwareBufferManager is initialised instead.",
+      "bug_id": 2011616,
+      "creation_time": "2026-01-21T09:27:30Z",
+      "creator": "jnicol@mozilla.com",
+      "raw_text": "\nOur minimum SDK version is now high enough that all the currently\nrequired functions are available. And if we want to use more recently\nadded functions in the future we now support weak NDK symbols. So the\nAPI wrapper is unnecessary.\n\nOne thing to note is that we currently use the return value of\nAndroidHardwareBufferApi::Get() (i.e. whether the API wrapper was\ninitialised) to determine whether our compositors need to create a\nrelease fence at the end of the frame. This is changed to check\nwhether AndroidHardwareBufferManager is initialised instead.",
+      "time": "2026-01-21T09:27:30Z",
+      "count": 1,
+      "tags": [],
+      "author": "jnicol@mozilla.com",
+      "attachment_id": 9538985
+    },
+    {
+      "raw_text": "Pushed by jnicol@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/847e0bb40aef\nhttps://hg.mozilla.org/integration/autoland/rev/27ab330346de\nRemove AndroidHardwareBufferApi wrapper. r=gfx-reviewers,lsalzman",
+      "creation_time": "2026-01-21T15:45:50Z",
+      "creator": "pulsebot@bmo.tld",
+      "bug_id": 2011616,
+      "text": "Pushed by jnicol@mozilla.com:\nhttps://github.com/mozilla-firefox/firefox/commit/847e0bb40aef\nhttps://hg.mozilla.org/integration/autoland/rev/27ab330346de\nRemove AndroidHardwareBufferApi wrapper. r=gfx-reviewers,lsalzman",
+      "is_private": false,
+      "reactions": {},
+      "id": 17853103,
+      "author": "pulsebot@bmo.tld",
+      "attachment_id": null,
+      "tags": [],
+      "count": 2,
+      "time": "2026-01-21T15:45:50Z"
+    },
+    {
+      "count": 3,
+      "tags": [
+        "bugherder"
+      ],
+      "time": "2026-01-22T04:27:25Z",
+      "attachment_id": null,
+      "author": "nfay@mozilla.com",
+      "text": "https://hg.mozilla.org/mozilla-central/rev/27ab330346de",
+      "bug_id": 2011616,
+      "id": 17854021,
+      "reactions": {},
+      "is_private": false,
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/27ab330346de",
+      "creator": "nfay@mozilla.com",
+      "creation_time": "2026-01-22T04:27:25Z"
+    }
+  ],
+  "cf_tracking_thunderbird_esr140": "---",
+  "keywords": [],
+  "cf_accessibility_severity": "---",
+  "cc": [
+    "pasik@iki.fi",
+    "sotaro.ikeda.g@gmail.com"
+  ],
+  "is_creator_accessible": true,
+  "is_confirmed": true,
+  "version": "unspecified",
+  "is_open": false,
+  "votes": 0,
+  "creator": "jnicol@mozilla.com",
+  "description": "Our minimum SDK version is now high enough that all the currently required functions are available. And if we want to use more recently added functions in the future, we now support weak symbols. So the API wrapper is unnecessary.",
+  "cf_tracking_firefox_esr115": "---",
+  "classification": "Components",
+  "counts": {
+    "cc": 2,
+    "blocks": 0,
+    "depends_on": 1,
+    "regressed_by": 0,
+    "attachments": 1,
+    "regressions": 0,
+    "comments": 4,
+    "keywords": 0,
+    "duplicates": 0
+  },
+  "filed_via": "standard_form",
+  "blocks": [
+    1649110
+  ],
+  "cf_performance_impact": "---",
+  "cf_last_resolved": "2026-01-22T04:27:25Z",
+  "mentors": [],
+  "component": "Graphics",
+  "assigned_to_detail": {
+    "id": 541747,
+    "email": "jnicol@mozilla.com",
+    "nick": "jnicol",
+    "name": "jnicol@mozilla.com",
+    "real_name": "Jamie Nicol [:jnicol]"
+  },
+  "cf_status_thunderbird_esr115": "---",
+  "cf_cab_review": "---",
+  "cf_fx_iteration": "---",
+  "regressions": [],
+  "qa_contact": "",
+  "severity": "--",
+  "url": "",
+  "whiteboard": "",
+  "cf_status_firefox147": "---",
+  "cf_tracking_firefox147": "---",
+  "last_change_time": "2026-01-23T11:38:18Z",
+  "cf_webcompat_priority": "---",
+  "type": "task",
+  "dupe_of": null,
+  "creation_time": "2026-01-21T09:15:43Z",
+  "triage_owner": "bhood@mozilla.com",
+  "flags": [],
+  "history": [
+    {
+      "who": "nfay@mozilla.com",
+      "when": "2026-01-22T04:27:25Z",
+      "changes": [
+        {
+          "added": "RESOLVED",
+          "field_name": "status",
+          "removed": "NEW"
+        },
+        {
+          "removed": "---",
+          "field_name": "target_milestone",
+          "added": "149 Branch"
+        },
+        {
+          "field_name": "resolution",
+          "removed": "",
+          "added": "FIXED"
+        },
+        {
+          "added": "2026-01-22T04:27:25Z",
+          "field_name": "cf_last_resolved",
+          "removed": ""
+        },
+        {
+          "field_name": "cf_status_firefox149",
+          "removed": "---",
+          "added": "fixed"
+        },
+        {
+          "comment_count": 3,
+          "added": "bugherder",
+          "field_name": "comment_tag",
+          "removed": "",
+          "comment_id": 17854021
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "removed": "",
+          "added": "1649110",
+          "field_name": "blocks"
+        },
+        {
+          "added": "sotaro.ikeda.g@gmail.com",
+          "removed": "",
+          "field_name": "cc"
+        }
+      ],
+      "when": "2026-01-23T06:23:12Z",
+      "who": "sotaro.ikeda.g@gmail.com"
+    },
+    {
+      "who": "pasik@iki.fi",
+      "when": "2026-01-23T11:38:18Z",
+      "changes": [
+        {
+          "field_name": "cc",
+          "added": "pasik@iki.fi",
+          "removed": ""
+        }
+      ]
+    }
+  ],
+  "cf_fx_points": "---",
+  "cf_user_story": "",
+  "cf_tracking_firefox_relnote": "---",
+  "cf_size_estimate": "---",
+  "alias": null,
+  "cf_status_firefox_esr115": "---",
+  "duplicates": [],
+  "mentors_detail": [],
+  "cf_tracking_firefox148": "---",
+  "see_also": [],
+  "cf_status_thunderbird_esr140": "---",
+  "cf_rank": null,
+  "resolution": "FIXED",
+  "groups": [],
+  "summary": "Remove AndroidHardwareBufferApi wrapper",
+  "op_sys": "Unspecified",
+  "cf_status_firefox148": "---",
+  "cf_status_firefox149": "fixed",
+  "cf_a11y_review_project_flag": "---",
+  "cc_detail": [
+    {
+      "real_name": "",
+      "id": 529219,
+      "email": "pasik@iki.fi",
+      "name": "pasik@iki.fi",
+      "nick": "pasik"
+    },
+    {
+      "real_name": "Sotaro Ikeda [:sotaro]",
+      "id": 434202,
+      "email": "sotaro.ikeda.g@gmail.com",
+      "name": "sotaro.ikeda.g@gmail.com",
+      "nick": "sotaro"
+    }
+  ],
+  "cf_has_str": "---",
+  "depends_on": [],
+  "cf_tracking_thunderbird_esr115": "---",
+  "regressed_by": [],
+  "creator_detail": {
+    "name": "jnicol@mozilla.com",
+    "nick": "jnicol",
+    "id": 541747,
+    "email": "jnicol@mozilla.com",
+    "real_name": "Jamie Nicol [:jnicol]"
+  },
+  "attachments": [
+    {
+      "is_patch": 0,
+      "creator_detail": {
+        "real_name": "Jamie Nicol [:jnicol]",
+        "nick": "jnicol",
+        "name": "jnicol@mozilla.com",
+        "id": 541747,
+        "email": "jnicol@mozilla.com"
+      },
+      "attacher": "jnicol@mozilla.com",
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjc5ODIy",
+      "size": 48,
+      "is_obsolete": 0,
+      "content_type": "text/x-phabricator-request",
+      "creator": "jnicol@mozilla.com",
+      "creation_time": "2026-01-21T09:27:30Z",
+      "flags": [],
+      "description": "Bug 2011616 - Remove AndroidHardwareBufferApi wrapper. r?#gfx-reviewers",
+      "id": 9538985,
+      "last_change_time": "2026-01-21T09:27:30Z",
+      "is_private": 0,
+      "summary": "Bug 2011616 - Remove AndroidHardwareBufferApi wrapper. r?#gfx-reviewers",
+      "file_name": "phabricator-D279822-url.txt",
+      "bug_id": 2011616
+    }
+  ],
+  "last_change_time_non_bot": "2026-01-23T11:38:18Z",
+  "assigned_to": "jnicol@mozilla.com",
+  "priority": "--",
+  "cf_tracking_firefox_esr140": "---"
+}

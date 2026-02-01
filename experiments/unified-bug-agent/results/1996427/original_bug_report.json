@@ -1,0 +1,650 @@
+{
+  "cf_webcompat_score": "---",
+  "cc_detail": [
+    {
+      "nick": "djackson",
+      "email": "djackson@mozilla.com",
+      "name": "djackson@mozilla.com",
+      "id": 644159,
+      "real_name": "Dennis Jackson"
+    },
+    {
+      "nick": "kershaw",
+      "email": "kershaw@mozilla.com",
+      "name": "kershaw@mozilla.com",
+      "id": 505624,
+      "real_name": "Kershaw Chang [:kershaw]"
+    },
+    {
+      "nick": "jesup",
+      "email": "rjesup@jesup.org",
+      "name": "rjesup@jesup.org",
+      "id": 11539,
+      "real_name": "Randell Jesup [:jesup] (needinfo me)"
+    },
+    {
+      "id": 711499,
+      "real_name": "Sunil Mayya",
+      "nick": "smayya",
+      "name": "smayya@mozilla.com",
+      "email": "smayya@mozilla.com"
+    },
+    {
+      "id": 415378,
+      "real_name": "Valentin Gosu [:valentin] (he/him)",
+      "name": "valentin.gosu@gmail.com",
+      "email": "valentin.gosu@gmail.com",
+      "nick": "valentin"
+    }
+  ],
+  "cf_qa_whiteboard": "",
+  "url": "",
+  "mentors_detail": [],
+  "cf_status_firefox149": "fixed",
+  "cf_tracking_firefox_esr115": "---",
+  "cf_user_story": "",
+  "description": "User Agent: Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0\n\nSteps to reproduce:\n\nI've got this strange intermittent problem with SSL certificates on my personal website when accessing via the internal network. Firefox is not connecting over HTTPS, reporting SSL_ERROR_INTERNAL_ERROR_ALERT. However, this problem is not consistent.\n\nWhen I'm getting this problem with Firefox, Chromium works fine, as does CURL. I'm running Caddy as a reverse proxy on Debian with Let's Encrypt certificates. All sites are affected when the issue occurs.\n\nWhen Firefox works, it's recognising the certificates properly (i.e. it's not accessing the external site via Cloudflare Tunnel by accident) so I don't think it's a DNS issue. (I spent several days trying to troubleshoot my DNS (Pi-Hole) before realising the problem seems to be with Firefox).\n\nYesterday, everything was working properly. Today, Firefox does not connect. Nothing has changed on the server side, not even a reload/restart of Caddy. \n\nI'm running v144.0 on Linux (Arch). Only extension is Bitwarden which is disabled in Private Browser windows. The problem also occurs in these windows. Side-by-side PC's can have different results at the same time for the same site!\n\nSecond PC just had different results in different tabs for separate sites on the same internal Caddy server (i.e. one working, one not), although upon Shift-Refresh (but not just Refresh) of the working site/tab, it now fails.\n\nI believe that after a certain amount of time (hours), the error resolves, but then re-occurs.\n\n\nActual results:\n\nSSL_ERROR_INTERNAL_ERROR_ALERT\n\n\nExpected results:\n\nPage should load with proper HTTPS connection.",
+  "cc": [
+    "djackson@mozilla.com",
+    "kershaw@mozilla.com",
+    "rjesup@jesup.org",
+    "smayya@mozilla.com",
+    "valentin.gosu@gmail.com"
+  ],
+  "target_milestone": "149 Branch",
+  "cf_fx_points": "---",
+  "is_creator_accessible": true,
+  "creator": "paul@mccormack.live",
+  "triage_owner_detail": {
+    "email": "valentin.gosu@gmail.com",
+    "name": "valentin.gosu@gmail.com",
+    "nick": "valentin",
+    "real_name": "Valentin Gosu [:valentin] (he/him)",
+    "id": 415378
+  },
+  "dupe_of": null,
+  "flags": [],
+  "depends_on": [],
+  "duplicates": [],
+  "cf_tracking_thunderbird_esr115": "---",
+  "cf_last_resolved": "2026-01-27T21:27:36Z",
+  "cf_size_estimate": "---",
+  "status": "RESOLVED",
+  "groups": [],
+  "mentors": [],
+  "last_change_time": "2026-01-27T21:27:36Z",
+  "cf_tracking_firefox_esr140": "---",
+  "blocks": [
+    1725938
+  ],
+  "cf_has_str": "---",
+  "attachments": [
+    {
+      "creator": "valentin.gosu@gmail.com",
+      "creator_detail": {
+        "id": 415378,
+        "real_name": "Valentin Gosu [:valentin] (he/him)",
+        "nick": "valentin",
+        "email": "valentin.gosu@gmail.com",
+        "name": "valentin.gosu@gmail.com"
+      },
+      "is_obsolete": 0,
+      "description": "Bug 1996427 - Do not resolve HTTPS for hosts in /etc/hosts r=#necko",
+      "file_name": "phabricator-D274772-url.txt",
+      "last_change_time": "2026-01-22T11:34:26Z",
+      "bug_id": 1996427,
+      "size": 48,
+      "id": 9530360,
+      "summary": "Bug 1996427 - Do not resolve HTTPS for hosts in /etc/hosts r=#necko",
+      "content_type": "text/x-phabricator-request",
+      "is_private": 0,
+      "attacher": "valentin.gosu@gmail.com",
+      "creation_time": "2025-12-02T15:46:25Z",
+      "flags": [],
+      "is_patch": 0,
+      "data": "aHR0cHM6Ly9waGFicmljYXRvci5zZXJ2aWNlcy5tb3ppbGxhLmNvbS9EMjc0Nzcy"
+    }
+  ],
+  "resolution": "FIXED",
+  "cf_accessibility_severity": "---",
+  "last_change_time_non_bot": "2026-01-27T21:27:36Z",
+  "classification": "Components",
+  "creator_detail": {
+    "nick": "paul",
+    "name": "paul@mccormack.live",
+    "email": "paul@mccormack.live",
+    "id": 780132,
+    "real_name": "Paul McCormack"
+  },
+  "component": "Networking",
+  "counts": {
+    "attachments": 1,
+    "duplicates": 0,
+    "keywords": 0,
+    "cc": 5,
+    "regressions": 0,
+    "regressed_by": 0,
+    "comments": 17,
+    "blocks": 0,
+    "depends_on": 1
+  },
+  "cf_status_thunderbird_esr115": "---",
+  "is_open": false,
+  "creation_time": "2025-10-25T16:39:45Z",
+  "cf_fx_iteration": "---",
+  "priority": "P2",
+  "cf_status_firefox148": "---",
+  "cf_status_thunderbird_esr140": "---",
+  "assigned_to": "valentin.gosu@gmail.com",
+  "summary": "SSL error in Firefox, but Chromium and CURL are OK",
+  "id": 1996427,
+  "filed_via": "guided_form",
+  "severity": "S3",
+  "keywords": [],
+  "history": [
+    {
+      "when": "2025-10-27T21:43:16Z",
+      "who": "rjesup@jesup.org",
+      "changes": [
+        {
+          "removed": "",
+          "field_name": "flagtypes.name",
+          "added": "needinfo?(paul@mccormack.live)"
+        },
+        {
+          "removed": "",
+          "added": "rjesup@jesup.org",
+          "field_name": "cc"
+        },
+        {
+          "field_name": "severity",
+          "added": "S3",
+          "removed": "--"
+        },
+        {
+          "removed": "--",
+          "added": "P2",
+          "field_name": "priority"
+        },
+        {
+          "removed": "",
+          "field_name": "whiteboard",
+          "added": "[necko-triaged] [necko-priority-new]"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "added": "",
+          "field_name": "flagtypes.name",
+          "removed": "needinfo?(paul@mccormack.live)"
+        }
+      ],
+      "who": "paul@mccormack.live",
+      "when": "2025-10-31T13:13:54Z"
+    },
+    {
+      "changes": [
+        {
+          "field_name": "cc",
+          "added": "valentin.gosu@gmail.com",
+          "removed": ""
+        },
+        {
+          "added": "needinfo?(paul@mccormack.live)",
+          "field_name": "flagtypes.name",
+          "removed": ""
+        }
+      ],
+      "when": "2025-11-04T12:22:38Z",
+      "who": "valentin.gosu@gmail.com"
+    },
+    {
+      "who": "valentin.gosu@gmail.com",
+      "when": "2025-11-04T12:23:54Z",
+      "changes": [
+        {
+          "added": "djackson@mozilla.com, kershaw@mozilla.com",
+          "field_name": "cc",
+          "removed": ""
+        },
+        {
+          "removed": "",
+          "field_name": "blocks",
+          "added": "1725938"
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "removed": "",
+          "added": "needinfo?(kershaw@mozilla.com)",
+          "field_name": "flagtypes.name"
+        }
+      ],
+      "who": "valentin.gosu@gmail.com",
+      "when": "2025-11-10T09:36:34Z"
+    },
+    {
+      "changes": [
+        {
+          "removed": "needinfo?(kershaw@mozilla.com)",
+          "field_name": "flagtypes.name",
+          "added": "needinfo?(djackson@mozilla.com)"
+        }
+      ],
+      "who": "kershaw@mozilla.com",
+      "when": "2025-11-12T09:56:03Z"
+    },
+    {
+      "who": "release-mgmt-account-bot@mozilla.tld",
+      "when": "2025-12-01T12:16:12Z",
+      "changes": [
+        {
+          "field_name": "flagtypes.name",
+          "added": "needinfo?(rjesup@jesup.org)",
+          "removed": "needinfo?(paul@mccormack.live)"
+        }
+      ]
+    },
+    {
+      "who": "djackson@mozilla.com",
+      "when": "2025-12-01T13:22:40Z",
+      "changes": [
+        {
+          "field_name": "flagtypes.name",
+          "added": "",
+          "removed": "needinfo?(djackson@mozilla.com)"
+        }
+      ]
+    },
+    {
+      "when": "2025-12-11T10:10:49Z",
+      "who": "valentin.gosu@gmail.com",
+      "changes": [
+        {
+          "removed": "[necko-triaged] [necko-priority-new]",
+          "field_name": "whiteboard",
+          "added": "[necko-triaged] [necko-priority-queue]"
+        },
+        {
+          "removed": "nobody@mozilla.org",
+          "added": "valentin.gosu@gmail.com",
+          "field_name": "assigned_to"
+        }
+      ]
+    },
+    {
+      "when": "2025-12-11T10:11:06Z",
+      "who": "smayya@mozilla.com",
+      "changes": [
+        {
+          "field_name": "cc",
+          "added": "smayya@mozilla.com",
+          "removed": ""
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "added": "Bug 1996427 - Do not resolve HTTPS for hosts in /etc/hosts r=#necko",
+          "field_name": "attachments.description",
+          "attachment_id": 9530360,
+          "removed": "WIP: Bug 1996427 - Do not resolve HTTPS for hosts in /etc/hosts r=#necko"
+        }
+      ],
+      "when": "2026-01-22T11:34:26Z",
+      "who": "phab-bot@bmo.tld"
+    },
+    {
+      "who": "valentin.gosu@gmail.com",
+      "when": "2026-01-27T14:55:04Z",
+      "changes": [
+        {
+          "removed": "needinfo?(rjesup@jesup.org)",
+          "field_name": "flagtypes.name",
+          "added": ""
+        }
+      ]
+    },
+    {
+      "when": "2026-01-27T21:27:36Z",
+      "who": "ctuns@mozilla.com",
+      "changes": [
+        {
+          "removed": "---",
+          "field_name": "target_milestone",
+          "added": "149 Branch"
+        },
+        {
+          "added": "FIXED",
+          "field_name": "resolution",
+          "removed": ""
+        },
+        {
+          "removed": "UNCONFIRMED",
+          "added": "RESOLVED",
+          "field_name": "status"
+        },
+        {
+          "removed": "",
+          "added": "2026-01-27T21:27:36Z",
+          "field_name": "cf_last_resolved"
+        },
+        {
+          "removed": "---",
+          "field_name": "cf_status_firefox149",
+          "added": "fixed"
+        },
+        {
+          "removed": "",
+          "comment_id": 17862269,
+          "field_name": "comment_tag",
+          "added": "bugherder",
+          "comment_count": 16
+        }
+      ]
+    }
+  ],
+  "product": "Core",
+  "cf_tracking_firefox149": "---",
+  "qa_contact": "",
+  "version": "Firefox 144",
+  "cf_tracking_firefox_relnote": "---",
+  "platform": "Unspecified",
+  "cf_status_firefox_esr140": "---",
+  "comment_count": 17,
+  "cf_cab_review": "---",
+  "cf_crash_signature": "",
+  "regressions": [],
+  "cf_tracking_thunderbird_esr140": "---",
+  "cf_tracking_firefox147": "---",
+  "comments": [
+    {
+      "reactions": {},
+      "bug_id": 1996427,
+      "creator": "paul@mccormack.live",
+      "text": "User Agent: Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0\n\nSteps to reproduce:\n\nI've got this strange intermittent problem with SSL certificates on my personal website when accessing via the internal network. Firefox is not connecting over HTTPS, reporting SSL_ERROR_INTERNAL_ERROR_ALERT. However, this problem is not consistent.\n\nWhen I'm getting this problem with Firefox, Chromium works fine, as does CURL. I'm running Caddy as a reverse proxy on Debian with Let's Encrypt certificates. All sites are affected when the issue occurs.\n\nWhen Firefox works, it's recognising the certificates properly (i.e. it's not accessing the external site via Cloudflare Tunnel by accident) so I don't think it's a DNS issue. (I spent several days trying to troubleshoot my DNS (Pi-Hole) before realising the problem seems to be with Firefox).\n\nYesterday, everything was working properly. Today, Firefox does not connect. Nothing has changed on the server side, not even a reload/restart of Caddy. \n\nI'm running v144.0 on Linux (Arch). Only extension is Bitwarden which is disabled in Private Browser windows. The problem also occurs in these windows. Side-by-side PC's can have different results at the same time for the same site!\n\nSecond PC just had different results in different tabs for separate sites on the same internal Caddy server (i.e. one working, one not), although upon Shift-Refresh (but not just Refresh) of the working site/tab, it now fails.\n\nI believe that after a certain amount of time (hours), the error resolves, but then re-occurs.\n\n\nActual results:\n\nSSL_ERROR_INTERNAL_ERROR_ALERT\n\n\nExpected results:\n\nPage should load with proper HTTPS connection.",
+      "creation_time": "2025-10-25T16:39:45Z",
+      "tags": [],
+      "attachment_id": null,
+      "id": 17732494,
+      "time": "2025-10-25T16:39:45Z",
+      "raw_text": "User Agent: Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0\n\nSteps to reproduce:\n\nI've got this strange intermittent problem with SSL certificates on my personal website when accessing via the internal network. Firefox is not connecting over HTTPS, reporting SSL_ERROR_INTERNAL_ERROR_ALERT. However, this problem is not consistent.\n\nWhen I'm getting this problem with Firefox, Chromium works fine, as does CURL. I'm running Caddy as a reverse proxy on Debian with Let's Encrypt certificates. All sites are affected when the issue occurs.\n\nWhen Firefox works, it's recognising the certificates properly (i.e. it's not accessing the external site via Cloudflare Tunnel by accident) so I don't think it's a DNS issue. (I spent several days trying to troubleshoot my DNS (Pi-Hole) before realising the problem seems to be with Firefox).\n\nYesterday, everything was working properly. Today, Firefox does not connect. Nothing has changed on the server side, not even a reload/restart of Caddy. \n\nI'm running v144.0 on Linux (Arch). Only extension is Bitwarden which is disabled in Private Browser windows. The problem also occurs in these windows. Side-by-side PC's can have different results at the same time for the same site!\n\nSecond PC just had different results in different tabs for separate sites on the same internal Caddy server (i.e. one working, one not), although upon Shift-Refresh (but not just Refresh) of the working site/tab, it now fails.\n\nI believe that after a certain amount of time (hours), the error resolves, but then re-occurs.\n\n\nActual results:\n\nSSL_ERROR_INTERNAL_ERROR_ALERT\n\n\nExpected results:\n\nPage should load with proper HTTPS connection.",
+      "count": 0,
+      "is_private": false,
+      "author": "paul@mccormack.live"
+    },
+    {
+      "creator": "paul@mccormack.live",
+      "text": "Further testing in private browser windows:\n1) Attempt basic site (respond \"Hello World\") failed\n2) Attempt reverse proxy app failed\nBoth of these sites were already failing in a regular window.\n3) Attempt reverse proxy second app WORKED (first attempt to access this app during this session)\n4) Shift-Refresh second app FAILED\n5) Attempt reverse proxy third app WORKED (again, first access of this app during today)\n6) Using app fine, including regular and Shift-Refresh.\n7) Other tabs/apps still not working in Firefox. Everything working in Chromium.\n8) On second PC, basic site failed as did the first app. Tried accessing second app for the first time today and this immediately failed. Third app working fine!!",
+      "bug_id": 1996427,
+      "reactions": {},
+      "attachment_id": null,
+      "id": 17732500,
+      "time": "2025-10-25T17:03:18Z",
+      "count": 1,
+      "author": "paul@mccormack.live",
+      "is_private": false,
+      "raw_text": "Further testing in private browser windows:\n1) Attempt basic site (respond \"Hello World\") failed\n2) Attempt reverse proxy app failed\nBoth of these sites were already failing in a regular window.\n3) Attempt reverse proxy second app WORKED (first attempt to access this app during this session)\n4) Shift-Refresh second app FAILED\n5) Attempt reverse proxy third app WORKED (again, first access of this app during today)\n6) Using app fine, including regular and Shift-Refresh.\n7) Other tabs/apps still not working in Firefox. Everything working in Chromium.\n8) On second PC, basic site failed as did the first app. Tried accessing second app for the first time today and this immediately failed. Third app working fine!!",
+      "creation_time": "2025-10-25T17:03:18Z",
+      "tags": []
+    },
+    {
+      "creator": "paul@mccormack.live",
+      "text": "(In reply to Paul McCormack: from comment #1)\nJust realised third app is not on internal DNS, so is being accessed via Cloudflare. Confirmed by certificate showing Google CA rather than Let's Encrypt.",
+      "reactions": {},
+      "bug_id": 1996427,
+      "attachment_id": null,
+      "id": 17732504,
+      "raw_text": "(In reply to Paul McCormack: from comment #1)\nJust realised third app is not on internal DNS, so is being accessed via Cloudflare. Confirmed by certificate showing Google CA rather than Let's Encrypt.",
+      "count": 2,
+      "is_private": false,
+      "author": "paul@mccormack.live",
+      "time": "2025-10-25T17:31:38Z",
+      "creation_time": "2025-10-25T17:31:38Z",
+      "tags": []
+    },
+    {
+      "creation_time": "2025-10-27T21:43:16Z",
+      "tags": [],
+      "attachment_id": null,
+      "id": 17736062,
+      "author": "rjesup@jesup.org",
+      "is_private": false,
+      "count": 3,
+      "raw_text": "What is the DNS configuration for Firefox?  In particular is DoH enabled?   If it is, does disabling DoH fix it?\n\nCould you collect network logs for this problem in a new profile?  You can create/launch a new profile via about:profiles, and set up logging via about:logging using the Networking preset.   Logging to a text file might be preferable here.  If you log via the profiler, you should first set the profiler to collect Networking profiles (to ensure it captures SocketThread).\nYou can send the logs to necko@mozilla.com\n\nThanks!",
+      "time": "2025-10-27T21:43:16Z",
+      "bug_id": 1996427,
+      "reactions": {},
+      "creator": "rjesup@jesup.org",
+      "text": "What is the DNS configuration for Firefox?  In particular is DoH enabled?   If it is, does disabling DoH fix it?\n\nCould you collect network logs for this problem in a new profile?  You can create/launch a new profile via about:profiles, and set up logging via about:logging using the Networking preset.   Logging to a text file might be preferable here.  If you log via the profiler, you should first set the profiler to collect Networking profiles (to ensure it captures SocketThread).\nYou can send the logs to necko@mozilla.com\n\nThanks!"
+    },
+    {
+      "is_private": false,
+      "author": "paul@mccormack.live",
+      "count": 4,
+      "raw_text": "Thank you for looking into this. I have emailed the log file.",
+      "time": "2025-10-31T13:13:54Z",
+      "id": 17742023,
+      "attachment_id": null,
+      "tags": [],
+      "creation_time": "2025-10-31T13:13:54Z",
+      "text": "Thank you for looking into this. I have emailed the log file.",
+      "creator": "paul@mccormack.live",
+      "bug_id": 1996427,
+      "reactions": {}
+    },
+    {
+      "creator": "paul@mccormack.live",
+      "text": "(In reply to Randell Jesup [:jesup] (needinfo me) from comment #3)\n> What is the DNS configuration for Firefox?  In particular is DoH enabled?   If it is, does disabling DoH fix it?\n\nSorry, forgot to mention that this happened with default DoH settings and no change when DoH is disabled.",
+      "bug_id": 1996427,
+      "reactions": {
+        "+1": 1
+      },
+      "id": 17742029,
+      "attachment_id": null,
+      "time": "2025-10-31T13:17:46Z",
+      "author": "paul@mccormack.live",
+      "count": 5,
+      "is_private": false,
+      "raw_text": "(In reply to Randell Jesup [:jesup] (needinfo me) from comment #3)\n> What is the DNS configuration for Firefox?  In particular is DoH enabled?   If it is, does disabling DoH fix it?\n\nSorry, forgot to mention that this happened with default DoH settings and no change when DoH is disabled.",
+      "creation_time": "2025-10-31T13:17:46Z",
+      "tags": []
+    },
+    {
+      "bug_id": 1996427,
+      "reactions": {},
+      "text": "Thank you for the logs.\nIt seems this is caused by ECH\n\n```\n2025-10-31 13:03:37.160949 UTC - [Parent 1917312: Socket Thread]: V/nsHttp nsHttpConnection::GetTLSSocketControl trans=7f10dd397b00 socket=7f10e3a23918\n2025-10-31 13:03:37.160953 UTC - [Parent 1917312: Socket Thread]: D/nsHttp TlsHandshaker::EnsureNPNComplete [mOwner=7f10e3a23300] drive TLS handshake\n2025-10-31 13:03:37.160971 UTC - [Parent 1917312: Socket Thread]: D/nsHttp TlsHandshaker::FinishNPNSetup mOwner=7f10e3a23300\n2025-10-31 13:03:37.160976 UTC - [Parent 1917312: Socket Thread]: E/nsHttp nsHttpTransaction::OnTransportStatus [this=7f10dd397b00 status=4b000d progress=0]\n2025-10-31 13:03:37.160997 UTC - [Parent 1917312: Socket Thread]: V/nsHttp   writing transaction request stream\n2025-10-31 13:03:37.161000 UTC - [Parent 1917312: Socket Thread]: V/nsHttp nsHttpTransaction::ReadSegments 7f10dd397b00\n2025-10-31 13:03:37.161003 UTC - [Parent 1917312: Socket Thread]: V/nsHttp nsHttpConnection::GetTLSSocketControl trans=7f10dd397b00 socket=7f10e3a23918\n2025-10-31 13:03:37.161008 UTC - [Parent 1917312: Socket Thread]: V/nsHttp nsHttpConnection::OnReadSegment [this=7f10e3a23300]\n2025-10-31 13:03:37.161011 UTC - [Parent 1917312: Socket Thread]: D/nsSocketTransport nsSocketOutputStream::Write [this=7f10ddac3240 count=443]\n2025-10-31 13:03:37.161013 UTC - [Parent 1917312: Socket Thread]: D/nsSocketTransport   calling PR_Write [count=443]\n2025-10-31 13:03:37.161029 UTC - [Parent 1917312: Socket Thread]: D/nsSocketTransport   PR_Write returned [n=-1]\n2025-10-31 13:03:37.161042 UTC - [Parent 1917312: Socket Thread]: D/nsSocketTransport ErrorAccordingToNSPR [in=-5961 out=804b0014]\n2025-10-31 13:03:37.161047 UTC - [Parent 1917312: Socket Thread]: D/nsSocketTransport nsSocketTransport::OnMsgOutputClosed [this=7f10e3a23900 reason=804b0014]\n2025-10-31 13:03:37.161041 UTC - [Parent 1917312: Main Thread]: D/nsHttp sending progress and status notification [this=7f10dd780a00 status=4b000d progress=0/0]\n2025-10-31 13:03:37.161050 UTC - [Parent 1917312: Socket Thread]: V/nsHttp nsHttpConnection::GetTLSSocketControl trans=7f10dd397b00 socket=7f10e3a23918\n2025-10-31 13:03:37.161074 UTC - [Parent 1917312: Main Thread]: D/nsSocketTransport STS dispatch [7f10e44e4160]\n2025-10-31 13:03:37.161074 UTC - [Parent 1917312: Socket Thread]: V/nsHttp nsHttpConnection::OnSocketWritable 7f10e3a23300 ReadSegments returned [rv=0 read=0 sock-cond=804b0014 again=1]\n2025-10-31 13:03:37.161081 UTC - [Parent 1917312: Main Thread]: D/nsSocketTransport PollableEvent::Signal\n2025-10-31 13:03:37.161085 UTC - [Parent 1917312: Main Thread]: D/nsSocketTransport PollableEvent::MarkFirstSignalTimestamp\n2025-10-31 13:03:37.161082 UTC - [Parent 1917312: Socket Thread]: V/nsHttp nsHttpConnection::CloseTransaction[this=7f10e3a23300 trans=7f10dd397b00 reason=804b0014]\n2025-10-31 13:03:37.161091 UTC - [Parent 1917312: Main Thread]: D/nsSocketTransport PollableEvent::Signal PR_Write 1\n2025-10-31 13:03:37.161091 UTC - [Parent 1917312: Socket Thread]: V/nsHttp   closing associated mTransaction\n2025-10-31 13:03:37.161099 UTC - [Parent 1917312: Socket Thread]: V/nsHttp nsHttpTransaction::Close [this=7f10dd397b00 reason=804b0014]\n2025-10-31 13:03:37.161105 UTC - [Parent 1917312: Socket Thread]: V/nsHttp nsHttpConnectionMgr::RemoveActiveTransaction t=7f10dd397b00 tabid=c(1) thr=0\n2025-10-31 13:03:37.161110 UTC - [Parent 1917312: Socket Thread]: V/nsHttp Active transactions -[0,0,0,0]\n2025-10-31 13:03:37.161116 UTC - [Parent 1917312: Socket Thread]: V/nsHttp nsHttpTransaction::PrepareConnInfoForRetry [this=7f10dd397b00 reason=804b0014]\n2025-10-31 13:03:37.161120 UTC - [Parent 1917312: Socket Thread]: V/nsHttp Init nsHttpConnectionInfo @7f10ddaf01f0\n2025-10-31 13:03:37.161133 UTC - [Parent 1917312: Socket Thread]: D/nsHttp Destroying nsHttpConnectionInfo @7f10ddaee7b0\n2025-10-31 13:03:37.161136 UTC - [Parent 1917312: Socket Thread]: V/nsHttp  Got SSL_ERROR_ECH_FAILED, try other records\n2025-10-31 13:03:37.161151 UTC - [Parent 1917312: Socket Thread]: V/nsHttp SvcDomainName to retry: [\n2025-10-31 13:03:37.161156 UTC - [Parent 1917312: Socket Thread]: V/nsHttp  name=pics.redacted.live alpn=\n2025-10-31 13:03:37.161159 UTC - [Parent 1917312: Socket Thread]: V/nsHttp  name=pics.redacted.live alpn=h3\n2025-10-31 13:03:37.161161 UTC - [Parent 1917312: Socket Thread]: V/nsHttp  name=pics.redacted.live alpn=\n2025-10-31 13:03:37.161163 UTC - [Parent 1917312: Socket Thread]: V/nsHttp ]\n2025-10-31 13:03:37.161166 UTC - [Parent 1917312: Socket Thread]: V/nsHttp HTTPSSVC: use new routed host (pics.redacted.live) and new npnToken ()\n2025-10-31 13:03:37.161168 UTC - [Parent 1917312: Socket Thread]: V/nsHttp Init nsHttpConnectionInfo @7f10dd7857b0\n2025-10-31 13:03:37.161175 UTC - [Parent 1917312: Socket Thread]: D/nsHttp Destroying nsHttpConnectionInfo @7f10ddaf01f0\n2025-10-31 13:03:37.161178 UTC - [Parent 1917312: Socket Thread]: V/nsHttp transaction will be restarted with the fallback connection info key=.S........[tlsflags0x00000000]pics.redacted.live:443^partitionKey=%28https%2Credacted.live%29\n2025-10-31 13:03:37.161181 UTC - [Parent 1917312: Socket Thread]: V/nsHttp restarting transaction @7f10dd397b00\n2025-10-31 13:03:37.161188 UTC - [Parent 1917312: Socket Thread]: V/nsHttp RemoveSSLToken [key=tlsflags0x00000000:pics.redacted.live:443^partitionKey=%28https%2Credacted.live%29, rv=80040111]\n2025-10-31 13:03:37.161193 UTC - [Parent 1917312: Socket Thread]: V/nsHttp nsHttpConnection::DontReuse 7f10e3a23300 spdysession=0\n2025-10-31 13:03:37.161196 UTC - [Parent 1917312: Socket Thread]: V/nsHttp nsHttpConnection::MarkAsDontReuse 7f10e3a23300\n2025-10-31 13:03:37.161200 UTC - [Parent 1917312: Socket Thread]: V/nsHttp nsHttpConnectionMgr::ReclaimConnection [conn=7f10e3a23300]\n2025-10-31 13:03:37.161207 UTC - [Parent 1917312: Socket Thread]: D/nsSocketTransport STS dispatch [7f10e29f6800]\n2025-10-31 13:03:37.161212 UTC - [Parent 1917312: Socket Thread]: D/nsSocketTransport OnDispatchedEvent Same Thread Skip Signal\n2025-10-31 13:03:37.161218 UTC - [Parent 1917312: Socket Thread]: V/nsHttp ConnectionEntry::ResetIPFamilyPreference 7f10e92953e0\n2025-10-31 13:03:37.161221 UTC - [Parent 1917312: Socket Thread]: V/nsHttp nsHttpConnectionMgr::AddTransaction [trans=7f10dd397b10 -20]\n2025-10-31 13:03:37.161224 UTC - [Parent 1917312: Socket Thread]: D/nsSocketTransport STS dispatch [7f10f1559240]\n2025-10-31 13:03:37.161227 UTC - [Parent 1917312: Socket Thread]: D/nsSocketTransport OnDispatchedEvent Same Thread Skip Signal\n2025-10-31 13:03:37.161233 UTC - [Parent 1917312: Socket Thread]: V/nsHttp nsHttpConnection::Close [this=7f10e3a23300 reason=804b0014 mExperienceState=0]\n2025-10-31 13:03:37.161238 UTC - [Parent 1917312: Socket Thread]: V/nsHttp RecordConnectionCloseTelemetry key=11_1_0_0_2 reason=6\n2025-10-31 13:03:37.161249 UTC - [Parent 1917312: Socket Thread]: V/nsHttp HttpConnectionBase::ChangeConnectionState this=7f10e3a23300 (2->5)\n2025-10-31 13:03:37.161255 UTC - [Parent 1917312: Socket Thread]: D/nsHttp HttpTrafficAnalyzer::IncrementHttpConnection size=1 [this=7f10f7edbe2c]\n2025-10-31 13:03:37.161258 UTC - [Parent 1917312: Socket Thread]: D/nsHttp HttpTrafficAnalyzer::IncrementHttpConnection [Y1_N1] [this=7f10f7edbe2c]\n2025-10-31 13:03:37.161266 UTC - [Parent 1917312: Socket Thread]: V/nsHttp nsHttpConnection::GetTLSSocketControl trans=0 socket=7f10e3a23918\n2025-10-31 13:03:37.161271 UTC - [Parent 1917312: Socket Thread]: D/nsSocketTransport nsSocketInputStream::Read [this=7f10ddac31c0 count=4000]\n2025-10-31 13:03:37.161274 UTC - [Parent 1917312: Socket Thread]: D/nsSocketTransport   calling PR_Read [count=4000]\n2025-10-31 13:03:37.161277 UTC - [Parent 1917312: Socket Thread]: D/nsSocketTransport   PR_Read returned [n=-1]\n2025-10-31 13:03:37.161281 UTC - [Parent 1917312: Socket Thread]: D/nsSocketTransport ErrorAccordingToNSPR [in=-12188 out=805a2f9c]\n```\n\nHere the last error is\n```js\n> ChromeUtils.getXPCOMErrorName(0x805a2f9c)\n\"NS_ERROR_GENERATE_FAILURE(NS_ERROR_MODULE_SECURITY, SSL_ERROR_INTERNAL_ERROR_ALERT)\"\n```\n\nIf I'm not mistaken, you have your DNS entries provided by cloudflare, which enables ECH. When resolving over the internet, you'll hit CF's server, but when the domain resolves to your local IP, we attempt to use ECH with cloudflare-ech.com in the SNI, which I assume your server rejects, causing the TLS issue.\nWhen you are using DoH, how is the DNS for the server changed? Is it via /etc/hosts?",
+      "creator": "valentin.gosu@gmail.com",
+      "tags": [],
+      "creation_time": "2025-11-04T12:22:38Z",
+      "time": "2025-11-04T12:22:38Z",
+      "count": 6,
+      "is_private": false,
+      "author": "valentin.gosu@gmail.com",
+      "raw_text": "Thank you for the logs.\nIt seems this is caused by ECH\n\n```\n2025-10-31 13:03:37.160949 UTC - [Parent 1917312: Socket Thread]: V/nsHttp nsHttpConnection::GetTLSSocketControl trans=7f10dd397b00 socket=7f10e3a23918\n2025-10-31 13:03:37.160953 UTC - [Parent 1917312: Socket Thread]: D/nsHttp TlsHandshaker::EnsureNPNComplete [mOwner=7f10e3a23300] drive TLS handshake\n2025-10-31 13:03:37.160971 UTC - [Parent 1917312: Socket Thread]: D/nsHttp TlsHandshaker::FinishNPNSetup mOwner=7f10e3a23300\n2025-10-31 13:03:37.160976 UTC - [Parent 1917312: Socket Thread]: E/nsHttp nsHttpTransaction::OnTransportStatus [this=7f10dd397b00 status=4b000d progress=0]\n2025-10-31 13:03:37.160997 UTC - [Parent 1917312: Socket Thread]: V/nsHttp   writing transaction request stream\n2025-10-31 13:03:37.161000 UTC - [Parent 1917312: Socket Thread]: V/nsHttp nsHttpTransaction::ReadSegments 7f10dd397b00\n2025-10-31 13:03:37.161003 UTC - [Parent 1917312: Socket Thread]: V/nsHttp nsHttpConnection::GetTLSSocketControl trans=7f10dd397b00 socket=7f10e3a23918\n2025-10-31 13:03:37.161008 UTC - [Parent 1917312: Socket Thread]: V/nsHttp nsHttpConnection::OnReadSegment [this=7f10e3a23300]\n2025-10-31 13:03:37.161011 UTC - [Parent 1917312: Socket Thread]: D/nsSocketTransport nsSocketOutputStream::Write [this=7f10ddac3240 count=443]\n2025-10-31 13:03:37.161013 UTC - [Parent 1917312: Socket Thread]: D/nsSocketTransport   calling PR_Write [count=443]\n2025-10-31 13:03:37.161029 UTC - [Parent 1917312: Socket Thread]: D/nsSocketTransport   PR_Write returned [n=-1]\n2025-10-31 13:03:37.161042 UTC - [Parent 1917312: Socket Thread]: D/nsSocketTransport ErrorAccordingToNSPR [in=-5961 out=804b0014]\n2025-10-31 13:03:37.161047 UTC - [Parent 1917312: Socket Thread]: D/nsSocketTransport nsSocketTransport::OnMsgOutputClosed [this=7f10e3a23900 reason=804b0014]\n2025-10-31 13:03:37.161041 UTC - [Parent 1917312: Main Thread]: D/nsHttp sending progress and status notification [this=7f10dd780a00 status=4b000d progress=0/0]\n2025-10-31 13:03:37.161050 UTC - [Parent 1917312: Socket Thread]: V/nsHttp nsHttpConnection::GetTLSSocketControl trans=7f10dd397b00 socket=7f10e3a23918\n2025-10-31 13:03:37.161074 UTC - [Parent 1917312: Main Thread]: D/nsSocketTransport STS dispatch [7f10e44e4160]\n2025-10-31 13:03:37.161074 UTC - [Parent 1917312: Socket Thread]: V/nsHttp nsHttpConnection::OnSocketWritable 7f10e3a23300 ReadSegments returned [rv=0 read=0 sock-cond=804b0014 again=1]\n2025-10-31 13:03:37.161081 UTC - [Parent 1917312: Main Thread]: D/nsSocketTransport PollableEvent::Signal\n2025-10-31 13:03:37.161085 UTC - [Parent 1917312: Main Thread]: D/nsSocketTransport PollableEvent::MarkFirstSignalTimestamp\n2025-10-31 13:03:37.161082 UTC - [Parent 1917312: Socket Thread]: V/nsHttp nsHttpConnection::CloseTransaction[this=7f10e3a23300 trans=7f10dd397b00 reason=804b0014]\n2025-10-31 13:03:37.161091 UTC - [Parent 1917312: Main Thread]: D/nsSocketTransport PollableEvent::Signal PR_Write 1\n2025-10-31 13:03:37.161091 UTC - [Parent 1917312: Socket Thread]: V/nsHttp   closing associated mTransaction\n2025-10-31 13:03:37.161099 UTC - [Parent 1917312: Socket Thread]: V/nsHttp nsHttpTransaction::Close [this=7f10dd397b00 reason=804b0014]\n2025-10-31 13:03:37.161105 UTC - [Parent 1917312: Socket Thread]: V/nsHttp nsHttpConnectionMgr::RemoveActiveTransaction t=7f10dd397b00 tabid=c(1) thr=0\n2025-10-31 13:03:37.161110 UTC - [Parent 1917312: Socket Thread]: V/nsHttp Active transactions -[0,0,0,0]\n2025-10-31 13:03:37.161116 UTC - [Parent 1917312: Socket Thread]: V/nsHttp nsHttpTransaction::PrepareConnInfoForRetry [this=7f10dd397b00 reason=804b0014]\n2025-10-31 13:03:37.161120 UTC - [Parent 1917312: Socket Thread]: V/nsHttp Init nsHttpConnectionInfo @7f10ddaf01f0\n2025-10-31 13:03:37.161133 UTC - [Parent 1917312: Socket Thread]: D/nsHttp Destroying nsHttpConnectionInfo @7f10ddaee7b0\n2025-10-31 13:03:37.161136 UTC - [Parent 1917312: Socket Thread]: V/nsHttp  Got SSL_ERROR_ECH_FAILED, try other records\n2025-10-31 13:03:37.161151 UTC - [Parent 1917312: Socket Thread]: V/nsHttp SvcDomainName to retry: [\n2025-10-31 13:03:37.161156 UTC - [Parent 1917312: Socket Thread]: V/nsHttp  name=pics.redacted.live alpn=\n2025-10-31 13:03:37.161159 UTC - [Parent 1917312: Socket Thread]: V/nsHttp  name=pics.redacted.live alpn=h3\n2025-10-31 13:03:37.161161 UTC - [Parent 1917312: Socket Thread]: V/nsHttp  name=pics.redacted.live alpn=\n2025-10-31 13:03:37.161163 UTC - [Parent 1917312: Socket Thread]: V/nsHttp ]\n2025-10-31 13:03:37.161166 UTC - [Parent 1917312: Socket Thread]: V/nsHttp HTTPSSVC: use new routed host (pics.redacted.live) and new npnToken ()\n2025-10-31 13:03:37.161168 UTC - [Parent 1917312: Socket Thread]: V/nsHttp Init nsHttpConnectionInfo @7f10dd7857b0\n2025-10-31 13:03:37.161175 UTC - [Parent 1917312: Socket Thread]: D/nsHttp Destroying nsHttpConnectionInfo @7f10ddaf01f0\n2025-10-31 13:03:37.161178 UTC - [Parent 1917312: Socket Thread]: V/nsHttp transaction will be restarted with the fallback connection info key=.S........[tlsflags0x00000000]pics.redacted.live:443^partitionKey=%28https%2Credacted.live%29\n2025-10-31 13:03:37.161181 UTC - [Parent 1917312: Socket Thread]: V/nsHttp restarting transaction @7f10dd397b00\n2025-10-31 13:03:37.161188 UTC - [Parent 1917312: Socket Thread]: V/nsHttp RemoveSSLToken [key=tlsflags0x00000000:pics.redacted.live:443^partitionKey=%28https%2Credacted.live%29, rv=80040111]\n2025-10-31 13:03:37.161193 UTC - [Parent 1917312: Socket Thread]: V/nsHttp nsHttpConnection::DontReuse 7f10e3a23300 spdysession=0\n2025-10-31 13:03:37.161196 UTC - [Parent 1917312: Socket Thread]: V/nsHttp nsHttpConnection::MarkAsDontReuse 7f10e3a23300\n2025-10-31 13:03:37.161200 UTC - [Parent 1917312: Socket Thread]: V/nsHttp nsHttpConnectionMgr::ReclaimConnection [conn=7f10e3a23300]\n2025-10-31 13:03:37.161207 UTC - [Parent 1917312: Socket Thread]: D/nsSocketTransport STS dispatch [7f10e29f6800]\n2025-10-31 13:03:37.161212 UTC - [Parent 1917312: Socket Thread]: D/nsSocketTransport OnDispatchedEvent Same Thread Skip Signal\n2025-10-31 13:03:37.161218 UTC - [Parent 1917312: Socket Thread]: V/nsHttp ConnectionEntry::ResetIPFamilyPreference 7f10e92953e0\n2025-10-31 13:03:37.161221 UTC - [Parent 1917312: Socket Thread]: V/nsHttp nsHttpConnectionMgr::AddTransaction [trans=7f10dd397b10 -20]\n2025-10-31 13:03:37.161224 UTC - [Parent 1917312: Socket Thread]: D/nsSocketTransport STS dispatch [7f10f1559240]\n2025-10-31 13:03:37.161227 UTC - [Parent 1917312: Socket Thread]: D/nsSocketTransport OnDispatchedEvent Same Thread Skip Signal\n2025-10-31 13:03:37.161233 UTC - [Parent 1917312: Socket Thread]: V/nsHttp nsHttpConnection::Close [this=7f10e3a23300 reason=804b0014 mExperienceState=0]\n2025-10-31 13:03:37.161238 UTC - [Parent 1917312: Socket Thread]: V/nsHttp RecordConnectionCloseTelemetry key=11_1_0_0_2 reason=6\n2025-10-31 13:03:37.161249 UTC - [Parent 1917312: Socket Thread]: V/nsHttp HttpConnectionBase::ChangeConnectionState this=7f10e3a23300 (2->5)\n2025-10-31 13:03:37.161255 UTC - [Parent 1917312: Socket Thread]: D/nsHttp HttpTrafficAnalyzer::IncrementHttpConnection size=1 [this=7f10f7edbe2c]\n2025-10-31 13:03:37.161258 UTC - [Parent 1917312: Socket Thread]: D/nsHttp HttpTrafficAnalyzer::IncrementHttpConnection [Y1_N1] [this=7f10f7edbe2c]\n2025-10-31 13:03:37.161266 UTC - [Parent 1917312: Socket Thread]: V/nsHttp nsHttpConnection::GetTLSSocketControl trans=0 socket=7f10e3a23918\n2025-10-31 13:03:37.161271 UTC - [Parent 1917312: Socket Thread]: D/nsSocketTransport nsSocketInputStream::Read [this=7f10ddac31c0 count=4000]\n2025-10-31 13:03:37.161274 UTC - [Parent 1917312: Socket Thread]: D/nsSocketTransport   calling PR_Read [count=4000]\n2025-10-31 13:03:37.161277 UTC - [Parent 1917312: Socket Thread]: D/nsSocketTransport   PR_Read returned [n=-1]\n2025-10-31 13:03:37.161281 UTC - [Parent 1917312: Socket Thread]: D/nsSocketTransport ErrorAccordingToNSPR [in=-12188 out=805a2f9c]\n```\n\nHere the last error is\n```js\n> ChromeUtils.getXPCOMErrorName(0x805a2f9c)\n\"NS_ERROR_GENERATE_FAILURE(NS_ERROR_MODULE_SECURITY, SSL_ERROR_INTERNAL_ERROR_ALERT)\"\n```\n\nIf I'm not mistaken, you have your DNS entries provided by cloudflare, which enables ECH. When resolving over the internet, you'll hit CF's server, but when the domain resolves to your local IP, we attempt to use ECH with cloudflare-ech.com in the SNI, which I assume your server rejects, causing the TLS issue.\nWhen you are using DoH, how is the DNS for the server changed? Is it via /etc/hosts?",
+      "id": 17747508,
+      "attachment_id": null
+    },
+    {
+      "text": "`SSL_ERROR_INTERNAL_ERROR_ALERT` indicates that the server sent us an `internal_error` alert. I agree with Valentin that this is likely a DNS issue triggering an ECH issue.  Testing with `network.dns.echconfig.enabled` set to false would help confirm whether that's the case.",
+      "creator": "djackson@mozilla.com",
+      "reactions": {},
+      "bug_id": 1996427,
+      "time": "2025-11-04T13:21:42Z",
+      "raw_text": "`SSL_ERROR_INTERNAL_ERROR_ALERT` indicates that the server sent us an `internal_error` alert. I agree with Valentin that this is likely a DNS issue triggering an ECH issue.  Testing with `network.dns.echconfig.enabled` set to false would help confirm whether that's the case.",
+      "author": "djackson@mozilla.com",
+      "count": 7,
+      "is_private": false,
+      "id": 17747576,
+      "attachment_id": null,
+      "tags": [],
+      "creation_time": "2025-11-04T13:21:42Z"
+    },
+    {
+      "reactions": {},
+      "bug_id": 1996427,
+      "creator": "valentin.gosu@gmail.com",
+      "text": "> Sorry, forgot to mention that this happened with default DoH settings and no change when DoH is disabled.\n\nAlso, default DoH settings does not necessarily mean DoH was enabled.",
+      "creation_time": "2025-11-04T13:26:08Z",
+      "tags": [],
+      "attachment_id": null,
+      "id": 17747586,
+      "raw_text": "> Sorry, forgot to mention that this happened with default DoH settings and no change when DoH is disabled.\n\nAlso, default DoH settings does not necessarily mean DoH was enabled.",
+      "author": "valentin.gosu@gmail.com",
+      "count": 8,
+      "is_private": false,
+      "time": "2025-11-04T13:26:08Z"
+    },
+    {
+      "attachment_id": null,
+      "id": 17755943,
+      "time": "2025-11-10T09:36:34Z",
+      "raw_text": "I wonder if we should try to mitigate this issue by either:\n1. Not using ECH for hosts that resolve to a local IP address / are defined in /etc/host\n2. Falling back to not using ECH when the error is [SSL_ERROR_ECH_FAILED(https://searchfox.org/firefox-main/rev/ced72179decc0fcffcbf4f4540ff4bcafbfb182e/netwerk/protocol/http/nsHttpTransaction.cpp#1219-1224) and the Host resolves to a local IP address?",
+      "author": "valentin.gosu@gmail.com",
+      "count": 9,
+      "is_private": false,
+      "creation_time": "2025-11-10T09:36:34Z",
+      "tags": [],
+      "creator": "valentin.gosu@gmail.com",
+      "text": "I wonder if we should try to mitigate this issue by either:\n1. Not using ECH for hosts that resolve to a local IP address / are defined in /etc/host\n2. Falling back to not using ECH when the error is [SSL_ERROR_ECH_FAILED(https://searchfox.org/firefox-main/rev/ced72179decc0fcffcbf4f4540ff4bcafbfb182e/netwerk/protocol/http/nsHttpTransaction.cpp#1219-1224) and the Host resolves to a local IP address?",
+      "reactions": {},
+      "bug_id": 1996427
+    },
+    {
+      "bug_id": 1996427,
+      "reactions": {},
+      "creator": "kershaw@mozilla.com",
+      "text": "(In reply to Valentin Gosu [:valentin] (he/him) from comment #9)\n> I wonder if we should try to mitigate this issue by either:\n> 1. Not using ECH for hosts that resolve to a local IP address / are defined in /etc/host\n> 2. Falling back to not using ECH when the error is [SSL_ERROR_ECH_FAILED(https://searchfox.org/firefox-main/rev/ced72179decc0fcffcbf4f4540ff4bcafbfb182e/netwerk/protocol/http/nsHttpTransaction.cpp#1219-1224) and the Host resolves to a local IP address?\n\nI think this mitigation makes sense, although I\u2019d argue that we should respect the ECH config presented in the DNS record, regardless of whether the address is local or not.\n\nThat begin said, checking if the address is local before setting ECH seems like a simple and quick fix.\n\nDennis, what do you think?",
+      "creation_time": "2025-11-12T09:56:03Z",
+      "tags": [],
+      "attachment_id": null,
+      "id": 17759249,
+      "time": "2025-11-12T09:56:03Z",
+      "is_private": false,
+      "count": 10,
+      "author": "kershaw@mozilla.com",
+      "raw_text": "(In reply to Valentin Gosu [:valentin] (he/him) from comment #9)\n> I wonder if we should try to mitigate this issue by either:\n> 1. Not using ECH for hosts that resolve to a local IP address / are defined in /etc/host\n> 2. Falling back to not using ECH when the error is [SSL_ERROR_ECH_FAILED(https://searchfox.org/firefox-main/rev/ced72179decc0fcffcbf4f4540ff4bcafbfb182e/netwerk/protocol/http/nsHttpTransaction.cpp#1219-1224) and the Host resolves to a local IP address?\n\nI think this mitigation makes sense, although I\u2019d argue that we should respect the ECH config presented in the DNS record, regardless of whether the address is local or not.\n\nThat begin said, checking if the address is local before setting ECH seems like a simple and quick fix.\n\nDennis, what do you think?"
+    },
+    {
+      "count": 11,
+      "author": "release-mgmt-account-bot@mozilla.tld",
+      "is_private": false,
+      "raw_text": "Redirect a needinfo that is pending on an inactive user to the triage owner.\n:jesup, since the bug has recent activity, could you have a look please?\n\nFor more information, please visit [BugBot documentation](https://wiki.mozilla.org/BugBot#inactive_ni_pending.py).",
+      "time": "2025-12-01T12:16:12Z",
+      "attachment_id": null,
+      "id": 17788115,
+      "tags": [],
+      "creation_time": "2025-12-01T12:16:12Z",
+      "text": "Redirect a needinfo that is pending on an inactive user to the triage owner.\n:jesup, since the bug has recent activity, could you have a look please?\n\nFor more information, please visit [BugBot documentation](https://wiki.mozilla.org/BugBot#inactive_ni_pending.py).",
+      "creator": "release-mgmt-account-bot@mozilla.tld",
+      "bug_id": 1996427,
+      "reactions": {}
+    },
+    {
+      "id": 17788238,
+      "attachment_id": null,
+      "time": "2025-12-01T13:22:40Z",
+      "author": "djackson@mozilla.com",
+      "is_private": false,
+      "count": 12,
+      "raw_text": "My understanding was that we already didn't do DNS lookups for entries in `/etc/hosts`? I think we definitely want to be respecting those entries and not looking for HTTPS records if there's a hosts entries. \n\nI'm not sure about the merits of disabling ECH based on a local IP. On one hand it seems prudent - it's pretty likely folks don't intend to be using ECH there in the general case - but on the other hand it might make debugging a fair bit harder / less predictable. I guess it make sense to enable it and have a pref for disabling it. \n\nDo we understand why Chromium is working in this instance but we aren't?",
+      "creation_time": "2025-12-01T13:22:40Z",
+      "tags": [],
+      "creator": "djackson@mozilla.com",
+      "text": "My understanding was that we already didn't do DNS lookups for entries in `/etc/hosts`? I think we definitely want to be respecting those entries and not looking for HTTPS records if there's a hosts entries. \n\nI'm not sure about the merits of disabling ECH based on a local IP. On one hand it seems prudent - it's pretty likely folks don't intend to be using ECH there in the general case - but on the other hand it might make debugging a fair bit harder / less predictable. I guess it make sense to enable it and have a pref for disabling it. \n\nDo we understand why Chromium is working in this instance but we aren't?",
+      "bug_id": 1996427,
+      "reactions": {}
+    },
+    {
+      "attachment_id": null,
+      "id": 17788547,
+      "time": "2025-12-01T16:53:41Z",
+      "count": 13,
+      "is_private": false,
+      "author": "valentin.gosu@gmail.com",
+      "raw_text": "(In reply to Dennis Jackson from comment #12)\n> My understanding was that we already didn't do DNS lookups for entries in `/etc/hosts`? I think we definitely want to be respecting those entries and not looking for HTTPS records if there's a hosts entries. \n\nWe don't do DoH lookups for things in /etc/hosts - we don't have any such rule for native HTTPS lookups.\n\n> I'm not sure about the merits of disabling ECH based on a local IP. On one hand it seems prudent - it's pretty likely folks don't intend to be using ECH there in the general case - but on the other hand it might make debugging a fair bit harder / less predictable. I guess it make sense to enable it and have a pref for disabling it. \n> \n> Do we understand why Chromium is working in this instance but we aren't?\n\nNo, it's possible because they're not doing HTTPS lookups for the /etc/hosts record.",
+      "creation_time": "2025-12-01T16:53:41Z",
+      "tags": [],
+      "creator": "valentin.gosu@gmail.com",
+      "text": "(In reply to Dennis Jackson from comment #12)\n> My understanding was that we already didn't do DNS lookups for entries in `/etc/hosts`? I think we definitely want to be respecting those entries and not looking for HTTPS records if there's a hosts entries. \n\nWe don't do DoH lookups for things in /etc/hosts - we don't have any such rule for native HTTPS lookups.\n\n> I'm not sure about the merits of disabling ECH based on a local IP. On one hand it seems prudent - it's pretty likely folks don't intend to be using ECH there in the general case - but on the other hand it might make debugging a fair bit harder / less predictable. I guess it make sense to enable it and have a pref for disabling it. \n> \n> Do we understand why Chromium is working in this instance but we aren't?\n\nNo, it's possible because they're not doing HTTPS lookups for the /etc/hosts record.",
+      "bug_id": 1996427,
+      "reactions": {}
+    },
+    {
+      "creator": "valentin.gosu@gmail.com",
+      "text": "Created attachment 9530360\nBug 1996427 - Do not resolve HTTPS for hosts in /etc/hosts r=#necko",
+      "bug_id": 1996427,
+      "reactions": {},
+      "id": 17790133,
+      "attachment_id": 9530360,
+      "count": 14,
+      "is_private": false,
+      "author": "valentin.gosu@gmail.com",
+      "raw_text": "",
+      "time": "2025-12-02T15:46:25Z",
+      "creation_time": "2025-12-02T15:46:25Z",
+      "tags": []
+    },
+    {
+      "text": "Pushed by valentin.gosu@gmail.com:\nhttps://github.com/mozilla-firefox/firefox/commit/25b1bc9bedeb\nhttps://hg.mozilla.org/integration/autoland/rev/11e431b79e3f\nDo not resolve HTTPS for hosts in /etc/hosts r=necko-reviewers,kershaw",
+      "creator": "pulsebot@bmo.tld",
+      "reactions": {},
+      "bug_id": 1996427,
+      "raw_text": "Pushed by valentin.gosu@gmail.com:\nhttps://github.com/mozilla-firefox/firefox/commit/25b1bc9bedeb\nhttps://hg.mozilla.org/integration/autoland/rev/11e431b79e3f\nDo not resolve HTTPS for hosts in /etc/hosts r=necko-reviewers,kershaw",
+      "author": "pulsebot@bmo.tld",
+      "is_private": false,
+      "count": 15,
+      "time": "2026-01-27T13:12:11Z",
+      "attachment_id": null,
+      "id": 17861485,
+      "tags": [],
+      "creation_time": "2026-01-27T13:12:11Z"
+    },
+    {
+      "creation_time": "2026-01-27T21:27:36Z",
+      "tags": [
+        "bugherder"
+      ],
+      "attachment_id": null,
+      "id": 17862269,
+      "time": "2026-01-27T21:27:36Z",
+      "raw_text": "https://hg.mozilla.org/mozilla-central/rev/11e431b79e3f",
+      "is_private": false,
+      "count": 16,
+      "author": "ctuns@mozilla.com",
+      "reactions": {},
+      "bug_id": 1996427,
+      "creator": "ctuns@mozilla.com",
+      "text": "https://hg.mozilla.org/mozilla-central/rev/11e431b79e3f"
+    }
+  ],
+  "op_sys": "Unspecified",
+  "votes": 0,
+  "whiteboard": "[necko-triaged] [necko-priority-queue]",
+  "cf_a11y_review_project_flag": "---",
+  "see_also": [],
+  "cf_status_firefox_esr115": "---",
+  "is_confirmed": false,
+  "cf_webcompat_priority": "---",
+  "regressed_by": [],
+  "cf_rank": null,
+  "triage_owner": "valentin.gosu@gmail.com",
+  "is_cc_accessible": true,
+  "assigned_to_detail": {
+    "nick": "valentin",
+    "email": "valentin.gosu@gmail.com",
+    "name": "valentin.gosu@gmail.com",
+    "real_name": "Valentin Gosu [:valentin] (he/him)",
+    "id": 415378
+  },
+  "type": "defect",
+  "cf_performance_impact": "---",
+  "cf_tracking_firefox148": "---",
+  "cf_status_firefox147": "---",
+  "alias": null
+}
