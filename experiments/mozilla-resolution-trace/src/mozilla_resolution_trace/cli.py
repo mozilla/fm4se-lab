@@ -1,12 +1,14 @@
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import warnings
 from pathlib import Path
 from typing import List
 
 from .bugzilla_client import BugzillaClient
+from .fix_evaluator import BatchFixEvaluator
 from .llm_refiner import LLMTraceRefiner, OpenAICompatibleLLMClient
 from .resolution_trace_builder import ResolutionTraceBuilder
 from .serializer import TraceSerializer
@@ -28,6 +30,23 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--bug-file", type=Path, help="File containing bug IDs or Bugzilla URLs, one per line")
     parser.add_argument("--output", type=Path, help="Optional output JSON file path")
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_RESULTS_DIR, help="Directory for batch outputs")
+    parser.add_argument(
+        "--evaluate-candidates",
+        action="store_true",
+        help="Run bug-fix generation and similarity evaluation for bugs listed in --candidate-bug-file that already have traces.",
+    )
+    parser.add_argument(
+        "--candidate-bug-file",
+        type=Path,
+        default=Path("candidate_bugs.txt"),
+        help="Candidate bug list for --evaluate-candidates.",
+    )
+    parser.add_argument(
+        "--trace-dir",
+        type=Path,
+        default=DEFAULT_RESULTS_DIR,
+        help="Directory containing bug_<id>_trace.json artifacts for --evaluate-candidates.",
+    )
     parser.add_argument("--max-steps", type=int, default=100, help="Maximum transitions to attempt")
     parser.add_argument(
         "--format",
@@ -46,6 +65,18 @@ def build_parser() -> argparse.ArgumentParser:
         type=str,
         default=os.getenv("OPENAI_MODEL", "gpt-4o-mini"),
         help="Model name for --llm-mode assist.",
+    )
+    parser.add_argument(
+        "--generation-model",
+        type=str,
+        default=os.getenv("OPENAI_MODEL", "gpt-4o-mini"),
+        help="Model used to generate predicted fixes in --evaluate-candidates mode.",
+    )
+    parser.add_argument(
+        "--judge-model",
+        type=str,
+        default=os.getenv("OPENAI_MODEL", "gpt-4o-mini"),
+        help="Model used to judge similarity in --evaluate-candidates mode.",
     )
     return parser
 
@@ -93,6 +124,20 @@ def main() -> None:
 
     parser = build_parser()
     args = parser.parse_args()
+
+    if args.evaluate_candidates:
+        evaluator = BatchFixEvaluator(
+            generation_model=args.generation_model,
+            judge_model=args.judge_model,
+        )
+        summary = evaluator.run(
+            candidate_bug_file=args.candidate_bug_file,
+            trace_dir=args.trace_dir,
+            output_dir=args.output_dir,
+        )
+        print(json.dumps(summary, indent=2))
+        return
+
     bug_ids = resolve_bug_ids(args)
     if not bug_ids:
         parser.error("Provide --bug-id, --bug-url, --bug-ids, or --bug-file.")

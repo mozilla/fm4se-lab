@@ -13,3 +13,4 @@ venv/
 *.txt
 
 results/
+outputs/

@@ -1,0 +1,2 @@
+rm -rf evaluation_results_profile_batch_rerun && mkdir -p evaluation_results_profile_batch_rerun && venv/bin/python main.py --evaluate-
+  candidates --candidate-bug-file candidate_bugs.txt --trace-dir results --output-dir evaluation_results_profile_batch_rerun
